@@ -1,0 +1,136 @@
+{
+  "consultedDate": "2026-10-13",
+  "authority": "Published ISO standards are normative; mirrors are consulted references, corpus and implementations are independent evidence.",
+  "standards": [
+    {
+      "standard": "ISO/IEC 13250-6:2010",
+      "url": "https://www.isotopicmaps.org/ctm/ctm.html",
+      "snapshotSHA256": "814194accd807fac4cb4cecdc38ee1c8edc6a969f4683d7990708baa5f83c9fd",
+      "snapshotBytes": 100227,
+      "snapshotRedistributed": false
+    },
+    {
+      "standard": "ISO/IEC 13250-2:2006",
+      "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/",
+      "snapshotSHA256": "7f2fd03605d93c4c4c7759da1bcd1024fb0204dd34b522eff59a2ebdfb2a133b",
+      "snapshotBytes": 97436,
+      "snapshotRedistributed": false
+    }
+  ],
+  "corpus": {
+    "url": "https://github.com/heuer/cxtm",
+    "commit": "cd165b150176c1d6842b37be9cc9051b40d4996b",
+    "qualification": "CTM tests target the draft dated 2010-03-31; they do not alone establish ISO/IEC 13250-6:2010 conformity.",
+    "license": "Public domain; upstream LICENSE.txt retained unmodified."
+  },
+  "ontopia": {
+    "url": "https://github.com/ontopia/ontopia",
+    "commit": "49071fea60243540b5581b78702a77ba8064235d",
+    "license": "Apache-2.0; no implementation copied or executed",
+    "consultedFiles": [
+      {
+        "path": "LICENSE.txt",
+        "url": "https://raw.githubusercontent.com/ontopia/ontopia/49071fea60243540b5581b78702a77ba8064235d/LICENSE.txt",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      {
+        "path": "ontopia-engine/src/test/java/net/ontopia/topicmaps/utils/ctm/CTMTestCase.java",
+        "url": "https://raw.githubusercontent.com/ontopia/ontopia/49071fea60243540b5581b78702a77ba8064235d/ontopia-engine/src/test/java/net/ontopia/topicmaps/utils/ctm/CTMTestCase.java",
+        "sha256": "dcb3948e4ce5ef02db3fa294235ede32369170f8ca0ab6cc6393a843fe8122c5"
+      },
+      {
+        "path": "ontopia-engine/src/test/java/net/ontopia/topicmaps/utils/ctm/CTMInvalidTestCase.java",
+        "url": "https://raw.githubusercontent.com/ontopia/ontopia/49071fea60243540b5581b78702a77ba8064235d/ontopia-engine/src/test/java/net/ontopia/topicmaps/utils/ctm/CTMInvalidTestCase.java",
+        "sha256": "916ed640bf8810956df2b077973b16d31b75e0a8daebb819316c8b34f6177051"
+      },
+      {
+        "path": "ontopia-engine/src/main/java/net/ontopia/topicmaps/utils/ctm/CTMTopicMapReader.java",
+        "url": "https://raw.githubusercontent.com/ontopia/ontopia/49071fea60243540b5581b78702a77ba8064235d/ontopia-engine/src/main/java/net/ontopia/topicmaps/utils/ctm/CTMTopicMapReader.java",
+        "sha256": "165a982b2e6b79b05732f761b5b223d623b4f90c3fdfc9b07e1b9ed13dfcb82c"
+      },
+      {
+        "path": "ontopia-engine/src/main/antlr/net/ontopia/topicmaps/utils/ctm/ctm.g",
+        "url": "https://raw.githubusercontent.com/ontopia/ontopia/49071fea60243540b5581b78702a77ba8064235d/ontopia-engine/src/main/antlr/net/ontopia/topicmaps/utils/ctm/ctm.g",
+        "sha256": "99b3b00814b0b68cf68f19bc00030dcc73e28ee4b58d934945e046a5e1dd0987"
+      }
+    ]
+  },
+  "ontopiaExternals": {
+    "url": "https://github.com/ontopia/externals",
+    "commit": "acba0660303cf9a3bfcb0c0df81319f1e1065bef",
+    "qualification": "CTM draft 2009-03-xx and CXTM draft of same date, from its own STATUS.txt",
+    "counts": {
+      "valid": 201,
+      "invalid": 27,
+      "baselines": 201
+    },
+    "treeComparison": {
+      "sameBlobCount": 403,
+      "differentOrAbsentInHeuer": [
+        "ctm/MISSING.txt",
+        "ctm/STATUS.txt",
+        "ctm/in/ako-relationship-duplicate.ctm",
+        "ctm/in/ako-relationship-supertype-qname.ctm",
+        "ctm/in/association-binary-duplicate.ctm",
+        "ctm/in/association-scope-embedded2.ctm",
+        "ctm/in/association-scope-embedded3.ctm",
+        "ctm/in/association-scope-embedded4.ctm",
+        "ctm/in/association-type-embedded-merge.ctm",
+        "ctm/in/comment-ml.ctm",
+        "ctm/in/isa-relationship-duplicate.ctm",
+        "ctm/in/isa-relationship-duplicate2.ctm",
+        "ctm/in/isa-relationship-type-qname.ctm",
+        "ctm/in/mergemap-xtm.sub",
+        "ctm/in/name-duplicate.ctm",
+        "ctm/in/name2.ctm",
+        "ctm/in/occurrence-date2.ctm",
+        "ctm/in/occurrence-datetime2.ctm",
+        "ctm/in/occurrence-duplicate-string.ctm",
+        "ctm/in/occurrence-duplicate-uri.ctm",
+        "ctm/in/occurrence-explicit-datatype.ctm",
+        "ctm/in/occurrence-explicit-datatype2.ctm",
+        "ctm/in/occurrence-string-triple.ctm",
+        "ctm/in/occurrence-string.ctm",
+        "ctm/in/occurrence-string2.ctm",
+        "ctm/in/occurrence-type-embedded.ctm",
+        "ctm/in/subject-identifier-embedded.ctm",
+        "ctm/in/template-nested-occtype.ctm",
+        "ctm/in/template-simple.ctm",
+        "ctm/in/template-subject-identifier.ctm",
+        "ctm/in/template-subject-locator.ctm",
+        "ctm/in/template-subject-locator2.ctm",
+        "ctm/in/template-topic-nested.ctm",
+        "ctm/in/template-topic-nested2.ctm",
+        "ctm/in/template-wildcard-named.ctm",
+        "ctm/in/template-wildcard-named2.ctm",
+        "ctm/in/template-wildcard-named3.ctm",
+        "ctm/in/template-wildcard.ctm",
+        "ctm/in/topic-embedded-template-invocation.ctm",
+        "ctm/in/topic-template-invocation-unary.ctm",
+        "ctm/in/topic-template-invocation.ctm",
+        "ctm/in/variant-scope-embedded.ctm",
+        "ctm/in/variant-scope-embedded2.ctm",
+        "ctm/in/variant-scope-embedded3.ctm",
+        "ctm/invalid/mergemap-template.ctm",
+        "ctm/invalid/wrong-version.ctm"
+      ]
+    },
+    "consultedFiles": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/ontopia/externals/acba0660303cf9a3bfcb0c0df81319f1e1065bef/README.md",
+        "sha256": "d3c4975383963d79026cff86cbac98aa7aa865f2933ed5130d13aafb95ce3fc6"
+      },
+      {
+        "path": "cxtm-tests/assembly/resources/ctm/STATUS.txt",
+        "url": "https://raw.githubusercontent.com/ontopia/externals/acba0660303cf9a3bfcb0c0df81319f1e1065bef/cxtm-tests/assembly/resources/ctm/STATUS.txt",
+        "sha256": "ef089b34765b7de28d7f56400af186b41261d95c7056232aae54d8f42f3479fb"
+      },
+      {
+        "path": "cxtm-tests/assembly/resources/ctm/MISSING.txt",
+        "url": "https://raw.githubusercontent.com/ontopia/externals/acba0660303cf9a3bfcb0c0df81319f1e1065bef/cxtm-tests/assembly/resources/ctm/MISSING.txt",
+        "sha256": "84edcc614186f0789c2a38100cb809c7fc8aac635617978e206d4d9262320f52"
+      }
+    ]
+  }
+}

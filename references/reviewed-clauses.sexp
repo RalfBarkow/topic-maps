@@ -1,0 +1,17 @@
+;; Only clauses checked against the file contents and normative web text.
+;; Empty mappings in other records mean review is pending, not no specification.
+(("ctm/in/simple.ctm" "CTM 3.3.6" "CTM 3.8" "CTM 3.2")
+ ("ctm/in/subject-identifier.ctm" "CTM 3.3.6" "CTM 3.8")
+ ("ctm/in/subject-locator.ctm" "CTM 3.3.6" "CTM 3.8")
+ ("ctm/in/item-identifier.ctm" "CTM 3.3.6" "CTM 3.8")
+ ("ctm/in/topic-subject-identifier.ctm" "CTM 3.3.6" "CTM 3.9")
+ ("ctm/in/topic-subject-locator.ctm" "CTM 3.3.6" "CTM 3.9")
+ ("ctm/in/topic-item-identifier.ctm" "CTM 3.3.6" "CTM 3.9")
+ ("ctm/in/name.ctm" "CTM 3.8" "CTM 3.11")
+ ("ctm/in/name2.ctm" "CTM 3.8" "CTM 3.11")
+ ("ctm/in/prefix-duplicate.ctm" "CTM 3.3.4" "CTM 3.16.1")
+ ("ctm/in/prefix-multiline.ctm" "CTM 3.3.4" "CTM 3.16.1" "CTM 3.3.1")
+ ("ctm/invalid/prefix-undefined.ctm" "CTM 3.3.4")
+ ("ctm/in/subject-identifier-relative.ctm" "CTM 3.3.3" "CTM 3.3.6" "CTM 3.2")
+ ("ctm/in/subject-locator-relative.ctm" "CTM 3.3.3" "CTM 3.3.6" "CTM 3.2")
+ ("ctm/in/item-identifier-relative.ctm" "CTM 3.3.3" "CTM 3.3.6" "CTM 3.2"))

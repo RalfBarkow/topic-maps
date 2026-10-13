@@ -1,0 +1,16 @@
+CORPUS-INTEGRITY-PASS: {"auxiliary": 22, "baselines": 231, "invalid": 42, "missingBaselines": [], "unmatchedBaselines": [], "valid": 231}
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.017s
+
+OK
+; compiling file "/Users/rgb/workspace/topic-maps/tests/package.lisp" (written 13 OCT 2026 11:17:48 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/package-tmpGHU3ALSV.fasl
+; compilation finished in 0:00:00.003
+; compiling file "/Users/rgb/workspace/topic-maps/tests/foundation.lisp" (written 13 OCT 2026 11:17:48 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/foundation-tmpAAURSO1.fasl
+; compilation finished in 0:00:00.046
+FOUNDATION-PASS: 54 infrastructure checks; 231 valid, 42 invalid, 231 baselines, 22 auxiliaries; 273 CTM cases NOT-RUN, zero CTM passes.
+REPORT-JSON-PASS: deterministic schema, draft qualification, case contracts and zero CTM passes

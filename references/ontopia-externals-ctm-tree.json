@@ -1,0 +1,3598 @@
+{
+  "repository": "https://github.com/ontopia/externals",
+  "commit": "acba0660303cf9a3bfcb0c0df81319f1e1065bef",
+  "entries": [
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/MISSING.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "70e20c5f52c6ef059d56902ae960e7809eed2358",
+      "size": 393,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/70e20c5f52c6ef059d56902ae960e7809eed2358"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/STATUS.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b8e847a46dadb0bd9fe87c4c0c42b5ab91217541",
+      "size": 155,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b8e847a46dadb0bd9fe87c4c0c42b5ab91217541"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/ako-merge-away.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2301f8feb57d9564b164e460895cc897cb2654d7",
+      "size": 1590,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2301f8feb57d9564b164e460895cc897cb2654d7"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/ako-relationship-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b5ca58780557b6f7b91cc0458dacb9a0d549e00",
+      "size": 977,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b5ca58780557b6f7b91cc0458dacb9a0d549e00"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/ako-relationship-duplicate2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b5ca58780557b6f7b91cc0458dacb9a0d549e00",
+      "size": 977,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b5ca58780557b6f7b91cc0458dacb9a0d549e00"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/ako-relationship-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "87f0d5e85e8b1be0ec8deb63d1fdfd4fb1ad3ffe",
+      "size": 1190,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/87f0d5e85e8b1be0ec8deb63d1fdfd4fb1ad3ffe"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/ako-relationship-supertype-qname.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "94f61269aaeeb0989229d3939886c7c9eb3058ed",
+      "size": 1005,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/94f61269aaeeb0989229d3939886c7c9eb3058ed"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/ako-relationship.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b5ca58780557b6f7b91cc0458dacb9a0d549e00",
+      "size": 977,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b5ca58780557b6f7b91cc0458dacb9a0d549e00"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-binary-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "81c59bb1e47c32e70747a971f8cf64c8b4f5816a",
+      "size": 833,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/81c59bb1e47c32e70747a971f8cf64c8b4f5816a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-binary.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "81c59bb1e47c32e70747a971f8cf64c8b4f5816a",
+      "size": 833,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/81c59bb1e47c32e70747a971f8cf64c8b4f5816a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-duplicate-role.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "da875d03b60bbe093acaaeeefa546d532ea2dde2",
+      "size": 1157,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/da875d03b60bbe093acaaeeefa546d532ea2dde2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-reifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "deefe1ff3d0a5c1420578992ec302ca3ab66ef8f",
+      "size": 612,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/deefe1ff3d0a5c1420578992ec302ca3ab66ef8f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-scope-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "da05c81625b7294cb3b6749a7031356889d07ef0",
+      "size": 1651,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/da05c81625b7294cb3b6749a7031356889d07ef0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-scope-embedded2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f35d8d8b58c236a2910b16943b1595dd6d7558e0",
+      "size": 1863,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f35d8d8b58c236a2910b16943b1595dd6d7558e0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-scope-embedded3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4dc6e957249d41adde463b47f8f5b13aab14cc12",
+      "size": 2431,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4dc6e957249d41adde463b47f8f5b13aab14cc12"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-scope-embedded4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b9e6515fc42189f16cfd2abefee04248182395c",
+      "size": 3613,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b9e6515fc42189f16cfd2abefee04248182395c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-scope.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9fb1c52175d7243e5b658ae5abe8f6a8377bd3c4",
+      "size": 794,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9fb1c52175d7243e5b658ae5abe8f6a8377bd3c4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-type-embedded-merge.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ee7c539c56e1c80c5993e8b94d50f7597ce4e972",
+      "size": 622,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ee7c539c56e1c80c5993e8b94d50f7597ce4e972"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-type-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "218e6fdc083c0de755522562c6ec43a66f7d0d23",
+      "size": 727,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/218e6fdc083c0de755522562c6ec43a66f7d0d23"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association-type-sid.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9bd4f0149f3351c8effe753b4114a02bbae7a851",
+      "size": 535,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9bd4f0149f3351c8effe753b4114a02bbae7a851"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/association.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7602fdeb4d744de80d43ac113ea39fea4388e845",
+      "size": 507,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7602fdeb4d744de80d43ac113ea39fea4388e845"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/comment-ml-nested.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e356ff3d5c47c9cb8af01b29f73b52dac6a3410e",
+      "size": 207,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e356ff3d5c47c9cb8af01b29f73b52dac6a3410e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/comment-ml-nested2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e356ff3d5c47c9cb8af01b29f73b52dac6a3410e",
+      "size": 207,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e356ff3d5c47c9cb8af01b29f73b52dac6a3410e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/comment-ml.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e356ff3d5c47c9cb8af01b29f73b52dac6a3410e",
+      "size": 207,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e356ff3d5c47c9cb8af01b29f73b52dac6a3410e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/comment-sl.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7edf662e84afeccd71d2b144da2c3a8ca43c5e6a",
+      "size": 114,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7edf662e84afeccd71d2b144da2c3a8ca43c5e6a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/comment-sl2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e356ff3d5c47c9cb8af01b29f73b52dac6a3410e",
+      "size": 207,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e356ff3d5c47c9cb8af01b29f73b52dac6a3410e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/comment-sl3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8474a51f2c0c80260aaa7d412b18c894bc0dce7f",
+      "size": 23,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8474a51f2c0c80260aaa7d412b18c894bc0dce7f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/embedded-semicolon.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "218e6fdc083c0de755522562c6ec43a66f7d0d23",
+      "size": 727,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/218e6fdc083c0de755522562c6ec43a66f7d0d23"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/empty.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8474a51f2c0c80260aaa7d412b18c894bc0dce7f",
+      "size": 23,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8474a51f2c0c80260aaa7d412b18c894bc0dce7f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/empty2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8474a51f2c0c80260aaa7d412b18c894bc0dce7f",
+      "size": 23,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8474a51f2c0c80260aaa7d412b18c894bc0dce7f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/encoding-8859-5.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "75e26c0591587341ab1f6b1255f8e3710b2e7139",
+      "size": 337,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/75e26c0591587341ab1f6b1255f8e3710b2e7139"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include-prefix.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "510001163e9f37c96c8bf5a1aab88db1fdf2cc40",
+      "size": 140,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/510001163e9f37c96c8bf5a1aab88db1fdf2cc40"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include-prefix2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b1d984e0ab5a8f07a9107ff51184eab9fdd32e3b",
+      "size": 261,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b1d984e0ab5a8f07a9107ff51184eab9fdd32e3b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include-template-wildcard.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e91349c81c02f0b2fc73c6e24db9f03fe3f93acb",
+      "size": 330,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e91349c81c02f0b2fc73c6e24db9f03fe3f93acb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include-template.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d146c14b88ff3c5afcb33481adcbd26ce0c4d5a3",
+      "size": 401,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d146c14b88ff3c5afcb33481adcbd26ce0c4d5a3"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include-tm-reifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a3cfda6c7c4755581ec57476bfcea72d1f7b7532",
+      "size": 375,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a3cfda6c7c4755581ec57476bfcea72d1f7b7532"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include-topicref.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c56a5a6aa817143e58b6f8c5dce3f6a845e11b49",
+      "size": 1490,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c56a5a6aa817143e58b6f8c5dce3f6a845e11b49"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include-wildcard.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "785e0cb6baba81ebc8b835edd325329975355109",
+      "size": 499,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/785e0cb6baba81ebc8b835edd325329975355109"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include-wildcard2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "04b9db8b0c279b5468260200f3f6260f84789ac0",
+      "size": 669,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/04b9db8b0c279b5468260200f3f6260f84789ac0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/include.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6a609b31291b92bada54d392df8d6c9a850326a4",
+      "size": 1939,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/6a609b31291b92bada54d392df8d6c9a850326a4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/isa-relationship-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4bf9a425a8d19038e8f8451a726f7ffc4a271a96",
+      "size": 963,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4bf9a425a8d19038e8f8451a726f7ffc4a271a96"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/isa-relationship-duplicate2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4bf9a425a8d19038e8f8451a726f7ffc4a271a96",
+      "size": 963,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4bf9a425a8d19038e8f8451a726f7ffc4a271a96"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/isa-relationship-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eec99eebaebc404351b5b8b20eed25a528cc0add",
+      "size": 1181,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/eec99eebaebc404351b5b8b20eed25a528cc0add"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/isa-relationship-type-qname.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8f213150e4424d2386e02b50c7b62ca026b8e204",
+      "size": 991,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8f213150e4424d2386e02b50c7b62ca026b8e204"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/isa-relationship.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4bf9a425a8d19038e8f8451a726f7ffc4a271a96",
+      "size": 963,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4bf9a425a8d19038e8f8451a726f7ffc4a271a96"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/item-identifier-INF.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1d95aa4b11aca4b55ed0d4e437f1e883ff97ae02",
+      "size": 112,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1d95aa4b11aca4b55ed0d4e437f1e883ff97ae02"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/item-identifier-relative.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7edf662e84afeccd71d2b144da2c3a8ca43c5e6a",
+      "size": 114,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7edf662e84afeccd71d2b144da2c3a8ca43c5e6a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/item-identifier-topicref.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c092a2acf728ca27b92a1ee3b080f88d95d4ac1c",
+      "size": 985,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c092a2acf728ca27b92a1ee3b080f88d95d4ac1c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/item-identifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3fbfcaf56cc4fdc88d7e157e7f0b8a1608f0cf0b",
+      "size": 137,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3fbfcaf56cc4fdc88d7e157e7f0b8a1608f0cf0b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/mergemap-syntax-qname.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eddd05250d47514756fb19c7bbe2077bb324298d",
+      "size": 1511,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/eddd05250d47514756fb19c7bbe2077bb324298d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/mergemap-template.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d71228664d615b3e4e5d3f5af353dce81c77e25d",
+      "size": 1529,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d71228664d615b3e4e5d3f5af353dce81c77e25d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/mergemap-tm-reifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "92912de0424f5e8e6836a098858470b5fca16b37",
+      "size": 134,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/92912de0424f5e8e6836a098858470b5fca16b37"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/mergemap-xtm.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "831c42215071c55c402b95a8829f533318922051",
+      "size": 1519,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/831c42215071c55c402b95a8829f533318922051"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/mergemap.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eddd05250d47514756fb19c7bbe2077bb324298d",
+      "size": 1511,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/eddd05250d47514756fb19c7bbe2077bb324298d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b81859388233c4bcbf2b77c6d54cb2e339a708c",
+      "size": 328,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b81859388233c4bcbf2b77c6d54cb2e339a708c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-reifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9f0c1d648e894de30d5fd0f0046b76a649dfc88b",
+      "size": 433,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9f0c1d648e894de30d5fd0f0046b76a649dfc88b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-scope-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d82ecaebe724da13d756603bb5cde651fa3e3563",
+      "size": 1331,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d82ecaebe724da13d756603bb5cde651fa3e3563"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-scope-embedded2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b996dfac3e4617571cd21040d8a60a0a1f35e274",
+      "size": 1543,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b996dfac3e4617571cd21040d8a60a0a1f35e274"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-scope-embedded3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3ea19208d89bb28235df77de481f6a92eb5c913c",
+      "size": 2105,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3ea19208d89bb28235df77de481f6a92eb5c913c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-scope-embedded4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d2170ae8b02facf554416ae868466ff76a14fdf5",
+      "size": 3284,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d2170ae8b02facf554416ae868466ff76a14fdf5"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-scope.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "40134c15e939a5f90be7832e6fc847befa098fc9",
+      "size": 615,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/40134c15e939a5f90be7832e6fc847befa098fc9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-type-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "72288b299c690433914ce9084f3a0785188c44b5",
+      "size": 495,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/72288b299c690433914ce9084f3a0785188c44b5"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-type.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2181fd52fdfe6b0b7cb8dc96df7ffb43af49c196",
+      "size": 281,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2181fd52fdfe6b0b7cb8dc96df7ffb43af49c196"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name-type.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2181fd52fdfe6b0b7cb8dc96df7ffb43af49c196",
+      "size": 281,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2181fd52fdfe6b0b7cb8dc96df7ffb43af49c196"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b81859388233c4bcbf2b77c6d54cb2e339a708c",
+      "size": 328,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b81859388233c4bcbf2b77c6d54cb2e339a708c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/name2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b81859388233c4bcbf2b77c6d54cb2e339a708c",
+      "size": 328,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b81859388233c4bcbf2b77c6d54cb2e339a708c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/nested-twice.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c5869efa5276e019fda50ec43a82168ededf0659",
+      "size": 737,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c5869efa5276e019fda50ec43a82168ededf0659"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-ctm-integer.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9b1c703974091c50d3260b1e2fa64103f12aa50d",
+      "size": 356,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9b1c703974091c50d3260b1e2fa64103f12aa50d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-datatype-unknown.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1514530f8b9c7b36398e83910d1715bae91e1828",
+      "size": 339,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1514530f8b9c7b36398e83910d1715bae91e1828"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-date-another-century.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cb3ea0eaa7b8312a731dae1a7b33dc163b2657cb",
+      "size": 359,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/cb3ea0eaa7b8312a731dae1a7b33dc163b2657cb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-date-negative.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "aa17a9a1255aac8ed95998cfd03fb3c33ec6af65",
+      "size": 358,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/aa17a9a1255aac8ed95998cfd03fb3c33ec6af65"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-date.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "805603e666d2b0b478cd02866d1f863b484fa4b2",
+      "size": 357,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/805603e666d2b0b478cd02866d1f863b484fa4b2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-date2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b1a557bd20093859e3ffe29417e75c988c077f46",
+      "size": 357,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b1a557bd20093859e3ffe29417e75c988c077f46"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-datetime.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8a6428b613a55848421a5e543845b4330bdd03f9",
+      "size": 370,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8a6428b613a55848421a5e543845b4330bdd03f9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-datetime2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "839dca0fd3838f9609290b83b56cc98a0570aad8",
+      "size": 370,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/839dca0fd3838f9609290b83b56cc98a0570aad8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-decimal-minus-sign.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "95bc9de94b16e44b894d6e65bfff9ba6917a36c0",
+      "size": 354,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/95bc9de94b16e44b894d6e65bfff9ba6917a36c0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-decimal-plus-sign.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2d59b8a1d855a0d0d1f6bc11f0ee907753de3604",
+      "size": 353,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2d59b8a1d855a0d0d1f6bc11f0ee907753de3604"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-decimal.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2d59b8a1d855a0d0d1f6bc11f0ee907753de3604",
+      "size": 353,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2d59b8a1d855a0d0d1f6bc11f0ee907753de3604"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-duplicate-string.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "da014b54f057d800fb4d18133db5f949f42b9686",
+      "size": 359,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/da014b54f057d800fb4d18133db5f949f42b9686"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-duplicate-uri.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "977a1212cd78fc40a4a215d436264f08e8fe7136",
+      "size": 380,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/977a1212cd78fc40a4a215d436264f08e8fe7136"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-explicit-datatype.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "da014b54f057d800fb4d18133db5f949f42b9686",
+      "size": 359,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/da014b54f057d800fb4d18133db5f949f42b9686"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-explicit-datatype2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "00302837883b155095f31cbe91278c27aef8ea34",
+      "size": 352,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/00302837883b155095f31cbe91278c27aef8ea34"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-integer-minus-sign.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "24bc349ced55778a55e46137346343529696d643",
+      "size": 352,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/24bc349ced55778a55e46137346343529696d643"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-integer-plus-sign.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3392c8df79242946681bc4e570dda84342a25ef8",
+      "size": 351,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3392c8df79242946681bc4e570dda84342a25ef8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-integer.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3392c8df79242946681bc4e570dda84342a25ef8",
+      "size": 351,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3392c8df79242946681bc4e570dda84342a25ef8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-integer2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3392c8df79242946681bc4e570dda84342a25ef8",
+      "size": 351,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3392c8df79242946681bc4e570dda84342a25ef8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-qname-value.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8d3fbe726301ddf17f575a9a312aae45d6d27fda",
+      "size": 390,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8d3fbe726301ddf17f575a9a312aae45d6d27fda"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-reifier-nested-nested.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bdaf707ee0ea2beb08119b7af9f6817c9f9789d2",
+      "size": 947,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/bdaf707ee0ea2beb08119b7af9f6817c9f9789d2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-reifier-nested.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "35fcfe6ed4b8ac85dc7383518c07d4aac1185f8d",
+      "size": 678,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/35fcfe6ed4b8ac85dc7383518c07d4aac1185f8d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-reifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1d25ee948ccf9a7c584f13fb6781bc4f862993da",
+      "size": 464,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1d25ee948ccf9a7c584f13fb6781bc4f862993da"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-scope-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f4a584b6d08f5f7d03e18e9c635782f4795ac0d4",
+      "size": 1503,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f4a584b6d08f5f7d03e18e9c635782f4795ac0d4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-scope-embedded2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bba95805624ed6cfc3c9effee98b0830c4cafb57",
+      "size": 1715,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/bba95805624ed6cfc3c9effee98b0830c4cafb57"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-scope-embedded3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9aae30798a6918fc6db0b5dd17ac378d732f37ea",
+      "size": 2277,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9aae30798a6918fc6db0b5dd17ac378d732f37ea"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-scope-embedded4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5f833b631c9af7f0ca24bcc8abe82dfe683c65d9",
+      "size": 3457,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/5f833b631c9af7f0ca24bcc8abe82dfe683c65d9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-scope.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1452dfeeda364985a1cbe1a1559bf7526dc815e8",
+      "size": 646,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1452dfeeda364985a1cbe1a1559bf7526dc815e8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-string-multiline.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "591e5a04a6567f95f52e58a0a3f54fbef5320a7d",
+      "size": 365,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/591e5a04a6567f95f52e58a0a3f54fbef5320a7d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-string-multiline2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c5cd35b048467f280a66d4d09bbb8a982ecc6426",
+      "size": 370,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c5cd35b048467f280a66d4d09bbb8a982ecc6426"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-string-triple.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d98365d6e43ba118ca643d523a5b04b872171295",
+      "size": 367,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d98365d6e43ba118ca643d523a5b04b872171295"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-string.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "da014b54f057d800fb4d18133db5f949f42b9686",
+      "size": 359,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/da014b54f057d800fb4d18133db5f949f42b9686"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-string2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "da014b54f057d800fb4d18133db5f949f42b9686",
+      "size": 359,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/da014b54f057d800fb4d18133db5f949f42b9686"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-two.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8909d3453b94510e9a2d8ebbd695f0a094c32a53",
+      "size": 730,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8909d3453b94510e9a2d8ebbd695f0a094c32a53"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-type-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f8c5fea64f5ac84e73cd4aaa4e8f7af8911fe274",
+      "size": 573,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f8c5fea64f5ac84e73cd4aaa4e8f7af8911fe274"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-uri-relative.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "51b94ab78053ded4178577c169fb910c447a209b",
+      "size": 358,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/51b94ab78053ded4178577c169fb910c447a209b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/occurrence-uri-semicolon.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "09c0027327079acd45d0201699b2d8fd803bc7bf",
+      "size": 393,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/09c0027327079acd45d0201699b2d8fd803bc7bf"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/prefix-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "714bfff8a8b75645125a0f1ada21dcb7aaebdecb",
+      "size": 141,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/714bfff8a8b75645125a0f1ada21dcb7aaebdecb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/prefix-multiline.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "714bfff8a8b75645125a0f1ada21dcb7aaebdecb",
+      "size": 141,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/714bfff8a8b75645125a0f1ada21dcb7aaebdecb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/prefix-multiline2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "714bfff8a8b75645125a0f1ada21dcb7aaebdecb",
+      "size": 141,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/714bfff8a8b75645125a0f1ada21dcb7aaebdecb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/prefix-multiline3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "714bfff8a8b75645125a0f1ada21dcb7aaebdecb",
+      "size": 141,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/714bfff8a8b75645125a0f1ada21dcb7aaebdecb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/prefix-multiline4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "714bfff8a8b75645125a0f1ada21dcb7aaebdecb",
+      "size": 141,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/714bfff8a8b75645125a0f1ada21dcb7aaebdecb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/prefix-template-scope.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ecf59ac976e3791b8d536f196839fd3e942b3148",
+      "size": 263,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ecf59ac976e3791b8d536f196839fd3e942b3148"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/qname-digits.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2e0424ff528912fb19f5fa6f53f194efa0964510",
+      "size": 140,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2e0424ff528912fb19f5fa6f53f194efa0964510"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/role-player-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ee8dd34ffb8964235a691ec258365ea42fa4822a",
+      "size": 721,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ee8dd34ffb8964235a691ec258365ea42fa4822a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/role-reifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e190ce0f2b21ff4013aedc0992f6c5afe406fafe",
+      "size": 612,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e190ce0f2b21ff4013aedc0992f6c5afe406fafe"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/role-type-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "60b436a8d38f4c03af2e959564dd4c5aa84489d7",
+      "size": 721,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/60b436a8d38f4c03af2e959564dd4c5aa84489d7"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/rootless-uri.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5f97c016c743eb87efc3ec6957537a8d0f462165",
+      "size": 159,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/5f97c016c743eb87efc3ec6957537a8d0f462165"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/simple.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7edf662e84afeccd71d2b144da2c3a8ca43c5e6a",
+      "size": 114,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7edf662e84afeccd71d2b144da2c3a8ca43c5e6a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/string-escape.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9b1bcbb64ccbc134f8f116009679f4a619bf8acd",
+      "size": 505,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9b1bcbb64ccbc134f8f116009679f4a619bf8acd"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/string-escape2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "91fbe575049c39c103a6ec73dee6f847b10ea074",
+      "size": 325,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/91fbe575049c39c103a6ec73dee6f847b10ea074"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-identifier-dot.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "714bfff8a8b75645125a0f1ada21dcb7aaebdecb",
+      "size": 141,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/714bfff8a8b75645125a0f1ada21dcb7aaebdecb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-identifier-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0b4127e5e7d2be2b10be891747e02f14bdb3620b",
+      "size": 597,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/0b4127e5e7d2be2b10be891747e02f14bdb3620b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-identifier-non-http.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a0ef9f09817f36175e660497ac708f5a9237b9a4",
+      "size": 145,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a0ef9f09817f36175e660497ac708f5a9237b9a4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-identifier-relative.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "00ecf752ebd1adc08d3f62d444fe4558e45dffd8",
+      "size": 119,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/00ecf752ebd1adc08d3f62d444fe4558e45dffd8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-identifier-topicref.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3a089e4822ec6c977cd228699566a26afbb7bf1d",
+      "size": 989,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3a089e4822ec6c977cd228699566a26afbb7bf1d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-identifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "714bfff8a8b75645125a0f1ada21dcb7aaebdecb",
+      "size": 141,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/714bfff8a8b75645125a0f1ada21dcb7aaebdecb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-locator-dot.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6157225a041820294687f28a6e1e8bd6f8b40e09",
+      "size": 131,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/6157225a041820294687f28a6e1e8bd6f8b40e09"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-locator-relative.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b21f1d8b63ba5a057d9d59f6963d5ca29283a221",
+      "size": 113,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b21f1d8b63ba5a057d9d59f6963d5ca29283a221"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/subject-locator.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "619f18cb0af0ceecc0eee37e9c2c55c01e83f250",
+      "size": 139,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/619f18cb0af0ceecc0eee37e9c2c55c01e83f250"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-ambiguous-parameter.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d5ad0841f0ea83add943270615432941e008b23b",
+      "size": 376,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d5ad0841f0ea83add943270615432941e008b23b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-ambiguous-parameter2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "663e8605f153557721d2dcf425b81d71a18193f4",
+      "size": 407,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/663e8605f153557721d2dcf425b81d71a18193f4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-ambiguous-parameter3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "723c38bfac3ea347cf13d895857d4820c970676a",
+      "size": 399,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/723c38bfac3ea347cf13d895857d4820c970676a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-ambiguous-parameter4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f7f628291ed4513ba1acbfc7298fdf753d48bab0",
+      "size": 1506,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f7f628291ed4513ba1acbfc7298fdf753d48bab0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-ambiguous-parameter5.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "46a893452247dee9e5e9ba468492d1236f96b9ee",
+      "size": 353,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/46a893452247dee9e5e9ba468492d1236f96b9ee"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-ambiguous-parameter6.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e259d9da4b7a3e779d3baa5637a6b2aa55b3603c",
+      "size": 613,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e259d9da4b7a3e779d3baa5637a6b2aa55b3603c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-assoc-embedded-topic.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8474a51f2c0c80260aaa7d412b18c894bc0dce7f",
+      "size": 23,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8474a51f2c0c80260aaa7d412b18c894bc0dce7f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-duplicate-name.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b659fe8ea81563c553f34e093737b5f532546354",
+      "size": 438,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b659fe8ea81563c553f34e093737b5f532546354"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-forward-ref.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2d943a7e41ae1c879d161cd79ebb0ae208b945b5",
+      "size": 825,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2d943a7e41ae1c879d161cd79ebb0ae208b945b5"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d365ed109f423ae33bbd2458d980941875afa3d4",
+      "size": 401,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d365ed109f423ae33bbd2458d980941875afa3d4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-embedded2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d365ed109f423ae33bbd2458d980941875afa3d4",
+      "size": 401,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d365ed109f423ae33bbd2458d980941875afa3d4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-noargs-isa.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "116d147fd3dd06567d36d7929be9e0779014f713",
+      "size": 963,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/116d147fd3dd06567d36d7929be9e0779014f713"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-noargs2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ae30e34b70876573f8115895575e628700c40ac4",
+      "size": 828,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ae30e34b70876573f8115895575e628700c40ac4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-prefix-notation.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b81859388233c4bcbf2b77c6d54cb2e339a708c",
+      "size": 328,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b81859388233c4bcbf2b77c6d54cb2e339a708c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-twice.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2cc86fbf4f6a4979af3d8baad9f138c1456ab27f",
+      "size": 402,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2cc86fbf4f6a4979af3d8baad9f138c1456ab27f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-wildcard-named.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0a3e31e05c65bbec894f328a4a331d377afc6b8a",
+      "size": 331,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/0a3e31e05c65bbec894f328a4a331d377afc6b8a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-wildcard-named2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0a3e31e05c65bbec894f328a4a331d377afc6b8a",
+      "size": 331,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/0a3e31e05c65bbec894f328a4a331d377afc6b8a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-wildcard-named3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1e3bbf4a9c5456db8c0ac9df2e2fe31aeaf3628e",
+      "size": 646,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1e3bbf4a9c5456db8c0ac9df2e2fe31aeaf3628e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-wildcard-named4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0a3e31e05c65bbec894f328a4a331d377afc6b8a",
+      "size": 331,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/0a3e31e05c65bbec894f328a4a331d377afc6b8a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-wildcard-named5.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "569a9cc458eb92dd2e6cc614c0570e37a8e3dc45",
+      "size": 577,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/569a9cc458eb92dd2e6cc614c0570e37a8e3dc45"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-wildcard-named6.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d2c8c67dd5c20e608f3c49d5776505347f55583d",
+      "size": 581,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d2c8c67dd5c20e608f3c49d5776505347f55583d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-invocation-wildcard.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c2273c93fcafe506e1361dd670d8f056739511f4",
+      "size": 484,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c2273c93fcafe506e1361dd670d8f056739511f4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-item-identifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a463d1d3d3c8f4f6a6163d609760377bf37113b9",
+      "size": 131,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a463d1d3d3c8f4f6a6163d609760377bf37113b9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-item-identifier2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a463d1d3d3c8f4f6a6163d609760377bf37113b9",
+      "size": 131,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a463d1d3d3c8f4f6a6163d609760377bf37113b9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-item-identifier4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "29d8ee29304fd58a58e32cf125d99d9478def77a",
+      "size": 157,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/29d8ee29304fd58a58e32cf125d99d9478def77a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-nested-occtype.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "555eee9bdcbff5e13b0f1e13666b6ac0ef37e350",
+      "size": 576,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/555eee9bdcbff5e13b0f1e13666b6ac0ef37e350"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-nested-occtype2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c5869efa5276e019fda50ec43a82168ededf0659",
+      "size": 737,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c5869efa5276e019fda50ec43a82168ededf0659"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-noop.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8474a51f2c0c80260aaa7d412b18c894bc0dce7f",
+      "size": 23,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8474a51f2c0c80260aaa7d412b18c894bc0dce7f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-noop2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8474a51f2c0c80260aaa7d412b18c894bc0dce7f",
+      "size": 23,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8474a51f2c0c80260aaa7d412b18c894bc0dce7f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-noop3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8474a51f2c0c80260aaa7d412b18c894bc0dce7f",
+      "size": 23,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8474a51f2c0c80260aaa7d412b18c894bc0dce7f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-references.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8474a51f2c0c80260aaa7d412b18c894bc0dce7f",
+      "size": 23,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8474a51f2c0c80260aaa7d412b18c894bc0dce7f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-simple.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7edf662e84afeccd71d2b144da2c3a8ca43c5e6a",
+      "size": 114,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7edf662e84afeccd71d2b144da2c3a8ca43c5e6a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-subject-identifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "714bfff8a8b75645125a0f1ada21dcb7aaebdecb",
+      "size": 141,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/714bfff8a8b75645125a0f1ada21dcb7aaebdecb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-subject-identifier2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ba06150381415af20f288cbd4ef148e50239ae6c",
+      "size": 204,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ba06150381415af20f288cbd4ef148e50239ae6c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-subject-locator.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6157225a041820294687f28a6e1e8bd6f8b40e09",
+      "size": 131,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/6157225a041820294687f28a6e1e8bd6f8b40e09"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-subject-locator2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6157225a041820294687f28a6e1e8bd6f8b40e09",
+      "size": 131,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/6157225a041820294687f28a6e1e8bd6f8b40e09"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-subject-locator4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e51dd3eb9f2e0f9b9438378039ff179a0a90a348",
+      "size": 194,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e51dd3eb9f2e0f9b9438378039ff179a0a90a348"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-topic-nested.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "35fcfe6ed4b8ac85dc7383518c07d4aac1185f8d",
+      "size": 678,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/35fcfe6ed4b8ac85dc7383518c07d4aac1185f8d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-topic-nested2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bc432288d5f97e4db2463c375137a6efee741729",
+      "size": 596,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/bc432288d5f97e4db2463c375137a6efee741729"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-typed-value.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3392c8df79242946681bc4e570dda84342a25ef8",
+      "size": 351,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3392c8df79242946681bc4e570dda84342a25ef8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-wildcard-named.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "302e5e0656d33b8848a283bd1661a53501af2f30",
+      "size": 211,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/302e5e0656d33b8848a283bd1661a53501af2f30"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-wildcard-named2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "302e5e0656d33b8848a283bd1661a53501af2f30",
+      "size": 211,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/302e5e0656d33b8848a283bd1661a53501af2f30"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-wildcard-named3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "302e5e0656d33b8848a283bd1661a53501af2f30",
+      "size": 211,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/302e5e0656d33b8848a283bd1661a53501af2f30"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-wildcard-named4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0dc197dd519dad53028d717da471ae69f171251a",
+      "size": 919,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/0dc197dd519dad53028d717da471ae69f171251a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/template-wildcard.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5573a9944c9fcc65f5e99b0444caa1c09a9f9c90",
+      "size": 203,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/5573a9944c9fcc65f5e99b0444caa1c09a9f9c90"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/tm-reifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c8069b48b91b1cc6451e2635932fd33536b9f241",
+      "size": 126,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c8069b48b91b1cc6451e2635932fd33536b9f241"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/tm-reifier2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4bea36adc0e21fa9daa5dc620d31ed865d277916",
+      "size": 347,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4bea36adc0e21fa9daa5dc620d31ed865d277916"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/tm-reifier3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d239ef29dce0aeef3d4fd81b07e6e616a8fd71bb",
+      "size": 128,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d239ef29dce0aeef3d4fd81b07e6e616a8fd71bb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-embedded-template-invocation.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e6da97d2b99727ab8fdfbef6e6ce4adf5aab3a71",
+      "size": 1357,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e6da97d2b99727ab8fdfbef6e6ce4adf5aab3a71"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-identifier-INF.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1d95aa4b11aca4b55ed0d4e437f1e883ff97ae02",
+      "size": 112,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1d95aa4b11aca4b55ed0d4e437f1e883ff97ae02"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-identifier-eq-template-name.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c2df5031bb89f63f98da42e609f7e1cd77c49e63",
+      "size": 207,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c2df5031bb89f63f98da42e609f7e1cd77c49e63"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-item-identifier-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7edf662e84afeccd71d2b144da2c3a8ca43c5e6a",
+      "size": 114,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7edf662e84afeccd71d2b144da2c3a8ca43c5e6a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-item-identifier-wrapped.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7509f23536d522435d07c0c5d4acb66ef27e8bcd",
+      "size": 159,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7509f23536d522435d07c0c5d4acb66ef27e8bcd"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-item-identifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7509f23536d522435d07c0c5d4acb66ef27e8bcd",
+      "size": 159,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7509f23536d522435d07c0c5d4acb66ef27e8bcd"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-subject-identifier-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c325d0f27cc4f44823421f39bacb2200bee51ea6",
+      "size": 146,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c325d0f27cc4f44823421f39bacb2200bee51ea6"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-subject-identifier-wrapped.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f344cbb773b27afe94e753b5a984e210136440ca",
+      "size": 207,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f344cbb773b27afe94e753b5a984e210136440ca"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-subject-identifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f344cbb773b27afe94e753b5a984e210136440ca",
+      "size": 207,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f344cbb773b27afe94e753b5a984e210136440ca"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-subject-locator-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dd929cab42c28c5908347a6ecdfb391dd9b3ca6b",
+      "size": 112,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/dd929cab42c28c5908347a6ecdfb391dd9b3ca6b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-subject-locator-semi.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "21d7941549ad360619c73bb8812668449f0db3d2",
+      "size": 201,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/21d7941549ad360619c73bb8812668449f0db3d2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-subject-locator-wrapped.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "21d7941549ad360619c73bb8812668449f0db3d2",
+      "size": 201,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/21d7941549ad360619c73bb8812668449f0db3d2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-subject-locator.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "21d7941549ad360619c73bb8812668449f0db3d2",
+      "size": 201,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/21d7941549ad360619c73bb8812668449f0db3d2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-template-invocation-unary.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b81859388233c4bcbf2b77c6d54cb2e339a708c",
+      "size": 328,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b81859388233c4bcbf2b77c6d54cb2e339a708c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/topic-template-invocation.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b81859388233c4bcbf2b77c6d54cb2e339a708c",
+      "size": 328,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7b81859388233c4bcbf2b77c6d54cb2e339a708c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/unicode-escape-u4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9831283fd49df74b44f30ede345699943eb54603",
+      "size": 330,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9831283fd49df74b44f30ede345699943eb54603"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/unicode-escape-u6.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9831283fd49df74b44f30ede345699943eb54603",
+      "size": 330,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9831283fd49df74b44f30ede345699943eb54603"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/variant-duplicate.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8db697beced0582adc5b300481e632e1144be392",
+      "size": 592,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8db697beced0582adc5b300481e632e1144be392"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/variant-reifier.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a38ca433cb1ba7dbfbbfd0efe02d90284a6c54a7",
+      "size": 697,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a38ca433cb1ba7dbfbbfd0efe02d90284a6c54a7"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/variant-scope-embedded.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d3b613c5d8531226da6801a61a6762d3a4631997",
+      "size": 1637,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d3b613c5d8531226da6801a61a6762d3a4631997"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/variant-scope-embedded2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1880fadd0bb5883c7293ff92f6e1cdbd1409a380",
+      "size": 1985,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1880fadd0bb5883c7293ff92f6e1cdbd1409a380"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/variant-scope-embedded3.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "81881ef0093b4111ef42b71e266517419212e677",
+      "size": 2547,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/81881ef0093b4111ef42b71e266517419212e677"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/variant-scope-embedded4.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "961095c054de851cb4484b139a33bdfd98515a5d",
+      "size": 3734,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/961095c054de851cb4484b139a33bdfd98515a5d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/variant.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8db697beced0582adc5b300481e632e1144be392",
+      "size": 592,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8db697beced0582adc5b300481e632e1144be392"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/variants.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "08e6569160971a48b609237a56f504c2d41fa9dc",
+      "size": 857,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/08e6569160971a48b609237a56f504c2d41fa9dc"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/wildcard-named-merge.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "76268b17245c5d19b41319e4da8d9ff52b5d5983",
+      "size": 117,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/76268b17245c5d19b41319e4da8d9ff52b5d5983"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/wildcard-named.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "76268b17245c5d19b41319e4da8d9ff52b5d5983",
+      "size": 117,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/76268b17245c5d19b41319e4da8d9ff52b5d5983"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/wildcard-named2.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ba9321eee6a04ee73416134f947104a92101dd3b",
+      "size": 301,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ba9321eee6a04ee73416134f947104a92101dd3b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/baseline/wildcard.ctm.cxtm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ebb5257192abde4f8c863b3076776d1aa1052337",
+      "size": 113,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ebb5257192abde4f8c863b3076776d1aa1052337"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/ako-merge-away.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c41cec4af064642c66a3018905baf9e1e30ceef6",
+      "size": 502,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c41cec4af064642c66a3018905baf9e1e30ceef6"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/ako-relationship-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2905528c72a9897df8cbe5e0dfbf90a345a2773e",
+      "size": 46,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2905528c72a9897df8cbe5e0dfbf90a345a2773e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/ako-relationship-duplicate2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "18c27a55f6d4c6f65c9be3a6681e0ff7626fd42b",
+      "size": 150,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/18c27a55f6d4c6f65c9be3a6681e0ff7626fd42b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/ako-relationship-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f03ad662809294c34aa626da6cc02a68e429ef9c",
+      "size": 25,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f03ad662809294c34aa626da6cc02a68e429ef9c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/ako-relationship-supertype-qname.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d82b965c3ffa62a9898fe52ec74897a39286479c",
+      "size": 60,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d82b965c3ffa62a9898fe52ec74897a39286479c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/ako-relationship.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7be1cd4e8e91b849baedb495e021b40d30ba3014",
+      "size": 21,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7be1cd4e8e91b849baedb495e021b40d30ba3014"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-binary-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f220777ca8640d0e9ada8b732953c4d60ed01bee",
+      "size": 100,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f220777ca8640d0e9ada8b732953c4d60ed01bee"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-binary.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8a5f3c634527896545a395c3849ed1db31ee40ec",
+      "size": 47,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8a5f3c634527896545a395c3849ed1db31ee40ec"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-duplicate-role.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ce043cbc2c28031c3cbb9d29349d582f42898dee",
+      "size": 85,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ce043cbc2c28031c3cbb9d29349d582f42898dee"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-reifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "48dbfea345b1a7c6f57f1a179db3b8e99d14d44a",
+      "size": 36,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/48dbfea345b1a7c6f57f1a179db3b8e99d14d44a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-scope-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "39b4be61845822a6e4a1654d8a1148851597daef",
+      "size": 90,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/39b4be61845822a6e4a1654d8a1148851597daef"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-scope-embedded2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a3239eb7e70c144be8e7142a3893ad572c0f5152",
+      "size": 109,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a3239eb7e70c144be8e7142a3893ad572c0f5152"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-scope-embedded3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3845bf9ef2a739d2d91088025727d901ddee422c",
+      "size": 198,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3845bf9ef2a739d2d91088025727d901ddee422c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-scope-embedded4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "52d5e9f755bb130e21873363f98dff101ae731a8",
+      "size": 286,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/52d5e9f755bb130e21873363f98dff101ae731a8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-scope.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "594a0ea6171685f6ec2565e8b01f34e12cafaaee",
+      "size": 40,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/594a0ea6171685f6ec2565e8b01f34e12cafaaee"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-type-embedded-merge.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7f28666f798d8d6d9f4d1be2b4c7175f759b42f9",
+      "size": 110,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7f28666f798d8d6d9f4d1be2b4c7175f759b42f9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-type-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "10a9018eca8192ffbab3c976aefd89c5c4352c68",
+      "size": 37,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/10a9018eca8192ffbab3c976aefd89c5c4352c68"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association-type-sid.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "aeaf9fbfaaa8ae8165f78bf06753e9b02bea3d12",
+      "size": 49,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/aeaf9fbfaaa8ae8165f78bf06753e9b02bea3d12"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/association.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "96f6e5fe9affd469751f1ad118c21c4dfecf7ce0",
+      "size": 26,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/96f6e5fe9affd469751f1ad118c21c4dfecf7ce0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/comment-ml-nested.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8178ed231f031ec8383564f4fa13973b7ce55a01",
+      "size": 101,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8178ed231f031ec8383564f4fa13973b7ce55a01"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/comment-ml-nested2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e020de926a2d60cf19908c82c0d151bea4e6d269",
+      "size": 154,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e020de926a2d60cf19908c82c0d151bea4e6d269"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/comment-ml.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "808d22e51517dc6744e31dc95ece3cccd960ff7b",
+      "size": 54,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/808d22e51517dc6744e31dc95ece3cccd960ff7b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/comment-sl.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d18b7ae81fea591e4016c6122b2d95da49290d74",
+      "size": 28,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d18b7ae81fea591e4016c6122b2d95da49290d74"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/comment-sl2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3783902458d5104625bd3d1e0ae079c420b2808c",
+      "size": 26,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3783902458d5104625bd3d1e0ae079c420b2808c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/comment-sl3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eb2cd8a79c46ae24d3e0e1d03854d87b718e1f69",
+      "size": 96,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/eb2cd8a79c46ae24d3e0e1d03854d87b718e1f69"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/embedded-semicolon.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "554532b4c3a3dac20c8fa04bc10776a6331cf5f0",
+      "size": 101,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/554532b4c3a3dac20c8fa04bc10776a6331cf5f0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/empty.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/empty2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "57d8aca9ed2004239feea7e234a57a3dfb544774",
+      "size": 13,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/57d8aca9ed2004239feea7e234a57a3dfb544774"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/encoding-8859-5.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "16568f34e384845a77c4381af390dcbedbe9ea40",
+      "size": 42,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/16568f34e384845a77c4381af390dcbedbe9ea40"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-prefix.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "72bd278e016d02c26ddb637ed681deb9804adccd",
+      "size": 73,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/72bd278e016d02c26ddb637ed681deb9804adccd"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-prefix.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b7d40d18a7b35aabcfe15b72561033343c06f6ba",
+      "size": 30,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b7d40d18a7b35aabcfe15b72561033343c06f6ba"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-prefix2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2b3f0f2f25188ab7fee5fa4a2c4419cd564579eb",
+      "size": 74,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2b3f0f2f25188ab7fee5fa4a2c4419cd564579eb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-prefix2.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7d247bf302796d5be249edc665ee2319e71f4dad",
+      "size": 47,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7d247bf302796d5be249edc665ee2319e71f4dad"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-template-wildcard.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "15e957715d10704f0db803401220e8ee124b4cdc",
+      "size": 52,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/15e957715d10704f0db803401220e8ee124b4cdc"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-template-wildcard.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "91f7c98616e111c609e2e6fa9afef43b752c0832",
+      "size": 36,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/91f7c98616e111c609e2e6fa9afef43b752c0832"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-template.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f524328a682dc140934d6271475e72211c8ec078",
+      "size": 48,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f524328a682dc140934d6271475e72211c8ec078"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-template.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "50c82e7acd85ac6717cd10c0781fc3d635d21298",
+      "size": 52,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/50c82e7acd85ac6717cd10c0781fc3d635d21298"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-tm-reifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3d8f236c6a945723483404fef6f2982bc1da217e",
+      "size": 52,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3d8f236c6a945723483404fef6f2982bc1da217e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-tm-reifier.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3093d24273a37a141a9bb0d429023145f36784ad",
+      "size": 5,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3093d24273a37a141a9bb0d429023145f36784ad"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-topicref.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e5bd1cc81948f0b57bbd7fdb3824860aec66b047",
+      "size": 51,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e5bd1cc81948f0b57bbd7fdb3824860aec66b047"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-topicref.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "57c06edab4012f34193bd26a12641894013d653e",
+      "size": 18,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/57c06edab4012f34193bd26a12641894013d653e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-wildcard.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7011d334c22bda3c6fbd599c99ffc78f5c5229a6",
+      "size": 49,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7011d334c22bda3c6fbd599c99ffc78f5c5229a6"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-wildcard.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "799a01379905f080c35456c1fbcc83a70cc1c494",
+      "size": 14,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/799a01379905f080c35456c1fbcc83a70cc1c494"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-wildcard2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c9eb41735e6e4f24aba5dc6a3e8fab59e02578f4",
+      "size": 50,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c9eb41735e6e4f24aba5dc6a3e8fab59e02578f4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-wildcard2.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "85355032d54053273dde449b40ca7913a849a8a4",
+      "size": 49,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/85355032d54053273dde449b40ca7913a849a8a4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include-wildcard2.sub2",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "629191edec9a3be6535b24f362221a64675d624d",
+      "size": 19,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/629191edec9a3be6535b24f362221a64675d624d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2034196aead3890c1db3a3de94d9d386c156f171",
+      "size": 68,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2034196aead3890c1db3a3de94d9d386c156f171"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/include.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3d498afa7f28d2d031313cf13a62d89310187528",
+      "size": 81,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3d498afa7f28d2d031313cf13a62d89310187528"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/isa-relationship-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "214f492a231c3227afb80fa9bab334970d516ef0",
+      "size": 36,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/214f492a231c3227afb80fa9bab334970d516ef0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/isa-relationship-duplicate2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cc281eb7df0f68313ee2e72bc7fb3eb8149f9464",
+      "size": 135,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/cc281eb7df0f68313ee2e72bc7fb3eb8149f9464"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/isa-relationship-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9986d711e46e8be44c19a0868d2e5e1fd7bfe19f",
+      "size": 24,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9986d711e46e8be44c19a0868d2e5e1fd7bfe19f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/isa-relationship-type-qname.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "887e3cf138a4286e7cb5d7509f17389c430d9f5c",
+      "size": 54,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/887e3cf138a4286e7cb5d7509f17389c430d9f5c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/isa-relationship.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4cee2a478898df6a00c90016feb55f57d3e8db96",
+      "size": 15,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4cee2a478898df6a00c90016feb55f57d3e8db96"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/item-identifier-INF.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f8b6cb070c539864a0fdd051f3f4f307a25c6eaf",
+      "size": 9,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f8b6cb070c539864a0fdd051f3f4f307a25c6eaf"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/item-identifier-relative.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "386c2df6220d5d14ba5141806947c1ed29efffa5",
+      "size": 10,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/386c2df6220d5d14ba5141806947c1ed29efffa5"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/item-identifier-topicref.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "857dec1ec71bfbad4fe4226db05d3ef9e0caa161",
+      "size": 41,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/857dec1ec71bfbad4fe4226db05d3ef9e0caa161"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/item-identifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "09794871e90500c231cc2242ccb2dea02fe3f8eb",
+      "size": 33,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/09794871e90500c231cc2242ccb2dea02fe3f8eb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap-syntax-qname.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "87c41bd2b6f6929cc016db15bc5f3ec6f9fd8170",
+      "size": 98,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/87c41bd2b6f6929cc016db15bc5f3ec6f9fd8170"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap-template.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4deef8c874c5f3124c44dbcd26c347335b2f9734",
+      "size": 121,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4deef8c874c5f3124c44dbcd26c347335b2f9734"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap-template.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "08702d12337138875ec004017fde2b57ba032a78",
+      "size": 50,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/08702d12337138875ec004017fde2b57ba032a78"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap-tm-reifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c8e97bef09f0e2044faca8bad3e87c595cf25d32",
+      "size": 74,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c8e97bef09f0e2044faca8bad3e87c595cf25d32"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap-tm-reifier.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3093d24273a37a141a9bb0d429023145f36784ad",
+      "size": 5,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3093d24273a37a141a9bb0d429023145f36784ad"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap-xtm.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1c89b846f7236816448758961ea1aa200bd2b0fa",
+      "size": 85,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1c89b846f7236816448758961ea1aa200bd2b0fa"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap-xtm.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c3ee0dcf346f4e6cd57d2b69e20bbe7464de2225",
+      "size": 165,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c3ee0dcf346f4e6cd57d2b69e20bbe7464de2225"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "72132f58f1d543c025c98ae03b3ddab1fe4e1c53",
+      "size": 81,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/72132f58f1d543c025c98ae03b3ddab1fe4e1c53"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/mergemap.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "49cb4a44c97ae9546175ab084b543dec5b47b7f9",
+      "size": 17,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/49cb4a44c97ae9546175ab084b543dec5b47b7f9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8337837138254757e0a7b777f653e95b719d97bd",
+      "size": 29,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8337837138254757e0a7b777f653e95b719d97bd"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-reifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cd082a1cc3dd973377e162b92764b9a80c111566",
+      "size": 26,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/cd082a1cc3dd973377e162b92764b9a80c111566"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-scope-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d72d450306c8a4fe89149868d3da1ec4d0572e7b",
+      "size": 79,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d72d450306c8a4fe89149868d3da1ec4d0572e7b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-scope-embedded2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a1893a30cfbea634f59e97b8345cdb8d6dc11051",
+      "size": 97,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a1893a30cfbea634f59e97b8345cdb8d6dc11051"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-scope-embedded3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "45ee4ef503eb5bd08da658d4abc6e20763f0bc82",
+      "size": 179,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/45ee4ef503eb5bd08da658d4abc6e20763f0bc82"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-scope-embedded4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1c6f57a714a60fa7789d7792a4c02ce14e86a525",
+      "size": 265,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1c6f57a714a60fa7789d7792a4c02ce14e86a525"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-scope.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5b4f4ffbc5e00603f37e6fd6d6dd6b18d02e6cd8",
+      "size": 31,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/5b4f4ffbc5e00603f37e6fd6d6dd6b18d02e6cd8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-type-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ec8927601803b783cfd6632d139e9f10cacd2cdc",
+      "size": 31,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ec8927601803b783cfd6632d139e9f10cacd2cdc"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name-type.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9a0a03e15836d132826a492e830f5fe0414c64de",
+      "size": 28,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9a0a03e15836d132826a492e830f5fe0414c64de"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d66bbc0684a07136667b80d95356d7b40ba3ec97",
+      "size": 16,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d66bbc0684a07136667b80d95356d7b40ba3ec97"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/name2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "971bc4a60e8807d8b5d8fff0d3dae079d33bfa28",
+      "size": 16,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/971bc4a60e8807d8b5d8fff0d3dae079d33bfa28"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/nested-twice.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "378f7bb99e6c40bfbc35b164fd8a5f5c6085c771",
+      "size": 49,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/378f7bb99e6c40bfbc35b164fd8a5f5c6085c771"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-ctm-integer.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dc3c873a5d430f48d221cdf57c7093159bbc1e26",
+      "size": 18,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/dc3c873a5d430f48d221cdf57c7093159bbc1e26"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-datatype-unknown.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "77806cb986218376f31b261f0979357d62fe7bc9",
+      "size": 50,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/77806cb986218376f31b261f0979357d62fe7bc9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-date-another-century.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0c4a2e0883354089f9b379324c98bf531967d659",
+      "size": 28,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/0c4a2e0883354089f9b379324c98bf531967d659"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-date-negative.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8d764185253aaac6ee9b77b26d4a6eff46894ccd",
+      "size": 27,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8d764185253aaac6ee9b77b26d4a6eff46894ccd"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-date.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "26984ca6ceab11e2a025c17257dd18f3fb1cec59",
+      "size": 26,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/26984ca6ceab11e2a025c17257dd18f3fb1cec59"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-date2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5dfe42ad6c160de20c573c91a247fc3b89c94011",
+      "size": 180,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/5dfe42ad6c160de20c573c91a247fc3b89c94011"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-datetime.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4760f68b46f9e157e8d09b675e2e83416febd049",
+      "size": 36,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4760f68b46f9e157e8d09b675e2e83416febd049"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-datetime2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b5418d46a1b1c29fd7185a0a365cb6c1c8826923",
+      "size": 127,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b5418d46a1b1c29fd7185a0a365cb6c1c8826923"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-decimal-minus-sign.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "85c98d630a73c2f2551ebfba1019057fec6c9b52",
+      "size": 20,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/85c98d630a73c2f2551ebfba1019057fec6c9b52"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-decimal-plus-sign.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9adb09fa299a9a157054176c92ea17e851eb3960",
+      "size": 20,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9adb09fa299a9a157054176c92ea17e851eb3960"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-decimal.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c01f574cdc18d18896fc48b6c465cff5ca81118c",
+      "size": 19,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c01f574cdc18d18896fc48b6c465cff5ca81118c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-duplicate-string.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d12d1b612f926ae689eaec4901c4acb85506b876",
+      "size": 55,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d12d1b612f926ae689eaec4901c4acb85506b876"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-duplicate-uri.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "88850edf56f714d2f56c7d2b8d29d57c6a70659b",
+      "size": 93,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/88850edf56f714d2f56c7d2b8d29d57c6a70659b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-explicit-datatype.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dba8807ef180d60287e8d67f731c5cc85e2364fb",
+      "size": 91,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/dba8807ef180d60287e8d67f731c5cc85e2364fb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-explicit-datatype2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "57ba51c918411400321b78a75397f89447171022",
+      "size": 83,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/57ba51c918411400321b78a75397f89447171022"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-integer-minus-sign.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bf8e929ba42f0af1a41922bfe092485138ad32af",
+      "size": 19,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/bf8e929ba42f0af1a41922bfe092485138ad32af"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-integer-plus-sign.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "00173ee76c10724f875da7fb29daca9861163806",
+      "size": 19,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/00173ee76c10724f875da7fb29daca9861163806"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-integer.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "178ff38bdfc108867ba899eb2c98eac8431f9757",
+      "size": 18,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/178ff38bdfc108867ba899eb2c98eac8431f9757"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-integer2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d7236bd666447bd4c8115181e14664e234850fbd",
+      "size": 187,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d7236bd666447bd4c8115181e14664e234850fbd"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-qname-value.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c4ebb05d70416c7f913660fa3d37174786cedb7a",
+      "size": 75,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c4ebb05d70416c7f913660fa3d37174786cedb7a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-reifier-nested-nested.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "616901d06150c3f6c87c525853e545467e961a30",
+      "size": 86,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/616901d06150c3f6c87c525853e545467e961a30"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-reifier-nested.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "31db7790d7197fb0228f39e3f58b79fa389f0ed8",
+      "size": 43,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/31db7790d7197fb0228f39e3f58b79fa389f0ed8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-reifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0e663cc1a7871d13b26a06d651d29ea9b20f542d",
+      "size": 38,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/0e663cc1a7871d13b26a06d651d29ea9b20f542d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-scope-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e820de7ff6465d1bf4cb01cda1ae4860b7e92426",
+      "size": 94,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e820de7ff6465d1bf4cb01cda1ae4860b7e92426"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-scope-embedded2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "df9eb104094c7d92d1a32996bbb067136ada254a",
+      "size": 111,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/df9eb104094c7d92d1a32996bbb067136ada254a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-scope-embedded3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d2170f1fc168921fb3ae33843a076399c6a08a40",
+      "size": 193,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d2170f1fc168921fb3ae33843a076399c6a08a40"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-scope-embedded4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "50d38bfba90507b9d01d162f388b2cf1f06e22eb",
+      "size": 279,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/50d38bfba90507b9d01d162f388b2cf1f06e22eb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-scope.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e5528ea1236171ea7e8c2eae97d83f5ecc82e340",
+      "size": 46,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e5528ea1236171ea7e8c2eae97d83f5ecc82e340"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-string-multiline.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a151668abd65d2b2a3a2dc978da2d7f1f2d82792",
+      "size": 35,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a151668abd65d2b2a3a2dc978da2d7f1f2d82792"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-string-multiline2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "21984d274cef41532152e6edc87ef418577569fc",
+      "size": 37,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/21984d274cef41532152e6edc87ef418577569fc"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-string-triple.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c77f48731f3f4416e5aa769076a4d4abb814dc6a",
+      "size": 42,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c77f48731f3f4416e5aa769076a4d4abb814dc6a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-string.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4fb0c2a6cd1fbdbc6a460293c4f96c2d965af601",
+      "size": 30,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4fb0c2a6cd1fbdbc6a460293c4f96c2d965af601"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-string2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dcd2651bf445b9b7b0c8dcf25ec3b08016aa694b",
+      "size": 29,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/dcd2651bf445b9b7b0c8dcf25ec3b08016aa694b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-two.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2184213a7c20156bd77b4fb2a27e89230e64924f",
+      "size": 182,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2184213a7c20156bd77b4fb2a27e89230e64924f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-type-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eade8c4b9a33aa239052b1d854d1cf61a8a19253",
+      "size": 35,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/eade8c4b9a33aa239052b1d854d1cf61a8a19253"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-uri-relative.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b91f11aad5bcbfcfe2ce79a982284bda9ebec81b",
+      "size": 30,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b91f11aad5bcbfcfe2ce79a982284bda9ebec81b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/occurrence-uri-semicolon.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "78d47f38f1ba64caca25a45231a989b3bf9d7c66",
+      "size": 63,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/78d47f38f1ba64caca25a45231a989b3bf9d7c66"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/prefix-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cdda3ec583c4a5c215f6331fefcbaa84944a9352",
+      "size": 81,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/cdda3ec583c4a5c215f6331fefcbaa84944a9352"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/prefix-multiline.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a016583b37497b993f18d719f7a95607ba336476",
+      "size": 46,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a016583b37497b993f18d719f7a95607ba336476"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/prefix-multiline2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "390d5ef582180366fff4f9b4ff965160c3eb1d58",
+      "size": 50,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/390d5ef582180366fff4f9b4ff965160c3eb1d58"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/prefix-multiline3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9db2da4ae93782191fb612d1bca55882d29e3b7b",
+      "size": 62,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9db2da4ae93782191fb612d1bca55882d29e3b7b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/prefix-multiline4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d4aea722486011f11a3fd12e598ee37e4a2fdf13",
+      "size": 72,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d4aea722486011f11a3fd12e598ee37e4a2fdf13"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/prefix-template-scope.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2f6f17314d283d5a490ac1272639f2f5e2a41395",
+      "size": 84,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2f6f17314d283d5a490ac1272639f2f5e2a41395"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/qname-digits.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2f65f163e1bc8d5eab6923d97ae7ebbe100241f1",
+      "size": 44,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2f65f163e1bc8d5eab6923d97ae7ebbe100241f1"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/role-player-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "72581a94fd268d3c48fa119da54f1c6cc6a5cebc",
+      "size": 31,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/72581a94fd268d3c48fa119da54f1c6cc6a5cebc"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/role-reifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bcc82e0f968fe70ee99e56b1795b8726bcd95e4d",
+      "size": 35,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/bcc82e0f968fe70ee99e56b1795b8726bcd95e4d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/role-type-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b9e93aaa1accff2aa2190c3a883a1788d1577b67",
+      "size": 31,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b9e93aaa1accff2aa2190c3a883a1788d1577b67"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/rootless-uri.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "56ea37023526719a0705930080e1f03d1c79efc7",
+      "size": 50,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/56ea37023526719a0705930080e1f03d1c79efc7"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/simple.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ec502d2b0d5ece977c6d468507a2533e4a52a03f",
+      "size": 6,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ec502d2b0d5ece977c6d468507a2533e4a52a03f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/string-escape.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "50c1878a8452a63ebbcd5b2233859f8ad602c036",
+      "size": 70,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/50c1878a8452a63ebbcd5b2233859f8ad602c036"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/string-escape2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a8b3570d2afeb08019b648c03fe27ccea0d651b1",
+      "size": 17,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a8b3570d2afeb08019b648c03fe27ccea0d651b1"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-identifier-dot.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "16bbc93b2f33f39502e85c94e60f6e5c1df58652",
+      "size": 28,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/16bbc93b2f33f39502e85c94e60f6e5c1df58652"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-identifier-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eb0338437613fa180b1b2c803a26a2b6c7cdc197",
+      "size": 53,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/eb0338437613fa180b1b2c803a26a2b6c7cdc197"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-identifier-non-http.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "71d983a652109b97772a78915935415c6e324d17",
+      "size": 33,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/71d983a652109b97772a78915935415c6e324d17"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-identifier-relative.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4717fa19820a13dbe3cee83af2f0f377ee0badd3",
+      "size": 8,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4717fa19820a13dbe3cee83af2f0f377ee0badd3"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-identifier-topicref.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4bacf1af4b06df3c58977d85e8d4a8075dd55a06",
+      "size": 37,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4bacf1af4b06df3c58977d85e8d4a8075dd55a06"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-identifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cd6e26315a88469b36695c7861d6297283a18819",
+      "size": 30,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/cd6e26315a88469b36695c7861d6297283a18819"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-locator-dot.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "915ce007e330b28aee8f62839d0e06f7df48be15",
+      "size": 25,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/915ce007e330b28aee8f62839d0e06f7df48be15"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-locator-relative.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "eaf0ba00fa224231fa2a4f4fa3b3f33e30ec8f2e",
+      "size": 9,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/eaf0ba00fa224231fa2a4f4fa3b3f33e30ec8f2e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/subject-locator.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b68ac2148c08ae8ef3cf70ed36c395b331d3209c",
+      "size": 35,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b68ac2148c08ae8ef3cf70ed36c395b331d3209c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-ambiguous-parameter.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9a2572eb83d23a9aafb8bccbf115ac2d3884ae01",
+      "size": 81,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9a2572eb83d23a9aafb8bccbf115ac2d3884ae01"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-ambiguous-parameter2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8badcb72d81b2181b2eb60694f0c50067bdf0a24",
+      "size": 109,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8badcb72d81b2181b2eb60694f0c50067bdf0a24"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-ambiguous-parameter3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b535fc4c38f7a89cc27b66cc7316f5e8140ed968",
+      "size": 75,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b535fc4c38f7a89cc27b66cc7316f5e8140ed968"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-ambiguous-parameter4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3d8371d1000a84c7acc20c6a98da52266d6e80f3",
+      "size": 197,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3d8371d1000a84c7acc20c6a98da52266d6e80f3"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-ambiguous-parameter5.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a8461af6a1d6ac331819176042da7887f7fa9830",
+      "size": 146,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a8461af6a1d6ac331819176042da7887f7fa9830"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-ambiguous-parameter6.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "43508c7ef429f9a80d1f203a8dcc7f3844dcfc15",
+      "size": 163,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/43508c7ef429f9a80d1f203a8dcc7f3844dcfc15"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-assoc-embedded-topic.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8b10c496ea26f79305d9c5f300c9771e1c591542",
+      "size": 171,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8b10c496ea26f79305d9c5f300c9771e1c591542"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-duplicate-name.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "92474acd0e89179557fa481b995eb3aceae25335",
+      "size": 120,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/92474acd0e89179557fa481b995eb3aceae25335"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-forward-ref.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d9ab19ce0e031104dc542523f867b7e858812405",
+      "size": 187,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d9ab19ce0e031104dc542523f867b7e858812405"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f1ad07c32b5c474ad2ba304cf9b9f61316296c52",
+      "size": 51,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f1ad07c32b5c474ad2ba304cf9b9f61316296c52"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-embedded2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d55a2a632b4427779755c94327bca8169f021081",
+      "size": 78,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d55a2a632b4427779755c94327bca8169f021081"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-noargs-isa.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6678214e8238c8862cbe0c28b37c59f76802958b",
+      "size": 152,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/6678214e8238c8862cbe0c28b37c59f76802958b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-noargs2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "91d25bdd33cdb7d61281b3d529aae9323f71dc69",
+      "size": 124,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/91d25bdd33cdb7d61281b3d529aae9323f71dc69"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-prefix-notation.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a8cbca339fc7e9fc66f35e4638314ea4cc347fff",
+      "size": 81,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a8cbca339fc7e9fc66f35e4638314ea4cc347fff"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-twice.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "51ea3acb6268d654f72e67c82adadb905a0a5326",
+      "size": 176,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/51ea3acb6268d654f72e67c82adadb905a0a5326"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-wildcard-named.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "faa446e0cbb54caef52b40244834fdcf4b24c079",
+      "size": 78,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/faa446e0cbb54caef52b40244834fdcf4b24c079"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-wildcard-named2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3be9d819db604321fcaf196e640513a0bec49730",
+      "size": 87,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3be9d819db604321fcaf196e640513a0bec49730"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-wildcard-named3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "264be6972175516b7b1212f159ba0400a0286da1",
+      "size": 113,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/264be6972175516b7b1212f159ba0400a0286da1"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-wildcard-named4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "08432cdac88439eedcd4f8d8239fcdeda1cefcd6",
+      "size": 60,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/08432cdac88439eedcd4f8d8239fcdeda1cefcd6"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-wildcard-named5.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9dba8de9a299d02453033b25ed7a789cbf5c162b",
+      "size": 112,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/9dba8de9a299d02453033b25ed7a789cbf5c162b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-wildcard-named6.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4c23c7936e2abfeed3769a8fd23c93fa6a678c0f",
+      "size": 120,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4c23c7936e2abfeed3769a8fd23c93fa6a678c0f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-invocation-wildcard.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ea44cd07ac1e7e3fd73904a2b485abd60671d6f8",
+      "size": 66,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ea44cd07ac1e7e3fd73904a2b485abd60671d6f8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-item-identifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "33c04b83704484ff8f027a190f53218c3956af2c",
+      "size": 73,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/33c04b83704484ff8f027a190f53218c3956af2c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-item-identifier2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8032fb175b8326a787be031c1fa1dcb1e017afd2",
+      "size": 72,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8032fb175b8326a787be031c1fa1dcb1e017afd2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-item-identifier4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c104fe10ec9bd548c3d2e7abb076ab3c733a1a9f",
+      "size": 78,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c104fe10ec9bd548c3d2e7abb076ab3c733a1a9f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-nested-occtype.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "41e849b631da7fdd474c4d8edfd5dceac6947d16",
+      "size": 74,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/41e849b631da7fdd474c4d8edfd5dceac6947d16"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-nested-occtype2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2e19e6e292ff332be0b3adf10cadebffbd8932ed",
+      "size": 76,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2e19e6e292ff332be0b3adf10cadebffbd8932ed"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-noop.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "964e3900e1f82681c961cea93f910d92d15738de",
+      "size": 31,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/964e3900e1f82681c961cea93f910d92d15738de"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-noop2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cf75b846b164ae34b17a3000036f71c206e74b3b",
+      "size": 29,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/cf75b846b164ae34b17a3000036f71c206e74b3b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-noop3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7a0d0a0602bea4896839bece602af47b5fb8ab94",
+      "size": 48,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7a0d0a0602bea4896839bece602af47b5fb8ab94"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-references.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bbf1bb5c343ad2f1c1256808f9464045c77cf7ec",
+      "size": 536,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/bbf1bb5c343ad2f1c1256808f9464045c77cf7ec"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-simple.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1fd1b518e847ed657e773f7a9d1aa437cb926735",
+      "size": 49,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/1fd1b518e847ed657e773f7a9d1aa437cb926735"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-subject-identifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a1f04d3ea32abbea3faa73c9d6ec6f0c7b4121f6",
+      "size": 81,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a1f04d3ea32abbea3faa73c9d6ec6f0c7b4121f6"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-subject-identifier2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "390002404c6d2c32e74b7dc0f8a9a12f2f3227a5",
+      "size": 81,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/390002404c6d2c32e74b7dc0f8a9a12f2f3227a5"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-subject-locator.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "db1c33c6951290b351da19ebc4b0d89347809765",
+      "size": 79,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/db1c33c6951290b351da19ebc4b0d89347809765"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-subject-locator2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8dfb5d361d6559f0e8381209acf8caa18cbea946",
+      "size": 78,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8dfb5d361d6559f0e8381209acf8caa18cbea946"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-subject-locator4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c6173be533f8ccdfeb0533165852749b7b1006f7",
+      "size": 79,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c6173be533f8ccdfeb0533165852749b7b1006f7"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-topic-nested.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ea88f10f166c8a365720d45cff957ed06f90ed4f",
+      "size": 83,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/ea88f10f166c8a365720d45cff957ed06f90ed4f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-topic-nested2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "33e1e36ea98de455662b1cf2882da33995185487",
+      "size": 76,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/33e1e36ea98de455662b1cf2882da33995185487"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-typed-value.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "611d1be8420557fd8ba7052d27634b741e403bc4",
+      "size": 62,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/611d1be8420557fd8ba7052d27634b741e403bc4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-wildcard-named.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6a0c9f7f1dd0ff7094b592c8c4fc2bf01d29fc16",
+      "size": 57,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/6a0c9f7f1dd0ff7094b592c8c4fc2bf01d29fc16"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-wildcard-named2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3a726792324d17cbdabdb2c42501e7c9c5fe6189",
+      "size": 63,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3a726792324d17cbdabdb2c42501e7c9c5fe6189"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-wildcard-named3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c6c54dfe2a3626ca4d76fce19dab554bdc231ead",
+      "size": 123,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c6c54dfe2a3626ca4d76fce19dab554bdc231ead"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-wildcard-named4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bf700c245ccc913721bf27b6b4a7a5aad279033e",
+      "size": 204,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/bf700c245ccc913721bf27b6b4a7a5aad279033e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/template-wildcard.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "06176e7c7ae1cbe45f7eeadc57e80d8d5753f30c",
+      "size": 51,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/06176e7c7ae1cbe45f7eeadc57e80d8d5753f30c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/tm-reifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "df1059e4f7981f502a20e4614521ab35e20e2ed7",
+      "size": 7,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/df1059e4f7981f502a20e4614521ab35e20e2ed7"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/tm-reifier2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "de2519844f9a684383bb2a2595bc726f3c87f884",
+      "size": 20,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/de2519844f9a684383bb2a2595bc726f3c87f884"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/tm-reifier3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b12f0afb1dd5106f0cc774545479c760f2e09fe6",
+      "size": 60,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b12f0afb1dd5106f0cc774545479c760f2e09fe6"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-embedded-template-invocation.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f831e56ed7b5a6454a554a2410df38faee3ce654",
+      "size": 69,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f831e56ed7b5a6454a554a2410df38faee3ce654"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-identifier-INF.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "db85b5e72ff63e5e8e413771c973a2dec8ffa81f",
+      "size": 5,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/db85b5e72ff63e5e8e413771c973a2dec8ffa81f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-identifier-eq-template-name.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "39e7231feb92f992c12e159738326f7c6966d66a",
+      "size": 48,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/39e7231feb92f992c12e159738326f7c6966d66a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-item-identifier-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "afbccb085d24e0c133d88799329452798c7d76ba",
+      "size": 18,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/afbccb085d24e0c133d88799329452798c7d76ba"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-item-identifier-wrapped.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "76ebfa1b5f0cbaacba763b9e2dab691239753984",
+      "size": 37,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/76ebfa1b5f0cbaacba763b9e2dab691239753984"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-item-identifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2645a0f9c01ca5c74a67666a8077473a99ce1c7e",
+      "size": 35,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/2645a0f9c01ca5c74a67666a8077473a99ce1c7e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-subject-identifier-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f32042e8210d0eef818dccb25befd71993ef5d07",
+      "size": 71,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f32042e8210d0eef818dccb25befd71993ef5d07"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-subject-identifier-wrapped.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3b5d500a7b3f5ef4dfb4a26b405c8752084375cc",
+      "size": 40,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3b5d500a7b3f5ef4dfb4a26b405c8752084375cc"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-subject-identifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "18634a5fa2abbc5dfbfbf3b0ace98148ed5126e0",
+      "size": 38,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/18634a5fa2abbc5dfbfbf3b0ace98148ed5126e0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-subject-locator-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "01aeb8542625106bd072628bfc460cc15edce963",
+      "size": 19,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/01aeb8542625106bd072628bfc460cc15edce963"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-subject-locator-semi.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f137edd019f4970236628cd94a13434111d2de1a",
+      "size": 42,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/f137edd019f4970236628cd94a13434111d2de1a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-subject-locator-wrapped.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c95f10c58d1966399176ee330d27396ba7e8f9c0",
+      "size": 42,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c95f10c58d1966399176ee330d27396ba7e8f9c0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-subject-locator.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "70cfb2b0322cacd289328b6dc940d492ea20fb90",
+      "size": 40,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/70cfb2b0322cacd289328b6dc940d492ea20fb90"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-template-invocation-unary.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "47646168d35530552d05d1882c5e736d6c35ad66",
+      "size": 72,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/47646168d35530552d05d1882c5e736d6c35ad66"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/topic-template-invocation.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3eca515d3f1221cf2120d660dfc6f36dc91fbb3e",
+      "size": 89,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3eca515d3f1221cf2120d660dfc6f36dc91fbb3e"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/unicode-escape-u4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "acd51d4db18db2e1d0efd67cedd3277987eb3a3a",
+      "size": 28,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/acd51d4db18db2e1d0efd67cedd3277987eb3a3a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/unicode-escape-u6.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a973b7bc7ba3018b97601455914df139393cab70",
+      "size": 32,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a973b7bc7ba3018b97601455914df139393cab70"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/variant-duplicate.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "015f30c2ded3a4a656d60c6ad8555cdc0939b3fe",
+      "size": 46,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/015f30c2ded3a4a656d60c6ad8555cdc0939b3fe"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/variant-reifier.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "aa9e429cc0d45b576a7bdcfb366caee6d7ee782d",
+      "size": 40,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/aa9e429cc0d45b576a7bdcfb366caee6d7ee782d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/variant-scope-embedded.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5afaabf018ada67831279dbc21243354a0b57f9b",
+      "size": 94,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/5afaabf018ada67831279dbc21243354a0b57f9b"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/variant-scope-embedded2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "abaed5e9a2452c6837ec3aa68db7c2ff315aae23",
+      "size": 127,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/abaed5e9a2452c6837ec3aa68db7c2ff315aae23"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/variant-scope-embedded3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "54b8f89f96d34cff503421899298f8af68ed7161",
+      "size": 214,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/54b8f89f96d34cff503421899298f8af68ed7161"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/variant-scope-embedded4.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c7f7bd37337021eb62fbfee67afd7fea7dd1a602",
+      "size": 293,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c7f7bd37337021eb62fbfee67afd7fea7dd1a602"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/variant.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d0950cf9b919d9bb8edf26510d756d934d7f8a12",
+      "size": 31,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/d0950cf9b919d9bb8edf26510d756d934d7f8a12"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/variants.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3c015dcb3d3a45c4a99f4d25489de1456900fccb",
+      "size": 47,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/3c015dcb3d3a45c4a99f4d25489de1456900fccb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/wildcard-named-merge.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7cc309b7b94d9238282c7a06d900088088be2f2a",
+      "size": 11,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7cc309b7b94d9238282c7a06d900088088be2f2a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/wildcard-named.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "317c9fad51926ab57efbd0a4b3492342f62dc394",
+      "size": 7,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/317c9fad51926ab57efbd0a4b3492342f62dc394"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/wildcard-named2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e13fcb5172494b81b4f546fac89138c7f3cdd8bf",
+      "size": 47,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e13fcb5172494b81b4f546fac89138c7f3cdd8bf"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/in/wildcard.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "794db8759d135803379e293cb79ede1c50e612f6",
+      "size": 2,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/794db8759d135803379e293cb79ede1c50e612f6"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/embedded-topic-global-scope.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "811ea8c9d9832009f4ebb74024d1f1fdd4f994c4",
+      "size": 24,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/811ea8c9d9832009f4ebb74024d1f1fdd4f994c4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/embedded-topic-template.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "163dcce1d5ba7fbe5e8717a571c46a4ac80b50f8",
+      "size": 50,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/163dcce1d5ba7fbe5e8717a571c46a4ac80b50f8"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/include-prefix.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b7af4e2966931d4e4f16acb93b096e35ac4aa925",
+      "size": 38,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b7af4e2966931d4e4f16acb93b096e35ac4aa925"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/include-prefix.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c4cdb68e9c85d0d23aef680dc34b18e6716a8bdb",
+      "size": 33,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c4cdb68e9c85d0d23aef680dc34b18e6716a8bdb"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/include-prefix2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8531eee53756bc00efcdcf8db27c6b02d9aff8ee",
+      "size": 64,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8531eee53756bc00efcdcf8db27c6b02d9aff8ee"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/include-prefix2.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e9f740ccb8ea4117d99c2d0844ed5817924f1df3",
+      "size": 8,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e9f740ccb8ea4117d99c2d0844ed5817924f1df3"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/mergemap-template.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dfa83976cf11d312be1f3a26d7407205b7f34d0d",
+      "size": 44,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/dfa83976cf11d312be1f3a26d7407205b7f34d0d"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/mergemap-template.sub",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "36a850ca148ae3bec5ed6e4d2f1f2521497f35a2",
+      "size": 37,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/36a850ca148ae3bec5ed6e4d2f1f2521497f35a2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/occurrence-double-negative-infinity.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cbcf0cb344f94a83553f4dff6ed7d93351960279",
+      "size": 20,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/cbcf0cb344f94a83553f4dff6ed7d93351960279"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/occurrence-double-positive-infinity.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4b3b8f5dede06d5ee21696c7a6feaed5b0dcc417",
+      "size": 19,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4b3b8f5dede06d5ee21696c7a6feaed5b0dcc417"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/occurrence-explicit-datatype-as-parameter.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "788a5e89ce6f3959f344abb5214d62d5a40d0848",
+      "size": 129,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/788a5e89ce6f3959f344abb5214d62d5a40d0848"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/prefix-collision.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "07eb193e28748d18877e1be6cf057ba935e8afb4",
+      "size": 71,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/07eb193e28748d18877e1be6cf057ba935e8afb4"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/prefix-template-scope.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8b1cf7e16157724a397b228d7f90b8403faa6a61",
+      "size": 76,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/8b1cf7e16157724a397b228d7f90b8403faa6a61"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/prefix-undefined.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b5338c1358488677a9dcd0048ed2ed8081db09bf",
+      "size": 10,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b5338c1358488677a9dcd0048ed2ed8081db09bf"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/qname-hyphen.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b2a7109ee4f4c427e345c3e47a0c11d5fb3a7a2c",
+      "size": 47,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/b2a7109ee4f4c427e345c3e47a0c11d5fb3a7a2c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/reifier-collision.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "afcdb9f7ca9afb871f996d23451239802a7daad7",
+      "size": 36,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/afcdb9f7ca9afb871f996d23451239802a7daad7"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/string-unbalanced.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7c14cea6a11dd14f7f4ec20ccd64938491e47006",
+      "size": 15,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/7c14cea6a11dd14f7f4ec20ccd64938491e47006"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/string-unicode.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "015e58cf4147c861ee509d009cc40574698645ba",
+      "size": 13,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/015e58cf4147c861ee509d009cc40574698645ba"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/string-unicode2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "83d29e18daa5a1019c5de241145661b3b4d68ba2",
+      "size": 22,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/83d29e18daa5a1019c5de241145661b3b4d68ba2"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/template-bad-type.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6f629c442b90a911b88dd49b05dd35f2f5fd7eb0",
+      "size": 55,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/6f629c442b90a911b88dd49b05dd35f2f5fd7eb0"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/template-item-identifier3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "26d7688197e4a014300bbb004154d40f3ae2ced9",
+      "size": 78,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/26d7688197e4a014300bbb004154d40f3ae2ced9"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/template-missing-args.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "45bc141a62a7ab694038fe5cb5c852454dbeb5e5",
+      "size": 50,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/45bc141a62a7ab694038fe5cb5c852454dbeb5e5"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/template-missing-def.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e3601253bbb56f33e5e7bce2710a9a9da6642652",
+      "size": 11,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/e3601253bbb56f33e5e7bce2710a9a9da6642652"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/template-name-collision.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "02781dc5d1c932df48cc9f815f1a98e23bd6a50a",
+      "size": 96,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/02781dc5d1c932df48cc9f815f1a98e23bd6a50a"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/template-subject-locator3.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c112b2b627f7cb1ce465969536e92af98662cb48",
+      "size": 78,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c112b2b627f7cb1ce465969536e92af98662cb48"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/tm-reifier-in-template.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4f56ac1d5762c072ae1b4aba3744c1f7cbbb986f",
+      "size": 114,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/4f56ac1d5762c072ae1b4aba3744c1f7cbbb986f"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/tm-reifier-not-ontop.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dbecca9f2b5a30c59c5339ccb1ab1ddb2678c405",
+      "size": 17,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/dbecca9f2b5a30c59c5339ccb1ab1ddb2678c405"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/variable-undefined.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bd215b729763be2ca776aed30f09ae9f43ff91be",
+      "size": 16,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/bd215b729763be2ca776aed30f09ae9f43ff91be"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/variable-undefined2.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c83a1196d6fc2702aebdc7774136be3c1288074c",
+      "size": 21,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/c83a1196d6fc2702aebdc7774136be3c1288074c"
+    },
+    {
+      "path": "cxtm-tests/assembly/resources/ctm/invalid/wrong-version.ctm",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a1472beaa846bd9af98bfd68a60c5e2a60afe103",
+      "size": 10,
+      "url": "https://api.github.com/repos/ontopia/externals/git/blobs/a1472beaa846bd9af98bfd68a60c5e2a60afe103"
+    }
+  ]
+}

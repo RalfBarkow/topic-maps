@@ -1,0 +1,105 @@
+{
+  "repository": "/Users/rgb/workspace/topic-maps",
+  "branch": "codex/ctm-slice-0",
+  "baseCommit": null,
+  "baseDescription": "New independent repository, initially absent; empty base with unborn HEAD; delivery is root commit.",
+  "deliveryCommitCommand": "git -C /Users/rgb/workspace/topic-maps rev-parse HEAD",
+  "hyperdocObserved": [
+    {
+      "worktree": "/Users/rgb/workspace/hyperdoc-dreyeck-ch",
+      "branch": "dreyeck.ch",
+      "head": "9a1764250f31013a50965aad324dd72c0662b9cc",
+      "clean": true,
+      "modifiedBySlice": false
+    },
+    {
+      "worktree": "/Users/rgb/workspace/hyperdoc-querying-topicmaps",
+      "branch": "codex/querying-topicmaps",
+      "head": "ca3c46b6e37b8e5e253c4faabc4819ff36bc64e8",
+      "clean": true,
+      "modifiedBySlice": false
+    }
+  ],
+  "environment": {
+    "os": "Darwin x86_64",
+    "git": "git version 2.50.1 (Apple Git-155)",
+    "python": "Python 3.13.2",
+    "sbcl": [
+      "2.5.4",
+      "2.4.10"
+    ],
+    "asdfInSBCL254": "3.3.1"
+  },
+  "commands": [
+    {
+      "command": "/usr/bin/sandbox-exec -p '(version 1)(allow default)(deny network*)' /usr/bin/env SBCL=/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl TOPIC_MAPS_REPORT=/private/tmp/ctm-slice-0-report-final.json scripts/test.sh",
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0,
+      "network": "OS-denied",
+      "log": "tests-final.log"
+    },
+    {
+      "command": "/usr/bin/sandbox-exec -p '(version 1)(allow default)(deny network*)' /usr/bin/env SBCL=/nix/store/y96nx8571mpdvjd40krkdim2av0in972-sbcl-2.4.10/bin/sbcl TOPIC_MAPS_REPORT=/private/tmp/ctm-slice-0-report-relocated.json /private/tmp/ctm-slice-0-relocated/scripts/test.sh",
+      "exitCode": 0,
+      "network": "OS-denied",
+      "log": "tests-relocated.log",
+      "relocation": "copy of the independent project without .git; final portable test files updated before final run"
+    },
+    {
+      "command": "cmp reports/validation.json /private/tmp/ctm-slice-0-report-relocated.json",
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0,
+      "result": "byte-identical"
+    },
+    {
+      "command": "/usr/bin/sandbox-exec -p '(version 1)(allow default)(deny network*)' /nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl --noinform --no-sysinit --no-userinit --non-interactive --eval '(require :asdf)' --eval '(asdf:initialize-source-registry (quote (:source-registry :ignore-inherited-configuration)))' --eval '(asdf:load-asd #p\"/Users/rgb/workspace/topic-maps/topic-maps.asd\")' --eval '(asdf:test-system \"topic-maps\")'",
+      "exitCode": 0,
+      "network": "OS-denied",
+      "log": "primary-asdf.log"
+    },
+    {
+      "command": "python3 scripts/corpus.py acquire",
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0,
+      "result": "Already-present bytes verified, no writes and no network",
+      "log": "acquisition-idempotence.log"
+    },
+    {
+      "command": "nix eval --offline --raw 'path:/Users/rgb/workspace/topic-maps#devShells.x86_64-darwin.default.name'",
+      "exitCode": 0,
+      "result": "nix-shell",
+      "scope": "Evaluation only; no Nix build claimed"
+    },
+    {
+      "command": "python3 -m py_compile scripts/corpus.py scripts/check-report.py tests/test_corpus.py",
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0
+    }
+  ],
+  "infrastructure": {
+    "commonLispChecks": 54,
+    "pythonIntegrityFixtureTests": 2,
+    "independentJSONCheck": "PASS",
+    "primaryASDFTestEntry": "PASS",
+    "corpusIntegrity": "All 2006 files match their pinned hashes",
+    "reportedCases": 273,
+    "importedCTMPasses": 0,
+    "importedCTMStatus": "NOT-RUN",
+    "stagedUpstreamGitBlobsMatch": 2006,
+    "authoredDiffCheck": "PASS; upstream inputs and immutable logs excluded from whitespace cleanup"
+  },
+  "qualification": "Imported CTM cases target the draft dated 2010-03-31; passing them alone cannot establish ISO/IEC 13250-6:2010 conformity.",
+  "reportSHA256": "d9682630f1c909c3bea6ae46a59277a234a39eadfd507bde06e6ba955f8dd1b2",
+  "logSHA256": {
+    "tests-final.log": "4f4a9c5e7396b0323afbc7968c41babd98ee639e4a43d1b1652f8fbf62763ac2",
+    "tests-relocated.log": "7cd501cd8eb54da77371e2c9a22f62ac577f9b792346a35f2966c4ddc17d59dc",
+    "primary-asdf.log": "ac69a845776d104c15a168ddbcf155c27201a8fadfc5a23762d975ac330dd979",
+    "acquisition-idempotence.log": "7d412b1a94b77974ba84dd8e03fbe30c8d10f1b9511f83491d5cfc9bd7dc28cd"
+  },
+  "readyForSlice1": true,
+  "slice1Started": false,
+  "deployment": false,
+  "serverStartup": false,
+  "ssh": false,
+  "runningLispImagesModified": false
+}
