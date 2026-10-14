@@ -58,3 +58,17 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.ctm.tests :run-association-tests)))
+
+(asdf:defsystem "topic-maps/cxtm"
+  :description "Pure CXTM for the supported TMDM subset; ISO/IEC 13250-4:2009"
+  :version "0.4.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :components ((:file "src/cxtm/package") (:file "src/cxtm/nfc-data")
+               (:file "src/cxtm/unicode") (:file "src/cxtm/canonicalizer")))
+
+(asdf:defsystem "topic-maps/cxtm/tests"
+  :description "Real pinned CXTM comparisons and canonicalization regression tests"
+  :depends-on ("topic-maps/cxtm" "topic-maps/ctm/association-tests") :serial t
+  :components ((:file "tests/cxtm"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.ctm.tests :run-cxtm-tests)))

@@ -68,7 +68,7 @@
      "qualification" (getf summary :qualification)
      "implemented" (fields "ctmParsing" (if (getf implementation :ctm) :true :false)
                             "tmdmDeserialization" (if (getf implementation :tmdm) :true :false)
-                            "cxtmCanonicalization" :false)
+                            "cxtmCanonicalization" (if (getf implementation :cxtm) :true :false))
      "implementationScope" (getf implementation :scope)
      "counts" (counts-object (getf summary :counts))
      "countsMatchPin" (if (getf summary :counts-match-pin) :true :false)

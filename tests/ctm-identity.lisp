@@ -256,7 +256,9 @@
              (equal (topic-subject-identifiers
                      (first-topic (read-text (format nil "<~A>." (first pair)) "http://a/b/c/d;p?q")))
                     (list (second pair)))))
-    (check "canonicalizer-not-defined" (null (asdf:find-system "topic-maps/cxtm" nil)))
+    (check "reader-does-not-depend-on-canonicalizer"
+           (equal (asdf:system-depends-on (asdf:find-system "topic-maps/ctm"))
+                  '("topic-maps/tmdm")))
     (setf *last-checks* (nreverse *checks*))
     (format t "~&CTM-IDENTITY-SEMANTICS-PASS: ~D checks, 5 imported semantic cases, required prefix rejection; no CXTM equality passes.~%"
             (length *last-checks*))

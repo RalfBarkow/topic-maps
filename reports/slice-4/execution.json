@@ -1,0 +1,114 @@
+{
+  "baseCommit": "35648c4dcc71e8dc6448b64abcacb438e53d64a2",
+  "branch": "codex/ctm-slice-4",
+  "validatedAtUTC": "2026-10-14T16:11:46.548477+00:00",
+  "pythonVersion": "3.13.2 (main, Feb 15 2025, 18:18:02) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "unicodeOracleVersion": "15.1.0",
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/usr/bin/env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "SBCL=/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "TOPIC_MAPS_REPORT=/private/tmp/ctm-slice-4-validation-5tf9f583/validation-2.5.4.json",
+        "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+      ],
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0,
+      "log": "tests-2.5.4.log"
+    },
+    {
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/usr/bin/env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "SBCL=/nix/store/y96nx8571mpdvjd40krkdim2av0in972-sbcl-2.4.10/bin/sbcl",
+        "TOPIC_MAPS_REPORT=/private/tmp/ctm-slice-4-validation-5tf9f583/validation-2.4.10.json",
+        "/private/tmp/ctm-slice-4-validation-5tf9f583/checkout/scripts/test.sh"
+      ],
+      "workdir": "/private/tmp/ctm-slice-4-validation-5tf9f583/checkout",
+      "exitCode": 0,
+      "log": "tests-2.4.10-relocated.log"
+    },
+    {
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/dev/stdin"
+      ],
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0,
+      "input": "Inspection Lisp fence in docs/reading-canonical-topic-maps.md plus output translation and three assertions",
+      "inputSHA256": "9209989214fc433d3194751b9759588a6047a9911902a6690c12062f5c896452",
+      "log": "describe.log"
+    }
+  ],
+  "results": {
+    "foundationChecks": 54,
+    "identityChecks": 123,
+    "mergeChecks": 646,
+    "associationChecks": 657,
+    "cxtmChecks": 445,
+    "unicodeOracleComparisons": 16294,
+    "pythonIntegrityTests": 2,
+    "failures": 0,
+    "pinnedCanonicalCases": 24,
+    "importedStatuses": {
+      "pass": 25,
+      "fail": 0,
+      "unsupported": 0,
+      "not-run": 248
+    },
+    "allFiveReportPairsByteIdentical": true,
+    "previous24SemanticCaseRecordsUnchanged": true,
+    "ctmTmdmSourceAndCorpusUnchanged": true,
+    "documentedInspectionPassed": true
+  },
+  "qualification": "CTM tests target the draft dated 2010-03-31; they do not alone establish ISO/IEC 13250-6:2010 conformity.",
+  "normativeInterpretation": "CXTM 3.1 step 2 root LF retained explicitly; baseline comparisons use untouched UTF-8 bytes.",
+  "artifactsSHA256": {
+    "actual/association-binary-duplicate.ctm.cxtm": "0419d8639795bce71c628a3c28fbd1264b475c37f77a570091d32b0b670d8e13",
+    "actual/association-binary.ctm.cxtm": "0419d8639795bce71c628a3c28fbd1264b475c37f77a570091d32b0b670d8e13",
+    "actual/association-type-sid.ctm.cxtm": "8bb09374f8e8b471ebc3050a334ac7c092a48d839f693e21efc7c4f0922742dd",
+    "actual/association-with-comment.ctm.cxtm": "a8e58856406b85c9138793b58d9258bcf8e84f236f5c5ea03cabf8402d018d29",
+    "actual/association-with-comment2.ctm.cxtm": "a8e58856406b85c9138793b58d9258bcf8e84f236f5c5ea03cabf8402d018d29",
+    "actual/association-with-comment3.ctm.cxtm": "a8e58856406b85c9138793b58d9258bcf8e84f236f5c5ea03cabf8402d018d29",
+    "actual/association-with-comment4.ctm.cxtm": "a8e58856406b85c9138793b58d9258bcf8e84f236f5c5ea03cabf8402d018d29",
+    "actual/association.ctm.cxtm": "a8e58856406b85c9138793b58d9258bcf8e84f236f5c5ea03cabf8402d018d29",
+    "actual/item-identifier.ctm.cxtm": "17e5fa9f144aa670ee8068360b2dcbc19e35315a1864f2450a1ef48b6e014b8a",
+    "actual/name-duplicate.ctm.cxtm": "1c5759d142e2b82124acc1822afac188e88a12248183f646b5d3bf97445e058d",
+    "actual/name.ctm.cxtm": "1c5759d142e2b82124acc1822afac188e88a12248183f646b5d3bf97445e058d",
+    "actual/simple.ctm.cxtm": "28899734b2fcdb39ba7d8c6747baeaf520f29164f66bac8350c1b36c8ff5c0ef",
+    "actual/subject-identifier.ctm.cxtm": "ef0b717a87b5dc94550fab8ac828aa515814f3d77acb80c50202659f1f95997b",
+    "actual/subject-locator.ctm.cxtm": "0638f97e5e75ad908a0f12220fbce013782aac002736e3864bf8c63549424aee",
+    "actual/topic-item-identifier-duplicate.ctm.cxtm": "28899734b2fcdb39ba7d8c6747baeaf520f29164f66bac8350c1b36c8ff5c0ef",
+    "actual/topic-item-identifier-wrapped.ctm.cxtm": "eb50870a51d07a05a9c702edd7e2ccbb42d2c28308fe5a4a3d689c7668563e80",
+    "actual/topic-item-identifier.ctm.cxtm": "eb50870a51d07a05a9c702edd7e2ccbb42d2c28308fe5a4a3d689c7668563e80",
+    "actual/topic-subject-identifier-duplicate.ctm.cxtm": "f33ada7f51974333592d7fadeaf38abf8e17e67f28e341155d334b5f32e9b978",
+    "actual/topic-subject-identifier-wrapped.ctm.cxtm": "efa510af1b13ba4d5ac75a8b69332691a29ae85c47a82308504e5f0f38c74202",
+    "actual/topic-subject-identifier.ctm.cxtm": "efa510af1b13ba4d5ac75a8b69332691a29ae85c47a82308504e5f0f38c74202",
+    "actual/topic-subject-locator-duplicate.ctm.cxtm": "e96d8530fdb30b331bfd6363f34b00945442e3dcb4a6245f883c55150663f1c2",
+    "actual/topic-subject-locator-semi.ctm.cxtm": "d589f34c08574bd246a25468f22ded70577957fd2009d43265177310282266bd",
+    "actual/topic-subject-locator-wrapped.ctm.cxtm": "d589f34c08574bd246a25468f22ded70577957fd2009d43265177310282266bd",
+    "actual/topic-subject-locator.ctm.cxtm": "d589f34c08574bd246a25468f22ded70577957fd2009d43265177310282266bd",
+    "associations.json": "045b33d945f2c6734726f7db244cd10fcb750a4045f53920fc4fe418a60623b7",
+    "cxtm.json": "d8a3f2774cbeb2679f282bb7125a49e74b380a30eef254010a04db60a7f27c5d",
+    "describe.log": "7d76d966296a41b9eacedbf08de9639de89d871e104ef534f91931eb1b436c58",
+    "merging.json": "d38e3ba85aaaceb63bcd481b1c3670f70efca876afc4b5ff92032c91c099d5c3",
+    "semantics.json": "daa06c5ad146b77118a5d696e84b2717ee77443d31a3f20dcec1b9783306837f",
+    "tests-2.4.10-relocated.log": "c55e31702d1e18c607569e1b6b04edb9fa8a293b90bb5925aa176f7798507355",
+    "tests-2.5.4.log": "021f0afcb2fc317e4b4d2020291ec0428f2d4a62496db44462b56f338800227d",
+    "validation.json": "0d8e825cb0cc8352545045d9b8db6a3b45ab303ee0455f0e42e8782fb11ede13"
+  }
+}

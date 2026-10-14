@@ -1,0 +1,51 @@
+(in-package #:topic-maps.cxtm)
+
+(defun unicode-assigned-p (n)
+  (loop with low = 0 with high = (1- (/ (length *assigned-ranges*) 2))
+        while (<= low high) for mid = (floor (+ low high) 2)
+        for begin = (aref *assigned-ranges* (* mid 2))
+        for end = (aref *assigned-ranges* (1+ (* mid 2))) do
+          (cond ((< n begin) (setf high (1- mid)))
+                ((> n end) (setf low (1+ mid))) (t (return t)))))
+
+(defun combining-class (n) (or (first (gethash n *combining-classes*)) 0))
+(defun decomposition (n)
+  (cond ((<= #xac00 n #xd7a3)
+         (let ((index (- n #xac00)))
+           (append (list (+ #x1100 (floor index 588))
+                         (+ #x1161 (floor (mod index 588) 28)))
+                   (unless (zerop (mod index 28)) (list (+ #x11a7 (mod index 28)))))))
+        ((gethash n *decompositions*)
+         (mapcan #'decomposition (copy-list (gethash n *decompositions*))))
+        (t (list n))))
+(defun composition (a b)
+  (cond ((and (<= #x1100 a #x1112) (<= #x1161 b #x1175))
+         (+ #xac00 (* (- a #x1100) 588) (* (- b #x1161) 28)))
+        ((and (<= #xac00 a #xd7a3) (zerop (mod (- a #xac00) 28))
+              (<= #x11a8 b #x11c2)) (+ a (- b #x11a7)))
+        (t (first (gethash (+ (* a #x110000) b) *compositions*)))))
+(defun nfc (text)
+  "UAX #15 canonical decomposition, stable CCC ordering, blocked composition."
+  (let ((ordered (make-array 0 :adjustable t :fill-pointer 0)))
+    (loop for c across text do
+      (unless (unicode-assigned-p (char-code c))
+        (fail :unsupported-unicode-version
+              (format nil "U+~X is unassigned in the pinned Unicode 15.1.0 data." (char-code c)) t))
+      (dolist (n (decomposition (char-code c)))
+        (vector-push-extend n ordered)
+        (let ((i (1- (length ordered))) (ccc (combining-class n)))
+          (when (plusp ccc)
+            (loop while (and (plusp i) (> (combining-class (aref ordered (1- i))) ccc)) do
+              (rotatef (aref ordered i) (aref ordered (1- i))) (decf i))))))
+    (let ((result (make-array 0 :adjustable t :fill-pointer 0))
+          (starter nil) (last-class 0))
+      (loop for n across ordered for ccc = (combining-class n)
+            for combined = (and starter (or (< last-class ccc) (zerop last-class))
+                                (composition (aref result starter) n)) do
+        (if combined
+            (setf (aref result starter) combined)
+            (progn (vector-push-extend n result)
+                   (when (zerop ccc) (setf starter (1- (length result))))
+                   (setf last-class ccc))))
+      (map 'string (lambda (n) (or (code-char n)
+                                 (fail :unsupported-character "Lisp character repertoire is insufficient." t))) result))))
