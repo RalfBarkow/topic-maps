@@ -50,8 +50,22 @@
            (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
          (consume parser)
          (let ((value (consume parser)))
+           (when (member (token-kind value) '(:identifier :iri :qname))
+             ;; Recognize the typed-name syntax, without resolving its type
+             ;; or creating information items for unsupported name semantics.
+             (unless (punctuation-p parser #\:)
+               (problem 'ctm-rejection :expected-name-type-separator
+                        (token-position (look parser)) "Expected ':' after the name type."))
+             (consume parser)
+             (let ((literal (consume parser)))
+               (unless (eq :string (token-kind literal))
+                 (problem 'ctm-rejection :expected-name-value (token-position literal)
+                          "Expected a quoted name value after the name type separator.")))
+             (problem 'ctm-unsupported :typed-name (token-position value)
+                      "Typed names are outside Slice 1 (CTM 3.11)."))
            (unless (eq :string (token-kind value))
-             (problem 'ctm-unsupported :typed-name (token-position value) "Only untyped quoted names are implemented."))
+             (problem 'ctm-rejection :expected-name-value (token-position value)
+                      "Expected a quoted name value after '-'."))
            (topic-maps.tmdm:add-default-name topic (token-value value)))
          (setf has-tail t))
         ((and has-tail (punctuation-p parser #\;))

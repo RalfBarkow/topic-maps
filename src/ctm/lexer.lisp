@@ -109,14 +109,14 @@
                              (find (char text (1- (lexer-cursor lexer))) ";.)"))
                   do (decf (lexer-cursor lexer)))
             (make-token :kind :iri :value (subseq text start (lexer-cursor lexer)) :position start))
-           ((and (eql #\: (peek-character lexer)) (eql #\" (peek-character lexer 1)))
-            ;; A typed name has a separate colon before its quoted string.
-            (make-token :kind :identifier :value head :position start))
-           ((eql #\: (peek-character lexer))
+           ((and (eql #\: (peek-character lexer))
+                 (or (name-start-p (peek-character lexer 1))
+                     (and (peek-character lexer 1)
+                          (find (peek-character lexer 1) "0123456789"))))
+            ;; Only an immediate local part forms a QName (CTM 3.3.4).
+            ;; Otherwise ':' remains a separate token, including name types
+            ;; followed by a string with or without intervening layout.
             (take-character lexer)
-            (unless (or (name-start-p (peek-character lexer))
-                        (and (peek-character lexer) (find (peek-character lexer) "0123456789")))
-              (problem 'ctm-rejection :invalid-qname start "QName requires a local part."))
             (scan-name lexer)
             (make-token :kind :qname :value (subseq text start (lexer-cursor lexer)) :position start))
            (t (make-token :kind :identifier :value head :position start)))))

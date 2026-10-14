@@ -202,6 +202,36 @@
              (ctm-rejection () nil)
              (file-error () t)))
     (check "typed-name-explicitly-unsupported" (unsupported-p "a - fullname:\"Name\"."))
+    ;; CTM 3.11 requires a string, even when the optional type is unsupported.
+    ;; CTM 3.3.1 permits layout between the type separator and that string.
+    (dolist (fixture '(("a - ." ctm-rejection :expected-name-value 4)
+                       ("a -" ctm-rejection :expected-name-value 3)
+                       ("a - type:\"Name\"." ctm-unsupported :typed-name 4)
+                       ("a - type: \"Name\"." ctm-unsupported :typed-name 4)))
+      (destructuring-bind (text class code position) fixture
+        (let ((condition (handler-case (progn (read-text text) nil)
+                           (ctm-error (e) e))))
+          (check (concatenate 'string "name-classification-class:" text)
+                 (and condition (eq class (type-of condition))))
+          (check (concatenate 'string "name-classification-code:" text)
+                 (eq code (error-code condition)))
+          (check (concatenate 'string "name-classification-position:" text)
+                 (= position (error-position condition)))
+          (check (concatenate 'string "name-classification-source:" text)
+                 (and (= 1 (error-line condition))
+                      (= (1+ position) (error-column condition))
+                      (eq :character (topic-maps.ctm:error-position-unit condition))
+                      (string= "independent-fixture" (topic-maps.ctm:error-source condition))))
+          (check (concatenate 'string "name-classification-diagnostic:" text)
+                 (search (if (eq class 'ctm-rejection) "quoted name value" "Typed names")
+                         (princ-to-string condition))))))
+    ;; A type-like token alone must not turn a malformed name into UNSUPPORTED.
+    (check "name-type-without-separator-is-rejected"
+           (eq :expected-name-type-separator (error-code (rejection "a - type \"Name\"."))))
+    (check "typed-name-without-value-is-rejected"
+           (eq :expected-name-value (error-code (rejection "a - type:."))))
+    (check "typed-name-layout-remains-unsupported"
+           (unsupported-p (format nil "a - type:~%#( layout )# \"Name\".")))
     (check "additional-identity-explicitly-unsupported" (unsupported-p "a <https://example.invalid/alias>."))
     (dolist (ending (list (string #\Return) (format nil "~C~C" #\Return #\Newline)))
       (let ((condition (rejection (concatenate 'string "a." ending "ex:fake."))))
