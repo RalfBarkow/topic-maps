@@ -1,12 +1,12 @@
 (in-package #:topic-maps.tmdm)
 
-;;; Only Topic Map, Topic, unscoped Name, Association and Role properties used
+;;; Only Topic Map, Topic, unscoped Name/Occurrence, Association and Role properties used
 ;;; by the current subset are materialized.
 ;;; Omitted set-valued properties are implicitly empty, single-valued ones null
 ;;; (CTM 3.2). In particular all supported names have empty scope and variants.
 (defstruct (topic-map (:constructor make-topic-map ()) (:conc-name %topic-map-)) topics associations)
 (defstruct (topic (:constructor %make-topic (parent)) (:conc-name %topic-))
-  (parent nil :read-only t) item-identifiers subject-identifiers subject-locators names
+  (parent nil :read-only t) item-identifiers subject-identifiers subject-locators names occurrences
   ;; Implementation bookkeeping, not a TMDM property or another information item.
   forward)
 
@@ -20,6 +20,19 @@
   (type nil :type topic)
   (parent nil :type topic)
   forward)
+
+(defstruct (occurrence (:constructor %make-occurrence (value datatype type parent))
+                       (:conc-name %occurrence-))
+  (value "" :type string :read-only t) (datatype "" :type string :read-only t)
+  (type nil :type topic) (parent nil :type topic) item-identifiers forward)
+
+(defun canonical-occurrence (occurrence)
+  "Resolve a retained Occurrence replaced by TMDM duplicate removal; no compression."
+  (check-type occurrence occurrence)
+  (loop for current = occurrence then (%occurrence-forward current)
+        unless (%occurrence-forward current) return current))
+(defun string-datatype () "http://www.w3.org/2001/XMLSchema#string")
+(defun iri-datatype () "http://www.w3.org/2001/XMLSchema#anyURI")
 
 (defun canonical-topic (topic)
   "Resolve a retained reference to a Topic replaced by same-map merging.
@@ -53,6 +66,12 @@ EQ on obsolete objects does not change; compare their canonical representatives.
 (defun topic-subject-identifiers (topic) (copy-list (%topic-subject-identifiers (canonical-topic topic))))
 (defun topic-subject-locators (topic) (copy-list (%topic-subject-locators (canonical-topic topic))))
 (defun topic-names (topic) (copy-list (%topic-names (canonical-topic topic))))
+(defun topic-occurrences (topic) (copy-list (%topic-occurrences (canonical-topic topic))))
+(defun occurrence-value (item) (%occurrence-value (canonical-occurrence item)))
+(defun occurrence-datatype (item) (%occurrence-datatype (canonical-occurrence item)))
+(defun occurrence-parent (item) (%occurrence-parent (canonical-occurrence item)))
+(defun occurrence-type (item) (%occurrence-type (canonical-occurrence item)))
+(defun occurrence-item-identifiers (item) (copy-list (%occurrence-item-identifiers (canonical-occurrence item))))
 (defun topic-name-value (name) (%topic-name-value (canonical-topic-name name)))
 (defun topic-name-type (name) (%topic-name-type (canonical-topic-name name)))
 (defun topic-name-parent (name) (%topic-name-parent (canonical-topic-name name)))
@@ -89,3 +108,7 @@ EQ on obsolete objects does not change; compare their canonical representatives.
 
 (defun default-name-type-identifier ()
   "http://psi.topicmaps.org/iso13250/model/topic-name")
+
+(defmethod print-object ((item occurrence) stream)
+  (print-unreadable-object (item stream :type t :identity t)
+    (format stream "~S datatype=~S" (occurrence-value item) (occurrence-datatype item))))

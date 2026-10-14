@@ -11,7 +11,8 @@
   (asdf:test-system "topic-maps/ctm/tests")
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
-  (asdf:test-system "topic-maps/cxtm/tests")
+  ;; The Occurrence suite also executes the retained 445 CXTM checks.
+  (asdf:test-system "topic-maps/ctm/occurrence-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -20,4 +21,8 @@
     (uiop:symbol-call :topic-maps.ctm.tests :write-association-report
                      (concatenate 'string report ".associations.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-cxtm-report
-                     report (concatenate 'string report ".cxtm.json"))))
+                     report (concatenate 'string report ".cxtm.json")
+                     :additional-checks (uiop:symbol-call :topic-maps.ctm.tests :occurrence-checks)
+                     :scope "Slice 5: string/IRI Occurrences; 28 unchanged positive CXTM baselines; no excluded features")
+    (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
+                     (concatenate 'string report ".occurrences.json"))))

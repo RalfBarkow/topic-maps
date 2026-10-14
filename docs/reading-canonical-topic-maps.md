@@ -1,5 +1,8 @@
 # Reading Canonical Topic Maps
 
+This records Slice 4. [Slice 5](reading-first-occurrences.md) extends the model
+with Occurrences and supersedes the corresponding limits below.
+
 Slice 4 compares the existing model with the original CXTM, rather than using
 only property observations. It adds no CTM syntax or TMDM properties. The pinned
 CTM draft remains 2010-03-31 at `cd165b150176c1d6842b37be9cc9051b40d4996b`.

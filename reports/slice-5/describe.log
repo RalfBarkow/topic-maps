@@ -1,0 +1,22 @@
+#<TOPIC-MAPS.TMDM:OCCURRENCE "Occurrence" datatype="http://www.w3.org/..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "Occurrence"
+  DATATYPE                       = "http://www.w3.org/2001/XMLSchema#string"
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  ITEM-IDENTIFIERS               = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {70032CC0F3}>
+  ITEM-IDENTIFIERS               = ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40..
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+DOCUMENTED-OCCURRENCE-INSPECTION-PASS

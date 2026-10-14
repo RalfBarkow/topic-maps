@@ -21,14 +21,14 @@
              (uiop:symbol-call :topic-maps.tests :run-tests)))
 
 (asdf:defsystem "topic-maps/tmdm"
-  :description "Topics, Names, Associations and Roles with same-map merging"
-  :version "0.3.0" :license "MIT" :serial t
+  :description "Topics, Names, Occurrences, Associations and Roles with same-map merging"
+  :version "0.5.0" :license "MIT" :serial t
   :components ((:file "src/tmdm/package") (:file "src/tmdm/items")
-               (:file "src/tmdm/merging") (:file "src/tmdm/associations")))
+               (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/associations")))
 
 (asdf:defsystem "topic-maps/ctm"
-  :description "CTM identity, names and unary/binary associations; no canonicalizer"
-  :version "0.3.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :description "CTM identity, names, string/IRI occurrences and unary/binary associations"
+  :version "0.5.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/ctm/package") (:file "src/ctm/conditions")
                (:file "src/ctm/unicode") (:file "src/ctm/iri")
                (:file "src/ctm/lexer") (:file "src/ctm/reader")))
@@ -61,7 +61,7 @@
 
 (asdf:defsystem "topic-maps/cxtm"
   :description "Pure CXTM for the supported TMDM subset; ISO/IEC 13250-4:2009"
-  :version "0.4.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :version "0.5.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/cxtm/package") (:file "src/cxtm/nfc-data")
                (:file "src/cxtm/unicode") (:file "src/cxtm/canonicalizer")))
 
@@ -72,3 +72,12 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.ctm.tests :run-cxtm-tests)))
+
+
+(asdf:defsystem "topic-maps/ctm/occurrence-tests"
+  :description "Occurrence semantics, canonical merge handles and four original CXTM contracts"
+  :depends-on ("topic-maps/cxtm/tests") :serial t
+  :components ((:file "tests/ctm-occurrences"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.ctm.tests :run-occurrence-tests)))

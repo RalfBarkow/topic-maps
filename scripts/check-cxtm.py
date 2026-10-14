@@ -8,7 +8,8 @@ root = pathlib.Path(__file__).resolve().parent.parent
 report = json.loads(pathlib.Path(sys.argv[1]).read_text())
 assert report['kind'] == 'cxtm-byte-equality' and report['failed'] == 0
 assert report['passed'] == len(report['checks']) == len(set(report['checks']))
-assert len(report['cases']) == 24
+expected_count = 28 if len(sys.argv) > 2 and sys.argv[2] == '--slice-5' else 24
+assert len(report['cases']) == expected_count
 for case in report['cases']:
     actual = case['actualCXTM'].encode('utf-8')
     expected = (root / 'vendor/cxtm/ctm/baseline' / (pathlib.Path(case['id']).name + '.cxtm')).read_bytes()
@@ -29,10 +30,11 @@ for case in report['cases']:
             assert r.attrib['number'] == str(j)
             role_refs[f'association.{i}.role.{j}'] = r.find('player').attrib['topicref']
     for t in topics:
+        assert [o.attrib['number'] for o in t.findall('occurrence')] == list(map(str, range(1,len(t.findall('occurrence'))+1)))
         for r in t.findall('rolePlayed'):
             assert role_refs[r.attrib['ref']] == t.attrib['number']
     assert sum(len(t.findall('rolePlayed')) for t in topics) == len(role_refs)
     for ref in xml.iter():
         if 'topicref' in ref.attrib:
             assert 1 <= int(ref.attrib['topicref']) <= len(topics)
-print('CXTM-INDEPENDENT-PASS: 24 unchanged baselines, exact UTF-8 bytes, canonical XML and reference integrity')
+print(f'CXTM-INDEPENDENT-PASS: {expected_count} unchanged baselines, exact UTF-8 bytes, canonical XML and reference integrity')

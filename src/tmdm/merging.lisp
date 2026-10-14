@@ -55,6 +55,7 @@
           (%topic-subject-identifiers c) (set-union (%topic-subject-identifiers a) (%topic-subject-identifiers b) #'string=)
           (%topic-subject-locators c) (set-union (%topic-subject-locators a) (%topic-subject-locators b) #'string=)
           (%topic-names c) (set-union (%topic-names a) (%topic-names b) #'eq)
+          (%topic-occurrences c) (set-union (%topic-occurrences a) (%topic-occurrences b) #'eq)
           (%topic-map-topics map) (replace-pair (%topic-map-topics map) a b c)
           (%topic-forward a) c (%topic-forward b) c)
     (dolist (topic (%topic-map-topics map))
@@ -62,22 +63,28 @@
         ;; Parent is the computed containing topic (TMDM 5.4).
         (setf (%topic-name-parent name) topic
               (%topic-name-type name) (canonical-topic (%topic-name-type name)))))
+    (dolist (topic (%topic-map-topics map))
+      (dolist (occurrence (%topic-occurrences topic))
+        (setf (%occurrence-parent occurrence) topic
+              (%occurrence-type occurrence) (canonical-topic (%occurrence-type occurrence)))))
     (dolist (association (%topic-map-associations map))
       (setf (%association-type association) (canonical-topic (%association-type association)))
       (dolist (role (%association-roles association))
         (setf (%association-role-type role) (canonical-topic (%association-role-type role))
               (%association-role-player role) (canonical-topic (%association-role-player role)))))
     (normalize-names map)
+    (normalize-occurrences map)
     (normalize-associations map)
     c))
 
 (defun normalize-topic-map (map)
-  "Apply same-map identity merging, then remove equal Names, Roles and Associations.
+  "Apply same-map identity merging, then remove equal Names, Occurrences, Roles and Associations.
 Only implemented properties participate; no cross-map merging."
   (check-type map topic-map)
   (loop for pair = (equal-pair (%topic-map-topics map) #'equal-topics-p)
         while pair do (merge-two-topics map (first pair) (second pair)))
   (normalize-names map)
+  (normalize-occurrences map)
   (normalize-associations map)
   map)
 
@@ -103,6 +110,7 @@ KIND is :ITEM-IDENTIFIER, :SUBJECT-IDENTIFIER or :SUBJECT-LOCATOR.
 IRI is an already resolved, nonempty absolute locator string; CTM validates it."
   (unless (and (stringp iri) (plusp (length iri))) (error "A nonempty locator string is required."))
   (let ((topic (live-topic topic)))
+    (check-topic-occurrence-identifiers (%topic-parent topic) kind iri)
     (ecase kind
       (:item-identifier (pushnew iri (%topic-item-identifiers topic) :test #'string=))
       (:subject-identifier (pushnew iri (%topic-subject-identifiers topic) :test #'string=))
@@ -116,6 +124,7 @@ IRI is an already resolved, nonempty absolute locator string; CTM validates it."
   (unless (and (stringp iri) (plusp (length iri))) (error "A nonempty locator string is required."))
   ;; Validate the category even for an empty map, before adding a Topic.
   (ecase kind ((:item-identifier :subject-identifier :subject-locator)))
+  (check-topic-occurrence-identifiers map kind iri)
   (let ((topic (or (find-if (lambda (topic) (identifier-matches-p topic kind iri))
                            (%topic-map-topics map))
                    (let ((new (%make-topic map)))

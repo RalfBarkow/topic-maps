@@ -29,7 +29,11 @@
                 (topic-item-identifiers topic) (topic-subject-identifiers topic) (topic-subject-locators topic)
                 (loop for n in (topic-names topic) collect
                   (list n (topic-maps.tmdm::%topic-name-forward n) (topic-name-parent n)
-                        (topic-name-type n) (topic-name-value n)))))
+                        (topic-name-type n) (topic-name-value n)))
+                (loop for o in (topic-maps.tmdm:topic-occurrences topic) collect
+                  (list o (topic-maps.tmdm::%occurrence-forward o) (topic-maps.tmdm:occurrence-parent o)
+                        (topic-maps.tmdm:occurrence-type o) (topic-maps.tmdm:occurrence-value o)
+                        (topic-maps.tmdm:occurrence-datatype o) (topic-maps.tmdm:occurrence-item-identifiers o)))))
         (loop for a in (topic-maps.tmdm:topic-map-associations map) collect
           (list a (topic-maps.tmdm::%association-forward a) (topic-maps.tmdm:association-type a)
                 (topic-maps.tmdm:association-parent a)
@@ -224,15 +228,16 @@
     (setf *last-cxtm-checks* (nreverse *checks*))
     (format t "~&CXTM-PASS: ~D checks; 24 original byte comparisons; 25 imported PASS, 248 NOT-RUN.~%" (length *last-cxtm-checks*)) t))
 
-(defun write-cxtm-report (validation-path detail-path)
+(defun write-cxtm-report (validation-path detail-path &key additional-checks
+                         (scope "Slice 4: 24 byte-equal original baselines, explicit base locator"))
   (topic-maps.test-foundation:write-validation-report *cxtm-corpus* validation-path
     :infrastructure-checks topic-maps.tests::*last-checks*
-    :implementation '(:ctm t :tmdm t :cxtm t :scope "Slice 4: CXTM for existing Topic/Name/Association/Role model; 24 byte-equal original baselines, explicit base locator"))
+    :implementation (list :ctm t :tmdm t :cxtm t :scope scope))
   (with-open-file (out detail-path :direction :output :if-exists :supersede :if-does-not-exist :create)
     (topic-maps.test-foundation::emit-json-value
      (topic-maps.test-foundation::fields
-      "kind" "cxtm-byte-equality" "passed" (length *last-cxtm-checks*) "failed" 0
-      "checks" (topic-maps.test-foundation::json-array *last-cxtm-checks*)
+      "kind" "cxtm-byte-equality" "passed" (+ (length *last-cxtm-checks*) (length additional-checks)) "failed" 0
+      "checks" (topic-maps.test-foundation::json-array (append *last-cxtm-checks* additional-checks))
       "cases" (topic-maps.test-foundation::json-array
        (loop for r in *cxtm-results* collect
          (topic-maps.test-foundation::fields "id" (getf r :id) "baseLocator" (getf r :base)

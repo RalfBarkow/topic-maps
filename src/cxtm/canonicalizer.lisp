@@ -48,6 +48,23 @@
     (if (not (zerop c)) c
         (let ((type (topic-order (topic-name-type a) (topic-name-type b))))
           (if (not (zerop type)) type (topic-order (topic-name-parent a) (topic-name-parent b)))))))
+(defun occurrence-value-order (a b)
+  ;; TMDM 4.3/5.6: anyURI values are locators; other supported values are strings.
+  ;; CXTM 4.2 orders strings before locators, independent of their spelling.
+  (let ((iri-a (string= (occurrence-datatype a) (iri-datatype)))
+        (iri-b (string= (occurrence-datatype b) (iri-datatype))))
+    (cond ((and iri-a iri-b) (locator-order (occurrence-value a) (occurrence-value b)))
+          (iri-a 1) (iri-b -1)
+          (t (string-order (nfc (occurrence-value a)) (nfc (occurrence-value b)))))))
+(defun occurrence-order (a b)
+  (loop for comparison in
+        (list (occurrence-value-order a b)
+              (locator-order (occurrence-datatype a) (occurrence-datatype b))
+              (topic-order (occurrence-type a) (occurrence-type b))
+              ;; Both scopes are empty; parent comparison is the final key.
+              (topic-order (occurrence-parent a) (occurrence-parent b)))
+        when (not (zerop comparison)) return comparison finally (return 0)))
+
 (defun role-signature-order (a b)
   ;; In a single parent's roles set, [parent] is equal. During association
   ;; comparison equal player/type pairs also have equal parent-comparison
@@ -94,7 +111,22 @@
           (require-exact-item name 'topic-name)
           (unless (and (eq name (canonical-topic-name name)) (eq (topic-name-parent name) topic))
             (fail :invalid-parent "Name must be current and owned by its containing Topic."))
-          (reference (topic-name-type name))))
+          (reference (topic-name-type name)))
+        (require-set (topic-occurrences topic))
+        (dolist (item (topic-occurrences topic))
+          (require-exact-item item 'occurrence)
+          (unless (and (eq item (canonical-occurrence item)) (eq (occurrence-parent item) topic))
+            (fail :invalid-parent "Occurrence must be current and owned by its containing Topic."))
+          (reference (occurrence-type item))
+          (unless (member (occurrence-datatype item) (list (string-datatype) (iri-datatype)) :test #'string=)
+            (fail :unsupported-occurrence-datatype "Only string and anyURI values are supported." t))
+          (when (and (string= (occurrence-datatype item) (iri-datatype))
+                     (not (topic-maps.tmdm::absolute-locator-p (occurrence-value item))))
+            (fail :invalid-occurrence-value "IRI-valued Occurrences must store an absolute locator."))
+          (let ((ids (occurrence-item-identifiers item)))
+            (unless (and (every #'topic-maps.tmdm::absolute-locator-p ids)
+                         (= (length ids) (length (remove-duplicates ids :test #'string=))))
+              (fail :invalid-locators "Occurrence identifiers must be an absolute locator set.")))))
       (dolist (a associations)
         (require-exact-item a 'association)
         (unless (and (eq a (canonical-association a)) (eq (association-parent a) map))
@@ -126,7 +158,7 @@
 (defun canonicalize (map &key base-locator)
   "Return CXTM as a string. BASE-LOCATOR is an explicit absolute IRI (CXTM 3.1).
 Only the existing TMDM schema is supported: empty Scope, null Reifier, no
-Occurrences/Variants or non-Topic identifiers. Does not mutate MAP or handles."
+Variants or non-Topic identifiers other than Occurrence identifiers. Does not mutate MAP or handles."
   (unless (and (stringp base-locator) (position #\: base-locator)
                (let ((scheme (subseq base-locator 0 (position #\: base-locator))))
                  (and (plusp (length scheme))
@@ -168,6 +200,16 @@ Occurrences/Variants or non-Topic identifiers. Does not mutate MAP or handles."
             (format out "<name number=\"~D\">~%<value>" index)
             (xml-text (topic-name-value name) out) (format out "</value>~%")
             (type-ref (topic-name-type name)) (format out "</name>~%"))
+          (loop for item in (sorted (topic-occurrences topic) #'occurrence-order) for index from 1 do
+            (format out "<occurrence number=\"~D\">~%<value>" index)
+            (xml-text (if (string= (occurrence-datatype item) (iri-datatype))
+                          (normalized-locator (occurrence-value item)) (occurrence-value item)) out)
+            (format out "</value>~%<datatype>")
+            ;; CXTM 3.14: datatype locator is NOT base-normalized.
+            (xml-text (occurrence-datatype item) out) (format out "</datatype>~%")
+            (type-ref (occurrence-type item))
+            (emit-locators "itemIdentifiers" (occurrence-item-identifiers item) out)
+            (format out "</occurrence>~%"))
           (dolist (r (sorted (topic-roles-played topic) #'role-order)) (role-ref r))
           (format out "</topic>~%"))
         (loop for a in associations for number from 1 do
