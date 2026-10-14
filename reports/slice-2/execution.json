@@ -1,0 +1,81 @@
+{
+  "baseCommit": "fb60afd548d679d83fd8ec76bc5ff384c1e23e5f",
+  "branch": "codex/ctm-slice-2",
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/usr/bin/env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "SBCL=/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "TOPIC_MAPS_REPORT=/private/tmp/ctm-slice-2-final-2.5.4.json",
+        "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+      ],
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0,
+      "log": "tests-2.5.4.log"
+    },
+    {
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/usr/bin/env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "SBCL=/nix/store/y96nx8571mpdvjd40krkdim2av0in972-sbcl-2.4.10/bin/sbcl",
+        "TOPIC_MAPS_REPORT=/private/tmp/ctm-slice-2-final-2.4.10.json",
+        "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/scripts/test.sh"
+      ],
+      "workdir": "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout",
+      "exitCode": 0,
+      "log": "tests-2.4.10-relocated.log"
+    },
+    {
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/dev/stdin"
+      ],
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0,
+      "input": "Both Lisp code fences from docs/reading-topic-merging.md, output-translation setup and inspection assertions",
+      "inputSHA256": "5ede1e0eea3148f684a4e0f704a36a5f2b804692988ad2a518439a17047634e5",
+      "log": "describe.log"
+    }
+  ],
+  "results": {
+    "identityChecks": 123,
+    "mergeChecks": 646,
+    "foundationChecks": 54,
+    "pythonIntegrityTests": 2,
+    "failures": 0,
+    "pinnedSemanticCases": 16,
+    "importedStatuses": {
+      "pass": 1,
+      "fail": 0,
+      "unsupported": 0,
+      "not-run": 272
+    },
+    "canonicalization": false,
+    "allThreeReportPairsByteIdentical": true,
+    "originalFiveCaseRecordsUnchanged": true,
+    "describeInspection": true
+  },
+  "qualification": "Pinned CTM corpus targets draft 2010-03-31; property evidence is not CXTM equality.",
+  "artifactsSHA256": {
+    "merging.json": "d38e3ba85aaaceb63bcd481b1c3670f70efca876afc4b5ff92032c91c099d5c3",
+    "semantics.json": "6fd0351d887a9b0d248ff2efb6d19ce88633c1dba96c8e2c3add7b050c6a7ec9",
+    "tests-2.4.10-relocated.log": "20ece34f06a6c13e7fdf0da800045841232a7c67ec853c5b9de976b373e53fd2",
+    "tests-2.5.4.log": "5462166da094d2239c743b5d903647c2a2cb25d177091be993a11125a20b81d8",
+    "validation.json": "e7b5e47a36363ce3eebda329afe9dc279ee0ccff729ea8a714c1d8cb61e58659",
+    "describe.log": "122f8a2d095bb29199ad4ffc1d63bb2a45145da37237154ff4a8f0a264584f4d"
+  }
+}

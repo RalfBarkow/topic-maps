@@ -232,7 +232,11 @@
            (eq :expected-name-value (error-code (rejection "a - type:."))))
     (check "typed-name-layout-remains-unsupported"
            (unsupported-p (format nil "a - type:~%#( layout )# \"Name\".")))
-    (check "additional-identity-explicitly-unsupported" (unsupported-p "a <https://example.invalid/alias>."))
+    (check "additional-identity-now-deserialized"
+           (let* ((map (read-text "a <https://example.invalid/alias>.")) (topic (first-topic map)))
+             (and (= 1 (length (topic-map-topics map)))
+                  (equal (topic-subject-identifiers topic) '("https://example.invalid/alias"))
+                  (equal (topic-item-identifiers topic) '("https://example.invalid/a/doc.ctm#a")))))
     (dolist (ending (list (string #\Return) (format nil "~C~C" #\Return #\Newline)))
       (let ((condition (rejection (concatenate 'string "a." ending "ex:fake."))))
         (check (if (= 1 (length ending)) "cr-error-line" "crlf-error-line")

@@ -21,13 +21,13 @@
              (uiop:symbol-call :topic-maps.tests :run-tests)))
 
 (asdf:defsystem "topic-maps/tmdm"
-  :description "Minimal Topic Map, Topic and unscoped Topic Name information items"
-  :version "0.1.0" :license "MIT" :serial t
-  :components ((:file "src/tmdm/package") (:file "src/tmdm/items")))
+  :description "Topic identity, same-map merging and unscoped Topic Name items"
+  :version "0.2.0" :license "MIT" :serial t
+  :components ((:file "src/tmdm/package") (:file "src/tmdm/items") (:file "src/tmdm/merging")))
 
 (asdf:defsystem "topic-maps/ctm"
-  :description "Slice 1 CTM identity and default-name reader; no canonicalizer"
-  :version "0.1.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :description "CTM identity declarations/tails and default names; no canonicalizer"
+  :version "0.2.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/ctm/package") (:file "src/ctm/conditions")
                (:file "src/ctm/unicode") (:file "src/ctm/iri")
                (:file "src/ctm/lexer") (:file "src/ctm/reader")))
@@ -40,3 +40,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.ctm.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/ctm/merging-tests"
+  :description "Same-map Topic merging and separate pinned baseline property evidence"
+  :depends-on ("topic-maps/ctm/tests") :serial t
+  :components ((:file "tests/ctm-merging") (:file "tests/merge-graphs"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.ctm.tests :run-merging-tests)))

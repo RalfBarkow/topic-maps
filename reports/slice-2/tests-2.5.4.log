@@ -1,0 +1,12 @@
+CORPUS-INTEGRITY-PASS: {"auxiliary": 22, "baselines": 231, "invalid": 42, "missingBaselines": [], "unmatchedBaselines": [], "valid": 231}
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.017s
+
+OK
+FOUNDATION-PASS: 54 infrastructure checks; 231 valid, 42 invalid, 231 baselines, 22 auxiliaries; 273 CTM cases NOT-RUN, zero CTM passes.
+CTM-IDENTITY-SEMANTICS-PASS: 123 checks, 5 imported semantic cases, required prefix rejection; no CXTM equality passes.
+CTM-MERGING-SEMANTICS-PASS: 646 checks, 11 pinned semantic cases; no CXTM equality passes.
+REPORT-JSON-PASS: deterministic schema, draft qualification, case contracts and only warranted imported status changes
+BASELINE-SEMANTIC-EVIDENCE-PASS: five frozen baselines support the selected properties; no canonicalization claimed
+MERGING-BASELINE-SEMANTIC-EVIDENCE-PASS: 11 frozen baselines; no canonicalization or canonical numbering

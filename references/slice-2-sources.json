@@ -1,0 +1,12 @@
+{
+  "baseCommit": "fb60afd548d679d83fd8ec76bc5ff384c1e23e5f",
+  "consultedDate": "2026-10-14",
+  "corpusCommit": "cd165b150176c1d6842b37be9cc9051b40d4996b",
+  "qualification": "Pinned CTM suite targets draft 2010-03-31; selected semantic properties do not establish CXTM equality or full ISO conformity.",
+  "standards": [
+    {"edition": "ISO/IEC 13250-2:2006", "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/", "clauses": ["5.3.5", "5.4", "6.1", "6.2", "6.3"]},
+    {"edition": "ISO/IEC 13250-6:2010", "url": "https://www.isotopicmaps.org/ctm/ctm.html", "clauses": ["3.3.6", "3.9", "3.11"]}
+  ],
+  "boundary": "Same-map Topic identity equality and Topic/Name merging for implemented properties only. Other model properties are implicitly empty/null. No reification conflicts, scope, variants, occurrences, associations/roles, typed-name deserialization, cross-document merging, directives/templates or CXTM canonicalization. Explicit manual merges are same-map only.",
+  "previousSourceRecord": "slice-1-sources.json"
+}

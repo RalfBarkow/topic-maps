@@ -4,4 +4,6 @@
            #:topic #:topic-parent #:topic-item-identifiers
            #:topic-subject-identifiers #:topic-subject-locators #:topic-names
            #:topic-name #:topic-name-value #:topic-name-type #:topic-name-parent
-           #:intern-topic #:add-default-name #:default-name-type-identifier))
+           #:intern-topic #:add-topic-identifier #:merge-topics #:normalize-topic-map
+           #:canonical-topic #:canonical-topic-name
+           #:add-default-name #:default-name-type-identifier))

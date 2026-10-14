@@ -9,6 +9,9 @@
   (asdf:load-asd (merge-pathnames "topic-maps.asd" root))
   (asdf:test-system "topic-maps/tests")
   (asdf:test-system "topic-maps/ctm/tests")
+  (asdf:test-system "topic-maps/ctm/merging-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
-                     report (concatenate 'string report ".semantics.json"))))
+                     report (concatenate 'string report ".semantics.json"))
+    (uiop:symbol-call :topic-maps.ctm.tests :write-merging-report
+                     (concatenate 'string report ".merging.json"))))

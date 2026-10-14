@@ -1,0 +1,104 @@
+CORPUS-INTEGRITY-PASS: {"auxiliary": 22, "baselines": 231, "invalid": 42, "missingBaselines": [], "unmatchedBaselines": [], "valid": 231}
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.021s
+
+OK
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/package.lisp" (written 13 OCT 2026 11:05:43 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/package-tmpGHU3ALSV.fasl
+; compilation finished in 0:00:00.003
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/filesystem.lisp" (written 13 OCT 2026 11:09:14 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/filesystem-tmpAAURSO1.fasl
+; compilation finished in 0:00:00.020
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/corpus.lisp" (written 13 OCT 2026 11:09:14 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/corpus-tmp5GEXGEG5.fasl
+; compilation finished in 0:00:00.107
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/report.lisp" (written 14 OCT 2026 06:12:18 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/report-tmpAR3FSGEY.fasl
+; compilation finished in 0:00:00.081
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/package.lisp" (written 13 OCT 2026 11:17:48 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/package-tmpJAIDFZTC.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/foundation.lisp" (written 14 OCT 2026 06:12:18 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/foundation-tmp8V3J6PE9.fasl
+; compilation finished in 0:00:00.060
+FOUNDATION-PASS: 54 infrastructure checks; 231 valid, 42 invalid, 231 baselines, 22 auxiliaries; 273 CTM cases NOT-RUN, zero CTM passes.
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/tmdm/package.lisp" (written 14 OCT 2026 07:32:29 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/tmdm/package-tmp9V47YWQF.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/tmdm/items.lisp" (written 14 OCT 2026 07:32:29 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/tmdm/items-tmp9BN22RMA.fasl
+; compilation finished in 0:00:00.047
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/tmdm/merging.lisp" (written 14 OCT 2026 07:33:11 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/tmdm/merging-tmp1CXFJSK9.fasl
+; compilation finished in 0:00:00.063
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/package.lisp" (written 14 OCT 2026 06:05:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/package-tmpX4BRKI0R.fasl
+; compilation finished in 0:00:00.002
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/conditions.lisp" (written 14 OCT 2026 06:15:47 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/conditions-tmpQ371UGST.fasl
+; compilation finished in 0:00:00.027
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/unicode.lisp" (written 14 OCT 2026 06:08:41 AM):
+
+; file: /private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/unicode.lisp
+; in: DEFUN SCALAR-CHARACTER
+;     (TOPIC-MAPS.CTM::PROBLEM 'TOPIC-MAPS.CTM:CTM-UNSUPPORTED
+;                              :CHARACTER-REPERTOIRE POSITION
+;                              "The Common Lisp implementation cannot represent this Unicode character.")
+; 
+; note: deleting unreachable code
+
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/unicode-tmp2OWI3Q7U.fasl
+; compilation finished in 0:00:00.042
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/iri.lisp" (written 14 OCT 2026 06:18:59 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/iri-tmp9KKTJMYV.fasl
+; compilation finished in 0:00:00.079
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/lexer.lisp" (written 14 OCT 2026 07:18:18 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/lexer-tmpJU0JWO19.fasl
+; compilation finished in 0:00:00.097
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/reader.lisp" (written 14 OCT 2026 07:33:11 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/src/ctm/reader-tmpZX2WN8N4.fasl
+; compilation finished in 0:00:00.047
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/ctm-package.lisp" (written 14 OCT 2026 06:12:17 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/ctm-package-tmpOU81XRV0.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/ctm-identity.lisp" (written 14 OCT 2026 07:33:11 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/ctm-identity-tmpY2ML9CFA.fasl
+; compilation finished in 0:00:00.073
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/ctm-report.lisp" (written 14 OCT 2026 07:39:09 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/ctm-report-tmpX2JYJDQE.fasl
+; compilation finished in 0:00:00.012
+CTM-IDENTITY-SEMANTICS-PASS: 123 checks, 5 imported semantic cases, required prefix rejection; no CXTM equality passes.
+; 
+; compilation unit finished
+;   printed 1 note
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/ctm-merging.lisp" (written 14 OCT 2026 07:41:46 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/ctm-merging-tmpOPCILR65.fasl
+; compilation finished in 0:00:00.072
+; compiling file "/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/merge-graphs.lisp" (written 14 OCT 2026 07:41:46 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-2-relocated-vwd_hic2/checkout/tests/merge-graphs-tmpRV9F8A9A.fasl
+; compilation finished in 0:00:00.030
+CTM-MERGING-SEMANTICS-PASS: 646 checks, 11 pinned semantic cases; no CXTM equality passes.
+REPORT-JSON-PASS: deterministic schema, draft qualification, case contracts and only warranted imported status changes
+BASELINE-SEMANTIC-EVIDENCE-PASS: five frozen baselines support the selected properties; no canonicalization claimed
+MERGING-BASELINE-SEMANTIC-EVIDENCE-PASS: 11 frozen baselines; no canonicalization or canonical numbering

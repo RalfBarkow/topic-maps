@@ -10,7 +10,7 @@
   (and (eq :punctuation (token-kind (look parser)))
        (eql character (token-value (look parser)))))
 
-(defun identity-reference (parser map &optional explicit-kind)
+(defun identity-value (parser &optional explicit-kind)
   (let ((token (consume parser)))
     (case (token-kind token)
       (:identifier
@@ -18,10 +18,10 @@
          (problem 'ctm-rejection :expected-iri (token-position token) "Explicit = or ^ needs an IRI reference."))
        (when (member (token-value token) '("def" "isa" "ako" "end") :test #'string=)
          (problem 'ctm-unsupported :unsupported-keyword (token-position token) "This keyword is outside Slice 1."))
-       (topic-maps.tmdm:intern-topic map :item-identifier
+       (values :item-identifier
           (concatenate 'string (parser-document-iri parser) "#" (token-value token))))
       (:iri
-       (topic-maps.tmdm:intern-topic map (or explicit-kind :subject-identifier)
+       (values (or explicit-kind :subject-identifier)
           (resolve-iri (token-value token) (parser-document-iri parser) (token-position token))))
       (:qname
        ;; No prefix declarations are supported in Slice 1. This is a specific
@@ -33,12 +33,16 @@
        (case (token-value token)
          (#\= (if explicit-kind
                    (problem 'ctm-rejection :expected-iri (token-position token) "Unexpected identity marker.")
-                   (identity-reference parser map :subject-locator)))
+                   (identity-value parser :subject-locator)))
          (#\^ (if explicit-kind
                    (problem 'ctm-rejection :expected-iri (token-position token) "Unexpected identity marker.")
-                   (identity-reference parser map :item-identifier)))
+                   (identity-value parser :item-identifier)))
          (otherwise (problem 'ctm-rejection :expected-topic-identity (token-position token) "Expected topic identity."))))
       (otherwise (problem 'ctm-rejection :expected-topic-identity (token-position token) "Expected topic identity.")))))
+
+(defun identity-reference (parser map)
+  (multiple-value-bind (kind iri) (identity-value parser)
+    (topic-maps.tmdm:intern-topic map kind iri)))
 
 (defun read-topic (parser map)
   (let ((topic (identity-reference parser map)) (has-tail nil))
@@ -74,17 +78,22 @@
          (when (punctuation-p parser #\.) (consume parser) (return topic)))
         ((eq :eof (token-kind (look parser)))
          (problem 'ctm-rejection :missing-period (token-position (look parser)) "Topic declaration requires a final period."))
-        ((and (eq :punctuation (token-kind (look parser)))
-              (find (token-value (look parser)) "=^"))
-         (problem 'ctm-unsupported :additional-identity (token-position (look parser)) "Topic-tail identity assignments are outside Slice 1."))
-        ((member (token-kind (look parser)) '(:iri :qname))
-         (problem 'ctm-unsupported :additional-identity (token-position (look parser)) "Topic-tail identity assignments are outside Slice 1."))
+        ((or (and (eq :punctuation (token-kind (look parser)))
+                  (find (token-value (look parser)) "=^"))
+             (member (token-kind (look parser)) '(:iri :qname)))
+         (when has-tail
+           (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
+         ;; CTM 3.9 adds the locator to this Topic, without creating another
+         ;; Topic just for the assignment. The model performs required merging.
+         (multiple-value-bind (kind iri) (identity-value parser)
+           (setf topic (topic-maps.tmdm:add-topic-identifier topic kind iri)))
+         (setf has-tail t))
         ((eq :identifier (token-kind (look parser)))
-         (problem 'ctm-unsupported :topic-tail (token-position (look parser)) "Type/identity/template topic tails are outside Slice 1."))
+         (problem 'ctm-unsupported :topic-tail (token-position (look parser)) "Type/template topic tails are outside the implemented subset."))
         (t (problem 'ctm-rejection :unexpected-token (token-position (look parser)) "Unexpected token after topic or name."))))))
 
 (defun deserialize-string (text &key document-iri source-name)
-  "Read the documented Slice 1 CTM subset into a new TMDM Topic Map.
+  "Read the documented identity/name CTM subset into a new TMDM Topic Map.
 Source positions are zero-based character offsets; lines/columns are one-based."
   (check-type text string)
   (let ((*source-name* source-name) (*source-text* text))

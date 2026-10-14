@@ -1,0 +1,2 @@
+# Preserve raw tool output, including SBCL's semicolon-space diagnostic lines.
+reports/**/*.log -whitespace
