@@ -1,0 +1,75 @@
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/package.lisp" (written 14 OCT 2026 06:05:01 AM):
+
+; wrote /Users/rgb/.cache/common-lisp/sbcl-2.5.4-macosx-x64/Users/rgb/workspace/topic-maps/src/tmdm/package-tmpGHU3ALSV.fasl
+; compilation finished in 0:00:00.006
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/items.lisp" (written 14 OCT 2026 06:08:41 AM):
+
+; wrote /Users/rgb/.cache/common-lisp/sbcl-2.5.4-macosx-x64/Users/rgb/workspace/topic-maps/src/tmdm/items-tmpAAURSO1.fasl
+; compilation finished in 0:00:00.041
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/package.lisp" (written 14 OCT 2026 06:05:01 AM):
+
+; wrote /Users/rgb/.cache/common-lisp/sbcl-2.5.4-macosx-x64/Users/rgb/workspace/topic-maps/src/ctm/package-tmp5GEXGEG5.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/conditions.lisp" (written 14 OCT 2026 06:15:47 AM):
+
+; wrote /Users/rgb/.cache/common-lisp/sbcl-2.5.4-macosx-x64/Users/rgb/workspace/topic-maps/src/ctm/conditions-tmpAR3FSGEY.fasl
+; compilation finished in 0:00:00.014
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/unicode.lisp" (written 14 OCT 2026 06:08:41 AM):
+
+; file: /Users/rgb/workspace/topic-maps/src/ctm/unicode.lisp
+; in: DEFUN SCALAR-CHARACTER
+;     (TOPIC-MAPS.CTM::PROBLEM 'TOPIC-MAPS.CTM:CTM-UNSUPPORTED
+;                              :CHARACTER-REPERTOIRE POSITION
+;                              "The Common Lisp implementation cannot represent this Unicode character.")
+; 
+; note: deleting unreachable code
+
+
+; wrote /Users/rgb/.cache/common-lisp/sbcl-2.5.4-macosx-x64/Users/rgb/workspace/topic-maps/src/ctm/unicode-tmpJAIDFZTC.fasl
+; compilation finished in 0:00:00.030
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/iri.lisp" (written 14 OCT 2026 06:18:59 AM):
+
+; wrote /Users/rgb/.cache/common-lisp/sbcl-2.5.4-macosx-x64/Users/rgb/workspace/topic-maps/src/ctm/iri-tmp8V3J6PE9.fasl
+; compilation finished in 0:00:00.125
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/lexer.lisp" (written 14 OCT 2026 06:18:59 AM):
+
+; wrote /Users/rgb/.cache/common-lisp/sbcl-2.5.4-macosx-x64/Users/rgb/workspace/topic-maps/src/ctm/lexer-tmp9V47YWQF.fasl
+; compilation finished in 0:00:00.096
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/reader.lisp" (written 14 OCT 2026 06:15:47 AM):
+
+; wrote /Users/rgb/.cache/common-lisp/sbcl-2.5.4-macosx-x64/Users/rgb/workspace/topic-maps/src/ctm/reader-tmp9BN22RMA.fasl
+; compilation finished in 0:00:00.037
+; 
+; compilation unit finished
+;   printed 1 note
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics {7002FEDED3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b..
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics {7002FEDED3}>
+  ITEM-IDENTIFIERS               = ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40..
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = (#<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {7002FEE213}>)
+#<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {7002FEE213}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "Name"
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+#<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics {7002FEDED3}>
+  ITEM-IDENTIFIERS               = NIL
+  SUBJECT-IDENTIFIERS            = ("http://psi.topicmaps.org/iso13250/model/topic-name")
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+DESCRIBE-INSPECTION-PASS

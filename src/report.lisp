@@ -59,15 +59,17 @@
           "unmatchedBaselines" (json-array (getf value :unmatched-baselines))
           "duplicateIDs" (json-array (getf value :duplicate-ids))))
 
-(defun report-data (corpus infrastructure-checks)
+(defun report-data (corpus infrastructure-checks implementation)
   (let ((summary (summarize-corpus corpus)) (root (corpus-root corpus)))
     (fields
      "schemaVersion" 1
      "origin" (word (corpus-origin corpus))
      "repository" (getf summary :repository) "commit" (getf summary :commit)
      "qualification" (getf summary :qualification)
-     "implemented" (fields "ctmParsing" :false "tmdmDeserialization" :false
+     "implemented" (fields "ctmParsing" (if (getf implementation :ctm) :true :false)
+                            "tmdmDeserialization" (if (getf implementation :tmdm) :true :false)
                             "cxtmCanonicalization" :false)
+     "implementationScope" (getf implementation :scope)
      "counts" (counts-object (getf summary :counts))
      "countsMatchPin" (if (getf summary :counts-match-pin) :true :false)
      "statuses" (counts-object (getf summary :statuses))
@@ -95,13 +97,13 @@
                 "sourcePathname" (relative-file-name (getf auxiliary :source-pathname) root)
                 "documentIRI" (getf auxiliary :document-iri)))))))
 
-(defun report-string (corpus &key infrastructure-checks)
+(defun report-string (corpus &key infrastructure-checks implementation)
   (with-output-to-string (stream)
-    (emit-json-value (report-data corpus infrastructure-checks) stream)
+    (emit-json-value (report-data corpus infrastructure-checks implementation) stream)
     (terpri stream)))
 
-(defun write-validation-report (corpus pathname &key infrastructure-checks)
+(defun write-validation-report (corpus pathname &key infrastructure-checks implementation)
   (with-open-file (stream pathname :direction :output :if-exists :supersede
                          :if-does-not-exist :create)
-    (write-string (report-string corpus :infrastructure-checks infrastructure-checks) stream))
+    (write-string (report-string corpus :infrastructure-checks infrastructure-checks :implementation implementation) stream))
   pathname)

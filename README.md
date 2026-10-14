@@ -1,14 +1,22 @@
-# Common Lisp Topic Maps — Slice 0
+# Common Lisp Topic Maps — Slice 1
 
-An independent foundation for implementing ISO/IEC 13250-6:2010 (CTM) in
-Common Lisp. **There is no CTM reader, TMDM model or CXTM canonicalizer yet.**
-HyperDoc may become a client later; it is neither the codebase nor a dependency.
+A working ANSI Common Lisp reader for the first CTM identity/default-name
+subset, with a minimal TMDM information-item model. HyperDoc remains a possible
+future client and is neither the codebase nor a dependency. There is no CXTM
+canonicalizer, association/template implementation or cross-document merge engine.
 
-Only `topic-maps` (the actual test foundation) and `topic-maps/tests` exist.
-The future `topic-maps/tmdm`, `topic-maps/ctm` and `topic-maps/cxtm` systems are
-not defined. Loading the foundation does not pretend they are available.
-Runtime dependencies: Common Lisp, ASDF/UIOP. Integrity/acquisition tooling
-uses Python 3's standard library and Git. No Quicklisp packages are required.
+Systems: `topic-maps` (the retained foundation), `topic-maps/tests`,
+`topic-maps/tmdm`, `topic-maps/ctm` and `topic-maps/ctm/tests`.
+The core reader/model uses ANSI Common Lisp; the foundation/tooling uses
+ASDF/UIOP and Python's standard library. No Quicklisp packages are required.
+
+Start with [Reading the First Five CTM Documents](docs/reading-first-five-ctm-documents.md)
+for original sources, actual objects, normative clauses, baseline evidence and
+copy-pasteable DESCRIBE forms. [API and boundaries](docs/slice-1-api-and-boundaries.md)
+document the supported language, conditions, identity and report separation.
+
+The pinned suite targets the **CTM draft dated 2010-03-31**. Passing it alone
+does not establish full ISO/IEC 13250-6:2010 conformity.
 
 ## Load and inspect
 
@@ -19,12 +27,14 @@ In a new Common Lisp process, with this checkout selected:
 (asdf:initialize-source-registry
  '(:source-registry :ignore-inherited-configuration))
 (asdf:load-asd #p"/Users/rgb/workspace/topic-maps/topic-maps.asd")
+(asdf:load-system "topic-maps/ctm")
 (asdf:load-system "topic-maps")
 (defparameter *corpus* (topic-maps.test-foundation:discover-corpus))
 (topic-maps.test-foundation:summarize-corpus *corpus*)
 (topic-maps.test-foundation:select-cases *corpus* :category :invalid)
 (topic-maps.test-foundation:select-cases *corpus* :id "ctm/in/simple.ctm")
 (asdf:test-system "topic-maps/tests")
+(asdf:test-system "topic-maps/ctm/tests")
 (topic-maps.test-foundation:write-validation-report
  *corpus* #p"/tmp/topic-maps-inventory.json")
 ```
@@ -63,21 +73,26 @@ contents and verifies every file. Verification is offline. Valid CTM inputs
 are selected only under `ctm/in`, invalid ones only under `ctm/invalid`, and
 CXTM baselines only under `ctm/baseline`. Auxiliary files are reported separately.
 
-## Recorded result and authority
+## Current validation and historical foundation
 
-The pinned corpus has 231 valid CTM inputs, 42 invalid inputs, 231 CXTM baselines
-and 22 auxiliary files in its CTM subtree, with no unmatched/missing baseline.
-All 273 imported CTM cases are **NOT-RUN**; none passes a nonexistent reader.
-Infrastructure fixtures exercise PASS, FAIL, UNSUPPORTED and NOT-RUN separately.
+The complete pinned corpus remains unchanged: 231 valid CTM inputs, 42 invalid
+inputs, 231 CXTM baselines and 22 CTM auxiliary files. Five selected semantic
+cases pass; their imported canonical contracts remain NOT-RUN. Only
+`ctm/invalid/prefix-undefined.ctm` is PASS under its CTM rejection contract;
+272 imported contracts remain NOT-RUN. Unsupported constructs and I/O errors
+cannot count as that required rejection.
 
-The upstream CTM suite targets the **draft dated 2010-03-31**. Passing that suite
-alone would not establish full ISO/IEC 13250-6:2010 conformity. Published ISO
-standards are normative; this corpus and Ontopia are independent evidence.
+The full launcher runs the retained 54 foundation checks, two Python integrity
+fixtures, 100 semantic checks, imported-report validation and selected baseline
+property evidence. A report path also produces `<path>.semantics.json` with
+separate model observations. Both reports are deterministic across the tested
+SBCL versions and checkout relocation. See [Slice 1 validation](docs/slice-1-validation.md),
+[imported contracts](reports/slice-1/validation.json) and
+[semantic observations](reports/slice-1/semantics.json).
 
-See [inventory and provenance](docs/inventory.md),
-[coverage and the first five proposed Slice 1 cases](docs/coverage.md),
-[architecture and Document-IRI policy](docs/architecture.md), and
-[execution evidence](docs/validation.md).
-The [machine-readable report](reports/validation.json) records actual imported
-case contracts and the passing infrastructure check names, without claiming
-CTM implementation. Nothing from Slice 1 is automatically started.
+[Slice 0 inventory](docs/inventory.md), [architecture](docs/architecture.md),
+[coverage](docs/coverage.md) and [validation](docs/validation.md) remain historical
+foundation records. Their original report/logs are preserved. Their statements
+about absent reader/model systems describe Slice 0, not the current branch.
+Slice 1 is built from `9c83db34eb1ba8091b004433f088056717dbaa7e` on
+`codex/ctm-slice-1`. Slice 2 is not started automatically.

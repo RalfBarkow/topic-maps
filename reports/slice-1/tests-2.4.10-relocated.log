@@ -1,0 +1,90 @@
+CORPUS-INTEGRITY-PASS: {"auxiliary": 22, "baselines": 231, "invalid": 42, "missingBaselines": [], "unmatchedBaselines": [], "valid": 231}
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.015s
+
+OK
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/package.lisp" (written 13 OCT 2026 11:05:43 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/package-tmpGHU3ALSV.fasl
+; compilation finished in 0:00:00.006
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/filesystem.lisp" (written 13 OCT 2026 11:09:14 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/filesystem-tmpAAURSO1.fasl
+; compilation finished in 0:00:00.017
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/corpus.lisp" (written 13 OCT 2026 11:09:14 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/corpus-tmp5GEXGEG5.fasl
+; compilation finished in 0:00:00.098
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/report.lisp" (written 14 OCT 2026 06:12:18 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/report-tmpAR3FSGEY.fasl
+; compilation finished in 0:00:00.082
+; compiling file "/private/tmp/ctm-slice-1-relocated/tests/package.lisp" (written 13 OCT 2026 11:17:48 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/tests/package-tmpJAIDFZTC.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-1-relocated/tests/foundation.lisp" (written 14 OCT 2026 06:12:18 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/tests/foundation-tmp8V3J6PE9.fasl
+; compilation finished in 0:00:00.039
+FOUNDATION-PASS: 54 infrastructure checks; 231 valid, 42 invalid, 231 baselines, 22 auxiliaries; 273 CTM cases NOT-RUN, zero CTM passes.
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/tmdm/package.lisp" (written 14 OCT 2026 06:05:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/tmdm/package-tmp9V47YWQF.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/tmdm/items.lisp" (written 14 OCT 2026 06:08:41 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/tmdm/items-tmp9BN22RMA.fasl
+; compilation finished in 0:00:00.039
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/ctm/package.lisp" (written 14 OCT 2026 06:05:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/ctm/package-tmp1CXFJSK9.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/ctm/conditions.lisp" (written 14 OCT 2026 06:15:47 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/ctm/conditions-tmpX4BRKI0R.fasl
+; compilation finished in 0:00:00.012
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/ctm/unicode.lisp" (written 14 OCT 2026 06:08:41 AM):
+
+; file: /private/tmp/ctm-slice-1-relocated/src/ctm/unicode.lisp
+; in: DEFUN SCALAR-CHARACTER
+;     (TOPIC-MAPS.CTM::PROBLEM 'TOPIC-MAPS.CTM:CTM-UNSUPPORTED
+;                              :CHARACTER-REPERTOIRE POSITION
+;                              "The Common Lisp implementation cannot represent this Unicode character.")
+; 
+; note: deleting unreachable code
+
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/ctm/unicode-tmpQ371UGST.fasl
+; compilation finished in 0:00:00.025
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/ctm/iri.lisp" (written 14 OCT 2026 06:18:59 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/ctm/iri-tmp2OWI3Q7U.fasl
+; compilation finished in 0:00:00.101
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/ctm/lexer.lisp" (written 14 OCT 2026 06:18:59 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/ctm/lexer-tmp9KKTJMYV.fasl
+; compilation finished in 0:00:00.128
+; compiling file "/private/tmp/ctm-slice-1-relocated/src/ctm/reader.lisp" (written 14 OCT 2026 06:15:47 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/src/ctm/reader-tmpJU0JWO19.fasl
+; compilation finished in 0:00:00.036
+; compiling file "/private/tmp/ctm-slice-1-relocated/tests/ctm-package.lisp" (written 14 OCT 2026 06:12:17 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/tests/ctm-package-tmpZX2WN8N4.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-1-relocated/tests/ctm-identity.lisp" (written 14 OCT 2026 06:18:59 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/tests/ctm-identity-tmpOU81XRV0.fasl
+; compilation finished in 0:00:00.061
+; compiling file "/private/tmp/ctm-slice-1-relocated/tests/ctm-report.lisp" (written 14 OCT 2026 06:14:02 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-1-relocated/tests/ctm-report-tmpY2ML9CFA.fasl
+; compilation finished in 0:00:00.014
+CTM-IDENTITY-SEMANTICS-PASS: 100 checks, 5 imported semantic cases, required prefix rejection; no CXTM equality passes.
+; 
+; compilation unit finished
+;   printed 1 note
+REPORT-JSON-PASS: deterministic schema, draft qualification, case contracts and only warranted imported status changes
+BASELINE-SEMANTIC-EVIDENCE-PASS: five frozen baselines support the selected properties; no canonicalization claimed

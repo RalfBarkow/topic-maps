@@ -1,0 +1,34 @@
+(in-package #:topic-maps.ctm)
+
+(define-condition ctm-error (error)
+  ((code :initarg :code :reader error-code)
+   (message :initarg :message :reader error-message)
+   (position :initarg :position :reader error-position)
+   (line :initarg :line :reader error-line)
+   (column :initarg :column :reader error-column)
+   (source :initarg :source :reader error-source)
+   (position-unit :initarg :position-unit :initform :character :reader error-position-unit))
+  (:report (lambda (condition stream)
+             (format stream "~A~@[ in ~A~] at ~A ~D~@[ (line ~D~]~@[, column ~D)~]: ~A"
+                     (error-code condition) (error-source condition)
+                     (error-position-unit condition) (error-position condition)
+                     (error-line condition) (error-column condition)
+                     (error-message condition)))))
+(define-condition ctm-rejection (ctm-error) ())
+(define-condition undefined-prefix (ctm-rejection) ())
+(define-condition ctm-unsupported (ctm-error) ())
+
+(defvar *source-name* nil)
+(defvar *source-text* "")
+
+(defun problem (type code position message &optional (unit :character))
+  (let ((line (when (eq unit :character) 1)) (column (when (eq unit :character) 1))
+        (previous-cr nil))
+    (when line
+      (loop for c across (subseq *source-text* 0 (min position (length *source-text*))) do
+        (cond ((char= c #\Return) (incf line) (setf column 1 previous-cr t))
+              ((char= c #\Newline) (unless previous-cr (incf line))
+               (setf column 1 previous-cr nil))
+              (t (incf column) (setf previous-cr nil)))))
+    (error type :code code :message message :position position :line line
+                :column column :source *source-name* :position-unit unit)))

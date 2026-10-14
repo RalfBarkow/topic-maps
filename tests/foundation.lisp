@@ -83,9 +83,9 @@
                            :key (lambda (r) (getf r :id)) :test #'string=) :role)))
     (check "draft-qualification-preserved"
            (search "2010-03-31" (getf summary :qualification)))
-    (check "no-reader-systems-defined"
+    (check "no-canonicalizer-system-defined"
            (every (lambda (name) (null (asdf:find-system name nil)))
-                  '("topic-maps/ctm" "topic-maps/tmdm" "topic-maps/cxtm")))
+                  '("topic-maps/cxtm")))
     ;; Incomplete independent fixture: structural problems must be exposed,
     ;; but must never mark an imported syntax test PASS or FAIL.
     (let* ((fixture (discover-corpus :root (fixture-root)

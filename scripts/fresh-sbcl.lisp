@@ -8,8 +8,7 @@
        (report (uiop:getenv "TOPIC_MAPS_REPORT")))
   (asdf:load-asd (merge-pathnames "topic-maps.asd" root))
   (asdf:test-system "topic-maps/tests")
+  (asdf:test-system "topic-maps/ctm/tests")
   (when report
-    (uiop:symbol-call :topic-maps.test-foundation :write-validation-report
-                     (uiop:symbol-call :topic-maps.test-foundation :discover-corpus)
-                     report :infrastructure-checks
-                     (symbol-value (find-symbol "*LAST-CHECKS*" :topic-maps.tests)))))
+    (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
+                     report (concatenate 'string report ".semantics.json"))))

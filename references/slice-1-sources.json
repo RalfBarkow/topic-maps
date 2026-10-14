@@ -1,0 +1,70 @@
+{
+  "baseCommit": "9c83db34eb1ba8091b004433f088056717dbaa7e",
+  "consultedDate": "2026-10-14",
+  "corpusCommit": "cd165b150176c1d6842b37be9cc9051b40d4996b",
+  "qualification": "Pinned CTM corpus targets the draft dated 2010-03-31; passing it alone does not establish ISO/IEC 13250-6:2010 conformity.",
+  "standards": [
+    {
+      "edition": "ISO/IEC 13250-6:2010",
+      "url": "https://www.isotopicmaps.org/ctm/ctm.html",
+      "snapshotSHA256": "814194accd807fac4cb4cecdc38ee1c8edc6a969f4683d7990708baa5f83c9fd",
+      "bytes": 100227
+    },
+    {
+      "edition": "ISO/IEC 13250-2:2006",
+      "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/",
+      "snapshotSHA256": "7f2fd03605d93c4c4c7759da1bcd1024fb0204dd34b522eff59a2ebdfb2a133b",
+      "bytes": 97436
+    },
+    {
+      "edition": "RFC 3986 (January 2005), as referenced by CTM",
+      "url": "https://www.rfc-editor.org/rfc/rfc3986.txt",
+      "snapshotSHA256": "3102dae4b68cebe40337730312fcb612297b8928547267e8b3d1ee6002b2d683",
+      "bytes": 141811
+    },
+    {
+      "edition": "RFC 3987 (January 2005), as referenced by CTM",
+      "url": "https://www.rfc-editor.org/rfc/rfc3987.txt",
+      "snapshotSHA256": "7cc9e3c4e61ea326130d29d959b723209fe3a6c75cdcfb5badbd315d96cd7878",
+      "bytes": 111190
+    }
+  ],
+  "implementedCTMClauses": [
+    "3.2 (explicit Document IRI; UTF-8 only)",
+    "3.3.1",
+    "3.3.2",
+    "3.3.3 (IRI character checks and resolution)",
+    "3.3.4 (undefined-prefix rejection only)",
+    "3.3.5 (IRI references; no bound QNames)",
+    "3.3.6 (local/SI/SL/II forms, no wildcards or variables)",
+    "3.4.2 (quoted string escapes)",
+    "3.8",
+    "3.9 (simple name tail and separators only)",
+    "3.11 (untyped names only)"
+  ],
+  "implementedTMDMClauses": [
+    "5.1 (topic item identity only)",
+    "5.2 (minimal Topic Map container)",
+    "5.3.5 (required properties and bounded same-map identity interning)",
+    "5.4 (Topic Name value/type/parent, implicitly empty scope/variants; bounded equal-name interning)"
+  ],
+  "notImplemented": [
+    "General merging procedures 6.2 and 6.3",
+    "Cross-document merging",
+    "CXTM canonicalization",
+    "Associations",
+    "Roles",
+    "Occurrences",
+    "Variants",
+    "Scope syntax",
+    "Reification",
+    "Templates",
+    "Prefix declarations",
+    "Typed names",
+    "Topic-tail identity assignments",
+    "Include/mergemap directives",
+    "Non-UTF-8 encodings",
+    "Wildcards",
+    "Full IRI grammar/scheme-specific validation"
+  ]
+}

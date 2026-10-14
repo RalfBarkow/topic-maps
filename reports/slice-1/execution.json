@@ -1,0 +1,99 @@
+{
+  "repository": "/Users/rgb/workspace/topic-maps",
+  "branch": "codex/ctm-slice-1",
+  "baseCommit": "9c83db34eb1ba8091b004433f088056717dbaa7e",
+  "baseWasClean": true,
+  "branchCommand": "git switch -c codex/ctm-slice-1 9c83db34eb1ba8091b004433f088056717dbaa7e",
+  "commands": [
+    {
+      "command": "/usr/bin/sandbox-exec -p '(version 1)(allow default)(deny network*)' /usr/bin/env SBCL=/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl TOPIC_MAPS_REPORT=/private/tmp/ctm-slice-1-final.json scripts/test.sh",
+      "workdir": "/Users/rgb/workspace/topic-maps",
+      "exitCode": 0,
+      "log": "tests-2.5.4.log",
+      "network": "OS-denied"
+    },
+    {
+      "command": "/usr/bin/sandbox-exec -p '(version 1)(allow default)(deny network*)' /usr/bin/env SBCL=/nix/store/y96nx8571mpdvjd40krkdim2av0in972-sbcl-2.4.10/bin/sbcl TOPIC_MAPS_REPORT=/private/tmp/ctm-slice-1-relocated.json /private/tmp/ctm-slice-1-relocated/scripts/test.sh",
+      "exitCode": 0,
+      "log": "tests-2.4.10-relocated.log",
+      "network": "OS-denied",
+      "relocation": "Copy of checkout excluding .git and Python caches"
+    },
+    {
+      "command": "cmp /private/tmp/ctm-slice-1-final.json /private/tmp/ctm-slice-1-relocated.json",
+      "exitCode": 0
+    },
+    {
+      "command": "cmp /private/tmp/ctm-slice-1-final.json.semantics.json /private/tmp/ctm-slice-1-relocated.json.semantics.json",
+      "exitCode": 0
+    },
+    {
+      "command": "/usr/bin/sandbox-exec -p '(version 1)(allow default)(deny network*)' /nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl --noinform --no-sysinit --no-userinit --non-interactive --load /private/tmp/ctm-slice-1-describe.lisp",
+      "exitCode": 0,
+      "log": "describe.log",
+      "script": "Exact forms reproduced in the reading document plus two parent-identity assertions"
+    },
+    {
+      "command": "python3 scripts/corpus.py verify",
+      "exitCode": 0,
+      "result": "2006 exact original file hashes; unchanged inputs/baselines/locks"
+    },
+    {
+      "command": "git diff --exit-code -- vendor/cxtm references/corpus-lock.json references/corpus-lock.sexp",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -m py_compile scripts/check-semantics.py scripts/check-report.py",
+      "exitCode": 0
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "results": {
+    "semanticPassed": 100,
+    "semanticFailed": 0,
+    "positiveImportedSemanticCases": 5,
+    "requiredNegativeRejection": "PASS: undefined-prefix, character 1, line 2, column 1",
+    "foundationChecks": 54,
+    "pythonIntegrityTests": 2,
+    "importedStatuses": {
+      "pass": 1,
+      "fail": 0,
+      "unsupported": 0,
+      "not-run": 272
+    },
+    "importedCxtmEqualityPasses": 0,
+    "baselineSemanticEvidence": "PASS for selected properties only; no canonical output produced",
+    "reportRelocation": "Both JSON reports byte-identical"
+  },
+  "corpusRevision": "cd165b150176c1d6842b37be9cc9051b40d4996b",
+  "qualification": "Pinned CTM suite targets draft 2010-03-31; passing it alone does not establish full ISO/IEC 13250-6:2010 conformity.",
+  "artifactsSHA256": {
+    "validation.json": "24344715dbff25785ce0b8183752a5d6cbcb69867e99c1ed5b9799f88281356e",
+    "semantics.json": "e1aa133ed3685f6ecf1eff148f303324b691145045f95ee957dbd3375441799f",
+    "tests-2.5.4.log": "e14763e83074689d7cc601a5c6b89997c9f15456d6d128c751bddbdfff4a5227",
+    "tests-2.4.10-relocated.log": "e12e3284c5b3521f8a22645f885d7e1e7cbf7232b7edd32432ca4c2b5265f6bb",
+    "describe.log": "33139bf5766f0557c3494f8bcb8d770f22c56c7356c4002b8c65cf40cdedacbe"
+  },
+  "hyperdocUnchanged": [
+    {
+      "path": "/Users/rgb/workspace/hyperdoc-dreyeck-ch",
+      "head": "9a1764250f31013a50965aad324dd72c0662b9cc",
+      "branch": "dreyeck.ch",
+      "clean": true
+    },
+    {
+      "path": "/Users/rgb/workspace/hyperdoc-querying-topicmaps",
+      "head": "ca3c46b6e37b8e5e253c4faabc4819ff36bc64e8",
+      "branch": "codex/querying-topicmaps",
+      "clean": true
+    }
+  ],
+  "readyForSlice2": true,
+  "slice2Started": false,
+  "serverStarted": false,
+  "deployment": false,
+  "runningLispImagesModified": false
+}

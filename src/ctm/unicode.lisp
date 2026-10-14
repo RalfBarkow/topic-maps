@@ -1,0 +1,56 @@
+(in-package #:topic-maps.ctm)
+
+(defun scalar-character (code position)
+  (unless (and (<= 0 code #x10ffff) (not (<= #xd800 code #xdfff)))
+    (problem 'ctm-rejection :invalid-unicode position "Not a Unicode scalar value."))
+  (or (code-char code)
+      (problem 'ctm-unsupported :character-repertoire position
+               "The Common Lisp implementation cannot represent this Unicode character.")))
+
+(defun decode-utf8 (octets &key (position 0) (strip-bom nil))
+  "Strict UTF-8 decoding without implementation-specific external-format flags."
+  (let* ((size (length octets))
+         (i (if (and strip-bom (>= size 3)
+                     (= (aref octets 0) #xef) (= (aref octets 1) #xbb)
+                     (= (aref octets 2) #xbf)) 3 0)))
+    (with-output-to-string (output)
+      (loop while (< i size) do
+        (let* ((first (aref octets i))
+               (width (cond ((< first #x80) 1) ((<= #xc2 first #xdf) 2)
+                            ((<= #xe0 first #xef) 3) ((<= #xf0 first #xf4) 4)
+                            (t 0))))
+          (when (or (zerop width) (> (+ i width) size))
+            (problem 'ctm-rejection :invalid-utf8 (+ position i)
+                     "Invalid or incomplete UTF-8 sequence." :byte))
+          (let ((code (logand first (ecase width (1 #x7f) (2 #x1f) (3 #x0f) (4 #x07)))))
+            (loop for j from 1 below width for byte = (aref octets (+ i j)) do
+              (unless (<= #x80 byte #xbf)
+                (problem 'ctm-rejection :invalid-utf8 (+ position i j)
+                         "Expected UTF-8 continuation byte." :byte))
+              (setf code (+ (ash code 6) (logand byte #x3f))))
+            (unless (and (>= code (ecase width (1 0) (2 #x80) (3 #x800) (4 #x10000)))
+                         (<= code #x10ffff) (not (<= #xd800 code #xdfff)))
+              (problem 'ctm-rejection :invalid-utf8 (+ position i)
+                       "Overlong or invalid Unicode UTF-8 sequence." :byte))
+            (write-char (scalar-character code (+ position i)) output))
+          (incf i width))))))
+
+(defun unescape-iri (text position)
+  "CTM 3.3.3: decode consecutive percent octets as UTF-8, preserving other chars."
+  (with-output-to-string (out)
+    (loop for i from 0 below (length text) do
+      (if (char= (char text i) #\%)
+          (let ((bytes nil) (start i))
+            (loop while (and (< i (length text)) (char= (char text i) #\%)) do
+              (unless (< (+ i 2) (length text))
+                (problem 'ctm-rejection :invalid-percent-escape (+ position i) "Incomplete IRI escape."))
+              (let ((a (digit-char-p (char text (1+ i)) 16))
+                    (b (digit-char-p (char text (+ i 2)) 16)))
+                (unless (and a b)
+                  (problem 'ctm-rejection :invalid-percent-escape (+ position i) "IRI escape needs two hex digits."))
+                (push (+ (* 16 a) b) bytes))
+              (incf i 3))
+            (write-string (decode-utf8 (coerce (nreverse bytes) '(vector (unsigned-byte 8)))
+                                       :position (+ position start)) out)
+            (decf i))
+          (write-char (char text i) out)))))
