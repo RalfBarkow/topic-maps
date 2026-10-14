@@ -180,9 +180,11 @@
     (let ((condition (rejection (format nil "a.~%  ex:fake."))))
       (check "undefined-prefix-condition-class" (typep condition 'undefined-prefix))
       (check "error-line-column" (and (= 2 (error-line condition)) (= 3 (error-column condition)))))
-    (dolist (text '("a isa person." "relation(role: a)" "def tpl() a. end" "%prefix ex https://example.invalid/ ex:a."
+    (dolist (text '("a isa person." "def tpl() a. end" "%prefix ex https://example.invalid/ ex:a."
                     "? - \"anonymous\"." "a @theme." "a - \"name\" @theme." "a - \"\"\"triple\"\"\"."))
       (check (concatenate 'string "unsupported-not-silently-accepted:" text) (unsupported-p text)))
+    (check "association-now-deserialized"
+           (= 1 (length (topic-maps.tmdm:topic-map-associations (read-text "relation(role: a)")))))
     (check "empty-document-has-no-accidental-type-topic"
            (null (topic-map-topics (read-text ""))))
     (let ((map (deserialize-file (asdf:system-relative-pathname "topic-maps" "tests/fixtures/ctm/utf8-bom.ctm")

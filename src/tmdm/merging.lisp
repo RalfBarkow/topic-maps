@@ -49,7 +49,7 @@
 
 (defun merge-two-topics (map a b)
   ;; TMDM 6.2: create C, union supported properties, replace model references.
-  ;; Unimplemented associations/scope/reifiers cannot contain hidden references.
+  ;; Scope/reifiers remain unimplemented; Association/Role refs are materialized.
   (let ((c (%make-topic map)))
     (setf (%topic-item-identifiers c) (set-union (%topic-item-identifiers a) (%topic-item-identifiers b) #'string=)
           (%topic-subject-identifiers c) (set-union (%topic-subject-identifiers a) (%topic-subject-identifiers b) #'string=)
@@ -62,16 +62,23 @@
         ;; Parent is the computed containing topic (TMDM 5.4).
         (setf (%topic-name-parent name) topic
               (%topic-name-type name) (canonical-topic (%topic-name-type name)))))
+    (dolist (association (%topic-map-associations map))
+      (setf (%association-type association) (canonical-topic (%association-type association)))
+      (dolist (role (%association-roles association))
+        (setf (%association-role-type role) (canonical-topic (%association-role-type role))
+              (%association-role-player role) (canonical-topic (%association-role-player role)))))
     (normalize-names map)
+    (normalize-associations map)
     c))
 
 (defun normalize-topic-map (map)
-  "Apply same-map identity merging to a fixed point, then remove equal Names.
-Only implemented Topic/Name properties participate; no cross-map merging."
+  "Apply same-map identity merging, then remove equal Names, Roles and Associations.
+Only implemented properties participate; no cross-map merging."
   (check-type map topic-map)
   (loop for pair = (equal-pair (%topic-map-topics map) #'equal-topics-p)
         while pair do (merge-two-topics map (first pair) (second pair)))
   (normalize-names map)
+  (normalize-associations map)
   map)
 
 (defun live-topic (topic)

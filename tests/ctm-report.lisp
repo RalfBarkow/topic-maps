@@ -29,7 +29,7 @@
       (topic-maps.test-foundation:write-validation-report
        corpus pathname
        :infrastructure-checks topic-maps.tests::*last-checks*
-       :implementation '(:ctm t :tmdm t :scope "Slice 2: same-map Topic/Name merging, identity declarations/tails and untyped names; no CXTM canonicalizer"))
+       :implementation '(:ctm t :tmdm t :scope "Slice 3: unary/binary Associations and Roles with same-map reference replacement and duplicate merging; no CXTM canonicalizer"))
       (with-open-file (out semantic-pathname :direction :output :if-exists :supersede :if-does-not-exist :create)
         (topic-maps.test-foundation::emit-json-value
          (topic-maps.test-foundation::fields

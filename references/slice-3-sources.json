@@ -1,0 +1,12 @@
+{
+  "baseCommit": "66664dbff6275d60dab1bc6a232fa70f7b916b8c",
+  "consultedDate": "2026-10-14",
+  "corpusCommit": "cd165b150176c1d6842b37be9cc9051b40d4996b",
+  "qualification": "Pinned CTM corpus targets draft 2010-03-31; semantic property checks do not prove CXTM equality or full ISO conformity.",
+  "standards": [
+    {"edition": "ISO/IEC 13250-6:2010", "url": "https://www.isotopicmaps.org/ctm/ctm.html", "clauses": ["3.3.1", "3.3.2", "3.3.7", "3.3.11", "3.13"]},
+    {"edition": "ISO/IEC 13250-2:2006", "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/", "clauses": ["5.2", "5.3.5", "5.7", "5.8", "6.1", "6.2", "6.6", "6.7"]}
+  ],
+  "boundary": "CTM one/two-role declarations, Topic identity references only, unscoped/unreified Association and Role items, computed roles-played, same-map references and duplicate normalization. No larger CTM arity, embedded topics, reification, scope, prefixes/templates, special vocabulary relations, CXTM canonicalization, full IRI validation or cross-document merging.",
+  "previousSourceRecord": "slice-2-sources.json"
+}

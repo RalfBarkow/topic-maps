@@ -17,14 +17,14 @@
        (when explicit-kind
          (problem 'ctm-rejection :expected-iri (token-position token) "Explicit = or ^ needs an IRI reference."))
        (when (member (token-value token) '("def" "isa" "ako" "end") :test #'string=)
-         (problem 'ctm-unsupported :unsupported-keyword (token-position token) "This keyword is outside Slice 1."))
+         (problem 'ctm-unsupported :unsupported-keyword (token-position token) "This keyword is outside the implemented subset."))
        (values :item-identifier
           (concatenate 'string (parser-document-iri parser) "#" (token-value token))))
       (:iri
        (values (or explicit-kind :subject-identifier)
           (resolve-iri (token-value token) (parser-document-iri parser) (token-position token))))
       (:qname
-       ;; No prefix declarations are supported in Slice 1. This is a specific
+       ;; No prefix declarations are supported. This is a specific
        ;; semantic rejection, not an I/O failure or an unsupported-parser stub.
        (problem 'undefined-prefix :undefined-prefix (token-position token)
                 (format nil "Prefix ~S has no binding." (subseq (token-value token) 0
@@ -44,8 +44,8 @@
   (multiple-value-bind (kind iri) (identity-value parser)
     (topic-maps.tmdm:intern-topic map kind iri)))
 
-(defun read-topic (parser map)
-  (let ((topic (identity-reference parser map)) (has-tail nil))
+(defun read-topic (parser map &optional (topic (identity-reference parser map)))
+  (let ((has-tail nil))
     (loop
       (cond
         ((punctuation-p parser #\.) (consume parser) (return topic))
@@ -66,7 +66,7 @@
                  (problem 'ctm-rejection :expected-name-value (token-position literal)
                           "Expected a quoted name value after the name type separator.")))
              (problem 'ctm-unsupported :typed-name (token-position value)
-                      "Typed names are outside Slice 1 (CTM 3.11)."))
+                      "Typed names are outside the implemented subset (CTM 3.11)."))
            (unless (eq :string (token-kind value))
              (problem 'ctm-rejection :expected-name-value (token-position value)
                       "Expected a quoted name value after '-'."))
@@ -90,17 +90,57 @@
          (setf has-tail t))
         ((eq :identifier (token-kind (look parser)))
          (problem 'ctm-unsupported :topic-tail (token-position (look parser)) "Type/template topic tails are outside the implemented subset."))
+        ((punctuation-p parser #\()
+         (problem 'ctm-unsupported :variant (token-position (look parser)) "Variant names are outside the implemented subset."))
         (t (problem 'ctm-rejection :unexpected-token (token-position (look parser)) "Unexpected token after topic or name."))))))
 
+(defun read-association (parser map type)
+  "CTM 3.13, restricted to one or two role declarations; no scope/reifier."
+  (consume parser) ; opening parenthesis already recognized by the caller
+  (let ((roles nil) (third-position nil))
+    (loop
+      (when (or (punctuation-p parser #\)) (eq :eof (token-kind (look parser))))
+        (problem 'ctm-rejection :expected-role (token-position (look parser)) "Expected a nonempty Association role declaration."))
+      (when (= 2 (length roles)) (setf third-position (token-position (look parser))))
+      (let* ((role-type (identity-reference parser map))
+             (type-end (lexer-cursor (parser-lexer parser)))
+             (colon (look parser)))
+        (unless (punctuation-p parser #\:)
+          (problem 'ctm-rejection :expected-role-type-separator (token-position colon) "Expected ':' after the Role type."))
+        (consume parser)
+        (let ((player-token (look parser)))
+          ;; CTM role production requires layout on at least one side of ':'.
+          ;; skip-layout handles whitespace and comments; gaps use source offsets.
+          (unless (or (> (token-position colon) type-end)
+                      (> (token-position player-token) (1+ (token-position colon))))
+            (problem 'ctm-rejection :role-separator-whitespace (token-position colon)
+                     "A Role separator needs whitespace or a comment on at least one side."))
+          (when (or (eq :eof (token-kind player-token))
+                    (punctuation-p parser #\)) (punctuation-p parser #\,))
+            (problem 'ctm-rejection :expected-role-player (token-position player-token) "Expected a Topic as the Role player.")))
+        (push (list role-type (identity-reference parser map)) roles))
+      (cond ((punctuation-p parser #\,) (consume parser))
+            ((punctuation-p parser #\)) (consume parser) (return))
+            ((eq :eof (token-kind (look parser)))
+             (problem 'ctm-rejection :missing-association-close (token-position (look parser)) "Expected ')' after the Roles."))
+            (t (problem 'ctm-rejection :expected-role-separator (token-position (look parser)) "Expected ',' or ')' after a Role."))))
+    (when (> (length roles) 2)
+      (problem 'ctm-unsupported :association-arity third-position "Associations with more than two Role declarations are outside Slice 3."))
+    (topic-maps.tmdm:make-association map type (nreverse roles))))
+
 (defun deserialize-string (text &key document-iri source-name)
-  "Read the documented identity/name CTM subset into a new TMDM Topic Map.
+  "Read the documented identity/name/unary-binary Association CTM subset.
 Source positions are zero-based character offsets; lines/columns are one-based."
   (check-type text string)
   (let ((*source-name* source-name) (*source-text* text))
     (require-document-iri document-iri)
     (let ((parser (make-parser (make-lexer text) document-iri))
           (map (topic-maps.tmdm:make-topic-map)))
-      (loop until (eq :eof (token-kind (look parser))) do (read-topic parser map))
+      (loop until (eq :eof (token-kind (look parser))) do
+        (let ((topic (identity-reference parser map)))
+          (if (punctuation-p parser #\()
+              (read-association parser map topic)
+              (read-topic parser map topic))))
       map)))
 
 (defun deserialize-file (pathname &key document-iri source-name)

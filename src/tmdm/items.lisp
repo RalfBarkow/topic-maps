@@ -1,13 +1,20 @@
 (in-package #:topic-maps.tmdm)
 
-;;; Only Topic Map, Topic and unscoped Name properties are materialized.
+;;; Only Topic Map, Topic, unscoped Name, Association and Role properties used
+;;; by the current subset are materialized.
 ;;; Omitted set-valued properties are implicitly empty, single-valued ones null
 ;;; (CTM 3.2). In particular all supported names have empty scope and variants.
-(defstruct (topic-map (:constructor make-topic-map ()) (:conc-name %topic-map-)) topics)
+(defstruct (topic-map (:constructor make-topic-map ()) (:conc-name %topic-map-)) topics associations)
 (defstruct (topic (:constructor %make-topic (parent)) (:conc-name %topic-))
   (parent nil :read-only t) item-identifiers subject-identifiers subject-locators names
   ;; Implementation bookkeeping, not a TMDM property or another information item.
   forward)
+
+(defstruct (association (:constructor %make-association (parent type)) (:conc-name %association-))
+  (parent nil :type topic-map :read-only t) (type nil :type topic) roles forward)
+(defstruct (association-role (:constructor %make-association-role (parent type player))
+                            (:conc-name %association-role-))
+  (parent nil :type association) (type nil :type topic) (player nil :type topic) forward)
 (defstruct (topic-name (:constructor %make-topic-name (value type parent)) (:conc-name %topic-name-))
   (value "" :type string :read-only t)
   (type nil :type topic)
@@ -26,9 +33,21 @@ EQ on obsolete objects does not change; compare their canonical representatives.
   (loop for current = name then (%topic-name-forward current)
         unless (%topic-name-forward current) return current))
 
+(defun canonical-association (association)
+  "Resolve a retained Association handle after duplicate association merging."
+  (check-type association association)
+  (loop for current = association then (%association-forward current)
+        unless (%association-forward current) return current))
+(defun canonical-association-role (role)
+  "Resolve a retained Role handle after role/association duplicate removal."
+  (check-type role association-role)
+  (loop for current = role then (%association-role-forward current)
+        unless (%association-role-forward current) return current))
+
 ;; Public readers resolve obsolete handles and expose copies of set storage.
 ;; Mutations must use the identity/merge API to maintain model invariants.
 (defun topic-map-topics (map) (copy-list (%topic-map-topics map)))
+(defun topic-map-associations (map) (copy-list (%topic-map-associations map)))
 (defun topic-parent (topic) (%topic-parent (canonical-topic topic)))
 (defun topic-item-identifiers (topic) (copy-list (%topic-item-identifiers (canonical-topic topic))))
 (defun topic-subject-identifiers (topic) (copy-list (%topic-subject-identifiers (canonical-topic topic))))
@@ -37,11 +56,24 @@ EQ on obsolete objects does not change; compare their canonical representatives.
 (defun topic-name-value (name) (%topic-name-value (canonical-topic-name name)))
 (defun topic-name-type (name) (%topic-name-type (canonical-topic-name name)))
 (defun topic-name-parent (name) (%topic-name-parent (canonical-topic-name name)))
+(defun association-parent (association) (%association-parent (canonical-association association)))
+(defun association-type (association) (%association-type (canonical-association association)))
+(defun association-roles (association) (copy-list (%association-roles (canonical-association association))))
+(defun association-role-parent (role) (%association-role-parent (canonical-association-role role)))
+(defun association-role-type (role) (%association-role-type (canonical-association-role role)))
+(defun association-role-player (role) (%association-role-player (canonical-association-role role)))
+(defun topic-roles-played (topic)
+  "Computed TMDM 5.3.5 property; no independently maintained inverse index."
+  (let ((topic (canonical-topic topic)))
+    (loop for association in (%topic-map-associations (%topic-parent topic)) append
+      (remove-if-not (lambda (role) (eq topic (%association-role-player role)))
+                     (%association-roles association)))))
 
 ;; Avoid recursive printing through parent/type links; DESCRIBE remains useful.
 (defmethod print-object ((item topic-map) stream)
   (print-unreadable-object (item stream :type t :identity t)
-    (format stream "~D topics" (length (topic-map-topics item)))))
+    (format stream "~D topics, ~D associations" (length (topic-map-topics item))
+            (length (topic-map-associations item)))))
 (defmethod print-object ((item topic) stream)
   (print-unreadable-object (item stream :type t :identity t)
     (format stream "II=~S SI=~S SL=~S" (topic-item-identifiers item)
@@ -49,6 +81,11 @@ EQ on obsolete objects does not change; compare their canonical representatives.
 (defmethod print-object ((item topic-name) stream)
   (print-unreadable-object (item stream :type t :identity t)
     (format stream "~S" (topic-name-value item))))
+(defmethod print-object ((item association) stream)
+  (print-unreadable-object (item stream :type t :identity t)
+    (format stream "~D roles" (length (association-roles item)))))
+(defmethod print-object ((item association-role) stream)
+  (print-unreadable-object (item stream :type t :identity t)))
 
 (defun default-name-type-identifier ()
   "http://psi.topicmaps.org/iso13250/model/topic-name")

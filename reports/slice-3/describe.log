@@ -1,0 +1,23 @@
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 1 topics, 1 associations {7002FA4F93}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/association-merg..
+  ASSOCIATIONS                   = (#<TOPIC-MAPS.TMDM:ASSOCIATION 1 roles {7002FA5423}>)
+#<TOPIC-MAPS.TMDM:ASSOCIATION 1 roles {7002FA5423}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 1 topics, 1 associations {7002FA4F93}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/association-merge..
+  ROLES                          = (#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7002FA5453}>)
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7002FA5453}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:ASSOCIATION 1 roles {7002FA5423}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/association-merge..
+  PLAYER                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/association-merge..
+  FORWARD                        = NIL
+ASSOCIATION-DESCRIBE-MERGE-INSPECTION-PASS

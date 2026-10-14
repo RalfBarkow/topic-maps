@@ -10,8 +10,11 @@
   (asdf:test-system "topic-maps/tests")
   (asdf:test-system "topic-maps/ctm/tests")
   (asdf:test-system "topic-maps/ctm/merging-tests")
+  (asdf:test-system "topic-maps/ctm/association-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-merging-report
-                     (concatenate 'string report ".merging.json"))))
+                     (concatenate 'string report ".merging.json"))
+    (uiop:symbol-call :topic-maps.ctm.tests :write-association-report
+                     (concatenate 'string report ".associations.json"))))
