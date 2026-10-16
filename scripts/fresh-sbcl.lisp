@@ -11,8 +11,8 @@
   (asdf:test-system "topic-maps/ctm/tests")
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
-  ;; Prefix tests run the retained Occurrence and CXTM suites exactly once.
-  (asdf:test-system "topic-maps/ctm/prefix-tests")
+  ;; Integer tests run the retained Prefix, Occurrence and CXTM suites exactly once.
+  (asdf:test-system "topic-maps/ctm/integer-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -23,9 +23,12 @@
     (uiop:symbol-call :topic-maps.ctm.tests :write-cxtm-report
                      report (concatenate 'string report ".cxtm.json")
                      :additional-checks (append (uiop:symbol-call :topic-maps.ctm.tests :occurrence-checks)
-                                                (uiop:symbol-call :topic-maps.ctm.tests :prefix-checks))
-                     :scope "Slice 6: prefixes and explicit string datatypes; 33 unchanged positive CXTM baselines; no excluded canonicalization")
+                                                (uiop:symbol-call :topic-maps.ctm.tests :prefix-checks)
+                                                (uiop:symbol-call :topic-maps.ctm.tests :integer-checks))
+                     :scope "Slice 7: integer Occurrences; 39 unchanged positive CXTM baselines; no Decimal/Date/DateTime canonicalization")
     (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
                      (concatenate 'string report ".occurrences.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-prefix-report
-                     (concatenate 'string report ".prefixes.json"))))
+                     (concatenate 'string report ".prefixes.json"))
+    (uiop:symbol-call :topic-maps.ctm.tests :write-integer-report
+                     (concatenate 'string report ".integers.json"))))

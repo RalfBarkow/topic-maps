@@ -120,11 +120,13 @@
           (reference (occurrence-type item))
           (unless (topic-maps.tmdm::absolute-locator-p (occurrence-datatype item))
             (fail :invalid-occurrence-datatype "Datatype must be an absolute locator."))
-          ;; CXTM 3.16: exactly these four datatypes need additional canonical
+          (when (and (string= (occurrence-datatype item) (integer-datatype))
+                     (not (integer-lexical-p (occurrence-value item))))
+            (fail :invalid-integer-value "Occurrence value is not an xsd:integer lexical form."))
+          ;; CXTM 3.16: these three remaining datatypes need additional canonical
           ;; lexical rules. Unknown datatypes use Other, without interpretation.
           (when (member (occurrence-datatype item)
                         '("http://www.w3.org/2001/XMLSchema#decimal"
-                          "http://www.w3.org/2001/XMLSchema#integer"
                           "http://www.w3.org/2001/XMLSchema#date"
                           "http://www.w3.org/2001/XMLSchema#dateTime") :test #'string=)
             (fail :unsupported-occurrence-datatype "CXTM 3.16 numeric/date canonicalization is not implemented." t))
@@ -210,8 +212,11 @@ Variants or non-Topic identifiers other than Occurrence identifiers. Does not mu
             (type-ref (topic-name-type name)) (format out "</name>~%"))
           (loop for item in (sorted (topic-occurrences topic) #'occurrence-order) for index from 1 do
             (format out "<occurrence number=\"~D\">~%<value>" index)
-            (xml-text (if (string= (occurrence-datatype item) (iri-datatype))
-                          (normalized-locator (occurrence-value item)) (occurrence-value item)) out)
+            (xml-text (cond ((string= (occurrence-datatype item) (iri-datatype))
+                             (normalized-locator (occurrence-value item)))
+                            ((string= (occurrence-datatype item) (integer-datatype))
+                             (canonical-integer-lexical-form (occurrence-value item)))
+                            (t (occurrence-value item))) out)
             (format out "</value>~%<datatype>")
             ;; CXTM 3.14: datatype locator is NOT base-normalized.
             (xml-text (occurrence-datatype item) out) (format out "</datatype>~%")

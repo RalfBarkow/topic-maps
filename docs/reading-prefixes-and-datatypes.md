@@ -1,5 +1,10 @@
 # Reading Prefixes and Explicit Datatypes
 
+Historical Slice 6 subset. Slice 7 adds integer literals and xsd:integer CXTM
+canonicalization, superseding the integer exclusions below. See
+[Reading Integer Occurrences](reading-integer-occurrences.md).
+
+
 Slice 6 starts at `437ad53ea7539d36db3fa871d0931650b7a6a03e`. A prefix is a
 source abbreviation for an IRI, not a Topic. An Occurrence datatype is a locator;
 its Type is a Topic reference. These two properties remain different even if an

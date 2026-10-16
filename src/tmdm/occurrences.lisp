@@ -61,6 +61,8 @@ Validate before mutation, return current representative after duplicate replacem
   ;; TMDM 4.4/5.6: datatype is a locator, never a Topic or a whitelist.
   (unless (absolute-locator-p datatype)
     (occurrence-problem :invalid-datatype "Datatype must be a resolved absolute locator."))
+  (when (and (string= datatype (integer-datatype)) (not (integer-lexical-p value)))
+    (occurrence-problem :invalid-integer-value "Value is not an xsd:integer lexical form."))
   (when (and (string= datatype (iri-datatype)) (not (absolute-locator-p value)))
     (occurrence-problem :relative-uri-value "TMDM IRI-valued Occurrences require an absolute locator."))
   (let* ((topic (live-topic topic)) (type (live-topic type)) (map (%topic-parent topic)))

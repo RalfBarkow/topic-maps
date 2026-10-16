@@ -1,0 +1,223 @@
+CORPUS-INTEGRITY-PASS: {"auxiliary": 22, "baselines": 231, "invalid": 42, "missingBaselines": [], "unmatchedBaselines": [], "valid": 231}
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.018s
+
+OK
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/package.lisp" (written 13 OCT 2026 11:05:43 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/package-tmpGHU3ALSV.fasl
+; compilation finished in 0:00:00.003
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/filesystem.lisp" (written 13 OCT 2026 11:09:14 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/filesystem-tmpAAURSO1.fasl
+; compilation finished in 0:00:00.016
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/corpus.lisp" (written 13 OCT 2026 11:09:14 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/corpus-tmp5GEXGEG5.fasl
+; compilation finished in 0:00:00.102
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/report.lisp" (written 14 OCT 2026 05:51:46 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/report-tmpAR3FSGEY.fasl
+; compilation finished in 0:00:00.089
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/package.lisp" (written 13 OCT 2026 11:17:48 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/package-tmpJAIDFZTC.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/foundation.lisp" (written 14 OCT 2026 05:51:46 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/foundation-tmp8V3J6PE9.fasl
+; compilation finished in 0:00:00.046
+FOUNDATION-PASS: 54 infrastructure checks; 231 valid, 42 invalid, 231 baselines, 22 auxiliaries; 273 CTM cases NOT-RUN, zero CTM passes.
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/package.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/package-tmp9V47YWQF.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/integers.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/integers-tmp9BN22RMA.fasl
+; compilation finished in 0:00:00.014
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/items.lisp" (written 14 OCT 2026 07:06:39 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/items-tmp1CXFJSK9.fasl
+; compilation finished in 0:00:00.179
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/merging.lisp" (written 14 OCT 2026 07:09:07 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/merging-tmpX4BRKI0R.fasl
+; compilation finished in 0:00:00.050
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/occurrences.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/occurrences-tmpQ371UGST.fasl
+; compilation finished in 0:00:00.039
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/associations.lisp" (written 14 OCT 2026 08:27:45 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/tmdm/associations-tmp2OWI3Q7U.fasl
+; compilation finished in 0:00:00.016
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/package.lisp" (written 16 OCT 2026 06:45:24 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/package-tmp9KKTJMYV.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/conditions.lisp" (written 16 OCT 2026 06:45:24 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/conditions-tmpJU0JWO19.fasl
+; compilation finished in 0:00:00.013
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/unicode.lisp" (written 14 OCT 2026 06:08:41 AM):
+
+; file: /private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/unicode.lisp
+; in: DEFUN SCALAR-CHARACTER
+;     (TOPIC-MAPS.CTM::PROBLEM 'TOPIC-MAPS.CTM:CTM-UNSUPPORTED
+;                              :CHARACTER-REPERTOIRE POSITION
+;                              "The Common Lisp implementation cannot represent this Unicode character.")
+; 
+; note: deleting unreachable code
+
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/unicode-tmpZX2WN8N4.fasl
+; compilation finished in 0:00:00.032
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/iri.lisp" (written 14 OCT 2026 06:18:59 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/iri-tmpOU81XRV0.fasl
+; compilation finished in 0:00:00.075
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/lexer.lisp" (written 16 OCT 2026 07:08:49 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/lexer-tmpY2ML9CFA.fasl
+; compilation finished in 0:00:00.171
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/reader.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/ctm/reader-tmpX2JYJDQE.fasl
+; compilation finished in 0:00:00.103
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-package.lisp" (written 14 OCT 2026 06:12:17 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-package-tmpOPCILR65.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-identity.lisp" (written 16 OCT 2026 06:45:24 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-identity-tmpRV9F8A9A.fasl
+; compilation finished in 0:00:00.086
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-report.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-report-tmpK2ZAJT4I.fasl
+; compilation finished in 0:00:00.013
+CTM-IDENTITY-SEMANTICS-PASS: 123 checks, 5 imported semantic cases, required prefix rejection; no CXTM equality passes.
+; 
+; compilation unit finished
+;   printed 1 note
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-merging.lisp" (written 14 OCT 2026 07:41:46 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-merging-tmpUX5S4ADN.fasl
+; compilation finished in 0:00:00.063
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/merge-graphs.lisp" (written 14 OCT 2026 07:41:46 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/merge-graphs-tmp10401X32.fasl
+; compilation finished in 0:00:00.025
+CTM-MERGING-SEMANTICS-PASS: 646 checks, 11 pinned semantic cases; no CXTM equality passes.
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-associations.lisp" (written 14 OCT 2026 08:50:56 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-associations-tmpZ7CBRM0G.fasl
+; compilation finished in 0:00:00.123
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/association-graphs.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/association-graphs-tmp9OZEQ0G2.fasl
+; compilation finished in 0:00:00.021
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/association-report.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/association-report-tmpB2JTL1W9.fasl
+; compilation finished in 0:00:00.019
+CTM-ASSOCIATIONS-SEMANTICS-PASS: 657 checks, 8 pinned cases; no CXTM equality passes.
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/package.lisp" (written 14 OCT 2026 05:49:40 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/package-tmpP3BI68WQ.fasl
+; compilation finished in 0:00:00.007
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/nfc-data.lisp" (written 14 OCT 2026 05:59:26 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/nfc-data-tmpQDARA81Z.fasl
+; compilation finished in 0:00:00.190
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/unicode.lisp" (written 14 OCT 2026 05:59:27 PM):
+
+; file: /private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/unicode.lisp
+; in: DEFUN NFC
+;     (TOPIC-MAPS.CXTM::FAIL :UNSUPPORTED-CHARACTER
+;                            "Lisp character repertoire is insufficient." T)
+; 
+; note: deleting unreachable code
+
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/unicode-tmpYEMMM7SE.fasl
+; compilation finished in 0:00:00.038
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/canonicalizer.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/src/cxtm/canonicalizer-tmp73HU0RPK.fasl
+; compilation finished in 0:00:00.142
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/cxtm.lisp" (written 14 OCT 2026 07:14:49 PM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/cxtm-tmpIO5N7K88.fasl
+; compilation finished in 0:00:00.120
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-occurrences.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-occurrences-tmpCM21U60Z.fasl
+; compilation finished in 0:00:00.141
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-prefixes.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-prefixes-tmp9DT7SEFG.fasl
+; compilation finished in 0:00:00.077
+; compiling file "/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-integers.lisp" (written 16 OCT 2026 07:14:41 AM):
+
+; wrote /tmp/topic-maps-fasls/private/tmp/ctm-slice-7-validation-qree_hbg/checkout/tests/ctm-integers-tmp8065ESJT.fasl
+; compilation finished in 0:00:00.109
+CXTM ctm/in/simple.ctm: PASS
+CXTM ctm/in/subject-identifier.ctm: PASS
+CXTM ctm/in/subject-locator.ctm: PASS
+CXTM ctm/in/item-identifier.ctm: PASS
+CXTM ctm/in/name.ctm: PASS
+CXTM ctm/in/topic-subject-identifier.ctm: PASS
+CXTM ctm/in/topic-subject-identifier-wrapped.ctm: PASS
+CXTM ctm/in/topic-subject-identifier-duplicate.ctm: PASS
+CXTM ctm/in/topic-subject-locator.ctm: PASS
+CXTM ctm/in/topic-subject-locator-wrapped.ctm: PASS
+CXTM ctm/in/topic-subject-locator-semi.ctm: PASS
+CXTM ctm/in/topic-subject-locator-duplicate.ctm: PASS
+CXTM ctm/in/topic-item-identifier.ctm: PASS
+CXTM ctm/in/topic-item-identifier-wrapped.ctm: PASS
+CXTM ctm/in/topic-item-identifier-duplicate.ctm: PASS
+CXTM ctm/in/name-duplicate.ctm: PASS
+CXTM ctm/in/association.ctm: PASS
+CXTM ctm/in/association-binary.ctm: PASS
+CXTM ctm/in/association-binary-duplicate.ctm: PASS
+CXTM ctm/in/association-type-sid.ctm: PASS
+CXTM ctm/in/association-with-comment.ctm: PASS
+CXTM ctm/in/association-with-comment2.ctm: PASS
+CXTM ctm/in/association-with-comment3.ctm: PASS
+CXTM ctm/in/association-with-comment4.ctm: PASS
+CXTM-PASS: 445 checks; 24 original byte comparisons; 25 imported PASS, 248 NOT-RUN.
+OCCURRENCE-CXTM ctm/in/occurrence-string.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-string2.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-uri-relative.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-two.ctm: PASS
+OCCURRENCES-PASS: 1101 checks; 4 new byte-equal baselines; 29 imported PASS, 244 NOT-RUN.
+PREFIX-CXTM ctm/in/occurrence-explicit-datatype.ctm: PASS (359 bytes)
+PREFIX-CXTM ctm/in/occurrence-datatype-unknown.ctm: PASS (339 bytes)
+PREFIX-CXTM ctm/in/prefix-duplicate.ctm: PASS (141 bytes)
+PREFIX-CXTM ctm/in/prefix-duplicate2.ctm: PASS (260 bytes)
+PREFIX-CXTM ctm/in/prefix-multiline.ctm: PASS (141 bytes)
+PREFIX-REJECTION ctm/invalid/prefix-collision.ctm: PREFIX-COLLISION in ctm/invalid/prefix-collision.ctm at CHARACTER 43 (line 2, column 9): Prefix "ex" is already bound to "http://www.example.org/", not "http://www.example.net/".
+PREFIX-REJECTION ctm/invalid/prefix-undefined2.ctm: UNDEFINED-PREFIX in ctm/invalid/prefix-undefined2.ctm at CHARACTER 136 (line 6, column 15): Prefix "xsd" has no binding.
+PREFIX-DATATYPES-PASS: 150 checks; 5 new byte-exact baselines, 2 specific rejections; 36 imported PASS, 237 NOT-RUN.
+INTEGER-CXTM ctm/in/occurrence-integer.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer2.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-plus-sign.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-minus-sign.ctm: PASS (352 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-leading-zeros.ctm: PASS (1741 bytes)
+INTEGER-CXTM ctm/in/occurrence-explicit-datatype2.ctm: PASS (352 bytes)
+INTEGERS-PASS: 665 checks; 6 new byte-exact baselines; 42 imported PASS, 231 NOT-RUN.
+; 
+; compilation unit finished
+;   printed 1 note
+NFC-ORACLE-PASS: 16294 independent Unicode 15.1.0 comparisons (canonical mappings, all Hangul, 1000 seeded combining sequences)
+REPORT-JSON-PASS: deterministic schema, draft qualification, case contracts and only warranted imported status changes
+BASELINE-SEMANTIC-EVIDENCE-PASS: five frozen baselines support the selected properties; no canonicalization claimed
+MERGING-BASELINE-SEMANTIC-EVIDENCE-PASS: 11 frozen baselines; no canonicalization or canonical numbering
+ASSOCIATION-BASELINE-SEMANTIC-EVIDENCE-PASS: 8 frozen baselines, Role items and roles-played; no canonicalization
+CXTM-INDEPENDENT-PASS: 39 unchanged baselines, exact UTF-8 bytes, canonical XML and reference integrity
+OCCURRENCE-INDEPENDENT-PASS: four original sources, actual parents/types, lexical values, datatype locators, no extra items
+PREFIX-INDEPENDENT-PASS: 7 original sources, 5 model observations, 2 specific rejections with independently checked positions
+INTEGER-INDEPENDENT-PASS: 6 original sources/model observations; 143 arithmetic-oracle probes, including 10000-digit integers
