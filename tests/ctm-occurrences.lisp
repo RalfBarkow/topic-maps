@@ -127,8 +127,8 @@
                    ("a t: ;." ctm-rejection :expected-occurrence-value 5)
                    ("a t \"x\"." ctm-rejection :expected-occurrence-type-separator 4)
                    ("a t:\"x\" r:\"y\"." ctm-rejection :expected-separator 8)
-                   ("a t: 42.5." ctm-unsupported :occurrence-literal-datatype 5)
-                   ("a t:.5." ctm-unsupported :occurrence-literal-datatype 4)
+                   ("a t: 2000-12-31." ctm-unsupported :occurrence-literal-datatype 5)
+                   ("a t:*." ctm-unsupported :occurrence-literal-datatype 4)
                    ("a t: 42x." ctm-rejection :invalid-occurrence-literal 5)
                    ("a t:\"x\"^^datatype." ctm-rejection :expected-datatype-iri 9)
                    ("a t:\"x\"^<urn:d>." ctm-rejection :invalid-datatype-marker 7)
@@ -261,7 +261,7 @@
     (check "occurrence-lexical-string-not-rewritten-by-nfc"
            (and (string= value (topic-maps.tmdm:occurrence-value o)) (equal state (map-state map)))))
   (let* ((map (read-text "a. t.")) (a (local-topic map "a")) (type (local-topic map "t"))
-         (bad (topic-maps.tmdm::%make-occurrence "42" "http://www.w3.org/2001/XMLSchema#decimal" type a)))
+         (bad (topic-maps.tmdm::%make-occurrence "42" "http://www.w3.org/2001/XMLSchema#date" type a)))
     ;; Private fixture verifies the canonicalizer independently of the reader.
     (setf (topic-maps.tmdm::%topic-occurrences a) (list bad))
     (let ((state (map-state map)) (condition (cxtm-condition (lambda () (cxtm map)))))

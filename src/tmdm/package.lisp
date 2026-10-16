@@ -13,5 +13,6 @@
            #:occurrence-datatype #:occurrence-item-identifiers #:canonical-occurrence
            #:add-occurrence #:string-datatype #:iri-datatype #:integer-datatype
            #:integer-lexical-p #:canonical-integer-lexical-form
+           #:decimal-datatype #:decimal-lexical-p #:canonical-decimal-lexical-form
            #:occurrence-error #:occurrence-error-code
            #:add-default-name #:default-name-type-identifier))

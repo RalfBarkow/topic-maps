@@ -11,8 +11,8 @@
   (asdf:test-system "topic-maps/ctm/tests")
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
-  ;; Integer tests run the retained Prefix, Occurrence and CXTM suites exactly once.
-  (asdf:test-system "topic-maps/ctm/integer-tests")
+  ;; Decimal tests run retained Integer, Prefix, Occurrence and CXTM suites once.
+  (asdf:test-system "topic-maps/ctm/decimal-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -24,11 +24,14 @@
                      report (concatenate 'string report ".cxtm.json")
                      :additional-checks (append (uiop:symbol-call :topic-maps.ctm.tests :occurrence-checks)
                                                 (uiop:symbol-call :topic-maps.ctm.tests :prefix-checks)
-                                                (uiop:symbol-call :topic-maps.ctm.tests :integer-checks))
-                     :scope "Slice 7: integer Occurrences; 39 unchanged positive CXTM baselines; no Decimal/Date/DateTime canonicalization")
+                                                (uiop:symbol-call :topic-maps.ctm.tests :integer-checks)
+                                                (uiop:symbol-call :topic-maps.ctm.tests :decimal-checks))
+                     :scope "Slice 8: decimal Occurrences; 46 unchanged positive CXTM baselines; no Date/DateTime canonicalization")
     (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
                      (concatenate 'string report ".occurrences.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-prefix-report
                      (concatenate 'string report ".prefixes.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-integer-report
-                     (concatenate 'string report ".integers.json"))))
+                     (concatenate 'string report ".integers.json"))
+    (uiop:symbol-call :topic-maps.ctm.tests :write-decimal-report
+                     (concatenate 'string report ".decimals.json"))))

@@ -85,9 +85,15 @@
        ;; canonically; qualified quoted strings retain their lexical value.
        (values (topic-maps.tmdm:canonical-integer-lexical-form (token-value token))
                (topic-maps.tmdm:integer-datatype)))
+      (:decimal
+       (consume parser)
+       ;; Same value-representation policy as bare integers; token spelling is
+       ;; retained by the lexer, qualified strings remain lexical model data.
+       (values (topic-maps.tmdm:canonical-decimal-lexical-form (token-value token))
+               (topic-maps.tmdm:decimal-datatype)))
       (:excluded-literal
        (problem 'ctm-unsupported :occurrence-literal-datatype (token-position token)
-                "Decimal/date/dateTime and the separate CTM '*' literal are outside this slice."))
+                "Date/dateTime and the separate CTM '*' literal are outside this slice."))
       (:string
        (consume parser)
        (if (punctuation-p parser #\^)
@@ -101,6 +107,10 @@
                         (not (topic-maps.tmdm:integer-lexical-p (token-value token))))
                (problem 'ctm-rejection :invalid-integer-value (token-position token)
                         "Quoted value is not an xsd:integer lexical form."))
+             (when (and (string= datatype (topic-maps.tmdm:decimal-datatype))
+                        (not (topic-maps.tmdm:decimal-lexical-p (token-value token))))
+               (problem 'ctm-rejection :invalid-decimal-value (token-position token)
+                        "Quoted value is not an xsd:decimal lexical form."))
              ;; TMDM 4.4 requires absolute anyURI content; quoted content is
              ;; lexical data, never an IRI reference to resolve against the document.
              (when (and (string= datatype (topic-maps.tmdm:iri-datatype))
@@ -111,7 +121,7 @@
            (values (token-value token) (topic-maps.tmdm:string-datatype))))
       ((:iri :qname) (values (literal-iri-reference parser) (topic-maps.tmdm:iri-datatype)))
       (otherwise (problem 'ctm-rejection :expected-occurrence-value (token-position token)
-                          "Expected an integer, quoted string or IRI-form Occurrence value.")))))
+                          "Expected an integer, decimal, quoted string or IRI-form Occurrence value.")))))
 
 (defun read-identity-tail (parser map topic)
   (let ((start (look parser)))

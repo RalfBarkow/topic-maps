@@ -78,12 +78,8 @@
           (t (return)))))
 
 (defun excluded-literal-p (text)
-  "Recognize unsupported numeric/date literal syntax, without constructing values."
+  "Recognize unsupported date/dateTime/* literal syntax, without constructing values."
   (labels ((digits (s) (and (plusp (length s)) (every (lambda (c) (find c "0123456789")) s)))
-           (numeric (s)
-             (let* ((s (if (and (plusp (length s)) (find (char s 0) "+-")) (subseq s 1) s))
-                    (dot (position #\. s)))
-               (if dot (and (or (zerop dot) (digits (subseq s 0 dot))) (digits (subseq s (1+ dot)))) (digits s))))
            (date (s)
              (let* ((s (if (and (plusp (length s)) (char= (char s 0) #\-)) (subseq s 1) s))
                     (dash (position #\- s)))
@@ -104,11 +100,11 @@
                              (and (= 6 (length zone)) (find (char zone 0) "+-")
                                   (digits (subseq zone 1 3)) (char= (char zone 3) #\:)
                                   (digits (subseq zone 4 6)))))))))
-    (or (numeric text) (date text) (string= text "*")
+    (or (date text) (string= text "*")
         (let ((tee (position #\T text))) (and tee (date (subseq text 0 tee)) (time-literal (subseq text (1+ tee))))))))
 
 (defun read-number-token (lexer start)
-  "One lexical path for supported integers and recognized excluded number/date forms.
+  "One lexical path for supported integers/decimals and recognized excluded date/* forms.
 A dot followed by a digit can belong to a decimal; a terminal dot stays punctuation."
   (setf (lexer-cursor lexer) start)
   (loop for c = (peek-character lexer)
@@ -119,6 +115,8 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
   (let ((value (subseq (lexer-text lexer) start (lexer-cursor lexer))))
     (cond ((topic-maps.tmdm:integer-lexical-p value)
            (make-token :kind :integer :value value :position start))
+          ((and (find #\. value) (topic-maps.tmdm:decimal-lexical-p value))
+           (make-token :kind :decimal :value value :position start))
           ((excluded-literal-p value) (make-token :kind :excluded-literal :value value :position start))
           (t (problem 'ctm-rejection :invalid-occurrence-literal start "Malformed numeric/date literal.")))))
 

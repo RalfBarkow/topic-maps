@@ -171,9 +171,10 @@
            (state (map-state map)) (c (cxtm-condition (lambda () (cxtm map)))))
       (check (concatenate 'string "excluded-normalization-model-preserves:" name)
              (and (string= dt (topic-maps.tmdm:occurrence-datatype o)) (string= "00042" (topic-maps.tmdm:occurrence-value o))))
-      (if (string= name "integer")
-          (check "integer-explicit-cxtm-now-supported"
-                 (and (null c) (search "<value>42</value>" (cxtm map)) (equal state (map-state map))))
+      (if (member name '("integer" "decimal") :test #'string=)
+          (check (concatenate 'string name "-explicit-cxtm-now-supported")
+                 (and (null c) (search (if (string= name "integer") "<value>42</value>" "<value>42.0</value>")
+                                       (cxtm map)) (equal state (map-state map))))
           (check (concatenate 'string "excluded-normalization-explicit-cxtm-unsupported:" name)
                  (and (typep c 'topic-maps.cxtm:cxtm-unsupported) (eq :unsupported-occurrence-datatype (topic-maps.cxtm:error-code c)) (equal state (map-state map)))))))
   (let* ((map (read-text "%prefix xsd <http://www.w3.org/2001/XMLSchema#> a t:\"Same\"; t:\"Same\"^^xsd:string.")))
