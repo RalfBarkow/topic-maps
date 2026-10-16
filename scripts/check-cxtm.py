@@ -8,13 +8,20 @@ root = pathlib.Path(__file__).resolve().parent.parent
 report = json.loads(pathlib.Path(sys.argv[1]).read_text())
 assert report['kind'] == 'cxtm-byte-equality' and report['failed'] == 0
 assert report['passed'] == len(report['checks']) == len(set(report['checks']))
-expected_count = {'--slice-5': 28, '--slice-6': 33, '--slice-7': 39, '--slice-8': 46, '--slice-9': 51}.get(sys.argv[2] if len(sys.argv) > 2 else '', 24)
+expected_count = {'--slice-5': 28, '--slice-6': 33, '--slice-7': 39, '--slice-8': 46, '--slice-9': 51, '--slice-10': 55}.get(sys.argv[2] if len(sys.argv) > 2 else '', 24)
 assert len(report['cases']) == expected_count
 for case in report['cases']:
     actual = case['actualCXTM'].encode('utf-8')
     expected = (root / 'vendor/cxtm/ctm/baseline' / (pathlib.Path(case['id']).name + '.cxtm')).read_bytes()
-    assert actual == expected == case['expectedCXTM'].encode('utf-8'), case['id']
-    assert case['byteCount'] == len(actual) and case['status'] == 'pass'
+    assert expected == case['expectedCXTM'].encode('utf-8')
+    discrepancy = expected_count == 55 and case['id'] == 'ctm/in/occurrence-datetime2.ctm'
+    if discrepancy:
+        assert actual != expected and case['status'] == 'fail'
+        assert b'<value>1976-09-19T12:02:00</value>' in actual
+        assert b'<value>1976-09-19T12:01:60</value>' in expected
+    else:
+        assert actual == expected and case['status'] == 'pass', case['id']
+    assert case['byteCount'] == len(actual)
     assert case['baseLocator'].endswith('/' + case['id'])
     # CXTM 3.1 adds an LF after the root. XML reparsing drops that Infoset
     # sibling; this check is separate from the unmodified byte comparison.
@@ -37,4 +44,4 @@ for case in report['cases']:
     for ref in xml.iter():
         if 'topicref' in ref.attrib:
             assert 1 <= int(ref.attrib['topicref']) <= len(topics)
-print(f'CXTM-INDEPENDENT-PASS: {expected_count} unchanged baselines, exact UTF-8 bytes, canonical XML and reference integrity')
+print(f'CXTM-INDEPENDENT-PASS: {expected_count - int(expected_count == 55)} byte-exact unchanged baselines; {int(expected_count == 55)} explicit normative discrepancy; canonical XML and reference integrity')

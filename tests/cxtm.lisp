@@ -237,6 +237,9 @@
     (topic-maps.test-foundation::emit-json-value
      (topic-maps.test-foundation::fields
       "kind" "cxtm-byte-equality" "passed" (+ (length *last-cxtm-checks*) (length additional-checks)) "failed" 0
+      "checkOutcomeInterpretation" "passed/failed count local assertions; contractCounts and case status report imported comparisons independently"
+      "contractCounts" (topic-maps.test-foundation::fields "pass" (count-if (lambda (r) (getf r :match)) *cxtm-results*)
+                                                         "fail" (count-if-not (lambda (r) (getf r :match)) *cxtm-results*))
       "checks" (topic-maps.test-foundation::json-array (append *last-cxtm-checks* additional-checks))
       "cases" (topic-maps.test-foundation::json-array
        (loop for r in *cxtm-results* collect

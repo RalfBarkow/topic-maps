@@ -129,10 +129,10 @@
     (check (concatenate 'string "integer-slice-now-allows-decimal:" value)
            (string= (topic-maps.tmdm:decimal-datatype)
                     (topic-maps.tmdm:occurrence-datatype (first (all-occurrences (read-text (format nil "a t: ~A." value))))))))
-  (dolist (value '("2000-12-31T12:00:00" "2000-12-31T12:00:00Z" "*"))
+  (dolist (value '("2000-12-31T12:00:00+01:00" "2000-12-31T12:00:00-01:00" "*"))
     (let ((condition (ctm-condition (format nil "a t: ~A." value))))
       (check (concatenate 'string "excluded-numeric-sugar:" value)
-             (and (typep condition 'ctm-unsupported) (eq :occurrence-literal-datatype (error-code condition)) (= 5 (error-position condition))))))
+             (and (typep condition 'ctm-unsupported) (eq (if (string= value "*") :occurrence-literal-datatype :datetime-timezone-canonicalization) (error-code condition)) (= 5 (error-position condition))))))
   (let* ((map (read-text "a. t.")) (owner (local-topic map "a")) (typ (local-topic map "t")) (state (map-state map)))
     (let ((condition (occurrence-condition (lambda () (topic-maps.tmdm:add-occurrence owner typ "1.0" :datatype (topic-maps.tmdm:integer-datatype))))))
       (check "invalid-integer-api-rejected-atomically" (and (eq :invalid-integer-value (topic-maps.tmdm:occurrence-error-code condition)) (equal state (map-state map)))))
@@ -146,9 +146,9 @@
          (equal '("42.0") (serialized-values (cxtm (read-text "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#decimal>.")))))
   (check "integer-slice-now-supports-date-cxtm"
          (equal '("2000-12-31") (serialized-values (cxtm (read-text "a t: 2000-12-31.")))))
-  (check "integer-slice-keeps-dateTime-cxtm-excluded"
-         (typep (cxtm-condition (lambda () (cxtm (read-text "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#dateTime>."))))
-                'topic-maps.cxtm:cxtm-unsupported)))
+  (check "integer-slice-rejects-invalid-dateTime-value"
+         (typep (ctm-condition "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#dateTime>.")
+                'ctm-rejection)))
 
 (defun integer-equality-and-merge-tests ()
   (let ((map (read-text "%prefix xsd <http://www.w3.org/2001/XMLSchema#> a t: 001; t: +1; t: 1; t:\"1\"^^xsd:integer; t:\"001\"^^xsd:integer; t:\"1\".")))

@@ -156,7 +156,7 @@
       (check (concatenate 'string "date-timezone-valid-but-explicitly-unsupported:" zone)
              (and (topic-maps.tmdm:date-lexical-p value) (typep condition 'topic-maps.cxtm:cxtm-unsupported)
                   (eq :date-timezone-canonicalization (topic-maps.cxtm:error-code condition)) (equal state (map-state map))))))
-  (check "dateTime-remains-unsupported" (unsupported-p "a t: 2000-01-01T12:00:00Z.")))
+  (check "dateTime-now-supported" (equal '("2000-01-01T12:00:00Z") (serialized-values (cxtm (read-text "a t: 2000-01-01T12:00:00Z."))))))
 
 (defun date-merge-and-order-tests ()
   (let* ((map (read-text "a. b. r. s.")) (a (local-topic map "a")) (b (local-topic map "b")) (r (local-topic map "r")) (s (local-topic map "s"))

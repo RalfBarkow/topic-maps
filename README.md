@@ -1,4 +1,4 @@
-# Common Lisp Topic Maps — Slice 9
+# Common Lisp Topic Maps — Slice 10
 
 A working ANSI Common Lisp reader for CTM identity/default-name syntax and
 unary/binary Associations, with same-map merging of Topics, Names, Associations
@@ -8,7 +8,7 @@ CXTM canonicalizer for this model. Templates and cross-document merging remain
 outside the implementation. Slice 5 adds Occurrence items and replacement merging
 without expanding Scope, Reification or Variants. Slice 6 adds document-local
 prefixes, QName resolution and explicit datatype locators on quoted Occurrence
-values. Unknown datatypes retain their lexical values; DateTime and date-timezone CXTM rules
+values. Unknown datatypes retain their lexical values; Date timezone CXTM rules
 remain explicitly unsupported. Slice 7 adds integer literals, lexical validation
 and pure xsd:integer canonical output; qualified strings retain their stored
 lexical values. Slice 8 adds decimal literals, exact character-based xsd:decimal
@@ -16,15 +16,21 @@ canonicalization and lexical validation, with the same separation of stored
 strings, TMDM equality and canonical serialization. Slice 9 adds timezone-free
 xsd:date literals, Gregorian calendar validation and pure CXTM Date output.
 Negative-year leap validation follows the documented XSD 1.0 E.1 interpretation.
+Slice 10 adds xsd:dateTime with absent/zero zones, exact fractional precision and
+midnight rollover. A noncandidate leap-second baseline disagrees with XSD D.1
+following-minute interpretation and remains FAIL. Nonzero-offset canonicalization
+is explicitly unsupported; its known inconsistent baseline remains NOT-RUN.
 
 Systems: `topic-maps` (the retained foundation), `topic-maps/tests`,
 `topic-maps/tmdm`, `topic-maps/ctm`, `topic-maps/ctm/tests` and
 `topic-maps/ctm/merging-tests` and `topic-maps/ctm/association-tests`, plus `topic-maps/cxtm` and
-`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests`.
+`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests` and `topic-maps/ctm/datetime-tests`.
 The core reader/model uses ANSI Common Lisp; the foundation/tooling uses
 ASDF/UIOP and Python's standard library. No Quicklisp packages are required.
 
-Start with [Reading Date Occurrences](docs/reading-date-occurrences.md)
+Start with [Reading DateTime Occurrences](docs/reading-datetime-occurrences.md)
+for lexical/value/canonical distinctions and the two normative discrepancies.
+[Reading Date Occurrences](docs/reading-date-occurrences.md)
 for the ten original Date cases, calendar rules, stored values and inspection.
 [Reading Decimal Occurrences](docs/reading-decimal-occurrences.md)
 for the seven Decimal cases, string representation, equality and inspection.
@@ -111,17 +117,20 @@ CXTM baselines only under `ctm/baseline`. Auxiliary files are reported separatel
 ## Current validation and historical foundation
 
 The complete pinned corpus remains unchanged: 231 valid CTM inputs, 42 invalid
-inputs, 231 CXTM baselines and 22 CTM auxiliary files. Fifty-one selected positive
-cases pass actual CXTM byte comparisons. These 51 `:CXTM-EQUAL`
+inputs, 231 CXTM baselines and 22 CTM auxiliary files. Fifty-four selected positive
+cases pass actual CXTM byte comparisons, including three added by Slice 10. These 54 `:CXTM-EQUAL`
 contracts are PASS. Eight rejection contracts also pass: the five selected Date
 cases and `prefix-undefined`, `prefix-collision`, `prefix-undefined2`.
-The remaining 214 imported contracts are NOT-RUN. Unsupported constructs and I/O errors
+One executed leap-second `:CXTM-EQUAL` contract is FAIL due to a documented normative
+baseline discrepancy; 210 imported contracts remain NOT-RUN, including the
+nonzero-offset DateTime original. A green local test run preserves that FAIL,
+rather than changing the upstream baseline. Unsupported constructs and I/O errors
 cannot count as that required rejection.
 
 The full launcher runs the retained 54 foundation checks, two Python integrity
 fixtures, 123 retained identity checks, 646 merge checks, 657 Association checks,
 imported-report validation and selected baseline
-property evidence, 445 retained CXTM checks, 1,101 Occurrence checks, 150 prefix/datatype checks, 665 integer checks, 715 Decimal checks, 1,806 Date checks and
+property evidence, 445 retained CXTM checks, 1,101 Occurrence checks, 150 prefix/datatype checks, 665 integer checks, 715 Decimal checks, 1,806 Date checks, 215 DateTime checks and
 16,294 independent Unicode NFC oracle
 comparisons. The oracle needs Python UCD 15.0 or 15.1 (tables use UCD 15.1.0).
 A report path also produces `<path>.semantics.json` with
@@ -132,10 +141,13 @@ and `<path>.prefixes.json` with all seven selected observations, plus `<path>.in
 and independently checked arithmetic probes, plus `<path>.decimals.json` with
 seven Decimal object observations and 157 independent Decimal arithmetic probes,
 plus `<path>.dates.json` with five original Date results, five original rejections,
-396 independent date/calendar probes and 15 century decisions.
+396 independent date/calendar probes and 15 century decisions. `<path>.datetimes.json` records four actual DateTime
+models, 45 independent lexical/canonical probes, two discrepancies and the
+partial unsupported read of the original nonzero-offset case.
 The merge checks include 128 graph/order variants with an independent reachability
 oracle. Reports are deterministic across the tested SBCL versions and checkout
-relocation. See [Slice 9 validation](docs/slice-9-validation.md) for current evidence.
+relocation. See [Slice 10 validation](docs/slice-10-validation.md) for current evidence.
+[Slice 9 validation](docs/slice-9-validation.md) records the accepted Date subset.
 [Slice 8 validation](docs/slice-8-validation.md) records the accepted Decimal subset.
 [Slice 7 validation](docs/slice-7-validation.md) records the accepted Integer subset.
 [Slice 6 validation](docs/slice-6-validation.md) records the preceding accepted subset.
@@ -152,6 +164,8 @@ about absent reader/model systems describe Slice 0, not the current branch.
 Slice 1 is built from `9c83db34eb1ba8091b004433f088056717dbaa7e` on
 `codex/ctm-slice-1`. Slice 2 starts from the accepted Slice 1a commit
 `fb60afd548d679d83fd8ec76bc5ff384c1e23e5f` on `codex/ctm-slice-2`.
+Slice 10 starts from `2ad41cd1a945a4ce97824464de40646bb899259e` on
+`codex/ctm-slice-10`.
 Slice 9 starts from `195d5f5444d776096b765d04c815c23c3db5f84c` on
 `codex/ctm-slice-9`.
 Slice 8 starts from `17dd58775e25ab495e3c83deb4b5a36f5e5a124b` on

@@ -94,9 +94,16 @@
       (:date
        (consume parser)
        (values (topic-maps.tmdm:canonical-date-lexical-form (token-value token)) (topic-maps.tmdm:date-datatype)))
+      (:datetime
+       (consume parser)
+       (multiple-value-bind (value reason) (topic-maps.tmdm:canonical-datetime-lexical-form (token-value token))
+         (unless value (problem 'ctm-unsupported
+                         (if (eq reason :unsupported-timezone) :datetime-timezone-canonicalization :datetime-leap-second-context)
+                         (token-position token) "DateTime value normalization requires an unsupported timezone/leap context."))
+         (values value (topic-maps.tmdm:datetime-datatype))))
       (:excluded-literal
        (problem 'ctm-unsupported :occurrence-literal-datatype (token-position token)
-                "DateTime and the separate CTM '*' literal are outside this slice."))
+                "The separate CTM '*' literal is outside this slice."))
       (:string
        (consume parser)
        (if (punctuation-p parser #\^)
@@ -118,6 +125,10 @@
                         (not (topic-maps.tmdm:date-lexical-p (token-value token))))
                (problem 'ctm-rejection :invalid-date-value (token-position token)
                         "Quoted value is not a valid XSD 1.0 date lexical form."))
+             (when (and (string= datatype (topic-maps.tmdm:datetime-datatype))
+                        (not (topic-maps.tmdm:datetime-lexical-p (token-value token))))
+               (problem 'ctm-rejection :invalid-datetime-value (token-position token)
+                        "Quoted value is not a valid XSD 1.0 dateTime."))
              ;; TMDM 4.4 requires absolute anyURI content; quoted content is
              ;; lexical data, never an IRI reference to resolve against the document.
              (when (and (string= datatype (topic-maps.tmdm:iri-datatype))
@@ -128,7 +139,7 @@
            (values (token-value token) (topic-maps.tmdm:string-datatype))))
       ((:iri :qname) (values (literal-iri-reference parser) (topic-maps.tmdm:iri-datatype)))
       (otherwise (problem 'ctm-rejection :expected-occurrence-value (token-position token)
-                          "Expected an integer, decimal, date, quoted string or IRI-form Occurrence value.")))))
+                          "Expected an integer, decimal, date, dateTime, quoted string or IRI-form Occurrence value.")))))
 
 (defun read-identity-tail (parser map topic)
   (let ((start (look parser)))
