@@ -11,8 +11,8 @@
   (asdf:test-system "topic-maps/ctm/tests")
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
-  ;; The Occurrence suite also executes the retained 445 CXTM checks.
-  (asdf:test-system "topic-maps/ctm/occurrence-tests")
+  ;; Prefix tests run the retained Occurrence and CXTM suites exactly once.
+  (asdf:test-system "topic-maps/ctm/prefix-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -22,7 +22,10 @@
                      (concatenate 'string report ".associations.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-cxtm-report
                      report (concatenate 'string report ".cxtm.json")
-                     :additional-checks (uiop:symbol-call :topic-maps.ctm.tests :occurrence-checks)
-                     :scope "Slice 5: string/IRI Occurrences; 28 unchanged positive CXTM baselines; no excluded features")
+                     :additional-checks (append (uiop:symbol-call :topic-maps.ctm.tests :occurrence-checks)
+                                                (uiop:symbol-call :topic-maps.ctm.tests :prefix-checks))
+                     :scope "Slice 6: prefixes and explicit string datatypes; 33 unchanged positive CXTM baselines; no excluded canonicalization")
     (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
-                     (concatenate 'string report ".occurrences.json"))))
+                     (concatenate 'string report ".occurrences.json"))
+    (uiop:symbol-call :topic-maps.ctm.tests :write-prefix-report
+                     (concatenate 'string report ".prefixes.json"))))

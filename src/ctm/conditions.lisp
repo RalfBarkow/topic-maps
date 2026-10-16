@@ -16,6 +16,7 @@
                      (error-message condition)))))
 (define-condition ctm-rejection (ctm-error) ())
 (define-condition undefined-prefix (ctm-rejection) ())
+(define-condition prefix-collision (ctm-rejection) ())
 (define-condition ctm-unsupported (ctm-error) ())
 
 (defvar *source-name* nil)

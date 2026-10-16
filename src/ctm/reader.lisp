@@ -1,6 +1,7 @@
 (in-package #:topic-maps.ctm)
 
-(defstruct (parser (:constructor make-parser (lexer document-iri))) lexer document-iri lookahead)
+(defstruct (parser (:constructor make-parser (lexer document-iri)))
+  lexer document-iri lookahead (prefixes (make-hash-table :test #'equal)))
 (defun look (parser)
   (or (parser-lookahead parser)
       (setf (parser-lookahead parser) (next-token (parser-lexer parser)))))
@@ -9,6 +10,33 @@
 (defun punctuation-p (parser character)
   (and (eq :punctuation (token-kind (look parser)))
        (eql character (token-value (look parser)))))
+
+(defun resolve-qname (parser token)
+  "CTM 3.3.4: concatenate the resolved binding and local part exactly once."
+  (let* ((text (token-value token)) (colon (position #\: text))
+         (prefix (subseq text 0 colon)) (bound (gethash prefix (parser-prefixes parser))))
+    (unless bound
+      (problem 'undefined-prefix :undefined-prefix (token-position token)
+               (format nil "Prefix ~S has no binding." prefix)))
+    ;; Do not re-resolve or percent-decode an already resolved binding.
+    (validate-iri-characters (concatenate 'string bound (subseq text (1+ colon)))
+                             (token-position token))))
+
+(defun read-prefix-directive (parser)
+  "CTM 3.16.1: document-ordered, per-deserialization bindings; reference is an IRI."
+  (consume parser) ; %prefix
+  (let ((name (consume parser)) (reference (consume parser)))
+    (unless (eq :identifier (token-kind name))
+      (problem 'ctm-rejection :expected-prefix-name (token-position name) "Expected a prefix identifier."))
+    (unless (eq :iri (token-kind reference))
+      (problem 'ctm-rejection :expected-prefix-iri (token-position reference)
+               "A prefix binding requires an IRI, not a QName or Topic identifier."))
+    (let* ((iri (resolve-iri (token-value reference) (parser-document-iri parser) (token-position reference)))
+           (old (gethash (token-value name) (parser-prefixes parser))))
+      (when (and old (not (string= old iri)))
+        (problem 'prefix-collision :prefix-collision (token-position name)
+                 (format nil "Prefix ~S is already bound to ~S, not ~S." (token-value name) old iri)))
+      (setf (gethash (token-value name) (parser-prefixes parser)) iri))))
 
 (defun identity-value (parser &optional explicit-kind)
   (let ((token (consume parser)))
@@ -23,12 +51,7 @@
       (:iri
        (values (or explicit-kind :subject-identifier)
           (resolve-iri (token-value token) (parser-document-iri parser) (token-position token))))
-      (:qname
-       ;; No prefix declarations are supported. This is a specific
-       ;; semantic rejection, not an I/O failure or an unsupported-parser stub.
-       (problem 'undefined-prefix :undefined-prefix (token-position token)
-                (format nil "Prefix ~S has no binding." (subseq (token-value token) 0
-                                                               (position #\: (token-value token))))))
+      (:qname (values (or explicit-kind :subject-identifier) (resolve-qname parser token)))
       (:punctuation
        (case (token-value token)
          (#\= (if explicit-kind
@@ -49,8 +72,7 @@
   (let ((token (consume parser)))
     (case (token-kind token)
       (:iri (resolve-iri (token-value token) (parser-document-iri parser) (token-position token)))
-      (:qname (problem 'undefined-prefix :undefined-prefix (token-position token)
-                       "The IRI-reference prefix has no binding."))
+      (:qname (resolve-qname parser token))
       (otherwise (problem 'ctm-rejection :expected-datatype-iri (token-position token)
                           "A datatype qualifier requires an IRI reference, not a Topic identifier.")))))
 
@@ -106,16 +128,21 @@
     (case (token-kind token)
       (:string
        (consume parser)
-       (when (punctuation-p parser #\^)
+       (if (punctuation-p parser #\^)
          (let ((caret (consume parser)))
            (unless (and (punctuation-p parser #\^)
                         (= (token-position (look parser)) (1+ (token-position caret))))
              (problem 'ctm-rejection :invalid-datatype-marker (token-position caret) "Expected contiguous '^^'."))
            (consume parser)
-           (literal-iri-reference parser)
-           (problem 'ctm-unsupported :typed-literal (token-position caret)
-                    "Explicit datatype-qualified literals are outside this subset.")))
-       (values (token-value token) (topic-maps.tmdm:string-datatype)))
+           (let ((datatype (literal-iri-reference parser)))
+             ;; TMDM 4.4 requires absolute anyURI content; quoted content is
+             ;; lexical data, never an IRI reference to resolve against the document.
+             (when (and (string= datatype (topic-maps.tmdm:iri-datatype))
+                        (not (topic-maps.tmdm::absolute-locator-p (token-value token))))
+               (problem 'ctm-rejection :relative-uri-value (token-position token)
+                        "A quoted anyURI value must already be absolute (TMDM 4.4)."))
+             (values (token-value token) datatype)))
+           (values (token-value token) (topic-maps.tmdm:string-datatype))))
       ((:iri :qname) (values (literal-iri-reference parser) (topic-maps.tmdm:iri-datatype)))
       (otherwise (problem 'ctm-rejection :expected-occurrence-value (token-position token)
                           "Expected a quoted string or IRI-form Occurrence value.")))))
@@ -216,7 +243,7 @@
     (topic-maps.tmdm:make-association map type (nreverse roles))))
 
 (defun deserialize-string (text &key document-iri source-name)
-  "Read the documented identity/name/string-IRI Occurrence/unary-binary Association CTM subset.
+  "Read the documented CTM subset, with per-document prefixes and qualified strings.
 Source positions are zero-based character offsets; lines/columns are one-based."
   (check-type text string)
   (let ((*source-name* source-name) (*source-text* text))
@@ -224,10 +251,12 @@ Source positions are zero-based character offsets; lines/columns are one-based."
     (let ((parser (make-parser (make-lexer text) document-iri))
           (map (topic-maps.tmdm:make-topic-map)))
       (loop until (eq :eof (token-kind (look parser))) do
-        (let ((topic (identity-reference parser map)))
-          (if (punctuation-p parser #\()
-              (read-association parser map topic)
-              (read-topic parser map topic))))
+        (if (eq :directive (token-kind (look parser)))
+            (read-prefix-directive parser)
+            (let ((topic (identity-reference parser map)))
+              (if (punctuation-p parser #\()
+                  (read-association parser map topic)
+                  (read-topic parser map topic)))))
       map)))
 
 (defun deserialize-file (pathname &key document-iri source-name)

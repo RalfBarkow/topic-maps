@@ -1,0 +1,108 @@
+CORPUS-INTEGRITY-PASS: {"auxiliary": 22, "baselines": 231, "invalid": 42, "missingBaselines": [], "unmatchedBaselines": [], "valid": 231}
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.028s
+
+OK
+FOUNDATION-PASS: 54 infrastructure checks; 231 valid, 42 invalid, 231 baselines, 22 auxiliaries; 273 CTM cases NOT-RUN, zero CTM passes.
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/lexer.lisp" (written 16 OCT 2026 06:52:12 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/lexer-tmpGHU3ALSV.fasl
+; compilation finished in 0:00:00.139
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/reader.lisp" (written 16 OCT 2026 06:49:53 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/reader-tmpAAURSO1.fasl
+; compilation finished in 0:00:00.166
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-package.lisp" (written 14 OCT 2026 06:12:17 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-package-tmp5GEXGEG5.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-identity.lisp" (written 16 OCT 2026 06:45:24 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-identity-tmpAR3FSGEY.fasl
+; compilation finished in 0:00:00.081
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-report.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-report-tmpJAIDFZTC.fasl
+; compilation finished in 0:00:00.017
+CTM-IDENTITY-SEMANTICS-PASS: 123 checks, 5 imported semantic cases, required prefix rejection; no CXTM equality passes.
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-merging.lisp" (written 14 OCT 2026 07:41:46 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-merging-tmp8V3J6PE9.fasl
+; compilation finished in 0:00:00.093
+; compiling file "/Users/rgb/workspace/topic-maps/tests/merge-graphs.lisp" (written 14 OCT 2026 07:41:46 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/merge-graphs-tmp9V47YWQF.fasl
+; compilation finished in 0:00:00.036
+CTM-MERGING-SEMANTICS-PASS: 646 checks, 11 pinned semantic cases; no CXTM equality passes.
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-associations.lisp" (written 14 OCT 2026 08:50:56 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-associations-tmp9BN22RMA.fasl
+; compilation finished in 0:00:00.095
+; compiling file "/Users/rgb/workspace/topic-maps/tests/association-graphs.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/association-graphs-tmp1CXFJSK9.fasl
+; compilation finished in 0:00:00.021
+; compiling file "/Users/rgb/workspace/topic-maps/tests/association-report.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/association-report-tmpX4BRKI0R.fasl
+; compilation finished in 0:00:00.043
+CTM-ASSOCIATIONS-SEMANTICS-PASS: 657 checks, 8 pinned cases; no CXTM equality passes.
+; compiling file "/Users/rgb/workspace/topic-maps/tests/cxtm.lisp" (written 14 OCT 2026 07:14:49 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/cxtm-tmpQ371UGST.fasl
+; compilation finished in 0:00:00.184
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-occurrences.lisp" (written 16 OCT 2026 06:45:24 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-occurrences-tmp2OWI3Q7U.fasl
+; compilation finished in 0:00:00.504
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-prefixes.lisp" (written 16 OCT 2026 06:52:12 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-prefixes-tmp9KKTJMYV.fasl
+; compilation finished in 0:00:00.088
+CXTM ctm/in/simple.ctm: PASS
+CXTM ctm/in/subject-identifier.ctm: PASS
+CXTM ctm/in/subject-locator.ctm: PASS
+CXTM ctm/in/item-identifier.ctm: PASS
+CXTM ctm/in/name.ctm: PASS
+CXTM ctm/in/topic-subject-identifier.ctm: PASS
+CXTM ctm/in/topic-subject-identifier-wrapped.ctm: PASS
+CXTM ctm/in/topic-subject-identifier-duplicate.ctm: PASS
+CXTM ctm/in/topic-subject-locator.ctm: PASS
+CXTM ctm/in/topic-subject-locator-wrapped.ctm: PASS
+CXTM ctm/in/topic-subject-locator-semi.ctm: PASS
+CXTM ctm/in/topic-subject-locator-duplicate.ctm: PASS
+CXTM ctm/in/topic-item-identifier.ctm: PASS
+CXTM ctm/in/topic-item-identifier-wrapped.ctm: PASS
+CXTM ctm/in/topic-item-identifier-duplicate.ctm: PASS
+CXTM ctm/in/name-duplicate.ctm: PASS
+CXTM ctm/in/association.ctm: PASS
+CXTM ctm/in/association-binary.ctm: PASS
+CXTM ctm/in/association-binary-duplicate.ctm: PASS
+CXTM ctm/in/association-type-sid.ctm: PASS
+CXTM ctm/in/association-with-comment.ctm: PASS
+CXTM ctm/in/association-with-comment2.ctm: PASS
+CXTM ctm/in/association-with-comment3.ctm: PASS
+CXTM ctm/in/association-with-comment4.ctm: PASS
+CXTM-PASS: 445 checks; 24 original byte comparisons; 25 imported PASS, 248 NOT-RUN.
+OCCURRENCE-CXTM ctm/in/occurrence-string.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-string2.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-uri-relative.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-two.ctm: PASS
+OCCURRENCES-PASS: 1101 checks; 4 new byte-equal baselines; 29 imported PASS, 244 NOT-RUN.
+PREFIX-CXTM ctm/in/occurrence-explicit-datatype.ctm: PASS (359 bytes)
+PREFIX-CXTM ctm/in/occurrence-datatype-unknown.ctm: PASS (339 bytes)
+PREFIX-CXTM ctm/in/prefix-duplicate.ctm: PASS (141 bytes)
+PREFIX-CXTM ctm/in/prefix-duplicate2.ctm: PASS (260 bytes)
+PREFIX-CXTM ctm/in/prefix-multiline.ctm: PASS (141 bytes)
+PREFIX-REJECTION ctm/invalid/prefix-collision.ctm: PREFIX-COLLISION in ctm/invalid/prefix-collision.ctm at CHARACTER 43 (line 2, column 9): Prefix "ex" is already bound to "http://www.example.org/", not "http://www.example.net/".
+PREFIX-REJECTION ctm/invalid/prefix-undefined2.ctm: UNDEFINED-PREFIX in ctm/invalid/prefix-undefined2.ctm at CHARACTER 136 (line 6, column 15): Prefix "xsd" has no binding.
+PREFIX-DATATYPES-PASS: 150 checks; 5 new byte-exact baselines, 2 specific rejections; 36 imported PASS, 237 NOT-RUN.
+NFC-ORACLE-PASS: 16294 independent Unicode 15.1.0 comparisons (canonical mappings, all Hangul, 1000 seeded combining sequences)
+REPORT-JSON-PASS: deterministic schema, draft qualification, case contracts and only warranted imported status changes
+BASELINE-SEMANTIC-EVIDENCE-PASS: five frozen baselines support the selected properties; no canonicalization claimed
+MERGING-BASELINE-SEMANTIC-EVIDENCE-PASS: 11 frozen baselines; no canonicalization or canonical numbering
+ASSOCIATION-BASELINE-SEMANTIC-EVIDENCE-PASS: 8 frozen baselines, Role items and roles-played; no canonicalization
+CXTM-INDEPENDENT-PASS: 33 unchanged baselines, exact UTF-8 bytes, canonical XML and reference integrity
+OCCURRENCE-INDEPENDENT-PASS: four original sources, actual parents/types, lexical values, datatype locators, no extra items
+PREFIX-INDEPENDENT-PASS: 7 original sources, 5 model observations, 2 specific rejections with independently checked positions

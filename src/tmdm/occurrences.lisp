@@ -54,11 +54,13 @@
   map)
 (defun add-occurrence (topic type value &key (datatype (string-datatype)) item-identifiers)
   "Create an unscoped Occurrence; TYPE must be a same-map Topic. VALUE and DATATYPE
-are strings; anyURI VALUE must already be absolute (TMDM 4.3), never resolved here.
+are strings; DATATYPE is any absolute locator (TMDM 4.4). Its value space is not
+interpreted. anyURI VALUE must already be absolute, never resolved here.
 Validate before mutation, return current representative after duplicate replacement."
   (check-type value string) (check-type datatype string)
-  (unless (member datatype (list (string-datatype) (iri-datatype)) :test #'string=)
-    (occurrence-problem :unsupported-datatype "Only xsd:string and xsd:anyURI are supported."))
+  ;; TMDM 4.4/5.6: datatype is a locator, never a Topic or a whitelist.
+  (unless (absolute-locator-p datatype)
+    (occurrence-problem :invalid-datatype "Datatype must be a resolved absolute locator."))
   (when (and (string= datatype (iri-datatype)) (not (absolute-locator-p value)))
     (occurrence-problem :relative-uri-value "TMDM IRI-valued Occurrences require an absolute locator."))
   (let* ((topic (live-topic topic)) (type (live-topic type)) (map (%topic-parent topic)))

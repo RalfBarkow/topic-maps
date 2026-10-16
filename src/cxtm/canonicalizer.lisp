@@ -118,8 +118,16 @@
           (unless (and (eq item (canonical-occurrence item)) (eq (occurrence-parent item) topic))
             (fail :invalid-parent "Occurrence must be current and owned by its containing Topic."))
           (reference (occurrence-type item))
-          (unless (member (occurrence-datatype item) (list (string-datatype) (iri-datatype)) :test #'string=)
-            (fail :unsupported-occurrence-datatype "Only string and anyURI values are supported." t))
+          (unless (topic-maps.tmdm::absolute-locator-p (occurrence-datatype item))
+            (fail :invalid-occurrence-datatype "Datatype must be an absolute locator."))
+          ;; CXTM 3.16: exactly these four datatypes need additional canonical
+          ;; lexical rules. Unknown datatypes use Other, without interpretation.
+          (when (member (occurrence-datatype item)
+                        '("http://www.w3.org/2001/XMLSchema#decimal"
+                          "http://www.w3.org/2001/XMLSchema#integer"
+                          "http://www.w3.org/2001/XMLSchema#date"
+                          "http://www.w3.org/2001/XMLSchema#dateTime") :test #'string=)
+            (fail :unsupported-occurrence-datatype "CXTM 3.16 numeric/date canonicalization is not implemented." t))
           (when (and (string= (occurrence-datatype item) (iri-datatype))
                      (not (topic-maps.tmdm::absolute-locator-p (occurrence-value item))))
             (fail :invalid-occurrence-value "IRI-valued Occurrences must store an absolute locator."))

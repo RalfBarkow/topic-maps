@@ -22,13 +22,13 @@
 
 (asdf:defsystem "topic-maps/tmdm"
   :description "Topics, Names, Occurrences, Associations and Roles with same-map merging"
-  :version "0.5.0" :license "MIT" :serial t
+  :version "0.6.0" :license "MIT" :serial t
   :components ((:file "src/tmdm/package") (:file "src/tmdm/items")
                (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/associations")))
 
 (asdf:defsystem "topic-maps/ctm"
-  :description "CTM identity, names, string/IRI occurrences and unary/binary associations"
-  :version "0.5.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :description "CTM prefixes, identity, names, qualified string/IRI occurrences and associations"
+  :version "0.6.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/ctm/package") (:file "src/ctm/conditions")
                (:file "src/ctm/unicode") (:file "src/ctm/iri")
                (:file "src/ctm/lexer") (:file "src/ctm/reader")))
@@ -61,7 +61,7 @@
 
 (asdf:defsystem "topic-maps/cxtm"
   :description "Pure CXTM for the supported TMDM subset; ISO/IEC 13250-4:2009"
-  :version "0.5.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :version "0.6.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/cxtm/package") (:file "src/cxtm/nfc-data")
                (:file "src/cxtm/unicode") (:file "src/cxtm/canonicalizer")))
 
@@ -81,3 +81,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.ctm.tests :run-occurrence-tests)))
+
+(asdf:defsystem "topic-maps/ctm/prefix-tests"
+  :description "Prefix bindings, explicit string datatypes and seven original contracts"
+  :depends-on ("topic-maps/ctm/occurrence-tests") :serial t
+  :components ((:file "tests/ctm-prefixes"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.ctm.tests :run-prefix-tests)))

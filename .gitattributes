@@ -1,2 +1,4 @@
 # Preserve raw tool output, including SBCL's semicolon-space diagnostic lines.
 reports/**/*.log -whitespace
+# This reading document embeds prefix-multiline.ctm verbatim, including its spaces.
+docs/reading-prefixes-and-datatypes.md -whitespace

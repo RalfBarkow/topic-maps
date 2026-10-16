@@ -1,4 +1,4 @@
-# Common Lisp Topic Maps — Slice 5
+# Common Lisp Topic Maps — Slice 6
 
 A working ANSI Common Lisp reader for CTM identity/default-name syntax and
 unary/binary Associations, with same-map merging of Topics, Names, Associations
@@ -6,16 +6,21 @@ and Roles, plus string/IRI-valued Occurrences, in a bounded TMDM model. HyperDoc
 and is neither the codebase nor a dependency. Slice 4 adds a pure, independent
 CXTM canonicalizer for this model. Templates and cross-document merging remain
 outside the implementation. Slice 5 adds Occurrence items and replacement merging
-without expanding Scope, Reification, Variants or arbitrary datatypes.
+without expanding Scope, Reification or Variants. Slice 6 adds document-local
+prefixes, QName resolution and explicit datatype locators on quoted Occurrence
+values. Unknown datatypes retain their lexical values; numeric/date CXTM rules
+remain explicitly unsupported.
 
 Systems: `topic-maps` (the retained foundation), `topic-maps/tests`,
 `topic-maps/tmdm`, `topic-maps/ctm`, `topic-maps/ctm/tests` and
 `topic-maps/ctm/merging-tests` and `topic-maps/ctm/association-tests`, plus `topic-maps/cxtm` and
-`topic-maps/cxtm/tests` and `topic-maps/ctm/occurrence-tests`.
+`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests`.
 The core reader/model uses ANSI Common Lisp; the foundation/tooling uses
 ASDF/UIOP and Python's standard library. No Quicklisp packages are required.
 
-Start with [Reading the First Four CTM Occurrences](docs/reading-first-occurrences.md)
+Start with [Reading Prefixes and Explicit Datatypes](docs/reading-prefixes-and-datatypes.md)
+for the seven original cases, current API, object properties and diagnostics.
+[Reading the First Four CTM Occurrences](docs/reading-first-occurrences.md)
 for actual parent/type references, literal values, datatypes and executable inspection.
 [Reading Canonical Topic Maps](docs/reading-canonical-topic-maps.md)
 for the CXTM API, normative clauses, base-locator policy and actual byte comparisons.
@@ -52,7 +57,7 @@ In a new Common Lisp process, with this checkout selected:
 (asdf:test-system "topic-maps/ctm/tests")
 (asdf:test-system "topic-maps/ctm/merging-tests")
 (asdf:test-system "topic-maps/ctm/association-tests")
-(asdf:test-system "topic-maps/ctm/occurrence-tests") ; includes retained CXTM suite
+(asdf:test-system "topic-maps/ctm/prefix-tests") ; includes retained Occurrence/CXTM suites
 (topic-maps.test-foundation:write-validation-report
  *corpus* #p"/tmp/topic-maps-inventory.json")
 ```
@@ -94,25 +99,28 @@ CXTM baselines only under `ctm/baseline`. Auxiliary files are reported separatel
 ## Current validation and historical foundation
 
 The complete pinned corpus remains unchanged: 231 valid CTM inputs, 42 invalid
-inputs, 231 CXTM baselines and 22 CTM auxiliary files. Twenty-eight selected positive
-cases pass actual CXTM byte comparisons. These 28 `:CXTM-EQUAL`
-contracts are PASS, alongside `ctm/invalid/prefix-undefined.ctm` under its specific
-CTM rejection contract. The remaining 244 imported contracts are NOT-RUN. Unsupported constructs and I/O errors
+inputs, 231 CXTM baselines and 22 CTM auxiliary files. Thirty-three selected positive
+cases pass actual CXTM byte comparisons. These 33 `:CXTM-EQUAL`
+contracts are PASS, alongside the three specific prefix rejection contracts
+(`prefix-undefined`, `prefix-collision`, `prefix-undefined2`).
+The remaining 237 imported contracts are NOT-RUN. Unsupported constructs and I/O errors
 cannot count as that required rejection.
 
 The full launcher runs the retained 54 foundation checks, two Python integrity
 fixtures, 123 retained identity checks, 646 merge checks, 657 Association checks,
 imported-report validation and selected baseline
-property evidence, 445 retained CXTM checks, 1,101 Occurrence checks and
+property evidence, 445 retained CXTM checks, 1,101 Occurrence checks, 150 prefix/datatype checks and
 16,294 independent Unicode NFC oracle
 comparisons. The oracle needs Python UCD 15.0 or 15.1 (tables use UCD 15.1.0).
 A report path also produces `<path>.semantics.json` with
 separate model observations, plus `<path>.merging.json`, `<path>.associations.json`
 and `<path>.cxtm.json` (complete actual/expected XML and byte counts),
-plus `<path>.occurrences.json` with separate actual Occurrence objects/properties.
+plus `<path>.occurrences.json` with separate actual Occurrence objects/properties
+and `<path>.prefixes.json` with all seven selected observations.
 The merge checks include 128 graph/order variants with an independent reachability
 oracle. Reports are deterministic across the tested SBCL versions and checkout
-relocation. See [Slice 5 validation](docs/slice-5-validation.md) for current evidence.
+relocation. See [Slice 6 validation](docs/slice-6-validation.md) for current evidence.
+[Slice 5 validation](docs/slice-5-validation.md) records the preceding accepted subset.
 [Slice 4 validation](docs/slice-4-validation.md) records the accepted baseline.
 [Slice 3 validation](docs/slice-3-validation.md),
 [imported contracts](reports/slice-1/validation.json) and
@@ -125,6 +133,8 @@ about absent reader/model systems describe Slice 0, not the current branch.
 Slice 1 is built from `9c83db34eb1ba8091b004433f088056717dbaa7e` on
 `codex/ctm-slice-1`. Slice 2 starts from the accepted Slice 1a commit
 `fb60afd548d679d83fd8ec76bc5ff384c1e23e5f` on `codex/ctm-slice-2`.
+Slice 6 starts from `437ad53ea7539d36db3fa871d0931650b7a6a03e` on
+`codex/ctm-slice-6`.
 Slice 5 starts from `8036a2b1ce009218f33d300edcc5f715ec1d1124` on
 `codex/ctm-slice-5`.
 Slice 4 starts from `35648c4dcc71e8dc6448b64abcacb438e53d64a2` on

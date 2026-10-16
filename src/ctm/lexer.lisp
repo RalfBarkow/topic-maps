@@ -117,11 +117,26 @@
             ;; Otherwise ':' remains a separate token, including name types
             ;; followed by a string with or without intervening layout.
             (take-character lexer)
-            (scan-name lexer)
+            (if (name-start-p (peek-character lexer))
+                (scan-name lexer)
+                ;; CTM 3.3.4 production [11]: numeric-leading local parts
+                ;; contain name-part characters, which do not include dots.
+                (loop while (name-part-p (peek-character lexer)) do (take-character lexer)))
             (make-token :kind :qname :value (subseq text start (lexer-cursor lexer)) :position start))
            (t (make-token :kind :identifier :value head :position start)))))
       ((find c ".;-=^:(),") (make-token :kind :punctuation :value c :position start))
-      ((find c "%?[$@~")
+      ((char= c #\%)
+       ;; Production [71] has a literal terminal followed by an identifier;
+       ;; unlike Role separators it does not require intervening whitespace.
+       (if (starts-with "%prefix" (subseq text start))
+           (progn (setf (lexer-cursor lexer) (+ start 7))
+                  (make-token :kind :directive :value "prefix" :position start))
+           (progn
+             (scan-name lexer)
+             (problem 'ctm-unsupported :unsupported-directive start
+                      (format nil "Directive %~A is outside the implemented subset."
+                              (subseq text (1+ start) (lexer-cursor lexer)))))))
+      ((find c "?[$@~")
        (problem 'ctm-unsupported :unsupported-construct start
                 (format nil "Construct starting with ~S is outside the implemented subset." c)))
       (t (problem 'ctm-rejection :unexpected-character start (format nil "Unexpected character ~S." c))))))

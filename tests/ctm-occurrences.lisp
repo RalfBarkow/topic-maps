@@ -130,7 +130,6 @@
                    ("a t: 42." ctm-unsupported :occurrence-literal-datatype 5)
                    ("a t:.5." ctm-unsupported :occurrence-literal-datatype 4)
                    ("a t: 42x." ctm-rejection :invalid-occurrence-literal 5)
-                   ("a t:\"x\"^^<http://www.w3.org/2001/XMLSchema#string>." ctm-unsupported :typed-literal 7)
                    ("a t:\"x\"^^datatype." ctm-rejection :expected-datatype-iri 9)
                    ("a t:\"x\"^<urn:d>." ctm-rejection :invalid-datatype-marker 7)
                    ("a ex:t: \"x\"." undefined-prefix :undefined-prefix 2)
@@ -142,6 +141,10 @@
                (and (typep condition class) (eq code (error-code condition))
                     (= position (error-position condition)) (= 1 (error-line condition))
                     (= (1+ position) (error-column condition)))))))
+  (check "explicit-string-datatype-now-supported"
+         (string= (topic-maps.tmdm:string-datatype)
+                  (topic-maps.tmdm:occurrence-datatype
+                    (first (all-occurrences (read-text "a t:\"x\"^^<http://www.w3.org/2001/XMLSchema#string>."))))))
   (dolist (text '("a t:\"x\" @theme." "a t:\"x\" ~reifier." "a t: 2000-12-31." "a t: 2000-12-31T12:00:00Z." "a t:* ."))
     (check (concatenate 'string "excluded-occurrence-feature:" text) (typep (ctm-condition text) 'ctm-unsupported))))
 
@@ -164,7 +167,7 @@
                   (not (member "corrupted" (topic-maps.tmdm:occurrence-item-identifiers first) :test #'string=)))))
     (let ((state (map-state map)))
       (loop for fixture in (list (list :foreign-type (lambda () (topic-maps.tmdm:add-occurrence a (first-topic (read-text "other.")) "x")))
-                            (list :unsupported-datatype (lambda () (topic-maps.tmdm:add-occurrence a type "42" :datatype "http://www.w3.org/2001/XMLSchema#integer")))
+                            (list :invalid-datatype (lambda () (topic-maps.tmdm:add-occurrence a type "42" :datatype "relative-datatype")))
                             (list :relative-uri-value (lambda () (topic-maps.tmdm:add-occurrence a type "file.html" :datatype (topic-maps.tmdm:iri-datatype))))
                             (list :duplicate-item-identifier (lambda () (topic-maps.tmdm:add-occurrence a type "Different" :item-identifiers '("urn:o:1"))))
                             (list :duplicate-item-identifier (lambda () (topic-maps.tmdm:intern-topic map :item-identifier "urn:o:1")))
@@ -259,7 +262,7 @@
            (and (string= value (topic-maps.tmdm:occurrence-value o)) (equal state (map-state map)))))
   (let* ((map (read-text "a. t.")) (a (local-topic map "a")) (type (local-topic map "t"))
          (bad (topic-maps.tmdm::%make-occurrence "42" "http://www.w3.org/2001/XMLSchema#integer" type a)))
-    ;; Private malformed/unsupported fixtures cannot be built by the public API.
+    ;; Private fixture verifies the canonicalizer independently of the reader.
     (setf (topic-maps.tmdm::%topic-occurrences a) (list bad))
     (let ((state (map-state map)) (condition (cxtm-condition (lambda () (cxtm map)))))
       (check "unsupported-occurrence-datatype-not-silently-serialized"

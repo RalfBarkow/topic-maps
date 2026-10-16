@@ -1,5 +1,10 @@
 # Reading the First Four CTM Occurrences
 
+Historical Slice 5 subset. Slice 6 supersedes the exclusions of prefixes and
+explicit quoted-string datatype qualifiers below; see
+[Reading Prefixes and Explicit Datatypes](reading-prefixes-and-datatypes.md).
+
+
 Slice 5 starts from the clean, verified Slice 4 commit
 `8036a2b1ce009218f33d300edcc5f715ec1d1124`, on `codex/ctm-slice-5`.
 The upstream corpus remains pinned to
