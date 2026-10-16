@@ -127,7 +127,7 @@
                    ("a t: ;." ctm-rejection :expected-occurrence-value 5)
                    ("a t \"x\"." ctm-rejection :expected-occurrence-type-separator 4)
                    ("a t:\"x\" r:\"y\"." ctm-rejection :expected-separator 8)
-                   ("a t: 2000-12-31." ctm-unsupported :occurrence-literal-datatype 5)
+                   ("a t: 2000-12-31T12:00:00." ctm-unsupported :occurrence-literal-datatype 5)
                    ("a t:*." ctm-unsupported :occurrence-literal-datatype 4)
                    ("a t: 42x." ctm-rejection :invalid-occurrence-literal 5)
                    ("a t:\"x\"^^datatype." ctm-rejection :expected-datatype-iri 9)
@@ -145,7 +145,7 @@
          (string= (topic-maps.tmdm:string-datatype)
                   (topic-maps.tmdm:occurrence-datatype
                     (first (all-occurrences (read-text "a t:\"x\"^^<http://www.w3.org/2001/XMLSchema#string>."))))))
-  (dolist (text '("a t:\"x\" @theme." "a t:\"x\" ~reifier." "a t: 2000-12-31." "a t: 2000-12-31T12:00:00Z." "a t:* ."))
+  (dolist (text '("a t:\"x\" @theme." "a t:\"x\" ~reifier." "a t: 2000-12-31T12:00:00." "a t: 2000-12-31T12:00:00Z." "a t:* ."))
     (check (concatenate 'string "excluded-occurrence-feature:" text) (typep (ctm-condition text) 'ctm-unsupported))))
 
 (defun occurrence-api-tests ()
@@ -261,7 +261,7 @@
     (check "occurrence-lexical-string-not-rewritten-by-nfc"
            (and (string= value (topic-maps.tmdm:occurrence-value o)) (equal state (map-state map)))))
   (let* ((map (read-text "a. t.")) (a (local-topic map "a")) (type (local-topic map "t"))
-         (bad (topic-maps.tmdm::%make-occurrence "42" "http://www.w3.org/2001/XMLSchema#date" type a)))
+         (bad (topic-maps.tmdm::%make-occurrence "42" "http://www.w3.org/2001/XMLSchema#dateTime" type a)))
     ;; Private fixture verifies the canonicalizer independently of the reader.
     (setf (topic-maps.tmdm::%topic-occurrences a) (list bad))
     (let ((state (map-state map)) (condition (cxtm-condition (lambda () (cxtm map)))))

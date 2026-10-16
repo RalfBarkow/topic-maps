@@ -129,7 +129,7 @@
     (check (concatenate 'string "integer-slice-now-allows-decimal:" value)
            (string= (topic-maps.tmdm:decimal-datatype)
                     (topic-maps.tmdm:occurrence-datatype (first (all-occurrences (read-text (format nil "a t: ~A." value))))))))
-  (dolist (value '("2000-12-31" "2000-12-31T12:00:00Z" "*"))
+  (dolist (value '("2000-12-31T12:00:00" "2000-12-31T12:00:00Z" "*"))
     (let ((condition (ctm-condition (format nil "a t: ~A." value))))
       (check (concatenate 'string "excluded-numeric-sugar:" value)
              (and (typep condition 'ctm-unsupported) (eq :occurrence-literal-datatype (error-code condition)) (= 5 (error-position condition))))))
@@ -144,10 +144,11 @@
                   (eq :invalid-integer-value (topic-maps.cxtm:error-code condition)) (equal state (map-state map))))))
   (check "integer-slice-now-supports-decimal-cxtm"
          (equal '("42.0") (serialized-values (cxtm (read-text "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#decimal>.")))))
-  (dolist (name '("date" "dateTime"))
-    (check (concatenate 'string "integer-slice-keeps-other-cxtm-exclusions:" name)
-           (typep (cxtm-condition (lambda () (cxtm (read-text (format nil "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#~A>." name)))))
-                  'topic-maps.cxtm:cxtm-unsupported))))
+  (check "integer-slice-now-supports-date-cxtm"
+         (equal '("2000-12-31") (serialized-values (cxtm (read-text "a t: 2000-12-31.")))))
+  (check "integer-slice-keeps-dateTime-cxtm-excluded"
+         (typep (cxtm-condition (lambda () (cxtm (read-text "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#dateTime>."))))
+                'topic-maps.cxtm:cxtm-unsupported)))
 
 (defun integer-equality-and-merge-tests ()
   (let ((map (read-text "%prefix xsd <http://www.w3.org/2001/XMLSchema#> a t: 001; t: +1; t: 1; t:\"1\"^^xsd:integer; t:\"001\"^^xsd:integer; t:\"1\".")))

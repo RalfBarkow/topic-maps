@@ -10,7 +10,8 @@ lock = json.loads((root / 'references/corpus-lock.json').read_text())
 assert report['repository'] == lock['repository'] and report['commit'] == lock['commit']
 assert report['qualification'] == lock['draftQualification']
 assert report['counts'] == lock['ctmCounts']
-slice8 = len(sys.argv) > 2 and sys.argv[2] == '--slice-8'
+slice9 = len(sys.argv) > 2 and sys.argv[2] == '--slice-9'
+slice8 = slice9 or len(sys.argv) > 2 and sys.argv[2] == '--slice-8'
 slice7 = slice8 or len(sys.argv) > 2 and sys.argv[2] == '--slice-7'
 slice6 = slice7 or len(sys.argv) > 2 and sys.argv[2] == '--slice-6'
 slice5 = slice6 or len(sys.argv) > 2 and sys.argv[2] == '--slice-5'
@@ -21,14 +22,14 @@ assert report['countsMatchPin'] is True
 assert report['correspondence'] == dict(ok=True, missingInputs=[], missingBaselines=[], unmatchedBaselines=[], duplicateIDs=[])
 cases = report['cases']
 assert len(cases) == report['counts']['valid'] + report['counts']['invalid']
-passes = 49 if slice8 else 42 if slice7 else 36 if slice6 else 29 if slice5 else 25 if slice4 else int(slice1)
+passes = 59 if slice9 else 49 if slice8 else 42 if slice7 else 36 if slice6 else 29 if slice5 else 25 if slice4 else int(slice1)
 assert report['statuses'] == {'pass': passes, 'fail': 0, 'unsupported': 0, 'not-run': len(cases)-passes}
 assert [c['id'] for c in cases] == sorted(c['id'] for c in cases)
 assert len({c['id'] for c in cases}) == len(cases)
 tested = [c for c in cases if c['status'] == 'pass']
 if slice4:
     positives = [c for c in tested if c['category'] == 'valid']
-    assert len(positives) == (46 if slice8 else 39 if slice7 else 33 if slice6 else 28 if slice5 else 24) and all(c['actualOutcome'] == 'cxtm-match' for c in positives)
+    assert len(positives) == (51 if slice9 else 46 if slice8 else 39 if slice7 else 33 if slice6 else 28 if slice5 else 24) and all(c['actualOutcome'] == 'cxtm-match' for c in positives)
 untested = [c for c in cases if c not in tested]
 assert all(c['status'] == 'not-run' and c['actualOutcome'] is None and c['diagnostics'] == [] for c in untested)
 if slice1:
@@ -49,6 +50,13 @@ print('REPORT-JSON-PASS: deterministic schema, draft qualification, case contrac
 
 if slice6:
     for name, reason in [('prefix-collision', 'PREFIX-COLLISION'), ('prefix-undefined2', 'UNDEFINED-PREFIX')]:
+        c = next(c for c in cases if c['id'] == f'ctm/invalid/{name}.ctm')
+        assert c['status'] == 'pass' and c['actualOutcome'] == 'ctm-rejection'
+        assert len(c['diagnostics']) == 1 and reason in c['diagnostics'][0]
+
+if slice9:
+    for name, reason in [('date-invalid-day', 'INVALID-DATE-DAY'), ('date-invalid-month', 'INVALID-DATE-MONTH'),
+                         ('date-invalid-year', 'INVALID-DATE-YEAR'), ('date-invalid-year2', 'INVALID-DATE-YEAR'), ('date-invalid-year3', 'INVALID-DATE-YEAR')]:
         c = next(c for c in cases if c['id'] == f'ctm/invalid/{name}.ctm')
         assert c['status'] == 'pass' and c['actualOutcome'] == 'ctm-rejection'
         assert len(c['diagnostics']) == 1 and reason in c['diagnostics'][0]

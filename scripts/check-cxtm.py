@@ -8,7 +8,7 @@ root = pathlib.Path(__file__).resolve().parent.parent
 report = json.loads(pathlib.Path(sys.argv[1]).read_text())
 assert report['kind'] == 'cxtm-byte-equality' and report['failed'] == 0
 assert report['passed'] == len(report['checks']) == len(set(report['checks']))
-expected_count = {'--slice-5': 28, '--slice-6': 33, '--slice-7': 39, '--slice-8': 46}.get(sys.argv[2] if len(sys.argv) > 2 else '', 24)
+expected_count = {'--slice-5': 28, '--slice-6': 33, '--slice-7': 39, '--slice-8': 46, '--slice-9': 51}.get(sys.argv[2] if len(sys.argv) > 2 else '', 24)
 assert len(report['cases']) == expected_count
 for case in report['cases']:
     actual = case['actualCXTM'].encode('utf-8')

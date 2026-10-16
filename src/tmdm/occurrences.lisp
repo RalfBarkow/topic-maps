@@ -54,7 +54,7 @@
   map)
 (defun add-occurrence (topic type value &key (datatype (string-datatype)) item-identifiers)
   "Create an unscoped Occurrence; TYPE must be a same-map Topic. VALUE and DATATYPE
-are strings; DATATYPE is any absolute locator (TMDM 4.4). Supported Integer/Decimal
+are strings; DATATYPE is any absolute locator (TMDM 4.4). Supported Integer/Decimal/Date
 lexical forms are validated; stored strings are never rewritten.
 anyURI VALUE must already be absolute, never resolved here.
 Validate before mutation, return current representative after duplicate replacement."
@@ -66,6 +66,8 @@ Validate before mutation, return current representative after duplicate replacem
     (occurrence-problem :invalid-integer-value "Value is not an xsd:integer lexical form."))
   (when (and (string= datatype (decimal-datatype)) (not (decimal-lexical-p value)))
     (occurrence-problem :invalid-decimal-value "Value is not an xsd:decimal lexical form."))
+  (when (and (string= datatype (date-datatype)) (not (date-lexical-p value)))
+    (occurrence-problem :invalid-date-value "Value is not an XSD 1.0 date lexical form or valid Gregorian date."))
   (when (and (string= datatype (iri-datatype)) (not (absolute-locator-p value)))
     (occurrence-problem :relative-uri-value "TMDM IRI-valued Occurrences require an absolute locator."))
   (let* ((topic (live-topic topic)) (type (live-topic type)) (map (%topic-parent topic)))

@@ -78,7 +78,7 @@
           (t (return)))))
 
 (defun excluded-literal-p (text)
-  "Recognize unsupported date/dateTime/* literal syntax, without constructing values."
+  "Recognize unsupported dateTime/* literal syntax, without constructing values."
   (labels ((digits (s) (and (plusp (length s)) (every (lambda (c) (find c "0123456789")) s)))
            (date (s)
              (let* ((s (if (and (plusp (length s)) (char= (char s 0) #\-)) (subseq s 1) s))
@@ -100,11 +100,11 @@
                              (and (= 6 (length zone)) (find (char zone 0) "+-")
                                   (digits (subseq zone 1 3)) (char= (char zone 3) #\:)
                                   (digits (subseq zone 4 6)))))))))
-    (or (date text) (string= text "*")
+    (or (string= text "*")
         (let ((tee (position #\T text))) (and tee (date (subseq text 0 tee)) (time-literal (subseq text (1+ tee))))))))
 
 (defun read-number-token (lexer start)
-  "One lexical path for supported integers/decimals and recognized excluded date/* forms.
+  "One token path for Integer, Decimal and Date, plus recognized excluded dateTime/* forms.
 A dot followed by a digit can belong to a decimal; a terminal dot stays punctuation."
   (setf (lexer-cursor lexer) start)
   (loop for c = (peek-character lexer)
@@ -118,6 +118,12 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
           ((and (find #\. value) (topic-maps.tmdm:decimal-lexical-p value))
            (make-token :kind :decimal :value value :position start))
           ((excluded-literal-p value) (make-token :kind :excluded-literal :value value :position start))
+          ((position #\- value :start (if (and (plusp (length value)) (find (char value 0) "+-")) 1 0))
+           (multiple-value-bind (a date-end end reason) (topic-maps.tmdm::date-lexical-bounds value)
+             (unless (and a (= date-end end))
+               (problem 'ctm-rejection (or reason :invalid-date-syntax) start
+                        "Expected a valid timezone-free XSD 1.0 date: nonzero year, valid month/day and no leading plus or extended-year zeroes."))
+             (make-token :kind :date :value value :position start)))
           (t (problem 'ctm-rejection :invalid-occurrence-literal start "Malformed numeric/date literal.")))))
 
 (defun next-token (lexer)

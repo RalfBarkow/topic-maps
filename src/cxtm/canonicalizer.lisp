@@ -126,12 +126,13 @@
           (when (and (string= (occurrence-datatype item) (decimal-datatype))
                      (not (decimal-lexical-p (occurrence-value item))))
             (fail :invalid-decimal-value "Occurrence value is not an xsd:decimal lexical form."))
-          ;; CXTM 3.16: these remaining date datatypes need additional canonical
-          ;; lexical rules. Unknown datatypes use Other, without interpretation.
-          (when (member (occurrence-datatype item)
-                        '("http://www.w3.org/2001/XMLSchema#date"
-                          "http://www.w3.org/2001/XMLSchema#dateTime") :test #'string=)
-            (fail :unsupported-occurrence-datatype "CXTM 3.16 date/dateTime canonicalization is not implemented." t))
+          (when (string= (occurrence-datatype item) (date-datatype))
+            (unless (date-lexical-p (occurrence-value item))
+              (fail :invalid-date-value "Occurrence value is not a valid XSD 1.0 date."))
+            (unless (canonical-date-lexical-form (occurrence-value item))
+              (fail :date-timezone-canonicalization "XSD date recoverable-timezone canonicalization is outside this slice." t)))
+          (when (string= (occurrence-datatype item) "http://www.w3.org/2001/XMLSchema#dateTime")
+            (fail :unsupported-occurrence-datatype "DateTime canonicalization is not implemented." t))
           (when (and (string= (occurrence-datatype item) (iri-datatype))
                      (not (topic-maps.tmdm::absolute-locator-p (occurrence-value item))))
             (fail :invalid-occurrence-value "IRI-valued Occurrences must store an absolute locator."))
@@ -220,6 +221,8 @@ Variants or non-Topic identifiers other than Occurrence identifiers. Does not mu
                              (canonical-integer-lexical-form (occurrence-value item)))
                             ((string= (occurrence-datatype item) (decimal-datatype))
                              (canonical-decimal-lexical-form (occurrence-value item)))
+                            ((string= (occurrence-datatype item) (date-datatype))
+                             (canonical-date-lexical-form (occurrence-value item)))
                             (t (occurrence-value item))) out)
             (format out "</value>~%<datatype>")
             ;; CXTM 3.14: datatype locator is NOT base-normalized.

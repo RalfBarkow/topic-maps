@@ -14,5 +14,6 @@
            #:add-occurrence #:string-datatype #:iri-datatype #:integer-datatype
            #:integer-lexical-p #:canonical-integer-lexical-form
            #:decimal-datatype #:decimal-lexical-p #:canonical-decimal-lexical-form
+           #:date-datatype #:date-lexical-p #:canonical-date-lexical-form
            #:occurrence-error #:occurrence-error-code
            #:add-default-name #:default-name-type-identifier))
