@@ -1,6 +1,6 @@
-# Common Lisp Topic Maps — Slice 11
+# Common Lisp Topic Maps — Slice 13
 
-A working ANSI Common Lisp reader for CTM identity/default-name syntax and
+A working ANSI Common Lisp reader for CTM identity/name syntax and
 unary/binary Associations, with same-map merging of Topics, Names, Associations
 and Roles, plus string/IRI-valued Occurrences, in a bounded TMDM model. HyperDoc remains a possible future client
 and is neither the codebase nor a dependency. Slice 4 adds a pure, independent
@@ -22,15 +22,21 @@ following-minute interpretation and remains FAIL. Slice 11 adds exact nonzero-of
 contract now executes and reports its known inconsistent baseline as FAIL.
 Nonzero-offset BCE day rollover and leap-second contexts remain explicitly
 unsupported; existing zero/absent-zone behavior is retained.
+Slice 12A adds explicitly typed Topic Names. Slice 13 adds Scope Topic sets to
+Names, Occurrences and Associations, including reference replacement, duplicate
+merging and canonical output. Embedded Topics and Variants remain unsupported.
 
 Systems: `topic-maps` (the retained foundation), `topic-maps/tests`,
 `topic-maps/tmdm`, `topic-maps/ctm`, `topic-maps/ctm/tests` and
 `topic-maps/ctm/merging-tests` and `topic-maps/ctm/association-tests`, plus `topic-maps/cxtm` and
-`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests` and `topic-maps/ctm/datetime-tests` and `topic-maps/ctm/timezone-tests`.
+`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests` and `topic-maps/ctm/datetime-tests` and `topic-maps/ctm/timezone-tests`, `topic-maps/ctm/typed-name-tests` and `topic-maps/ctm/scope-tests`.
 The core reader/model uses ANSI Common Lisp; the foundation/tooling uses
 ASDF/UIOP and Python's standard library. No Quicklisp packages are required.
 
-Start with [Reading DateTime Timezone Canonicalization](docs/reading-datetime-timezones.md)
+Start with [Reading Scope](docs/reading-scope.md) for Scope APIs, actual Topic
+references, merge handles and the three original comparisons.
+[Reading Typed Topic Names](docs/reading-typed-topic-names.md) covers Slice 12A.
+[Reading DateTime Timezone Canonicalization](docs/reading-datetime-timezones.md)
 for UTC conversion, calendar limits, actual stored strings and executable inspection.
 [Reading DateTime Occurrences](docs/reading-datetime-occurrences.md)
 for lexical/value/canonical distinctions and the two normative discrepancies.
@@ -121,20 +127,17 @@ CXTM baselines only under `ctm/baseline`. Auxiliary files are reported separatel
 ## Current validation and historical foundation
 
 The complete pinned corpus remains unchanged: 231 valid CTM inputs, 42 invalid
-inputs, 231 CXTM baselines and 22 CTM auxiliary files. Fifty-four selected positive
-cases pass actual CXTM byte comparisons, including three added by Slice 10. These 54 `:CXTM-EQUAL`
-contracts are PASS. Eight rejection contracts also pass: the five selected Date
-cases and `prefix-undefined`, `prefix-collision`, `prefix-undefined2`.
-One executed leap-second `:CXTM-EQUAL` contract is FAIL due to a documented normative
-baseline discrepancy; 210 imported contracts remain NOT-RUN, including the
-nonzero-offset DateTime original. A green local test run preserves that FAIL,
-rather than changing the upstream baseline. Unsupported constructs and I/O errors
-cannot count as that required rejection.
+inputs, 231 CXTM baselines and 22 CTM auxiliary files. Fifty-nine selected positive
+cases pass actual CXTM byte comparisons. Eight specific rejection contracts pass.
+Two executed DateTime contracts remain FAIL because of documented normative
+baseline discrepancies; 204 contracts remain NOT-RUN. A green regression run
+preserves those two FAILs and never changes an upstream baseline. Unsupported
+constructs and I/O errors cannot count as the required CTM rejection.
 
 The full launcher runs the retained 54 foundation checks, two Python integrity
 fixtures, 123 retained identity checks, 646 merge checks, 657 Association checks,
 imported-report validation and selected baseline
-property evidence, 445 retained CXTM checks, 1,101 Occurrence checks, 150 prefix/datatype checks, 665 integer checks, 715 Decimal checks, 1,806 Date checks, 215 DateTime checks and
+property evidence, 445 retained CXTM checks, 1,101 Occurrence checks, 150 prefix/datatype checks, 665 integer checks, 715 Decimal checks, 1,806 Date checks, 217 DateTime checks, 1,944 timezone checks, 106 typed-name checks and 293 Scope checks, plus
 16,294 independent Unicode NFC oracle
 comparisons. The oracle needs Python UCD 15.0 or 15.1 (tables use UCD 15.1.0).
 A report path also produces `<path>.semantics.json` with
@@ -151,7 +154,11 @@ discrepancies. `<path>.timezones.json` adds exact UTC, fraction and model-purity
 probes, including every one of the 1681 permitted signed offset minutes.
 The merge checks include 128 graph/order variants with an independent reachability
 oracle. Reports are deterministic across the tested SBCL versions and checkout
-relocation. See [Slice 11 validation](docs/slice-11-validation.md) for current evidence.
+relocation. `<path>.typed-names.json` records Name value/Parent/Type relations;
+`<path>.scopes.json` records Scope object relations and an ordering witness.
+See [Slice 13 validation](docs/slice-13-validation.md) for current evidence.
+[Slice 12A validation](docs/slice-12a-validation.md) records explicit Name types.
+[Slice 11 validation](docs/slice-11-validation.md) preserves the prior timezone evidence.
 [Slice 10 validation](docs/slice-10-validation.md) preserves the earlier DateTime baseline.
 [Slice 9 validation](docs/slice-9-validation.md) records the accepted Date subset.
 [Slice 8 validation](docs/slice-8-validation.md) records the accepted Decimal subset.
@@ -170,6 +177,8 @@ about absent reader/model systems describe Slice 0, not the current branch.
 Slice 1 is built from `9c83db34eb1ba8091b004433f088056717dbaa7e` on
 `codex/ctm-slice-1`. Slice 2 starts from the accepted Slice 1a commit
 `fb60afd548d679d83fd8ec76bc5ff384c1e23e5f` on `codex/ctm-slice-2`.
+Slice 13 starts from `788899aea1a20b9cd8237c6106e6613e180d7362` on
+`codex/ctm-slice-13`.
 Slice 11 starts from `8741d155d948c7317945eee423a977940cad995e` on
 `codex/ctm-slice-11`.
 Slice 10 starts from `2ad41cd1a945a4ce97824464de40646bb899259e` on

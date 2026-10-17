@@ -181,8 +181,13 @@
       (check "undefined-prefix-condition-class" (typep condition 'undefined-prefix))
       (check "error-line-column" (and (= 2 (error-line condition)) (= 3 (error-column condition)))))
     (dolist (text '("a isa person." "def tpl() a. end" "%include <other.ctm>"
-                    "? - \"anonymous\"." "a @theme." "a - \"name\" @theme." "a - \"\"\"triple\"\"\"."))
+                    "? - \"anonymous\"."  "a - \"\"\"triple\"\"\"."))
       (check (concatenate 'string "unsupported-not-silently-accepted:" text) (unsupported-p text)))
+    (check "scope-on-bare-topic-rejected"
+           (eq :unexpected-token (error-code (rejection "a @theme."))))
+    (check "scoped-name-now-deserialized"
+           (= 1 (length (topic-maps.tmdm:topic-name-scope
+                          (first (topic-names (first-topic (read-text "a - \"name\" @theme."))))))))
     (check "association-now-deserialized"
            (= 1 (length (topic-maps.tmdm:topic-map-associations (read-text "relation(role: a)")))))
     (check "empty-document-has-no-accidental-type-topic"

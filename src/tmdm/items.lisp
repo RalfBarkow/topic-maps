@@ -1,9 +1,9 @@
 (in-package #:topic-maps.tmdm)
 
-;;; Only Topic Map, Topic, unscoped Name/Occurrence, Association and Role properties used
+;;; Only Topic Map, Topic, Name/Occurrence, Association and Role properties used
 ;;; by the current subset are materialized.
 ;;; Omitted set-valued properties are implicitly empty, single-valued ones null
-;;; (CTM 3.2). In particular all supported names have empty scope and variants.
+;;; (CTM 3.2). Variants remain implicitly empty; Scope is a materialized Topic set.
 (defstruct (topic-map (:constructor make-topic-map ()) (:conc-name %topic-map-)) topics associations)
 (defstruct (topic (:constructor %make-topic (parent)) (:conc-name %topic-))
   (parent nil :read-only t) item-identifiers subject-identifiers subject-locators names occurrences
@@ -11,7 +11,7 @@
   forward)
 
 (defstruct (association (:constructor %make-association (parent type)) (:conc-name %association-))
-  (parent nil :type topic-map :read-only t) (type nil :type topic) roles forward)
+  (parent nil :type topic-map :read-only t) (type nil :type topic) roles scope forward)
 (defstruct (association-role (:constructor %make-association-role (parent type player))
                             (:conc-name %association-role-))
   (parent nil :type association) (type nil :type topic) (player nil :type topic) forward)
@@ -19,12 +19,12 @@
   (value "" :type string :read-only t)
   (type nil :type topic)
   (parent nil :type topic)
-  forward)
+  scope forward)
 
 (defstruct (occurrence (:constructor %make-occurrence (value datatype type parent))
                        (:conc-name %occurrence-))
   (value "" :type string :read-only t) (datatype "" :type string :read-only t)
-  (type nil :type topic) (parent nil :type topic) item-identifiers forward)
+  (type nil :type topic) (parent nil :type topic) item-identifiers scope forward)
 
 (defun canonical-occurrence (occurrence)
   "Resolve a retained Occurrence replaced by TMDM duplicate removal; no compression."
@@ -74,6 +74,9 @@ EQ on obsolete objects does not change; compare their canonical representatives.
 (defun occurrence-item-identifiers (item) (copy-list (%occurrence-item-identifiers (canonical-occurrence item))))
 (defun topic-name-value (name) (%topic-name-value (canonical-topic-name name)))
 (defun topic-name-type (name) (%topic-name-type (canonical-topic-name name)))
+(defun topic-name-scope (name) (copy-list (%topic-name-scope (canonical-topic-name name))))
+(defun occurrence-scope (item) (copy-list (%occurrence-scope (canonical-occurrence item))))
+(defun association-scope (item) (copy-list (%association-scope (canonical-association item))))
 (defun topic-name-parent (name) (%topic-name-parent (canonical-topic-name name)))
 (defun association-parent (association) (%association-parent (canonical-association association)))
 (defun association-type (association) (%association-type (canonical-association association)))

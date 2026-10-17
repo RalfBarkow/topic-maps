@@ -145,7 +145,10 @@
          (string= (topic-maps.tmdm:string-datatype)
                   (topic-maps.tmdm:occurrence-datatype
                     (first (all-occurrences (read-text "a t:\"x\"^^<http://www.w3.org/2001/XMLSchema#string>."))))))
-  (dolist (text '("a t:\"x\" @theme." "a t:\"x\" ~reifier." "a t: 2000-12-31T12:00:60+01:00." "a t: 2000-12-31T12:00:60-01:00." "a t:* ."))
+  (check "scoped-occurrence-now-deserialized"
+         (= 1 (length (topic-maps.tmdm:occurrence-scope
+                        (first (all-occurrences (read-text "a t:\"x\" @theme.")))))))
+  (dolist (text '("a t:\"x\" ~reifier." "a t: 2000-12-31T12:00:60+01:00." "a t: 2000-12-31T12:00:60-01:00." "a t:* ."))
     (check (concatenate 'string "excluded-occurrence-feature:" text) (typep (ctm-condition text) 'ctm-unsupported))))
 
 (defun occurrence-api-tests ()

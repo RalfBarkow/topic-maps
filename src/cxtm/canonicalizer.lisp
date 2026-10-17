@@ -47,7 +47,9 @@
   (let ((c (string-order (nfc (topic-name-value a)) (nfc (topic-name-value b)))))
     (if (not (zerop c)) c
         (let ((type (topic-order (topic-name-type a) (topic-name-type b))))
-          (if (not (zerop type)) type (topic-order (topic-name-parent a) (topic-name-parent b)))))))
+          (if (not (zerop type)) type
+              (let ((scope (set-order (topic-name-scope a) (topic-name-scope b) #'topic-order)))
+                (if (not (zerop scope)) scope (topic-order (topic-name-parent a) (topic-name-parent b)))))))))
 (defun occurrence-value-order (a b)
   ;; TMDM 4.3/5.6: anyURI values are locators; other supported values are strings.
   ;; CXTM 4.2 orders strings before locators, independent of their spelling.
@@ -61,7 +63,7 @@
         (list (occurrence-value-order a b)
               (locator-order (occurrence-datatype a) (occurrence-datatype b))
               (topic-order (occurrence-type a) (occurrence-type b))
-              ;; Both scopes are empty; parent comparison is the final key.
+              (set-order (occurrence-scope a) (occurrence-scope b) #'topic-order)
               (topic-order (occurrence-parent a) (occurrence-parent b)))
         when (not (zerop comparison)) return comparison finally (return 0)))
 
@@ -74,7 +76,10 @@
 (defun association-order (a b)
   (let ((c (topic-order (association-type a) (association-type b))))
     (if (not (zerop c)) c
-        (set-order (association-roles a) (association-roles b) #'role-signature-order))))
+        (let ((roles (set-order (association-roles a) (association-roles b) #'role-signature-order)))
+          ;; Parent Map is equal for all associations compared by this serializer.
+          (if (not (zerop roles)) roles
+              (set-order (association-scope a) (association-scope b) #'topic-order))))))
 (defun role-order (a b)
   (let ((c (role-signature-order a b)))
     (if (not (zerop c)) c
@@ -85,7 +90,7 @@
   (unless (eq (type-of item) type)
     (fail :unsupported-information-item (format nil "Expected exact ~S, received ~S." type (type-of item)) t)))
 (defun require-set (items)
-  (unless (and (listp items) (= (length items) (length (remove-duplicates items :test #'eq))))
+  (unless (and (topic-maps.tmdm::proper-list-p items) (= (length items) (length (remove-duplicates items :test #'eq))))
     (fail :invalid-set "An information-item collection must be a proper set.")))
 (defun validate-map (map)
   "Validate current model schema and referential integrity; never normalize/mutate."
@@ -111,13 +116,15 @@
           (require-exact-item name 'topic-name)
           (unless (and (eq name (canonical-topic-name name)) (eq (topic-name-parent name) topic))
             (fail :invalid-parent "Name must be current and owned by its containing Topic."))
-          (reference (topic-name-type name)))
+          (reference (topic-name-type name))
+          (require-set (topic-name-scope name)) (mapc #'reference (topic-name-scope name)))
         (require-set (topic-occurrences topic))
         (dolist (item (topic-occurrences topic))
           (require-exact-item item 'occurrence)
           (unless (and (eq item (canonical-occurrence item)) (eq (occurrence-parent item) topic))
             (fail :invalid-parent "Occurrence must be current and owned by its containing Topic."))
           (reference (occurrence-type item))
+          (require-set (occurrence-scope item)) (mapc #'reference (occurrence-scope item))
           (unless (topic-maps.tmdm::absolute-locator-p (occurrence-datatype item))
             (fail :invalid-occurrence-datatype "Datatype must be an absolute locator."))
           (when (and (string= (occurrence-datatype item) (integer-datatype))
@@ -149,7 +156,9 @@
         (require-exact-item a 'association)
         (unless (and (eq a (canonical-association a)) (eq (association-parent a) map))
           (fail :invalid-parent "Association must be current and owned by this map."))
-        (reference (association-type a)) (require-set (association-roles a))
+        (reference (association-type a))
+        (require-set (association-scope a)) (mapc #'reference (association-scope a))
+        (require-set (association-roles a))
         (unless (association-roles a) (fail :empty-association "Association requires Roles."))
         (dolist (r (association-roles a))
           (require-exact-item r 'association-role)
@@ -173,9 +182,17 @@
       (format out "</locator>~%"))
     (format out "</~A>~%" tag)))
 
+(defun emit-scope (themes topic-numbers out)
+  ;; CXTM 3.12/4.4/4.6. Empty Scope has no XML representation.
+  (when themes
+    (format out "<scope>~%")
+    (dolist (theme (sorted themes #'topic-order))
+      (format out "<scopingTopic topicref=\"~D\"></scopingTopic>~%" (gethash theme topic-numbers)))
+    (format out "</scope>~%")))
+
 (defun canonicalize (map &key base-locator)
   "Return CXTM as a string. BASE-LOCATOR is an explicit absolute IRI (CXTM 3.1).
-Only the existing TMDM schema is supported: empty Scope, null Reifier, no
+Only the existing TMDM schema is supported: Topic-set Scope, null Reifier, no
 Variants or non-Topic identifiers other than Occurrence identifiers. Does not mutate MAP or handles."
   (unless (and (stringp base-locator) (position #\: base-locator)
                (let ((scheme (subseq base-locator 0 (position #\: base-locator))))
@@ -217,7 +234,8 @@ Variants or non-Topic identifiers other than Occurrence identifiers. Does not mu
           (loop for name in (sorted (topic-names topic) #'name-order) for index from 1 do
             (format out "<name number=\"~D\">~%<value>" index)
             (xml-text (topic-name-value name) out) (format out "</value>~%")
-            (type-ref (topic-name-type name)) (format out "</name>~%"))
+            (type-ref (topic-name-type name))
+            (emit-scope (topic-name-scope name) topic-numbers out) (format out "</name>~%"))
           (loop for item in (sorted (topic-occurrences topic) #'occurrence-order) for index from 1 do
             (format out "<occurrence number=\"~D\">~%<value>" index)
             (xml-text (cond ((string= (occurrence-datatype item) (iri-datatype))
@@ -235,6 +253,7 @@ Variants or non-Topic identifiers other than Occurrence identifiers. Does not mu
             ;; CXTM 3.14: datatype locator is NOT base-normalized.
             (xml-text (occurrence-datatype item) out) (format out "</datatype>~%")
             (type-ref (occurrence-type item))
+            (emit-scope (occurrence-scope item) topic-numbers out)
             (emit-locators "itemIdentifiers" (occurrence-item-identifiers item) out)
             (format out "</occurrence>~%"))
           (dolist (r (sorted (topic-roles-played topic) #'role-order)) (role-ref r))
@@ -246,6 +265,7 @@ Variants or non-Topic identifiers other than Occurrence identifiers. Does not mu
             (format out "<role number=\"~D\">~%<player topicref=\"~D\"></player>~%"
                     index (gethash (association-role-player r) topic-numbers))
             (type-ref (association-role-type r)) (format out "</role>~%"))
+          (emit-scope (association-scope a) topic-numbers out)
           (format out "</association>~%"))
         ;; CXTM 3.1 step 2 appends LF after EVERY element, including the root.
         (format out "</topicMap>~%")))))

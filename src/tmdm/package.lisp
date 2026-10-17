@@ -3,6 +3,7 @@
   (:export #:topic-map #:make-topic-map #:topic-map-topics #:topic-map-associations
            #:topic #:topic-parent #:topic-item-identifiers
            #:topic-subject-identifiers #:topic-subject-locators #:topic-names #:topic-occurrences #:topic-roles-played
+           #:topic-name-scope #:occurrence-scope #:association-scope #:scope-error #:scope-error-code
            #:topic-name #:topic-name-value #:topic-name-type #:topic-name-parent
            #:intern-topic #:add-topic-identifier #:merge-topics #:normalize-topic-map
            #:canonical-topic #:canonical-topic-name

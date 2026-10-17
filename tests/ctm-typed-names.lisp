@@ -172,7 +172,11 @@
                                                  (if separator :expected-name-type-separator :expected-name-value)))
                   (= position (error-position condition)) (= 1 (error-line condition))
                   (= (1+ position) (error-column condition))))))
-  (dolist (text '("a - [-\"fullname\"]:\"Name\"." "a - type:\"Name\" @theme."
+  (let* ((map (read-text "a - type:\"Name\" @theme.")) (name (first (topic-names (local-topic map "a")))))
+    (check "typed-reader:scope-now-supported"
+           (and (eq (local-topic map "type") (topic-name-type name))
+                (equal (list (local-topic map "theme")) (topic-maps.tmdm:topic-name-scope name)))))
+  (dolist (text '("a - [-\"fullname\"]:\"Name\"."
                   "a - type:\"Name\" ~reifier." "a - type:\"Name\" (\"variant\" @theme)."))
     (check (concatenate 'string "typed-reader:excluded-feature:" text) (typep (ctm-condition text) 'ctm-unsupported))))
 

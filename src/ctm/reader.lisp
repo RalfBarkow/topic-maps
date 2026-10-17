@@ -67,6 +67,29 @@
   (multiple-value-bind (kind iri) (identity-value parser)
     (topic-maps.tmdm:intern-topic map kind iri)))
 
+(defun read-scope (parser map)
+  "CTM 3.3.9: optional @ followed by a nonempty comma-separated Topic set.
+Use the existing identity resolver; embedded/wildcard Topics remain unsupported.
+The owning information item is not constructed until this function finishes."
+  (when (punctuation-p parser #\@)
+    (consume parser)
+    (let ((themes nil))
+      (loop
+        ;; A reifier marker where a Theme is required is malformed Scope,
+        ;; even though reification after a complete Scope remains unsupported.
+        (unless (parser-lookahead parser)
+          (skip-layout (parser-lexer parser))
+          (when (eql #\~ (peek-character (parser-lexer parser)))
+            (problem 'ctm-rejection :expected-scope-theme (lexer-cursor (parser-lexer parser))
+                     "Expected a Theme, not a reifier marker.")))
+        (let ((token (look parser)))
+          (unless (or (member (token-kind token) '(:identifier :iri :qname))
+                      (and (eq :punctuation (token-kind token)) (find (token-value token) "=^")))
+            (problem 'ctm-rejection :expected-scope-theme (token-position token)
+                     "Expected a Topic reference after '@' or the scope comma."))
+          (push (identity-reference parser map) themes))
+        (if (punctuation-p parser #\,) (consume parser) (return (nreverse themes)))))))
+
 (defun literal-iri-reference (parser)
   "An IRI locator, not a Topic identity. Used for values/datatype syntax."
   (let ((token (consume parser)))
@@ -149,8 +172,9 @@
           (progn
             (consume parser)
             (multiple-value-bind (value datatype) (read-occurrence-literal parser)
-              (let ((type (topic-maps.tmdm:intern-topic map kind iri)))
-                (topic-maps.tmdm:add-occurrence topic type value :datatype datatype)
+              (let* ((type (topic-maps.tmdm:intern-topic map kind iri))
+                     (scope (read-scope parser map)))
+                (topic-maps.tmdm:add-occurrence topic type value :datatype datatype :scope scope)
                 (topic-maps.tmdm:canonical-topic topic))))
           (if (eq :identifier (token-kind start))
               (if (punctuation-p parser #\()
@@ -176,9 +200,10 @@ Use the existing identity resolver; embedded Topics remain unsupported."
       (unless (eq :string (token-kind value))
         (problem 'ctm-rejection :expected-name-value (token-position value)
                  "Expected a quoted name value after '-' or the name type separator."))
-      (if typed
-          (topic-maps.tmdm:add-name topic (token-value value) :type type)
-          (topic-maps.tmdm:add-name topic (token-value value))))
+      (let ((scope (read-scope parser map)))
+        (if typed
+            (topic-maps.tmdm:add-name topic (token-value value) :type type :scope scope)
+            (topic-maps.tmdm:add-name topic (token-value value) :scope scope))))
     (topic-maps.tmdm:canonical-topic topic)))
 
 (defun read-topic (parser map &optional (topic (identity-reference parser map)))
@@ -209,7 +234,7 @@ Use the existing identity resolver; embedded Topics remain unsupported."
         (t (problem 'ctm-rejection :unexpected-token (token-position (look parser)) "Unexpected token after topic or name."))))))
 
 (defun read-association (parser map type)
-  "CTM 3.13, restricted to one or two role declarations; no scope/reifier."
+  "CTM 3.13, restricted to one or two role declarations; optional scope, no reifier."
   (consume parser) ; opening parenthesis already recognized by the caller
   (let ((roles nil) (third-position nil))
     (loop
@@ -240,7 +265,8 @@ Use the existing identity resolver; embedded Topics remain unsupported."
             (t (problem 'ctm-rejection :expected-role-separator (token-position (look parser)) "Expected ',' or ')' after a Role."))))
     (when (> (length roles) 2)
       (problem 'ctm-unsupported :association-arity third-position "Associations with more than two Role declarations are outside Slice 3."))
-    (topic-maps.tmdm:make-association map type (nreverse roles))))
+    (let ((scope (read-scope parser map)))
+      (topic-maps.tmdm:make-association map type (nreverse roles) :scope scope))))
 
 (defun deserialize-string (text &key document-iri source-name)
   "Read the documented CTM subset, with per-document prefixes and qualified strings.

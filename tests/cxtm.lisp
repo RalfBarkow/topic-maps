@@ -29,14 +29,15 @@
                 (topic-item-identifiers topic) (topic-subject-identifiers topic) (topic-subject-locators topic)
                 (loop for n in (topic-names topic) collect
                   (list n (topic-maps.tmdm::%topic-name-forward n) (topic-name-parent n)
-                        (topic-name-type n) (topic-name-value n)))
+                        (topic-name-type n) (topic-name-value n) (copy-list (topic-maps.tmdm::%topic-name-scope n))))
                 (loop for o in (topic-maps.tmdm:topic-occurrences topic) collect
                   (list o (topic-maps.tmdm::%occurrence-forward o) (topic-maps.tmdm:occurrence-parent o)
                         (topic-maps.tmdm:occurrence-type o) (topic-maps.tmdm:occurrence-value o)
-                        (topic-maps.tmdm:occurrence-datatype o) (topic-maps.tmdm:occurrence-item-identifiers o)))))
+                        (topic-maps.tmdm:occurrence-datatype o) (topic-maps.tmdm:occurrence-item-identifiers o)
+                        (copy-list (topic-maps.tmdm::%occurrence-scope o))))))
         (loop for a in (topic-maps.tmdm:topic-map-associations map) collect
           (list a (topic-maps.tmdm::%association-forward a) (topic-maps.tmdm:association-type a)
-                (topic-maps.tmdm:association-parent a)
+                (topic-maps.tmdm:association-parent a) (copy-list (topic-maps.tmdm::%association-scope a))
                 (loop for r in (topic-maps.tmdm:association-roles a) collect
                   (list r (topic-maps.tmdm::%association-role-forward r)
                         (topic-maps.tmdm:association-role-type r) (topic-maps.tmdm:association-role-player r)

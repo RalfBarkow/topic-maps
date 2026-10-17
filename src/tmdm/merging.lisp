@@ -33,23 +33,49 @@
     (let ((other (find-if (lambda (item) (funcall predicate (first tail) item)) (rest tail))))
       (when other (return (list (first tail) other))))))
 
+(define-condition scope-error (error)
+  ((code :initarg :code :reader scope-error-code)
+   (detail :initarg :detail :reader scope-error-detail))
+  (:report (lambda (c stream) (format stream "Scope ~A: ~A" (scope-error-code c) (scope-error-detail c)))))
+(defun scope-problem (code detail) (error 'scope-error :code code :detail detail))
+(defun proper-list-p (value)
+  ;; LIST-LENGTH detects cycles; dotted tails signal TYPE-ERROR. ANSI CL only.
+  (and (listp value) (handler-case (integerp (list-length value)) (type-error () nil))))
+(defun canonical-scope (map themes)
+  "Validate before mutation and copy a set of current same-map Topic references."
+  (unless (proper-list-p themes)
+    (scope-problem :invalid-scope "Supply a proper finite list of Topics."))
+  (remove-duplicates
+   (mapcar (lambda (theme)
+             (unless (typep theme 'topic) (scope-problem :invalid-theme "A theme must be a Topic object."))
+             (let ((current (live-topic theme)))
+               (unless (eq map (%topic-parent current))
+                 (scope-problem :foreign-theme "Every theme must belong to the item's Topic Map."))
+               current)) themes)
+   :test #'eq :from-end t))
+(defun same-scope-p (a b)
+  ;; Storage is canonical and duplicate-free; equality has no sequence ordering.
+  (and (= (length a) (length b)) (every (lambda (theme) (member theme b :test #'eq)) a)))
+
 (defun normalize-names (map)
-  ;; TMDM 5.4 and 6.3: all supported names have empty scope/variants/II,
+  ;; TMDM 5.4 and 6.3: all supported names have empty variants/II,
   ;; null reifier. Parent and type may have changed during a Topic merge.
   (dolist (topic (%topic-map-topics map))
     (loop for pair = (equal-pair (%topic-names topic)
                        (lambda (a b)
                          (and (string= (%topic-name-value a) (%topic-name-value b))
-                              (eq (%topic-name-type a) (%topic-name-type b)))))
+                              (eq (%topic-name-type a) (%topic-name-type b))
+                              (same-scope-p (%topic-name-scope a) (%topic-name-scope b)))))
           while pair do
             (let* ((a (first pair)) (b (second pair))
                    (c (%make-topic-name (%topic-name-value a) (%topic-name-type a) topic)))
-              (setf (%topic-names topic) (replace-pair (%topic-names topic) a b c)
+              (setf (%topic-name-scope c) (copy-list (%topic-name-scope a))
+                    (%topic-names topic) (replace-pair (%topic-names topic) a b c)
                     (%topic-name-forward a) c (%topic-name-forward b) c)))))
 
 (defun merge-two-topics (map a b)
   ;; TMDM 6.2: create C, union supported properties, replace model references.
-  ;; Scope/reifiers remain unimplemented; Association/Role refs are materialized.
+  ;; Replace Scope sets too; Reification remains outside the supported model.
   (let ((c (%make-topic map)))
     (setf (%topic-item-identifiers c) (set-union (%topic-item-identifiers a) (%topic-item-identifiers b) #'string=)
           (%topic-subject-identifiers c) (set-union (%topic-subject-identifiers a) (%topic-subject-identifiers b) #'string=)
@@ -62,13 +88,16 @@
       (dolist (name (%topic-names topic))
         ;; Parent is the computed containing topic (TMDM 5.4).
         (setf (%topic-name-parent name) topic
-              (%topic-name-type name) (canonical-topic (%topic-name-type name)))))
+              (%topic-name-type name) (canonical-topic (%topic-name-type name))
+              (%topic-name-scope name) (canonical-scope map (%topic-name-scope name)))))
     (dolist (topic (%topic-map-topics map))
       (dolist (occurrence (%topic-occurrences topic))
         (setf (%occurrence-parent occurrence) topic
-              (%occurrence-type occurrence) (canonical-topic (%occurrence-type occurrence)))))
+              (%occurrence-type occurrence) (canonical-topic (%occurrence-type occurrence))
+              (%occurrence-scope occurrence) (canonical-scope map (%occurrence-scope occurrence)))))
     (dolist (association (%topic-map-associations map))
-      (setf (%association-type association) (canonical-topic (%association-type association)))
+      (setf (%association-type association) (canonical-topic (%association-type association))
+            (%association-scope association) (canonical-scope map (%association-scope association)))
       (dolist (role (%association-roles association))
         (setf (%association-role-type role) (canonical-topic (%association-role-type role))
               (%association-role-player role) (canonical-topic (%association-role-player role)))))
@@ -132,31 +161,31 @@ IRI is an already resolved, nonempty absolute locator string; CTM validates it."
                      new))))
     (add-topic-identifier topic kind iri)))
 
-(defun add-name (topic value &key (type nil type-supplied-p))
-  "Add an unscoped Name with VALUE to TOPIC (TMDM 5.4).
-TYPE, when supplied, must be a Topic in the same map. When omitted, use the
-CTM 3.11 default name type. Resolve retained Topic handles before storing
-references. Equal value/type/parent returns the existing Name."
+(defun add-name (topic value &key (type nil type-supplied-p) scope)
+  "Add a Name with VALUE, optional TYPE Topic and SCOPE Topic set (TMDM 5.4).
+Validate all arguments before interning the default type. Retained Topic handles
+are canonicalized, including after default-type identity merging."
   (check-type value string)
-  (let* ((topic (live-topic topic))
-         (type (if type-supplied-p
-                   (live-topic type)
-                   (intern-topic (%topic-parent topic) :subject-identifier
-                                 (default-name-type-identifier))))
-         ;; Interning the default type may itself merge the parent Topic.
-         (topic (canonical-topic topic))
-         (type (canonical-topic type)))
-    (unless (eq (%topic-parent topic) (%topic-parent type))
+  (let* ((topic (live-topic topic)) (map (%topic-parent topic))
+         (scope (canonical-scope map scope))
+         (type (when type-supplied-p (live-topic type))))
+    (when (and type-supplied-p (not (eq map (%topic-parent type))))
       (error "Name type belongs to another map."))
-    (let ((existing (find-if (lambda (name)
-                               (and (string= value (%topic-name-value name))
-                                    (eq type (%topic-name-type name))))
-                             (%topic-names topic))))
+    (unless type-supplied-p
+      (setf type (intern-topic map :subject-identifier (default-name-type-identifier))))
+    (let* ((topic (canonical-topic topic)) (type (canonical-topic type))
+           (scope (canonical-scope map scope))
+           (existing (find-if (lambda (name)
+                                (and (string= value (%topic-name-value name))
+                                     (eq type (%topic-name-type name))
+                                     (same-scope-p scope (%topic-name-scope name))))
+                              (%topic-names topic))))
       (or existing
           (let ((name (%make-topic-name value type topic)))
-            (setf (%topic-names topic) (append (%topic-names topic) (list name)))
+            (setf (%topic-name-scope name) scope
+                  (%topic-names topic) (append (%topic-names topic) (list name)))
             name)))))
 
-(defun add-default-name (topic value)
+(defun add-default-name (topic value &key scope)
   "Compatibility entry point for ADD-NAME with the CTM 3.11 default type."
-  (add-name topic value))
+  (add-name topic value :scope scope))

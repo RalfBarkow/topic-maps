@@ -14,10 +14,10 @@
                 (and (or (char<= #\a (char head 0) #\z) (char<= #\A (char head 0) #\Z))
                      (every (lambda (c) (or (char<= #\a c #\z) (char<= #\A c #\Z)
                                            (char<= #\0 c #\9) (find c "+-."))) head)))))))
-(defun same-occurrence-properties-p (a value datatype type)
-  ;; Parent is the containing topic; scope is empty throughout this subset.
+(defun same-occurrence-properties-p (a value datatype type scope)
+  ;; Parent is the containing topic; Scope is compared as a Topic set.
   (and (string= (%occurrence-value a) value) (string= (%occurrence-datatype a) datatype)
-       (eq (%occurrence-type a) type)))
+       (eq (%occurrence-type a) type) (same-scope-p (%occurrence-scope a) scope)))
 (defun check-topic-occurrence-identifiers (map kind iri)
   (when (member kind '(:item-identifier :subject-identifier))
     (dolist (topic (%topic-map-topics map))
@@ -25,8 +25,8 @@
         (when (member iri (%occurrence-item-identifiers occurrence) :test #'string=)
           (occurrence-problem (if (eq kind :item-identifier) :duplicate-item-identifier :unsupported-reification-identity)
                               "Topic identity conflicts with an existing Occurrence item identifier."))))))
-(defun validate-occurrence-identifiers (map topic type value datatype identifiers)
-  (unless (and (listp identifiers) (every #'absolute-locator-p identifiers))
+(defun validate-occurrence-identifiers (map topic type value datatype identifiers scope)
+  (unless (and (proper-list-p identifiers) (every #'absolute-locator-p identifiers))
     (occurrence-problem :invalid-item-identifiers "Item identifiers must be a list of resolved absolute locators."))
   (dolist (id identifiers)
     (dolist (owner (%topic-map-topics map))
@@ -36,24 +36,25 @@
         (occurrence-problem :unsupported-reification-identity "Topic/Occurrence reification identity is outside this model."))
       (dolist (other (%topic-occurrences owner))
         (when (and (member id (%occurrence-item-identifiers other) :test #'string=)
-                   (not (and (eq owner topic) (same-occurrence-properties-p other value datatype type))))
+                   (not (and (eq owner topic) (same-occurrence-properties-p other value datatype type scope))))
           (occurrence-problem :duplicate-item-identifier "An Item Identifier is already assigned to a different Occurrence."))))))
 (defun normalize-occurrences (map)
-  "TMDM 5.6/6.5, empty scope/null reifier; replace duplicates and union identifiers."
+  "TMDM 5.6/6.5, null reifier; replace duplicates and union identifiers."
   (dolist (topic (%topic-map-topics map))
     (loop for pair = (equal-pair (%topic-occurrences topic)
                        (lambda (a b) (same-occurrence-properties-p a (%occurrence-value b)
-                                                                  (%occurrence-datatype b) (%occurrence-type b))))
+                                                                  (%occurrence-datatype b) (%occurrence-type b) (%occurrence-scope b))))
           while pair do
             (let* ((a (first pair)) (b (second pair))
                    (c (%make-occurrence (%occurrence-value a) (%occurrence-datatype a) (%occurrence-type a) topic)))
-              (setf (%occurrence-item-identifiers c)
+              (setf (%occurrence-scope c) (copy-list (%occurrence-scope a))
+                    (%occurrence-item-identifiers c)
                     (set-union (%occurrence-item-identifiers a) (%occurrence-item-identifiers b) #'string=)
                     (%topic-occurrences topic) (replace-pair (%topic-occurrences topic) a b c)
                     (%occurrence-forward a) c (%occurrence-forward b) c))))
   map)
-(defun add-occurrence (topic type value &key (datatype (string-datatype)) item-identifiers)
-  "Create an unscoped Occurrence; TYPE must be a same-map Topic. VALUE and DATATYPE
+(defun add-occurrence (topic type value &key (datatype (string-datatype)) item-identifiers scope)
+  "Create an Occurrence with a Scope Topic set; TYPE must be a same-map Topic. VALUE and DATATYPE
 are strings; DATATYPE is any absolute locator (TMDM 4.4). Supported Integer/Decimal/Date/DateTime
 lexical forms are validated; stored strings are never rewritten.
 anyURI VALUE must already be absolute, never resolved here.
@@ -72,12 +73,14 @@ Validate before mutation, return current representative after duplicate replacem
     (occurrence-problem :invalid-datetime-value "Value is not an XSD 1.0 dateTime lexical form."))
   (when (and (string= datatype (iri-datatype)) (not (absolute-locator-p value)))
     (occurrence-problem :relative-uri-value "TMDM IRI-valued Occurrences require an absolute locator."))
-  (let* ((topic (live-topic topic)) (type (live-topic type)) (map (%topic-parent topic)))
+  (let* ((topic (live-topic topic)) (type (live-topic type)) (map (%topic-parent topic))
+         (scope (canonical-scope map scope)))
     (unless (eq map (%topic-parent type))
       (occurrence-problem :foreign-type "Occurrence Parent and Type must belong to the same map."))
-    (validate-occurrence-identifiers map topic type value datatype item-identifiers)
+    (validate-occurrence-identifiers map topic type value datatype item-identifiers scope)
     (let ((item (%make-occurrence value datatype type topic)))
-      (setf (%occurrence-item-identifiers item) (remove-duplicates (copy-list item-identifiers) :test #'string= :from-end t)
+      (setf (%occurrence-scope item) scope
+            (%occurrence-item-identifiers item) (remove-duplicates (copy-list item-identifiers) :test #'string= :from-end t)
             (%topic-occurrences topic) (append (%topic-occurrences topic) (list item)))
       (normalize-occurrences map)
       (canonical-occurrence item))))

@@ -170,7 +170,10 @@
                   (= 1 (error-line condition)) (= 5 (error-column condition)))))
     (let ((condition (rejection "a(r: ex:p)")))
       (check "association-undefined-prefix-remains-specific" (and (typep condition 'undefined-prefix) (eq :undefined-prefix (error-code condition)))))
-    (dolist (text '("a(r: p) @theme" "a(r: p) ~reifier" "a(r: p, s: q, t: z)"))
+    (check "scoped-association-now-deserialized"
+           (= 1 (length (topic-maps.tmdm:association-scope
+                          (first (topic-maps.tmdm:topic-map-associations (read-text "a(r: p) @theme")))))))
+    (dolist (text '("a(r: p) ~reifier" "a(r: p, s: q, t: z)"))
       (check (concatenate 'string "unsupported-association-feature:" text) (unsupported-p text)))
     (check "comment-can-separate-role-colon"
            (association-invariants (read-text "a(r#( separator )#:p)")))
