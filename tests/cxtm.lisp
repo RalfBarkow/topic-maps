@@ -29,7 +29,11 @@
                 (topic-item-identifiers topic) (topic-subject-identifiers topic) (topic-subject-locators topic)
                 (loop for n in (topic-names topic) collect
                   (list n (topic-maps.tmdm::%topic-name-forward n) (topic-name-parent n)
-                        (topic-name-type n) (topic-name-value n) (copy-list (topic-maps.tmdm::%topic-name-scope n))))
+                        (topic-name-type n) (topic-name-value n) (copy-list (topic-maps.tmdm::%topic-name-scope n))
+                        (loop for v in (topic-maps.tmdm::%topic-name-variants n) collect
+                          (list v (topic-maps.tmdm::%variant-forward v) (topic-maps.tmdm::%variant-parent v)
+                                (topic-maps.tmdm::%variant-value v) (topic-maps.tmdm::%variant-datatype v)
+                                (copy-list (topic-maps.tmdm::%variant-scope v))))))
                 (loop for o in (topic-maps.tmdm:topic-occurrences topic) collect
                   (list o (topic-maps.tmdm::%occurrence-forward o) (topic-maps.tmdm:occurrence-parent o)
                         (topic-maps.tmdm:occurrence-type o) (topic-maps.tmdm:occurrence-value o)

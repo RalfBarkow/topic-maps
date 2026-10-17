@@ -327,7 +327,7 @@
     (check "scope-diagnostic:line-column-after-comma" (and (eq :expected-scope-theme (error-code e))
                                                           (= 2 (error-line e)) (= 2 (error-column e)))))
   (dolist (text '("a - \"N\"@[-\"embedded\"]." "a - \"N\"@? ." "a - \"N\"@t ~reifier."
-                  "a - \"N\"@t (\"variant\"@s)." "def tpl() a - \"N\"@t. end"))
+                  "a - \"N\"@t (\"variant\"@s ~r)." "def tpl() a - \"N\"@t. end"))
     (check (concatenate 'string "scope-reader:excluded-remains-unsupported:" text) (typep (ctm-condition text) 'ctm-unsupported))))
 
 (defun scope-order-tests ()

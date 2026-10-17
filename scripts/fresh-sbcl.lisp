@@ -11,8 +11,8 @@
   (asdf:test-system "topic-maps/ctm/tests")
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
-  ;; Scope tests run all retained Date/numeric/identity-dependent suites once.
-  (asdf:test-system "topic-maps/ctm/scope-tests")
+  ;; Variant tests run all retained Date/numeric/identity-dependent suites once.
+  (asdf:test-system "topic-maps/ctm/variant-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -30,8 +30,9 @@
                                                 (uiop:symbol-call :topic-maps.ctm.tests :datetime-checks)
                                                 (uiop:symbol-call :topic-maps.ctm.tests :timezone-checks)
                                                 (uiop:symbol-call :topic-maps.ctm.tests :typed-name-checks)
-                                                (uiop:symbol-call :topic-maps.ctm.tests :scope-checks))
-                     :scope "Slice 13: same-map Scope for Names, Occurrences and Associations; 59 exact positive CXTM baselines, 8 specific rejections, 2 retained normative baseline FAILs; embedded Topics, reification and Variants unsupported")
+                                                (uiop:symbol-call :topic-maps.ctm.tests :scope-checks)
+                                                (uiop:symbol-call :topic-maps.variant.tests :variant-checks))
+                     :scope "Slice 14: unreified Variants with proper Scope supersets and canonical merge handles; 62 exact positive CXTM baselines, 9 specific rejections, 2 retained normative baseline FAILs; embedded Topics, Templates and reification unsupported")
     (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
                      (concatenate 'string report ".occurrences.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-prefix-report
@@ -49,4 +50,6 @@
     (uiop:symbol-call :topic-maps.ctm.tests :write-typed-name-report
                      (concatenate 'string report ".typed-names.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-scope-report
-                     (concatenate 'string report ".scopes.json"))))
+                     (concatenate 'string report ".scopes.json"))
+    (uiop:symbol-call :topic-maps.variant.tests :write-variant-report
+                     (concatenate 'string report ".variants.json"))))

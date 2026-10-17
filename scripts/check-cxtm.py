@@ -8,7 +8,7 @@ root = pathlib.Path(__file__).resolve().parent.parent
 report = json.loads(pathlib.Path(sys.argv[1]).read_text())
 assert report['kind'] == 'cxtm-byte-equality' and report['failed'] == 0
 assert report['passed'] == len(report['checks']) == len(set(report['checks']))
-expected_count = {'--slice-13': 61, '--slice-12a': 58, '--slice-5': 28, '--slice-6': 33, '--slice-7': 39, '--slice-8': 46, '--slice-9': 51, '--slice-10': 55, '--slice-11': 56}.get(sys.argv[2] if len(sys.argv) > 2 else '', 24)
+expected_count = {'--slice-14': 64, '--slice-13': 61, '--slice-12a': 58, '--slice-5': 28, '--slice-6': 33, '--slice-7': 39, '--slice-8': 46, '--slice-9': 51, '--slice-10': 55, '--slice-11': 56}.get(sys.argv[2] if len(sys.argv) > 2 else '', 24)
 assert len(report['cases']) == expected_count
 for case in report['cases']:
     actual = case['actualCXTM'].encode('utf-8')
@@ -42,6 +42,11 @@ for case in report['cases']:
             role_refs[f'association.{i}.role.{j}'] = r.find('player').attrib['topicref']
     for t in topics:
         assert [o.attrib['number'] for o in t.findall('occurrence')] == list(map(str, range(1,len(t.findall('occurrence'))+1)))
+        for n in t.findall('name'):
+            assert [v.attrib['number'] for v in n.findall('variant')] == list(map(str, range(1,len(n.findall('variant'))+1)))
+            for v in n.findall('variant'):
+                assert [c.tag for c in v] == ['value', 'datatype', 'scope']
+                assert v.find('scope/scopingTopic') is not None
         for r in t.findall('rolePlayed'):
             assert role_refs[r.attrib['ref']] == t.attrib['number']
     assert sum(len(t.findall('rolePlayed')) for t in topics) == len(role_refs)

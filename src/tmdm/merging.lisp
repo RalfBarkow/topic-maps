@@ -58,8 +58,8 @@
   (and (= (length a) (length b)) (every (lambda (theme) (member theme b :test #'eq)) a)))
 
 (defun normalize-names (map)
-  ;; TMDM 5.4 and 6.3: all supported names have empty variants/II,
-  ;; null reifier. Parent and type may have changed during a Topic merge.
+  ;; TMDM 5.4 and 6.3: union Variants and replace their computed Parent.
+  ;; Name II remain empty and reifier null in this subset.
   (dolist (topic (%topic-map-topics map))
     (loop for pair = (equal-pair (%topic-names topic)
                        (lambda (a b)
@@ -70,12 +70,16 @@
             (let* ((a (first pair)) (b (second pair))
                    (c (%make-topic-name (%topic-name-value a) (%topic-name-type a) topic)))
               (setf (%topic-name-scope c) (copy-list (%topic-name-scope a))
+                    (%topic-name-variants c) (set-union (%topic-name-variants a) (%topic-name-variants b) #'eq)
                     (%topic-names topic) (replace-pair (%topic-names topic) a b c)
-                    (%topic-name-forward a) c (%topic-name-forward b) c)))))
+                    (%topic-name-forward a) c (%topic-name-forward b) c)
+              (dolist (item (%topic-name-variants c)) (setf (%variant-parent item) c)))))
+  (normalize-variants map))
 
 (defun merge-two-topics (map a b)
   ;; TMDM 6.2: create C, union supported properties, replace model references.
   ;; Replace Scope sets too; Reification remains outside the supported model.
+  (check-variant-merge-constraints map :pair (list a b))
   (let ((c (%make-topic map)))
     (setf (%topic-item-identifiers c) (set-union (%topic-item-identifiers a) (%topic-item-identifiers b) #'string=)
           (%topic-subject-identifiers c) (set-union (%topic-subject-identifiers a) (%topic-subject-identifiers b) #'string=)
@@ -89,7 +93,9 @@
         ;; Parent is the computed containing topic (TMDM 5.4).
         (setf (%topic-name-parent name) topic
               (%topic-name-type name) (canonical-topic (%topic-name-type name))
-              (%topic-name-scope name) (canonical-scope map (%topic-name-scope name)))))
+              (%topic-name-scope name) (canonical-scope map (%topic-name-scope name)))
+        (dolist (item (%topic-name-variants name))
+          (setf (%variant-scope item) (canonical-scope map (%variant-scope item))))))
     (dolist (topic (%topic-map-topics map))
       (dolist (occurrence (%topic-occurrences topic))
         (setf (%occurrence-parent occurrence) topic
@@ -110,6 +116,7 @@
   "Apply same-map identity merging, then remove equal Names, Occurrences, Roles and Associations.
 Only implemented properties participate; no cross-map merging."
   (check-type map topic-map)
+  (check-variant-merge-constraints map)
   (loop for pair = (equal-pair (%topic-map-topics map) #'equal-topics-p)
         while pair do (merge-two-topics map (first pair) (second pair)))
   (normalize-names map)
@@ -140,6 +147,8 @@ IRI is an already resolved, nonempty absolute locator string; CTM validates it."
   (unless (and (stringp iri) (plusp (length iri))) (error "A nonempty locator string is required."))
   (let ((topic (live-topic topic)))
     (check-topic-occurrence-identifiers (%topic-parent topic) kind iri)
+    ;; Check the entire prospective identity closure before adding the locator.
+    (check-variant-merge-constraints (%topic-parent topic) :identifier (list topic kind iri))
     (ecase kind
       (:item-identifier (pushnew iri (%topic-item-identifiers topic) :test #'string=))
       (:subject-identifier (pushnew iri (%topic-subject-identifiers topic) :test #'string=))

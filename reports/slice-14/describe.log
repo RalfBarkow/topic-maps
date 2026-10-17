@@ -1,0 +1,78 @@
+#<TOPIC-MAPS.TMDM:VARIANT "variant" datatype="http://www.w3.org/2001/X..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "variant"
+  DATATYPE                       = "http://www.w3.org/2001/XMLSchema#string"
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {700579C5E3}>
+  SCOPE                          = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/variants.ctm#par..
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {700579C5E3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "Name"
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/variants.ctm#kind..
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/variants.ctm#topi..
+  SCOPE                          = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/variants.ctm#par..
+  VARIANTS                       = (#<TOPIC-MAPS.TMDM:VARIANT "variant" datatype="http://www.w3.org/2001/..
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/variants.ctm#pare..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 4 topics, 0 associations {700579C013}>
+  ITEM-IDENTIFIERS               = ("https://example.invalid/variants.ctm#parent-theme")
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/variants.ctm#extr..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 4 topics, 0 associations {700579C013}>
+  ITEM-IDENTIFIERS               = ("https://example.invalid/variants.ctm#extra-theme")
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#extra-theme</locator>
+</itemIdentifiers>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>#kind</locator>
+</itemIdentifiers>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>#parent-theme</locator>
+</itemIdentifiers>
+</topic>
+<topic number="4">
+<itemIdentifiers>
+<locator>#topic</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Name</value>
+<type topicref="2"></type>
+<scope>
+<scopingTopic topicref="3"></scopingTopic>
+</scope>
+<variant number="1">
+<value>variant</value>
+<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+<scope>
+<scopingTopic topicref="1"></scopingTopic>
+<scopingTopic topicref="3"></scopingTopic>
+</scope>
+</variant>
+</name>
+</topic>
+</topicMap>

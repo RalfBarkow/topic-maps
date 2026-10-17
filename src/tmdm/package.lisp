@@ -4,7 +4,9 @@
            #:topic #:topic-parent #:topic-item-identifiers
            #:topic-subject-identifiers #:topic-subject-locators #:topic-names #:topic-occurrences #:topic-roles-played
            #:topic-name-scope #:occurrence-scope #:association-scope #:scope-error #:scope-error-code
-           #:topic-name #:topic-name-value #:topic-name-type #:topic-name-parent
+           #:topic-name #:topic-name-value #:topic-name-type #:topic-name-parent #:topic-name-variants
+           #:variant #:add-variant #:variant-parent #:variant-value #:variant-datatype
+           #:variant-scope #:variant-item-identifiers #:canonical-variant #:variant-error #:variant-error-code
            #:intern-topic #:add-topic-identifier #:merge-topics #:normalize-topic-map
            #:canonical-topic #:canonical-topic-name
            #:association #:make-association #:association-parent #:association-type #:association-roles

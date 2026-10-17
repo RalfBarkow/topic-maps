@@ -99,7 +99,8 @@ The owning information item is not constructed until this function finishes."
       (otherwise (problem 'ctm-rejection :expected-datatype-iri (token-position token)
                           "A datatype qualifier requires an IRI reference, not a Topic identifier.")))))
 
-(defun read-occurrence-literal (parser)
+(defun read-literal (parser &optional (context :occurrence))
+  "Shared CTM 3.4.1 literal reader for Occurrences and Variants."
   (let ((token (look parser)))
     (case (token-kind token)
       (:integer
@@ -126,7 +127,7 @@ The owning information item is not constructed until this function finishes."
                          (token-position token) "DateTime normalization is outside the supported BCE/leap-second calendar context."))
          (values value (topic-maps.tmdm:datetime-datatype))))
       (:excluded-literal
-       (problem 'ctm-unsupported :occurrence-literal-datatype (token-position token)
+       (problem 'ctm-unsupported (if (eq context :variant) :variant-literal-datatype :occurrence-literal-datatype) (token-position token)
                 "The separate CTM '*' literal is outside this slice."))
       (:string
        (consume parser)
@@ -162,8 +163,8 @@ The owning information item is not constructed until this function finishes."
              (values (token-value token) datatype)))
            (values (token-value token) (topic-maps.tmdm:string-datatype))))
       ((:iri :qname) (values (literal-iri-reference parser) (topic-maps.tmdm:iri-datatype)))
-      (otherwise (problem 'ctm-rejection :expected-occurrence-value (token-position token)
-                          "Expected an integer, decimal, date, dateTime, quoted string or IRI-form Occurrence value.")))))
+      (otherwise (problem 'ctm-rejection (if (eq context :variant) :expected-variant-value :expected-occurrence-value)
+                          (token-position token) "Expected a supported CTM literal value.")))))
 
 (defun read-identity-tail (parser map topic)
   (let ((start (look parser)))
@@ -171,7 +172,7 @@ The owning information item is not constructed until this function finishes."
       (if (punctuation-p parser #\:)
           (progn
             (consume parser)
-            (multiple-value-bind (value datatype) (read-occurrence-literal parser)
+            (multiple-value-bind (value datatype) (read-literal parser)
               (let* ((type (topic-maps.tmdm:intern-topic map kind iri))
                      (scope (read-scope parser map)))
                 (topic-maps.tmdm:add-occurrence topic type value :datatype datatype :scope scope)
@@ -182,6 +183,23 @@ The owning information item is not constructed until this function finishes."
                   (problem 'ctm-rejection :expected-occurrence-type-separator (token-position (look parser))
                            "Expected ':' after the Occurrence Type."))
               (topic-maps.tmdm:add-topic-identifier topic kind iri))))))
+
+(defun read-variant (parser map name)
+  "CTM 3.12: required explicit Scope, then union with the current Parent Scope."
+  (consume parser) ; (
+  (multiple-value-bind (value datatype) (read-literal parser :variant)
+    (unless (punctuation-p parser #\@)
+      (problem 'ctm-rejection :expected-variant-scope (token-position (look parser))
+               "A Variant requires an explicit '@' Scope."))
+    (let* ((scope-position (token-position (look parser))) (themes (read-scope parser map))
+           (scope (append (topic-maps.tmdm:topic-name-scope name) themes)))
+      (unless (punctuation-p parser #\))
+        (problem 'ctm-rejection :missing-variant-close (token-position (look parser))
+                 "Expected ')' after the Variant Scope."))
+      (consume parser)
+      (handler-case (topic-maps.tmdm:add-variant name value :datatype datatype :scope scope)
+        (topic-maps.tmdm:variant-error (c)
+          (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c) scope-position (princ-to-string c)))))))
 
 (defun read-name (parser map topic)
   "CTM 3.11: optional Topic reference plus ':' followed by a string.
@@ -200,10 +218,11 @@ Use the existing identity resolver; embedded Topics remain unsupported."
       (unless (eq :string (token-kind value))
         (problem 'ctm-rejection :expected-name-value (token-position value)
                  "Expected a quoted name value after '-' or the name type separator."))
-      (let ((scope (read-scope parser map)))
-        (if typed
-            (topic-maps.tmdm:add-name topic (token-value value) :type type :scope scope)
-            (topic-maps.tmdm:add-name topic (token-value value) :scope scope))))
+      (let* ((scope (read-scope parser map))
+             (name (if typed
+                       (topic-maps.tmdm:add-name topic (token-value value) :type type :scope scope)
+                       (topic-maps.tmdm:add-name topic (token-value value) :scope scope))))
+        (loop while (punctuation-p parser #\() do (read-variant parser map name))))
     (topic-maps.tmdm:canonical-topic topic)))
 
 (defun read-topic (parser map &optional (topic (identity-reference parser map)))
@@ -230,7 +249,7 @@ Use the existing identity resolver; embedded Topics remain unsupported."
            (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
          (setf topic (read-identity-tail parser map topic) has-tail t))
         ((punctuation-p parser #\()
-         (problem 'ctm-unsupported :variant (token-position (look parser)) "Variant names are outside the implemented subset."))
+         (problem 'ctm-rejection :unexpected-variant (token-position (look parser)) "A Variant must immediately follow a Topic Name."))
         (t (problem 'ctm-rejection :unexpected-token (token-position (look parser)) "Unexpected token after topic or name."))))))
 
 (defun read-association (parser map type)
@@ -276,13 +295,16 @@ Source positions are zero-based character offsets; lines/columns are one-based."
     (require-document-iri document-iri)
     (let ((parser (make-parser (make-lexer text) document-iri))
           (map (topic-maps.tmdm:make-topic-map)))
-      (loop until (eq :eof (token-kind (look parser))) do
-        (if (eq :directive (token-kind (look parser)))
-            (read-prefix-directive parser)
-            (let ((topic (identity-reference parser map)))
-              (if (punctuation-p parser #\()
-                  (read-association parser map topic)
-                  (read-topic parser map topic)))))
+      (handler-bind ((topic-maps.tmdm:variant-error
+                       (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c)
+                                             (lexer-cursor (parser-lexer parser)) (princ-to-string c)))))
+        (loop until (eq :eof (token-kind (look parser))) do
+          (if (eq :directive (token-kind (look parser)))
+              (read-prefix-directive parser)
+              (let ((topic (identity-reference parser map)))
+                (if (punctuation-p parser #\()
+                    (read-association parser map topic)
+                    (read-topic parser map topic))))))
       map)))
 
 (defun deserialize-file (pathname &key document-iri source-name)
