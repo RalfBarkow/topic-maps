@@ -17,4 +17,4 @@
            #:date-datatype #:date-lexical-p #:canonical-date-lexical-form
            #:datetime-datatype #:datetime-lexical-p #:canonical-datetime-lexical-form
            #:occurrence-error #:occurrence-error-code
-           #:add-default-name #:default-name-type-identifier))
+           #:add-name #:add-default-name #:default-name-type-identifier))

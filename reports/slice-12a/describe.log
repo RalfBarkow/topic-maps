@@ -1,0 +1,19 @@
+#<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {700361F5D3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "Name"
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/names.ctm#nametyp..
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/names.ctm#topic")..
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/names.ctm#nametyp..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {700361F203}>
+  ITEM-IDENTIFIERS               = ("https://example.invalid/names.ctm#nametype")
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL

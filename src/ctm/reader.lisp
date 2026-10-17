@@ -159,6 +159,28 @@
                            "Expected ':' after the Occurrence Type."))
               (topic-maps.tmdm:add-topic-identifier topic kind iri))))))
 
+(defun read-name (parser map topic)
+  "CTM 3.11: optional Topic reference plus ':' followed by a string.
+Use the existing identity resolver; embedded Topics remain unsupported."
+  (let* ((token (look parser))
+         (typed (or (member (token-kind token) '(:identifier :iri :qname))
+                    (and (eq :punctuation (token-kind token))
+                         (find (token-value token) "=^"))))
+         (type (when typed (identity-reference parser map))))
+    (when typed
+      (unless (punctuation-p parser #\:)
+        (problem 'ctm-rejection :expected-name-type-separator
+                 (token-position (look parser)) "Expected ':' after the name type."))
+      (consume parser))
+    (let ((value (consume parser)))
+      (unless (eq :string (token-kind value))
+        (problem 'ctm-rejection :expected-name-value (token-position value)
+                 "Expected a quoted name value after '-' or the name type separator."))
+      (if typed
+          (topic-maps.tmdm:add-name topic (token-value value) :type type)
+          (topic-maps.tmdm:add-name topic (token-value value))))
+    (topic-maps.tmdm:canonical-topic topic)))
+
 (defun read-topic (parser map &optional (topic (identity-reference parser map)))
   (let ((has-tail nil))
     (loop
@@ -168,24 +190,7 @@
          (when has-tail
            (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
          (consume parser)
-         (let ((value (consume parser)))
-           (when (member (token-kind value) '(:identifier :iri :qname))
-             ;; Recognize the typed-name syntax, without resolving its type
-             ;; or creating information items for unsupported name semantics.
-             (unless (punctuation-p parser #\:)
-               (problem 'ctm-rejection :expected-name-type-separator
-                        (token-position (look parser)) "Expected ':' after the name type."))
-             (consume parser)
-             (let ((literal (consume parser)))
-               (unless (eq :string (token-kind literal))
-                 (problem 'ctm-rejection :expected-name-value (token-position literal)
-                          "Expected a quoted name value after the name type separator.")))
-             (problem 'ctm-unsupported :typed-name (token-position value)
-                      "Typed names are outside the implemented subset (CTM 3.11)."))
-           (unless (eq :string (token-kind value))
-             (problem 'ctm-rejection :expected-name-value (token-position value)
-                      "Expected a quoted name value after '-'."))
-           (topic-maps.tmdm:add-default-name topic (token-value value)))
+         (setf topic (read-name parser map topic))
          (setf has-tail t))
         ((and has-tail (punctuation-p parser #\;))
          (consume parser)

@@ -143,8 +143,13 @@
                     (= 1 (error-line c)) (= (1+ position) (error-column c)))))))
   (let ((c (ctm-condition (format nil "%prefix ex <urn:one:>~C~C%prefix ex <urn:two:>" #\Return #\Newline))))
     (check "prefix-collision-crlf-location" (and (typep c 'topic-maps.ctm:prefix-collision) (= 2 (error-line c)) (= 9 (error-column c)))))
-  (dolist (text '("%include <other.ctm>" "%version 1.0" "%prefix ex <urn:ex:> a - ex:type: \"Name\"."))
-    (check (concatenate 'string "remaining-construct-unsupported:" text) (typep (ctm-condition text) 'ctm-unsupported))))
+  (dolist (text '("%include <other.ctm>" "%version 1.0"))
+    (check (concatenate 'string "remaining-construct-unsupported:" text) (typep (ctm-condition text) 'ctm-unsupported)))
+  (let* ((map (read-text "%prefix ex <urn:ex:> a - ex:type: \"Name\"."))
+         (name (first (topic-names (first-topic map)))))
+    (check "prefix-qname-name-type-supported"
+           (equal '("urn:ex:type") (topic-subject-identifiers (topic-name-type name))))))
+
 
 (defun explicit-datatype-tests ()
   (dolist (datatype '("urn:datatype:custom" "http://example.org/types/custom" "http://www.w3.org/2001/XMLSchema#string"))

@@ -132,17 +132,31 @@ IRI is an already resolved, nonempty absolute locator string; CTM validates it."
                      new))))
     (add-topic-identifier topic kind iri)))
 
-(defun add-default-name (topic value)
-  "CTM 3.11 default type; equal unscoped names share one information item."
+(defun add-name (topic value &key (type nil type-supplied-p))
+  "Add an unscoped Name with VALUE to TOPIC (TMDM 5.4).
+TYPE, when supplied, must be a Topic in the same map. When omitted, use the
+CTM 3.11 default name type. Resolve retained Topic handles before storing
+references. Equal value/type/parent returns the existing Name."
   (check-type value string)
   (let* ((topic (live-topic topic))
-         (type (intern-topic (%topic-parent topic) :subject-identifier (default-name-type-identifier)))
+         (type (if type-supplied-p
+                   (live-topic type)
+                   (intern-topic (%topic-parent topic) :subject-identifier
+                                 (default-name-type-identifier))))
+         ;; Interning the default type may itself merge the parent Topic.
          (topic (canonical-topic topic))
-         (existing (find-if (lambda (name)
-                             (and (string= value (%topic-name-value name))
-                                  (eq type (%topic-name-type name))))
-                           (%topic-names topic))))
-    (or existing
-        (let ((name (%make-topic-name value type topic)))
-          (setf (%topic-names topic) (append (%topic-names topic) (list name)))
-          name))))
+         (type (canonical-topic type)))
+    (unless (eq (%topic-parent topic) (%topic-parent type))
+      (error "Name type belongs to another map."))
+    (let ((existing (find-if (lambda (name)
+                               (and (string= value (%topic-name-value name))
+                                    (eq type (%topic-name-type name))))
+                             (%topic-names topic))))
+      (or existing
+          (let ((name (%make-topic-name value type topic)))
+            (setf (%topic-names topic) (append (%topic-names topic) (list name)))
+            name)))))
+
+(defun add-default-name (topic value)
+  "Compatibility entry point for ADD-NAME with the CTM 3.11 default type."
+  (add-name topic value))

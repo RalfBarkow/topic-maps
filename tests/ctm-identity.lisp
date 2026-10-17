@@ -203,13 +203,11 @@
                                         :document-iri "https://example.invalid/absent.ctm") nil)
              (ctm-rejection () nil)
              (file-error () t)))
-    (check "typed-name-explicitly-unsupported" (unsupported-p "a - fullname:\"Name\"."))
-    ;; CTM 3.11 requires a string, even when the optional type is unsupported.
+    (check "typed-name-explicitly-supported" (verify-item-invariants (read-text "a - fullname:\"Name\".")))
+    ;; CTM 3.11 requires a string, with or without an explicit type.
     ;; CTM 3.3.1 permits layout between the type separator and that string.
     (dolist (fixture '(("a - ." ctm-rejection :expected-name-value 4)
-                       ("a -" ctm-rejection :expected-name-value 3)
-                       ("a - type:\"Name\"." ctm-unsupported :typed-name 4)
-                       ("a - type: \"Name\"." ctm-unsupported :typed-name 4)))
+                       ("a -" ctm-rejection :expected-name-value 3)))
       (destructuring-bind (text class code position) fixture
         (let ((condition (handler-case (progn (read-text text) nil)
                            (ctm-error (e) e))))
@@ -227,13 +225,22 @@
           (check (concatenate 'string "name-classification-diagnostic:" text)
                  (search (if (eq class 'ctm-rejection) "quoted name value" "Typed names")
                          (princ-to-string condition))))))
+    (dolist (text '("a - type:\"Name\"." "a - type: \"Name\"."))
+      (let* ((map (read-text text)) (owner (first-topic map))
+             (name (first (topic-names owner))) (type (topic-name-type name)))
+        (check (concatenate 'string "name-classification-supported:" text) (typep name 'topic-maps.tmdm:topic-name))
+        (check (concatenate 'string "name-classification-value:" text) (string= "Name" (topic-name-value name)))
+        (check (concatenate 'string "name-classification-parent:" text) (eq owner (topic-name-parent name)))
+        (check (concatenate 'string "name-classification-type:" text)
+               (equal '("https://example.invalid/a/doc.ctm#type") (topic-item-identifiers type)))
+        (check (concatenate 'string "name-classification-no-extra-topic:" text) (= 2 (length (topic-map-topics map))))))
     ;; A type-like token alone must not turn a malformed name into UNSUPPORTED.
     (check "name-type-without-separator-is-rejected"
            (eq :expected-name-type-separator (error-code (rejection "a - type \"Name\"."))))
     (check "typed-name-without-value-is-rejected"
            (eq :expected-name-value (error-code (rejection "a - type:."))))
-    (check "typed-name-layout-remains-unsupported"
-           (unsupported-p (format nil "a - type:~%#( layout )# \"Name\".")))
+    (check "typed-name-layout-supported"
+           (verify-item-invariants (read-text (format nil "a - type:~%#( layout )# \"Name\"."))))
     (check "additional-identity-now-deserialized"
            (let* ((map (read-text "a <https://example.invalid/alias>.")) (topic (first-topic map)))
              (and (= 1 (length (topic-map-topics map)))
