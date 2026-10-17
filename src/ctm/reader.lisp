@@ -98,8 +98,9 @@
        (consume parser)
        (multiple-value-bind (value reason) (topic-maps.tmdm:canonical-datetime-lexical-form (token-value token))
          (unless value (problem 'ctm-unsupported
-                         (if (eq reason :unsupported-timezone) :datetime-timezone-canonicalization :datetime-leap-second-context)
-                         (token-position token) "DateTime value normalization requires an unsupported timezone/leap context."))
+                         (if (eq reason :unsupported-bce-timezone-rollover)
+                             :datetime-bce-timezone-rollover :datetime-leap-second-context)
+                         (token-position token) "DateTime normalization is outside the supported BCE/leap-second calendar context."))
          (values value (topic-maps.tmdm:datetime-datatype))))
       (:excluded-literal
        (problem 'ctm-unsupported :occurrence-literal-datatype (token-position token)

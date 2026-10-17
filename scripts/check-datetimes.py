@@ -13,14 +13,14 @@ root = Path(__file__).resolve().parent.parent
 r = json.loads(Path(sys.argv[1]).read_text())
 assert r['kind'] == 'datetime-semantic-and-cxtm-evidence' and r['failed'] == 0
 assert len(r['checks']) == len(set(r['checks'])) == r['passed']
-values = ['1976-09-19T12:01:01', '1976-09-19T12:02:00', '2011-01-01T00:00:00.001', '2011-01-01T00:00:00Z']
+values = ['1976-09-19T12:01:01', '1976-09-19T12:02:00', '2011-01-01T00:00:00.001', '2011-01-01T00:00:00Z', '2010-12-31T22:00:00Z']
 for c, value in zip(r['cases'], values):
     assert c['ctmSource'].encode() == (root / 'vendor/cxtm' / c['id']).read_bytes()
     items = [o for t in c['actualObjects']['topics'] for o in t['occurrences']]
     assert len(items) == 1 and items[0]['value'] == value
     assert items[0]['datatype'] == 'http://www.w3.org/2001/XMLSchema#dateTime'
-    assert c['status'] == ('fail' if c['id'].endswith('datetime2.ctm') else 'pass')
-assert len(r['cases']) == 4
+    assert c['status'] == ('fail' if c['id'].endswith(('datetime2.ctm', 'timezone2.ctm')) else 'pass')
+assert len(r['cases']) == 5
 
 
 def canonical(text):
@@ -54,11 +54,8 @@ for p in r['lexicalProbes']:
     items = ET.fromstring(p['actualCXTM']).findall('topic/occurrence')
     assert len(items) == 1 and items[0].findtext('value') == expected
     assert items[0].findtext('datatype') == 'http://www.w3.org/2001/XMLSchema#dateTime'
-offset = r['unsupportedConstructObservations']
-assert offset['conditionClass'] == 'CTM-UNSUPPORTED' and offset['code'] == 'DATETIME-TIMEZONE-CANONICALIZATION'
-assert offset['contractStatus'] == 'not-run' and offset['normativeCanonicalValue'] == '2010-12-31T22:00:00Z'
-assert offset['ctmSource'].encode() == (root / 'vendor/cxtm' / offset['id']).read_bytes()
-assert offset['upstreamCXTM'].encode() == (root / 'vendor/cxtm/ctm/baseline/occurrence-datetime-timezone2.ctm.cxtm').read_bytes()
-assert [x['contractStatus'] for x in r['normativeDiscrepancies']] == ['fail', 'not-run']
+offset = r['timezoneObservation']
+assert offset == r['cases'][-1] and offset['status'] == 'fail'
+assert [x['contractStatus'] for x in r['normativeDiscrepancies']] == ['fail', 'fail']
 assert datetime.datetime(2011,1,1,tzinfo=datetime.timezone(datetime.timedelta(hours=2))).astimezone(datetime.timezone.utc).isoformat() == '2010-12-31T22:00:00+00:00'
 print(f'DATETIME-INDEPENDENT-PASS: {len(r["cases"])} original model observations; {len(r["lexicalProbes"])} exact calendar/fraction probes; 2 documented discrepancies')

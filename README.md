@@ -1,4 +1,4 @@
-# Common Lisp Topic Maps — Slice 10
+# Common Lisp Topic Maps — Slice 11
 
 A working ANSI Common Lisp reader for CTM identity/default-name syntax and
 unary/binary Associations, with same-map merging of Topics, Names, Associations
@@ -18,17 +18,21 @@ xsd:date literals, Gregorian calendar validation and pure CXTM Date output.
 Negative-year leap validation follows the documented XSD 1.0 E.1 interpretation.
 Slice 10 adds xsd:dateTime with absent/zero zones, exact fractional precision and
 midnight rollover. A noncandidate leap-second baseline disagrees with XSD D.1
-following-minute interpretation and remains FAIL. Nonzero-offset canonicalization
-is explicitly unsupported; its known inconsistent baseline remains NOT-RUN.
+following-minute interpretation and remains FAIL. Slice 11 adds exact nonzero-offset UTC canonicalization; the original timezone2
+contract now executes and reports its known inconsistent baseline as FAIL.
+Nonzero-offset BCE day rollover and leap-second contexts remain explicitly
+unsupported; existing zero/absent-zone behavior is retained.
 
 Systems: `topic-maps` (the retained foundation), `topic-maps/tests`,
 `topic-maps/tmdm`, `topic-maps/ctm`, `topic-maps/ctm/tests` and
 `topic-maps/ctm/merging-tests` and `topic-maps/ctm/association-tests`, plus `topic-maps/cxtm` and
-`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests` and `topic-maps/ctm/datetime-tests`.
+`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests` and `topic-maps/ctm/datetime-tests` and `topic-maps/ctm/timezone-tests`.
 The core reader/model uses ANSI Common Lisp; the foundation/tooling uses
 ASDF/UIOP and Python's standard library. No Quicklisp packages are required.
 
-Start with [Reading DateTime Occurrences](docs/reading-datetime-occurrences.md)
+Start with [Reading DateTime Timezone Canonicalization](docs/reading-datetime-timezones.md)
+for UTC conversion, calendar limits, actual stored strings and executable inspection.
+[Reading DateTime Occurrences](docs/reading-datetime-occurrences.md)
 for lexical/value/canonical distinctions and the two normative discrepancies.
 [Reading Date Occurrences](docs/reading-date-occurrences.md)
 for the ten original Date cases, calendar rules, stored values and inspection.
@@ -141,12 +145,14 @@ and `<path>.prefixes.json` with all seven selected observations, plus `<path>.in
 and independently checked arithmetic probes, plus `<path>.decimals.json` with
 seven Decimal object observations and 157 independent Decimal arithmetic probes,
 plus `<path>.dates.json` with five original Date results, five original rejections,
-396 independent date/calendar probes and 15 century decisions. `<path>.datetimes.json` records four actual DateTime
-models, 45 independent lexical/canonical probes, two discrepancies and the
-partial unsupported read of the original nonzero-offset case.
+396 independent date/calendar probes and 15 century decisions. `<path>.datetimes.json` records five actual DateTime
+models, 45 independent lexical/canonical probes and two executed baseline
+discrepancies. `<path>.timezones.json` adds exact UTC, fraction and model-purity
+probes, including every one of the 1681 permitted signed offset minutes.
 The merge checks include 128 graph/order variants with an independent reachability
 oracle. Reports are deterministic across the tested SBCL versions and checkout
-relocation. See [Slice 10 validation](docs/slice-10-validation.md) for current evidence.
+relocation. See [Slice 11 validation](docs/slice-11-validation.md) for current evidence.
+[Slice 10 validation](docs/slice-10-validation.md) preserves the earlier DateTime baseline.
 [Slice 9 validation](docs/slice-9-validation.md) records the accepted Date subset.
 [Slice 8 validation](docs/slice-8-validation.md) records the accepted Decimal subset.
 [Slice 7 validation](docs/slice-7-validation.md) records the accepted Integer subset.
@@ -164,6 +170,8 @@ about absent reader/model systems describe Slice 0, not the current branch.
 Slice 1 is built from `9c83db34eb1ba8091b004433f088056717dbaa7e` on
 `codex/ctm-slice-1`. Slice 2 starts from the accepted Slice 1a commit
 `fb60afd548d679d83fd8ec76bc5ff384c1e23e5f` on `codex/ctm-slice-2`.
+Slice 11 starts from `8741d155d948c7317945eee423a977940cad995e` on
+`codex/ctm-slice-11`.
 Slice 10 starts from `2ad41cd1a945a4ce97824464de40646bb899259e` on
 `codex/ctm-slice-10`.
 Slice 9 starts from `195d5f5444d776096b765d04c815c23c3db5f84c` on

@@ -11,8 +11,8 @@
   (asdf:test-system "topic-maps/ctm/tests")
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
-  ;; DateTime tests run all retained Date/numeric/identity-dependent suites once.
-  (asdf:test-system "topic-maps/ctm/datetime-tests")
+  ;; Timezone tests run all retained Date/numeric/identity-dependent suites once.
+  (asdf:test-system "topic-maps/ctm/timezone-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -27,8 +27,9 @@
                                                 (uiop:symbol-call :topic-maps.ctm.tests :integer-checks)
                                                 (uiop:symbol-call :topic-maps.ctm.tests :decimal-checks)
                                                 (uiop:symbol-call :topic-maps.ctm.tests :date-checks)
-                                                (uiop:symbol-call :topic-maps.ctm.tests :datetime-checks))
-                     :scope "Slice 10: 54 exact positive CXTM baselines, 8 specific rejections, 1 known leap-second baseline discrepancy FAIL; nonzero DateTime offsets and Date timezone canonicalization unsupported")
+                                                (uiop:symbol-call :topic-maps.ctm.tests :datetime-checks)
+                                                (uiop:symbol-call :topic-maps.ctm.tests :timezone-checks))
+                     :scope "Slice 11: 54 exact positive CXTM baselines, 8 specific rejections, 2 executed normative baseline discrepancy FAILs; nonzero DateTime UTC conversion implemented, BCE day rollover and nonzero-offset leap seconds unsupported; Date timezone canonicalization excluded")
     (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
                      (concatenate 'string report ".occurrences.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-prefix-report
@@ -40,4 +41,6 @@
     (uiop:symbol-call :topic-maps.ctm.tests :write-date-report
                      (concatenate 'string report ".dates.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-datetime-report
-                     (concatenate 'string report ".datetimes.json"))))
+                     (concatenate 'string report ".datetimes.json"))
+    (uiop:symbol-call :topic-maps.ctm.tests :write-timezone-report
+                     (concatenate 'string report ".timezones.json"))))

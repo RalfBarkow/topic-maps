@@ -8,20 +8,21 @@
 
 (defun exercise-datetime-cases ()
   (setf *datetime-observations* nil)
-  (loop for name in '("occurrence-datetime" "occurrence-datetime2" "occurrence-datetime-fractional" "occurrence-datetime-timezone")
-        for value in '("1976-09-19T12:01:01" "1976-09-19T12:02:00" "2011-01-01T00:00:00.001" "2011-01-01T00:00:00Z") do
+  (loop for name in '("occurrence-datetime" "occurrence-datetime2" "occurrence-datetime-fractional" "occurrence-datetime-timezone" "occurrence-datetime-timezone2")
+        for value in '("1976-09-19T12:01:01" "1976-09-19T12:02:00" "2011-01-01T00:00:00.001" "2011-01-01T00:00:00Z" "2010-12-31T22:00:00Z") do
     (let* ((id (format nil "ctm/in/~A.ctm" name))
            (case (first (topic-maps.test-foundation:select-cases *cxtm-corpus* :id id)))
            (doc (topic-maps.test-foundation:test-case-document-iri case))
            (map (deserialize-file (topic-maps.test-foundation:test-case-source-pathname case) :document-iri doc))
            (item (first (all-occurrences map)))
-           (named (member name '("occurrence-datetime-fractional" "occurrence-datetime-timezone") :test #'string=))
+           (named (member name '("occurrence-datetime-fractional" "occurrence-datetime-timezone" "occurrence-datetime-timezone2") :test #'string=))
            (owner (local-topic map (if named "some-topic" "topic") doc))
            (type (local-topic map (if named "datetime" "occtype") doc))
            (state (map-state map)) (retained (occurrence-handle-state (list item)))
            (actual (topic-maps.cxtm:canonicalize-octets map :base-locator doc))
            (expected (binary-file (topic-maps.test-foundation:test-case-expected-baseline case)))
-           (different (mismatch actual expected)) (leap (string= name "occurrence-datetime2")))
+           (different (mismatch actual expected)) (leap (string= name "occurrence-datetime2"))
+           (offset (string= name "occurrence-datetime-timezone2")))
       (setf (topic-maps.test-foundation:test-case-clauses case)
             '("CTM 3.2" "CTM 3.4.1" "CTM 3.10" "TMDM 4.3-4.4" "TMDM 5.6" "TMDM 6.5" "CXTM 3.16" "CXTM 4.9" "XSD 3.2.7.1-3.2.7.3" "XSD D.1"))
       (check (concatenate 'string name ":actual-model")
@@ -35,35 +36,23 @@
       (check (concatenate 'string name ":datatype-no-topic")
              (notany (lambda (tpc) (member (topic-maps.tmdm:datetime-datatype) (topic-subject-identifiers tpc) :test #'string=)) (topic-map-topics map)))
       (topic-maps.test-foundation:record-result case (if different :cxtm-mismatch :cxtm-match)
-        :diagnostics (when different (list "Known normative discrepancy: XSD 1.0 D.1 interprets the noncandidate leap second in the following minute; pinned baseline retains :60.")))
-      (check (concatenate 'string name ":required-comparison-result") (if leap different (null different)))
+        :diagnostics (when different (list (if leap
+          "Known normative discrepancy: XSD 1.0 D.1 interprets the noncandidate leap second in the following minute; pinned baseline retains :60."
+          "Known normative discrepancy: CXTM 3.16 / XSD 3.2.7.2 require 2010-12-31T22:00:00Z; pinned baseline retains +02:00."))))
+      (check (concatenate 'string name ":required-comparison-result") (if (or leap offset) different (null different)))
       (check (concatenate 'string name ":pure") (and (equal state (map-state map)) (equal retained (occurrence-handle-state (list item)))))
       (setf *cxtm-results* (append *cxtm-results* (list (list :id id :base doc :actual (cxtm map doc)
                :expected (uiop:read-file-string (topic-maps.test-foundation:test-case-expected-baseline case) :external-format :utf-8)
                :match (null different) :bytes (length actual)))))
       (push (topic-maps.test-foundation::fields "id" id "documentIRI" doc "status" (if different "fail" "pass")
-              "classification" (if leap "normative-baseline-discrepancy" "byte-exact-cxtm")
+              "classification" (if (or leap offset) "normative-baseline-discrepancy" "byte-exact-cxtm")
               "ctmSource" (uiop:read-file-string (topic-maps.test-foundation:test-case-source-pathname case) :external-format :utf-8)
               "actualObjects" (occurrence-observation map)) *datetime-observations*)
       (format t "~&DATETIME-CXTM ~A: ~A (~D bytes)~%" id (if different "FAIL-known-baseline-discrepancy" "PASS") (length actual))))
   (setf *datetime-observations* (nreverse *datetime-observations*))
-  (let* ((case (first (topic-maps.test-foundation:select-cases *cxtm-corpus* :id "ctm/in/occurrence-datetime-timezone2.ctm")))
-         (condition (handler-case (progn (deserialize-file (topic-maps.test-foundation:test-case-source-pathname case)
-                                :document-iri (topic-maps.test-foundation:test-case-document-iri case)) nil) (ctm-error (c) c))))
-    (check "nonzero-offset-original-partial-read-is-specific-unsupported"
-           (and (eq (type-of condition) 'ctm-unsupported) (eq :datetime-timezone-canonicalization (error-code condition))
-                (= 4 (error-line condition)) (> (error-column condition) 1)))
-    (setf *datetime-offset-observation* (topic-maps.test-foundation::fields
-           "id" (topic-maps.test-foundation:test-case-id case) "contractStatus" "not-run"
-           "probe" "partial-read-only; no complete CXTM contract execution"
-           "conditionClass" (symbol-name (type-of condition)) "code" (symbol-name (error-code condition))
-           "position" (error-position condition) "line" (error-line condition) "column" (error-column condition)
-           "normativeCanonicalValue" "2010-12-31T22:00:00Z"
-           "ctmSource" (uiop:read-file-string (topic-maps.test-foundation:test-case-source-pathname case) :external-format :utf-8)
-           "upstreamCXTM" (uiop:read-file-string (topic-maps.test-foundation:test-case-expected-baseline case) :external-format :utf-8)))
-    (check "nonzero-offset-original-contract-not-run" (eq :not-run (topic-maps.test-foundation:test-case-status case))))
-  (check "slice10:62-pass-1-discrepancy-210-not-run"
-         (equal (getf (topic-maps.test-foundation:summarize-corpus *cxtm-corpus*) :statuses) '(:pass 62 :fail 1 :unsupported 0 :not-run 210))))
+  (setf *datetime-offset-observation* (car (last *datetime-observations*)))
+  (check "slice11:62-pass-2-discrepancies-209-not-run"
+         (equal (getf (topic-maps.test-foundation:summarize-corpus *cxtm-corpus*) :statuses) '(:pass 62 :fail 2 :unsupported 0 :not-run 209))))
 
 (defun datetime-lexical-tests ()
   (setf *datetime-probes* nil)
@@ -128,7 +117,7 @@
     (let ((c (ctm-condition (format nil "a t: ~A." (first entry)))))
       (check (concatenate 'string "datetime-bare-diagnostic:" (first entry))
              (and (eq (type-of c) 'ctm-rejection) (eq (second entry) (error-code c)) (= 5 (error-position c)) (= 1 (error-line c)) (= 6 (error-column c))))))
-  (dolist (entry '(("2011-01-01T00:00:00+02:00" :datetime-timezone-canonicalization) ("2000-06-30T12:00:60" :datetime-leap-second-context)))
+  (dolist (entry '(("2000-06-30T12:00:60+02:00" :datetime-leap-second-context) ("2000-06-30T12:00:60" :datetime-leap-second-context)))
     (let* ((value (first entry)) (map (read-text (format nil "a t: \"~A\"^^<http://www.w3.org/2001/XMLSchema#dateTime>." value)))
            (state (map-state map)) (c (cxtm-condition (lambda () (cxtm map)))))
       (check (concatenate 'string "datetime-valid-but-unsupported:" value)
@@ -177,7 +166,7 @@
   (let ((*checks* nil))
     (exercise-datetime-cases) (datetime-lexical-tests) (datetime-error-tests) (datetime-merge-order-tests)
     (setf *last-datetime-checks* (nreverse *checks*))
-    (format t "~&DATETIMES-PASS: ~D semantic checks; corpus: 62 PASS, 1 known normative discrepancy FAIL, 210 NOT-RUN.~%" (length *last-datetime-checks*)) t))
+    (format t "~&DATETIMES-PASS: ~D semantic checks; corpus: 62 PASS, 2 known normative discrepancy FAIL, 209 NOT-RUN.~%" (length *last-datetime-checks*)) t))
 
 (defun write-datetime-report (path)
   (with-open-file (out path :direction :output :if-exists :supersede :if-does-not-exist :create)
@@ -185,7 +174,7 @@
      (topic-maps.test-foundation::fields "kind" "datetime-semantic-and-cxtm-evidence" "passed" (length *last-datetime-checks*) "failed" 0
        "checks" (topic-maps.test-foundation::json-array *last-datetime-checks*) "cases" (topic-maps.test-foundation::json-array *datetime-observations*)
        "lexicalProbes" (topic-maps.test-foundation::json-array *datetime-probes*)
-       "unsupportedConstructObservations" *datetime-offset-observation*
+       "timezoneObservation" *datetime-offset-observation*
        "normativeDiscrepancies" (topic-maps.test-foundation::json-array
          (list (topic-maps.test-foundation::fields "id" "ctm/in/occurrence-datetime2.ctm" "contractStatus" "fail" "reason" "XSD D.1 following-minute interpretation: 1976-09-19T12:02:00; baseline retains :60")
-               (topic-maps.test-foundation::fields "id" "ctm/in/occurrence-datetime-timezone2.ctm" "contractStatus" "not-run" "reason" "XSD 3.2.7.2 UTC form is 2010-12-31T22:00:00Z; baseline retains +02:00; conversion unsupported")))) out) (terpri out)))
+               (topic-maps.test-foundation::fields "id" "ctm/in/occurrence-datetime-timezone2.ctm" "contractStatus" "fail" "reason" "XSD 3.2.7.2 UTC form is 2010-12-31T22:00:00Z; unchanged baseline retains +02:00; complete comparison executed")))) out) (terpri out)))

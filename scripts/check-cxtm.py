@@ -8,17 +8,21 @@ root = pathlib.Path(__file__).resolve().parent.parent
 report = json.loads(pathlib.Path(sys.argv[1]).read_text())
 assert report['kind'] == 'cxtm-byte-equality' and report['failed'] == 0
 assert report['passed'] == len(report['checks']) == len(set(report['checks']))
-expected_count = {'--slice-5': 28, '--slice-6': 33, '--slice-7': 39, '--slice-8': 46, '--slice-9': 51, '--slice-10': 55}.get(sys.argv[2] if len(sys.argv) > 2 else '', 24)
+expected_count = {'--slice-5': 28, '--slice-6': 33, '--slice-7': 39, '--slice-8': 46, '--slice-9': 51, '--slice-10': 55, '--slice-11': 56}.get(sys.argv[2] if len(sys.argv) > 2 else '', 24)
 assert len(report['cases']) == expected_count
 for case in report['cases']:
     actual = case['actualCXTM'].encode('utf-8')
     expected = (root / 'vendor/cxtm/ctm/baseline' / (pathlib.Path(case['id']).name + '.cxtm')).read_bytes()
     assert expected == case['expectedCXTM'].encode('utf-8')
-    discrepancy = expected_count == 55 and case['id'] == 'ctm/in/occurrence-datetime2.ctm'
+    discrepancy = expected_count >= 55 and (case['id'] == 'ctm/in/occurrence-datetime2.ctm' or expected_count == 56 and case['id'] == 'ctm/in/occurrence-datetime-timezone2.ctm')
     if discrepancy:
         assert actual != expected and case['status'] == 'fail'
-        assert b'<value>1976-09-19T12:02:00</value>' in actual
-        assert b'<value>1976-09-19T12:01:60</value>' in expected
+        if case['id'].endswith('timezone2.ctm'):
+            assert b'<value>2010-12-31T22:00:00Z</value>' in actual
+            assert b'<value>2011-01-01T00:00:00+02:00</value>' in expected
+        else:
+            assert b'<value>1976-09-19T12:02:00</value>' in actual
+            assert b'<value>1976-09-19T12:01:60</value>' in expected
     else:
         assert actual == expected and case['status'] == 'pass', case['id']
     assert case['byteCount'] == len(actual)
@@ -44,4 +48,4 @@ for case in report['cases']:
     for ref in xml.iter():
         if 'topicref' in ref.attrib:
             assert 1 <= int(ref.attrib['topicref']) <= len(topics)
-print(f'CXTM-INDEPENDENT-PASS: {expected_count - int(expected_count == 55)} byte-exact unchanged baselines; {int(expected_count == 55)} explicit normative discrepancy; canonical XML and reference integrity')
+print(f'CXTM-INDEPENDENT-PASS: {expected_count - max(0, expected_count-54)} byte-exact unchanged baselines; {max(0, expected_count-54)} explicit normative discrepancy; canonical XML and reference integrity')
