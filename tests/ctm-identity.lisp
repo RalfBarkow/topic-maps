@@ -181,7 +181,7 @@
       (check "undefined-prefix-condition-class" (typep condition 'undefined-prefix))
       (check "error-line-column" (and (= 2 (error-line condition)) (= 3 (error-column condition)))))
     (dolist (text '("a isa person." "def tpl() a. end" "%include <other.ctm>"
-                    "? - \"anonymous\"."  "a - \"\"\"triple\"\"\"."))
+                    "? - \"anonymous\" ~r."  "a - \"\"\"triple\"\"\"."))
       (check (concatenate 'string "unsupported-not-silently-accepted:" text) (unsupported-p text)))
     (check "scope-on-bare-topic-rejected"
            (eq :unexpected-token (error-code (rejection "a @theme."))))

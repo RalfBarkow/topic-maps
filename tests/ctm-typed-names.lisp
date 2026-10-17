@@ -176,7 +176,7 @@
     (check "typed-reader:scope-now-supported"
            (and (eq (local-topic map "type") (topic-name-type name))
                 (equal (list (local-topic map "theme")) (topic-maps.tmdm:topic-name-scope name)))))
-  (dolist (text '("a - [-\"fullname\"]:\"Name\"."
+  (dolist (text '("a - [-\"fullname\" ~r]:\"Name\"."
                   "a - type:\"Name\" ~reifier." "a - type:\"Name\" (\"variant\" @theme ~r)."))
     (check (concatenate 'string "typed-reader:excluded-feature:" text) (typep (ctm-condition text) 'ctm-unsupported))))
 

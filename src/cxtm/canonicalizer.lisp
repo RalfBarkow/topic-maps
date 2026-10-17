@@ -225,8 +225,8 @@
 
 (defun canonicalize (map &key base-locator)
   "Return CXTM as a string. BASE-LOCATOR is an explicit absolute IRI (CXTM 3.1).
-Only the existing TMDM schema is supported: Topic-set Scope, null Reifier, no
-Variants or non-Topic identifiers other than Occurrence identifiers. Does not mutate MAP or handles."
+Only the existing TMDM schema is supported: Topic-set Scope and Variants, null
+Reifier and no non-Topic identifiers other than Occurrence identifiers. Does not mutate MAP or handles."
   (unless (and (stringp base-locator) (position #\: base-locator)
                (let ((scheme (subseq base-locator 0 (position #\: base-locator))))
                  (and (plusp (length scheme))

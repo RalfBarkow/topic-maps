@@ -1,7 +1,8 @@
 (in-package #:topic-maps.ctm)
 
-(defstruct (parser (:constructor make-parser (lexer document-iri)))
-  lexer document-iri lookahead (prefixes (make-hash-table :test #'equal)))
+(defstruct (parser (:constructor make-parser (lexer document-iri wildcard-iri wildcard-counter)))
+  lexer document-iri wildcard-iri wildcard-counter lookahead
+  (wildcards (make-hash-table :test #'equal)) (prefixes (make-hash-table :test #'equal)))
 (defun look (parser)
   (or (parser-lookahead parser)
       (setf (parser-lookahead parser) (next-token (parser-lexer parser)))))
@@ -10,6 +11,23 @@
 (defun punctuation-p (parser character)
   (and (eq :punctuation (token-kind (look parser)))
        (eql character (token-value (look parser)))))
+
+(defun require-wildcard-environment (iri counter)
+  (handler-case (require-document-iri iri)
+    (ctm-rejection () (problem 'ctm-rejection :invalid-wildcard-iri 0 "Wildcard IRI must be an absolute, fragment-free IRI.")))
+  (unless (and (integerp counter) (>= counter 0))
+    (problem 'ctm-rejection :invalid-wildcard-counter 0 "Wildcard counter must be a non-negative integer.")))
+
+(defun wildcard-locator (parser &optional name)
+  "CTM 3.3.8: cache locators, not Lisp object handles; identity uses INTERN-TOPIC."
+  (or (and name (gethash name (parser-wildcards parser)))
+      (let ((iri (format nil "~A#$__~D~@[.~A~]" (parser-wildcard-iri parser)
+                         (incf (parser-wildcard-counter parser)) name)))
+        (when name (setf (gethash name (parser-wildcards parser)) iri)) iri)))
+
+(defun topic-reference-start-p (token)
+  (or (member (token-kind token) '(:identifier :iri :qname :wildcard))
+      (and (eq :punctuation (token-kind token)) (find (token-value token) "=^["))))
 
 (defun resolve-qname (parser token)
   "CTM 3.3.4: concatenate the resolved binding and local part exactly once."
@@ -52,6 +70,10 @@
        (values (or explicit-kind :subject-identifier)
           (resolve-iri (token-value token) (parser-document-iri parser) (token-position token))))
       (:qname (values (or explicit-kind :subject-identifier) (resolve-qname parser token)))
+      (:wildcard
+       (when explicit-kind
+         (problem 'ctm-rejection :expected-iri (token-position token) "Explicit = or ^ needs an IRI reference."))
+       (values :item-identifier (wildcard-locator parser (token-value token))))
       (:punctuation
        (case (token-value token)
          (#\= (if explicit-kind
@@ -67,9 +89,18 @@
   (multiple-value-bind (kind iri) (identity-value parser)
     (topic-maps.tmdm:intern-topic map kind iri)))
 
+(defun topic-reference (parser map)
+  "CTM 3.3.7: one recursive reference path for Types, Players and Scope themes."
+  (if (punctuation-p parser #\[)
+      (progn
+        (consume parser)
+        (let ((topic (topic-maps.tmdm:intern-topic map :item-identifier (wildcard-locator parser))))
+          (read-topic-tail parser map topic #\] :required t)))
+      (identity-reference parser map)))
+
 (defun read-scope (parser map)
   "CTM 3.3.9: optional @ followed by a nonempty comma-separated Topic set.
-Use the existing identity resolver; embedded/wildcard Topics remain unsupported.
+Use the shared Topic reference resolver, including Embedded Topics and Wildcards.
 The owning information item is not constructed until this function finishes."
   (when (punctuation-p parser #\@)
     (consume parser)
@@ -83,11 +114,10 @@ The owning information item is not constructed until this function finishes."
             (problem 'ctm-rejection :expected-scope-theme (lexer-cursor (parser-lexer parser))
                      "Expected a Theme, not a reifier marker.")))
         (let ((token (look parser)))
-          (unless (or (member (token-kind token) '(:identifier :iri :qname))
-                      (and (eq :punctuation (token-kind token)) (find (token-value token) "=^")))
+          (unless (topic-reference-start-p token)
             (problem 'ctm-rejection :expected-scope-theme (token-position token)
                      "Expected a Topic reference after '@' or the scope comma."))
-          (push (identity-reference parser map) themes))
+          (push (topic-reference parser map) themes))
         (if (punctuation-p parser #\,) (consume parser) (return (nreverse themes)))))))
 
 (defun literal-iri-reference (parser)
@@ -167,18 +197,21 @@ The owning information item is not constructed until this function finishes."
                           (token-position token) "Expected a supported CTM literal value.")))))
 
 (defun read-identity-tail (parser map topic)
-  (let ((start (look parser)))
-    (multiple-value-bind (kind iri) (identity-value parser)
+  (let* ((start (look parser)) (embedded (punctuation-p parser #\[))
+         (type (when embedded (topic-reference parser map))))
+    ;; Identity tail statements add directly to their owner, without constructing
+    ;; an intermediate Topic. Identity-form Type references use the same resolver.
+    (multiple-value-bind (kind iri) (unless embedded (identity-value parser))
       (if (punctuation-p parser #\:)
           (progn
             (consume parser)
             (multiple-value-bind (value datatype) (read-literal parser)
-              (let* ((type (topic-maps.tmdm:intern-topic map kind iri))
+              (let* ((type (or type (topic-maps.tmdm:intern-topic map kind iri)))
                      (scope (read-scope parser map)))
                 (topic-maps.tmdm:add-occurrence topic type value :datatype datatype :scope scope)
                 (topic-maps.tmdm:canonical-topic topic))))
-          (if (eq :identifier (token-kind start))
-              (if (punctuation-p parser #\()
+          (if (or embedded (member (token-kind start) '(:identifier :wildcard)))
+              (if (and (eq :identifier (token-kind start)) (punctuation-p parser #\())
                   (problem 'ctm-unsupported :topic-tail (token-position start) "Template invocations are outside this subset.")
                   (problem 'ctm-rejection :expected-occurrence-type-separator (token-position (look parser))
                            "Expected ':' after the Occurrence Type."))
@@ -203,12 +236,10 @@ The owning information item is not constructed until this function finishes."
 
 (defun read-name (parser map topic)
   "CTM 3.11: optional Topic reference plus ':' followed by a string.
-Use the existing identity resolver; embedded Topics remain unsupported."
+Use the shared Topic reference resolver."
   (let* ((token (look parser))
-         (typed (or (member (token-kind token) '(:identifier :iri :qname))
-                    (and (eq :punctuation (token-kind token))
-                         (find (token-value token) "=^"))))
-         (type (when typed (identity-reference parser map))))
+         (typed (topic-reference-start-p token))
+         (type (when typed (topic-reference parser map))))
     (when typed
       (unless (punctuation-p parser #\:)
         (problem 'ctm-rejection :expected-name-type-separator
@@ -225,29 +256,33 @@ Use the existing identity resolver; embedded Topics remain unsupported."
         (loop while (punctuation-p parser #\() do (read-variant parser map name))))
     (topic-maps.tmdm:canonical-topic topic)))
 
-(defun read-topic (parser map &optional (topic (identity-reference parser map)))
-  (let ((has-tail nil))
+(defun read-topic-tail (parser map topic terminator &key required)
+  "CTM 3.9: the same Tail reader ends at '.' or the caller's Embedded ']'."
+  (let ((has-tail nil) (seen-tail nil))
     (loop
       (cond
-        ((punctuation-p parser #\.) (consume parser) (return topic))
+        ((punctuation-p parser terminator)
+         (when (and required (not seen-tail))
+           (problem 'ctm-rejection :expected-topic-tail (token-position (look parser)) "An Embedded Topic requires a nonempty Topic Tail."))
+         (consume parser) (return (topic-maps.tmdm:canonical-topic topic)))
+        ((and (char= terminator #\]) (punctuation-p parser #\.))
+         (problem 'ctm-rejection :missing-embedded-close (token-position (look parser)) "Embedded Topics end with ']', not a period."))
         ((punctuation-p parser #\-)
          (when has-tail
            (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
          (consume parser)
          (setf topic (read-name parser map topic))
-         (setf has-tail t))
+         (setf has-tail t seen-tail t))
         ((and has-tail (punctuation-p parser #\;))
          (consume parser)
-         (setf has-tail nil)
-         (when (punctuation-p parser #\.) (consume parser) (return topic)))
+         (setf has-tail nil))
         ((eq :eof (token-kind (look parser)))
-         (problem 'ctm-rejection :missing-period (token-position (look parser)) "Topic declaration requires a final period."))
-        ((or (and (eq :punctuation (token-kind (look parser)))
-                  (find (token-value (look parser)) "=^"))
-             (member (token-kind (look parser)) '(:identifier :iri :qname)))
+         (problem 'ctm-rejection (if (char= terminator #\]) :missing-embedded-close :missing-period)
+                  (token-position (look parser)) "Expected the closing Topic/Embedded Topic delimiter."))
+        ((topic-reference-start-p (look parser))
          (when has-tail
            (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
-         (setf topic (read-identity-tail parser map topic) has-tail t))
+         (setf topic (read-identity-tail parser map topic) has-tail t seen-tail t))
         ((punctuation-p parser #\()
          (problem 'ctm-rejection :unexpected-variant (token-position (look parser)) "A Variant must immediately follow a Topic Name."))
         (t (problem 'ctm-rejection :unexpected-token (token-position (look parser)) "Unexpected token after topic or name."))))))
@@ -260,7 +295,7 @@ Use the existing identity resolver; embedded Topics remain unsupported."
       (when (or (punctuation-p parser #\)) (eq :eof (token-kind (look parser))))
         (problem 'ctm-rejection :expected-role (token-position (look parser)) "Expected a nonempty Association role declaration."))
       (when (= 2 (length roles)) (setf third-position (token-position (look parser))))
-      (let* ((role-type (identity-reference parser map))
+      (let* ((role-type (topic-reference parser map))
              (type-end (lexer-cursor (parser-lexer parser)))
              (colon (look parser)))
         (unless (punctuation-p parser #\:)
@@ -276,7 +311,7 @@ Use the existing identity resolver; embedded Topics remain unsupported."
           (when (or (eq :eof (token-kind player-token))
                     (punctuation-p parser #\)) (punctuation-p parser #\,))
             (problem 'ctm-rejection :expected-role-player (token-position player-token) "Expected a Topic as the Role player.")))
-        (push (list role-type (identity-reference parser map)) roles))
+        (push (list role-type (topic-reference parser map)) roles))
       (cond ((punctuation-p parser #\,) (consume parser))
             ((punctuation-p parser #\)) (consume parser) (return))
             ((eq :eof (token-kind (look parser)))
@@ -287,13 +322,16 @@ Use the existing identity resolver; embedded Topics remain unsupported."
     (let ((scope (read-scope parser map)))
       (topic-maps.tmdm:make-association map type (nreverse roles) :scope scope))))
 
-(defun deserialize-string (text &key document-iri source-name)
+(defun deserialize-string (text &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0))
   "Read the documented CTM subset, with per-document prefixes and qualified strings.
+Return the Map and final Wildcard Counter as two values. Wildcard IRI defaults
+to Document IRI; local identifiers and relative IRIs still use Document IRI.
 Source positions are zero-based character offsets; lines/columns are one-based."
   (check-type text string)
   (let ((*source-name* source-name) (*source-text* text))
     (require-document-iri document-iri)
-    (let ((parser (make-parser (make-lexer text) document-iri))
+    (require-wildcard-environment wildcard-iri wildcard-counter)
+    (let ((parser (make-parser (make-lexer text) document-iri wildcard-iri wildcard-counter))
           (map (topic-maps.tmdm:make-topic-map)))
       (handler-bind ((topic-maps.tmdm:variant-error
                        (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c)
@@ -301,20 +339,25 @@ Source positions are zero-based character offsets; lines/columns are one-based."
         (loop until (eq :eof (token-kind (look parser))) do
           (if (eq :directive (token-kind (look parser)))
               (read-prefix-directive parser)
-              (let ((topic (identity-reference parser map)))
+              (let* ((embedded (punctuation-p parser #\[)) (topic (topic-reference parser map)))
                 (if (punctuation-p parser #\()
                     (read-association parser map topic)
-                    (read-topic parser map topic))))))
-      map)))
+                    (if embedded
+                        (problem 'ctm-rejection :embedded-topic-at-top-level (token-position (look parser))
+                                 "An Embedded Topic at top level must be an Association Type, not a standalone declaration.")
+                        (read-topic-tail parser map topic #\.)))))))
+      (values map (parser-wildcard-counter parser)))))
 
-(defun deserialize-file (pathname &key document-iri source-name)
+(defun deserialize-file (pathname &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0))
   "Read a UTF-8 CTM file, with optional UTF-8 BOM, using an explicit Document IRI.
 Other encoding directives are UNSUPPORTED. File I/O errors propagate unchanged."
   (let ((*source-name* source-name) (*source-text* ""))
     (require-document-iri document-iri)
+    (require-wildcard-environment wildcard-iri wildcard-counter)
     (with-open-file (input pathname :direction :input :element-type '(unsigned-byte 8))
       (let ((bytes (make-array (file-length input) :element-type '(unsigned-byte 8))))
         (unless (= (length bytes) (read-sequence bytes input))
           (error "Input file changed or was truncated during reading."))
         (deserialize-string (decode-utf8 bytes :strip-bom t)
-                            :document-iri document-iri :source-name source-name)))))
+                            :document-iri document-iri :source-name source-name
+                            :wildcard-iri wildcard-iri :wildcard-counter wildcard-counter)))))

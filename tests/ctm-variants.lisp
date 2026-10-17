@@ -301,8 +301,9 @@
            (e (condition-from (lambda () (topic-maps.ctm:deserialize-file
                    (topic-maps.test-foundation:test-case-source-pathname case)
                    :document-iri (topic-maps.test-foundation:test-case-document-iri case))))))
-      (check (concatenate 'string "variant-reader:excluded-contract-remains-unexecuted:" file)
-             (and (typep e 'topic-maps.ctm:ctm-unsupported)
+      (check (concatenate 'string "variant-reader:reference-contract-remains-unexecuted:" file)
+             (and (if (member file '("variant-scope-embedded" "variant-scope-embedded2") :test #'string=)
+                      (null e) (typep e 'topic-maps.ctm:ctm-unsupported))
                   (eq :not-run (topic-maps.test-foundation:test-case-status case)))))))
 
 (defun ordering-tests ()

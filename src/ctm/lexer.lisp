@@ -85,7 +85,7 @@
 A dot followed by a digit can belong to a decimal; a terminal dot stays punctuation."
   (setf (lexer-cursor lexer) start)
   (loop for c = (peek-character lexer)
-        while (and c (not (whitespace-p c)) (not (find c ";@~()#^<>\""))
+        while (and c (not (whitespace-p c)) (not (find c ";@~()#^<>\"[]"))
                    (or (not (char= c #\.))
                        (and (peek-character lexer 1) (find (peek-character lexer 1) "0123456789"))))
         do (take-character lexer))
@@ -119,6 +119,14 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
                 (peek-character lexer 1) (find (peek-character lexer 1) "0123456789")))
        (read-number-token lexer start))
       ((char= c #\") (make-token :kind :string :value (read-ctm-string lexer start) :position start))
+      ((char= c #\?)
+       ;; A named wildcard requires an immediately adjacent identifier.
+       (let ((name-start (lexer-cursor lexer)))
+         (when (name-start-p (peek-character lexer)) (take-character lexer) (scan-name lexer))
+         (make-token :kind :wildcard
+                     :value (when (> (lexer-cursor lexer) name-start)
+                              (subseq text name-start (lexer-cursor lexer)))
+                     :position start)))
       ((char= c #\<)
        (loop while (and (peek-character lexer) (not (eql #\> (peek-character lexer))))
              do (take-character lexer))
@@ -159,7 +167,7 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
                 (loop while (name-part-p (peek-character lexer)) do (take-character lexer)))
             (make-token :kind :qname :value (subseq text start (lexer-cursor lexer)) :position start))
            (t (make-token :kind :identifier :value head :position start)))))
-      ((find c ".;-=^:(),@") (make-token :kind :punctuation :value c :position start))
+      ((find c ".;-=^:(),@[]") (make-token :kind :punctuation :value c :position start))
       ((char= c #\%)
        ;; Production [71] has a literal terminal followed by an identifier;
        ;; unlike Role separators it does not require intervening whitespace.
@@ -171,7 +179,7 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
              (problem 'ctm-unsupported :unsupported-directive start
                       (format nil "Directive %~A is outside the implemented subset."
                               (subseq text (1+ start) (lexer-cursor lexer)))))))
-      ((find c "?[$~")
+      ((find c "$~")
        (problem 'ctm-unsupported :unsupported-construct start
                 (format nil "Construct starting with ~S is outside the implemented subset." c)))
       (t (problem 'ctm-rejection :unexpected-character start (format nil "Unexpected character ~S." c))))))

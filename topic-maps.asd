@@ -27,8 +27,8 @@
                (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations")))
 
 (asdf:defsystem "topic-maps/ctm"
-  :description "CTM identity/names/variants/associations and supported literal occurrences"
-  :version "0.14.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :description "CTM recursive Topic references, Wildcards, names/variants/associations and supported literals"
+  :version "0.15.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/ctm/package") (:file "src/ctm/conditions")
                (:file "src/ctm/unicode") (:file "src/ctm/iri")
                (:file "src/ctm/lexer") (:file "src/ctm/reader")))
@@ -153,3 +153,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.variant.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/ctm/reference-tests"
+  :description "Wildcard environment, recursive Embedded Topics and canonical Topic references"
+  :depends-on ("topic-maps/ctm/variant-tests") :serial t
+  :components ((:file "tests/ctm-references"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.reference.tests :run-tests)))

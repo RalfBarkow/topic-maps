@@ -1,0 +1,283 @@
+{
+  "baseCommit": "4f7b4d26d40f8f5566594aa2e3ad6296d44fc4c3",
+  "branch": "codex/ctm-slice-15",
+  "runtime": "SBCL 2.5.4",
+  "startedAtUTC": "2026-10-17T20:45:36.052246+00:00",
+  "finishedAtUTC": "2026-10-17T20:45:47.446597+00:00",
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)",
+    "/usr/bin/env",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "SBCL=/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "TOPIC_MAPS_REPORT=/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/ctm-slice-15-validation-6rcwkfp0/validation.json",
+    "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+  ],
+  "exitCode": 0,
+  "freshSBCL": true,
+  "network": "denied by sandbox-exec",
+  "regressionChecks": {
+    "FOUNDATION": 54,
+    "CTM-IDENTITY-SEMANTICS": 123,
+    "CTM-MERGING-SEMANTICS": 646,
+    "CTM-ASSOCIATIONS-SEMANTICS": 657,
+    "CXTM": 445,
+    "OCCURRENCES": 1101,
+    "PREFIX-DATATYPES": 150,
+    "INTEGERS": 665,
+    "DECIMALS": 715,
+    "DATES": 1806,
+    "DATETIMES": 217,
+    "TIMEZONES": 1944,
+    "TYPED-NAMES": 106,
+    "SCOPES": 293,
+    "VARIANTS": 324,
+    "REFERENCES": 238
+  },
+  "totalLispChecks": 9484,
+  "importedStatuses": {
+    "pass": 93,
+    "fail": 2,
+    "unsupported": 0,
+    "not-run": 178
+  },
+  "transitions": [
+    [
+      "ctm/in/association-scope-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/association-scope-embedded2.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/association-type-embedded-merge.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/association-type-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/embedded-semicolon.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/name-scope-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/name-scope-embedded2.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/name-type-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/nested-twice.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/occurrence-scope-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/occurrence-scope-embedded2.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/occurrence-type-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/role-player-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/role-type-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/subject-identifier-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/variant-scope-embedded.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/variant-scope-embedded2.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/wildcard-named-merge.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/wildcard-named.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/wildcard-named2.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/in/wildcard.ctm",
+      "not-run",
+      "pass"
+    ],
+    [
+      "ctm/invalid/embedded-topic-global-scope.ctm",
+      "not-run",
+      "pass"
+    ]
+  ],
+  "previous64CXTMOutputsAndOutcomesUnchanged": true,
+  "originalCorpusAndReferencesUnchanged": true,
+  "sourceSHA256": {
+    "src/package.lisp": "1f80cc513a004287bf2691ee7e2d03ea9eec929ddcf980a38c055ae9d29a59c4",
+    "src/filesystem.lisp": "472bd62e0d836939fd145741cb9077e923f3cba82e04dc644d059ac2c4c9296f",
+    "src/corpus.lisp": "af7f3b93a170db36ab5a962bfa13aaff38288b3e3e5c32e44cc15367f4c238a0",
+    "src/report.lisp": "b548959df4de210068718f4f041e29132782046093cf3236662d983cb23bd4fe",
+    "src/cxtm/package.lisp": "ead818427000962e3bcd374711d311204d615fa313d1f8c4d89a63c7f47cd97b",
+    "src/cxtm/canonicalizer.lisp": "d8c49b9ed6f8ca733c51091fcade5c65202358d1c08b50c42df8350cc42248cb",
+    "src/cxtm/nfc-data.lisp": "d6e93694673f37d1b46cbb8afb1948a913efa2a218755b19ecf7bedda9e7d844",
+    "src/cxtm/unicode.lisp": "fc96efb81c0dd503d28821751675539eb517304f039a82cec7866a51cfa8297a",
+    "src/tmdm/package.lisp": "f7698c091d6ec71f1ef6525c57b6e4731688e209c703dbcfe0f104a37f45ef2d",
+    "src/tmdm/integers.lisp": "4b37be581f871f59ac06d7ed47435266d09b4b68ce2310d00716aabd7c8f8c31",
+    "src/tmdm/merging.lisp": "ac19eb21c44fd8567f2b3133b15c459c0daf61548d264d2b2102987c1f62d61a",
+    "src/tmdm/datetimes.lisp": "97fab02c50b92bdb6ff66babe38d794ee78cfe23cff8ed2e102fe7b565a12402",
+    "src/tmdm/occurrences.lisp": "5c06f43b3434a8f6d7c6794486cd20d662e27f58a735be9e1538c14d5e1a1986",
+    "src/tmdm/variants.lisp": "48c02a584d05647dfd9fd6c0926dd8b520282673d47617a259bd77cdf7cfc28b",
+    "src/tmdm/dates.lisp": "cce7999eeb4df5d39aab1152a73971ae21e20059fd57b9b2a6b202b608e2535c",
+    "src/tmdm/associations.lisp": "4c5a3df075f63de8c01300530a63f102c1c24d6a1461179b3ae72c7ae2c7b97f",
+    "src/tmdm/decimals.lisp": "9b27880929a42afd89b1745860582ca48f41e2d7ce02bd7422cf3b730464867a",
+    "src/tmdm/items.lisp": "f611270eb3ed0892b505c97230871597332180c59a537b102eb431c7db752517",
+    "src/ctm/package.lisp": "117964092d904ac15b279e0b4a9562e41c8c5857e8cd952795d2a394f644c554",
+    "src/ctm/reader.lisp": "f671002503e5e2a4c06b32f3610f583228db87831bc10d3b61952063b077780f",
+    "src/ctm/unicode.lisp": "55ce1af0b45d0f75a4162f8aba9fa8c1fd87ef1ef5f374efa85fe2f3c17f219f",
+    "src/ctm/lexer.lisp": "27f873ccea52126ce11694a2b15ffa6950c8761ef2f7d3ee8ca66af429426201",
+    "src/ctm/iri.lisp": "b111448eec9ce0accee0fc48fd8f80210f400ce5617cc20e6ecadae0b6adcc19",
+    "src/ctm/conditions.lisp": "166ff3c8a975a0bb01cde90f1c84eef4b62c6c5cc8f9b7322e4850c9614468b8",
+    "tests/ctm-report.lisp": "c202e0360ea46bdb13d82bcc1a7f86c03fc1506e926ba1327448126918ff7697",
+    "tests/ctm-merging.lisp": "12f8d4c05f58ab698346aee3561dc69024866db0e9ad4e57ecdd3b944dcf1371",
+    "tests/package.lisp": "446b55f7e7917fdd68a5c797b20518535144ae636a630c08e0f866c71153f969",
+    "tests/ctm-decimals.lisp": "714293c865e355f89aa9911011067c3425c12be5e1bf838be1b4a682c53dd866",
+    "tests/cxtm.lisp": "5786199b6e68c7b52288ce708c37035592a11d9bf81157f62b1da9059cbc8712",
+    "tests/association-report.lisp": "53bae4008ad496220ab9521f26f03883eb075252f910fbae1dbc19b97750b18f",
+    "tests/ctm-datetime-timezones.lisp": "9ca6eeb63e9dc9c312e3d834e1c1fc3fd7da4a2c02fbd2e2b64759fd4bdd3a49",
+    "tests/ctm-scopes.lisp": "cbeb7e89fa71db7e9e989767e1a5ace5df4c28006ffbda278fec61eafcf76ba6",
+    "tests/ctm-occurrences.lisp": "6176784b41ca222237ebe2ef8efb6fa58981a362a63c4fd77e98125759d2808b",
+    "tests/ctm-dates.lisp": "da85e2e71da0f17c38238bf121b598e34af87b9f726ccbfce648a6ae8e0aad81",
+    "tests/ctm-typed-names.lisp": "63bcc61a874c4d82c3a0e39b81590b72230dcd3f1462a3c749c556994d019ffe",
+    "tests/ctm-associations.lisp": "0ffc9375a4963441d30f538ca201b1bbce6e80d4aaed7d5fb0cd01351818a55e",
+    "tests/ctm-prefixes.lisp": "a68f87e12410fa61bd0c713104d1457a9bb0a0ddf8cbd1bde817fdd0896ff80b",
+    "tests/ctm-references.lisp": "e1efe5f152793bf9d60a90636ec41ea9203d34c3b7076663d8736304d9deee58",
+    "tests/foundation.lisp": "93ddfa5e5f5f17285bf1280f17bc24fcab127d191c9496756629d18707167fea",
+    "tests/test_corpus.py": "fd7ccdb2e1b814a4dd0944cee6c09ebab0a332dde30741094905b854d09a88a6",
+    "tests/ctm-package.lisp": "78c788d026a13565eeb6183ca2874484d3a52ee71b3846eab30fa9d34ad0c385",
+    "tests/association-graphs.lisp": "c3bab14683c0fe9dc3dc9e1ef724793862e3ae883d3d783f057cdac9afbd989c",
+    "tests/ctm-variants.lisp": "8430e9572b2e1b14857bb45bfa959dca37ee5118f3ed35975191ad70108c6dec",
+    "tests/ctm-integers.lisp": "18b7fa387fbd3cfae3e245ea0010c4665d09db75e278cb63522d6220506ca7e4",
+    "tests/ctm-datetimes.lisp": "130a8997497b4e5d2d0f19ec7e77988019f28c287c234b5ef7e442fd4a3439cd",
+    "tests/ctm-identity.lisp": "8238f5594671284b5856d975da150e50c1b580b4273129e1f5373293131e936a",
+    "tests/merge-graphs.lisp": "6ae0d02a2e28eada4c2b4531078277fc4d6f07cb4a0f816614d3bef3ab2da21e",
+    "scripts/check-timezones.py": "2d14d8cca241c909b01edbfad7975ee714d7301e13f47b7aba10020cc4576d54",
+    "scripts/check-typed-names.py": "ef6b052f552dfd008e05282e7d2d8ae8b537a945acedfc4e7c0a46ea4f822d4c",
+    "scripts/validate-slice-6.py": "4f952ad9a60f0591c7512ad6aa1dc33956cebc935476cfa10de7d79905c49daa",
+    "scripts/validate-slice-7.py": "c4639f6a1aface28b914a0c1c9fb54fcb9bfcda7b14141f7c14a855b55545d99",
+    "scripts/check-cxtm.py": "a411fa88ad4c87e93471292708036e5b29e648e4cd363a2c52f22fedd4a68151",
+    "scripts/check-variants.py": "b46beb92b0765129b96a9df1b424c190789977a1d50a249af47893fa1733602f",
+    "scripts/fresh-sbcl.lisp": "e5ac4ce2a37155a605aaaa918058edb02ce7f8750af9793ff413c3a5a2c28195",
+    "scripts/check-scopes.py": "291931a3e7e6d903bb7acbcb41aa149e7d63897646745194ca876d9353f929c1",
+    "scripts/check-merging.py": "6f4d8242524f0ecaed334d88fb5f2a127910dac3d67cd10f00bdfe7d22a4c76d",
+    "scripts/validate-slice-8.py": "8c98cbd0e007c93fddf35c0525b86563c559113213d9323275cd255fa95363a4",
+    "scripts/check-integers.py": "cfa6c01f08ffd523ce2b8a9924bcd406a0532e689bbd05f8a204a43ed6276690",
+    "scripts/check-dates.py": "62e536da481bfe3b304077b319f9d3935f229e4474c747b8957f7c44e75f79de",
+    "scripts/validate-slice-13.py": "d17711a21a78fa58d1e18310cd4aa5b5fc13939d7d34a7edddbe0ca5b0ec3091",
+    "scripts/check-nfc.py": "4616fb09ed145358b7fcebc89354af5c50e4863560dfc7eb3b1ee9c1ab0f4e18",
+    "scripts/check-associations.py": "91f61e3656f9f56e2e43a1f513ebbb7ea54499845e4a5c1336e06f2a4547d251",
+    "scripts/check-references.py": "8d8bba4b1ab048a1122b20f1dd64e04fd12deadb805b6b5579c286b16818b7c7",
+    "scripts/validate-slice-9.py": "0e523de6d7d952a0958129be3c4427af17f9bb7445a8af8206cd399d6232d1a5",
+    "scripts/validate-slice-14.py": "1b30337fb575903afbdfd1e220eabc5686e5057bbc42796a2931079aff5be874",
+    "scripts/check-prefixes.py": "754eaee06045603b7bc0f75f2c4973d18692e038ee374e490eac48e033eb51b3",
+    "scripts/validate-slice-10.py": "cb41eef305655b5efafeb8c9471772969fdd9546b593c8f5358c515e215e9102",
+    "scripts/validate-slice-12a.py": "85533b3497cfb805f32866a9866659a67cf303325c8c2c0f50790a01e3c41486",
+    "scripts/check-occurrences.py": "d78236ad469277cf8c2c27e99d7a976625c607acc48ddc622f01b0e881b5eef4",
+    "scripts/check-semantics.py": "a70164a461a90d0dc09e73c97d0db7cc338022bf8a069b0f056734603da0c48e",
+    "scripts/validate-slice-11.py": "47b90a0a035333ceebc9db5113303f16ad093acee0461006c2fe6e08d5f4f44f",
+    "scripts/check-report.py": "049657f2cab742eebfa76d468d620aa23bd1edfd2b25d880750af1c197b19e78",
+    "scripts/validate-slice-15.py": "836fb574b7fe75594a635ffe317cd960b5dfff3a92fb9a6fd5e7713385573820",
+    "scripts/check-decimals.py": "cf02664d7bab57d4515a297a8301cbf5f30d3db3d04698627920c86eccb379d5",
+    "scripts/check-datetimes.py": "23e3c7ee8d99ba2664db4f7a835115a2aa9c1a71b4a9278f9ca2331877f01b56",
+    "scripts/generate-nfc-data.py": "14db9a2ad100ec6cb24b31451a65aba9621bf01c4980a2432c70e4a7248fdbae",
+    "scripts/test.sh": "df06a7785d16b5c3c8238f09c062fd1781efda5596481c97c7eccb8bad9af4b6",
+    "scripts/corpus.py": "c2324e68b2d29c0cb1492301d7df2d6598cae3930bbf48d3572318a01c324a12",
+    "topic-maps.asd": "4f072760f7e5c1acfc78fe37580929f5271c84eadb2975c2f6730e7389281c6b"
+  },
+  "documentedInspectionPassed": true,
+  "qualification": "Pinned CTM draft-era corpus; regression assertion PASS does not erase the two normative baseline FAILs.",
+  "artifactsSHA256": {
+    "actual/association-scope-embedded.ctm.cxtm": "aac55c072f928d66606b89d5c80b0cec9d39d06c088113bad0ce2479a6ed9cba",
+    "actual/association-scope-embedded2.ctm.cxtm": "7c7806fc2a92e2ee24580ec54e5c71c76a31ca5070adfb73aaf62c1d82a863c5",
+    "actual/association-type-embedded-merge.ctm.cxtm": "82a3ebb32f8efd5b18e8505a692ff5a47ed30b1b8be1271d9f33e11213c9f031",
+    "actual/association-type-embedded.ctm.cxtm": "96acead7e6b4ff2f8b361807948821c8d0c564462022bd1099e92b4722bd6278",
+    "actual/embedded-semicolon.ctm.cxtm": "96acead7e6b4ff2f8b361807948821c8d0c564462022bd1099e92b4722bd6278",
+    "actual/name-scope-embedded.ctm.cxtm": "b98385700904aca7a0a3f2f59bfa4e5d7d989881c29e25b3aa1d0e8ffc49879d",
+    "actual/name-scope-embedded2.ctm.cxtm": "c422c84cd4340a3394571006291d6b8f7d5cc5f04a749238bcdeed9deece9d72",
+    "actual/name-type-embedded.ctm.cxtm": "c559086a2915621ce2bffdd91f8366dfb413622e9b335c6babcddbed611bbe63",
+    "actual/nested-twice.ctm.cxtm": "0f53740a761482914683ecb06f5edea304c646965cc137a8f04fa06e2e151d1c",
+    "actual/occurrence-scope-embedded.ctm.cxtm": "ad47706eefd534a23d23e5053d22d311665731ac67279e8b9d002190b81ab060",
+    "actual/occurrence-scope-embedded2.ctm.cxtm": "ee2d9c974873ab7ae26bf8356c5089f0db6d6db547a5c7874034cb5952e82e10",
+    "actual/occurrence-type-embedded.ctm.cxtm": "33222d14dac269a69f8249cb7e15a14b8a7a5426f96b45954ce77527889fb028",
+    "actual/role-player-embedded.ctm.cxtm": "9fb8ea842e67d182cc93b8c3b88f98206b5767e37d85a28975b3dcb9a951cd37",
+    "actual/role-type-embedded.ctm.cxtm": "f5a4074d26296764c1d089e98647fdb20e87a52f34fded4ee5cbbf473be9caec",
+    "actual/subject-identifier-embedded.ctm.cxtm": "f9e78e6c09aa4a04162e17550fb9d3b7d7226242f99ca1981a85cb11873a69fa",
+    "actual/variant-scope-embedded.ctm.cxtm": "3dad0a97a576db1f5722a6ba12b02f22173e595f4508fc64d825821161d69efb",
+    "actual/variant-scope-embedded2.ctm.cxtm": "c86c94d3f631aa4746652feb7b76d0e38a777b38262dee70899885f3c479723a",
+    "actual/wildcard-named-merge.ctm.cxtm": "6ccc279e92d50019b92da3a4d73270e62eeefe802afa41f135f735dd03ea0227",
+    "actual/wildcard-named.ctm.cxtm": "6ccc279e92d50019b92da3a4d73270e62eeefe802afa41f135f735dd03ea0227",
+    "actual/wildcard-named2.ctm.cxtm": "08b6237e73ec4ce86f810fbbd7bd08e9ead0bcf08a6672e4f5ce689c52a865ab",
+    "actual/wildcard.ctm.cxtm": "15de0d5004f9277196a1aa78a9c712dc73f31dc6622312bac0cf995de59a8f98",
+    "associations.json": "1b556fd9cf0689029f87050b6636d79256938f232bcae1ee819e47e181605552",
+    "cxtm.json": "1359037f71acec6a34bdf82e3eab1283f7ebd50621ba006b7fa891da242c3404",
+    "dates.json": "92c38576019d05ff80903b189a264b3b85d422957797be7b8c0459348e4e8580",
+    "datetimes.json": "4badf7237d6e25df7b5e30673adf04b259ab57750562deea3635ff5c78d847c4",
+    "decimals.json": "3147c6d3ae1a8cf6041d4008be3dc177411139a5737b8122c9e1b41eb188d1ed",
+    "describe.log": "54e190595e72a8762d0cf928041748ca751aea60a471b49e1a5f3291859b80b2",
+    "integers.json": "a117e7eecbbd4092725c95e9f3f10dd1c0279f5ce3575c29c94e5bd6020ae45d",
+    "merging.json": "d38e3ba85aaaceb63bcd481b1c3670f70efca876afc4b5ff92032c91c099d5c3",
+    "occurrences.json": "85f2b1ffc16c393a222010fae578dbd80151c1c8c1f7290653be6f1645befb78",
+    "prefixes.json": "7a6d843b4d3cd8fea2726738f51339c27e163a05a29bdef64ccb04cd29d0b4a3",
+    "references.json": "0b8c2ccee538eb865fc8af26a6c3588a585348366f19e03233981c918cba486c",
+    "scopes.json": "87feff7778b462bd2ce427fe15ebc8f1ca3275c6839b8f3ab39e50ec4803ee62",
+    "semantics.json": "f1e2574365c94262034b8d36a1c29ab0d364757c653abc39518898063c930d52",
+    "tests.log": "8dee7141f9b24241eb1e94178e50919ed75b84c5b547b32cbb8b32476228619f",
+    "timezones.json": "cd17799042eb4c76a7bbfcc81d1c82e3f88b390ed106dbf5c5d7ee5e8b136142",
+    "typed-names.json": "b552aff7e3694b6fe18a0683a68d810a7fd5987b3e057c7889cf5866c33e2507",
+    "validation.json": "9b66b849347547a2d6ff50663e4ad3b8d1b3cbfda2de0a84300c16930c295113",
+    "variants.json": "8a7d5c5cf202f4cb1f1b444675ed4042bf7d3a343132291d4a2985d55db27804"
+  }
+}

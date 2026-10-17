@@ -1,0 +1,81 @@
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://identity.example.invalid/run#$__4..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 5 topics, 0 associations {700397B573}>
+  ITEM-IDENTIFIERS               = ("https://identity.example.invalid/run#$__41")
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = (#<TOPIC-MAPS.TMDM:TOPIC-NAME "Type" {700397B9E3}>)
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://identity.example.invalid/run#$__4..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 5 topics, 0 associations {700397B573}>
+  ITEM-IDENTIFIERS               = ("https://identity.example.invalid/run#$__42.view")
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:VARIANT "variant" datatype="http://www.w3.org/2001/X..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "variant"
+  DATATYPE                       = "http://www.w3.org/2001/XMLSchema#string"
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {700397BCE3}>
+  SCOPE                          = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://identity.example.invalid/run#$__..
+  FORWARD                        = NIL
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#owner</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Name</value>
+<type topicref="2"></type>
+<scope>
+<scopingTopic topicref="3"></scopingTopic>
+</scope>
+<variant number="1">
+<value>variant</value>
+<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+<scope>
+<scopingTopic topicref="3"></scopingTopic>
+<scopingTopic topicref="4"></scopingTopic>
+</scope>
+</variant>
+</name>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>https://identity.example.invalid/run#$__41</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Type</value>
+<type topicref="5"></type>
+</name>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>https://identity.example.invalid/run#$__42.view</locator>
+</itemIdentifiers>
+</topic>
+<topic number="4">
+<itemIdentifiers>
+<locator>https://identity.example.invalid/run#$__43</locator>
+</itemIdentifiers>
+<name number="1">
+<value>extra</value>
+<type topicref="5"></type>
+</name>
+</topic>
+<topic number="5">
+<subjectIdentifiers>
+<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>
+</subjectIdentifiers>
+</topic>
+</topicMap>

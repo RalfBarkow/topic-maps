@@ -10,7 +10,8 @@ lock = json.loads((root / 'references/corpus-lock.json').read_text())
 assert report['repository'] == lock['repository'] and report['commit'] == lock['commit']
 assert report['qualification'] == lock['draftQualification']
 assert report['counts'] == lock['ctmCounts']
-slice14 = len(sys.argv) > 2 and sys.argv[2] == '--slice-14'
+slice15 = len(sys.argv) > 2 and sys.argv[2] == '--slice-15'
+slice14 = slice15 or len(sys.argv) > 2 and sys.argv[2] == '--slice-14'
 slice13 = slice14 or len(sys.argv) > 2 and sys.argv[2] == '--slice-13'
 slice12a = slice13 or len(sys.argv) > 2 and sys.argv[2] == '--slice-12a'
 slice11 = slice12a or len(sys.argv) > 2 and sys.argv[2] == '--slice-11'
@@ -27,14 +28,14 @@ assert report['countsMatchPin'] is True
 assert report['correspondence'] == dict(ok=True, missingInputs=[], missingBaselines=[], unmatchedBaselines=[], duplicateIDs=[])
 cases = report['cases']
 assert len(cases) == report['counts']['valid'] + report['counts']['invalid']
-passes = 71 if slice14 else 67 if slice13 else 64 if slice12a else 62 if slice10 else 59 if slice9 else 49 if slice8 else 42 if slice7 else 36 if slice6 else 29 if slice5 else 25 if slice4 else int(slice1)
+passes = 93 if slice15 else 71 if slice14 else 67 if slice13 else 64 if slice12a else 62 if slice10 else 59 if slice9 else 49 if slice8 else 42 if slice7 else 36 if slice6 else 29 if slice5 else 25 if slice4 else int(slice1)
 assert report['statuses'] == {'pass': passes, 'fail': (2 if slice11 else int(slice10)), 'unsupported': 0, 'not-run': len(cases)-passes-(2 if slice11 else int(slice10))}
 assert [c['id'] for c in cases] == sorted(c['id'] for c in cases)
 assert len({c['id'] for c in cases}) == len(cases)
 tested = [c for c in cases if c['status'] == 'pass']
 if slice4:
     positives = [c for c in tested if c['category'] == 'valid']
-    assert len(positives) == (62 if slice14 else 59 if slice13 else 56 if slice12a else 54 if slice10 else 51 if slice9 else 46 if slice8 else 39 if slice7 else 33 if slice6 else 28 if slice5 else 24) and all(c['actualOutcome'] == 'cxtm-match' for c in positives)
+    assert len(positives) == (83 if slice15 else 62 if slice14 else 59 if slice13 else 56 if slice12a else 54 if slice10 else 51 if slice9 else 46 if slice8 else 39 if slice7 else 33 if slice6 else 28 if slice5 else 24) and all(c['actualOutcome'] == 'cxtm-match' for c in positives)
 failed = [c for c in cases if c['status'] == 'fail']
 if slice10:
     assert len(failed) == (2 if slice11 else 1) and {c['id'] for c in failed} == ({'ctm/in/occurrence-datetime2.ctm', 'ctm/in/occurrence-datetime-timezone2.ctm'} if slice11 else {'ctm/in/occurrence-datetime2.ctm'})
@@ -78,3 +79,10 @@ if slice14:
     c = next(c for c in cases if c['id'] == 'ctm/invalid/variant-no-scope.ctm')
     assert c['status'] == 'pass' and c['actualOutcome'] == 'ctm-rejection'
     assert len(c['diagnostics']) == 1 and 'EXPECTED-VARIANT-SCOPE' in c['diagnostics'][0]
+
+if slice15:
+    c = next(c for c in cases if c['id'] == 'ctm/invalid/embedded-topic-global-scope.ctm')
+    assert c['status'] == 'pass' and c['actualOutcome'] == 'ctm-rejection'
+    assert len(c['diagnostics']) == 1 and 'EMBEDDED-TOPIC-AT-TOP-LEVEL' in c['diagnostics'][0]
+    c = next(c for c in cases if c['id'] == 'ctm/invalid/embedded-topic-template.ctm')
+    assert c['status'] == 'not-run' and c['actualOutcome'] is None

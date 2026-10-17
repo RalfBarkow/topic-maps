@@ -1,4 +1,4 @@
-# Common Lisp Topic Maps — Slice 14
+# Common Lisp Topic Maps — Slice 15
 
 A working ANSI Common Lisp reader for CTM identity/name syntax and
 unary/binary Associations, with same-map merging of Topics, Names, Associations
@@ -25,16 +25,19 @@ unsupported; existing zero/absent-zone behavior is retained.
 Slice 12A adds explicitly typed Topic Names. Slice 13 adds Scope Topic sets to
 Names, Occurrences and Associations, including reference replacement, duplicate
 merging and canonical output. Slice 14 adds unreified Variants with proper Scope
-supersets, canonical merge handles and pure CXTM output. Embedded Topics remain unsupported.
+supersets, canonical merge handles and pure CXTM output. Slice 15 adds per-document
+Wildcards and recursive Embedded Topics through the shared Topic reference reader.
 
 Systems: `topic-maps` (the retained foundation), `topic-maps/tests`,
 `topic-maps/tmdm`, `topic-maps/ctm`, `topic-maps/ctm/tests` and
 `topic-maps/ctm/merging-tests` and `topic-maps/ctm/association-tests`, plus `topic-maps/cxtm` and
-`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests` and `topic-maps/ctm/datetime-tests` and `topic-maps/ctm/timezone-tests`, `topic-maps/ctm/typed-name-tests` and `topic-maps/ctm/scope-tests`, plus `topic-maps/ctm/variant-tests`.
+`topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests` and `topic-maps/ctm/datetime-tests` and `topic-maps/ctm/timezone-tests`, `topic-maps/ctm/typed-name-tests` and `topic-maps/ctm/scope-tests`, plus `topic-maps/ctm/variant-tests` and `topic-maps/ctm/reference-tests`.
 The core reader/model uses ANSI Common Lisp; the foundation/tooling uses
 ASDF/UIOP and Python's standard library. No Quicklisp packages are required.
 
-Start with [Reading Variants](docs/reading-variants.md) for Parent Name relationships,
+Start with [Reading Topic References](docs/reading-topic-references.md) for Wildcard
+IRIs/counters, recursive Embedded Topics and actual object relationships.
+[Reading Variants](docs/reading-variants.md) for Parent Name relationships,
 explicit/resulting Scope, merge preflight and the four original contracts.
 [Reading Scope](docs/reading-scope.md) for Scope APIs, actual Topic
 references, merge handles and the three original comparisons.
@@ -130,17 +133,17 @@ CXTM baselines only under `ctm/baseline`. Auxiliary files are reported separatel
 ## Current validation and historical foundation
 
 The complete pinned corpus remains unchanged: 231 valid CTM inputs, 42 invalid
-inputs, 231 CXTM baselines and 22 CTM auxiliary files. Sixty-two selected positive
-cases pass actual CXTM byte comparisons. Nine specific rejection contracts pass.
+inputs, 231 CXTM baselines and 22 CTM auxiliary files. Eighty-three selected positive
+cases pass actual CXTM byte comparisons. Ten specific rejection contracts pass.
 Two executed DateTime contracts remain FAIL because of documented normative
-baseline discrepancies; 200 contracts remain NOT-RUN. A green regression run
+baseline discrepancies; 178 contracts remain NOT-RUN. A green regression run
 preserves those two FAILs and never changes an upstream baseline. Unsupported
 constructs and I/O errors cannot count as the required CTM rejection.
 
 The full launcher runs the retained 54 foundation checks, two Python integrity
 fixtures, 123 retained identity checks, 646 merge checks, 657 Association checks,
 imported-report validation and selected baseline
-property evidence, 445 retained CXTM checks, 1,101 Occurrence checks, 150 prefix/datatype checks, 665 integer checks, 715 Decimal checks, 1,806 Date checks, 217 DateTime checks, 1,944 timezone checks, 106 typed-name checks, 293 Scope checks and 324 Variant checks, plus
+property evidence, 445 retained CXTM checks, 1,101 Occurrence checks, 150 prefix/datatype checks, 665 integer checks, 715 Decimal checks, 1,806 Date checks, 217 DateTime checks, 1,944 timezone checks, 106 typed-name checks, 293 Scope checks, 324 Variant checks and 238 Topic Reference checks, plus
 16,294 independent Unicode NFC oracle
 comparisons. The oracle needs Python UCD 15.0 or 15.1 (tables use UCD 15.1.0).
 A report path also produces `<path>.semantics.json` with
@@ -160,7 +163,8 @@ oracle. Reports are deterministic across the tested SBCL versions and checkout
 relocation. `<path>.typed-names.json` records Name value/Parent/Type relations;
 `<path>.scopes.json` records Scope object relations and an ordering witness.
 `<path>.variants.json` records Variant/Parent/Scope observations and XML ordering.
-See [Slice 14 validation](docs/slice-14-validation.md) for current evidence.
+`<path>.references.json` records the new source/counter/model observations.
+See [Slice 15 validation](docs/slice-15-validation.md) for current evidence.
 [Slice 12A validation](docs/slice-12a-validation.md) records explicit Name types.
 [Slice 11 validation](docs/slice-11-validation.md) preserves the prior timezone evidence.
 [Slice 10 validation](docs/slice-10-validation.md) preserves the earlier DateTime baseline.
@@ -203,3 +207,5 @@ Slice 4 starts from `35648c4dcc71e8dc6448b64abcacb438e53d64a2` on
 `codex/ctm-slice-4`.
 Slice 3 starts from accepted `66664dbff6275d60dab1bc6a232fa70f7b916b8c` on
 `codex/ctm-slice-3`. Await review before continuing to the next slice.
+
+Slice 15 starts from `4f7b4d26d40f8f5566594aa2e3ad6296d44fc4c3` on `codex/ctm-slice-15`.
