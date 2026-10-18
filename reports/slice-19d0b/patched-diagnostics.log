@@ -1,0 +1,21 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+DIAG-ENCODING utf16le-bom:astral UTF-16-LITTLE-ENDIAN
+DIAG-ACCEPTED utf16le-bom:astral 47,72,FC,DF,65,20,6C34,20,1F98A
+DIAG-ENCODING utf16be-bom:astral UTF-16-BIG-ENDIAN
+DIAG-ACCEPTED utf16be-bom:astral 47,72,FC,DF,65,20,6C34,20,1F98A
+DIAG-ENCODING utf16le-explicit-no-bom:bmp UTF-16-LITTLE-ENDIAN
+DIAG-ACCEPTED utf16le-explicit-no-bom:bmp 47,72,FC,DF,65,20,6C34
+DIAG-ENCODING utf16le-explicit-no-bom:astral UTF-16-LITTLE-ENDIAN
+DIAG-ACCEPTED utf16le-explicit-no-bom:astral 47,72,FC,DF,65,20,6C34,20,1F98A
+DIAG-ENCODING utf16be-explicit-no-bom:bmp UTF-16-BIG-ENDIAN
+DIAG-ACCEPTED utf16be-explicit-no-bom:bmp 47,72,FC,DF,65,20,6C34
+DIAG-ENCODING utf16be-explicit-no-bom:astral UTF-16-BIG-ENDIAN
+DIAG-ACCEPTED utf16be-explicit-no-bom:astral 47,72,FC,DF,65,20,6C34,20,1F98A
+DIAG-ENCODING utf16-bom-without-declaration:astral UTF-16-LITTLE-ENDIAN
+DIAG-ACCEPTED utf16-bom-without-declaration:astral 6C34,1F98A
+DIAG-ENCODING invalid-utf8 UTF-8
+DIAG-REJECTED invalid-utf8 WELL-FORMEDNESS-VIOLATION Document not well-formed: Invalid UTF-8 continuation byte: #x28 Location:   Line 1, column 7 in NIL 

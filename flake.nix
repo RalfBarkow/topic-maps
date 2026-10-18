@@ -12,6 +12,14 @@
       # use the existing SBCL 2.5.4 without changing this Nixpkgs pin.
       packages = pkgs.lib.unique (visit pkgs.sbclPackages.cxml);
     in {
+      # This registry names pristine sources. prepare-cxml.py applies the
+      # following versioned patches to a separate copy before qualification/use.
+      patchProfile = "19d0b-1";
+      localPatches = map (name: {
+        package = name;
+        file = "patches/${name}-19d0b.patch";
+        sha256 = builtins.hashFile "sha256" (./patches + "/${name}-19d0b.patch");
+      }) [ "closure-common" "cxml" ];
       sourceRegistry = "(:source-registry " +
         pkgs.lib.concatMapStringsSep " "
           (package: "(:tree \"${package.src}/\")") packages +

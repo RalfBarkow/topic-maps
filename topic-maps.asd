@@ -1,4 +1,9 @@
 ;;;; The foundation remains independent; reader/model are opt-in secondary systems.
+(asdf:defsystem "topic-maps/xml"
+  :description "Pinned, patched CXML byte boundary with mandatory external-resource denial; no XTM"
+  :version "0.0.1" :license "MIT" :depends-on ("cxml") :serial t
+  :components ((:file "src/xml/package") (:file "src/xml/parser")))
+
 (asdf:defsystem "topic-maps"
   :description "Independent CTM test foundation; no parsing or deserialization"
   :version "0.0.0"

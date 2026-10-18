@@ -1,0 +1,23 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+DIAG-ENCODING utf16le-bom:astral UTF-16-LITTLE-ENDIAN
+WARNING: There is no such encoding: "UTF-16".
+DIAG-REJECTED utf16le-bom:astral WELL-FORMEDNESS-VIOLATION Document not well-formed: expected a high surrogate but found: #xD83E Location:   Line 1, column 41 in NIL 
+DIAG-ENCODING utf16be-bom:astral UTF-16-BIG-ENDIAN
+WARNING: There is no such encoding: "UTF-16".
+DIAG-REJECTED utf16be-bom:astral WELL-FORMEDNESS-VIOLATION Document not well-formed: expected a high surrogate but found: #xD83E Location:   Line 1, column 41 in NIL 
+DIAG-ENCODING utf16le-explicit-no-bom:bmp UTF-8
+DIAG-REJECTED utf16le-explicit-no-bom:bmp WELL-FORMEDNESS-VIOLATION Document not well-formed: Expected '!' or '?' after '<' in DTD. Context:   Line 1, column 2 in NIL 
+DIAG-ENCODING utf16le-explicit-no-bom:astral UTF-8
+DIAG-REJECTED utf16le-explicit-no-bom:astral WELL-FORMEDNESS-VIOLATION Document not well-formed: Expected '!' or '?' after '<' in DTD. Context:   Line 1, column 2 in NIL 
+DIAG-ENCODING utf16be-explicit-no-bom:bmp UTF-8
+DIAG-REJECTED utf16be-explicit-no-bom:bmp WELL-FORMEDNESS-VIOLATION Document not well-formed: Unexpected character #\Nul. Context:   Line 1, column 2 in NIL 
+DIAG-ENCODING utf16be-explicit-no-bom:astral UTF-8
+DIAG-REJECTED utf16be-explicit-no-bom:astral WELL-FORMEDNESS-VIOLATION Document not well-formed: Unexpected character #\Nul. Context:   Line 1, column 2 in NIL 
+DIAG-ENCODING utf16-bom-without-declaration:astral UTF-16-LITTLE-ENDIAN
+DIAG-REJECTED utf16-bom-without-declaration:astral WELL-FORMEDNESS-VIOLATION Document not well-formed: expected a high surrogate but found: #xD83E Location:   Line 1, column 4 in NIL 
+DIAG-ENCODING invalid-utf8 UTF-8
+DIAG-ACCEPTED invalid-utf8 E8

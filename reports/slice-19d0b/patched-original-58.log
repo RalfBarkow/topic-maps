@@ -1,0 +1,86 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+CXML-CHECK-PASS asdf-cxml-found-and-loaded
+CXML-CHECK-PASS asdf-dependency:closure-common
+CXML-CHECK-PASS asdf-dependency:puri
+CXML-CHECK-PASS asdf-dependency:babel
+CXML-CHECK-PASS asdf-dependency:alexandria
+CXML-CHECK-PASS asdf-dependency:trivial-features
+CXML-CHECK-PASS asdf-dependency:trivial-gray-streams
+CXML-CHECK-PASS namespace-expanded-element
+CXML-CHECK-PASS unprefixed-attribute-has-no-namespace
+CXML-CHECK-PASS prefixed-attribute-namespace
+CXML-CHECK-PASS unicode-astral-character
+CXML-CHECK-PASS default-namespace-and-nested-rebinding
+CXML-CHECK-PASS utf8-no-bom:bmp
+CXML-CHECK-PASS utf8-no-bom:astral
+CXML-CHECK-PASS utf8-bom:bmp
+CXML-CHECK-PASS utf8-bom:astral
+CXML-CHECK-PASS utf16le-bom:bmp
+CXML-CHECK-PASS utf16le-bom:astral
+CXML-CHECK-PASS utf16be-bom:bmp
+CXML-CHECK-PASS utf16be-bom:astral
+CXML-CHECK-PASS utf16le-explicit-no-bom:bmp
+CXML-CHECK-PASS utf16le-explicit-no-bom:astral
+CXML-CHECK-PASS utf16be-explicit-no-bom:bmp
+CXML-CHECK-PASS utf16be-explicit-no-bom:astral
+CXML-CHECK-PASS utf16-bom-without-declaration:bmp
+CXML-CHECK-PASS utf16-bom-without-declaration:astral
+CXML-CHECK-PASS predefined-entities-and-character-references
+CXML-CHECK-PASS xml-line-end-normalization
+CXML-CHECK-PASS xml-attribute-whitespace-normalization
+CXML-CHECK-PASS misnested
+CXML-REJECTION misnested WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS duplicate-attribute
+CXML-REJECTION duplicate-attribute WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS duplicate-expanded-attribute
+CXML-REJECTION duplicate-expanded-attribute WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS undeclared-prefix
+CXML-REJECTION undeclared-prefix WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS multiple-roots
+CXML-REJECTION multiple-roots WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS unclosed-root
+CXML-REJECTION unclosed-root WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS undefined-entity
+CXML-REJECTION undefined-entity WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS forbidden-nul-reference
+CXML-REJECTION forbidden-nul-reference WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS forbidden-surrogate-reference
+CXML-REJECTION forbidden-surrogate-reference WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS invalid-utf8
+CXML-REJECTION invalid-utf8 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS doctype-without-subset
+CXML-REJECTION doctype-without-subset DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS internal-entity
+CXML-REJECTION internal-entity DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS external-file-dtd
+CXML-REJECTION external-file-dtd DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS external-network-dtd
+CXML-REJECTION external-network-dtd DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS external-general-entity
+CXML-REJECTION external-general-entity DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS external-parameter-entity
+CXML-REJECTION external-parameter-entity DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS safe-policy-never-invokes-external-resolver
+CXML-CHECK-PASS resolver-file-dtd
+CXML-REJECTION resolver-file-dtd EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-file-dtd:called
+CXML-CHECK-PASS resolver-network-dtd
+CXML-REJECTION resolver-network-dtd EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-network-dtd:called
+CXML-CHECK-PASS resolver-file-entity
+CXML-REJECTION resolver-file-entity EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-file-entity:called
+CXML-CHECK-PASS resolver-network-entity
+CXML-REJECTION resolver-network-entity EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-network-entity:called
+CXML-CHECK-PASS resolver-parameter-entity
+CXML-REJECTION resolver-parameter-entity EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-parameter-entity:called
+CXML-CHECK-PASS nil-resolver-reaches-cxml-fallback
+CXML-REJECTION nil-resolver-reaches-cxml-fallback FALLBACK-REACHED
+CXML-CHECK-PASS exactly-one-fallback-only-in-nil-counterprobe
+CXML-SUMMARY 58 PASS 0 FAIL

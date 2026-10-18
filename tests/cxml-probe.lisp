@@ -4,6 +4,8 @@
 (assert (string= (lisp-implementation-version) "2.5.4"))
 (assert (asdf:find-system "cxml" nil))
 (asdf:load-system "cxml")
+(asdf:load-asd (merge-pathnames "../topic-maps.asd" *load-truename*))
+(asdf:load-system "topic-maps/xml")
 
 (defpackage #:topic-maps.cxml-probe (:use #:cl))
 (in-package #:topic-maps.cxml-probe)
@@ -25,7 +27,7 @@
     (check name (typep condition class))
     (format t "CXML-REJECTION ~A ~A~%" name (type-of condition))))
 
-(define-condition doctype-forbidden (error) ())
+(deftype doctype-forbidden () 'topic-maps.xml:doctype-forbidden)
 (define-condition external-resource-forbidden (error)
   ((system-id :initarg :system-id :reader denied-system-id)))
 (define-condition fallback-reached (error) ())
@@ -52,7 +54,7 @@
 
 (defmethod sax:start-dtd ((handler observation) name public-id system-id)
   (declare (ignore name public-id system-id))
-  (unless (allow-doctype handler) (error 'doctype-forbidden)))
+  (unless (allow-doctype handler) (error 'topic-maps.xml:doctype-forbidden)))
 
 (defun deny-external-resource (public-id system-id)
   (declare (ignore public-id))
@@ -61,6 +63,9 @@
   (error 'external-resource-forbidden :system-id system-id))
 
 (defun parse-bytes (bytes &key resolver-probe)
+  (unless resolver-probe
+    (return-from parse-bytes
+      (topic-maps.xml:parse-octets bytes (make-instance 'observation))))
   (let ((sax:*namespace-processing* t)
         (sax:*include-xmlns-attributes* nil)
         (cxml:*catalog* nil)
@@ -193,6 +198,8 @@
                                                  (declare (ignore public system)) nil))))
          (check "exactly-one-fallback-only-in-nil-counterprobe" (= *fallback-calls* 1)))
     (setf (fdefinition 'cxml::uri-to-pathname) original)))
+
+(load (merge-pathnames "cxml-encoding-regressions.lisp" *load-truename*))
 
 (format t "CXML-SUMMARY ~D PASS ~D FAIL~%"
         (- (length *checks*) (length *failed-checks*)) (length *failed-checks*))

@@ -1,9 +1,14 @@
 # Common Lisp Topic Maps — Slice 19C
 
-Slice 19D0 makes pinned CXML sources available to ASDF through the Nix source
-environment, without changing the CTM/TMDM/CXTM implementation. **Parser
-qualification currently FAILS** on UTF-16 supplementary characters and invalid
-UTF-8; provisioning success is not an XTM-readiness claim. See
+Slice 19D0B qualifies local, versioned CXML/closure-common encoding corrections:
+**58 original and 88 additional XML checks PASS** in fresh offline SBCL 2.5.4.
+The required entry point is `topic-maps.xml:parse-octets` after offline source
+patch preparation; it enforces external-resource denial. No XTM deserializer
+is implemented. See [encoding qualification](docs/slice-19d0b-cxml-encoding.md).
+
+Slice 19D0 made pinned CXML sources available to ASDF through the Nix source
+environment. Its initial parser qualification failed on UTF-16 supplementary
+characters and invalid UTF-8; those historical failures are retained. See
 [CXML provisioning and qualification](docs/slice-19d0-cxml.md) for exact hashes,
 offline loading, external-entity policy, the failing probes and retained regression.
 

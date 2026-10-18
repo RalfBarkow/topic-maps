@@ -1,0 +1,238 @@
+[
+  {
+    "name": "utf16le-bom:astral",
+    "source": "<?xml version='1.0' encoding='UTF-16'?><r>Grüße 水 🦊</r>",
+    "expectedText": "Grüße 水 🦊",
+    "declaredEncoding": "UTF-16",
+    "cause": "closure-common: UTF-16 second-unit check uses x instead of y",
+    "functions": [
+      "closure-common/encodings.lisp:decode-sequence"
+    ],
+    "normative": [
+      "XML 1.0 §2.2, §4.3.3",
+      "Unicode §3.9.2, §3.10",
+      "RFC 2781 §2.2, §3.3"
+    ],
+    "inputOctetsHex": "fffe3c003f0078006d006c002000760065007200730069006f006e003d00270031002e0030002700200065006e0063006f00640069006e0067003d0027005500540046002d003100360027003f003e003c0072003e0047007200fc00df0065002000346c20003ed88add3c002f0072003e00",
+    "inputLength": 114,
+    "inputSHA256": "a350d85bc08b9cca6f0a349ab707d38f88f557331c78f2433f7961dfbe3bef94",
+    "before": {
+      "recognizedEncoding": "UTF-16-LITTLE-ENDIAN",
+      "outcome": "rejected",
+      "condition": "WELL-FORMEDNESS-VIOLATION",
+      "diagnostic": "Document not well-formed: expected a high surrogate but found: #xD83E Location:   Line 1, column 41 in NIL "
+    },
+    "after": {
+      "recognizedEncoding": "UTF-16-LITTLE-ENDIAN",
+      "outcome": "accepted",
+      "text": "Grüße 水 🦊"
+    }
+  },
+  {
+    "name": "utf16be-bom:astral",
+    "source": "<?xml version='1.0' encoding='UTF-16'?><r>Grüße 水 🦊</r>",
+    "expectedText": "Grüße 水 🦊",
+    "declaredEncoding": "UTF-16",
+    "cause": "closure-common: UTF-16 second-unit check uses x instead of y",
+    "functions": [
+      "closure-common/encodings.lisp:decode-sequence"
+    ],
+    "normative": [
+      "XML 1.0 §2.2, §4.3.3",
+      "Unicode §3.9.2, §3.10",
+      "RFC 2781 §2.2, §3.3"
+    ],
+    "inputOctetsHex": "feff003c003f0078006d006c002000760065007200730069006f006e003d00270031002e0030002700200065006e0063006f00640069006e0067003d0027005500540046002d003100360027003f003e003c0072003e0047007200fc00df006500206c340020d83edd8a003c002f0072003e",
+    "inputLength": 114,
+    "inputSHA256": "1d5b7d6b86355566c4f71bc31e983807a5184407d3d71796aa04314e1b87b0fe",
+    "before": {
+      "recognizedEncoding": "UTF-16-BIG-ENDIAN",
+      "outcome": "rejected",
+      "condition": "WELL-FORMEDNESS-VIOLATION",
+      "diagnostic": "Document not well-formed: expected a high surrogate but found: #xD83E Location:   Line 1, column 41 in NIL "
+    },
+    "after": {
+      "recognizedEncoding": "UTF-16-BIG-ENDIAN",
+      "outcome": "accepted",
+      "text": "Grüße 水 🦊"
+    }
+  },
+  {
+    "name": "utf16le-explicit-no-bom:bmp",
+    "source": "<?xml version='1.0' encoding='UTF-16LE'?><r>Grüße 水</r>",
+    "expectedText": "Grüße 水",
+    "declaredEncoding": "UTF-16LE",
+    "cause": "closure-common: missing provisional XML signature; CXML: missing LE/BE declaration handling",
+    "functions": [
+      "closure-common/xstream.lisp:figure-encoding",
+      "cxml/xml/xml-parse.lisp:setup-encoding"
+    ],
+    "normative": [
+      "XML 1.0 §2.2, §4.3.3",
+      "Unicode §3.9.2, §3.10",
+      "RFC 2781 §2.2, §3.3"
+    ],
+    "inputOctetsHex": "3c003f0078006d006c002000760065007200730069006f006e003d00270031002e0030002700200065006e0063006f00640069006e0067003d0027005500540046002d00310036004c00450027003f003e003c0072003e0047007200fc00df0065002000346c3c002f0072003e00",
+    "inputLength": 110,
+    "inputSHA256": "36056a16aba724b321b4070007c6280aace1728a8c8c824de484a6a781dbb161",
+    "before": {
+      "recognizedEncoding": "UTF-8",
+      "outcome": "rejected",
+      "condition": "WELL-FORMEDNESS-VIOLATION",
+      "diagnostic": "Document not well-formed: Expected '!' or '?' after '<' in DTD. Context:   Line 1, column 2 in NIL "
+    },
+    "after": {
+      "recognizedEncoding": "UTF-16-LITTLE-ENDIAN",
+      "outcome": "accepted",
+      "text": "Grüße 水"
+    }
+  },
+  {
+    "name": "utf16le-explicit-no-bom:astral",
+    "source": "<?xml version='1.0' encoding='UTF-16LE'?><r>Grüße 水 🦊</r>",
+    "expectedText": "Grüße 水 🦊",
+    "declaredEncoding": "UTF-16LE",
+    "cause": "closure-common: missing provisional XML signature; CXML: missing LE/BE declaration handling",
+    "functions": [
+      "closure-common/xstream.lisp:figure-encoding",
+      "cxml/xml/xml-parse.lisp:setup-encoding"
+    ],
+    "normative": [
+      "XML 1.0 §2.2, §4.3.3",
+      "Unicode §3.9.2, §3.10",
+      "RFC 2781 §2.2, §3.3"
+    ],
+    "inputOctetsHex": "3c003f0078006d006c002000760065007200730069006f006e003d00270031002e0030002700200065006e0063006f00640069006e0067003d0027005500540046002d00310036004c00450027003f003e003c0072003e0047007200fc00df0065002000346c20003ed88add3c002f0072003e00",
+    "inputLength": 116,
+    "inputSHA256": "70fbdbf015bfbafd25ed6e6b9c2d54bc17107cff0c3a2c21b28c635d8ee07ec5",
+    "before": {
+      "recognizedEncoding": "UTF-8",
+      "outcome": "rejected",
+      "condition": "WELL-FORMEDNESS-VIOLATION",
+      "diagnostic": "Document not well-formed: Expected '!' or '?' after '<' in DTD. Context:   Line 1, column 2 in NIL "
+    },
+    "after": {
+      "recognizedEncoding": "UTF-16-LITTLE-ENDIAN",
+      "outcome": "accepted",
+      "text": "Grüße 水 🦊"
+    }
+  },
+  {
+    "name": "utf16be-explicit-no-bom:bmp",
+    "source": "<?xml version='1.0' encoding='UTF-16BE'?><r>Grüße 水</r>",
+    "expectedText": "Grüße 水",
+    "declaredEncoding": "UTF-16BE",
+    "cause": "closure-common: missing provisional XML signature; CXML: missing LE/BE declaration handling",
+    "functions": [
+      "closure-common/xstream.lisp:figure-encoding",
+      "cxml/xml/xml-parse.lisp:setup-encoding"
+    ],
+    "normative": [
+      "XML 1.0 §2.2, §4.3.3",
+      "Unicode §3.9.2, §3.10",
+      "RFC 2781 §2.2, §3.3"
+    ],
+    "inputOctetsHex": "003c003f0078006d006c002000760065007200730069006f006e003d00270031002e0030002700200065006e0063006f00640069006e0067003d0027005500540046002d00310036004200450027003f003e003c0072003e0047007200fc00df006500206c34003c002f0072003e",
+    "inputLength": 110,
+    "inputSHA256": "db4a7ca119811da696d756a2c2f72c6aa936abd9b6faf4ec42c003da9fb040ed",
+    "before": {
+      "recognizedEncoding": "UTF-8",
+      "outcome": "rejected",
+      "condition": "WELL-FORMEDNESS-VIOLATION",
+      "diagnostic": "Document not well-formed: Unexpected character #\\Nul. Context:   Line 1, column 2 in NIL "
+    },
+    "after": {
+      "recognizedEncoding": "UTF-16-BIG-ENDIAN",
+      "outcome": "accepted",
+      "text": "Grüße 水"
+    }
+  },
+  {
+    "name": "utf16be-explicit-no-bom:astral",
+    "source": "<?xml version='1.0' encoding='UTF-16BE'?><r>Grüße 水 🦊</r>",
+    "expectedText": "Grüße 水 🦊",
+    "declaredEncoding": "UTF-16BE",
+    "cause": "closure-common: missing provisional XML signature; CXML: missing LE/BE declaration handling",
+    "functions": [
+      "closure-common/xstream.lisp:figure-encoding",
+      "cxml/xml/xml-parse.lisp:setup-encoding"
+    ],
+    "normative": [
+      "XML 1.0 §2.2, §4.3.3",
+      "Unicode §3.9.2, §3.10",
+      "RFC 2781 §2.2, §3.3"
+    ],
+    "inputOctetsHex": "003c003f0078006d006c002000760065007200730069006f006e003d00270031002e0030002700200065006e0063006f00640069006e0067003d0027005500540046002d00310036004200450027003f003e003c0072003e0047007200fc00df006500206c340020d83edd8a003c002f0072003e",
+    "inputLength": 116,
+    "inputSHA256": "489f8d26fcbe7a29b1670261ac916e8ba0b5cf2aded6e6cbf6b6ac6f66cbd05e",
+    "before": {
+      "recognizedEncoding": "UTF-8",
+      "outcome": "rejected",
+      "condition": "WELL-FORMEDNESS-VIOLATION",
+      "diagnostic": "Document not well-formed: Unexpected character #\\Nul. Context:   Line 1, column 2 in NIL "
+    },
+    "after": {
+      "recognizedEncoding": "UTF-16-BIG-ENDIAN",
+      "outcome": "accepted",
+      "text": "Grüße 水 🦊"
+    }
+  },
+  {
+    "name": "utf16-bom-without-declaration:astral",
+    "source": "<r>水🦊</r>",
+    "expectedText": "水🦊",
+    "declaredEncoding": null,
+    "cause": "closure-common: UTF-16 second-unit check uses x instead of y",
+    "functions": [
+      "closure-common/encodings.lisp:decode-sequence"
+    ],
+    "normative": [
+      "XML 1.0 §2.2, §4.3.3",
+      "Unicode §3.9.2",
+      "RFC 2781 §2.2"
+    ],
+    "inputOctetsHex": "fffe3c0072003e00346c3ed88add3c002f0072003e00",
+    "inputLength": 22,
+    "inputSHA256": "3fdbd13f1c161760ff917eb6e1526e07e688c7e07e6be26cee72f869b160bb17",
+    "before": {
+      "recognizedEncoding": "UTF-16-LITTLE-ENDIAN",
+      "outcome": "rejected",
+      "condition": "WELL-FORMEDNESS-VIOLATION",
+      "diagnostic": "Document not well-formed: expected a high surrogate but found: #xD83E Location:   Line 1, column 4 in NIL "
+    },
+    "after": {
+      "recognizedEncoding": "UTF-16-LITTLE-ENDIAN",
+      "outcome": "accepted",
+      "text": "水🦊"
+    }
+  },
+  {
+    "name": "invalid-utf8",
+    "source": null,
+    "expectedText": null,
+    "declaredEncoding": null,
+    "cause": "closure-common: UTF-8 continuation bytes masked without validation",
+    "functions": [
+      "closure-common/encodings.lisp:decode-sequence"
+    ],
+    "normative": [
+      "XML 1.0 §4.3.3",
+      "Unicode §3.9.3 / Table 3-7",
+      "RFC 3629 §3–4"
+    ],
+    "inputOctetsHex": "3c723ec3283c2f723e",
+    "inputLength": 9,
+    "inputSHA256": "941fc6ac5b589b0c192d98092723ca0e4e9f9813dd9be69a7ad42db09b6ec141",
+    "before": {
+      "recognizedEncoding": "UTF-8",
+      "outcome": "accepted",
+      "text": "è"
+    },
+    "after": {
+      "recognizedEncoding": "UTF-8",
+      "outcome": "rejected",
+      "condition": "WELL-FORMEDNESS-VIOLATION",
+      "diagnostic": "Document not well-formed: Invalid UTF-8 continuation byte: #x28 Location:   Line 1, column 7 in NIL "
+    }
+  }
+]

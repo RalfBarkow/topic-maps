@@ -1,0 +1,257 @@
+--- a/encodings.lisp
++++ b/encodings.lisp
+@@ -1,4 +1,6 @@
+ (in-package :runes-encoding)
++
++(defparameter *topic-maps-encoding-patch* "19d0b-1")
+ 
+ (eval-when (:compile-toplevel :load-toplevel :execute)
+   (defparameter +buffer-byte+
+@@ -154,6 +156,7 @@
+       (when (%= wptr out-end)
+         (return))
+       (when (>= (%+ rptr 1) in-end)
++        (when (and eof? (< rptr in-end)) (xerror "Incomplete UTF-16 code unit"))
+         (return))
+       (let* ((hi (aref in rptr))
+ 	     (lo (aref in (%+ 1 rptr)))
+@@ -161,22 +164,29 @@
+         (when (or (eql x #xFFFE) (eql x #xFFFF))
+ 	  (xerror "not a valid code point: #x~X" x))
+ 	(when (<= #xDC00 x #xDFFF)
+-	  (xerror "unexpected high surrogate: #x~X" x))
++	  (xerror "unexpected low surrogate: #x~X" x))
+ 	(when (<= #xD800 x #xDBFF)
+-	  ;; seen low surrogate, look for high surrogate now
++	  ;; A high surrogate must be followed by a low surrogate.
+ 	  (when (>= (%+ rptr 3) in-end)
++            (when eof? (xerror "Incomplete UTF-16 surrogate pair"))
+ 	    (return))
+ 	  (let* ((hi2 (aref in (%+ 2 rptr)))
+ 		 (lo2 (aref in (%+ 3 rptr)))
+ 		 (y (logior (ash hi2 8) lo2)))
+-	    (unless (<= #xDC00 x #xDFFF)
+-	      (xerror "expected a high surrogate but found: #x~X" x))
++	    (unless (<= #xDC00 y #xDFFF)
++	      (xerror "expected a low surrogate but found: #x~X" y))
+ 	    #-rune-is-utf-16
+ 	    (progn
+ 	      (setf x (logior (ash (%- x #xd7c0) 10) (%and y #x3FF)))
+ 	      (setf rptr (%+ 2 rptr))))
+ 	  ;; end of surrogate handling
+ 	  )
++        (when (= x #x0D)
++          (when (and (< (- in-end rptr) 4) (not eof?)) (return))
++          (when (and (>= (- in-end rptr) 4)
++                     (= (logior (ash (aref in (+ rptr 2)) 8) (aref in (+ rptr 3))) #x0A))
++            (incf rptr 2))
++          (setf x #x0A))
+ 	(setf (aref out wptr) x)
+         (setf rptr (%+ 2 rptr))
+         (setf wptr (%+ 1 wptr))))
+@@ -191,6 +201,7 @@
+       (when (%= wptr out-end)
+         (return))
+       (when (>= (%+ rptr 1) in-end)
++        (when (and eof? (< rptr in-end)) (xerror "Incomplete UTF-16 code unit"))
+         (return))
+       (let* ((lo (aref in rptr))
+ 	     (hi (aref in (%+ 1 rptr)))
+@@ -198,22 +209,29 @@
+         (when (or (eql x #xFFFE) (eql x #xFFFF))
+ 	  (xerror "not a valid code point: #x~X" x))
+ 	(when (<= #xDC00 x #xDFFF)
+-	  (xerror "unexpected high surrogate: #x~X" x))
++	  (xerror "unexpected low surrogate: #x~X" x))
+ 	(when (<= #xD800 x #xDBFF)
+-	  ;; seen low surrogate, look for high surrogate now
++	  ;; A high surrogate must be followed by a low surrogate.
+ 	  (when (>= (%+ rptr 3) in-end)
++            (when eof? (xerror "Incomplete UTF-16 surrogate pair"))
+ 	    (return))
+ 	  (let* ((lo2 (aref in (%+ 2 rptr)))
+ 		 (hi2 (aref in (%+ 3 rptr)))
+ 		 (y (logior (ash hi2 8) lo2)))
+-	    (unless (<= #xDC00 x #xDFFF)
+-	      (xerror "expected a high surrogate but found: #x~X" x))
++	    (unless (<= #xDC00 y #xDFFF)
++	      (xerror "expected a low surrogate but found: #x~X" y))
+ 	    #-rune-is-utf-16
+ 	    (progn
+ 	      (setf x (logior (ash (%- x #xd7c0) 10) (%and y #x3FF)))
+ 	      (setf rptr (%+ 2 rptr))))
+ 	  ;; end of surrogate handling
+ 	  )
++        (when (= x #x0D)
++          (when (and (< (- in-end rptr) 4) (not eof?)) (return))
++          (when (and (>= (- in-end rptr) 4)
++                     (= (logior (ash (aref in (+ rptr 3)) 8) (aref in (+ rptr 2))) #x0A))
++            (incf rptr 2))
++          (setf x #x0A))
+ 	(setf (aref out wptr) x)
+         (setf rptr (%+ 2 rptr))
+         (setf wptr (%+ 1 wptr))))
+@@ -231,6 +249,11 @@
+         byte0)
+     (macrolet ((put (x)
+                  `((lambda (x)
++                     (when (< x (cond ((< byte0 #x80) 0)
++                                      ((< byte0 #xE0) #x80)
++                                      ((< byte0 #xF0) #x800)
++                                      (t #x10000)))
++                       (xerror "Overlong UTF-8 sequence"))
+                      (when (or (<= #xD800 x #xDBFF)
+ 			       (<= #xDC00 x #xDFFF))
+ 		       (xerror "surrogate encoded in UTF-8: #x~X." x))
+@@ -247,6 +270,11 @@
+                             (setf (aref out wptr) x)
+                             (setf wptr (%+ wptr 1)))))
+                    ,x))
++               (continuation (offset)
++                 `(let ((octet (aref in (%+ rptr ,offset))))
++                    (unless (<= #x80 octet #xBF)
++                      (xerror "Invalid UTF-8 continuation byte: #x~X" octet))
++                    octet))
+                (put1 (x)
+                  `(progn
+                     (setf (aref out wptr) ,x)
+@@ -284,64 +312,40 @@
+                (xerror "Corrupted UTF-8 input (initial byte was #b~8,'0B)" byte0)
+                (setf rptr (%+ rptr 1)))
+             
+-              ((%<= #|#b11000000|# byte0 #b11011111)
++              ((%<= #xC2 byte0 #xDF)
+                (cond ((<= (%+ rptr 2) in-end)
+                       (put
+                        (dpb (ldb (byte 5 0) byte0) (byte 5 6)
+-                            (dpb (ldb (byte 6 0) (aref in (%+ rptr 1))) (byte 6 0)
++                            (dpb (ldb (byte 6 0) (continuation 1)) (byte 6 0)
+                                  0)))
+                       (setf rptr (%+ rptr 2)))
+                      (t
++                      (when eof? (xerror "Incomplete UTF-8 sequence"))
+                       (return))))
+             
+-              ((%<= #|#b11100000|# byte0 #b11101111)
++              ((%<= #xE0 byte0 #xEF)
+                (cond ((<= (%+ rptr 3) in-end)
+                       (put
+                        (dpb (ldb (byte 4 0) byte0) (byte 4 12)
+-                            (dpb (ldb (byte 6 0) (aref in (%+ 1 rptr))) (byte 6 6)
+-                                 (dpb (ldb (byte 6 0) (aref in (%+ 2 rptr))) (byte 6 0)
++                            (dpb (ldb (byte 6 0) (continuation 1)) (byte 6 6)
++                                 (dpb (ldb (byte 6 0) (continuation 2)) (byte 6 0)
+                                       0))))
+                       (setf rptr (%+ rptr 3)))
+                      (t
++                      (when eof? (xerror "Incomplete UTF-8 sequence"))
+                       (return))))
+             
+-              ((%<= #|#b11110000|# byte0 #b11110111)
++              ((%<= #xF0 byte0 #xF4)
+                (cond ((<= (%+ rptr 4) in-end)
+                       (put
+                        (dpb (ldb (byte 3 0) byte0) (byte 3 18)
+-                            (dpb (ldb (byte 6 0) (aref in (%+ 1 rptr))) (byte 6 12)
+-                                 (dpb (ldb (byte 6 0) (aref in (%+ 2 rptr))) (byte 6 6)
+-                                      (dpb (ldb (byte 6 0) (aref in (%+ 3 rptr))) (byte 6 0)
++                            (dpb (ldb (byte 6 0) (continuation 1)) (byte 6 12)
++                                 (dpb (ldb (byte 6 0) (continuation 2)) (byte 6 6)
++                                      (dpb (ldb (byte 6 0) (continuation 3)) (byte 6 0)
+                                            0)))))
+                       (setf rptr (%+ rptr 4)))
+                      (t
+-                      (return))))
+-            
+-              ((%<= #|#b11111000|# byte0 #b11111011)
+-               (cond ((<= (%+ rptr 5) in-end)
+-                      (put
+-                       (dpb (ldb (byte 2 0) byte0) (byte 2 24)
+-                            (dpb (ldb (byte 6 0) (aref in (%+ 1 rptr))) (byte 6 18)
+-                                 (dpb (ldb (byte 6 0) (aref in (%+ 2 rptr))) (byte 6 12)
+-                                      (dpb (ldb (byte 6 0) (aref in (%+ 3 rptr))) (byte 6 6)
+-                                           (dpb (ldb (byte 6 0) (aref in (%+ 4 rptr))) (byte 6 0)
+-                                                0))))))
+-                      (setf rptr (%+ rptr 5)))
+-                     (t
+-                      (return))))
+-            
+-              ((%<= #|#b11111100|# byte0 #b11111101)
+-               (cond ((<= (%+ rptr 6) in-end)
+-                      (put
+-                       (dpb (ldb (byte 1 0) byte0) (byte 1 30)
+-                            (dpb (ldb (byte 6 0) (aref in (%+ 1 rptr))) (byte 6 24)
+-                                 (dpb (ldb (byte 6 0) (aref in (%+ 2 rptr))) (byte 6 18)
+-                                      (dpb (ldb (byte 6 0) (aref in (%+ 3 rptr))) (byte 6 12)
+-                                           (dpb (ldb (byte 6 0) (aref in (%+ 4 rptr))) (byte 6 6)
+-                                                (dpb (ldb (byte 6 0) (aref in (%+ 5 rptr))) (byte 6 0)
+-                                                     0)))))))
+-                      (setf rptr (%+ rptr 6)))
+-                     (t
++                      (when eof? (xerror "Incomplete UTF-8 sequence"))
+                       (return))))
+             
+               (t
+--- a/xstream.lisp
++++ b/xstream.lisp
+@@ -317,7 +317,7 @@
+                                     (initial-encoding :guess))
+   ;; XXX if initial-speed isn't 1, encoding will me munged up
+   (assert (eql initial-speed 1))
+-  (multiple-value-bind (encoding preread)
++  (multiple-value-bind (encoding preread detection)
+       (if (eq initial-encoding :guess)
+           (figure-encoding os-stream)
+           (values initial-encoding nil))
+@@ -337,6 +337,7 @@
+        :os-left-start 0
+        :os-left-end (length preread)
+        :encoding encoding
++       :plist (list :initial-encoding encoding :encoding-detection detection)
+        :name name))))
+ 
+ (defun make-rod-xstream (string &key name)
+@@ -364,23 +365,26 @@
+   (values :utf-8 nil))
+ 
+ (defmethod figure-encoding ((stream stream))
+-  (let ((c0 (read-byte stream nil :eof)))
+-    (cond ((eq c0 :eof)
+-           (values :utf-8 nil))
+-          (t
+-           (let ((c1 (read-byte stream nil :eof)))
+-             (cond ((eq c1 :eof)
+-                    (values :utf-8 (list c0)))
+-                   (t
+-                    (cond ((and (= c0 #xFE) (= c1 #xFF)) (values :utf-16-big-endian nil))
+-                          ((and (= c0 #xFF) (= c1 #xFE)) (values :utf-16-little-endian nil))
+-                          ((and (= c0 #xEF) (= c1 #xBB))
+-                           (let ((c2 (read-byte stream nil :eof)))
+-                             (if (= c2 #xBF)
+-                                 (values :utf-8 nil)
+-                                 (values :utf-8 (list c0 c1 c2)))))
+-                          (t
+-                           (values :utf-8 (list c0 c1)))))))))))
++  ;; Keep preread bytes and distinguish a BOM from a provisional XML signature.
++  (let* ((a (read-byte stream nil nil))
++         (b (and a (read-byte stream nil nil)))
++         (prefix (remove nil (list a b))))
++    (cond ((equal prefix '(254 255)) (values :utf-16-big-endian nil :bom))
++          ((equal prefix '(255 254)) (values :utf-16-little-endian nil :bom))
++          ((equal prefix '(239 187))
++           (let ((c (read-byte stream nil nil)))
++             (if (eql c 191) (values :utf-8 nil :bom)
++                 (values :utf-8 (append prefix (and c (list c))) :default))))
++          ((or (equal prefix '(0 60)) (equal prefix '(60 0)))
++           (let* ((c (read-byte stream nil nil))
++                  (d (and c (read-byte stream nil nil)))
++                  (bytes (append prefix (remove nil (list c d)))))
++             (cond ((equal bytes '(0 60 0 63))
++                    (values :utf-16-big-endian bytes :signature))
++                   ((equal bytes '(60 0 63 0))
++                    (values :utf-16-little-endian bytes :signature))
++                   (t (values :utf-8 bytes :default)))))
++          (t (values :utf-8 prefix :default)))))
+ 
+ ;;; misc
+ 

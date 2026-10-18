@@ -1,0 +1,55 @@
+--- a/xml/xml-parse.lisp
++++ b/xml/xml-parse.lisp
+@@ -2517,22 +2517,41 @@
+       (otherwise
+ 	(wf-error input "p/markup-decl ~S" (peek-token input))))))
+ 
++(defparameter *topic-maps-encoding-patch* "19d0b-1")
++
+ (defun setup-encoding (input xml-header)
+-  (when (xml-header-encoding xml-header)
+-    (let ((enc (find-encoding (xml-header-encoding xml-header)))
+-          (xstream (car (zstream-input-stack input))))
+-      (cond ((eql enc :utf-8)
+-             (let ((old (xstream-encoding xstream)))
+-               (unless (eql old :utf-8)
+-                 (with-simple-restart (continue "Stick with ~a" old)
+-                   (wf-error input "Header says UTF-8, but BOM says ~a." old)))))
+-            (enc (setf (xstream-encoding xstream) enc))
+-            (t
+-             (warn "There is no such encoding: ~S." (xml-header-encoding xml-header)))))))
++  (let* ((xstream (car (zstream-input-stack input)))
++         (initial (getf (xstream-plist xstream) :initial-encoding
++                        (xstream-encoding xstream)))
++         (detection (getf (xstream-plist xstream) :encoding-detection))
++         (name (xml-header-encoding xml-header))
++         (declared (and name (string-upcase name)))
++         (utf16p (member initial '(:utf-16-big-endian :utf-16-little-endian))))
++    (cond ((null declared)
++           (when (eq detection :signature)
++             (wf-error input "BOM-less UTF-16LE/BE requires an explicit encoding declaration.")))
++          ((string= declared "UTF-16")
++           (unless (and utf16p (eq detection :bom))
++             (wf-error input "UTF-16 requires a matching BOM.")))
++          ((member declared '("UTF-16LE" "UTF-16BE") :test #'string=)
++           (unless (and (eq detection :signature)
++                        (eq initial (if (string= declared "UTF-16LE")
++                                        :utf-16-little-endian :utf-16-big-endian)))
++             (wf-error input "UTF-16LE/BE declaration disagrees with the input encoding.")))
++          (t
++           (let ((encoding (find-encoding name)))
++             (unless encoding (wf-error input "Unknown encoding: ~A" name))
++             (when (or utf16p (and (eq detection :bom) (not (eq encoding :utf-8))))
++               (wf-error input "Encoding declaration ~A disagrees with the BOM/signature." name))
++             (setf (xstream-encoding xstream) encoding))))
++    (setf (getf (xstream-plist xstream) :encoding-declaration-checked) t)))
+ 
+ (defun set-full-speed (input)
+   (let ((xstream (car (zstream-input-stack input))))
+     (when xstream
++      (when (and (eq (getf (xstream-plist xstream) :encoding-detection) :signature)
++                 (not (getf (xstream-plist xstream) :encoding-declaration-checked)))
++        (wf-error input "BOM-less UTF-16LE/BE requires an XML encoding declaration."))
+       (set-to-full-speed xstream))))
+ 
+ (defun p/ext-subset (input)

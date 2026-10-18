@@ -4,3 +4,5 @@ reports/**/*.log -whitespace
 docs/reading-prefixes-and-datatypes.md -whitespace
 # Verbatim integer corpus comments retain their original trailing spaces.
 docs/reading-integer-occurrences.md -whitespace
+# Unified patches preserve upstream whitespace in context and removed lines.
+patches/*.patch -whitespace
