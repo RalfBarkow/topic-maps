@@ -1,4 +1,13 @@
-# Common Lisp Topic Maps — Slice 19D1
+# Common Lisp Topic Maps — Slice 19D2
+
+Slice 19D2 adds the explicit **`topic-maps/ctm/xtm`** adapter for `%mergemap`
+with `http://psi.topicmaps.org/iso13250/xtm`. The existing resolver passes raw
+bytes to the qualified XTM reader; existing TMDM Map-content import transfers
+its result. The unchanged 1,519-byte original baseline matches end-to-end.
+CTM now has **205 PASS / 4 known FAIL / 64 NOT-RUN** with the adapter loaded;
+the separate XTM corpus has **6 PASS / 0 FAIL / 118 NOT-RUN**.
+See [XTM Mergemap: API, objects, diagnostics and reproduction](docs/slice-19d2-xtm-mergemap.md).
+
 
 Slice 19D1 adds **`topic-maps/xtm`**, an XTM 2.0 identity/`instanceOf` subset.
 Six unchanged XTM sources match their original CXTM baselines byte-for-byte;
@@ -32,7 +41,7 @@ Slice 19B adds CTM `%mergemap` with the CTM notation and an explicit
 `:resource-resolver` on `deserialize-string` / `deserialize-file`. Resources are
 supplied as bytes by the caller, deserialized with independent environments,
 and transferred by Slice 19A's TMDM content import. No implicit file/network
-retrieval is provided (Include is added by Slice 19C). XTM Mergemap remains unsupported.
+retrieval is provided (Include is added by Slice 19C). XTM Mergemap is added by the explicit Slice 19D2 adapter.
 See [Reading CTM Mergemap](docs/reading-ctm-mergemap.md) and
 [Slice 19B validation](docs/slice-19b-validation.md).
 The registered corpus now has **194 PASS, 2 known DateTime FAIL, 77 NOT-RUN**:

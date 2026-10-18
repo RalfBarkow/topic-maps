@@ -80,3 +80,26 @@
                      (concatenate 'string report ".mergemap.json"))
     (uiop:symbol-call :topic-maps.include.tests :write-include-report
                      (concatenate 'string report ".include.json"))))
+
+;; Explicit opt-in integration after the unchanged core suites and reports.
+;; Restore only the caller's qualified source registry, then load the adapter.
+(let ((prefix (uiop:getenv "TOPIC_MAPS_XTM_MERGEMAP_REPORT")))
+  (when prefix
+    (let ((calls 0))
+      (handler-case
+          (progn
+            (uiop:symbol-call :topic-maps.ctm :deserialize-string
+              "%mergemap <urn:unfetched> <http://psi.topicmaps.org/iso13250/xtm>"
+              :document-iri "urn:adapter-boundary"
+              :resource-resolver (lambda (&rest args) (declare (ignore args)) (incf calls)))
+            (error "Core CTM unexpectedly accepted XTM without its explicit adapter."))
+        (topic-maps.ctm:ctm-unsupported (condition)
+          (assert (and (zerop calls) (eq :xtm-mergemap-reader-required (topic-maps.ctm:error-code condition)))))))
+    (format t "XTM-ADAPTER-BOUNDARY-PASS: explicit adapter required before resource retrieval~%")
+    (asdf:initialize-source-registry
+      (let ((*read-eval* nil))
+        (read-from-string
+          (or (uiop:getenv "CL_SOURCE_REGISTRY")
+              (error "XTM integration requires the prepared qualified source registry.")))))
+    (asdf:test-system "topic-maps/ctm/xtm-tests")
+    (uiop:symbol-call :topic-maps.xtm-mergemap.tests :write-reports prefix)))

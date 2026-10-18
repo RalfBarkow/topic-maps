@@ -244,3 +244,16 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.xtm.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/ctm/xtm"
+  :description "Explicit XTM 2.0 notation adapter for controlled CTM Mergemap"
+  :version "0.19.2" :license "MIT" :depends-on ("topic-maps/ctm" "topic-maps/xtm")
+  :components ((:file "src/ctm/xtm")))
+
+(asdf:defsystem "topic-maps/ctm/xtm-tests"
+  :description "Actual XTM Mergemap imports, raw bytes, diagnostics and original baseline"
+  :depends-on ("topic-maps/ctm/xtm" "topic-maps/ctm/include-tests")
+  :components ((:file "tests/ctm-xtm-mergemap"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.xtm-mergemap.tests :run-tests)))

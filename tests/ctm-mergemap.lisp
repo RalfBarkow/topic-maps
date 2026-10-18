@@ -145,7 +145,7 @@
   (rejection "diagnostic:missing-resource" "%mergemap" 'topic-maps.ctm:ctm-rejection :expected-mergemap-resource)
   (rejection "diagnostic:missing-notation" "%mergemap <child> topic." 'topic-maps.ctm:ctm-rejection :expected-mergemap-notation)
   (rejection "diagnostic:unknown-notation" "%mergemap <child> <urn:unknown>" 'topic-maps.ctm:ctm-rejection :unknown-mergemap-notation)
-  (rejection "diagnostic:known-XTM-unimplemented" "%mergemap <child> <http://psi.topicmaps.org/iso13250/xtm>" 'topic-maps.ctm:ctm-unsupported :xtm-mergemap-notation)
+  (rejection "diagnostic:XTM-explicit-resolver-required" "%mergemap <child> <http://psi.topicmaps.org/iso13250/xtm>" 'topic-maps.ctm:ctm-unsupported :resource-resolver-required)
   (rejection "diagnostic:no-implicit-resource-access" (directive "file:///private/never-open-this") 'topic-maps.ctm:ctm-unsupported :resource-resolver-required)
   (multiple-value-bind (resolver calls) (resources nil)
     (rejection "diagnostic:resolver-declines-missing-resource" (directive "child.ctm") 'topic-maps.ctm:ctm-resource-error :resource-unavailable :resource-resolver resolver)
@@ -189,9 +189,9 @@
     (rejection "policy:zero-depth-without-retrieval" (directive "urn:a") 'topic-maps.ctm:ctm-unsupported :resource-depth-limit
                :resource-resolver resolver :max-resource-depth 0)
     (check "policy:zero-depth-does-not-call-resolver" (null (funcall calls)))
-    (rejection "policy:XTM-recognized-without-retrieval" "%mergemap <urn:a> <http://psi.topicmaps.org/iso13250/xtm>"
-               'topic-maps.ctm:ctm-unsupported :xtm-mergemap-notation :resource-resolver resolver)
-    (check "policy:XTM-does-not-call-resolver" (null (funcall calls))))
+    (rejection "policy:XTM-explicit-resolver-before-retrieval" "%mergemap <urn:a> <http://psi.topicmaps.org/iso13250/xtm>"
+               'topic-maps.ctm:ctm-unsupported :resource-resolver-required)
+    (check "policy:XTM-without-resolver-does-not-fetch" (null (funcall calls))))
   (multiple-value-bind (resolver calls) (resources (list (list "urn:empty" #() nil)))
     (let ((map (read-map (format nil "a. ~A~%b." (directive "urn:empty")) :resource-resolver resolver)))
       (check "policy:empty-resource-accepted-and-caller-continues" (and (= 2 (length (topic-map-topics map))) (= 1 (length (funcall calls))) (valid map)))))

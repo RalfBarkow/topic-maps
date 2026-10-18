@@ -10,18 +10,37 @@
   (and (vectorp value) (not (stringp value))
        (every (lambda (byte) (and (integerp byte) (<= 0 byte 255))) value)))
 
+(defgeneric mergemap-reader (notation)
+  (:documentation "Internal notation dispatch. The explicit CTM/XTM adapter adds :XTM."))
+(defmethod mergemap-reader ((notation t)) nil)
+(defmethod mergemap-reader ((notation (eql :ctm)))
+  (lambda (bytes resource source-key parser)
+    (deserialize-string (decode-ctm-resource bytes source-key)
+      :document-iri resource :source-name source-key
+      :resource-resolver (parser-resource-resolver parser)
+      :max-resource-depth (parser-max-resource-depth parser))))
+(defun mergemap-notation-kind (notation position)
+  (cond ((string= notation "http://psi.topicmaps.org/iso13250/ctm") :ctm)
+        ((string= notation "http://psi.topicmaps.org/iso13250/xtm") :xtm)
+        (t (problem 'ctm-rejection :unknown-mergemap-notation position
+                    "The notation IRI is not supported by this processor."))))
+(defun decode-ctm-resource (bytes source-key)
+  ;; Only CTM resources use the CTM decoder, including the existing BOM policy.
+  (let ((*source-name* source-key) (*source-text* ""))
+    (decode-utf8 bytes :strip-bom t)))
+
 (defun call-with-resource (parser resource purpose position notation continuation)
-  "Shared controlled retrieval/decoding, independent of Include/Mergemap semantics."
+  "Controlled retrieval of untouched octets. Decoding belongs to the notation reader."
   (let* ((frame (list :purpose purpose :source *source-name* :document-iri (parser-document-iri parser)
                       :position position :position-unit :character :resource-iri resource :notation notation :resource-source nil))
          (*resource-context* (cons frame *resource-context*)))
-    (when (eq purpose :mergemap)
-      (cond ((string= notation "http://psi.topicmaps.org/iso13250/xtm")
-             (problem 'ctm-unsupported :xtm-mergemap-notation position "XTM is a mandatory standard notation, but its deserializer is not implemented."))
-            ((not (string= notation "http://psi.topicmaps.org/iso13250/ctm"))
-             (problem 'ctm-rejection :unknown-mergemap-notation position "The notation IRI is not supported by this processor."))))
+    (when (eq purpose :mergemap) (mergemap-notation-kind notation position))
     (unless (parser-resource-resolver parser)
       (problem 'ctm-unsupported :resource-resolver-required position "An explicit resource resolver is required; no resource was loaded."))
+    (when (and (eq purpose :mergemap)
+               (not (mergemap-reader (mergemap-notation-kind notation position))))
+      (problem 'ctm-unsupported :xtm-mergemap-reader-required position
+               "Load topic-maps/ctm/xtm with the qualified XML source environment before XTM Mergemap."))
     ;; Active recursion and depth limits are implementation resource policy,
     ;; not claims that recursive dependencies are invalid CTM syntax.
     (when (member resource *active-resource-iris* :test #'string=)
@@ -34,28 +53,26 @@
             (funcall (parser-resource-resolver parser) resource :purpose purpose
                      :from-document-iri (parser-document-iri parser) :notation notation)
           (error (condition)
-            (problem 'ctm-resource-error :resource-resolver-failure position (princ-to-string condition))))
+            (problem 'ctm-resource-error :resource-resolver-failure position (princ-to-string condition) :character condition)))
       (setf (getf frame :resource-source) (or source-key resource))
       (unless bytes
         (problem 'ctm-resource-error :resource-unavailable position "Resolver declined or did not supply the requested resource."))
       (unless (and (resource-octets-p bytes) (or (null source-key) (stringp source-key)))
         (problem 'ctm-resource-error :invalid-resource-result position "Resolver must return an octet vector and a string source key or NIL."))
-      (let ((text (let ((*source-name* (or source-key resource)) (*source-text* ""))
-                    (decode-utf8 bytes :strip-bom t))))
-        (funcall continuation text (or source-key resource))))))
+      (funcall continuation bytes (or source-key resource)))))
 
 (defun call-with-import-diagnostics (position thunk)
   ;; Keep source errors at the resource source; model transfer/alias errors are
   ;; attributed to the caller's directive with its active resource context.
   (handler-case (funcall thunk)
     (topic-maps.tmdm:item-identifier-error (c)
-      (problem 'ctm-rejection (topic-maps.tmdm:item-identifier-error-code c) position (princ-to-string c)))
+      (problem 'ctm-rejection (topic-maps.tmdm:item-identifier-error-code c) position (princ-to-string c) :character c))
     (topic-maps.tmdm:core-subject-error (c)
-      (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c) position (princ-to-string c)))
+      (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c) position (princ-to-string c) :character c))
     (topic-maps.tmdm:variant-error (c)
-      (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c) position (princ-to-string c)))
+      (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c) position (princ-to-string c) :character c))
     (topic-maps.tmdm:reification-error (c)
-      (problem 'ctm-rejection (topic-maps.tmdm:reification-error-code c) position (princ-to-string c)))))
+      (problem 'ctm-rejection (topic-maps.tmdm:reification-error-code c) position (princ-to-string c) :character c))))
 
 (defun read-mergemap-directive (parser map)
   "CTM 3.16.3: immediately read a separate Map and import only its content."
@@ -64,10 +81,9 @@
          (notation (directive-iri parser :expected-mergemap-notation "Mergemap requires a notation IRI reference."))
          (position (token-position start)))
     (call-with-resource parser resource :mergemap position notation
-      (lambda (text source-key)
-        (let ((source (deserialize-string text :document-iri resource :source-name source-key
-                        :resource-resolver (parser-resource-resolver parser)
-                        :max-resource-depth (parser-max-resource-depth parser))))
+      (lambda (bytes source-key)
+        (let ((source (funcall (mergemap-reader (mergemap-notation-kind notation position))
+                              bytes resource source-key parser)))
           (call-with-import-diagnostics position
             (lambda () (topic-maps.tmdm:import-map-content map source))))))))
 
@@ -92,9 +108,9 @@ Already resolved locator suffixes are not CTM-percent-decoded again."
   (let* ((start (consume parser)) (position (token-position start))
          (resource (directive-iri parser :expected-include-resource "Include requires a resource IRI reference.")))
     (call-with-resource parser resource :include position nil
-      (lambda (text source-key)
+      (lambda (bytes source-key)
         (multiple-value-bind (source counter child)
-            (deserialize-context text :document-iri resource :source-name source-key
+            (deserialize-context (decode-ctm-resource bytes source-key) :document-iri resource :source-name source-key
               :wildcard-iri (parser-document-iri parser) :wildcard-counter (parser-wildcard-counter parser)
               :resource-resolver (parser-resource-resolver parser)
               :max-resource-depth (parser-max-resource-depth parser))

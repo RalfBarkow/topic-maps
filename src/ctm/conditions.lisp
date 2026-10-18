@@ -8,7 +8,8 @@
    (column :initarg :column :reader error-column)
    (source :initarg :source :reader error-source)
    (position-unit :initarg :position-unit :initform :character :reader error-position-unit)
-   (context :initarg :context :initform nil :reader error-context))
+   (context :initarg :context :initform nil :reader error-context)
+   (cause :initarg :cause :initform nil :reader error-cause))
   (:report (lambda (condition stream)
              (format stream "~A~@[ in ~A~] at ~A ~D~@[ (line ~D~]~@[, column ~D)~]: ~A"
                      (error-code condition) (error-source condition)
@@ -40,7 +41,7 @@
 (defvar *source-name* nil)
 (defvar *source-text* "")
 
-(defun problem (type code position message &optional (unit :character))
+(defun problem (type code position message &optional (unit :character) cause)
   (let ((line (when (eq unit :character) 1)) (column (when (eq unit :character) 1))
         (previous-cr nil))
     (when line
@@ -50,4 +51,4 @@
                (setf column 1 previous-cr nil))
               (t (incf column) (setf previous-cr nil)))))
     (error type :code code :message message :position position :line line
-                :column column :source *source-name* :position-unit unit :context (copy-tree (append *template-context* *resource-context*)))))
+                :column column :source *source-name* :position-unit unit :cause cause :context (copy-tree (append *template-context* *resource-context*)))))
