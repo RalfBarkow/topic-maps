@@ -31,7 +31,7 @@
   :version "0.16.1" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/ctm/package") (:file "src/ctm/conditions")
                (:file "src/ctm/unicode") (:file "src/ctm/iri")
-               (:file "src/ctm/lexer") (:file "src/ctm/reader") (:file "src/ctm/templates")))
+               (:file "src/ctm/lexer") (:file "src/ctm/reader") (:file "src/ctm/templates") (:file "src/ctm/resources")))
 
 (asdf:defsystem "topic-maps/ctm/tests"
   :description "Slice 1 semantic tests and explicit imported rejection contract"
@@ -209,3 +209,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.import.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/ctm/mergemap-tests"
+  :description "Explicit resource resolver, CTM Mergemap isolation and original contracts"
+  :depends-on ("topic-maps/tmdm/import-tests") :serial t
+  :components ((:file "tests/ctm-mergemap"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.mergemap.tests :run-tests)))

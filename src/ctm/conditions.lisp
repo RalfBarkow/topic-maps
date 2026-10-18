@@ -14,11 +14,19 @@
                      (error-code condition) (error-source condition)
                      (error-position-unit condition) (error-position condition)
                      (error-line condition) (error-column condition)
-                     (error-message condition)))))
+                     (error-message condition))
+             (dolist (frame (reverse (error-context condition)))
+               (when (eq :mergemap (getf frame :purpose))
+                 (format stream "~%  via %mergemap in ~A at character ~D -> ~A~@[ (source ~A)~]"
+                         (or (getf frame :source) (getf frame :document-iri)) (getf frame :position)
+                         (getf frame :resource-iri) (getf frame :resource-source)))))))
 (define-condition ctm-rejection (ctm-error) ())
 (define-condition undefined-prefix (ctm-rejection) ())
 (define-condition prefix-collision (ctm-rejection) ())
 (define-condition ctm-unsupported (ctm-error) ())
+;; Retrieval/configuration failures are not evidence of malformed CTM.
+(define-condition ctm-resource-error (ctm-error) ())
+(defvar *resource-context* nil)
 
 (define-condition template-error (ctm-rejection) ())
 (define-condition duplicate-template (template-error) ())
@@ -41,4 +49,4 @@
                (setf column 1 previous-cr nil))
               (t (incf column) (setf previous-cr nil)))))
     (error type :code code :message message :position position :line line
-                :column column :source *source-name* :position-unit unit :context (copy-tree *template-context*))))
+                :column column :source *source-name* :position-unit unit :context (copy-tree (append *template-context* *resource-context*)))))

@@ -1,4 +1,14 @@
-# Common Lisp Topic Maps — Slice 19A
+# Common Lisp Topic Maps — Slice 19B
+
+Slice 19B adds CTM `%mergemap` with the CTM notation and an explicit
+`:resource-resolver` on `deserialize-string` / `deserialize-file`. Resources are
+supplied as bytes by the caller, deserialized with independent environments,
+and transferred by Slice 19A's TMDM content import. No implicit file/network
+retrieval, Include or XTM deserialization is provided.
+See [Reading CTM Mergemap](docs/reading-ctm-mergemap.md) and
+[Slice 19B validation](docs/slice-19b-validation.md).
+The registered corpus now has **194 PASS, 2 known DateTime FAIL, 77 NOT-RUN**:
+four new byte-exact positive contracts and three intended negative rejections.
 
 Slice 19A adds `topic-maps.tmdm:import-map-content`: source-preserving copying
 of Topics, Associations and their children into a target Map, followed by the
@@ -220,7 +230,7 @@ the existing single-runtime environment. `<path>.typed-names.json` records Name 
 atomic Core Subject conflict observations.
 `<path>.templates.json` records the 57 model observations and ten specific
 rejections, including original positions and invocation contexts.
-See [Slice 19A validation](docs/slice-19a-validation.md) for current evidence.
+See [Slice 19B validation](docs/slice-19b-validation.md) for current evidence.
 [Slice 12A validation](docs/slice-12a-validation.md) records explicit Name types.
 [Slice 11 validation](docs/slice-11-validation.md) preserves the prior timezone evidence.
 [Slice 10 validation](docs/slice-10-validation.md) preserves the earlier DateTime baseline.

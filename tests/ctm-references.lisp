@@ -271,6 +271,10 @@
     (check (concatenate 'string "references:feature-boundary:" text)
            (cond ((search "def " text) (null (topic-map-topics (read-text text))))
                  ((find #\~ text) (null (ctm-condition text)))
+                 ((search "%mergemap" text)
+                  (let ((c (ctm-condition text)))
+                    (and (typep c 'topic-maps.ctm:ctm-rejection)
+                         (eq :unknown-mergemap-notation (topic-maps.ctm:error-code c)))))
                  (t (typep (ctm-condition text) 'topic-maps.ctm:ctm-unsupported)))))
   (check "references:feature-boundary:a(r: b, s: c, t: d)"
          (references-current-p (read-text "a(r: b, s: c, t: d)")))

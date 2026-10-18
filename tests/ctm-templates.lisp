@@ -314,7 +314,11 @@
     (let ((c (condition-from (lambda () (read-text "def f() f() end f()")))))
       (check "diagnostic:resource-limit-is-UNSUPPORTED-not-normative-rejection"
              (and (eq (type-of c) 'topic-maps.ctm:ctm-unsupported) (eq :template-depth-limit (topic-maps.ctm:error-code c))))))
-  (dolist (text '("def f() a - \"\"\"N\"\"\". end" "%include <other>" "%mergemap <other> <urn:ctm>"))
+  (let ((condition (condition-from (lambda () (read-text "%mergemap <other> <urn:ctm>")))))
+    (check "diagnostic:unknown-mergemap-notation"
+           (and (typep condition 'topic-maps.ctm:ctm-rejection)
+                (eq :unknown-mergemap-notation (topic-maps.ctm:error-code condition)))))
+  (dolist (text '("def f() a - \"\"\"N\"\"\". end" "%include <other>"))
     (check (concatenate 'string "diagnostic:unchanged-excluded-feature:" text)
            (typep (condition-from (lambda () (read-text text))) 'topic-maps.ctm:ctm-unsupported))))
 

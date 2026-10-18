@@ -1,0 +1,20 @@
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 1 topics, 0 associations {7003D11F53}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=("urn:child#a") SI=NIL SL=NIL {7003D14633}>)
+  ASSOCIATIONS                   = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("urn:child#a") SI=NIL SL=NIL {7003D14633}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 1 topics, 0 associations {7003D11F53}>
+  ITEM-IDENTIFIERS               = ("urn:child#a")
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+MERGEMAP-INSPECTION-PASS: actual Topic with child Document IRI; parent is the caller Map.

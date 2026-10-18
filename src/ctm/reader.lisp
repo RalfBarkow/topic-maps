@@ -1,11 +1,13 @@
 (in-package #:topic-maps.ctm)
 
+(defvar *active-resource-iris* nil)
+
 (defstruct template-definition name parameters body position)
 ;; Validated concrete syntax, never TMDM information items or Lisp forms.
 (defstruct ctm-statement kind tokens position)
 (defstruct template-argument kind token topic value datatype plain-string-p)
 (defstruct (parser (:constructor make-parser (lexer document-iri wildcard-iri wildcard-counter)))
-  lexer document-iri wildcard-iri wildcard-counter lookahead
+  lexer document-iri wildcard-iri wildcard-counter lookahead resource-resolver (max-resource-depth 32)
   replay-p remaining recording recorded bindings
   (templates (make-hash-table :test #'equal))
   (wildcards (make-hash-table :test #'equal)) (prefixes (make-hash-table :test #'equal)))
@@ -413,17 +415,28 @@ Use the shared Topic reference resolver."
                 (attach-reifier role reifier marker))))
           (attach-reifier (topic-maps.tmdm:canonical-association association) r position))))))
 
-(defun deserialize-string (text &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0))
+(defun deserialize-string (text &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0)
+                                      resource-resolver (max-resource-depth 32))
   "Read the documented CTM subset, with per-document prefixes and qualified strings.
 Return the Map and final Wildcard Counter as two values. Wildcard IRI defaults
 to Document IRI; local identifiers and relative IRIs still use Document IRI.
-Source positions are zero-based character offsets; lines/columns are one-based."
+Source positions are zero-based character offsets; lines/columns are one-based.
+RESOURCE-RESOLVER, if supplied, is called with an absolute IRI and :PURPOSE,
+:FROM-DOCUMENT-IRI and :NOTATION, returning octets and an optional source key.
+There is no implicit retrieval. MAX-RESOURCE-DEPTH bounds nested imports (default
+32, zero disables them); it is an implementation limit, not a CTM validity rule."
   (check-type text string)
-  (let ((*source-name* source-name) (*source-text* text))
+  (let ((*source-name* source-name) (*source-text* text)
+        (*active-resource-iris* (cons document-iri *active-resource-iris*)))
     (require-document-iri document-iri)
     (require-wildcard-environment wildcard-iri wildcard-counter)
+    (when (and resource-resolver (not (functionp resource-resolver)))
+      (problem 'ctm-resource-error :invalid-resource-resolver 0 "Supply a resolver function or NIL."))
+    (unless (and (integerp max-resource-depth) (>= max-resource-depth 0))
+      (problem 'ctm-resource-error :invalid-resource-depth-limit 0 "Resource depth limit must be a non-negative integer."))
     (let ((parser (make-parser (make-lexer text) document-iri wildcard-iri wildcard-counter))
           (map (topic-maps.tmdm:make-topic-map)))
+      (setf (parser-resource-resolver parser) resource-resolver (parser-max-resource-depth parser) max-resource-depth)
       (handler-bind ((topic-maps.tmdm:variant-error
                        (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c)
                                              (lexer-cursor (parser-lexer parser)) (princ-to-string c))))
@@ -433,18 +446,19 @@ Source positions are zero-based character offsets; lines/columns are one-based."
                      (topic-maps.tmdm:core-subject-error
                        (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c)
                                              (lexer-cursor (parser-lexer parser)) (princ-to-string c)))))
-        (loop while (eq :directive (token-kind (look parser))) do (read-prefix-directive parser))
+        (loop while (eq :directive (token-kind (look parser))) do (read-directive parser map))
         (multiple-value-bind (r position) (read-reifier parser map) (attach-reifier map r position))
         (loop until (eq :eof (token-kind (look parser))) do
           (when (punctuation-p parser #\~)
             (problem 'ctm-rejection :topic-map-reifier-position (token-position (look parser))
                      "Topic Map Reifier must precede all body declarations."))
-          (cond ((eq :directive (token-kind (look parser))) (read-prefix-directive parser))
+          (cond ((eq :directive (token-kind (look parser))) (read-directive parser map))
                 ((identifier-p (look parser) "def") (read-template-definition parser))
                 (t (read-statement parser map)))))
       (values map (parser-wildcard-counter parser)))))
 
-(defun deserialize-file (pathname &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0))
+(defun deserialize-file (pathname &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0)
+                                        resource-resolver (max-resource-depth 32))
   "Read a UTF-8 CTM file, with optional UTF-8 BOM, using an explicit Document IRI.
 Other encoding directives are UNSUPPORTED. File I/O errors propagate unchanged."
   (let ((*source-name* source-name) (*source-text* ""))
@@ -456,4 +470,5 @@ Other encoding directives are UNSUPPORTED. File I/O errors propagate unchanged."
           (error "Input file changed or was truncated during reading."))
         (deserialize-string (decode-utf8 bytes :strip-bom t)
                             :document-iri document-iri :source-name source-name
-                            :wildcard-iri wildcard-iri :wildcard-counter wildcard-counter)))))
+                            :wildcard-iri wildcard-iri :wildcard-counter wildcard-counter
+                            :resource-resolver resource-resolver :max-resource-depth max-resource-depth)))))
