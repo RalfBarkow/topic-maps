@@ -62,7 +62,9 @@
       (:identifier
        (when explicit-kind
          (problem 'ctm-rejection :expected-iri (token-position token) "Explicit = or ^ needs an IRI reference."))
-       (when (member (token-value token) '("def" "isa" "ako" "end") :test #'string=)
+       (when (member (token-value token) '("isa" "ako") :test #'string=)
+         (problem 'ctm-rejection :reserved-topic-identifier (token-position token) "A relationship keyword is not a Topic identity."))
+       (when (member (token-value token) '("def" "end") :test #'string=)
          (problem 'ctm-unsupported :unsupported-keyword (token-position token) "This keyword is outside the implemented subset."))
        (values :item-identifier
           (concatenate 'string (parser-document-iri parser) "#" (token-value token))))
@@ -86,8 +88,11 @@
       (otherwise (problem 'ctm-rejection :expected-topic-identity (token-position token) "Expected topic identity.")))))
 
 (defun identity-reference (parser map)
-  (multiple-value-bind (kind iri) (identity-value parser)
-    (topic-maps.tmdm:intern-topic map kind iri)))
+  (let ((position (token-position (look parser))))
+    (multiple-value-bind (kind iri) (identity-value parser)
+      (handler-case (topic-maps.tmdm:intern-topic map kind iri)
+        (topic-maps.tmdm:core-subject-error (c)
+          (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c) position (princ-to-string c)))))))
 
 (defun topic-reference (parser map)
   "CTM 3.3.7: one recursive reference path for Types, Players and Scope themes."
@@ -209,7 +214,9 @@ The owning information item is not constructed until this function finishes."
       (topic-maps.tmdm:reification-error (c)
         (problem 'ctm-rejection (topic-maps.tmdm:reification-error-code c) position (princ-to-string c)))
       (topic-maps.tmdm:variant-error (c)
-        (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c) position (princ-to-string c)))))
+        (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c) position (princ-to-string c)))
+      (topic-maps.tmdm:core-subject-error (c)
+        (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c) position (princ-to-string c)))))
   item)
 
 (defun read-identity-tail (parser map topic)
@@ -232,7 +239,10 @@ The owning information item is not constructed until this function finishes."
                   (problem 'ctm-unsupported :topic-tail (token-position start) "Template invocations are outside this subset.")
                   (problem 'ctm-rejection :expected-occurrence-type-separator (token-position (look parser))
                            "Expected ':' after the Occurrence Type."))
-              (topic-maps.tmdm:add-topic-identifier topic kind iri))))))
+              (handler-case (topic-maps.tmdm:add-topic-identifier topic kind iri)
+                (topic-maps.tmdm:core-subject-error (c)
+                  (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c)
+                           (token-position start) (princ-to-string c)))))))))
 
 (defun read-variant (parser map name)
   (consume parser)
@@ -273,6 +283,34 @@ Use the shared Topic reference resolver."
             (loop while (punctuation-p parser #\() do (read-variant parser map name))))))
     (topic-maps.tmdm:canonical-topic topic)))
 
+(defun relationship-keyword-p (token)
+  (and (eq :identifier (token-kind token)) (member (token-value token) '("isa" "ako") :test #'string=)))
+
+(defun read-type-relationship (parser map topic)
+  "CTM 3.9: expand one isa/ako statement using ordinary same-map Associations."
+  (let* ((keyword (consume parser)) (isa (string= (token-value keyword) "isa")) (next (look parser)))
+    (unless (and (topic-reference-start-p next)
+                 (not (and (eq :identifier (token-kind next))
+                           (member (token-value next) '("isa" "ako" "def" "end") :test #'string=))))
+      (problem 'ctm-rejection :expected-relationship-topic (token-position next)
+               "Expected one Topic reference after isa or ako."))
+    (let ((target (topic-reference parser map)))
+      (when (punctuation-p parser #\,)
+        (problem 'ctm-rejection :unexpected-relationship-list (token-position (look parser))
+                 "isa/ako takes one Topic reference; repeat the keyword in a separate tail element."))
+      (handler-case
+          (flet ((core (local)
+                   ;; Resolve locators every time; do not cache replaceable Topic objects.
+                   (topic-maps.tmdm:intern-topic map :subject-identifier
+                     (concatenate 'string "http://psi.topicmaps.org/iso13250/model/" local))))
+            (let* ((type (core (if isa "type-instance" "supertype-subtype")))
+                   (left (core (if isa "instance" "subtype"))) (right (core (if isa "type" "supertype"))))
+              (topic-maps.tmdm:make-association map type (list (list left topic) (list right target)))
+              (topic-maps.tmdm:canonical-topic topic)))
+        (topic-maps.tmdm:core-subject-error (c)
+          (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c)
+                   (token-position keyword) (princ-to-string c)))))))
+
 (defun read-topic-tail (parser map topic terminator &key required)
   "CTM 3.9: the same Tail reader ends at '.' or the caller's Embedded ']'."
   (let ((has-tail nil) (seen-tail nil))
@@ -296,6 +334,10 @@ Use the shared Topic reference resolver."
         ((eq :eof (token-kind (look parser)))
          (problem 'ctm-rejection (if (char= terminator #\]) :missing-embedded-close :missing-period)
                   (token-position (look parser)) "Expected the closing Topic/Embedded Topic delimiter."))
+        ((relationship-keyword-p (look parser))
+         (when has-tail
+           (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
+         (setf topic (read-type-relationship parser map topic) has-tail t seen-tail t))
         ((topic-reference-start-p (look parser))
          (when has-tail
            (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
@@ -364,6 +406,9 @@ Source positions are zero-based character offsets; lines/columns are one-based."
                                              (lexer-cursor (parser-lexer parser)) (princ-to-string c))))
                      (topic-maps.tmdm:reification-error
                        (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:reification-error-code c)
+                                             (lexer-cursor (parser-lexer parser)) (princ-to-string c))))
+                     (topic-maps.tmdm:core-subject-error
+                       (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c)
                                              (lexer-cursor (parser-lexer parser)) (princ-to-string c)))))
         (loop while (eq :directive (token-kind (look parser))) do (read-prefix-directive parser))
         (multiple-value-bind (r position) (read-reifier parser map) (attach-reifier map r position))

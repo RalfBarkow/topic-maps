@@ -1,0 +1,3 @@
+BASE-CORE-GAP-CONFIRMED: different type/instance Core Subjects merged
+BASE-READER-CONTROL-PASS: "a isa b." rejected as UNSUPPORTED-KEYWORD
+BASE-READER-CONTROL-PASS: "a ako b." rejected as UNSUPPORTED-KEYWORD

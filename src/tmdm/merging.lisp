@@ -82,6 +82,7 @@
 (defun merge-two-topics (map a b)
   ;; TMDM 6.2: create C, union supported properties, replace model references.
   ;; TMDM 6.2 conflict is checked against current targets BEFORE replacement.
+  (check-core-subject-identifiers (append (%topic-subject-identifiers a) (%topic-subject-identifiers b)))
   (let ((left (topic-reified a)) (right (topic-reified b)))
     (when (and left right (not (eq left right)))
       (reification-problem :reifier-conflict "Topics reify different information items.")))
@@ -124,9 +125,10 @@
 (defun normalize-topic-map (map)
   "Reach a fixed point of same-map Topic and structural item merging."
   (check-type map topic-map)
-  (when (needs-reification-preflight-p map)
+  (when (needs-merge-preflight-p map)
     (return-from normalize-topic-map
-      (preflight-reification-mutation map (lambda (ref) (normalize-topic-map (funcall ref map))))))
+      (preflight-merge-mutation map (lambda (ref) (normalize-topic-map (funcall ref map))))))
+  (validate-map-core-subjects map)
   (check-variant-merge-constraints map)
   (loop for before = (length (map-information-items map)) do
     (loop for pair = (equal-pair (%topic-map-topics map) #'equal-topics-p)
@@ -146,8 +148,8 @@ Explicit merging may assert shared subject identity beyond locator equality.
 Cross-map merging is rejected before mutation. Obsolete handles remain resolvable."
   (let* ((a (live-topic a)) (b (live-topic b)) (map (%topic-parent a)))
     (unless (eq map (%topic-parent b)) (error "Cross-map Topic merging is outside this API."))
-    (when (needs-reification-preflight-p map)
-      (return-from merge-topics (preflight-reification-mutation map
+    (when (needs-merge-preflight-p map)
+      (return-from merge-topics (preflight-merge-mutation map
         (lambda (ref) (merge-topics (funcall ref a) (funcall ref b))))))
     (unless (eq a b) (setf a (merge-two-topics map a b)))
     (normalize-topic-map map)
@@ -159,9 +161,11 @@ KIND is :ITEM-IDENTIFIER, :SUBJECT-IDENTIFIER or :SUBJECT-LOCATOR.
 IRI is an already resolved, nonempty absolute locator string; CTM validates it."
   (unless (and (stringp iri) (plusp (length iri))) (error "A nonempty locator string is required."))
   (let ((topic (live-topic topic)))
-    (when (needs-reification-preflight-p (%topic-parent topic))
-      (return-from add-topic-identifier (preflight-reification-mutation (%topic-parent topic)
+    (when (needs-merge-preflight-p (%topic-parent topic))
+      (return-from add-topic-identifier (preflight-merge-mutation (%topic-parent topic)
         (lambda (ref) (add-topic-identifier (funcall ref topic) kind iri)))))
+    (when (eq kind :subject-identifier)
+      (check-core-subject-identifiers (cons iri (%topic-subject-identifiers topic))))
     (check-topic-occurrence-identifiers (%topic-parent topic) kind iri)
     ;; Check the entire prospective identity closure before adding the locator.
     (check-variant-merge-constraints (%topic-parent topic) :identifier (list topic kind iri))
@@ -179,6 +183,11 @@ IRI is an already resolved, nonempty absolute locator string; CTM validates it."
   ;; Validate the category even for an empty map, before adding a Topic.
   (ecase kind ((:item-identifier :subject-identifier :subject-locator)))
   (check-topic-occurrence-identifiers map kind iri)
+  ;; Preflight BEFORE creating a new Topic, so rejected cascades cannot leave
+  ;; even an empty newly interned item in the original Map.
+  (when (needs-merge-preflight-p map)
+    (return-from intern-topic (preflight-merge-mutation map
+      (lambda (ref) (intern-topic (funcall ref map) kind iri)))))
   (let ((topic (or (find-if (lambda (topic) (identifier-matches-p topic kind iri))
                            (%topic-map-topics map))
                    (let ((new (%make-topic map)))

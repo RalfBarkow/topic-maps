@@ -1,4 +1,4 @@
-# Common Lisp Topic Maps — Slice 17A
+# Common Lisp Topic Maps — Slice 17B
 
 A working ANSI Common Lisp reader for CTM identity/name syntax and
 Associations with one or more Roles, with same-map merging of Topics, Names, Associations
@@ -32,7 +32,14 @@ kinds, including metadata-preserving replacement merges and pure CXTM output.
 Slice 16B adds same-map Reification, full merge cascades, atomic semantic
 preflight and all six CTM Reifier attachment positions.
 Slice 17A removes the two-Role CTM limit, preserving the existing model and
-canonicalizer. `isa`/`ako` and Core-Subject identity protection remain open for 17B.
+canonicalizer. Slice 17B adds `isa`/`ako` using ordinary Associations and protects
+the distinct Core Subjects defined by TMDM 2006 §7. Atomic merge preflight uses
+the existing disposable TMDM graph. No inference engine is introduced.
+
+Start with [isa/ako and Core Subject Consistency](docs/reading-type-relationships.md)
+for the exact vocabulary, object relations, normative distinctions and inspection.
+See [Slice 17B validation](docs/slice-17b-validation.md) for the complete offline
+regression and thirteen new original byte-exact comparisons.
 
 Start with [Associations with Arbitrarily Many Roles](docs/reading-association-arity.md)
 for the actual seven-Topic/three-Role example and executable inspection forms.
@@ -54,6 +61,8 @@ ASDF/UIOP and Python's standard library. No Quicklisp packages are required.
 general identifier and Reification regression suites.
 `topic-maps/ctm/association-arity-tests` adds n-ary syntax, merge/handle checks
 and the original `association-duplicate-role.ctm` comparison.
+`topic-maps/ctm/type-relationship-tests` adds Core consistency, atomic failure
+and isa/ako model/reference-graph checks.
 
 Start with [Reading Topic References](docs/reading-topic-references.md) for Wildcard
 IRIs/counters, recursive Embedded Topics and actual object relationships.
@@ -153,10 +162,10 @@ CXTM baselines only under `ctm/baseline`. Auxiliary files are reported separatel
 ## Current validation and historical foundation
 
 The complete pinned corpus remains unchanged: 231 valid CTM inputs, 42 invalid
-inputs, 231 CXTM baselines and 22 CTM auxiliary files. Ninety-five selected positive
+inputs, 231 CXTM baselines and 22 CTM auxiliary files. One hundred eight selected positive
 cases pass actual CXTM byte comparisons. Twelve specific rejection contracts pass.
 Two executed DateTime contracts remain FAIL because of documented normative
-baseline discrepancies; 164 contracts remain NOT-RUN. A green regression run
+baseline discrepancies; 151 contracts remain NOT-RUN. A green regression run
 preserves those two FAILs and never changes an upstream baseline. Unsupported
 constructs and I/O errors cannot count as the required CTM rejection.
 
@@ -165,7 +174,7 @@ fixtures, 123 retained identity checks, 646 merge checks, 657 Association checks
 imported-report validation and selected baseline
 property evidence, 445 retained CXTM checks, 1,101 Occurrence checks, 150 prefix/datatype checks, 665 integer checks, 715 Decimal checks, 1,806 Date checks, 217 DateTime checks, 1,944 timezone checks, 106 typed-name checks, 293 Scope checks, 324 Variant checks and 238 Topic Reference checks, plus
 244 general Item Identifier checks, 236 Reification checks, 337 n-ary Association
-checks and 16,294 independent Unicode NFC oracle
+checks, 1,016 Core Subject/type-relationship checks and 16,294 independent Unicode NFC oracle
 comparisons. The oracle needs Python UCD 15.0 or 15.1 (tables use UCD 15.1.0).
 A report path also produces `<path>.semantics.json` with
 separate model observations, plus `<path>.merging.json`, `<path>.associations.json`
@@ -187,7 +196,9 @@ the existing single-runtime environment. `<path>.typed-names.json` records Name 
 `<path>.references.json` records the new source/counter/model observations.
 `<path>.identifiers.json` and `<path>.reification.json` retain their model evidence;
 `<path>.arity.json` adds actual Role references and twelve canonical XML witnesses.
-See [Slice 17A validation](docs/slice-17a-validation.md) for current evidence.
+`<path>.relationships.json` records the thirteen original reference graphs and
+atomic Core Subject conflict observations.
+See [Slice 17B validation](docs/slice-17b-validation.md) for current evidence.
 [Slice 12A validation](docs/slice-12a-validation.md) records explicit Name types.
 [Slice 11 validation](docs/slice-11-validation.md) preserves the prior timezone evidence.
 [Slice 10 validation](docs/slice-10-validation.md) preserves the earlier DateTime baseline.

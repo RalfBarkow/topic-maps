@@ -183,8 +183,9 @@
            (and (eq (type-of c) 'topic-maps.ctm:undefined-prefix)
                 (eq :undefined-prefix (topic-maps.ctm:error-code c)) (= 14 (topic-maps.ctm:error-position c)))))
   (dolist (text '("a isa b." "a ako b."))
-    (check (concatenate 'string "boundary:17B-stays-unsupported:" text)
-           (typep (condition-from (lambda () (read-text text))) 'topic-maps.ctm:ctm-unsupported))))
+    (check (concatenate 'string "boundary:17B-now-deserialized:" text)
+           (let* ((map (read-text text)) (a (first (topic-map-associations map))))
+             (and (= 2 (length (association-roles a))) (valid-model-p map))))))
 
 (defun original-case ()
   (let* ((id "ctm/in/association-duplicate-role.ctm")

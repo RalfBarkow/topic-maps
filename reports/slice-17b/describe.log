@@ -1,0 +1,66 @@
+#<TOPIC-MAPS.TMDM:ASSOCIATION 2 roles {7003CE7A23}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 9 topics, 2 associations {7003CE60B3}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  ROLES                          = (#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003CE7A73}>..
+  SCOPE                          = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003CE7A73}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:ASSOCIATION 2 roles {7003CE7A23}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  PLAYER                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/relationships.ctm..
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+Role Type: ("http://psi.topicmaps.org/iso13250/model/instance"); Player II: ("https://example.invalid/relationships.ctm#a")
+#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003CE7AB3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:ASSOCIATION 2 roles {7003CE7A23}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  PLAYER                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/relationships.ctm..
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+Role Type: ("http://psi.topicmaps.org/iso13250/model/type"); Player II: ("https://example.invalid/relationships.ctm#b")
+#<TOPIC-MAPS.TMDM:ASSOCIATION 2 roles {7003D02B13}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 9 topics, 2 associations {7003CE60B3}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  ROLES                          = (#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003D02B63}>..
+  SCOPE                          = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003D02B63}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:ASSOCIATION 2 roles {7003D02B13}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  PLAYER                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/relationships.ctm..
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+Role Type: ("http://psi.topicmaps.org/iso13250/model/subtype"); Player II: ("https://example.invalid/relationships.ctm#a")
+#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003D02BA3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:ASSOCIATION 2 roles {7003D02B13}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  PLAYER                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/relationships.ctm..
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+Role Type: ("http://psi.topicmaps.org/iso13250/model/supertype"); Player II: ("https://example.invalid/relationships.ctm#c")

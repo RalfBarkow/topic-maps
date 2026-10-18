@@ -24,7 +24,7 @@
   :description "Topics, Names, Variants, Occurrences, Associations and Roles with same-map merging"
   :version "0.16.1" :license "MIT" :serial t
   :components ((:file "src/tmdm/package") (:file "src/tmdm/integers") (:file "src/tmdm/decimals") (:file "src/tmdm/dates") (:file "src/tmdm/datetimes") (:file "src/tmdm/items")
-               (:file "src/tmdm/item-identifiers") (:file "src/tmdm/reification") (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations")))
+               (:file "src/tmdm/core-subjects") (:file "src/tmdm/item-identifiers") (:file "src/tmdm/reification") (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations")))
 
 (asdf:defsystem "topic-maps/ctm"
   :description "CTM recursive Topic references, Wildcards, names/variants/associations and supported literals"
@@ -185,3 +185,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.arity.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/ctm/type-relationship-tests"
+  :description "CTM isa/ako, Core Subject consistency and atomic identity cascades"
+  :depends-on ("topic-maps/ctm/association-arity-tests") :serial t
+  :components ((:file "tests/ctm-type-relationships"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.relationship.tests :run-tests)))

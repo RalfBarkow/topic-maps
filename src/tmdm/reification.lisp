@@ -30,10 +30,12 @@
                                (map-information-items (%topic-parent topic)))))
     (when (rest items) (reification-problem :reifier-conflict "A Topic reifies different live information items."))
     (first items)))
-(defvar *reification-mutation-active* nil)
-(defun needs-reification-preflight-p (map)
-  (and (not *reification-mutation-active*)
-       (some (lambda (item) (and (reifiable-p item) (%item-reifier item))) (map-information-items map))))
+(defvar *merge-mutation-active* nil)
+(defun needs-merge-preflight-p (map)
+  "Reuse the same disposable graph for Reifier cascades and Core Subject conflicts."
+  (and (not *merge-mutation-active*)
+       (or (map-has-core-subject-p map)
+           (some (lambda (item) (and (reifiable-p item) (%item-reifier item))) (map-information-items map)))))
 
 (defun copy-map-for-preflight (map)
   "Disposable graph of the SAME seven TMDM structures, using the same merge code.
@@ -77,13 +79,13 @@ Old handles resolve through their canonical representatives; no second identity 
             (occurrence (setf (%occurrence-scope new) (refs (%occurrence-scope item))))
             (association (setf (%association-scope new) (refs (%association-scope item)))))))
       (values copy #'ref))))
-(defun preflight-reification-mutation (map operation)
+(defun preflight-merge-mutation (map operation)
   "Validate the complete cascade on a disposable graph before changing originals.
 This guarantees semantic rejection before mutation, not recovery from resource exhaustion."
   (multiple-value-bind (copy resolve) (copy-map-for-preflight map)
     (declare (ignore copy))
-    (let ((*reification-mutation-active* t)) (funcall operation resolve)))
-  (let ((*reification-mutation-active* t)) (funcall operation #'identity)))
+    (let ((*merge-mutation-active* t)) (funcall operation resolve)))
+  (let ((*merge-mutation-active* t)) (funcall operation #'identity)))
 
 (defun set-item-reifier (item topic)
   "Assert same-map Reification, returning the current item. A different existing
@@ -96,9 +98,9 @@ Reifier is merged with TOPIC. NIL explicitly clears. Atomic validation is API po
       (unless (typep topic 'topic) (reification-problem :invalid-reifier "Reifier must be a Topic or NIL."))
       (setf topic (live-topic topic))
       (unless (eq map (%topic-parent topic)) (reification-problem :foreign-reifier "Reifier belongs to another Topic Map.")))
-    (when (needs-reification-preflight-p map)
+    (when (needs-merge-preflight-p map)
       (return-from set-item-reifier
-        (preflight-reification-mutation map (lambda (ref) (set-item-reifier (funcall ref item) (and topic (funcall ref topic)))))))
+        (preflight-merge-mutation map (lambda (ref) (set-item-reifier (funcall ref item) (and topic (funcall ref topic)))))))
     (when topic
       (let ((other (topic-reified topic)))
         (when (and other (not (eq other item)))
