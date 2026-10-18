@@ -1,0 +1,64 @@
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 4 topics, 1 associations {7003AA9AB3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:owner") SL=NIL {7003AA9B23}>..
+  ASSOCIATIONS                   = (#<TOPIC-MAPS.TMDM:ASSOCIATION 1 roles {7003AA9D93}>)
+  ITEM-IDENTIFIERS               = ("urn:source-map-only")
+  REIFIER                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 4 topics, 1 associations {7003AA9AE3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:owner") SL=NIL {7003AAAB73}>..
+  ASSOCIATIONS                   = (#<TOPIC-MAPS.TMDM:ASSOCIATION 1 roles {7003AAB063}>)
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {7003AA9C63}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "Name"
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:type") SL=NIL {7003AA9B93}>
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:owner") SL=NIL {7003AA9B23}>
+  SCOPE                          = NIL
+  VARIANTS                       = (#<TOPIC-MAPS.TMDM:VARIANT "V" datatype="http://www.w3.org/2001/XMLSch..
+  ITEM-IDENTIFIERS               = ("urn:name")
+  REIFIER                        = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:reifier") SL=NIL {7003AA9E33}>
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {7003AAAD13}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "Name"
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:type") SL=NIL {7003AAABC3}>
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:owner") SL=NIL {7003AAAB73}>
+  SCOPE                          = NIL
+  VARIANTS                       = (#<TOPIC-MAPS.TMDM:VARIANT "V" datatype="http://www.w3.org/2001/XMLSch..
+  ITEM-IDENTIFIERS               = ("urn:name")
+  REIFIER                        = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:reifier") SL=NIL {7003AAAC63}>
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:OCCURRENCE "+0007" datatype="http://www.w3.org/2001/..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "+0007"
+  DATATYPE                       = "http://www.w3.org/2001/XMLSchema#integer"
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:type") SL=NIL {7003AAABC3}>
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:owner") SL=NIL {7003AAAB73}>
+  ITEM-IDENTIFIERS               = NIL
+  SCOPE                          = (#<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:theme") SL=NIL {7003AAAC13}>)
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:ASSOCIATION 1 roles {7003AAB063}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 4 topics, 1 associations {7003AA9AE3}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("urn:type") SL=NIL {7003AAABC3}>
+  ROLES                          = (#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003AAB0B3}>)
+  SCOPE                          = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+IMPORT-INSPECTION-PASS: copied graph; actual EQ references; source unchanged.

@@ -1,6 +1,7 @@
 (defpackage #:topic-maps.tmdm
   (:use #:cl)
-  (:export #:topic-map #:make-topic-map #:topic-map-topics #:topic-map-associations
+  (:export #:import-map-content #:map-import-error #:map-import-error-code
+           #:topic-map #:make-topic-map #:topic-map-topics #:topic-map-associations
            #:core-subject-identifiers #:core-subject-error #:core-subject-error-code
            #:item-reifier #:set-item-reifier #:topic-reified
            #:reification-error #:reification-error-code

@@ -21,10 +21,10 @@
              (uiop:symbol-call :topic-maps.tests :run-tests)))
 
 (asdf:defsystem "topic-maps/tmdm"
-  :description "Topics, Names, Variants, Occurrences, Associations and Roles with same-map merging"
+  :description "Topics, Names, Variants, Occurrences, Associations and Roles with same-map merging and source-preserving content import"
   :version "0.16.1" :license "MIT" :serial t
   :components ((:file "src/tmdm/package") (:file "src/tmdm/integers") (:file "src/tmdm/decimals") (:file "src/tmdm/dates") (:file "src/tmdm/datetimes") (:file "src/tmdm/items")
-               (:file "src/tmdm/core-subjects") (:file "src/tmdm/item-identifiers") (:file "src/tmdm/reification") (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations")))
+               (:file "src/tmdm/core-subjects") (:file "src/tmdm/item-identifiers") (:file "src/tmdm/reification") (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations") (:file "src/tmdm/import")))
 
 (asdf:defsystem "topic-maps/ctm"
   :description "CTM recursive Topic references, Wildcards, names/variants/associations and supported literals"
@@ -201,3 +201,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.template.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/tmdm/import-tests"
+  :description "Source-preserving Map content import, identity cascades and atomic conflicts"
+  :depends-on ("topic-maps/ctm/template-tests") :serial t
+  :components ((:file "tests/map-import"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.import.tests :run-tests)))

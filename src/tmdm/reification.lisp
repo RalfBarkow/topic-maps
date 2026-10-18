@@ -37,29 +37,30 @@
        (or (map-has-core-subject-p map)
            (some (lambda (item) (and (reifiable-p item) (%item-reifier item))) (map-information-items map)))))
 
-(defun copy-map-for-preflight (map)
-  "Disposable graph of the SAME seven TMDM structures, using the same merge code.
-Old handles resolve through their canonical representatives; no second identity model."
-  (let ((copy (make-topic-map)) (copies (make-hash-table :test #'eq)))
+(defun copy-map-graph (map copy &key (map-item-p t))
+  "Copy the existing TMDM graph into COPY, rewriting all object references.
+MAP-ITEM-P copies root metadata only for disposable preflight copies. Content
+imports append six item kinds, leaving COPY's own identifiers/reifier intact."
+  (let ((copies (make-hash-table :test #'eq)))
     (setf (gethash map copies) copy)
     (labels ((ref (item) (and item (or (gethash (canonical-item item) copies)
                                      (reification-problem :foreign-item "Reference is outside this Topic Map."))))
              (refs (items) (mapcar #'ref items)))
       (dolist (tpc (%topic-map-topics map)) (setf (gethash tpc copies) (%make-topic copy)))
-      (setf (%topic-map-topics copy) (refs (%topic-map-topics map)))
+      (setf (%topic-map-topics copy) (append (%topic-map-topics copy) (refs (%topic-map-topics map))))
       (dolist (tpc (%topic-map-topics map))
         (let ((new (ref tpc)))
           (setf (%topic-subject-identifiers new) (mapcar #'copy-seq (%topic-subject-identifiers tpc))
                 (%topic-subject-locators new) (mapcar #'copy-seq (%topic-subject-locators tpc)))
           (dolist (n (%topic-names tpc))
-            (setf (gethash n copies) (%make-topic-name (%topic-name-value n) (ref (%topic-name-type n)) new)))
+            (setf (gethash n copies) (%make-topic-name (copy-seq (%topic-name-value n)) (ref (%topic-name-type n)) new)))
           (setf (%topic-names new) (refs (%topic-names tpc)))
           (dolist (n (%topic-names tpc))
             (dolist (v (%topic-name-variants n))
-              (setf (gethash v copies) (%make-variant (%variant-value v) (%variant-datatype v) (ref n))))
+              (setf (gethash v copies) (%make-variant (copy-seq (%variant-value v)) (copy-seq (%variant-datatype v)) (ref n))))
             (setf (%topic-name-variants (ref n)) (refs (%topic-name-variants n))))
           (dolist (o (%topic-occurrences tpc))
-            (setf (gethash o copies) (%make-occurrence (%occurrence-value o) (%occurrence-datatype o)
+            (setf (gethash o copies) (%make-occurrence (copy-seq (%occurrence-value o)) (copy-seq (%occurrence-datatype o))
                                                       (ref (%occurrence-type o)) new)))
           (setf (%topic-occurrences new) (refs (%topic-occurrences tpc)))))
       (dolist (a (%topic-map-associations map))
@@ -68,8 +69,8 @@ Old handles resolve through their canonical representatives; no second identity 
           (setf (gethash r copies) (%make-association-role (ref a) (ref (%association-role-type r))
                                                                (ref (%association-role-player r)))))
         (setf (%association-roles (ref a)) (refs (%association-roles a))))
-      (setf (%topic-map-associations copy) (refs (%topic-map-associations map)))
-      (dolist (item (map-information-items map))
+      (setf (%topic-map-associations copy) (append (%topic-map-associations copy) (refs (%topic-map-associations map))))
+      (dolist (item (if map-item-p (map-information-items map) (rest (map-information-items map))))
         (let ((new (ref item)))
           (setf (%item-identifiers new) (mapcar #'copy-seq (%item-identifiers item)))
           (when (reifiable-p item) (setf (%item-reifier new) (ref (%item-reifier item))))
@@ -78,7 +79,10 @@ Old handles resolve through their canonical representatives; no second identity 
             (variant (setf (%variant-scope new) (refs (%variant-scope item))))
             (occurrence (setf (%occurrence-scope new) (refs (%occurrence-scope item))))
             (association (setf (%association-scope new) (refs (%association-scope item)))))))
-      (values copy #'ref))))
+      (values copy #'ref copies))))
+(defun copy-map-for-preflight (map)
+  "Disposable graph of the SAME seven TMDM structures and their root metadata."
+  (copy-map-graph map (make-topic-map)))
 (defun preflight-merge-mutation (map operation)
   "Validate the complete cascade on a disposable graph before changing originals.
 This guarantees semantic rejection before mutation, not recovery from resource exhaustion."

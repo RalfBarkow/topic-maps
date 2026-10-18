@@ -11,8 +11,8 @@
   (asdf:test-system "topic-maps/ctm/tests")
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
-  ;; Reference tests run all retained Date/numeric/identity-dependent suites once.
-  (asdf:test-system "topic-maps/ctm/template-tests")
+  ;; Import tests run all retained CTM/TMDM/CXTM suites once.
+  (asdf:test-system "topic-maps/tmdm/import-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -37,8 +37,9 @@
                                                 (uiop:symbol-call :topic-maps.reification.tests :reification-checks)
                                                 (uiop:symbol-call :topic-maps.arity.tests :arity-checks)
                                                 (uiop:symbol-call :topic-maps.relationship.tests :relationship-checks)
-                                                (uiop:symbol-call :topic-maps.template.tests :template-checks))
-                     :scope "Slice 18: Templates for the supported CTM subset; 165 positive CTM/CXTM comparisons, 22 specific rejections and 2 retained DateTime baseline FAILs. Seven grammar cases and Include/Mergemap remain NOT-RUN")
+                                                (uiop:symbol-call :topic-maps.template.tests :template-checks)
+                                                (uiop:symbol-call :topic-maps.import.tests :import-checks))
+                     :scope "Slice 19A: TMDM Map content import model tests; unchanged 165 positive CTM/CXTM comparisons, 22 specific rejections and 2 retained DateTime baseline FAILs. CTM Include/Mergemap remain NOT-RUN")
     (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
                      (concatenate 'string report ".occurrences.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-prefix-report
@@ -70,4 +71,6 @@
     (uiop:symbol-call :topic-maps.relationship.tests :write-relationship-report
                      (concatenate 'string report ".relationships.json"))
     (uiop:symbol-call :topic-maps.template.tests :write-template-report
-                     (concatenate 'string report ".templates.json"))))
+                     (concatenate 'string report ".templates.json"))
+    (uiop:symbol-call :topic-maps.import.tests :write-import-report
+                     (concatenate 'string report ".map-import.json"))))

@@ -132,7 +132,20 @@
   (check-variant-merge-constraints map)
   (loop for before = (length (map-information-items map)) do
     (loop for pair = (equal-pair (%topic-map-topics map) #'equal-topics-p)
-          while pair do (merge-two-topics map (first pair) (second pair)))
+          while pair do
+      ;; A staged import may contain equal owners/types AND equal Reifier
+      ;; Topics whose Names/Occurrences/etc. have not merged yet. First perform
+      ;; available nonconflicting Topic merges; their ordinary item merging can
+      ;; resolve those Reified references. Do not let collection order invent a
+      ;; conflict. If none can proceed, MERGE-TWO-TOPICS still signals TMDM 6.2's
+      ;; conflict; no equality or conflict rule is relaxed.
+      (let ((ready (equal-pair (%topic-map-topics map)
+                     (lambda (a b)
+                       (and (equal-topics-p a b)
+                            (let ((left (topic-reified a)) (right (topic-reified b)))
+                              (not (and left right (not (eq left right))))))))))
+        (let ((next (or ready pair)))
+          (merge-two-topics map (first next) (second next)))))
     (normalize-names map) (normalize-occurrences map) (normalize-associations map)
     when (= before (length (map-information-items map))) return map))
 

@@ -1,4 +1,14 @@
-# Common Lisp Topic Maps — Slice 18
+# Common Lisp Topic Maps — Slice 19A
+
+Slice 19A adds `topic-maps.tmdm:import-map-content`: source-preserving copying
+of Topics, Associations and their children into a target Map, followed by the
+existing same-map identity and structural merging. Both original graphs remain
+unchanged on semantic rejection. The returned resolver tracks canonical target
+representatives. Source Map identifiers/reifier are excluded.
+See [Reading Map Content Import](docs/reading-map-content-import.md) for the API,
+object references and inspection forms, and [Slice 19A validation](docs/slice-19a-validation.md)
+for fresh offline execution evidence. This adds no CTM import contracts:
+**187 PASS, 2 known DateTime FAIL, 84 NOT-RUN** remain unchanged.
 
 A working ANSI Common Lisp reader for CTM identity/name syntax and
 Associations with one or more Roles, with same-map merging of Topics, Names, Associations
@@ -210,7 +220,7 @@ the existing single-runtime environment. `<path>.typed-names.json` records Name 
 atomic Core Subject conflict observations.
 `<path>.templates.json` records the 57 model observations and ten specific
 rejections, including original positions and invocation contexts.
-See [Slice 18 validation](docs/slice-18-validation.md) for current evidence.
+See [Slice 19A validation](docs/slice-19a-validation.md) for current evidence.
 [Slice 12A validation](docs/slice-12a-validation.md) records explicit Name types.
 [Slice 11 validation](docs/slice-11-validation.md) preserves the prior timezone evidence.
 [Slice 10 validation](docs/slice-10-validation.md) preserves the earlier DateTime baseline.

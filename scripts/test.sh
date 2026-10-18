@@ -28,4 +28,5 @@ if [ -n "${TOPIC_MAPS_REPORT:-}" ]; then
   python3 "$project_root/scripts/check-arity.py" "$TOPIC_MAPS_REPORT.arity.json"
   python3 "$project_root/scripts/check-relationships.py" "$TOPIC_MAPS_REPORT.relationships.json"
   python3 "$project_root/scripts/check-templates.py" "$TOPIC_MAPS_REPORT.templates.json"
+  python3 "$project_root/scripts/check-map-import.py" "$TOPIC_MAPS_REPORT.map-import.json"
 fi
