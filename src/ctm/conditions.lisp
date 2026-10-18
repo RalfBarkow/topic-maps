@@ -7,7 +7,8 @@
    (line :initarg :line :reader error-line)
    (column :initarg :column :reader error-column)
    (source :initarg :source :reader error-source)
-   (position-unit :initarg :position-unit :initform :character :reader error-position-unit))
+   (position-unit :initarg :position-unit :initform :character :reader error-position-unit)
+   (context :initarg :context :initform nil :reader error-context))
   (:report (lambda (condition stream)
              (format stream "~A~@[ in ~A~] at ~A ~D~@[ (line ~D~]~@[, column ~D)~]: ~A"
                      (error-code condition) (error-source condition)
@@ -19,6 +20,14 @@
 (define-condition prefix-collision (ctm-rejection) ())
 (define-condition ctm-unsupported (ctm-error) ())
 
+(define-condition template-error (ctm-rejection) ())
+(define-condition duplicate-template (template-error) ())
+(define-condition undefined-template (template-error) ())
+(define-condition template-arity-error (template-error) ())
+(define-condition unbound-template-variable (template-error) ())
+(define-condition invalid-template-argument (template-error) ())
+(define-condition invalid-template-body (template-error) ())
+(defvar *template-context* nil)
 (defvar *source-name* nil)
 (defvar *source-text* "")
 
@@ -32,4 +41,4 @@
                (setf column 1 previous-cr nil))
               (t (incf column) (setf previous-cr nil)))))
     (error type :code code :message message :position position :line line
-                :column column :source *source-name* :position-unit unit)))
+                :column column :source *source-name* :position-unit unit :context (copy-tree *template-context*))))

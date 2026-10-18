@@ -269,7 +269,9 @@
   (dolist (text '("a - [-\"N\" ~r]:\"X\"." "a - \"N\"@[-\"T\"] ~r."
                   "def tpl() a. end" "%include <file.ctm>" "%mergemap <file.ctm> <urn:ctm>"))
     (check (concatenate 'string "references:feature-boundary:" text)
-           (if (find #\~ text) (null (ctm-condition text)) (typep (ctm-condition text) 'topic-maps.ctm:ctm-unsupported))))
+           (cond ((search "def " text) (null (topic-map-topics (read-text text))))
+                 ((find #\~ text) (null (ctm-condition text)))
+                 (t (typep (ctm-condition text) 'topic-maps.ctm:ctm-unsupported)))))
   (check "references:feature-boundary:a(r: b, s: c, t: d)"
          (references-current-p (read-text "a(r: b, s: c, t: d)")))
   (dolist (text '("a isa b." "a ako b."))

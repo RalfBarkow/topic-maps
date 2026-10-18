@@ -1,3 +1,9 @@
+> Historical Slice 0 inventory below. Current Slice 18 implementation and the
+> explicit Template exclusions are documented in
+> [Reading CTM Templates](reading-ctm-templates.md) and
+> [Slice 18 validation](slice-18-validation.md). The historical “No” column below
+> describes Slice 0, not the current reader.
+
 # Coverage and standards traceability
 
 Three independent questions are recorded separately: specification coverage,

@@ -1,0 +1,58 @@
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {70053C2D13}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/templates.ctm#a"..
+  ASSOCIATIONS                   = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/templates.ctm#a")..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {70053C2D13}>
+  ITEM-IDENTIFIERS               = ("https://example.invalid/templates.ctm#a")
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = (#<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {70053C3E53}>)
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC-NAME "Name" {70053C3E53}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  VALUE                          = "Name"
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://example.invalid/templates.ctm#a")..
+  SCOPE                          = NIL
+  VARIANTS                       = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=NIL SI=("http://psi.topicmaps.org/iso13250/..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {70053C2D13}>
+  ITEM-IDENTIFIERS               = NIL
+  SUBJECT-IDENTIFIERS            = ("http://psi.topicmaps.org/iso13250/model/topic-name")
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#a</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Name</value>
+<type topicref="2"></type>
+</name>
+</topic>
+<topic number="2">
+<subjectIdentifiers>
+<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>
+</subjectIdentifiers>
+</topic>
+</topicMap>

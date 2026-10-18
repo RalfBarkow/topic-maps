@@ -166,7 +166,7 @@
            (eq :role-separator-whitespace (error-code (rejection "a(<urn:r>:<urn:p>)"))))
     (let ((condition (rejection (format nil "a(r p)"))))
       (check "role-syntax-diagnostic-position"
-             (and (eq :expected-role-type-separator (error-code condition)) (= 4 (error-position condition))
+             (and (eq :missing-template-close (error-code condition)) (= 4 (error-position condition))
                   (= 1 (error-line condition)) (= 5 (error-column condition)))))
     (let ((condition (rejection "a(r: ex:p)")))
       (check "association-undefined-prefix-remains-specific" (and (typep condition 'undefined-prefix) (eq :undefined-prefix (error-code condition)))))

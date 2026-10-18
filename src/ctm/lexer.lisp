@@ -1,6 +1,6 @@
 (in-package #:topic-maps.ctm)
 
-(defstruct token kind value (position 0))
+(defstruct token kind value (position 0) end)
 (defstruct (lexer (:constructor make-lexer (text))) text (cursor 0))
 
 (defun peek-character (lexer &optional (delta 0))
@@ -179,7 +179,9 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
              (problem 'ctm-unsupported :unsupported-directive start
                       (format nil "Directive %~A is outside the implemented subset."
                               (subseq text (1+ start) (lexer-cursor lexer)))))))
-      ((find c "$")
-       (problem 'ctm-unsupported :unsupported-construct start
-                (format nil "Construct starting with ~S is outside the implemented subset." c)))
+      ((char= c #\$)
+       (unless (name-start-p (peek-character lexer))
+         (problem 'ctm-rejection :invalid-variable start "A variable requires an identifier."))
+       (take-character lexer) (scan-name lexer)
+       (make-token :kind :variable :value (subseq text (1+ start) (lexer-cursor lexer)) :position start))
       (t (problem 'ctm-rejection :unexpected-character start (format nil "Unexpected character ~S." c))))))

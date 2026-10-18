@@ -31,7 +31,7 @@
   :version "0.16.1" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/ctm/package") (:file "src/ctm/conditions")
                (:file "src/ctm/unicode") (:file "src/ctm/iri")
-               (:file "src/ctm/lexer") (:file "src/ctm/reader")))
+               (:file "src/ctm/lexer") (:file "src/ctm/reader") (:file "src/ctm/templates")))
 
 (asdf:defsystem "topic-maps/ctm/tests"
   :description "Slice 1 semantic tests and explicit imported rejection contract"
@@ -193,3 +193,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.relationship.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/ctm/template-tests"
+  :description "CTM Templates, contextual argument binding and original conformance contracts"
+  :depends-on ("topic-maps/ctm/type-relationship-tests") :serial t
+  :components ((:file "tests/ctm-templates"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.template.tests :run-tests)))

@@ -185,7 +185,10 @@
              (= 1 (length (topic-maps.tmdm:topic-map-associations map)))))
     (dolist (text '("def tpl() a. end" "%include <other.ctm>"
                     "? - \"anonymous\" ~r."  "a - \"\"\"triple\"\"\"."))
-      (check (concatenate 'string "identity-feature-boundary:" text) (if (find #\~ text) (typep (read-text text) 'topic-maps.tmdm:topic-map) (unsupported-p text))))
+      (check (concatenate 'string "identity-feature-boundary:" text)
+             (cond ((search "def " text) (null (topic-map-topics (read-text text))))
+                   ((find #\~ text) (typep (read-text text) 'topic-maps.tmdm:topic-map))
+                   (t (unsupported-p text)))))
     (check "scope-on-bare-topic-rejected"
            (eq :unexpected-token (error-code (rejection "a @theme."))))
     (check "scoped-name-now-deserialized"

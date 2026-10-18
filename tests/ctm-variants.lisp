@@ -302,8 +302,7 @@
                    (topic-maps.test-foundation:test-case-source-pathname case)
                    :document-iri (topic-maps.test-foundation:test-case-document-iri case))))))
       (check (concatenate 'string "variant-reader:reference-contract-remains-unexecuted:" file)
-             (and (if (member file '("variant-reifier" "variant-scope-embedded" "variant-scope-embedded2") :test #'string=)
-                      (null e) (typep e 'topic-maps.ctm:ctm-unsupported))
+             (and (null e)
                   (eq :not-run (topic-maps.test-foundation:test-case-status case)))))))
 
 (defun ordering-tests ()

@@ -1,13 +1,27 @@
 (in-package #:topic-maps.ctm)
 
+(defstruct template-definition name parameters body position)
+;; Validated concrete syntax, never TMDM information items or Lisp forms.
+(defstruct ctm-statement kind tokens position)
+(defstruct template-argument kind token topic value datatype plain-string-p)
 (defstruct (parser (:constructor make-parser (lexer document-iri wildcard-iri wildcard-counter)))
   lexer document-iri wildcard-iri wildcard-counter lookahead
+  replay-p remaining recording recorded bindings
+  (templates (make-hash-table :test #'equal))
   (wildcards (make-hash-table :test #'equal)) (prefixes (make-hash-table :test #'equal)))
 (defun look (parser)
   (or (parser-lookahead parser)
-      (setf (parser-lookahead parser) (next-token (parser-lexer parser)))))
+      (setf (parser-lookahead parser)
+        (if (parser-replay-p parser)
+            (let ((token (or (pop (parser-remaining parser))
+                             (make-token :kind :eof :position (lexer-cursor (parser-lexer parser))))))
+              (setf (lexer-cursor (parser-lexer parser)) (or (token-end token) (token-position token))) token)
+            (let ((token (next-token (parser-lexer parser))))
+              (setf (token-end token) (lexer-cursor (parser-lexer parser))) token)))))
 (defun consume (parser)
-  (prog1 (look parser) (setf (parser-lookahead parser) nil)))
+  (let ((token (look parser)))
+    (when (parser-recording parser) (push token (parser-recorded parser)))
+    (setf (parser-lookahead parser) nil) token))
 (defun punctuation-p (parser character)
   (and (eq :punctuation (token-kind (look parser)))
        (eql character (token-value (look parser)))))
@@ -26,7 +40,7 @@
         (when name (setf (gethash name (parser-wildcards parser)) iri)) iri)))
 
 (defun topic-reference-start-p (token)
-  (or (member (token-kind token) '(:identifier :iri :qname :wildcard))
+  (or (member (token-kind token) '(:identifier :iri :qname :wildcard :variable))
       (and (eq :punctuation (token-kind token)) (find (token-value token) "=^["))))
 
 (defun resolve-qname (parser token)
@@ -59,13 +73,14 @@
 (defun identity-value (parser &optional explicit-kind)
   (let ((token (consume parser)))
     (case (token-kind token)
+      (:variable (bound-identity parser token explicit-kind))
       (:identifier
        (when explicit-kind
          (problem 'ctm-rejection :expected-iri (token-position token) "Explicit = or ^ needs an IRI reference."))
        (when (member (token-value token) '("isa" "ako") :test #'string=)
          (problem 'ctm-rejection :reserved-topic-identifier (token-position token) "A relationship keyword is not a Topic identity."))
        (when (member (token-value token) '("def" "end") :test #'string=)
-         (problem 'ctm-unsupported :unsupported-keyword (token-position token) "This keyword is outside the implemented subset."))
+         (problem 'ctm-rejection :unexpected-template-keyword (token-position token) "Unexpected template delimiter."))
        (values :item-identifier
           (concatenate 'string (parser-document-iri parser) "#" (token-value token))))
       (:iri
@@ -90,7 +105,8 @@
 (defun identity-reference (parser map)
   (let ((position (token-position (look parser))))
     (multiple-value-bind (kind iri) (identity-value parser)
-      (handler-case (topic-maps.tmdm:intern-topic map kind iri)
+      (handler-case (if (eq kind :bound-topic) (topic-maps.tmdm:canonical-topic iri)
+                        (topic-maps.tmdm:intern-topic map kind iri))
         (topic-maps.tmdm:core-subject-error (c)
           (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c) position (princ-to-string c)))))))
 
@@ -138,6 +154,7 @@ The owning information item is not constructed until this function finishes."
   "Shared CTM 3.4.1 literal reader for Occurrences and Variants."
   (let ((token (look parser)))
     (case (token-kind token)
+      (:variable (consume parser) (bound-literal parser token))
       (:integer
        (consume parser)
        ;; Numeric-literal value policy: represent the unquoted integer value
@@ -229,16 +246,15 @@ The owning information item is not constructed until this function finishes."
           (progn
             (consume parser)
             (multiple-value-bind (value datatype) (read-literal parser)
-              (let* ((type (or type (topic-maps.tmdm:intern-topic map kind iri)))
+              (let* ((type (or type (if (eq kind :bound-topic) (topic-maps.tmdm:canonical-topic iri)
+                                       (topic-maps.tmdm:intern-topic map kind iri))))
                      (scope (read-scope parser map)))
                 (multiple-value-bind (r position) (read-reifier parser map)
                   (attach-reifier (topic-maps.tmdm:add-occurrence topic type value :datatype datatype :scope scope) r position))
                 (topic-maps.tmdm:canonical-topic topic))))
-          (if (or embedded (member (token-kind start) '(:identifier :wildcard)))
-              (if (and (eq :identifier (token-kind start)) (punctuation-p parser #\())
-                  (problem 'ctm-unsupported :topic-tail (token-position start) "Template invocations are outside this subset.")
-                  (problem 'ctm-rejection :expected-occurrence-type-separator (token-position (look parser))
-                           "Expected ':' after the Occurrence Type."))
+          (if (or embedded (member (token-kind start) '(:identifier :wildcard :variable)))
+              (problem 'ctm-rejection :expected-occurrence-type-separator (token-position (look parser))
+                       "Expected ':' after the Occurrence Type.")
               (handler-case (topic-maps.tmdm:add-topic-identifier topic kind iri)
                 (topic-maps.tmdm:core-subject-error (c)
                   (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c)
@@ -264,22 +280,24 @@ The owning information item is not constructed until this function finishes."
   "CTM 3.11: optional Topic reference plus ':' followed by a string.
 Use the shared Topic reference resolver."
   (let* ((token (look parser))
-         (typed (topic-reference-start-p token))
+         (typed (and (topic-reference-start-p token)
+                     (or (not (eq :variable (token-kind token))) (next-punctuation-p parser #\:))))
          (type (when typed (topic-reference parser map))))
     (when typed
       (unless (punctuation-p parser #\:)
         (problem 'ctm-rejection :expected-name-type-separator
                  (token-position (look parser)) "Expected ':' after the name type."))
       (consume parser))
-    (let ((value (consume parser)))
-      (unless (eq :string (token-kind value))
+    (let* ((value (consume parser))
+           (name-value (if (eq :variable (token-kind value)) (bound-name parser value) (token-value value))))
+      (unless (member (token-kind value) '(:string :variable))
         (problem 'ctm-rejection :expected-name-value (token-position value)
                  "Expected a quoted name value after '-' or the name type separator."))
       (let ((scope (read-scope parser map)))
         (multiple-value-bind (r position) (read-reifier parser map)
           (let ((name (attach-reifier
-                        (if typed (topic-maps.tmdm:add-name topic (token-value value) :type type :scope scope)
-                            (topic-maps.tmdm:add-name topic (token-value value) :scope scope)) r position)))
+                        (if typed (topic-maps.tmdm:add-name topic name-value :type type :scope scope)
+                            (topic-maps.tmdm:add-name topic name-value :scope scope)) r position)))
             (loop while (punctuation-p parser #\() do (read-variant parser map name))))))
     (topic-maps.tmdm:canonical-topic topic)))
 
@@ -338,6 +356,11 @@ Use the shared Topic reference resolver."
          (when has-tail
            (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
          (setf topic (read-type-relationship parser map topic) has-tail t seen-tail t))
+        ((tail-invocation-p parser)
+         (when has-tail
+           (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
+         (read-template-invocation parser map topic)
+         (setf topic (topic-maps.tmdm:canonical-topic topic) has-tail t seen-tail t))
         ((topic-reference-start-p (look parser))
          (when has-tail
            (problem 'ctm-rejection :expected-separator (token-position (look parser)) "Topic-tail statements need a semicolon separator."))
@@ -416,15 +439,9 @@ Source positions are zero-based character offsets; lines/columns are one-based."
           (when (punctuation-p parser #\~)
             (problem 'ctm-rejection :topic-map-reifier-position (token-position (look parser))
                      "Topic Map Reifier must precede all body declarations."))
-          (if (eq :directive (token-kind (look parser)))
-              (read-prefix-directive parser)
-              (let* ((embedded (punctuation-p parser #\[)) (topic (topic-reference parser map)))
-                (if (punctuation-p parser #\()
-                    (read-association parser map topic)
-                    (if embedded
-                        (problem 'ctm-rejection :embedded-topic-at-top-level (token-position (look parser))
-                                 "An Embedded Topic at top level must be an Association Type, not a standalone declaration.")
-                        (read-topic-tail parser map topic #\.)))))))
+          (cond ((eq :directive (token-kind (look parser))) (read-prefix-directive parser))
+                ((identifier-p (look parser) "def") (read-template-definition parser))
+                (t (read-statement parser map)))))
       (values map (parser-wildcard-counter parser)))))
 
 (defun deserialize-file (pathname &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0))

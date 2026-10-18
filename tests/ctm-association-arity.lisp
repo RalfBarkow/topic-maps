@@ -161,7 +161,7 @@
               (when (and (not via-identifier) (not reverse-order)) (witness label map)))))))))
 
 (defun syntax-tests ()
-  (dolist (fixture '(("a()" :expected-role 2) ("a(r: )" :expected-role-player 5)
+  (dolist (fixture '(("a()" :undefined-template 0) ("a(r: )" :expected-role-player 5)
                      ("a(r: p,)" :expected-role 7) ("a(r: p" :missing-association-close 6)
                      ("a(r: p, s: q, t: )" :expected-role-player 17)
                      ("a(r: p, s: q, t: z,)" :expected-role 19)
@@ -169,7 +169,7 @@
     (destructuring-bind (text code position) fixture
       (let ((c (condition-from (lambda () (read-text text)))))
         (check (concatenate 'string "syntax:specific-rejection-and-position:" text)
-               (and (eq (type-of c) 'topic-maps.ctm:ctm-rejection) (eq code (topic-maps.ctm:error-code c))
+               (and (typep c 'topic-maps.ctm:ctm-rejection) (eq code (topic-maps.ctm:error-code c))
                     (= position (topic-maps.ctm:error-position c)) (= 1 (topic-maps.ctm:error-line c))
                     (= (1+ position) (topic-maps.ctm:error-column c)))))))
   (let* ((text (format nil "a(r: p,~% s: q,~% t: )")) (c (condition-from (lambda () (read-text text)))))
