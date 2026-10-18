@@ -268,9 +268,11 @@
     (check (concatenate 'string "embedded:role-layout-preserved:" text) (references-current-p (read-text text))))
   (dolist (text '("a - [-\"N\" ~r]:\"X\"." "a - \"N\"@[-\"T\"] ~r."
                   "def tpl() a. end" "%include <file.ctm>" "%mergemap <file.ctm> <urn:ctm>"
-                  "a isa b." "a ako b." "a(r: b, s: c, t: d)"))
+                  "a isa b." "a ako b."))
     (check (concatenate 'string "references:feature-boundary:" text)
            (if (find #\~ text) (null (ctm-condition text)) (typep (ctm-condition text) 'topic-maps.ctm:ctm-unsupported))))
+  (check "references:feature-boundary:a(r: b, s: c, t: d)"
+         (references-current-p (read-text "a(r: b, s: c, t: d)")))
   (check "references:template-dependent-negative-not-promoted"
          (eq :not-run (topic-maps.test-foundation:test-case-status
              (first (topic-maps.test-foundation:select-cases topic-maps.ctm.tests::*cxtm-corpus*

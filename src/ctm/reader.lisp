@@ -305,13 +305,12 @@ Use the shared Topic reference resolver."
         (t (problem 'ctm-rejection :unexpected-token (token-position (look parser)) "Unexpected token after topic or name."))))))
 
 (defun read-association (parser map type)
-  "CTM 3.13, restricted to one or two role declarations; optional Scope and Reifiers."
+  "CTM 3.13: one or more Role declarations; optional Scope and Reifiers."
   (consume parser) ; opening parenthesis already recognized by the caller
-  (let ((roles nil) (role-reifiers nil) (third-position nil))
+  (let ((roles nil) (role-reifiers nil))
     (loop
       (when (or (punctuation-p parser #\)) (eq :eof (token-kind (look parser))))
         (problem 'ctm-rejection :expected-role (token-position (look parser)) "Expected a nonempty Association role declaration."))
-      (when (= 2 (length roles)) (setf third-position (token-position (look parser))))
       (let* ((role-type (topic-reference parser map))
              (type-end (lexer-cursor (parser-lexer parser)))
              (colon (look parser)))
@@ -337,8 +336,6 @@ Use the shared Topic reference resolver."
             ((eq :eof (token-kind (look parser)))
              (problem 'ctm-rejection :missing-association-close (token-position (look parser)) "Expected ')' after the Roles."))
             (t (problem 'ctm-rejection :expected-role-separator (token-position (look parser)) "Expected ',' or ')' after a Role."))))
-    (when (> (length roles) 2)
-      (problem 'ctm-unsupported :association-arity third-position "Associations with more than two Role declarations are outside Slice 3."))
     (let ((scope (read-scope parser map)))
       (multiple-value-bind (r position) (read-reifier parser map)
         (let ((association (topic-maps.tmdm:make-association map type (nreverse roles) :scope scope)))

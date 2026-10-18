@@ -1,0 +1,44 @@
+#<TOPIC-MAPS.TMDM:ASSOCIATION 3 roles {7003A5BCC3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 7 topics, 1 associations {7003A58D63}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  ROLES                          = (#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003A5BE13}>..
+  SCOPE                          = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003A5BE13}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:ASSOCIATION 3 roles {7003A5BCC3}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  PLAYER                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+Type ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/association-duplicate-role.ctm#roletype1") -> Player ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/association-duplicate-role.ctm#topic1")
+#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003A5BD53}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:ASSOCIATION 3 roles {7003A5BCC3}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  PLAYER                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+Type ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/association-duplicate-role.ctm#roletype2") -> Player ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/association-duplicate-role.ctm#topic2")
+#<TOPIC-MAPS.TMDM:ASSOCIATION-ROLE {7003A5BD93}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:ASSOCIATION 3 roles {7003A5BCC3}>
+  TYPE                           = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  PLAYER                         = #<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+Type ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/association-duplicate-role.ctm#roletype3") -> Player ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/association-duplicate-role.ctm#topic3")

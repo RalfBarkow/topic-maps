@@ -177,3 +177,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.reification.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/ctm/association-arity-tests"
+  :description "Unbounded CTM Role declarations, canonical merges and original CXTM contract"
+  :depends-on ("topic-maps/tmdm/reification-tests") :serial t
+  :components ((:file "tests/ctm-association-arity"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.arity.tests :run-tests)))

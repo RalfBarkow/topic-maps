@@ -12,7 +12,7 @@
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
   ;; Reference tests run all retained Date/numeric/identity-dependent suites once.
-  (asdf:test-system "topic-maps/tmdm/reification-tests")
+  (asdf:test-system "topic-maps/ctm/association-arity-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -34,8 +34,9 @@
                                                 (uiop:symbol-call :topic-maps.variant.tests :variant-checks)
                                                 (uiop:symbol-call :topic-maps.reference.tests :reference-checks)
                                                 (uiop:symbol-call :topic-maps.identifier.tests :identifier-checks)
-                                                (uiop:symbol-call :topic-maps.reification.tests :reification-checks))
-                     :scope "Slice 16B: same-map Reification; 94 original positive CTM/CXTM comparisons, 12 specific CTM rejections, 2 retained normative baseline FAILs. Manual XTM2-model comparisons remain separate; no XTM reader")
+                                                (uiop:symbol-call :topic-maps.reification.tests :reification-checks)
+                                                (uiop:symbol-call :topic-maps.arity.tests :arity-checks))
+                     :scope "Slice 17A: unbounded Association Role declarations; 95 original positive CTM/CXTM comparisons, 12 specific CTM rejections, 2 retained normative baseline FAILs. Core-subject identity protection and isa/ako remain outside this slice")
     (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
                      (concatenate 'string report ".occurrences.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-prefix-report
@@ -61,4 +62,6 @@
     (uiop:symbol-call :topic-maps.identifier.tests :write-identifier-report
                      (concatenate 'string report ".identifiers.json"))
     (uiop:symbol-call :topic-maps.reification.tests :write-reification-report
-                     (concatenate 'string report ".reification.json"))))
+                     (concatenate 'string report ".reification.json"))
+    (uiop:symbol-call :topic-maps.arity.tests :write-arity-report
+                     (concatenate 'string report ".arity.json"))))
