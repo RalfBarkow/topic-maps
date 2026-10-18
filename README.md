@@ -1,5 +1,12 @@
 # Common Lisp Topic Maps — Slice 19C
 
+Slice 19D0 makes pinned CXML sources available to ASDF through the Nix source
+environment, without changing the CTM/TMDM/CXTM implementation. **Parser
+qualification currently FAILS** on UTF-16 supplementary characters and invalid
+UTF-8; provisioning success is not an XTM-readiness claim. See
+[CXML provisioning and qualification](docs/slice-19d0-cxml.md) for exact hashes,
+offline loading, external-entity policy, the failing probes and retained regression.
+
 Slice 19C adds `%include` with controlled resources, per-level Topic-II aliases,
 immediate-parent Document/Wildcard environments, Counter propagation and
 source-preserving Template import. Imported bodies execute in the caller's
