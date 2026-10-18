@@ -217,3 +217,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.mergemap.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/ctm/include-tests"
+  :description "CTM Include, source-preserving Template transport and explicit original baseline discrepancies"
+  :depends-on ("topic-maps/ctm/mergemap-tests") :serial t
+  :components ((:file "tests/ctm-include"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.include.tests :run-tests)))

@@ -12,7 +12,7 @@
   (asdf:test-system "topic-maps/ctm/merging-tests")
   (asdf:test-system "topic-maps/ctm/association-tests")
   ;; Import tests run all retained CTM/TMDM/CXTM suites once.
-  (asdf:test-system "topic-maps/ctm/mergemap-tests")
+  (asdf:test-system "topic-maps/ctm/include-tests")
   (when report
     (uiop:symbol-call :topic-maps.ctm.tests :write-slice-report
                      report (concatenate 'string report ".semantics.json"))
@@ -39,8 +39,9 @@
                                                 (uiop:symbol-call :topic-maps.relationship.tests :relationship-checks)
                                                 (uiop:symbol-call :topic-maps.template.tests :template-checks)
                                                 (uiop:symbol-call :topic-maps.import.tests :import-checks)
-                                                (uiop:symbol-call :topic-maps.mergemap.tests :mergemap-checks))
-                     :scope "Slice 19B: controlled CTM Mergemap resources; 169 positive CTM/CXTM comparisons, 25 specific rejections and 2 retained DateTime baseline FAILs. Include and XTM Mergemap remain NOT-RUN")
+                                                (uiop:symbol-call :topic-maps.mergemap.tests :mergemap-checks)
+                                                (uiop:symbol-call :topic-maps.include.tests :include-checks))
+                     :scope "Slice 19C: controlled CTM Include and Mergemap; 176 byte-equal positives, 28 specific rejections, 2 retained DateTime and 2 explicit Include baseline FAILs. XTM Mergemap remains NOT-RUN")
     (uiop:symbol-call :topic-maps.ctm.tests :write-occurrence-report
                      (concatenate 'string report ".occurrences.json"))
     (uiop:symbol-call :topic-maps.ctm.tests :write-prefix-report
@@ -76,4 +77,6 @@
     (uiop:symbol-call :topic-maps.import.tests :write-import-report
                      (concatenate 'string report ".map-import.json"))
     (uiop:symbol-call :topic-maps.mergemap.tests :write-mergemap-report
-                     (concatenate 'string report ".mergemap.json"))))
+                     (concatenate 'string report ".mergemap.json"))
+    (uiop:symbol-call :topic-maps.include.tests :write-include-report
+                     (concatenate 'string report ".include.json"))))

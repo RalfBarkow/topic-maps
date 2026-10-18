@@ -73,9 +73,10 @@
                "Document IRI must be absolute and fragment-free (RFC 3987 absolute-IRI).")))
   iri)
 
-(defun resolve-iri (reference document position)
-  "CTM 3.3.3, RFC 3986 5.2. No fetching or case normalization."
-  (let* ((reference (validate-iri-characters (unescape-iri reference position) position))
+(defun resolve-iri (reference document position &key (unescape t))
+  "CTM 3.3.3 / RFC 3986 5.2. No fetching or case normalization.
+UNESCAPE is NIL for existing locator strings in Include aliasing (3.16.2)."
+  (let* ((reference (validate-iri-characters (if unescape (unescape-iri reference position) reference) position))
          (r (split-iri reference)) (b (split-iri document))
          (target (make-iri-parts :fragment (iri-parts-fragment r))))
     (cond

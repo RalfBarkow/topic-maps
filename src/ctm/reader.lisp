@@ -2,7 +2,7 @@
 
 (defvar *active-resource-iris* nil)
 
-(defstruct template-definition name parameters body position)
+(defstruct template-definition name parameters body position source-name source-text document-iri)
 ;; Validated concrete syntax, never TMDM information items or Lisp forms.
 (defstruct ctm-statement kind tokens position)
 (defstruct template-argument kind token topic value datatype plain-string-p)
@@ -415,10 +415,10 @@ Use the shared Topic reference resolver."
                 (attach-reifier role reifier marker))))
           (attach-reifier (topic-maps.tmdm:canonical-association association) r position))))))
 
-(defun deserialize-string (text &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0)
+(defun deserialize-context (text &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0)
                                       resource-resolver (max-resource-depth 32))
   "Read the documented CTM subset, with per-document prefixes and qualified strings.
-Return the Map and final Wildcard Counter as two values. Wildcard IRI defaults
+Internal result: Map, final Wildcard Counter and parser environment. Wildcard IRI defaults
 to Document IRI; local identifiers and relative IRIs still use Document IRI.
 Source positions are zero-based character offsets; lines/columns are one-based.
 RESOURCE-RESOLVER, if supplied, is called with an absolute IRI and :PURPOSE,
@@ -455,7 +455,20 @@ There is no implicit retrieval. MAX-RESOURCE-DEPTH bounds nested imports (defaul
           (cond ((eq :directive (token-kind (look parser))) (read-directive parser map))
                 ((identifier-p (look parser) "def") (read-template-definition parser))
                 (t (read-statement parser map)))))
-      (values map (parser-wildcard-counter parser)))))
+      (values map (parser-wildcard-counter parser) parser))))
+
+(defun deserialize-string (text &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0)
+                                      resource-resolver (max-resource-depth 32))
+  "Deserialize CTM using explicit Document IRI and optional controlled resources.
+Return the Topic Map and final Wildcard Counter. Includes import Templates and
+Topic aliases; Mergemap imports Map content only. No implicit I/O is performed.
+The resolver receives :PURPOSE (:INCLUDE or :MERGEMAP), :FROM-DOCUMENT-IRI and
+:NOTATION (NIL for Include). Source keys are diagnostic, never identity bases."
+  (multiple-value-bind (map counter)
+      (deserialize-context text :document-iri document-iri :source-name source-name
+        :wildcard-iri wildcard-iri :wildcard-counter wildcard-counter
+        :resource-resolver resource-resolver :max-resource-depth max-resource-depth)
+    (values map counter)))
 
 (defun deserialize-file (pathname &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0)
                                         resource-resolver (max-resource-depth 32))

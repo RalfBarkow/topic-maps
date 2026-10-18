@@ -131,15 +131,24 @@ already inside one lexer token. Embedded syntax is skipped with balanced depth."
             (old-bindings (parser-bindings parser)) (old-wildcards (parser-wildcards parser))
             (*template-context* (cons (list :name (template-definition-name definition)
                                            :definition-position (template-definition-position definition)
-                                           :invocation-position (token-position name)) *template-context*)))
+                                           :invocation-position (token-position name)
+                                           :definition-source (template-definition-source-name definition)
+                                           :definition-document-iri (template-definition-document-iri definition)
+                                           :invocation-source *source-name*
+                                           :invocation-document-iri (parser-document-iri parser)) *template-context*)))
         (loop for parameter in (template-definition-parameters definition) for argument in arguments
               do (setf (gethash parameter bindings) argument))
         (unwind-protect
             (progn
               (setf (parser-bindings parser) bindings (parser-wildcards parser) (make-hash-table :test #'equal))
-              (dolist (statement (template-definition-body definition))
-                (call-with-tokens parser (ctm-statement-tokens statement)
-                  (lambda () (read-statement parser map)))))
+              ;; The parser's Document IRI, Prefixes, registry and Counter stay
+              ;; in the caller. Only lexical source coordinates switch to the
+              ;; definition; nested invocations preserve both source frames.
+              (let ((*source-name* (template-definition-source-name definition))
+                    (*source-text* (template-definition-source-text definition)))
+                (dolist (statement (template-definition-body definition))
+                  (call-with-tokens parser (ctm-statement-tokens statement)
+                    (lambda () (read-statement parser map))))))
           (setf (parser-bindings parser) old-bindings (parser-wildcards parser) old-wildcards))))))
 
 (defun read-statement (parser map)
@@ -306,4 +315,6 @@ already inside one lexer token. Embedded syntax is skipped with balanced depth."
       (consume parser)
       (setf (gethash key (parser-templates parser))
             (make-template-definition :name (token-value name) :parameters parameters
-              :position (token-position start) :body (nreverse body))))))
+              :position (token-position start) :body (nreverse body)
+              :source-name *source-name* :source-text *source-text*
+              :document-iri (parser-document-iri parser))))))

@@ -268,9 +268,14 @@
     (check (concatenate 'string "embedded:role-layout-preserved:" text) (references-current-p (read-text text))))
   (dolist (text '("a - [-\"N\" ~r]:\"X\"." "a - \"N\"@[-\"T\"] ~r."
                   "def tpl() a. end" "%include <file.ctm>" "%mergemap <file.ctm> <urn:ctm>"))
-    (check (concatenate 'string "references:feature-boundary:" text)
+    (check (if (search "%include" text) "references:Include-requires-explicit-resolver"
+               (concatenate 'string "references:feature-boundary:" text))
            (cond ((search "def " text) (null (topic-map-topics (read-text text))))
                  ((find #\~ text) (null (ctm-condition text)))
+                 ((search "%include" text)
+                  (let ((c (ctm-condition text)))
+                    (and (typep c 'topic-maps.ctm:ctm-unsupported)
+                         (eq :resource-resolver-required (topic-maps.ctm:error-code c)))))
                  ((search "%mergemap" text)
                   (let ((c (ctm-condition text)))
                     (and (typep c 'topic-maps.ctm:ctm-rejection)

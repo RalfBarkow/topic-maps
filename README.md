@@ -1,10 +1,20 @@
-# Common Lisp Topic Maps — Slice 19B
+# Common Lisp Topic Maps — Slice 19C
+
+Slice 19C adds `%include` with controlled resources, per-level Topic-II aliases,
+immediate-parent Document/Wildcard environments, Counter propagation and
+source-preserving Template import. Imported bodies execute in the caller's
+identity/Prefix environment while errors preserve definition and invocation
+sources. See [Reading CTM Include](docs/reading-ctm-include.md) and
+[Slice 19C validation](docs/slice-19c-validation.md).
+The registered corpus is **204 PASS, 4 FAIL, 65 NOT-RUN**. All twelve Include
+contracts execute: seven byte-equal positives, three intended rejections, two
+explicit normative/baseline mismatches. The two earlier DateTime FAILs remain.
 
 Slice 19B adds CTM `%mergemap` with the CTM notation and an explicit
 `:resource-resolver` on `deserialize-string` / `deserialize-file`. Resources are
 supplied as bytes by the caller, deserialized with independent environments,
 and transferred by Slice 19A's TMDM content import. No implicit file/network
-retrieval, Include or XTM deserialization is provided.
+retrieval or XTM deserialization is provided (Include is added by Slice 19C).
 See [Reading CTM Mergemap](docs/reading-ctm-mergemap.md) and
 [Slice 19B validation](docs/slice-19b-validation.md).
 The registered corpus now has **194 PASS, 2 known DateTime FAIL, 77 NOT-RUN**:
@@ -24,8 +34,7 @@ A working ANSI Common Lisp reader for CTM identity/name syntax and
 Associations with one or more Roles, with same-map merging of Topics, Names, Associations
 and Roles, plus string/IRI-valued Occurrences, in a bounded TMDM model. HyperDoc remains a possible future client
 and is neither the codebase nor a dependency. Slice 4 adds a pure, independent
-CXTM canonicalizer for this model. Include/Mergemap and cross-document merging remain
-outside the implementation. Slice 5 adds Occurrence items and replacement merging
+CXTM canonicalizer for this model. Controlled Include/Mergemap and Map content import are described above. Slice 5 adds Occurrence items and replacement merging
 without expanding Scope, Reification or Variants. Slice 6 adds document-local
 prefixes, QName resolution and explicit datatype locators on quoted Occurrence
 values. Unknown datatypes retain their lexical values; Date timezone CXTM rules

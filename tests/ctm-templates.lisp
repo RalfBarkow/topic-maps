@@ -319,8 +319,11 @@
            (and (typep condition 'topic-maps.ctm:ctm-rejection)
                 (eq :unknown-mergemap-notation (topic-maps.ctm:error-code condition)))))
   (dolist (text '("def f() a - \"\"\"N\"\"\". end" "%include <other>"))
-    (check (concatenate 'string "diagnostic:unchanged-excluded-feature:" text)
-           (typep (condition-from (lambda () (read-text text))) 'topic-maps.ctm:ctm-unsupported))))
+    (check (if (search "%include" text) "diagnostic:Include-requires-explicit-resolver"
+               (concatenate 'string "diagnostic:unchanged-excluded-feature:" text))
+           (let ((c (condition-from (lambda () (read-text text)))))
+             (and (typep c 'topic-maps.ctm:ctm-unsupported)
+                  (or (not (search "%include" text)) (eq :resource-resolver-required (topic-maps.ctm:error-code c))))))))
 
 (defun original-cases ()
   (setf *observations* nil *rejections* nil)

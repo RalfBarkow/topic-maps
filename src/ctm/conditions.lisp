@@ -16,8 +16,9 @@
                      (error-line condition) (error-column condition)
                      (error-message condition))
              (dolist (frame (reverse (error-context condition)))
-               (when (eq :mergemap (getf frame :purpose))
-                 (format stream "~%  via %mergemap in ~A at character ~D -> ~A~@[ (source ~A)~]"
+               (when (member (getf frame :purpose) '(:mergemap :include))
+                 (format stream "~%  via %~(~A~) in ~A at character ~D -> ~A~@[ (source ~A)~]"
+                         (getf frame :purpose)
                          (or (getf frame :source) (getf frame :document-iri)) (getf frame :position)
                          (getf frame :resource-iri) (getf frame :resource-source)))))))
 (define-condition ctm-rejection (ctm-error) ())

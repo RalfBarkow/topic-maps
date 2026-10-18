@@ -144,7 +144,11 @@
   (let ((c (ctm-condition (format nil "%prefix ex <urn:one:>~C~C%prefix ex <urn:two:>" #\Return #\Newline))))
     (check "prefix-collision-crlf-location" (and (typep c 'topic-maps.ctm:prefix-collision) (= 2 (error-line c)) (= 9 (error-column c)))))
   (dolist (text '("%include <other.ctm>" "%version 1.0"))
-    (check (concatenate 'string "remaining-construct-unsupported:" text) (typep (ctm-condition text) 'ctm-unsupported)))
+    (check (if (search "%include" text) "prefix:Include-requires-explicit-resolver"
+               (concatenate 'string "remaining-construct-unsupported:" text))
+           (let ((c (ctm-condition text)))
+             (and (typep c 'ctm-unsupported)
+                  (or (not (search "%include" text)) (eq :resource-resolver-required (error-code c)))))))
   (let* ((map (read-text "%prefix ex <urn:ex:> a - ex:type: \"Name\"."))
          (name (first (topic-names (first-topic map)))))
     (check "prefix-qname-name-type-supported"

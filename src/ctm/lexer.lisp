@@ -172,7 +172,7 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
        ;; Production [71] has a literal terminal followed by an identifier;
        ;; unlike Role separators it does not require intervening whitespace.
        (let ((name (find-if (lambda (name) (starts-with (concatenate 'string "%" name) (subseq text start)))
-                            '("prefix" "mergemap"))))
+                            '("prefix" "mergemap" "include"))))
          (if name
              (progn (setf (lexer-cursor lexer) (+ start 1 (length name)))
                     (make-token :kind :directive :value name :position start))
