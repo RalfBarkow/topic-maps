@@ -5,18 +5,20 @@
        (eq (%association-role-player a) (%association-role-player b))))
 
 (defun normalize-roles (association)
-  ;; TMDM 5.8/6.7: the compared Roles share this parent; other props are empty/null.
+  ;; TMDM 5.8/6.7: shared parent; identifiers are metadata, not equality keys.
   (loop for pair = (equal-pair (%association-roles association) #'same-role-signature-p)
         while pair do
           (let* ((a (first pair)) (b (second pair))
                  (c (%make-association-role association (%association-role-type a) (%association-role-player a))))
-            (setf (%association-roles association) (replace-pair (%association-roles association) a b c)
+            (setf (%association-role-item-identifiers c)
+                  (set-union (%association-role-item-identifiers a) (%association-role-item-identifiers b) #'string=)
+                  (%association-roles association) (replace-pair (%association-roles association) a b c)
                   (%association-role-forward a) c (%association-role-forward b) c))))
 
 (defun equal-associations-p (a b)
   ;; TMDM 5.7: compare role sets structurally, independent of role ordering.
   ;; Role parents are the associations being compared (the equality cycle).
-  ;; Scope sets are significant; reifier/II are absent in this subset.
+  ;; Scope sets are significant; identifiers do not participate in equality.
   (and (eq (%association-type a) (%association-type b))
        (same-scope-p (%association-scope a) (%association-scope b))
        (= (length (%association-roles a)) (length (%association-roles b)))
@@ -24,17 +26,17 @@
               (%association-roles a))))
 
 (defun merge-two-associations (map a b)
-  ;; TMDM 6.6: C receives A's equal role set. Retarget parent and discarded
-  ;; equivalent B-role handles, so clients cannot observe stale live references.
+  ;; TMDM 6.6/6.7: retarget both equal role sets to C, then merge corresponding
+  ;; Roles. This preserves their identifiers AND every retained role handle.
   (let ((c (%make-association map (%association-type a))))
     (setf (%association-scope c) (copy-list (%association-scope a))
-          (%association-roles c) (copy-list (%association-roles a))
+          (%association-item-identifiers c)
+          (set-union (%association-item-identifiers a) (%association-item-identifiers b) #'string=)
+          (%association-roles c) (set-union (%association-roles a) (%association-roles b) #'eq)
           (%topic-map-associations map) (replace-pair (%topic-map-associations map) a b c)
           (%association-forward a) c (%association-forward b) c)
     (dolist (role (%association-roles c)) (setf (%association-role-parent role) c))
-    (dolist (role (%association-roles b))
-      (setf (%association-role-forward role)
-            (find role (%association-roles c) :test #'same-role-signature-p)))
+    (normalize-roles c)
     c))
 
 (defun normalize-associations (map)

@@ -197,7 +197,10 @@
           (require-exact-item r 'association-role)
           (unless (and (eq r (canonical-association-role r)) (eq (association-role-parent r) a))
             (fail :invalid-parent "Role must be current and owned by its Association."))
-          (reference (association-role-type r)) (reference (association-role-player r)))))))
+          (reference (association-role-type r)) (reference (association-role-player r))))))
+  (handler-case (topic-maps.tmdm::validate-map-item-identifiers map)
+    (topic-maps.tmdm:item-identifier-error (c)
+      (fail (topic-maps.tmdm:item-identifier-error-code c) (princ-to-string c)))))
 
 (defun xml-text (text out)
   (loop for c across (nfc text) for n = (char-code c) do
@@ -225,8 +228,8 @@
 
 (defun canonicalize (map &key base-locator)
   "Return CXTM as a string. BASE-LOCATOR is an explicit absolute IRI (CXTM 3.1).
-Only the existing TMDM schema is supported: Topic-set Scope and Variants, null
-Reifier and no non-Topic identifiers other than Occurrence identifiers. Does not mutate MAP or handles."
+Supports Scope, Variants and Item Identifiers on all seven item kinds; Reifier
+remains null. Does not mutate MAP or retained handles."
   (unless (and (stringp base-locator) (position #\: base-locator)
                (let ((scheme (subseq base-locator 0 (position #\: base-locator))))
                  (and (plusp (length scheme))
@@ -259,6 +262,7 @@ Reifier and no non-Topic identifiers other than Occurrence identifiers. Does not
                          (gethash (association-role-parent r) association-numbers)
                          (gethash r role-numbers))))
         (format out "<topicMap>~%")
+        (emit-locators "itemIdentifiers" (item-identifiers map) out)
         (loop for topic in topics for number from 1 do
           (format out "<topic number=\"~D\">~%" number)
           (emit-locators "subjectIdentifiers" (topic-subject-identifiers topic) out)
@@ -274,7 +278,9 @@ Reifier and no non-Topic identifiers other than Occurrence identifiers. Does not
               (xml-text (canonical-literal-value (variant-value item) (variant-datatype item)) out)
               (format out "</value>~%<datatype>") (xml-text (variant-datatype item) out)
               (format out "</datatype>~%") (emit-scope (variant-scope item) topic-numbers out)
+              (emit-locators "itemIdentifiers" (item-identifiers item) out)
               (format out "</variant>~%"))
+            (emit-locators "itemIdentifiers" (item-identifiers name) out)
             (format out "</name>~%"))
           (loop for item in (sorted (topic-occurrences topic) #'occurrence-order) for index from 1 do
             (format out "<occurrence number=\"~D\">~%<value>" index)
@@ -294,8 +300,11 @@ Reifier and no non-Topic identifiers other than Occurrence identifiers. Does not
           (loop for r in (sorted (association-roles a) #'role-order) for index from 1 do
             (format out "<role number=\"~D\">~%<player topicref=\"~D\"></player>~%"
                     index (gethash (association-role-player r) topic-numbers))
-            (type-ref (association-role-type r)) (format out "</role>~%"))
+            (type-ref (association-role-type r))
+            (emit-locators "itemIdentifiers" (item-identifiers r) out)
+            (format out "</role>~%"))
           (emit-scope (association-scope a) topic-numbers out)
+          (emit-locators "itemIdentifiers" (item-identifiers a) out)
           (format out "</association>~%"))
         ;; CXTM 3.1 step 2 appends LF after EVERY element, including the root.
         (format out "</topicMap>~%")))))

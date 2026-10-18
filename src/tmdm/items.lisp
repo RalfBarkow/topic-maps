@@ -1,29 +1,27 @@
 (in-package #:topic-maps.tmdm)
 
-;;; Only Topic Map, Topic, Name/Occurrence, Association and Role properties used
-;;; by the current subset are materialized.
-;;; Omitted set-valued properties are implicitly empty, single-valued ones null
-;;; (CTM 3.2). Scope is a materialized Topic set; Variants belong to Names.
-(defstruct (topic-map (:constructor make-topic-map ()) (:conc-name %topic-map-)) topics associations)
+;;; All seven information items carry Item Identifier sets (TMDM 5.1-5.8).
+;;; Reifier remains implicitly null; no Reification relationship is implemented.
+(defstruct (topic-map (:constructor make-topic-map ()) (:conc-name %topic-map-)) topics associations item-identifiers)
 (defstruct (topic (:constructor %make-topic (parent)) (:conc-name %topic-))
   (parent nil :read-only t) item-identifiers subject-identifiers subject-locators names occurrences
   ;; Implementation bookkeeping, not a TMDM property or another information item.
   forward)
 
 (defstruct (association (:constructor %make-association (parent type)) (:conc-name %association-))
-  (parent nil :type topic-map :read-only t) (type nil :type topic) roles scope forward)
+  (parent nil :type topic-map :read-only t) (type nil :type topic) roles scope item-identifiers forward)
 (defstruct (association-role (:constructor %make-association-role (parent type player))
                             (:conc-name %association-role-))
-  (parent nil :type association) (type nil :type topic) (player nil :type topic) forward)
+  (parent nil :type association) (type nil :type topic) (player nil :type topic) item-identifiers forward)
 (defstruct (topic-name (:constructor %make-topic-name (value type parent)) (:conc-name %topic-name-))
   (value "" :type string :read-only t)
   (type nil :type topic)
   (parent nil :type topic)
-  scope variants forward)
+  scope variants item-identifiers forward)
 
 (defstruct (variant (:constructor %make-variant (value datatype parent)) (:conc-name %variant-))
   (value "" :type string :read-only t) (datatype "" :type string :read-only t)
-  (parent nil :type topic-name) scope forward)
+  (parent nil :type topic-name) scope item-identifiers forward)
 
 (defstruct (occurrence (:constructor %make-occurrence (value datatype type parent))
                        (:conc-name %occurrence-))
@@ -61,8 +59,7 @@ EQ on obsolete objects does not change; compare their canonical representatives.
 (defun variant-parent (item) (%variant-parent (canonical-variant item)))
 (defun variant-scope (item) (copy-list (%variant-scope (canonical-variant item))))
 (defun variant-item-identifiers (item)
-  "Item identifiers are implicitly empty in the supported unreified Variant subset."
-  (canonical-variant item) nil)
+  (item-identifiers (canonical-variant item)))
 
 (defun canonical-association (association)
   "Resolve a retained Association handle after duplicate association merging."
@@ -80,7 +77,11 @@ EQ on obsolete objects does not change; compare their canonical representatives.
 (defun topic-map-topics (map) (copy-list (%topic-map-topics map)))
 (defun topic-map-associations (map) (copy-list (%topic-map-associations map)))
 (defun topic-parent (topic) (%topic-parent (canonical-topic topic)))
-(defun topic-item-identifiers (topic) (copy-list (%topic-item-identifiers (canonical-topic topic))))
+(defun topic-item-identifiers (topic) (item-identifiers (canonical-topic topic)))
+(defun topic-map-item-identifiers (map) (check-type map topic-map) (item-identifiers map))
+(defun topic-name-item-identifiers (name) (item-identifiers (canonical-topic-name name)))
+(defun association-item-identifiers (item) (item-identifiers (canonical-association item)))
+(defun association-role-item-identifiers (item) (item-identifiers (canonical-association-role item)))
 (defun topic-subject-identifiers (topic) (copy-list (%topic-subject-identifiers (canonical-topic topic))))
 (defun topic-subject-locators (topic) (copy-list (%topic-subject-locators (canonical-topic topic))))
 (defun topic-names (topic) (copy-list (%topic-names (canonical-topic topic))))
@@ -89,7 +90,7 @@ EQ on obsolete objects does not change; compare their canonical representatives.
 (defun occurrence-datatype (item) (%occurrence-datatype (canonical-occurrence item)))
 (defun occurrence-parent (item) (%occurrence-parent (canonical-occurrence item)))
 (defun occurrence-type (item) (%occurrence-type (canonical-occurrence item)))
-(defun occurrence-item-identifiers (item) (copy-list (%occurrence-item-identifiers (canonical-occurrence item))))
+(defun occurrence-item-identifiers (item) (item-identifiers (canonical-occurrence item)))
 (defun topic-name-value (name) (%topic-name-value (canonical-topic-name name)))
 (defun topic-name-type (name) (%topic-name-type (canonical-topic-name name)))
 (defun topic-name-scope (name) (copy-list (%topic-name-scope (canonical-topic-name name))))

@@ -40,7 +40,7 @@ Reject scope collapse atomically; TMDM specifies the invariant, not this API pol
 
 (defun normalize-variants (map)
   "TMDM 5.5/6.4: remove equal Variants under each current Parent Name.
-Reifier is null and Item Identifiers empty in this subset."
+ Reifier remains null; Item Identifiers are unioned, not equality keys."
   (dolist (topic (%topic-map-topics map))
     (dolist (name (%topic-names topic))
       (loop for pair = (equal-pair (%topic-name-variants name)
@@ -52,6 +52,7 @@ Reifier is null and Item Identifiers empty in this subset."
               (let* ((a (first pair)) (b (second pair))
                      (c (%make-variant (%variant-value a) (%variant-datatype a) name)))
                 (setf (%variant-scope c) (copy-list (%variant-scope a))
+                      (%variant-item-identifiers c) (set-union (%variant-item-identifiers a) (%variant-item-identifiers b) #'string=)
                       (%topic-name-variants name) (replace-pair (%topic-name-variants name) a b c)
                       (%variant-forward a) c (%variant-forward b) c)))))
   map)

@@ -59,7 +59,7 @@
 
 (defun normalize-names (map)
   ;; TMDM 5.4 and 6.3: union Variants and replace their computed Parent.
-  ;; Name II remain empty and reifier null in this subset.
+  ;; Identifier metadata is not an equality key; reifier remains null.
   (dolist (topic (%topic-map-topics map))
     (loop for pair = (equal-pair (%topic-names topic)
                        (lambda (a b)
@@ -70,6 +70,7 @@
             (let* ((a (first pair)) (b (second pair))
                    (c (%make-topic-name (%topic-name-value a) (%topic-name-type a) topic)))
               (setf (%topic-name-scope c) (copy-list (%topic-name-scope a))
+                    (%topic-name-item-identifiers c) (set-union (%topic-name-item-identifiers a) (%topic-name-item-identifiers b) #'string=)
                     (%topic-name-variants c) (set-union (%topic-name-variants a) (%topic-name-variants b) #'eq)
                     (%topic-names topic) (replace-pair (%topic-names topic) a b c)
                     (%topic-name-forward a) c (%topic-name-forward b) c)
@@ -150,7 +151,7 @@ IRI is an already resolved, nonempty absolute locator string; CTM validates it."
     ;; Check the entire prospective identity closure before adding the locator.
     (check-variant-merge-constraints (%topic-parent topic) :identifier (list topic kind iri))
     (ecase kind
-      (:item-identifier (pushnew iri (%topic-item-identifiers topic) :test #'string=))
+      (:item-identifier (pushnew (copy-seq iri) (%topic-item-identifiers topic) :test #'string=))
       (:subject-identifier (pushnew iri (%topic-subject-identifiers topic) :test #'string=))
       (:subject-locator (pushnew iri (%topic-subject-locators topic) :test #'string=)))
     (normalize-topic-map (%topic-parent topic))

@@ -1,4 +1,4 @@
-# Common Lisp Topic Maps — Slice 15
+# Common Lisp Topic Maps — Slice 16A
 
 A working ANSI Common Lisp reader for CTM identity/name syntax and
 unary/binary Associations, with same-map merging of Topics, Names, Associations
@@ -27,6 +27,12 @@ Names, Occurrences and Associations, including reference replacement, duplicate
 merging and canonical output. Slice 14 adds unreified Variants with proper Scope
 supersets, canonical merge handles and pure CXTM output. Slice 15 adds per-document
 Wildcards and recursive Embedded Topics through the shared Topic reference reader.
+Slice 16A adds general Item Identifiers for all seven existing information-item
+kinds, including metadata-preserving replacement merges and pure CXTM output.
+Reification remains outside this slice.
+
+Start with [General Item Identifiers](docs/reading-item-identifiers.md) for the
+uniform API, retained handles, exact boundaries and executable inspection forms.
 
 Systems: `topic-maps` (the retained foundation), `topic-maps/tests`,
 `topic-maps/tmdm`, `topic-maps/ctm`, `topic-maps/ctm/tests` and
@@ -34,6 +40,7 @@ Systems: `topic-maps` (the retained foundation), `topic-maps/tests`,
 `topic-maps/cxtm/tests`, `topic-maps/ctm/occurrence-tests` and `topic-maps/ctm/prefix-tests` and `topic-maps/ctm/integer-tests`, plus `topic-maps/ctm/decimal-tests` and `topic-maps/ctm/date-tests` and `topic-maps/ctm/datetime-tests` and `topic-maps/ctm/timezone-tests`, `topic-maps/ctm/typed-name-tests` and `topic-maps/ctm/scope-tests`, plus `topic-maps/ctm/variant-tests` and `topic-maps/ctm/reference-tests`.
 The core reader/model uses ANSI Common Lisp; the foundation/tooling uses
 ASDF/UIOP and Python's standard library. No Quicklisp packages are required.
+`topic-maps/tmdm/identifier-tests` adds the general identifier regression suite.
 
 Start with [Reading Topic References](docs/reading-topic-references.md) for Wildcard
 IRIs/counters, recursive Embedded Topics and actual object relationships.

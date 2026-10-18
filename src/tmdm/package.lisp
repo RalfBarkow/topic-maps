@@ -1,6 +1,9 @@
 (defpackage #:topic-maps.tmdm
   (:use #:cl)
   (:export #:topic-map #:make-topic-map #:topic-map-topics #:topic-map-associations
+           #:item-identifiers #:add-item-identifier #:item-identifier-error #:item-identifier-error-code
+           #:topic-map-item-identifiers #:topic-name-item-identifiers
+           #:association-item-identifiers #:association-role-item-identifiers
            #:topic #:topic-parent #:topic-item-identifiers
            #:topic-subject-identifiers #:topic-subject-locators #:topic-names #:topic-occurrences #:topic-roles-played
            #:topic-name-scope #:occurrence-scope #:association-scope #:scope-error #:scope-error-code

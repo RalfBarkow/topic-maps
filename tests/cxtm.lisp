@@ -22,16 +22,17 @@
   (handler-case (progn (funcall thunk) nil) (topic-maps.cxtm:cxtm-error (c) c)))
 (defun map-state (map)
   ;; Includes object handles, all forward links, raw stored references/sets.
-  (list (copy-list (topic-maps.tmdm::%topic-map-topics map))
+  (list (topic-maps.tmdm:item-identifiers map)
+        (copy-list (topic-maps.tmdm::%topic-map-topics map))
         (copy-list (topic-maps.tmdm::%topic-map-associations map))
         (loop for topic in (topic-map-topics map) collect
           (list topic (topic-maps.tmdm::%topic-forward topic) (topic-parent topic)
                 (topic-item-identifiers topic) (topic-subject-identifiers topic) (topic-subject-locators topic)
                 (loop for n in (topic-names topic) collect
-                  (list n (topic-maps.tmdm::%topic-name-forward n) (topic-name-parent n)
+                  (list n (topic-maps.tmdm:item-identifiers n) (topic-maps.tmdm::%topic-name-forward n) (topic-name-parent n)
                         (topic-name-type n) (topic-name-value n) (copy-list (topic-maps.tmdm::%topic-name-scope n))
                         (loop for v in (topic-maps.tmdm::%topic-name-variants n) collect
-                          (list v (topic-maps.tmdm::%variant-forward v) (topic-maps.tmdm::%variant-parent v)
+                          (list v (topic-maps.tmdm:item-identifiers v) (topic-maps.tmdm::%variant-forward v) (topic-maps.tmdm::%variant-parent v)
                                 (topic-maps.tmdm::%variant-value v) (topic-maps.tmdm::%variant-datatype v)
                                 (copy-list (topic-maps.tmdm::%variant-scope v))))))
                 (loop for o in (topic-maps.tmdm:topic-occurrences topic) collect
@@ -40,10 +41,10 @@
                         (topic-maps.tmdm:occurrence-datatype o) (topic-maps.tmdm:occurrence-item-identifiers o)
                         (copy-list (topic-maps.tmdm::%occurrence-scope o))))))
         (loop for a in (topic-maps.tmdm:topic-map-associations map) collect
-          (list a (topic-maps.tmdm::%association-forward a) (topic-maps.tmdm:association-type a)
+          (list a (topic-maps.tmdm:item-identifiers a) (topic-maps.tmdm::%association-forward a) (topic-maps.tmdm:association-type a)
                 (topic-maps.tmdm:association-parent a) (copy-list (topic-maps.tmdm::%association-scope a))
                 (loop for r in (topic-maps.tmdm:association-roles a) collect
-                  (list r (topic-maps.tmdm::%association-role-forward r)
+                  (list r (topic-maps.tmdm:item-identifiers r) (topic-maps.tmdm::%association-role-forward r)
                         (topic-maps.tmdm:association-role-type r) (topic-maps.tmdm:association-role-player r)
                         (topic-maps.tmdm:association-role-parent r)))))))
 (defun compare-cxtm-cases ()

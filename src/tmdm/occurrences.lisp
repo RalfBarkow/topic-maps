@@ -5,39 +5,39 @@
    (detail :initarg :detail :reader occurrence-error-detail))
   (:report (lambda (c out) (format out "Occurrence ~A: ~A" (occurrence-error-code c) (occurrence-error-detail c)))))
 (defun occurrence-problem (code detail) (error 'occurrence-error :code code :detail detail))
-(defun absolute-locator-p (value)
-  ;; Model inputs are already validated/resolved locators, not CTM source.
-  (and (stringp value)
-       (let ((colon (position #\: value)))
-         (and colon (plusp colon)
-              (let ((head (subseq value 0 colon)))
-                (and (or (char<= #\a (char head 0) #\z) (char<= #\A (char head 0) #\Z))
-                     (every (lambda (c) (or (char<= #\a c #\z) (char<= #\A c #\Z)
-                                           (char<= #\0 c #\9) (find c "+-."))) head)))))))
+(define-condition occurrence-identifier-error (occurrence-error item-identifier-error) ())
+(defun legacy-identifier-problem (condition)
+  ;; Existing callers may still catch OCCURRENCE-ERROR; the uniform API also
+  ;; exposes ITEM-IDENTIFIER-ERROR without breaking that condition contract.
+  (error 'occurrence-identifier-error :code (item-identifier-error-code condition)
+         :detail (item-identifier-error-detail condition)))
 (defun same-occurrence-properties-p (a value datatype type scope)
   ;; Parent is the containing topic; Scope is compared as a Topic set.
   (and (string= (%occurrence-value a) value) (string= (%occurrence-datatype a) datatype)
        (eq (%occurrence-type a) type) (same-scope-p (%occurrence-scope a) scope)))
 (defun check-topic-occurrence-identifiers (map kind iri)
-  (when (member kind '(:item-identifier :subject-identifier))
+  (when (eq kind :item-identifier)
+    (handler-case (validate-item-identifiers map (list iri) :topic-p t)
+      (item-identifier-error (c) (legacy-identifier-problem c))))
+  (when (eq kind :subject-identifier)
+    ;; Historical boundary only: this is NOT automatic Reification. Its
+    ;; treatment is deferred to Slice 16B; do not extend it to other item types.
     (dolist (topic (%topic-map-topics map))
       (dolist (occurrence (%topic-occurrences topic))
         (when (member iri (%occurrence-item-identifiers occurrence) :test #'string=)
-          (occurrence-problem (if (eq kind :item-identifier) :duplicate-item-identifier :unsupported-reification-identity)
-                              "Topic identity conflicts with an existing Occurrence item identifier."))))))
+          (error 'occurrence-identifier-error :code :unsupported-reification-identity
+                 :detail "Topic SI / Occurrence II handling is deferred to Slice 16B."))))))
 (defun validate-occurrence-identifiers (map topic type value datatype identifiers scope)
-  (unless (and (proper-list-p identifiers) (every #'absolute-locator-p identifiers))
-    (occurrence-problem :invalid-item-identifiers "Item identifiers must be a list of resolved absolute locators."))
+  (handler-case
+      (validate-item-identifiers map identifiers
+        :allowed (remove-if-not (lambda (other) (same-occurrence-properties-p other value datatype type scope))
+                                (%topic-occurrences topic)))
+    (item-identifier-error (c) (legacy-identifier-problem c)))
   (dolist (id identifiers)
     (dolist (owner (%topic-map-topics map))
-      (when (member id (%topic-item-identifiers owner) :test #'string=)
-        (occurrence-problem :duplicate-item-identifier "An Item Identifier is already assigned to a Topic."))
       (when (member id (%topic-subject-identifiers owner) :test #'string=)
-        (occurrence-problem :unsupported-reification-identity "Topic/Occurrence reification identity is outside this model."))
-      (dolist (other (%topic-occurrences owner))
-        (when (and (member id (%occurrence-item-identifiers other) :test #'string=)
-                   (not (and (eq owner topic) (same-occurrence-properties-p other value datatype type scope))))
-          (occurrence-problem :duplicate-item-identifier "An Item Identifier is already assigned to a different Occurrence."))))))
+        (error 'occurrence-identifier-error :code :unsupported-reification-identity
+               :detail "Topic SI / Occurrence II handling is deferred to Slice 16B.")))))
 (defun normalize-occurrences (map)
   "TMDM 5.6/6.5, null reifier; replace duplicates and union identifiers."
   (dolist (topic (%topic-map-topics map))
@@ -80,7 +80,7 @@ Validate before mutation, return current representative after duplicate replacem
     (validate-occurrence-identifiers map topic type value datatype item-identifiers scope)
     (let ((item (%make-occurrence value datatype type topic)))
       (setf (%occurrence-scope item) scope
-            (%occurrence-item-identifiers item) (remove-duplicates (copy-list item-identifiers) :test #'string= :from-end t)
+            (%occurrence-item-identifiers item) (mapcar #'copy-seq (remove-duplicates item-identifiers :test #'string= :from-end t))
             (%topic-occurrences topic) (append (%topic-occurrences topic) (list item)))
       (normalize-occurrences map)
       (canonical-occurrence item))))

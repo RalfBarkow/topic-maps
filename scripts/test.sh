@@ -23,4 +23,5 @@ if [ -n "${TOPIC_MAPS_REPORT:-}" ]; then
   python3 "$project_root/scripts/check-scopes.py" "$TOPIC_MAPS_REPORT.scopes.json"
   python3 "$project_root/scripts/check-variants.py" "$TOPIC_MAPS_REPORT.variants.json"
   python3 "$project_root/scripts/check-references.py" "$TOPIC_MAPS_REPORT.references.json"
+  python3 "$project_root/scripts/check-item-identifiers.py" "$TOPIC_MAPS_REPORT.identifiers.json"
 fi
