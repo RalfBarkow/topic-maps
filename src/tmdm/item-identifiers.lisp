@@ -98,7 +98,7 @@ Non-Topics do not become equal merely by sharing identifiers."
         (add-topic-identifier item :item-identifier iri)
         (progn
           (validate-item-identifiers map (list iri) :allowed (list item))
-          ;; Preserve the existing Occurrence/SI boundary for Slice 16B.
+          ;; Retain the Occurrence constructor compatibility condition contract.
           (when (typep item 'occurrence)
             (validate-occurrence-identifiers map (%occurrence-parent item) (%occurrence-type item)
               (%occurrence-value item) (%occurrence-datatype item) (list iri) (%occurrence-scope item)))

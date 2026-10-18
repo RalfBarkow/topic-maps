@@ -16,42 +16,32 @@
   (and (string= (%occurrence-value a) value) (string= (%occurrence-datatype a) datatype)
        (eq (%occurrence-type a) type) (same-scope-p (%occurrence-scope a) scope)))
 (defun check-topic-occurrence-identifiers (map kind iri)
+  ;; TMDM 5.3.5's SI/II cross-identity rule concerns two Topics, not an
+  ;; implicit Reification between a Topic and a non-Topic construct.
   (when (eq kind :item-identifier)
     (handler-case (validate-item-identifiers map (list iri) :topic-p t)
-      (item-identifier-error (c) (legacy-identifier-problem c))))
-  (when (eq kind :subject-identifier)
-    ;; Historical boundary only: this is NOT automatic Reification. Its
-    ;; treatment is deferred to Slice 16B; do not extend it to other item types.
-    (dolist (topic (%topic-map-topics map))
-      (dolist (occurrence (%topic-occurrences topic))
-        (when (member iri (%occurrence-item-identifiers occurrence) :test #'string=)
-          (error 'occurrence-identifier-error :code :unsupported-reification-identity
-                 :detail "Topic SI / Occurrence II handling is deferred to Slice 16B."))))))
+      (item-identifier-error (c) (legacy-identifier-problem c)))))
 (defun validate-occurrence-identifiers (map topic type value datatype identifiers scope)
   (handler-case
       (validate-item-identifiers map identifiers
         :allowed (remove-if-not (lambda (other) (same-occurrence-properties-p other value datatype type scope))
                                 (%topic-occurrences topic)))
-    (item-identifier-error (c) (legacy-identifier-problem c)))
-  (dolist (id identifiers)
-    (dolist (owner (%topic-map-topics map))
-      (when (member id (%topic-subject-identifiers owner) :test #'string=)
-        (error 'occurrence-identifier-error :code :unsupported-reification-identity
-               :detail "Topic SI / Occurrence II handling is deferred to Slice 16B.")))))
+    (item-identifier-error (c) (legacy-identifier-problem c))))
 (defun normalize-occurrences (map)
-  "TMDM 5.6/6.5, null reifier; replace duplicates and union identifiers."
-  (dolist (topic (%topic-map-topics map))
-    (loop for pair = (equal-pair (%topic-occurrences topic)
-                       (lambda (a b) (same-occurrence-properties-p a (%occurrence-value b)
-                                                                  (%occurrence-datatype b) (%occurrence-type b) (%occurrence-scope b))))
-          while pair do
-            (let* ((a (first pair)) (b (second pair))
-                   (c (%make-occurrence (%occurrence-value a) (%occurrence-datatype a) (%occurrence-type a) topic)))
-              (setf (%occurrence-scope c) (copy-list (%occurrence-scope a))
-                    (%occurrence-item-identifiers c)
-                    (set-union (%occurrence-item-identifiers a) (%occurrence-item-identifiers b) #'string=)
-                    (%topic-occurrences topic) (replace-pair (%topic-occurrences topic) a b c)
-                    (%occurrence-forward a) c (%occurrence-forward b) c))))
+  "TMDM 5.6/6.5: rescan live owners after Reifier-induced merges."
+  (loop for entry = (loop for topic in (%topic-map-topics map)
+                         for pair = (equal-pair (%topic-occurrences topic)
+                           (lambda (a b) (same-occurrence-properties-p a (%occurrence-value b)
+                             (%occurrence-datatype b) (%occurrence-type b) (%occurrence-scope b))))
+                         when pair return (cons topic pair))
+        while entry do
+    (let* ((topic (first entry)) (a (second entry)) (b (third entry))
+           (c (%make-occurrence (%occurrence-value a) (%occurrence-datatype a) (%occurrence-type a) topic)))
+      (setf (%occurrence-scope c) (copy-list (%occurrence-scope a))
+            (%occurrence-item-identifiers c) (set-union (%occurrence-item-identifiers a) (%occurrence-item-identifiers b) #'string=)
+            (%topic-occurrences topic) (replace-pair (%topic-occurrences topic) a b c)
+            (%occurrence-forward a) c (%occurrence-forward b) c)
+      (merge-item-reifiers c a b)))
   map)
 (defun add-occurrence (topic type value &key (datatype (string-datatype)) item-identifiers scope)
   "Create an Occurrence with a Scope Topic set; TYPE must be a same-map Topic. VALUE and DATATYPE

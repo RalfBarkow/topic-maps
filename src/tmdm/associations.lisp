@@ -6,14 +6,16 @@
 
 (defun normalize-roles (association)
   ;; TMDM 5.8/6.7: shared parent; identifiers are metadata, not equality keys.
-  (loop for pair = (equal-pair (%association-roles association) #'same-role-signature-p)
+  (loop for parent = (canonical-association association)
+        for pair = (equal-pair (%association-roles parent) #'same-role-signature-p)
         while pair do
           (let* ((a (first pair)) (b (second pair))
-                 (c (%make-association-role association (%association-role-type a) (%association-role-player a))))
+                 (c (%make-association-role parent (%association-role-type a) (%association-role-player a))))
             (setf (%association-role-item-identifiers c)
                   (set-union (%association-role-item-identifiers a) (%association-role-item-identifiers b) #'string=)
-                  (%association-roles association) (replace-pair (%association-roles association) a b c)
-                  (%association-role-forward a) c (%association-role-forward b) c))))
+                  (%association-roles parent) (replace-pair (%association-roles parent) a b c)
+                  (%association-role-forward a) c (%association-role-forward b) c)
+            (merge-item-reifiers c a b))))
 
 (defun equal-associations-p (a b)
   ;; TMDM 5.7: compare role sets structurally, independent of role ordering.
@@ -37,7 +39,7 @@
           (%association-forward a) c (%association-forward b) c)
     (dolist (role (%association-roles c)) (setf (%association-role-parent role) c))
     (normalize-roles c)
-    c))
+    (merge-item-reifiers c a b)))
 
 (defun normalize-associations (map)
   (dolist (association (%topic-map-associations map)) (normalize-roles association))

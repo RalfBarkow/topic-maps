@@ -1,32 +1,32 @@
 (in-package #:topic-maps.tmdm)
 
 ;;; All seven information items carry Item Identifier sets (TMDM 5.1-5.8).
-;;; Reifier remains implicitly null; no Reification relationship is implemented.
-(defstruct (topic-map (:constructor make-topic-map ()) (:conc-name %topic-map-)) topics associations item-identifiers)
+;;; Reifier belongs to non-Topic constructs; Topic Reified is computed.
+(defstruct (topic-map (:constructor make-topic-map ()) (:conc-name %topic-map-)) topics associations item-identifiers reifier)
 (defstruct (topic (:constructor %make-topic (parent)) (:conc-name %topic-))
   (parent nil :read-only t) item-identifiers subject-identifiers subject-locators names occurrences
   ;; Implementation bookkeeping, not a TMDM property or another information item.
   forward)
 
 (defstruct (association (:constructor %make-association (parent type)) (:conc-name %association-))
-  (parent nil :type topic-map :read-only t) (type nil :type topic) roles scope item-identifiers forward)
+  (parent nil :type topic-map :read-only t) (type nil :type topic) roles scope item-identifiers reifier forward)
 (defstruct (association-role (:constructor %make-association-role (parent type player))
                             (:conc-name %association-role-))
-  (parent nil :type association) (type nil :type topic) (player nil :type topic) item-identifiers forward)
+  (parent nil :type association) (type nil :type topic) (player nil :type topic) item-identifiers reifier forward)
 (defstruct (topic-name (:constructor %make-topic-name (value type parent)) (:conc-name %topic-name-))
   (value "" :type string :read-only t)
   (type nil :type topic)
   (parent nil :type topic)
-  scope variants item-identifiers forward)
+  scope variants item-identifiers reifier forward)
 
 (defstruct (variant (:constructor %make-variant (value datatype parent)) (:conc-name %variant-))
   (value "" :type string :read-only t) (datatype "" :type string :read-only t)
-  (parent nil :type topic-name) scope item-identifiers forward)
+  (parent nil :type topic-name) scope item-identifiers reifier forward)
 
 (defstruct (occurrence (:constructor %make-occurrence (value datatype type parent))
                        (:conc-name %occurrence-))
   (value "" :type string :read-only t) (datatype "" :type string :read-only t)
-  (type nil :type topic) (parent nil :type topic) item-identifiers scope forward)
+  (type nil :type topic) (parent nil :type topic) item-identifiers scope reifier forward)
 
 (defun canonical-occurrence (occurrence)
   "Resolve a retained Occurrence replaced by TMDM duplicate removal; no compression."

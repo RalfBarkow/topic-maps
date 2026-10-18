@@ -149,7 +149,7 @@
          (= 1 (length (topic-maps.tmdm:occurrence-scope
                         (first (all-occurrences (read-text "a t:\"x\" @theme.")))))))
   (dolist (text '("a t:\"x\" ~reifier." "a t: 2000-12-31T12:00:60+01:00." "a t: 2000-12-31T12:00:60-01:00." "a t:* ."))
-    (check (concatenate 'string "excluded-occurrence-feature:" text) (typep (ctm-condition text) 'ctm-unsupported))))
+    (check (concatenate 'string "occurrence-feature-boundary:" text) (if (find #\~ text) (null (ctm-condition text)) (typep (ctm-condition text) 'ctm-unsupported)))))
 
 (defun occurrence-api-tests ()
   (let* ((map (read-text "a. t.")) (a (local-topic map "a")) (type (local-topic map "t"))
@@ -174,11 +174,18 @@
                             (list :relative-uri-value (lambda () (topic-maps.tmdm:add-occurrence a type "file.html" :datatype (topic-maps.tmdm:iri-datatype))))
                             (list :duplicate-item-identifier (lambda () (topic-maps.tmdm:add-occurrence a type "Different" :item-identifiers '("urn:o:1"))))
                             (list :duplicate-item-identifier (lambda () (topic-maps.tmdm:intern-topic map :item-identifier "urn:o:1")))
-                            (list :duplicate-item-identifier (lambda () (topic-maps.tmdm:add-topic-identifier a :item-identifier "urn:o:1")))
-                            (list :unsupported-reification-identity (lambda () (topic-maps.tmdm:intern-topic map :subject-identifier "urn:o:1")))) for fixture-index from 0 do
+                            (list :duplicate-item-identifier (lambda () (topic-maps.tmdm:add-topic-identifier a :item-identifier "urn:o:1")))) for fixture-index from 0 do
         (check (format nil "invalid-occurrence-api:~A:~D" (first fixture) fixture-index)
                (eq (first fixture) (topic-maps.tmdm:occurrence-error-code (occurrence-condition (second fixture)))))
         (check (format nil "invalid-occurrence-api-atomic:~A:~D" (first fixture) (length *checks*)) (equal state (map-state map))))))
+  (let* ((map (read-text "a. t.")) (a (local-topic map "a")) (type (local-topic map "t"))
+         (o (topic-maps.tmdm:add-occurrence a type "x" :item-identifiers '("urn:overlap")))
+         (subject (topic-maps.tmdm:intern-topic map :subject-identifier "urn:overlap")))
+    (check "occurrence-SI-II-overlap-does-not-reify" (and (null (topic-maps.tmdm:item-reifier o))
+                                                         (null (topic-maps.tmdm:topic-reified subject))))
+    (check "occurrence-SI-II-overlap-preserves-distinct-properties"
+           (and (equal '("urn:overlap") (topic-maps.tmdm:occurrence-item-identifiers o))
+                (equal '("urn:overlap") (topic-subject-identifiers subject)) (null (topic-item-identifiers subject)))))
   (let* ((map (read-text "a. t.")) (a (local-topic map "a")) (type (local-topic map "t")))
     (topic-maps.tmdm:add-occurrence a type "urn:same")
     (topic-maps.tmdm:add-occurrence a type "urn:same" :datatype (topic-maps.tmdm:iri-datatype))

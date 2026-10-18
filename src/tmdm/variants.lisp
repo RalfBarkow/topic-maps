@@ -39,26 +39,26 @@ Reject scope collapse atomically; TMDM specifies the invariant, not this API pol
                     "Topic merging would remove the Variant's additional scope; no mutation was performed."))))))))))
 
 (defun normalize-variants (map)
-  "TMDM 5.5/6.4: remove equal Variants under each current Parent Name.
- Reifier remains null; Item Identifiers are unioned, not equality keys."
-  (dolist (topic (%topic-map-topics map))
-    (dolist (name (%topic-names topic))
-      (loop for pair = (equal-pair (%topic-name-variants name)
-                         (lambda (a b)
-                           (and (string= (%variant-value a) (%variant-value b))
-                                (string= (%variant-datatype a) (%variant-datatype b))
-                                (same-scope-p (%variant-scope a) (%variant-scope b)))))
-            while pair do
-              (let* ((a (first pair)) (b (second pair))
-                     (c (%make-variant (%variant-value a) (%variant-datatype a) name)))
-                (setf (%variant-scope c) (copy-list (%variant-scope a))
-                      (%variant-item-identifiers c) (set-union (%variant-item-identifiers a) (%variant-item-identifiers b) #'string=)
-                      (%topic-name-variants name) (replace-pair (%topic-name-variants name) a b c)
-                      (%variant-forward a) c (%variant-forward b) c)))))
+  "TMDM 5.5/6.4: union metadata and rescan live parents after cascades."
+  (loop for entry = (loop for topic in (%topic-map-topics map) thereis
+                     (loop for name in (%topic-names topic)
+                           for pair = (equal-pair (%topic-name-variants name)
+                             (lambda (a b) (and (string= (%variant-value a) (%variant-value b))
+                                               (string= (%variant-datatype a) (%variant-datatype b))
+                                               (same-scope-p (%variant-scope a) (%variant-scope b)))))
+                           when pair return (cons name pair)))
+        while entry do
+    (let* ((name (first entry)) (a (second entry)) (b (third entry))
+           (c (%make-variant (%variant-value a) (%variant-datatype a) name)))
+      (setf (%variant-scope c) (copy-list (%variant-scope a))
+            (%variant-item-identifiers c) (set-union (%variant-item-identifiers a) (%variant-item-identifiers b) #'string=)
+            (%topic-name-variants name) (replace-pair (%topic-name-variants name) a b c)
+            (%variant-forward a) c (%variant-forward b) c)
+      (merge-item-reifiers c a b)))
   map)
 
 (defun add-variant (name value &key (datatype (string-datatype)) scope)
-  "Add an unreified Variant with actual TMDM SCOPE, a proper superset of NAME's.
+  "Add a Variant with actual TMDM SCOPE, a proper superset of NAME's.
 The CTM reader unions explicit themes with the Parent Name scope before calling.
 Validate before mutation. Quoted lexical values are not rewritten."
   (check-type value string) (check-type datatype string)

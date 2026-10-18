@@ -22,13 +22,13 @@
 
 (asdf:defsystem "topic-maps/tmdm"
   :description "Topics, Names, Variants, Occurrences, Associations and Roles with same-map merging"
-  :version "0.16.0" :license "MIT" :serial t
+  :version "0.16.1" :license "MIT" :serial t
   :components ((:file "src/tmdm/package") (:file "src/tmdm/integers") (:file "src/tmdm/decimals") (:file "src/tmdm/dates") (:file "src/tmdm/datetimes") (:file "src/tmdm/items")
-               (:file "src/tmdm/item-identifiers") (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations")))
+               (:file "src/tmdm/item-identifiers") (:file "src/tmdm/reification") (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations")))
 
 (asdf:defsystem "topic-maps/ctm"
   :description "CTM recursive Topic references, Wildcards, names/variants/associations and supported literals"
-  :version "0.15.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :version "0.16.1" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/ctm/package") (:file "src/ctm/conditions")
                (:file "src/ctm/unicode") (:file "src/ctm/iri")
                (:file "src/ctm/lexer") (:file "src/ctm/reader")))
@@ -61,7 +61,7 @@
 
 (asdf:defsystem "topic-maps/cxtm"
   :description "Pure CXTM for the supported TMDM subset; ISO/IEC 13250-4:2009"
-  :version "0.16.0" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
+  :version "0.16.1" :license "MIT" :depends-on ("topic-maps/tmdm") :serial t
   :components ((:file "src/cxtm/package") (:file "src/cxtm/nfc-data")
                (:file "src/cxtm/unicode") (:file "src/cxtm/canonicalizer")))
 
@@ -169,3 +169,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.identifier.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/tmdm/reification-tests"
+  :description "Same-map Reification, canonical references, atomic cascades and original CTM contracts"
+  :depends-on ("topic-maps/tmdm/identifier-tests") :serial t
+  :components ((:file "tests/reification"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.reification.tests :run-tests)))

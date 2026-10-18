@@ -200,7 +200,10 @@
           (reference (association-role-type r)) (reference (association-role-player r))))))
   (handler-case (topic-maps.tmdm::validate-map-item-identifiers map)
     (topic-maps.tmdm:item-identifier-error (c)
-      (fail (topic-maps.tmdm:item-identifier-error-code c) (princ-to-string c)))))
+      (fail (topic-maps.tmdm:item-identifier-error-code c) (princ-to-string c))))
+  (handler-case (topic-maps.tmdm::validate-map-reification map)
+    (topic-maps.tmdm:reification-error (c)
+      (fail (topic-maps.tmdm:reification-error-code c) (princ-to-string c)))))
 
 (defun xml-text (text out)
   (loop for c across (nfc text) for n = (char-code c) do
@@ -228,8 +231,8 @@
 
 (defun canonicalize (map &key base-locator)
   "Return CXTM as a string. BASE-LOCATOR is an explicit absolute IRI (CXTM 3.1).
-Supports Scope, Variants and Item Identifiers on all seven item kinds; Reifier
-remains null. Does not mutate MAP or retained handles."
+Supports Scope, Variants, Item Identifiers and same-map Reification.
+Does not mutate MAP or retained handles."
   (unless (and (stringp base-locator) (position #\: base-locator)
                (let ((scheme (subseq base-locator 0 (position #\: base-locator))))
                  (and (plusp (length scheme))
@@ -255,13 +258,20 @@ remains null. Does not mutate MAP or retained handles."
       (loop for r in (sorted (association-roles a) #'role-order) for index from 1 do
         (setf (gethash r role-numbers) index)))
     (with-output-to-string (out)
-      (labels ((type-ref (topic)
+      (labels ((start (tag item number)
+                 ;; CXTM 3.11, canonical XML attribute order: number, reifier.
+                 (format out "<~A" tag)
+                 (when number (format out " number=\"~D\"" number))
+                 (when (item-reifier item)
+                   (format out " reifier=\"~D\"" (gethash (item-reifier item) topic-numbers)))
+                 (format out ">~%"))
+               (type-ref (topic)
                  (format out "<type topicref=\"~D\"></type>~%" (gethash topic topic-numbers)))
                (role-ref (r)
                  (format out "<rolePlayed ref=\"association.~D.role.~D\"></rolePlayed>~%"
                          (gethash (association-role-parent r) association-numbers)
                          (gethash r role-numbers))))
-        (format out "<topicMap>~%")
+        (start "topicMap" map nil)
         (emit-locators "itemIdentifiers" (item-identifiers map) out)
         (loop for topic in topics for number from 1 do
           (format out "<topic number=\"~D\">~%" number)
@@ -269,12 +279,12 @@ remains null. Does not mutate MAP or retained handles."
           (emit-locators "subjectLocators" (topic-subject-locators topic) out)
           (emit-locators "itemIdentifiers" (topic-item-identifiers topic) out)
           (loop for name in (sorted (topic-names topic) #'name-order) for index from 1 do
-            (format out "<name number=\"~D\">~%<value>" index)
+            (start "name" name index) (write-string "<value>" out)
             (xml-text (topic-name-value name) out) (format out "</value>~%")
             (type-ref (topic-name-type name))
             (emit-scope (topic-name-scope name) topic-numbers out)
             (loop for item in (sorted (topic-name-variants name) #'variant-order) for number from 1 do
-              (format out "<variant number=\"~D\">~%<value>" number)
+              (start "variant" item number) (write-string "<value>" out)
               (xml-text (canonical-literal-value (variant-value item) (variant-datatype item)) out)
               (format out "</value>~%<datatype>") (xml-text (variant-datatype item) out)
               (format out "</datatype>~%") (emit-scope (variant-scope item) topic-numbers out)
@@ -283,7 +293,7 @@ remains null. Does not mutate MAP or retained handles."
             (emit-locators "itemIdentifiers" (item-identifiers name) out)
             (format out "</name>~%"))
           (loop for item in (sorted (topic-occurrences topic) #'occurrence-order) for index from 1 do
-            (format out "<occurrence number=\"~D\">~%<value>" index)
+            (start "occurrence" item index) (write-string "<value>" out)
             (xml-text (canonical-literal-value (occurrence-value item) (occurrence-datatype item)) out)
             (format out "</value>~%<datatype>")
             ;; CXTM 3.14: datatype locator is NOT base-normalized.
@@ -295,11 +305,11 @@ remains null. Does not mutate MAP or retained handles."
           (dolist (r (sorted (topic-roles-played topic) #'role-order)) (role-ref r))
           (format out "</topic>~%"))
         (loop for a in associations for number from 1 do
-          (format out "<association number=\"~D\">~%" number)
+          (start "association" a number)
           (type-ref (association-type a))
           (loop for r in (sorted (association-roles a) #'role-order) for index from 1 do
-            (format out "<role number=\"~D\">~%<player topicref=\"~D\"></player>~%"
-                    index (gethash (association-role-player r) topic-numbers))
+            (start "role" r index)
+            (format out "<player topicref=\"~D\"></player>~%" (gethash (association-role-player r) topic-numbers))
             (type-ref (association-role-type r))
             (emit-locators "itemIdentifiers" (item-identifiers r) out)
             (format out "</role>~%"))

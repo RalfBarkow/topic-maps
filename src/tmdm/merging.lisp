@@ -14,9 +14,10 @@
           (:subject-locator '(:subject-locator)))))
 
 (defun equal-topics-p (a b)
-  (some (lambda (kind)
-          (some (lambda (iri) (identifier-matches-p a kind iri)) (identifiers b kind)))
-        '(:item-identifier :subject-identifier :subject-locator)))
+  (or (some (lambda (kind)
+              (some (lambda (iri) (identifier-matches-p a kind iri)) (identifiers b kind)))
+            '(:item-identifier :subject-identifier :subject-locator))
+      (let ((target (topic-reified a))) (and target (eq target (topic-reified b))))))
 
 (defun set-union (a b test)
   (remove-duplicates (append a b) :test test :from-end t))
@@ -58,28 +59,32 @@
   (and (= (length a) (length b)) (every (lambda (theme) (member theme b :test #'eq)) a)))
 
 (defun normalize-names (map)
-  ;; TMDM 5.4 and 6.3: union Variants and replace their computed Parent.
-  ;; Identifier metadata is not an equality key; reifier remains null.
-  (dolist (topic (%topic-map-topics map))
-    (loop for pair = (equal-pair (%topic-names topic)
-                       (lambda (a b)
-                         (and (string= (%topic-name-value a) (%topic-name-value b))
-                              (eq (%topic-name-type a) (%topic-name-type b))
-                              (same-scope-p (%topic-name-scope a) (%topic-name-scope b)))))
-          while pair do
-            (let* ((a (first pair)) (b (second pair))
-                   (c (%make-topic-name (%topic-name-value a) (%topic-name-type a) topic)))
-              (setf (%topic-name-scope c) (copy-list (%topic-name-scope a))
-                    (%topic-name-item-identifiers c) (set-union (%topic-name-item-identifiers a) (%topic-name-item-identifiers b) #'string=)
-                    (%topic-name-variants c) (set-union (%topic-name-variants a) (%topic-name-variants b) #'eq)
-                    (%topic-names topic) (replace-pair (%topic-names topic) a b c)
-                    (%topic-name-forward a) c (%topic-name-forward b) c)
-              (dolist (item (%topic-name-variants c)) (setf (%variant-parent item) c)))))
+  ;; Rescan live owners after each replacement: merging Reifiers can replace
+  ;; the owner/type/theme of the very Name currently being normalized.
+  (loop for entry = (loop for topic in (%topic-map-topics map)
+                         for pair = (equal-pair (%topic-names topic)
+                           (lambda (a b) (and (string= (%topic-name-value a) (%topic-name-value b))
+                                             (eq (%topic-name-type a) (%topic-name-type b))
+                                             (same-scope-p (%topic-name-scope a) (%topic-name-scope b)))))
+                         when pair return (cons topic pair))
+        while entry do
+    (let* ((topic (first entry)) (a (second entry)) (b (third entry))
+           (c (%make-topic-name (%topic-name-value a) (%topic-name-type a) topic)))
+      (setf (%topic-name-scope c) (copy-list (%topic-name-scope a))
+            (%topic-name-item-identifiers c) (set-union (%topic-name-item-identifiers a) (%topic-name-item-identifiers b) #'string=)
+            (%topic-name-variants c) (set-union (%topic-name-variants a) (%topic-name-variants b) #'eq)
+            (%topic-names topic) (replace-pair (%topic-names topic) a b c)
+            (%topic-name-forward a) c (%topic-name-forward b) c)
+      (dolist (v (%topic-name-variants c)) (setf (%variant-parent v) c))
+      (merge-item-reifiers c a b)))
   (normalize-variants map))
 
 (defun merge-two-topics (map a b)
   ;; TMDM 6.2: create C, union supported properties, replace model references.
-  ;; Replace Scope sets too; Reification remains outside the supported model.
+  ;; TMDM 6.2 conflict is checked against current targets BEFORE replacement.
+  (let ((left (topic-reified a)) (right (topic-reified b)))
+    (when (and left right (not (eq left right)))
+      (reification-problem :reifier-conflict "Topics reify different information items.")))
   (check-variant-merge-constraints map :pair (list a b))
   (let ((c (%make-topic map)))
     (setf (%topic-item-identifiers c) (set-union (%topic-item-identifiers a) (%topic-item-identifiers b) #'string=)
@@ -108,22 +113,26 @@
       (dolist (role (%association-roles association))
         (setf (%association-role-type role) (canonical-topic (%association-role-type role))
               (%association-role-player role) (canonical-topic (%association-role-player role)))))
+    (dolist (item (map-information-items map))
+      (when (and (reifiable-p item) (%item-reifier item))
+        (setf (%item-reifier item) (canonical-topic (%item-reifier item)))))
     (normalize-names map)
     (normalize-occurrences map)
     (normalize-associations map)
-    c))
+    (canonical-topic c)))
 
 (defun normalize-topic-map (map)
-  "Apply same-map identity merging, then remove equal Names, Occurrences, Roles and Associations.
-Only implemented properties participate; no cross-map merging."
+  "Reach a fixed point of same-map Topic and structural item merging."
   (check-type map topic-map)
+  (when (needs-reification-preflight-p map)
+    (return-from normalize-topic-map
+      (preflight-reification-mutation map (lambda (ref) (normalize-topic-map (funcall ref map))))))
   (check-variant-merge-constraints map)
-  (loop for pair = (equal-pair (%topic-map-topics map) #'equal-topics-p)
-        while pair do (merge-two-topics map (first pair) (second pair)))
-  (normalize-names map)
-  (normalize-occurrences map)
-  (normalize-associations map)
-  map)
+  (loop for before = (length (map-information-items map)) do
+    (loop for pair = (equal-pair (%topic-map-topics map) #'equal-topics-p)
+          while pair do (merge-two-topics map (first pair) (second pair)))
+    (normalize-names map) (normalize-occurrences map) (normalize-associations map)
+    when (= before (length (map-information-items map))) return map))
 
 (defun live-topic (topic)
   (let ((current (canonical-topic topic)))
@@ -137,6 +146,9 @@ Explicit merging may assert shared subject identity beyond locator equality.
 Cross-map merging is rejected before mutation. Obsolete handles remain resolvable."
   (let* ((a (live-topic a)) (b (live-topic b)) (map (%topic-parent a)))
     (unless (eq map (%topic-parent b)) (error "Cross-map Topic merging is outside this API."))
+    (when (needs-reification-preflight-p map)
+      (return-from merge-topics (preflight-reification-mutation map
+        (lambda (ref) (merge-topics (funcall ref a) (funcall ref b))))))
     (unless (eq a b) (setf a (merge-two-topics map a b)))
     (normalize-topic-map map)
     (canonical-topic a)))
@@ -147,6 +159,9 @@ KIND is :ITEM-IDENTIFIER, :SUBJECT-IDENTIFIER or :SUBJECT-LOCATOR.
 IRI is an already resolved, nonempty absolute locator string; CTM validates it."
   (unless (and (stringp iri) (plusp (length iri))) (error "A nonempty locator string is required."))
   (let ((topic (live-topic topic)))
+    (when (needs-reification-preflight-p (%topic-parent topic))
+      (return-from add-topic-identifier (preflight-reification-mutation (%topic-parent topic)
+        (lambda (ref) (add-topic-identifier (funcall ref topic) kind iri)))))
     (check-topic-occurrence-identifiers (%topic-parent topic) kind iri)
     ;; Check the entire prospective identity closure before adding the locator.
     (check-variant-merge-constraints (%topic-parent topic) :identifier (list topic kind iri))

@@ -107,7 +107,7 @@ The owning information item is not constructed until this function finishes."
     (let ((themes nil))
       (loop
         ;; A reifier marker where a Theme is required is malformed Scope,
-        ;; even though reification after a complete Scope remains unsupported.
+        ;; while a reifier after a complete Scope belongs to its statement.
         (unless (parser-lookahead parser)
           (skip-layout (parser-lexer parser))
           (when (eql #\~ (peek-character (parser-lexer parser)))
@@ -196,6 +196,22 @@ The owning information item is not constructed until this function finishes."
       (otherwise (problem 'ctm-rejection (if (eq context :variant) :expected-variant-value :expected-occurrence-value)
                           (token-position token) "Expected a supported CTM literal value.")))))
 
+(defun read-reifier (parser map)
+  "CTM 3.3.10: reuse the full Topic reference resolver, retaining the marker position."
+  (when (punctuation-p parser #\~)
+    (let ((position (token-position (consume parser))))
+      (unless (topic-reference-start-p (look parser))
+        (problem 'ctm-rejection :expected-reifier-topic (token-position (look parser)) "Expected a Topic reference after '~'."))
+      (values (topic-reference parser map) position))))
+(defun attach-reifier (item topic position)
+  (when topic
+    (handler-case (setf item (topic-maps.tmdm:set-item-reifier item topic))
+      (topic-maps.tmdm:reification-error (c)
+        (problem 'ctm-rejection (topic-maps.tmdm:reification-error-code c) position (princ-to-string c)))
+      (topic-maps.tmdm:variant-error (c)
+        (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c) position (princ-to-string c)))))
+  item)
+
 (defun read-identity-tail (parser map topic)
   (let* ((start (look parser)) (embedded (punctuation-p parser #\[))
          (type (when embedded (topic-reference parser map))))
@@ -208,7 +224,8 @@ The owning information item is not constructed until this function finishes."
             (multiple-value-bind (value datatype) (read-literal parser)
               (let* ((type (or type (topic-maps.tmdm:intern-topic map kind iri)))
                      (scope (read-scope parser map)))
-                (topic-maps.tmdm:add-occurrence topic type value :datatype datatype :scope scope)
+                (multiple-value-bind (r position) (read-reifier parser map)
+                  (attach-reifier (topic-maps.tmdm:add-occurrence topic type value :datatype datatype :scope scope) r position))
                 (topic-maps.tmdm:canonical-topic topic))))
           (if (or embedded (member (token-kind start) '(:identifier :wildcard)))
               (if (and (eq :identifier (token-kind start)) (punctuation-p parser #\())
@@ -218,21 +235,20 @@ The owning information item is not constructed until this function finishes."
               (topic-maps.tmdm:add-topic-identifier topic kind iri))))))
 
 (defun read-variant (parser map name)
-  "CTM 3.12: required explicit Scope, then union with the current Parent Scope."
-  (consume parser) ; (
+  (consume parser)
   (multiple-value-bind (value datatype) (read-literal parser :variant)
     (unless (punctuation-p parser #\@)
-      (problem 'ctm-rejection :expected-variant-scope (token-position (look parser))
-               "A Variant requires an explicit '@' Scope."))
-    (let* ((scope-position (token-position (look parser))) (themes (read-scope parser map))
-           (scope (append (topic-maps.tmdm:topic-name-scope name) themes)))
-      (unless (punctuation-p parser #\))
-        (problem 'ctm-rejection :missing-variant-close (token-position (look parser))
-                 "Expected ')' after the Variant Scope."))
-      (consume parser)
-      (handler-case (topic-maps.tmdm:add-variant name value :datatype datatype :scope scope)
-        (topic-maps.tmdm:variant-error (c)
-          (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c) scope-position (princ-to-string c)))))))
+      (problem 'ctm-rejection :expected-variant-scope (token-position (look parser)) "A Variant requires an explicit '@' Scope."))
+    (let* ((scope-position (token-position (look parser))) (themes (read-scope parser map)))
+      (multiple-value-bind (r position) (read-reifier parser map)
+        (unless (punctuation-p parser #\))
+          (problem 'ctm-rejection :missing-variant-close (token-position (look parser)) "Expected ')' after the Variant Scope/Reifier."))
+        (consume parser)
+        (handler-case
+            (attach-reifier (topic-maps.tmdm:add-variant name value :datatype datatype
+              :scope (append (topic-maps.tmdm:topic-name-scope name) themes)) r position)
+          (topic-maps.tmdm:variant-error (c)
+            (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c) scope-position (princ-to-string c))))))))
 
 (defun read-name (parser map topic)
   "CTM 3.11: optional Topic reference plus ':' followed by a string.
@@ -249,11 +265,12 @@ Use the shared Topic reference resolver."
       (unless (eq :string (token-kind value))
         (problem 'ctm-rejection :expected-name-value (token-position value)
                  "Expected a quoted name value after '-' or the name type separator."))
-      (let* ((scope (read-scope parser map))
-             (name (if typed
-                       (topic-maps.tmdm:add-name topic (token-value value) :type type :scope scope)
-                       (topic-maps.tmdm:add-name topic (token-value value) :scope scope))))
-        (loop while (punctuation-p parser #\() do (read-variant parser map name))))
+      (let ((scope (read-scope parser map)))
+        (multiple-value-bind (r position) (read-reifier parser map)
+          (let ((name (attach-reifier
+                        (if typed (topic-maps.tmdm:add-name topic (token-value value) :type type :scope scope)
+                            (topic-maps.tmdm:add-name topic (token-value value) :scope scope)) r position)))
+            (loop while (punctuation-p parser #\() do (read-variant parser map name))))))
     (topic-maps.tmdm:canonical-topic topic)))
 
 (defun read-topic-tail (parser map topic terminator &key required)
@@ -288,9 +305,9 @@ Use the shared Topic reference resolver."
         (t (problem 'ctm-rejection :unexpected-token (token-position (look parser)) "Unexpected token after topic or name."))))))
 
 (defun read-association (parser map type)
-  "CTM 3.13, restricted to one or two role declarations; optional scope, no reifier."
+  "CTM 3.13, restricted to one or two role declarations; optional Scope and Reifiers."
   (consume parser) ; opening parenthesis already recognized by the caller
-  (let ((roles nil) (third-position nil))
+  (let ((roles nil) (role-reifiers nil) (third-position nil))
     (loop
       (when (or (punctuation-p parser #\)) (eq :eof (token-kind (look parser))))
         (problem 'ctm-rejection :expected-role (token-position (look parser)) "Expected a nonempty Association role declaration."))
@@ -311,7 +328,10 @@ Use the shared Topic reference resolver."
           (when (or (eq :eof (token-kind player-token))
                     (punctuation-p parser #\)) (punctuation-p parser #\,))
             (problem 'ctm-rejection :expected-role-player (token-position player-token) "Expected a Topic as the Role player.")))
-        (push (list role-type (topic-reference parser map)) roles))
+        (let ((player (topic-reference parser map)))
+          (push (list role-type player) roles)
+          (multiple-value-bind (r position) (read-reifier parser map)
+            (push (list role-type player r position) role-reifiers))))
       (cond ((punctuation-p parser #\,) (consume parser))
             ((punctuation-p parser #\)) (consume parser) (return))
             ((eq :eof (token-kind (look parser)))
@@ -320,7 +340,16 @@ Use the shared Topic reference resolver."
     (when (> (length roles) 2)
       (problem 'ctm-unsupported :association-arity third-position "Associations with more than two Role declarations are outside Slice 3."))
     (let ((scope (read-scope parser map)))
-      (topic-maps.tmdm:make-association map type (nreverse roles) :scope scope))))
+      (multiple-value-bind (r position) (read-reifier parser map)
+        (let ((association (topic-maps.tmdm:make-association map type (nreverse roles) :scope scope)))
+          (dolist (entry (nreverse role-reifiers))
+            (destructuring-bind (role-type player reifier marker) entry
+              (let ((role (find-if (lambda (role)
+                            (and (eq (topic-maps.tmdm:canonical-topic role-type) (topic-maps.tmdm:association-role-type role))
+                                 (eq (topic-maps.tmdm:canonical-topic player) (topic-maps.tmdm:association-role-player role))))
+                                  (topic-maps.tmdm:association-roles association))))
+                (attach-reifier role reifier marker))))
+          (attach-reifier (topic-maps.tmdm:canonical-association association) r position))))))
 
 (defun deserialize-string (text &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0))
   "Read the documented CTM subset, with per-document prefixes and qualified strings.
@@ -335,8 +364,16 @@ Source positions are zero-based character offsets; lines/columns are one-based."
           (map (topic-maps.tmdm:make-topic-map)))
       (handler-bind ((topic-maps.tmdm:variant-error
                        (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:variant-error-code c)
+                                             (lexer-cursor (parser-lexer parser)) (princ-to-string c))))
+                     (topic-maps.tmdm:reification-error
+                       (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:reification-error-code c)
                                              (lexer-cursor (parser-lexer parser)) (princ-to-string c)))))
+        (loop while (eq :directive (token-kind (look parser))) do (read-prefix-directive parser))
+        (multiple-value-bind (r position) (read-reifier parser map) (attach-reifier map r position))
         (loop until (eq :eof (token-kind (look parser))) do
+          (when (punctuation-p parser #\~)
+            (problem 'ctm-rejection :topic-map-reifier-position (token-position (look parser))
+                     "Topic Map Reifier must precede all body declarations."))
           (if (eq :directive (token-kind (look parser)))
               (read-prefix-directive parser)
               (let* ((embedded (punctuation-p parser #\[)) (topic (topic-reference parser map)))

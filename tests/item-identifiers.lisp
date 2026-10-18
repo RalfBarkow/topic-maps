@@ -183,18 +183,16 @@
   (multiple-value-bind (map items type) (fixture)
     (let ((o (fifth items)))
       (add-item-identifier o "urn:occurrence-boundary")
-      (let* ((before (map-state map)) (e (condition-from (lambda () (intern-topic map :subject-identifier "urn:occurrence-boundary")))))
-        (check "boundary:existing-occurrence-SI-guard-remains-explicit-atomic"
-               (and (typep e 'item-identifier-error) (typep e 'occurrence-error)
-                    (eq :unsupported-reification-identity (item-identifier-error-code e)) (equal before (map-state map)))))
-      (let* ((before (map-state map))
-             (e (condition-from (lambda () (add-item-identifier o "urn:type")))))
-        (check "boundary:reverse-occurrence-II-SI-guard-remains-explicit-atomic"
-               (and (typep e 'item-identifier-error) (eq :unsupported-reification-identity (item-identifier-error-code e))
-                    (equal before (map-state map)))))
-      (add-item-identifier (third items) "urn:type")
+      (let ((subject (intern-topic map :subject-identifier "urn:occurrence-boundary")))
+        (check "boundary:occurrence-II-then-Topic-SI-no-automatic-reification"
+               (and (null (item-reifier o)) (null (topic-reified subject)))))
+      (add-item-identifier o "urn:type")
+      (check "boundary:Topic-SI-then-occurrence-II-no-automatic-reification"
+             (and (member "urn:type" (item-identifiers o) :test #'string=)
+                  (null (item-reifier o)) (null (topic-reified type))))
+      (add-item-identifier (third items) "urn:theme")
       (check "boundary:no-invented-reification-on-other-item-kinds"
-             (and (equal '("urn:type") (item-identifiers (third items))) (null (item-identifiers type))))))
+             (and (equal '("urn:theme") (item-identifiers (third items))) (null (item-identifiers type))))))
   (let* ((map (make-topic-map)) (owner (si map "owner")) (type (si map "type"))
          (n1 (add-name owner "N1" :type type)) (n2 (add-name owner "N2" :type type))
          (decomposed (format nil "urn:e~A" (code-char #x301))) (composed "urn:é"))
@@ -275,8 +273,8 @@
     (check "identifiers:no-imported-contract-status-changes"
            (equal '(:pass 93 :fail 2 :unsupported 0 :not-run 178)
                   (getf (topic-maps.test-foundation:summarize-corpus topic-maps.ctm.tests::*cxtm-corpus*) :statuses)))
-    (check "identifiers:reification-stays-unsupported"
-           (typep (topic-maps.ctm.tests::ctm-condition "a - \"N\" ~r.") 'topic-maps.ctm:ctm-unsupported))
+    (check "identifiers:reification-now-supported"
+           (null (topic-maps.ctm.tests::ctm-condition "a - \"N\" ~r.")))
     (setf *last-checks* (nreverse topic-maps.ctm.tests::*checks*))
     (format t "~&ITEM-IDENTIFIERS-PASS: ~D checks; 7 manually constructed original XTM2 baseline comparisons; no XTM reader or imported status changes.~%"
             (length *last-checks*)) t))

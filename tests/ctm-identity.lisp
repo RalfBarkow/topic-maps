@@ -182,7 +182,7 @@
       (check "error-line-column" (and (= 2 (error-line condition)) (= 3 (error-column condition)))))
     (dolist (text '("a isa person." "def tpl() a. end" "%include <other.ctm>"
                     "? - \"anonymous\" ~r."  "a - \"\"\"triple\"\"\"."))
-      (check (concatenate 'string "unsupported-not-silently-accepted:" text) (unsupported-p text)))
+      (check (concatenate 'string "identity-feature-boundary:" text) (if (find #\~ text) (typep (read-text text) 'topic-maps.tmdm:topic-map) (unsupported-p text))))
     (check "scope-on-bare-topic-rejected"
            (eq :unexpected-token (error-code (rejection "a @theme."))))
     (check "scoped-name-now-deserialized"

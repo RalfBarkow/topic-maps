@@ -178,7 +178,7 @@
                 (equal (list (local-topic map "theme")) (topic-maps.tmdm:topic-name-scope name)))))
   (dolist (text '("a - [-\"fullname\" ~r]:\"Name\"."
                   "a - type:\"Name\" ~reifier." "a - type:\"Name\" (\"variant\" @theme ~r)."))
-    (check (concatenate 'string "typed-reader:excluded-feature:" text) (typep (ctm-condition text) 'ctm-unsupported))))
+    (check (concatenate 'string "typed-reader:feature-boundary:" text) (if (find #\~ text) (null (ctm-condition text)) (typep (ctm-condition text) 'ctm-unsupported)))))
 
 (defun typed-name-order-tests ()
   (let ((reference nil))

@@ -174,7 +174,7 @@
            (= 1 (length (topic-maps.tmdm:association-scope
                           (first (topic-maps.tmdm:topic-map-associations (read-text "a(r: p) @theme")))))))
     (dolist (text '("a(r: p) ~reifier" "a(r: p, s: q, t: z)"))
-      (check (concatenate 'string "unsupported-association-feature:" text) (unsupported-p text)))
+      (check (concatenate 'string "association-feature-boundary:" text) (if (find #\~ text) (typep (read-text text) 'topic-maps.tmdm:topic-map) (unsupported-p text))))
     (check "comment-can-separate-role-colon"
            (association-invariants (read-text "a(r#( separator )#:p)")))
     (check "delimited-iri-role-references"
