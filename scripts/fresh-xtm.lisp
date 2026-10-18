@@ -1,0 +1,8 @@
+(require :asdf)
+(setf *compile-verbose* nil *load-verbose* nil)
+(assert (string= "2.5.4" (lisp-implementation-version)))
+(asdf:load-asd (merge-pathnames "../topic-maps.asd" *load-truename*))
+(asdf:test-system "topic-maps/xtm")
+(let ((report (uiop:getenv "TOPIC_MAPS_XTM_REPORT")))
+  (when report (uiop:symbol-call :topic-maps.xtm.tests :write-report report)))
+(assert (not (find-package :topic-maps.ctm)))

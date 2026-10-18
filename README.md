@@ -1,10 +1,16 @@
-# Common Lisp Topic Maps — Slice 19C
+# Common Lisp Topic Maps — Slice 19D1
+
+Slice 19D1 adds **`topic-maps/xtm`**, an XTM 2.0 identity/`instanceOf` subset.
+Six unchanged XTM sources match their original CXTM baselines byte-for-byte;
+results are separate from the unchanged **204 PASS / 4 FAIL / 65 NOT-RUN** CTM
+contracts. No CTM XTM-Mergemap integration or full XTM conformance is claimed.
+See [the XTM API, model and reproduction guide](docs/slice-19d1-xtm-identity.md).
+
 
 Slice 19D0B qualifies local, versioned CXML/closure-common encoding corrections:
 **58 original and 88 additional XML checks PASS** in fresh offline SBCL 2.5.4.
 The required entry point is `topic-maps.xml:parse-octets` after offline source
-patch preparation; it enforces external-resource denial. No XTM deserializer
-is implemented. See [encoding qualification](docs/slice-19d0b-cxml-encoding.md).
+patch preparation; it enforces external-resource denial. Slice 19D1 uses that boundary for its independent XTM 2.0 identity reader. See [encoding qualification](docs/slice-19d0b-cxml-encoding.md).
 
 Slice 19D0 made pinned CXML sources available to ASDF through the Nix source
 environment. Its initial parser qualification failed on UTF-16 supplementary
@@ -26,7 +32,7 @@ Slice 19B adds CTM `%mergemap` with the CTM notation and an explicit
 `:resource-resolver` on `deserialize-string` / `deserialize-file`. Resources are
 supplied as bytes by the caller, deserialized with independent environments,
 and transferred by Slice 19A's TMDM content import. No implicit file/network
-retrieval or XTM deserialization is provided (Include is added by Slice 19C).
+retrieval is provided (Include is added by Slice 19C). XTM Mergemap remains unsupported.
 See [Reading CTM Mergemap](docs/reading-ctm-mergemap.md) and
 [Slice 19B validation](docs/slice-19b-validation.md).
 The registered corpus now has **194 PASS, 2 known DateTime FAIL, 77 NOT-RUN**:
