@@ -1,7 +1,8 @@
 (defpackage #:topic-maps.registered-original.tests
   (:use #:cl #:topic-maps.tmdm)
   (:export #:run-tests #:write-reports #:candidate-groups
-           #:run-negative-tests #:write-negative-reports))
+           #:run-negative-tests #:write-negative-reports
+           #:run-empty2-tests #:write-empty2-reports))
 (in-package #:topic-maps.registered-original.tests)
 
 ;; One selection of the existing discovered Case Records, not another registry.
@@ -50,7 +51,7 @@
   (ecase group
     (:comments
      (plain-locals-p map doc
-       (cond ((member name '("empty" "comment-sl3") :test #'equal) nil)
+       (cond ((member name '("empty" "empty2" "comment-sl3") :test #'equal) nil)
              ((member name '("comment-ml" "comment-ml-nested" "comment-ml-nested2" "comment-sl2") :test #'equal) '("topic1" "topic3"))
              ((equal name "comment-sl6") '("topic" "topic2")) (t '("topic")))))
     (:identity
@@ -506,3 +507,96 @@
     (concatenate 'string prefix ".validation.json") (concatenate 'string prefix ".cxtm.json")
     :additional-checks *negative-checks*
     :scope "Slice 20B: seven negative originals actually executed; only intended syntax rejections registered. Earlier positive comparisons and four known DateTime/Include FAILs preserved; full retained regression, Slice 20A and XTM evidence separate."))
+
+
+;;; Slice 20E: one more existing positive Case Record, using EXERCISE-CASE.
+;;; Run after the retained 20A/20B/20C stages to preserve their snapshots.
+(defvar *empty2-checks* nil)
+(defvar *empty2-row* nil)
+(defvar *empty2-entry-statuses* nil)
+(defun run-empty2-tests ()
+  (unless topic-maps.ctm.tests::*cxtm-corpus*
+    (run-tests)
+    (run-negative-tests)
+    (uiop:symbol-call :topic-maps.prolog.tests :run-tests))
+  (setf *empty2-checks* nil *empty2-row* nil)
+  (let* ((*checks* nil)
+         (corpus topic-maps.ctm.tests::*cxtm-corpus*)
+         (root (topic-maps.test-foundation:corpus-root corpus))
+         (id "ctm/in/empty2.ctm")
+         (selected (topic-maps.test-foundation:select-cases corpus :id id))
+         (case (first selected))
+         (cases (topic-maps.test-foundation:corpus-cases corpus))
+         (previous (mapcar (lambda (c) (cons c (case-state c))) cases))
+         (old-results (copy-tree topic-maps.ctm.tests::*cxtm-results*))
+         (base (format nil "https://ctm-tests.example.invalid/~A/"
+                       (getf (topic-maps.test-foundation:corpus-metadata corpus) :commit))))
+    (setf *empty2-entry-statuses*
+          (copy-list (getf (topic-maps.test-foundation:summarize-corpus corpus) :statuses)))
+    (check "empty2:unique-existing-NOT-RUN-positive-contract"
+      (and (= 1 (length selected)) (member case cases :test #'eq)
+           (eq :valid (topic-maps.test-foundation:test-case-category case))
+           (eq :cxtm-equal (topic-maps.test-foundation:test-case-expected-outcome case))
+           (eq :not-run (topic-maps.test-foundation:test-case-status case))
+           (null (topic-maps.test-foundation:test-case-actual-outcome case))))
+    (check "empty2:pinned-source-baseline-and-document-IRI"
+      (and (equal (truename (merge-pathnames id root))
+                  (truename (topic-maps.test-foundation:test-case-source-pathname case)))
+           (equal (truename (merge-pathnames "ctm/baseline/empty2.ctm.cxtm" root))
+                  (truename (topic-maps.test-foundation:test-case-expected-baseline case)))
+           (equal (concatenate 'string base id)
+                  (topic-maps.test-foundation:test-case-document-iri case))))
+    (check "empty2:original-thirteen-source-bytes"
+      (equalp (binary (topic-maps.test-foundation:test-case-source-pathname case))
+              #(37 118 101 114 115 105 111 110 32 49 46 48 10)))
+    (check "empty2:original-twenty-three-baseline-bytes"
+      (equalp (binary (topic-maps.test-foundation:test-case-expected-baseline case))
+              #(60 116 111 112 105 99 77 97 112 62 10 60 47 116 111 112 105 99 77 97 112 62 10)))
+    (multiple-value-bind (row result) (exercise-case case :comments)
+      (setf *empty2-row* row)
+      ;; EXERCISE-CASE performs real file deserialization, the semantic witness,
+      ;; raw object/handle preservation and exact octet comparison before PASS.
+      (check "empty2:actual-original-byte-comparison-passes"
+        (and result (getf result :match) (= 23 (getf result :bytes))
+             (equal (format nil "<topicMap>~%</topicMap>~%") (getf result :actual))
+             (equal (getf result :actual) (getf result :expected))
+             (eq :pass (topic-maps.test-foundation:test-case-status case))
+             (eq :cxtm-match (topic-maps.test-foundation:test-case-actual-outcome case))))
+      (check "empty2:all-previous-case-records-and-observations-preserved"
+        (and (eq corpus topic-maps.ctm.tests::*cxtm-corpus*)
+             (equal cases (topic-maps.test-foundation:corpus-cases corpus))
+             (equal old-results topic-maps.ctm.tests::*cxtm-results*)
+             (every (lambda (entry)
+                      (if (eq case (car entry))
+                          (equal (first (cdr entry)) (identity-fields case))
+                          (equal (cdr entry) (case-state (car entry))))) previous)))
+      (setf topic-maps.ctm.tests::*cxtm-results*
+            (append topic-maps.ctm.tests::*cxtm-results* (list result))))
+    (let ((after (getf (topic-maps.test-foundation:summarize-corpus corpus) :statuses)))
+      (check "empty2:only-one-NOT-RUN-to-PASS-transition"
+        (and (= (1+ (getf *empty2-entry-statuses* :pass)) (getf after :pass))
+             (= (1- (getf *empty2-entry-statuses* :not-run)) (getf after :not-run))
+             (= (getf *empty2-entry-statuses* :fail) (getf after :fail))
+             (= (getf *empty2-entry-statuses* :unsupported) (getf after :unsupported)))))
+    (check "empty2:unique-check-names"
+      (= (length *checks*) (length (remove-duplicates *checks* :test #'equal))))
+    (setf *empty2-checks* (nreverse *checks*))
+    (format t "~&EMPTY2-ORIGINAL ~A: ~A; 23 byte-exact CXTM bytes~%" id
+            (topic-maps.test-foundation:test-case-status case)))
+  (format t "~&EMPTY2-PASS: ~D checks; one actual original contract~%" (length *empty2-checks*))
+  t)
+
+(defun write-empty2-reports (prefix)
+  (with-open-file (out (concatenate 'string prefix ".registration.json")
+                       :direction :output :if-exists :supersede :if-does-not-exist :create)
+    (topic-maps.test-foundation::emit-json-value
+      (fields "kind" "ctm-registered-original-execution"
+              "passed" (length *empty2-checks*) "failed" 0
+              "entryStatuses" (topic-maps.test-foundation::counts-object *empty2-entry-statuses*)
+              "checks" (coerce *empty2-checks* 'vector) "cases" (vector *empty2-row*)) out)
+    (terpri out))
+  (topic-maps.ctm.tests::write-cxtm-report
+    (concatenate 'string prefix ".validation.json")
+    (concatenate 'string prefix ".cxtm.json")
+    :additional-checks *empty2-checks*
+    :scope "Slice 20E: empty2.ctm executed using the Slice 20A original comparison harness; empty Map, exact source and CXTM bytes, stable Document IRI and non-mutating canonicalization. All earlier contract records and four known FAILs retained."))

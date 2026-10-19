@@ -281,3 +281,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.prolog.tests :run-tests)))
+
+
+(asdf:defsystem "topic-maps/ctm/empty2-tests"
+  :description "Slice 20E: original empty2 prolog contract in the existing registration harness"
+  :depends-on ("topic-maps/ctm/prolog-tests")
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.registered-original.tests :run-empty2-tests)))
