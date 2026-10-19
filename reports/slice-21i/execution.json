@@ -1,0 +1,1273 @@
+{
+  "kind": "xtm-variant-resource-ref-original-registration-validation",
+  "baseCommit": "034d2c14fbf6a58a062351e4b64680283d241d22",
+  "branch": "codex/xtm-slice-21i",
+  "runtime": "SBCL 2.5.4",
+  "startedAtUTC": "2026-10-19T21:19:13.684691+00:00",
+  "finishedAtUTC": "2026-10-19T21:21:06.794151+00:00",
+  "runs": [
+    {
+      "label": "source-preparation",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "python3",
+        "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21i.py",
+        "--prepare",
+        "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21i-sources-zs1emrdr/sources"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:13.687670+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T21:19:16.717199+00:00"
+    },
+    {
+      "label": "xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "tests/cxml-probe.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:16.718433+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T21:19:23.548478+00:00"
+    },
+    {
+      "label": "xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "scripts/fresh-xtm.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:23.549405+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T21:19:26.420768+00:00"
+    },
+    {
+      "label": "regression",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:26.559603+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T21:19:48.663831+00:00"
+    },
+    {
+      "label": "diagnostics",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/diagnostics.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:48.664204+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T21:19:50.266752+00:00"
+    },
+    {
+      "label": "positive-control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:50.266993+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:19:51.753895+00:00"
+    },
+    {
+      "label": "positive-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:51.754409+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:19:53.237779+00:00"
+    },
+    {
+      "label": "positive-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:53.238507+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:19:54.726333+00:00"
+    },
+    {
+      "label": "positive-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:54.727158+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:19:56.446666+00:00"
+    },
+    {
+      "label": "positive-control-xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:56.447312+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:19:58.569590+00:00"
+    },
+    {
+      "label": "negative-control-accepted",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:19:58.570929+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:01.124353+00:00"
+    },
+    {
+      "label": "negative-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:01.126363+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:02.953640+00:00"
+    },
+    {
+      "label": "negative-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:02.955674+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:04.758270+00:00"
+    },
+    {
+      "label": "negative-control-wrong-cause",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:04.760305+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:06.050981+00:00"
+    },
+    {
+      "label": "name-control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:06.052719+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:07.176905+00:00"
+    },
+    {
+      "label": "name-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:07.178502+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:08.663529+00:00"
+    },
+    {
+      "label": "name-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:08.665163+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:10.464632+00:00"
+    },
+    {
+      "label": "name-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:10.466201+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:11.820884+00:00"
+    },
+    {
+      "label": "scope-control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:11.822585+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:13.260967+00:00"
+    },
+    {
+      "label": "scope-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:13.265037+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:15.025262+00:00"
+    },
+    {
+      "label": "scope-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:15.028750+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:16.412004+00:00"
+    },
+    {
+      "label": "scope-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:16.414751+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:17.738677+00:00"
+    },
+    {
+      "label": "iid-control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:17.743307+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:19.703755+00:00"
+    },
+    {
+      "label": "iid-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:19.708751+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:21.721470+00:00"
+    },
+    {
+      "label": "iid-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:21.730951+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:23.054988+00:00"
+    },
+    {
+      "label": "iid-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:23.058812+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:24.718605+00:00"
+    },
+    {
+      "label": "variant-control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:24.722929+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:26.262415+00:00"
+    },
+    {
+      "label": "variant-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:26.267414+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:29.136480+00:00"
+    },
+    {
+      "label": "variant-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:29.182556+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:32.667650+00:00"
+    },
+    {
+      "label": "variant-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:32.676149+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:34.167987+00:00"
+    },
+    {
+      "label": "variant-negative-control-accepted",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:34.172916+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:35.486729+00:00"
+    },
+    {
+      "label": "variant-negative-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:35.495551+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:36.923557+00:00"
+    },
+    {
+      "label": "variant-negative-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:36.929579+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:38.256536+00:00"
+    },
+    {
+      "label": "variant-negative-control-wrong-cause",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:38.261804+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:39.508638+00:00"
+    },
+    {
+      "label": "variant-negative-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:39.513614+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:40.765800+00:00"
+    },
+    {
+      "label": "merge-variant-control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:40.771308+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:42.148863+00:00"
+    },
+    {
+      "label": "merge-variant-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:42.155542+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:43.524348+00:00"
+    },
+    {
+      "label": "merge-variant-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:43.530841+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:45.584882+00:00"
+    },
+    {
+      "label": "merge-variant-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:45.593843+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:47.008290+00:00"
+    },
+    {
+      "label": "merge-variant-control-xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:47.015003+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:48.504536+00:00"
+    },
+    {
+      "label": "resource-ref-control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:48.511111+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:49.975962+00:00"
+    },
+    {
+      "label": "resource-ref-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:49.983011+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:51.363552+00:00"
+    },
+    {
+      "label": "resource-ref-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:51.371895+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:52.852179+00:00"
+    },
+    {
+      "label": "resource-ref-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:52.858860+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:54.159574+00:00"
+    },
+    {
+      "label": "resource-ref-control-xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:54.166741+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:55.554139+00:00"
+    },
+    {
+      "label": "resource-ref-relative-control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:55.564099+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:57.071195+00:00"
+    },
+    {
+      "label": "resource-ref-relative-control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:57.077978+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:58.356594+00:00"
+    },
+    {
+      "label": "resource-ref-relative-control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:58.363438+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:20:59.734188+00:00"
+    },
+    {
+      "label": "resource-ref-relative-control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:20:59.741217+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:21:01.190776+00:00"
+    },
+    {
+      "label": "resource-ref-relative-control-xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21i/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T21:21:01.198182+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T21:21:02.533745+00:00"
+    }
+  ],
+  "sourcePreparation": "source-preparation.json",
+  "retainedLispChecks": 12100,
+  "retainedChecks": {
+    "FOUNDATION": 54,
+    "CTM-IDENTITY-SEMANTICS": 123,
+    "CTM-MERGING-SEMANTICS": 646,
+    "CTM-ASSOCIATIONS-SEMANTICS": 657,
+    "CXTM": 445,
+    "OCCURRENCES": 1101,
+    "PREFIX-DATATYPES": 150,
+    "INTEGERS": 665,
+    "DECIMALS": 715,
+    "DATES": 1806,
+    "DATETIMES": 217,
+    "TIMEZONES": 1944,
+    "TYPED-NAMES": 106,
+    "SCOPES": 293,
+    "VARIANTS": 324,
+    "REFERENCES": 238,
+    "ITEM-IDENTIFIERS": 244,
+    "REIFICATION": 236,
+    "ASSOCIATION-ARITY": 337,
+    "TYPE-RELATIONSHIPS": 1016,
+    "TEMPLATES": 297,
+    "MAP-IMPORT": 275,
+    "MERGEMAP": 118,
+    "INCLUDE": 93
+  },
+  "stageChecks": {
+    "XTM-MERGEMAP": 217,
+    "REGISTERED-ORIGINALS": 286,
+    "REGISTERED-NEGATIVES": 25,
+    "PROLOG": 171,
+    "EMPTY2": 13,
+    "CTM-INTEGER": 112,
+    "TRIPLE": 226,
+    "ENCODING": 722
+  },
+  "xmlQualificationChecks": 146,
+  "standaloneXTMChecks": 1557,
+  "retainedXTMChecks": 1414,
+  "retargetedUnsupportedCheckNames": {
+    "name-syntax:unsupported-variant-resourceRef:class-code": "name-syntax:unsupported-variant-resourceData-datatype:class-code",
+    "name-syntax:unsupported-variant-resourceRef:context-position": "name-syntax:unsupported-variant-resourceData-datatype:context-position",
+    "name-syntax:scope:variant-resourceRef-stays-unsupported:class-code": "name-syntax:scope:variant-resourceData-datatype-stays-unsupported:class-code",
+    "name-syntax:scope:variant-resourceRef-stays-unsupported:context-position": "name-syntax:scope:variant-resourceData-datatype-stays-unsupported:context-position",
+    "name-syntax:iid:variant-resourceRef-stays-unsupported:class-code": "name-syntax:iid:variant-resourceData-datatype-stays-unsupported:class-code",
+    "name-syntax:iid:variant-resourceRef-stays-unsupported:context-position": "name-syntax:iid:variant-resourceData-datatype-stays-unsupported:context-position",
+    "variant-syntax:resourceRef:class-code": "variant-syntax:resourceData-anyURI:class-code",
+    "variant-syntax:resourceRef:context-position": "variant-syntax:resourceData-anyURI:context-position",
+    "unsupported-name-variant-resourceRef:class": "unsupported-name-variant-resourceData-datatype:class",
+    "unsupported-name-variant-resourceRef:code": "unsupported-name-variant-resourceData-datatype:code",
+    "unsupported-name-variant-resourceRef:context": "unsupported-name-variant-resourceData-datatype:context",
+    "unsupported-name-variant-resourceRef:position": "unsupported-name-variant-resourceData-datatype:position"
+  },
+  "newXTMChecks": 143,
+  "retargetedUnsupportedControlRows": {
+    "negativeControls": [
+      "unsupported-is-not-pass",
+      "unsupported-is-not-pass"
+    ],
+    "nameControls": [
+      "unsupported-variant-resourceRef",
+      "unsupported-variant-resourceData-datatype"
+    ],
+    "scopeControls": [
+      "scope:variant-resourceRef-stays-unsupported",
+      "scope:variant-resourceData-datatype-stays-unsupported"
+    ],
+    "nameItemIdentityControls": [
+      "iid:variant-resourceRef-stays-unsupported",
+      "iid:variant-resourceData-datatype-stays-unsupported"
+    ],
+    "variantControls": [
+      "resourceRef",
+      "resourceData-anyURI"
+    ]
+  },
+  "retainedOriginals": 57,
+  "retainedOriginalResultsUnchanged": true,
+  "newPositiveOriginals": 2,
+  "originalByteComparisons": [
+    {
+      "id": "xtm2/in/variant-resourceref.xtm",
+      "actual": 621,
+      "baseline": 621,
+      "firstDifferentByte": null
+    },
+    {
+      "id": "xtm2/in/variant-resourceref-relative.xtm",
+      "actual": 608,
+      "baseline": 608,
+      "firstDifferentByte": null
+    }
+  ],
+  "faultControls": 45,
+  "diagnosticOriginalObservations": 124,
+  "diagnosticChangedOriginals": [
+    "xtm2/in/variant-resourceref-relative.xtm",
+    "xtm2/in/variant-resourceref.xtm"
+  ],
+  "xtmStatusesBefore": {
+    "pass": 57,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 67
+  },
+  "xtmStatusesAfter": {
+    "pass": 59,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 65
+  },
+  "xtmStatusChanges": [
+    {
+      "id": "xtm2/in/variant-resourceref.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/variant-resourceref-relative.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    }
+  ],
+  "ctmStatusesBefore": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "ctmStatusesAfter": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "ctmStatusChanges": [],
+  "knownFailuresUnchanged": [
+    "ctm/in/include-template.ctm",
+    "ctm/in/include-wildcard2.ctm",
+    "ctm/in/occurrence-datetime-timezone2.ctm",
+    "ctm/in/occurrence-datetime2.ctm"
+  ],
+  "pythonUnitTests": 2,
+  "nfcOracleComparisons": 16294,
+  "allRetainedNonXTMReportsVerifiedAgainstSlice21H": [
+    "reports/slice-21h/retained/core.json",
+    "reports/slice-21h/retained/core.json.arity.json",
+    "reports/slice-21h/retained/core.json.associations.json",
+    "reports/slice-21h/retained/core.json.cxtm.json",
+    "reports/slice-21h/retained/core.json.dates.json",
+    "reports/slice-21h/retained/core.json.datetimes.json",
+    "reports/slice-21h/retained/core.json.decimals.json",
+    "reports/slice-21h/retained/core.json.identifiers.json",
+    "reports/slice-21h/retained/core.json.include.json",
+    "reports/slice-21h/retained/core.json.integers.json",
+    "reports/slice-21h/retained/core.json.map-import.json",
+    "reports/slice-21h/retained/core.json.mergemap.json",
+    "reports/slice-21h/retained/core.json.merging.json",
+    "reports/slice-21h/retained/core.json.occurrences.json",
+    "reports/slice-21h/retained/core.json.prefixes.json",
+    "reports/slice-21h/retained/core.json.references.json",
+    "reports/slice-21h/retained/core.json.reification.json",
+    "reports/slice-21h/retained/core.json.relationships.json",
+    "reports/slice-21h/retained/core.json.scopes.json",
+    "reports/slice-21h/retained/core.json.semantics.json",
+    "reports/slice-21h/retained/core.json.templates.json",
+    "reports/slice-21h/retained/core.json.timezones.json",
+    "reports/slice-21h/retained/core.json.typed-names.json",
+    "reports/slice-21h/retained/core.json.variants.json",
+    "reports/slice-21h/retained/slice20a.cxtm.json",
+    "reports/slice-21h/retained/slice20a.registration.json",
+    "reports/slice-21h/retained/slice20a.validation.json",
+    "reports/slice-21h/retained/slice20b.cxtm.json",
+    "reports/slice-21h/retained/slice20b.negative.json",
+    "reports/slice-21h/retained/slice20b.validation.json",
+    "reports/slice-21h/retained/slice20c.cxtm.json",
+    "reports/slice-21h/retained/slice20c.prolog.json",
+    "reports/slice-21h/retained/slice20c.validation.json",
+    "reports/slice-21h/retained/slice20e.cxtm.json",
+    "reports/slice-21h/retained/slice20e.registration.json",
+    "reports/slice-21h/retained/slice20e.validation.json",
+    "reports/slice-21h/retained/slice20f.cxtm.json",
+    "reports/slice-21h/retained/slice20f.literal.json",
+    "reports/slice-21h/retained/slice20f.validation.json",
+    "reports/slice-21h/retained/slice20g.cxtm.json",
+    "reports/slice-21h/retained/slice20g.triple.json",
+    "reports/slice-21h/retained/slice20g.validation.json",
+    "reports/slice-21h/retained/xtm-mergemap.cxtm.json",
+    "reports/slice-21h/retained/xtm-mergemap.integration.json",
+    "reports/slice-21h/retained/xtm-mergemap.validation.json",
+    "reports/slice-21h/ctm.validation.json",
+    "reports/slice-21h/ctm.cxtm.json",
+    "reports/slice-21h/ctm.encoding.json"
+  ],
+  "retargetedMergemapUnsupportedReports": [
+    "reports/slice-21h/retained/xtm-mergemap.cxtm.json",
+    "reports/slice-21h/retained/xtm-mergemap.integration.json"
+  ],
+  "unchangedNonXTMReports": 46,
+  "historicalReportFilesVerified": 2154,
+  "protectedBaseFilesVerified": 4396,
+  "pinnedCorpusFilesVerified": 2006,
+  "historicalReportsUnchanged": true,
+  "originalSourcesAndBaselinesUnchanged": true,
+  "productionChangeLimitedToXTMReader": true,
+  "protectedSubsystemsUnchanged": [
+    "TMDM",
+    "CTM",
+    "CXTM",
+    "XML"
+  ],
+  "newDependencyDownloads": 0,
+  "persistentLispImagesTouched": false,
+  "executionAuthorization": "Regular require_escalated approval; tests additionally deny network and repository writes; no symlink/configuration changes.",
+  "fullOfflineNixRebuild": "NOT-RUN; fresh SBCL loads with verified pinned local sources and existing XML patches.",
+  "acceptancePassed": true
+}

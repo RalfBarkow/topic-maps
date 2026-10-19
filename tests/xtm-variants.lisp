@@ -222,11 +222,11 @@
         (and (scope-eq-p (variant-scope (first (all-variants map))) (list (by-id map "s")))
           (same-identifiers-p (item-identifiers (by-id map "s"))
             (append (list (concatenate 'string *document* "#s")) (when (equal kind "itemIdentity") '("https://themes.invalid/map#theme"))))))))))
-(defun variant-merge-controls ()
+(defun variant-merge-controls (&optional (literal (lambda (themes) (variant-xml "V" themes))) (prefix "variant-merge:") verify)
   (dolist (target '("parent" "variant-theme" "name-theme"))
     (dolist (kind '("subjectIdentifier" "subjectLocator" "itemIdentity"))
-      (let* ((label (format nil "variant-merge:~A:~A" target kind)) (old-names nil) (old-variants nil) (old-themes nil)
-             (first-v (variant-xml "V" '("extra"))) (second-v first-v) (body nil) (*name-controls* nil))
+      (let* ((label (format nil "~A~A:~A" prefix target kind)) (old-names nil) (old-variants nil) (old-themes nil)
+             (first-v (funcall literal '("extra"))) (second-v first-v) (body nil) (*name-controls* nil))
         (labels ((topic-source (id locator content)
                    (format nil "<topic id='~A'>~A~A</topic>" id
                      (if (equal kind "itemIdentity") "" (format nil "<~A href='~A'/>" kind locator)) content))
@@ -243,7 +243,7 @@
               ((equal target "variant-theme")
                (concatenate 'string
                  (format nil "<topic id='a'>~A</topic>" (variant-name-xml '("base")
-                   (concatenate 'string (variant-xml "V" '("x")) (variant-xml "V" '("y"))) "urn:n1"))
+                   (concatenate 'string (funcall literal '("x")) (funcall literal '("y"))) "urn:n1"))
                  (topic-source "x" "urn:one" "") (topic-source "y" "urn:two" "") (bridge "x" "y")))
               (t
                (concatenate 'string (format nil "<topic id='a'>~A~A</topic>"
@@ -280,6 +280,7 @@
                       (if (equal target "variant-theme") '("urn:n1") '("urn:n1" "urn:n2")))
                     (variants-current-p map)))
                 (topic-maps.cxtm:canonicalize-octets map :base-locator *document*)
+                (when verify (funcall verify label map))
                 (check (concatenate 'string label ":cxtm-pure-retains-handles") (equal before (variant-state map)))
                 (push (topic-maps.test-foundation::fields "label" label "kind" "staged-native-reader-control"
                   "sourceText" (document body) "model" (variant-model-data map)) *variant-controls*)))))))))
@@ -332,7 +333,7 @@
     ("bad-href" "<variant><scope><topicRef href='#2bad'/></scope><resourceData>V</resourceData></variant>" :invalid-topic-ref)
     ("resourceRef-missing-href" "<variant><scope><topicRef href='#s'/></scope><resourceRef/></variant>" :missing-attribute)))
     (variant-error-control (first row) (format nil "<topic id='a'><name><value>N</value>~A</name></topic>" (second row)) 'xtm-rejection (third row)))
-  (dolist (row '(("resourceRef" "<variant><scope><topicRef href='#s'/></scope><resourceRef href='urn:x'/></variant>" :unsupported-construct)
+  (dolist (row '(("resourceData-anyURI" "<variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'>urn:x</resourceData></variant>" :resource-data-datatype)
     ("itemIdentity" "<variant><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant>" :unsupported-construct)
     ("reifier" "<variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant>" :reification)
     ("datatype" "<variant><scope><topicRef href='#s'/></scope><resourceData datatype='urn:other'>V</resourceData></variant>" :resource-data-datatype)

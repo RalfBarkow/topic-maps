@@ -174,7 +174,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                           (validate child '("scope" "resourceData" "resourceRef"))))
                       (unless scope-seen (reject :missing-variant-scope "variant requires a scope element." node))
                       (unless resource-seen (reject :missing-variant-resource "variant requires a resource element." node))))
-                   ((string= name "resourceRef") (leaf-href node) (unsupported node))
+                   ((string= name "resourceRef") (leaf-href node))
                    ((string= name "resourceData")
                     (attributes node '("datatype") nil)
                     (when (and (attr node "datatype")
@@ -228,13 +228,18 @@ constructs' complete subgrammars is made. XML errors have already been checked."
 (defun read-variant (node name map)
   (let* ((children (elements node))
          (scope-node (find "scope" children :key #'node-name :test #'string=))
-         (data-node (find "resourceData" children :key #'node-name :test #'string=))
+         (resource (find-if (lambda (child) (member (node-name child) '("resourceData" "resourceRef") :test #'string=)) children))
+         (reference-p (string= (node-name resource) "resourceRef"))
          (explicit (mapcar (lambda (ref) (find-reference-topic map (reference-iri ref))) (elements scope-node)))
-         (value (with-output-to-string (out)
-                  (dolist (part (node-children data-node)) (write-string part out)))))
+         ;; A resource locator is a value, not a topic reference. LEAF-HREF uses
+         ;; the shared XTM IRI resolver without topic lookup or resource access.
+         (value (if reference-p (leaf-href resource)
+                    (with-output-to-string (out)
+                      (dolist (part (node-children resource)) (write-string part out))))))
     ;; ADD-VARIANT canonicalizes the union and enforces the proper superset.
     ;; A nonempty explicit scope may still add no theme to the Name scope.
     (topic-maps.tmdm:add-variant name value
+      :datatype (if reference-p (topic-maps.tmdm:iri-datatype) (topic-maps.tmdm:string-datatype))
       :scope (append (topic-maps.tmdm:topic-name-scope name) explicit))))
 (defun read-name (node owner map)
   (let* ((children (elements node))

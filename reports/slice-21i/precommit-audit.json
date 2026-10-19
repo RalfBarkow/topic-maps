@@ -1,0 +1,47 @@
+{
+  "kind": "slice-21i-precommit-integrity-audit",
+  "verifiedAtUTC": "2026-10-19T21:23:44.024372+00:00",
+  "branch": "codex/xtm-slice-21i",
+  "parent": "034d2c14fbf6a58a062351e4b64680283d241d22",
+  "initialIndexAndWorktree": "clean",
+  "trackedChanges": [
+    "src/xtm/reader.lisp",
+    "tests/ctm-xtm-mergemap.lisp",
+    "tests/xtm-identity.lisp",
+    "tests/xtm-name-item-identities.lisp",
+    "tests/xtm-name-scopes.lisp",
+    "tests/xtm-names.lisp",
+    "tests/xtm-negative-originals.lisp",
+    "tests/xtm-variants.lisp",
+    "topic-maps.asd"
+  ],
+  "productionChanges": [
+    "src/xtm/reader.lisp"
+  ],
+  "protectedSubsystemsUnchanged": [
+    "TMDM",
+    "CTM",
+    "CXTM",
+    "XML"
+  ],
+  "newPathPrefixes": [
+    "reports/slice-21i/"
+  ],
+  "otherNewPaths": [
+    "tests/xtm-variant-resourcerefs.lisp",
+    "scripts/validate-slice-21i.py",
+    "docs/slice-21i-xtm-variant-resourceref.md"
+  ],
+  "trackedBaseFilesVerified": 4405,
+  "protectedBaseFilesVerified": 4396,
+  "historicalReportsVerified": 2154,
+  "pinnedCorpusFilesVerified": 2006,
+  "allExecutionSourceHashesUnchanged": true,
+  "allProtectedFilesUnchanged": true,
+  "acceptedValidationRuns": 50,
+  "faultControls": 45,
+  "diagnosticChangesLimitedToRequestedOriginals": true,
+  "preliminaryFailedRegressionPreserved": true,
+  "acceptancePassed": true,
+  "gitDiffCheckPassed": true
+}

@@ -1,0 +1,74 @@
+{
+  "kind": "read-only-observations-no-extra-registration",
+  "originalObservations": 124,
+  "unchangedOriginalObservations": 122,
+  "diagnosticChanges": [
+    {
+      "id": "xtm2/in/variant-resourceref-relative.xtm",
+      "before": {
+        "id": "xtm2/in/variant-resourceref-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM resourceRef is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourceref-relative.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm), approximately 9:48: XTM resourceRef is not implemented in this subset.",
+          "line": 9,
+          "column": 48,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+          "sourceKey": "xtm2/in/variant-resourceref-relative.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-resourceref-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>topic-command.wav</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "reason": "Variant resourceRef now resolves the resource locator and creates an anyURI Variant through add-variant."
+    },
+    {
+      "id": "xtm2/in/variant-resourceref.xtm",
+      "before": {
+        "id": "xtm2/in/variant-resourceref.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM resourceRef is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourceref.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm), approximately 9:61: XTM resourceRef is not implemented in this subset.",
+          "line": 9,
+          "column": 61,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+          "sourceKey": "xtm2/in/variant-resourceref.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-resourceref.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>http://example.org/command.wav</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "reason": "Variant resourceRef now resolves the resource locator and creates an anyURI Variant through add-variant."
+    }
+  ],
+  "registeredCases": [
+    "xtm2/in/variant-resourceref.xtm",
+    "xtm2/in/variant-resourceref-relative.xtm"
+  ],
+  "outOfScopeResourceDataURIStillUnsupported": true
+}

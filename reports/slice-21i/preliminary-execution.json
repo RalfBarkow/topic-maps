@@ -1,0 +1,12 @@
+{
+  "accepted": false,
+  "phase": "first-complete-regression-attempt",
+  "standaloneXTMChecksPassed": 1557,
+  "failedStep": "regression",
+  "actualExitCode": 1,
+  "failure": "XTM Mergemap check failed: unsupported-name-variant-resourceRef:condition-and-code",
+  "reason": "The old test fixture expected newly supported resourceRef to remain Unsupported.",
+  "correction": "Retarget the existing import-boundary Unsupported control to excluded resourceData anyURI, with its specific resource-data-datatype code. No CTM production change.",
+  "log": "preliminary-regression.log",
+  "finalAcceptance": "execution.json"
+}

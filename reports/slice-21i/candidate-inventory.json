@@ -1,0 +1,58 @@
+{
+  "candidates": [
+    {
+      "id": "xtm2/in/variant-resourceref.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+      "sourceBytes": 324,
+      "sourceSHA256": "3ef9cc70f8738b2729d446c4e685bd9a60d39ecef7c222cb2932a307791008ad",
+      "baselineBytes": 621,
+      "baselineSHA256": "d4df2bef650becff7918ee85af338631c87a4309ad65e64a26ee93edbb42a8bb",
+      "beforeObservation": {
+        "id": "xtm2/in/variant-resourceref.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM resourceRef is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourceref.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm), approximately 9:61: XTM resourceRef is not implemented in this subset.",
+          "line": 9,
+          "column": 61,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+          "sourceKey": "xtm2/in/variant-resourceref.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/variant-resourceref-relative.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+      "sourceBytes": 311,
+      "sourceSHA256": "7eac62ef6eb43dd582f6bdf2810529161bcbec2cb6704ffed1c7a5b20515ef4e",
+      "baselineBytes": 608,
+      "baselineSHA256": "2b5d69bc4bc9bb0bf5c7c3846a19344560b28f7fbd5c20b651be5189911787f0",
+      "beforeObservation": {
+        "id": "xtm2/in/variant-resourceref-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM resourceRef is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourceref-relative.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm), approximately 9:48: XTM resourceRef is not implemented in this subset.",
+          "line": 9,
+          "column": 48,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+          "sourceKey": "xtm2/in/variant-resourceref-relative.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    }
+  ]
+}
