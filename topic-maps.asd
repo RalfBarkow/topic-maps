@@ -273,3 +273,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.registered-original.tests :run-negative-tests)))
+
+(asdf:defsystem "topic-maps/ctm/prolog-tests"
+  :description "Slice 20C: UTF-8 encoding selection, version prolog and three intended original rejections"
+  :depends-on ("topic-maps/ctm/registered-negative-tests")
+  :components ((:file "tests/ctm-prolog"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.prolog.tests :run-tests)))

@@ -118,3 +118,8 @@
 (let ((prefix (uiop:getenv "TOPIC_MAPS_REGISTERED_NEGATIVES_REPORT")))
   (when prefix
     (uiop:symbol-call :topic-maps.registered-original.tests :write-negative-reports prefix)))
+
+;; Slice 20C: retained 20A/20B snapshots precede the new original contracts.
+(asdf:test-system "topic-maps/ctm/prolog-tests")
+(let ((prefix (uiop:getenv "TOPIC_MAPS_PROLOG_REPORT")))
+  (when prefix (uiop:symbol-call :topic-maps.prolog.tests :write-reports prefix)))

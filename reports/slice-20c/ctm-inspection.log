@@ -1,0 +1,82 @@
+comment-ml-nested2: 207 byte-equal CXTM bytes
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {70050E16E3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b..
+  ASSOCIATIONS                   = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {70050E16E3}>
+  ITEM-IDENTIFIERS               = ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40..
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {70050E16E3}>
+  ITEM-IDENTIFIERS               = ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40..
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+topic-identifier-unicode: 122 byte-equal CXTM bytes
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 1 topics, 0 associations {7002EA4F03}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b..
+  ASSOCIATIONS                   = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 1 topics, 0 associations {7002EA4F03}>
+  ITEM-IDENTIFIERS               = ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40..
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL
+occurrence-string-multiline2: 370 byte-equal CXTM bytes
+#<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {7004164BD3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  TOPICS                         = (#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b..
+  ASSOCIATIONS                   = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {7004164BD3}>
+  ITEM-IDENTIFIERS               = ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40..
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = (#<TOPIC-MAPS.TMDM:OCCURRENCE "Occurrence..
+  FORWARD                        = NIL
+#<TOPIC-MAPS.TMDM:TOPIC II=("https://ctm-tests.example.invalid/cd165b1..
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAPS.TMDM:TOPIC-MAP 2 topics, 0 associations {7004164BD3}>
+  ITEM-IDENTIFIERS               = ("https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40..
+  SUBJECT-IDENTIFIERS            = NIL
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = NIL
+  OCCURRENCES                    = NIL
+  FORWARD                        = NIL

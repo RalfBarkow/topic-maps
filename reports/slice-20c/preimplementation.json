@@ -1,0 +1,53 @@
+{
+  "baseCommit": "d024dc96ce091db06b9d09ea7c1ccb5f90b2886d",
+  "runtime": "SBCL 2.5.4",
+  "freshProcess": true,
+  "network": "denied by sandbox-exec",
+  "cases": [
+    {
+      "id": "ctm/invalid/BOM-contradicts-encoding.ctm",
+      "condition": {
+        "condition": "CTM-UNSUPPORTED",
+        "message": "UNSUPPORTED-DIRECTIVE in ctm/invalid/BOM-contradicts-encoding.ctm at CHARACTER 0 (line 1, column 1): Directive %encoding is outside the implemented subset.",
+        "code": "unsupported-directive",
+        "position": 0,
+        "line": 1,
+        "column": 1,
+        "positionUnit": "character",
+        "source": "ctm/invalid/BOM-contradicts-encoding.ctm",
+        "cause": null,
+        "context": null
+      }
+    },
+    {
+      "id": "ctm/invalid/unknown-directive.ctm",
+      "condition": {
+        "condition": "CTM-UNSUPPORTED",
+        "message": "UNSUPPORTED-DIRECTIVE in ctm/invalid/unknown-directive.ctm at CHARACTER 0 (line 1, column 1): Directive %ctm is outside the implemented subset.",
+        "code": "unsupported-directive",
+        "position": 0,
+        "line": 1,
+        "column": 1,
+        "positionUnit": "character",
+        "source": "ctm/invalid/unknown-directive.ctm",
+        "cause": null,
+        "context": null
+      }
+    },
+    {
+      "id": "ctm/invalid/wrong-version.ctm",
+      "condition": {
+        "condition": "CTM-UNSUPPORTED",
+        "message": "UNSUPPORTED-DIRECTIVE in ctm/invalid/wrong-version.ctm at CHARACTER 0 (line 1, column 1): Directive %version is outside the implemented subset.",
+        "code": "unsupported-directive",
+        "position": 0,
+        "line": 1,
+        "column": 1,
+        "positionUnit": "character",
+        "source": "ctm/invalid/wrong-version.ctm",
+        "cause": null,
+        "context": null
+      }
+    }
+  ]
+}

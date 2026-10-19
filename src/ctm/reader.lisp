@@ -415,6 +415,34 @@ Use the shared Topic reference resolver."
                 (attach-reifier role reifier marker))))
           (attach-reifier (topic-maps.tmdm:canonical-association association) r position))))))
 
+(defun read-prolog (parser)
+  "CTM 3.5: one initial encoding header, then one optional version 1.0."
+  (when (and (eq :directive (token-kind (look parser)))
+             (string= "encoding" (token-value (look parser))))
+    (let ((token (consume parser)))
+      (unless (zerop (token-position token))
+        (problem 'ctm-rejection :misplaced-encoding (token-position token)
+                 "Encoding declaration must be the first characters of the CTM stream."))
+      (multiple-value-bind (name end position)
+          (ctm-encoding-name *source-text* (token-position token) :character)
+        (unless (string-equal name "UTF-8")
+          (problem 'ctm-unsupported :unsupported-encoding position "Only UTF-8 CTM input is implemented."))
+        (setf (lexer-cursor (parser-lexer parser)) end))))
+  (when (and (eq :directive (token-kind (look parser)))
+             (string= "version" (token-value (look parser))))
+    (consume parser)
+    (let ((lexer (parser-lexer parser)))
+      (skip-layout lexer)
+      (let ((start (lexer-cursor lexer)))
+        ;; Match the fixed terminal before the numeric-literal lexer. A Topic
+        ;; can follow immediately; extra numeric spelling is not version 1.0.
+        (unless (and (ctm-ascii-prefix-p *source-text* start "1.0")
+                     (let ((end (+ start 3)))
+                       (not (and (< end (length *source-text*))
+                                 (find (char *source-text* end) "0123456789.+-")))))
+          (problem 'ctm-rejection :invalid-version start "The only CTM version is the exact spelling 1.0."))
+        (setf (lexer-cursor lexer) (+ start 3))))))
+
 (defun deserialize-context (text &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0)
                                       resource-resolver (max-resource-depth 32))
   "Read the documented CTM subset, with per-document prefixes and qualified strings.
@@ -446,6 +474,7 @@ There is no implicit retrieval. MAX-RESOURCE-DEPTH bounds nested imports (defaul
                      (topic-maps.tmdm:core-subject-error
                        (lambda (c) (problem 'ctm-rejection (topic-maps.tmdm:core-subject-error-code c)
                                              (lexer-cursor (parser-lexer parser)) (princ-to-string c)))))
+        (read-prolog parser)
         (loop while (eq :directive (token-kind (look parser))) do (read-directive parser map))
         (multiple-value-bind (r position) (read-reifier parser map) (attach-reifier map r position))
         (loop until (eq :eof (token-kind (look parser))) do
@@ -470,10 +499,11 @@ The resolver receives :PURPOSE (:INCLUDE or :MERGEMAP), :FROM-DOCUMENT-IRI and
         :resource-resolver resource-resolver :max-resource-depth max-resource-depth)
     (values map counter)))
 
-(defun deserialize-file (pathname &key document-iri source-name (wildcard-iri document-iri) (wildcard-counter 0)
+(defun deserialize-file (pathname &key document-iri source-name encoding (wildcard-iri document-iri) (wildcard-counter 0)
                                         resource-resolver (max-resource-depth 32))
-  "Read a UTF-8 CTM file, with optional UTF-8 BOM, using an explicit Document IRI.
-Other encoding directives are UNSUPPORTED. File I/O errors propagate unchanged."
+  "Read CTM octets using an explicit Document IRI and optional supplied ENCODING.
+Check supplied encoding/BOM/declaration conflicts before strict UTF-8 decoding.
+Other charsets remain UNSUPPORTED. File I/O errors propagate unchanged."
   (let ((*source-name* source-name) (*source-text* ""))
     (require-document-iri document-iri)
     (require-wildcard-environment wildcard-iri wildcard-counter)
@@ -481,7 +511,7 @@ Other encoding directives are UNSUPPORTED. File I/O errors propagate unchanged."
       (let ((bytes (make-array (file-length input) :element-type '(unsigned-byte 8))))
         (unless (= (length bytes) (read-sequence bytes input))
           (error "Input file changed or was truncated during reading."))
-        (deserialize-string (decode-utf8 bytes :strip-bom t)
+        (deserialize-string (decode-ctm-octets bytes :encoding encoding)
                             :document-iri document-iri :source-name source-name
                             :wildcard-iri wildcard-iri :wildcard-counter wildcard-counter
                             :resource-resolver resource-resolver :max-resource-depth max-resource-depth)))))

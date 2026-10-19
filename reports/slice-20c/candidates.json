@@ -1,0 +1,69 @@
+[
+  {
+    "id": "ctm/invalid/BOM-contradicts-encoding.ctm",
+    "status": "pass",
+    "sourceSHA256": "c2e208e53abcc33389c6840ee701258cdffaf9833c73142476fb359963726963",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/BOM-contradicts-encoding.ctm",
+    "clauses": [
+      "CTM 3.2",
+      "CTM 3.5",
+      "CTM 3.6"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "ENCODING-CONFLICT in ctm/invalid/BOM-contradicts-encoding.ctm at BYTE 14: Encoding \"iso-8859-1\" conflicts with explicitly selected \"UTF-8\".",
+      "code": "encoding-conflict",
+      "position": 14,
+      "line": null,
+      "column": null,
+      "positionUnit": "byte",
+      "source": "ctm/invalid/BOM-contradicts-encoding.ctm",
+      "cause": null,
+      "context": null
+    }
+  },
+  {
+    "id": "ctm/invalid/unknown-directive.ctm",
+    "status": "pass",
+    "sourceSHA256": "1d704d25c8e811c2ce86e10450e2794584a719367a37be1e77893f4a6af29b3d",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/unknown-directive.ctm",
+    "clauses": [
+      "CTM 3.5",
+      "CTM 3.16"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "UNKNOWN-DIRECTIVE in ctm/invalid/unknown-directive.ctm at CHARACTER 0 (line 1, column 1): Unknown CTM directive %ctm.",
+      "code": "unknown-directive",
+      "position": 0,
+      "line": 1,
+      "column": 1,
+      "positionUnit": "character",
+      "source": "ctm/invalid/unknown-directive.ctm",
+      "cause": null,
+      "context": null
+    }
+  },
+  {
+    "id": "ctm/invalid/wrong-version.ctm",
+    "status": "pass",
+    "sourceSHA256": "eb4248b06e53b06eb0945298a6b1dbf16e3b19d5bb3d70329cb4ebb1a1109fb6",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/wrong-version.ctm",
+    "clauses": [
+      "CTM 3.5",
+      "CTM 3.7"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "INVALID-VERSION in ctm/invalid/wrong-version.ctm at CHARACTER 9 (line 1, column 10): The only CTM version is the exact spelling 1.0.",
+      "code": "invalid-version",
+      "position": 9,
+      "line": 1,
+      "column": 10,
+      "positionUnit": "character",
+      "source": "ctm/invalid/wrong-version.ctm",
+      "cause": null,
+      "context": null
+    }
+  }
+]

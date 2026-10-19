@@ -172,14 +172,14 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
        ;; Production [71] has a literal terminal followed by an identifier;
        ;; unlike Role separators it does not require intervening whitespace.
        (let ((name (find-if (lambda (name) (starts-with (concatenate 'string "%" name) (subseq text start)))
-                            '("prefix" "mergemap" "include"))))
+                            '("prefix" "mergemap" "include" "encoding" "version"))))
          (if name
              (progn (setf (lexer-cursor lexer) (+ start 1 (length name)))
                     (make-token :kind :directive :value name :position start))
              (progn
                (scan-name lexer)
-               (problem 'ctm-unsupported :unsupported-directive start
-                        (format nil "Directive %~A is outside the implemented subset."
+               (problem 'ctm-rejection :unknown-directive start
+                        (format nil "Unknown CTM directive %~A."
                                 (subseq text (1+ start) (lexer-cursor lexer))))))))
       ((char= c #\$)
        (unless (name-start-p (peek-character lexer))

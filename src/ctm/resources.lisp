@@ -27,7 +27,7 @@
 (defun decode-ctm-resource (bytes source-key)
   ;; Only CTM resources use the CTM decoder, including the existing BOM policy.
   (let ((*source-name* source-key) (*source-text* ""))
-    (decode-utf8 bytes :strip-bom t)))
+    (decode-ctm-octets bytes)))
 
 (defun call-with-resource (parser resource purpose position notation continuation)
   "Controlled retrieval of untouched octets. Decoding belongs to the notation reader."
@@ -137,4 +137,8 @@ Already resolved locator suffixes are not CTM-percent-decoded again."
   (cond ((string= "prefix" (token-value (look parser))) (read-prefix-directive parser))
         ((string= "mergemap" (token-value (look parser))) (read-mergemap-directive parser map))
         ((string= "include" (token-value (look parser))) (read-include-directive parser map))
-        (t (problem 'ctm-unsupported :unsupported-directive (token-position (look parser)) "Directive is outside the supported subset."))))
+        ((member (token-value (look parser)) '("encoding" "version") :test #'string=)
+         (problem 'ctm-rejection
+                  (if (string= "encoding" (token-value (look parser))) :misplaced-encoding :misplaced-version)
+                  (token-position (look parser)) "Encoding and version are allowed only once, in the initial prolog."))
+        (t (problem 'ctm-rejection :unknown-directive (token-position (look parser)) "Unknown CTM directive."))))
