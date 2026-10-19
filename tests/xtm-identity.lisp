@@ -10,6 +10,8 @@
 (defvar *cases* nil)
 (defvar *outputs* nil)
 (defvar *fixture* nil)
+(defvar *negative-outputs* nil)
+(defvar *negative-controls* nil)
 (defun check (name truth)
   (push name *checks*)
   (unless truth (error "XTM test failed: ~A" name))
@@ -461,9 +463,9 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
-  (setf *checks* nil *fixture* nil)
+  (setf *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil)
   (handler-case
-      (progn (original-contracts) (result-classification-tests)
+      (progn (original-contracts) (negative-original-controls) (negative-original-contracts) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -471,7 +473,9 @@
         (when report (write-report report)))
       (error condition)))
   (check "checks:unique-test-names" (= (length *checks*) (length (remove-duplicates *checks* :test #'equal))))
-  (format t "XTM-SUMMARY ~D PASS 0 FAIL; ~D original CXTM PASS; helper source PASS~%" (length *checks*) (length *cases*))
+  (format t "XTM-SUMMARY ~D PASS 0 FAIL; ~D original CXTM PASS; ~D negative originals PASS; helper source PASS~%"
+          (length *checks*) (count :valid *cases* :key #'topic-maps.test-foundation:test-case-category)
+          (count :invalid *cases* :key #'topic-maps.test-foundation:test-case-category))
   (length *checks*))
 
 (defun write-report (pathname)
@@ -480,14 +484,15 @@
            (array (items) (coerce items 'vector)))
       (with-open-file (out pathname :direction :output :if-exists :supersede :external-format :utf-8)
         (topic-maps.test-foundation::emit-json-value
-          (fields "scope" "XTM 2.0 identity subset, 26 registered positive contracts only; no CTM Mergemap integration"
+          (fields "scope" "XTM 2.0 identity subset, 26 positive and seven cause-qualified negative original contracts; no CTM Mergemap integration"
                   "corpusCommit" "cd165b150176c1d6842b37be9cc9051b40d4996b"
                   "statuses" (fields "pass" (count :pass cases :key #'topic-maps.test-foundation:test-case-status)
                                      "fail" (count :fail cases :key #'topic-maps.test-foundation:test-case-status)
                                      "unsupported" (count :unsupported cases :key #'topic-maps.test-foundation:test-case-status)
                                      "not-run" (count :not-run cases :key #'topic-maps.test-foundation:test-case-status))
-                  "otherCorpusInputs" (fields "positiveUnexecuted" (- (length (directory (corpus-path "xtm2/in/*.xtm"))) (length cases))
-                                              "negativeUnregisteredUnexecuted" (length (directory (corpus-path "xtm2/invalid/*.xtm"))))
+                  "otherCorpusInputs" (fields "positiveUnexecuted" (- (length (directory (corpus-path "xtm2/in/*.xtm"))) (count :valid cases :key #'topic-maps.test-foundation:test-case-category))
+                                              "negativeUnregisteredUnexecuted" (- (length (directory (corpus-path "xtm2/invalid/*.xtm")))
+                                                (count :invalid cases :key #'topic-maps.test-foundation:test-case-category)))
                   "checks" (array (reverse *checks*))
                   "cases" (array (loop for case in cases collect
                     (fields "id" (topic-maps.test-foundation:test-case-id case)
@@ -498,6 +503,8 @@
                   "helperSource" (fields "id" "ctm/in/mergemap-xtm.sub" "status" (if fixture "pass" "not-run") "topics" (when fixture (length (topic-map-topics fixture)))
                                          "associations" (when fixture (length (topic-map-associations fixture))) "roles" 2
                                          "ctmMergemapContract" "NOT-RUN; direct helper deserialization only")
+                  "negativeOriginals" (array *negative-outputs*)
+                  "negativeControls" (array *negative-controls*)
                   "actualAndExpected" (array (loop for (id actual expected model condition source-length) in *outputs* collect
                     (fields "id" id "actual" (when actual (babel:octets-to-string actual :encoding :utf-8))
                             "expected" (babel:octets-to-string expected :encoding :utf-8) "byteLength" (when actual (length actual))

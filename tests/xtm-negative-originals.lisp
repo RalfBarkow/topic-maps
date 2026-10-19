@@ -1,0 +1,161 @@
+(in-package #:topic-maps.xtm.tests)
+
+;; Observed again before registration in Slice 21C. Position units are the
+;; reader's approximate SAX line/column, not byte offsets. NIL is intentional
+;; for the existing unwrapped TMDM condition, which exposes no source position.
+(defparameter *negative-original-specs*
+  '(("id-invalid" xtm-rejection :invalid-id "topic/@id must be an XML Schema ID." 2 22 "XTM 2.0 4.5, Annex A: topic/@id is required xsd:ID")
+    ("itemid-collision" topic-maps.tmdm::occurrence-identifier-error :duplicate-item-identifier "Locator already identifies a different information item." nil nil "XTM 2.0 4.6; TMDM 5.1: duplicate Item Identifiers on different items")
+    ("no-version" xtm-rejection :missing-attribute "Required version attribute is absent." 1 49 "XTM 2.0 4.4, Annex A: required version=2.0")
+    ("reifier-elem-in-2.0" xtm-rejection :unexpected-element "Unexpected reifier element." 2 12 "XTM 2.0 4.3.2,4.4, Annex A: no reifier child element")
+    ("subjid-ref-in-2.0" xtm-rejection :unexpected-element "Unexpected subjectIdentifierRef element." 4 65 "XTM 2.0 4.9, Annex A: instanceOf contains topicRef+")
+    ("subjloc-ref-in-2.0" xtm-rejection :unexpected-element "Unexpected subjectLocatorRef element." 4 58 "XTM 2.0 4.9, Annex A: instanceOf contains topicRef+")
+    ("topic-no-id" xtm-rejection :missing-id "Required id attribute is absent." 2 10 "XTM 2.0 4.5, Annex A: required topic/@id")))
+
+(defun negative-condition-data (c)
+  (when c
+    (let* ((xtm (typep c 'topic-maps.xtm:xtm-error))
+           (identifier (typep c 'item-identifier-error))
+           (code (cond (xtm (error-code c)) (identifier (item-identifier-error-code c)))))
+      (topic-maps.test-foundation::fields
+        "class" (string (type-of c)) "code" (when code (string-downcase (string code)))
+        "detail" (cond (xtm (topic-maps.xtm:error-detail c))
+                       (identifier (topic-maps.tmdm::item-identifier-error-detail c)))
+        "message" (princ-to-string c)
+        "line" (when xtm (error-line c)) "column" (when xtm (error-column c))
+        "positionUnit" (when xtm "approximate-SAX-line-column")
+        "documentIRI" (when xtm (error-document-iri c)) "sourceKey" (when xtm (error-source-key c))
+        "cause" (when (typep c 'xtm-xml-error) (negative-condition-data (topic-maps.xtm:error-cause c)))))))
+
+(defun intended-negative-p (spec c iri key)
+  (and c (not (typep c 'xtm-unsupported)) (eq (type-of c) (second spec))
+    (cond
+      ((typep c 'xtm-rejection)
+       (and (eq (third spec) (error-code c))
+            (equal (fourth spec) (topic-maps.xtm:error-detail c))
+            (eql (fifth spec) (error-line c)) (eql (sixth spec) (error-column c))
+            (equal iri (error-document-iri c)) (equal key (error-source-key c))))
+      ((typep c 'topic-maps.tmdm::occurrence-identifier-error)
+       (and (eq (third spec) (item-identifier-error-code c))
+            (equal (fourth spec) (topic-maps.tmdm::item-identifier-error-detail c))
+            (null (fifth spec)) (null (sixth spec)))))))
+
+(defun record-negative-original-result (case spec c iri key)
+  ;; :CTM-REJECTION is the foundation's historical generic negative-outcome
+  ;; token. It does not imply CTM parsing: these conditions come from XTM/TMDM.
+  (topic-maps.test-foundation:record-result case
+    (cond ((typep c 'xtm-unsupported) :unsupported)
+          ((intended-negative-p spec c iri key) :ctm-rejection)
+          (c :execution-error) (t :ctm-acceptance))
+    :diagnostics (list (if c (format nil "Expected ~A; actual ~A: ~A" (third spec) (type-of c) c)
+                          "Negative original unexpectedly accepted."))))
+
+(defun negative-source-facts (name root)
+  (let* ((children (topic-maps.xtm::elements root))
+         (topic (find "topic" children :key #'topic-maps.xtm::node-name :test #'equal))
+         (kids (when topic (topic-maps.xtm::elements topic))))
+    (check (concatenate 'string "negative-original:" name ":original-source-cause")
+      (and (equal "topicMap" (topic-maps.xtm::node-name root))
+        (equal "http://www.topicmaps.org/xtm/" (topic-maps.xtm::node-uri root))
+        (cond
+          ((equal name "id-invalid") (equal "2topic" (topic-maps.xtm::attr topic "id")))
+          ((equal name "itemid-collision")
+           (and (= 2 (length children)) (= 1 (length kids))
+             (equal "itemIdentity" (topic-maps.xtm::node-name (first children)))
+             (equal "itemIdentity" (topic-maps.xtm::node-name (first kids)))
+             (equal "http://example.org/#crash" (topic-maps.xtm::attr (first children) "href"))
+             (equal "http://example.org/#crash" (topic-maps.xtm::attr (first kids) "href"))
+             (equal "topic" (topic-maps.xtm::attr topic "id"))))
+          ((equal name "no-version") (and (null children) (null (topic-maps.xtm::attr root "version"))))
+          ((equal name "reifier-elem-in-2.0") (equal "reifier" (topic-maps.xtm::node-name (first children))))
+          ((member name '("subjid-ref-in-2.0" "subjloc-ref-in-2.0") :test #'equal)
+           (and (equal "instanceOf" (topic-maps.xtm::node-name (first kids)))
+             (equal (if (equal name "subjid-ref-in-2.0") "subjectIdentifierRef" "subjectLocatorRef")
+               (topic-maps.xtm::node-name (first (topic-maps.xtm::elements (first kids)))))))
+          ((equal name "topic-no-id") (null (topic-maps.xtm::attr topic "id"))))))))
+
+(defun negative-original-contracts ()
+  (setf *negative-outputs* nil)
+  (dolist (spec *negative-original-specs*)
+    (let* ((name (first spec)) (id (format nil "xtm2/invalid/~A.xtm" name))
+           (iri (concatenate 'string "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/" id))
+           (raw (file-bytes (corpus-path id))) (before (copy-seq raw))
+           (case (topic-maps.test-foundation:make-test-case :id id :category :invalid
+                   :source-pathname (corpus-path id) :document-iri iri :expected-outcome :ctm-rejection
+                   :clauses (list (seventh spec))))
+           (xml (topic-maps.xml:parse-octets raw (make-instance 'topic-maps.xtm::source-handler)))
+           (c (condition-from (lambda () (deserialize-octets raw :document-iri iri :source-key id)))))
+      ;; XML well-formedness is a separate fact, never an XTM schema claim.
+      (negative-source-facts name xml)
+      (record-negative-original-result case spec c iri id)
+      (setf *cases* (append *cases* (list case)))
+      (push (topic-maps.test-foundation::fields
+        "id" id "documentIRI" iri "sourceKey" id "sourceBytes" (length raw)
+        "sourceHex" (format nil "~{~2,'0X~}" (coerce raw 'list))
+        "sourceText" (babel:octets-to-string raw :encoding :utf-8)
+        "xmlWellFormed" :true "normativeClause" (seventh spec)
+        "condition" (negative-condition-data c)
+        "intendedCauseReached" (if (intended-negative-p spec c iri id) :true :false)
+        "unsupported" (if (typep c 'xtm-unsupported) :true :false)
+        "status" (string-downcase (string (topic-maps.test-foundation:test-case-status case)))) *negative-outputs*)
+      (check (concatenate 'string "negative-original:" name ":intended-condition-code-detail-position-context")
+             (intended-negative-p spec c iri id))
+      (check (concatenate 'string "negative-original:" name ":no-preliminary-unsupported") (not (typep c 'xtm-unsupported)))
+      (check (concatenate 'string "negative-original:" name ":source-octets-preserved") (equalp raw before))
+      (check (concatenate 'string "negative-original:" name ":registered-pass")
+             (eq :pass (topic-maps.test-foundation:test-case-status case)))))
+  (setf *negative-outputs* (nreverse *negative-outputs*))
+  (check "negative-originals:33-unique-case-records"
+    (and (= 33 (length *cases*)) (= 7 (count :invalid *cases* :key #'topic-maps.test-foundation:test-case-category))
+      (= 33 (length (remove-duplicates *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal))))))
+
+(defun replace-control-text (text old new &optional (start 0))
+  (let ((at (search old text :start2 start)))
+    (assert at) (concatenate 'string (subseq text 0 at) new (subseq text (+ at (length old))))))
+
+(defun negative-original-controls ()
+  (setf *negative-controls* nil)
+  (flet ((source (name) (babel:octets-to-string (file-bytes (corpus-path (format nil "xtm2/invalid/~A.xtm" name))) :encoding :utf-8)))
+    (let* ((collision (source "itemid-collision")) (shared "http://example.org/#crash")
+           (different "http://example.org/#different"))
+      (dolist (spec (list
+          (list "valid-id" (replace-control-text (source "id-invalid") "2topic" "topic") 1 0 nil nil)
+          (list "version-present" (replace-control-text (source "no-version") "<topicMap " "<topicMap version='2.0' ") 0 0 nil nil)
+          (list "id-present-despite-si" (replace-control-text (source "topic-no-id") "<topic>" "<topic id='topic'>") 1 0 nil nil)
+          (list "map-ii-distinct" (replace-control-text collision shared different) 1 0 different shared)
+          (list "topic-ii-distinct" (replace-control-text collision shared different (1+ (search shared collision))) 1 0 shared different)
+          (list "legal-topicMap-child" (document "<itemIdentity href='#map'/><topic id='tmtopic'/>") 1 0 nil nil)
+          (list "legal-instanceOf-child" (document "<topic id='topic'><instanceOf><topicRef href='#type'/></instanceOf></topic>") 5 1 nil nil)))
+        (destructuring-bind (label text topics associations map-ii topic-ii) spec
+          (let* ((map (deserialize-octets (bytes text) :document-iri *document* :source-key (concatenate 'string "control:" label)))
+                 (topic (by-id map "topic")))
+            (check (concatenate 'string "negative-control:" label ":accepted-model")
+              (and (= topics (length (topic-map-topics map))) (= associations (length (topic-map-associations map)))
+                   (references-current-p map)))
+            (when map-ii
+              (check (concatenate 'string "negative-control:" label ":map-topic-distinct-eq-and-exact-identifiers")
+                (and topic (not (eq map topic)) (eq map (topic-parent topic))
+                  (equal (list map-ii) (item-identifiers map))
+                  (same-identifiers-p (list (concatenate 'string *document* "#topic") topic-ii) (topic-item-identifiers topic))
+                  (null (topic-names topic)) (null (topic-occurrences topic)))))
+            (when (equal label "id-present-despite-si")
+              (check "negative-control:si-does-not-replace-required-id"
+                     (equal '("http://psi.example.com/foo") (topic-subject-identifiers topic))))
+            (push (topic-maps.test-foundation::fields "label" label "sourceText" text
+              "condition" nil "model" (original-model-data map) "registeredAsOriginal" :false) *negative-controls*))))))
+  ;; Use real conditions, and require a matching cause rather than any ERROR.
+  (let ((spec (find "reifier-elem-in-2.0" *negative-original-specs* :key #'first :test #'equal)))
+    (dolist (row (list (list "accepted-is-fail" nil :fail)
+                       (list "arbitrary-error-is-fail" (make-condition 'simple-error :format-control "local guard control") :fail)
+                       (list "xml-error-is-fail" (condition-from (lambda () (read-body "<a><b></a>"))) :fail)
+                       (list "unsupported-is-not-pass" (condition-from (lambda () (read-body "<topic id='a'><name><value>N</value></name></topic>"))) :unsupported)
+                       (list "wrong-xtm-cause-is-fail" (condition-from (lambda () (read-body "<topic id='2bad'/>"))) :fail)
+                       (list "same-code-wrong-element-is-fail" (condition-from (lambda () (read-body "<unknown/>"))) :fail)))
+      (destructuring-bind (label c status) row
+        (let ((case (topic-maps.test-foundation:make-test-case :id "local:negative-classification-control" :category :invalid :expected-outcome :ctm-rejection)))
+          (record-negative-original-result case spec c *document* "local:xtm-semantic-test")
+          (check (concatenate 'string "negative-control:" label)
+            (and (eq status (topic-maps.test-foundation:test-case-status case)) (not (intended-negative-p spec c *document* "local:xtm-semantic-test"))))
+          (push (topic-maps.test-foundation::fields "label" label "condition" (negative-condition-data c)
+            "status" (string-downcase (string (topic-maps.test-foundation:test-case-status case))) "registeredAsOriginal" :false) *negative-controls*)))))
+  (setf *negative-controls* (nreverse *negative-controls*)))

@@ -238,9 +238,9 @@
   :in-order-to ((asdf:test-op (asdf:test-op "topic-maps/xtm/tests"))))
 
 (asdf:defsystem "topic-maps/xtm/tests"
-  :description "Separate XTM identity model checks and 26 original CXTM contracts"
+  :description "XTM identity checks, 26 original CXTM contracts and seven cause-qualified negative originals"
   :depends-on ("topic-maps/xtm" "topic-maps/cxtm" "topic-maps") :serial t
-  :components ((:file "tests/xtm-identity"))
+  :components ((:file "tests/xtm-identity") (:file "tests/xtm-negative-originals"))
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.xtm.tests :run-tests)))

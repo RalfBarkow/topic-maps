@@ -1,0 +1,81 @@
+{
+  "kind": "negative-executor-fault-controls-not-corpus-results",
+  "controls": [
+    {
+      "mode": "accepted",
+      "actualOutcome": "ctm-acceptance",
+      "condition": null,
+      "expectedASDFFailureObserved": true,
+      "positiveOriginalPassesPreserved": 26,
+      "negativeOriginalCountedAsPass": false
+    },
+    {
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "XTM-XML-ERROR",
+        "code": "xml-not-well-formed",
+        "detail": "Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+        "message": "XTM XML-NOT-WELL-FORMED at xtm2/invalid/id-invalid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm), approximately 1:11: Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+        "line": 1,
+        "column": 11,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm",
+        "sourceKey": "xtm2/invalid/id-invalid.xtm",
+        "cause": {
+          "class": "WELL-FORMEDNESS-VIOLATION",
+          "code": null,
+          "detail": null,
+          "message": "Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+          "line": null,
+          "column": null,
+          "positionUnit": null,
+          "documentIRI": null,
+          "sourceKey": null,
+          "cause": null
+        }
+      },
+      "expectedASDFFailureObserved": true,
+      "positiveOriginalPassesPreserved": 26,
+      "negativeOriginalCountedAsPass": false
+    },
+    {
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM name is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/id-invalid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm), approximately 1:83: XTM name is not implemented in this subset.",
+        "line": 1,
+        "column": 83,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm",
+        "sourceKey": "xtm2/invalid/id-invalid.xtm",
+        "cause": null
+      },
+      "expectedASDFFailureObserved": true,
+      "positiveOriginalPassesPreserved": 26,
+      "negativeOriginalCountedAsPass": false
+    },
+    {
+      "mode": "wrong-cause",
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "missing-id",
+        "detail": "Required id attribute is absent.",
+        "message": "XTM MISSING-ID at xtm2/invalid/id-invalid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm), approximately 1:71: Required id attribute is absent.",
+        "line": 1,
+        "column": 71,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm",
+        "sourceKey": "xtm2/invalid/id-invalid.xtm",
+        "cause": null
+      },
+      "expectedASDFFailureObserved": true,
+      "positiveOriginalPassesPreserved": 26,
+      "negativeOriginalCountedAsPass": false
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "kind": "executed-cause-qualified-negative-originals",
+  "cases": [
+    {
+      "id": "xtm2/invalid/id-invalid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm",
+      "sourceKey": "xtm2/invalid/id-invalid.xtm",
+      "sourceBytes": 108,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D2232746F706963223E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"2topic\">\n  </topic>\n</topicMap>\n",
+      "xmlWellFormed": true,
+      "normativeClause": "XTM 2.0 4.5, Annex A: topic/@id is required xsd:ID",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-id",
+        "detail": "topic/@id must be an XML Schema ID.",
+        "message": "XTM INVALID-ID at xtm2/invalid/id-invalid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm), approximately 2:22: topic/@id must be an XML Schema ID.",
+        "line": 2,
+        "column": 22,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/id-invalid.xtm",
+        "sourceKey": "xtm2/invalid/id-invalid.xtm",
+        "cause": null
+      },
+      "intendedCauseReached": true,
+      "unsupported": false,
+      "status": "pass",
+      "sourceSHA256": "13946473b901713300567dd3962474aaf72ac4f87b482ad7da1f92254bc89104"
+    },
+    {
+      "id": "xtm2/invalid/itemid-collision.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/itemid-collision.xtm",
+      "sourceKey": "xtm2/invalid/itemid-collision.xtm",
+      "sourceBytes": 211,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6974656D4964656E7469747920687265663D22687474703A2F2F6578616D706C652E6F72672F236372617368222F3E0A20203C746F7069632069643D22746F706963223E0A202020203C6974656D4964656E7469747920687265663D22687474703A2F2F6578616D706C652E6F72672F236372617368222F3E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <itemIdentity href=\"http://example.org/#crash\"/>\n  <topic id=\"topic\">\n    <itemIdentity href=\"http://example.org/#crash\"/>\n  </topic>\n</topicMap>\n",
+      "xmlWellFormed": true,
+      "normativeClause": "XTM 2.0 4.6; TMDM 5.1: duplicate Item Identifiers on different items",
+      "condition": {
+        "class": "OCCURRENCE-IDENTIFIER-ERROR",
+        "code": "duplicate-item-identifier",
+        "detail": "Locator already identifies a different information item.",
+        "message": "Occurrence DUPLICATE-ITEM-IDENTIFIER: Locator already identifies a different information item.",
+        "line": null,
+        "column": null,
+        "positionUnit": null,
+        "documentIRI": null,
+        "sourceKey": null,
+        "cause": null
+      },
+      "intendedCauseReached": true,
+      "unsupported": false,
+      "status": "pass",
+      "sourceSHA256": "b6ac27e6ba2699fd9904b9b6e66ffd9a7d390b9aa4bc80595ad9b8b64365f8f4"
+    },
+    {
+      "id": "xtm2/invalid/no-version.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/no-version.xtm",
+      "sourceKey": "xtm2/invalid/no-version.xtm",
+      "sourceBytes": 61,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F223E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\">\n</topicMap>\n",
+      "xmlWellFormed": true,
+      "normativeClause": "XTM 2.0 4.4, Annex A: required version=2.0",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "missing-attribute",
+        "detail": "Required version attribute is absent.",
+        "message": "XTM MISSING-ATTRIBUTE at xtm2/invalid/no-version.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/no-version.xtm), approximately 1:49: Required version attribute is absent.",
+        "line": 1,
+        "column": 49,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/no-version.xtm",
+        "sourceKey": "xtm2/invalid/no-version.xtm",
+        "cause": null
+      },
+      "intendedCauseReached": true,
+      "unsupported": false,
+      "status": "pass",
+      "sourceSHA256": "8eb0f23b5a3d2d035de5c34c46526a2b0c10a714c46b9853c9fc4496c648367f"
+    },
+    {
+      "id": "xtm2/invalid/reifier-elem-in-2.0.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-elem-in-2.0.xtm",
+      "sourceKey": "xtm2/invalid/reifier-elem-in-2.0.xtm",
+      "sourceBytes": 220,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C726569666965723E0A202020203C746F70696352656620687265663D2223746D746F706963222F3E0A20203C2F726569666965723E0A20203C746F7069632069643D22746D746F706963223E0A202020203C6E616D653E0A2020202020203C76616C75653E546F706963206D61703C2F76616C75653E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <reifier>\n    <topicRef href=\"#tmtopic\"/>\n  </reifier>\n  <topic id=\"tmtopic\">\n    <name>\n      <value>Topic map</value>\n    </name>\n  </topic>\n</topicMap>\n",
+      "xmlWellFormed": true,
+      "normativeClause": "XTM 2.0 4.3.2,4.4, Annex A: no reifier child element",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-element",
+        "detail": "Unexpected reifier element.",
+        "message": "XTM UNEXPECTED-ELEMENT at xtm2/invalid/reifier-elem-in-2.0.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-elem-in-2.0.xtm), approximately 2:12: Unexpected reifier element.",
+        "line": 2,
+        "column": 12,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-elem-in-2.0.xtm",
+        "sourceKey": "xtm2/invalid/reifier-elem-in-2.0.xtm",
+        "cause": null
+      },
+      "intendedCauseReached": true,
+      "unsupported": false,
+      "status": "pass",
+      "sourceSHA256": "4603510ceeb992ea0b2ea4e57804aeca81a8efbe933efd0bb4c663109814bf5e"
+    },
+    {
+      "id": "xtm2/invalid/subjid-ref-in-2.0.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/subjid-ref-in-2.0.xtm",
+      "sourceKey": "xtm2/invalid/subjid-ref-in-2.0.xtm",
+      "sourceBytes": 207,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D22746F706963223E0A202020203C696E7374616E63654F663E0A2020202020203C7375626A6563744964656E74696669657252656620687265663D22687474703A2F2F7073692E6578616D706C652E6F72672F74797065222F3E0A202020203C2F696E7374616E63654F663E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">\n    <instanceOf>\n      <subjectIdentifierRef href=\"http://psi.example.org/type\"/>\n    </instanceOf>\n  </topic>\n</topicMap>\n",
+      "xmlWellFormed": true,
+      "normativeClause": "XTM 2.0 4.9, Annex A: instanceOf contains topicRef+",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-element",
+        "detail": "Unexpected subjectIdentifierRef element.",
+        "message": "XTM UNEXPECTED-ELEMENT at xtm2/invalid/subjid-ref-in-2.0.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/subjid-ref-in-2.0.xtm), approximately 4:65: Unexpected subjectIdentifierRef element.",
+        "line": 4,
+        "column": 65,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/subjid-ref-in-2.0.xtm",
+        "sourceKey": "xtm2/invalid/subjid-ref-in-2.0.xtm",
+        "cause": null
+      },
+      "intendedCauseReached": true,
+      "unsupported": false,
+      "status": "pass",
+      "sourceSHA256": "046563a64f72b16842d3bd4d6c91e64802f898f353fd4936ea9bf8cf8e0bb033"
+    },
+    {
+      "id": "xtm2/invalid/subjloc-ref-in-2.0.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/subjloc-ref-in-2.0.xtm",
+      "sourceKey": "xtm2/invalid/subjloc-ref-in-2.0.xtm",
+      "sourceBytes": 200,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D22746F706963223E0A202020203C696E7374616E63654F663E0A2020202020203C7375626A6563744C6F6361746F7252656620687265663D22687474703A2F2F7777772E6578616D706C652E6F72672F222F3E0A202020203C2F696E7374616E63654F663E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">\n    <instanceOf>\n      <subjectLocatorRef href=\"http://www.example.org/\"/>\n    </instanceOf>\n  </topic>\n</topicMap>\n",
+      "xmlWellFormed": true,
+      "normativeClause": "XTM 2.0 4.9, Annex A: instanceOf contains topicRef+",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-element",
+        "detail": "Unexpected subjectLocatorRef element.",
+        "message": "XTM UNEXPECTED-ELEMENT at xtm2/invalid/subjloc-ref-in-2.0.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/subjloc-ref-in-2.0.xtm), approximately 4:58: Unexpected subjectLocatorRef element.",
+        "line": 4,
+        "column": 58,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/subjloc-ref-in-2.0.xtm",
+        "sourceKey": "xtm2/invalid/subjloc-ref-in-2.0.xtm",
+        "cause": null
+      },
+      "intendedCauseReached": true,
+      "unsupported": false,
+      "status": "pass",
+      "sourceSHA256": "f91ec8888adeb1f80bc06203f9f750202233e8a6c919d559741ed2793b4e382e"
+    },
+    {
+      "id": "xtm2/invalid/topic-no-id.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/topic-no-id.xtm",
+      "sourceKey": "xtm2/invalid/topic-no-id.xtm",
+      "sourceBytes": 155,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069633E0A202020203C7375626A6563744964656E74696669657220687265663D22687474703A2F2F7073692E6578616D706C652E636F6D2F666F6F222F3E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic>\n    <subjectIdentifier href=\"http://psi.example.com/foo\"/>\n  </topic>\n</topicMap>\n",
+      "xmlWellFormed": true,
+      "normativeClause": "XTM 2.0 4.5, Annex A: required topic/@id",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "missing-id",
+        "detail": "Required id attribute is absent.",
+        "message": "XTM MISSING-ID at xtm2/invalid/topic-no-id.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/topic-no-id.xtm), approximately 2:10: Required id attribute is absent.",
+        "line": 2,
+        "column": 10,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/topic-no-id.xtm",
+        "sourceKey": "xtm2/invalid/topic-no-id.xtm",
+        "cause": null
+      },
+      "intendedCauseReached": true,
+      "unsupported": false,
+      "status": "pass",
+      "sourceSHA256": "7321a5abd569a87a4fb2e38d697e7ef044fdd90f3f41e23cd8a8ba4ab4aa9691"
+    }
+  ],
+  "excludedOriginals": [
+    {
+      "id": "xtm2/invalid/reifier-collision.xtm",
+      "registeredStatus": "not-run",
+      "executedInThisSlice": false
+    },
+    {
+      "id": "xtm2/invalid/role-duplicate-reified.xtm",
+      "registeredStatus": "not-run",
+      "executedInThisSlice": false
+    },
+    {
+      "id": "xtm2/invalid/topicref-no-fragment-id.xtm",
+      "registeredStatus": "not-run",
+      "executedInThisSlice": false
+    },
+    {
+      "id": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+      "registeredStatus": "not-run",
+      "executedInThisSlice": false
+    }
+  ],
+  "outcomeVocabulary": "ctm-rejection is the existing foundation negative-outcome token; actual deserialization is XTM/TMDM."
+}
