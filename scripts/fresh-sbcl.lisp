@@ -142,3 +142,9 @@
 (asdf:test-system "topic-maps/ctm/triple-string-tests")
 (let ((prefix (uiop:getenv "TOPIC_MAPS_TRIPLE_REPORT")))
   (when prefix (uiop:symbol-call :topic-maps.triple.tests :write-reports prefix)))
+
+
+;; Slice 20H: qualified ISO-8859-5 after all retained stage snapshots.
+(asdf:test-system "topic-maps/ctm/encoding-tests")
+(let ((prefix (uiop:getenv "TOPIC_MAPS_ENCODING_REPORT")))
+  (when prefix (uiop:symbol-call :topic-maps.encoding.tests :write-reports prefix)))

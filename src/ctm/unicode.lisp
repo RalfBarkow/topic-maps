@@ -56,8 +56,8 @@
           (write-char (char text i) out)))))
 
 
-;; Slice 20C: inspect only the ASCII encoding header before strict UTF-8 decoding.
-;; No new decoder, resource protocol, charset registry or I/O is introduced.
+;; Inspect the ASCII header before decoding (CTM 3.2). The strict UTF-8
+;; decoder above is unchanged; only the qualified ISO-8859-5 path is added.
 (defun ctm-unit-code (sequence position)
   (let ((value (aref sequence position)))
     (if (characterp value) (char-code value) value)))
@@ -85,15 +85,34 @@ CTM 3.2/3.6 permits only SP/TAB before this initial header's opening quote."
       (values (map 'string (lambda (value) (if (characterp value) value (code-char value)))
                    (subseq sequence start cursor)) (1+ cursor) start))))
 
+(defun ctm-encoding-kind (name)
+  "Only the IANA identities implemented here; ASCII names are case-insensitive."
+  (cond ((member name '("UTF-8" "csUTF8") :test #'string-equal) :utf-8)
+        ((member name '("ISO-8859-5" "ISO_8859-5:1988" "ISO_8859-5"
+                       "iso-ir-144" "cyrillic" "csISOLatinCyrillic")
+                 :test #'string-equal) :iso-8859-5)))
+
+(defun ctm-encoding-identity (name)
+  (or (ctm-encoding-kind name) (string-downcase name)))
+
+(defun decode-iso-8859-5 (bytes)
+  "SBCL's existing total single-byte codec, qualified against all 256 values."
+  #+sbcl
+  (sb-ext:octets-to-string (map '(vector (unsigned-byte 8)) #'identity bytes)
+                          :external-format :iso-8859-5)
+  #-sbcl
+  (problem 'ctm-unsupported :unsupported-encoding 0
+           "ISO-8859-5 decoding is qualified only on SBCL." :byte))
+
 (defun compatible-ctm-encoding (current declared position unit)
-  (when (and current (not (string-equal current declared)))
+  (when (and current (not (equal (ctm-encoding-identity current) (ctm-encoding-identity declared))))
     (problem 'ctm-rejection :encoding-conflict position
              (format nil "Encoding ~S conflicts with explicitly selected ~S." declared current) unit))
   declared)
 
 (defun decode-ctm-octets (bytes &key encoding)
   "Apply CTM 3.2 ordering: supplied encoding, BOM, declaration, default, decode.
-Only UTF-8 is implemented. Matching names are case-insensitive; no alias table."
+UTF-8 and ISO-8859-5 use their small, explicit IANA identity sets."
   (check-type encoding (or null string))
   (let* ((bom (and (>= (length bytes) 3) (= (aref bytes 0) #xef)
                    (= (aref bytes 1) #xbb) (= (aref bytes 2) #xbf)))
@@ -104,7 +123,9 @@ Only UTF-8 is implemented. Matching names are case-insensitive; no alias table."
         (declare (ignore end))
         (setf selected (compatible-ctm-encoding selected name position :byte)
               name-position position)))
-    (unless (or (null selected) (string-equal selected "UTF-8"))
-      (problem 'ctm-unsupported :unsupported-encoding name-position
-               (format nil "Charset ~S is recognized but only UTF-8 decoding is implemented." selected) :byte))
-    (decode-utf8 bytes :strip-bom t)))
+    (case (ctm-encoding-kind (or selected "UTF-8"))
+      (:utf-8 (decode-utf8 bytes :strip-bom t))
+      (:iso-8859-5 (decode-iso-8859-5 bytes))
+      (otherwise
+       (problem 'ctm-unsupported :unsupported-encoding name-position
+                (format nil "Charset ~S is not implemented; supported CTM encodings are UTF-8 and ISO-8859-5." selected) :byte)))))

@@ -104,11 +104,12 @@
             (equal expected (list (occurrence-value o) (occurrence-datatype o)))
             (null (occurrence-scope o)) (null (item-identifiers o)))))
     (:escapes
-     (let* ((owner (local map doc (cond ((equal name "string-escape") "topic") ((equal name "string-escape2") "A00") (t "zztop"))))
+     (let* ((owner (local map doc (cond ((equal name "string-escape") "topic") ((equal name "string-escape2") "A00") ((equal name "encoding-8859-5") "russia") (t "zztop"))))
             (names (when owner (topic-names owner)))
             (type (find-if (lambda (topic) (member (default-name-type-identifier) (topic-subject-identifiers topic) :test #'equal)) (topic-map-topics map)))
             (expected (cond ((equal name "string-escape") (list "\\" "Quote (\") character" (format nil "Some whitespace ~C~C~C" #\Newline #\Return #\Tab)))
                             ((equal name "string-escape2") '("A00"))
+                            ((equal name "encoding-8859-5") '("Россия"))
                             ((member name '("unicode-escape-u4-triple-string" "unicode-escape-u6-triple-string") :test #'equal)
                              (list (format nil "ZZ ~%Top")))
                             (t '("ZZ Top")))))

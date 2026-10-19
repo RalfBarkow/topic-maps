@@ -1,0 +1,17 @@
+{
+  "baseCommit": "7f0e40d1558255773357c5ed4fa44bb5184d85e0",
+  "runtime": "SBCL 2.5.4",
+  "network": "denied",
+  "original": {
+    "id": "ctm/in/encoding-8859-5.ctm",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/encoding-8859-5.ctm",
+    "condition": "CTM-UNSUPPORTED",
+    "code": "unsupported-encoding",
+    "position": 11,
+    "positionUnit": "byte",
+    "line": null,
+    "column": null,
+    "source": "ctm/in/encoding-8859-5.ctm",
+    "message": "UNSUPPORTED-ENCODING in ctm/in/encoding-8859-5.ctm at BYTE 11: Charset \"iso-8859-5\" is recognized but only UTF-8 decoding is implemented."
+  }
+}

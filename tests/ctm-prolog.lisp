@@ -97,15 +97,15 @@
     (destructuring-bind (label text code position) spec (negative-text label text code position)))
   (negative-text "known-resource-policy" "%include <child.ctm>" :resource-resolver-required 0 'topic-maps.ctm:ctm-unsupported :include)
   (negative-text "known-string-unclosed" "topic occ: \"\"\"x" :unterminated-string 11)
-  (negative-text "known-charset-unsupported-text" "%encoding \"iso-8859-5\"" :unsupported-encoding 11 'topic-maps.ctm:ctm-unsupported)
+  (negative-text "known-charset-unsupported-text" "%encoding \"iso-8859-1\"" :unsupported-encoding 11 'topic-maps.ctm:ctm-unsupported)
   (negative-text "encoding-newline-before-name" (format nil "%encoding~%\"UTF-8\"") :invalid-encoding-declaration 9))
 
 (defun byte-order-tests ()
   (negative-file "supplied-vs-BOM" (bytes "topic." t) :encoding-conflict 0 "iso-8859-1")
   (negative-file "supplied-vs-declaration" (bytes "%encoding \"iso-8859-1\" topic.") :encoding-conflict 11 "UTF-8")
   (negative-file "supplied-unsupported-vs-UTF8-declaration" (bytes "%encoding \"UTF-8\" topic.") :encoding-conflict 11 "iso-8859-1")
-  (negative-file "matching-unsupported-charset" (bytes "%encoding \"iso-8859-5\"") :unsupported-encoding 11 "ISO-8859-5" 'topic-maps.ctm:ctm-unsupported)
-  (negative-file "supplied-unsupported-charset" (bytes "topic.") :unsupported-encoding 0 "iso-8859-5" 'topic-maps.ctm:ctm-unsupported)
+  (negative-file "matching-unsupported-charset" (bytes "%encoding \"iso-8859-1\"") :unsupported-encoding 11 "ISO-8859-1" 'topic-maps.ctm:ctm-unsupported)
+  (negative-file "supplied-unsupported-charset" (bytes "topic.") :unsupported-encoding 0 "iso-8859-1" 'topic-maps.ctm:ctm-unsupported)
   (negative-file "invalid-UTF8-retained" #(255) :invalid-utf8 0)
   (negative-file "invalid-UTF8-after-BOM-retained" #(239 187 191 255) :invalid-utf8 3)
   (negative-file "truncated-BOM-retained" #(239 187) :invalid-utf8 0)
@@ -118,7 +118,7 @@
         (negative-file "conflict-before-invalid-body-decoding"
           (concatenate '(vector (unsigned-byte 8)) (bytes "%encoding \"iso-8859-1\"" t) #(255)) :encoding-conflict 14)
         (negative-file "unsupported-before-invalid-body-decoding"
-          (concatenate '(vector (unsigned-byte 8)) (bytes "%encoding \"iso-8859-5\"") #(255))
+          (concatenate '(vector (unsigned-byte 8)) (bytes "%encoding \"iso-8859-1\"") #(255))
           :unsupported-encoding 11 nil 'topic-maps.ctm:ctm-unsupported)
         (check "encoding-selection-precedes-decoder:zero-calls" (zerop calls)))
       (setf (symbol-function 'topic-maps.ctm::decode-utf8) saved))))
@@ -145,7 +145,7 @@
       (dolist (spec (list (list "conflict" (bytes "%encoding \"iso-8859-1\"" t) :encoding-conflict 14 :byte 'topic-maps.ctm:ctm-rejection)
                          (list "version" (bytes "%version 10.0") :invalid-version 9 :character 'topic-maps.ctm:ctm-rejection)
                          (list "unknown" (bytes "%ctm 1.0") :unknown-directive 0 :character 'topic-maps.ctm:ctm-rejection)
-                         (list "unsupported" (bytes "%encoding \"iso-8859-5\"") :unsupported-encoding 11 :byte 'topic-maps.ctm:ctm-unsupported)))
+                         (list "unsupported" (bytes "%encoding \"iso-8859-1\"") :unsupported-encoding 11 :byte 'topic-maps.ctm:ctm-unsupported)))
         (destructuring-bind (name input code position unit class) spec
           (let* ((before (copy-seq input)) (label (format nil "resource:~A:~A" purpose name))
                  (condition (nth-value 1 (captured-read

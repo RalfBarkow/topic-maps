@@ -426,8 +426,8 @@ Use the shared Topic reference resolver."
                  "Encoding declaration must be the first characters of the CTM stream."))
       (multiple-value-bind (name end position)
           (ctm-encoding-name *source-text* (token-position token) :character)
-        (unless (string-equal name "UTF-8")
-          (problem 'ctm-unsupported :unsupported-encoding position "Only UTF-8 CTM input is implemented."))
+        (unless (ctm-encoding-kind name)
+          (problem 'ctm-unsupported :unsupported-encoding position "Only UTF-8 and ISO-8859-5 CTM input are implemented."))
         (setf (lexer-cursor (parser-lexer parser)) end))))
   (when (and (eq :directive (token-kind (look parser)))
              (string= "version" (token-value (look parser))))
@@ -503,7 +503,7 @@ The resolver receives :PURPOSE (:INCLUDE or :MERGEMAP), :FROM-DOCUMENT-IRI and
 (defun deserialize-file (pathname &key document-iri source-name encoding (wildcard-iri document-iri) (wildcard-counter 0)
                                         resource-resolver (max-resource-depth 32))
   "Read CTM octets using an explicit Document IRI and optional supplied ENCODING.
-Check supplied encoding/BOM/declaration conflicts before strict UTF-8 decoding.
+Check supplied encoding/BOM/declaration conflicts before UTF-8 or ISO-8859-5 decoding.
 Other charsets remain UNSUPPORTED. File I/O errors propagate unchanged."
   (let ((*source-name* source-name) (*source-text* ""))
     (require-document-iri document-iri)

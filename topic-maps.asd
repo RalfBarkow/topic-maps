@@ -307,3 +307,12 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.triple.tests :run-tests)))
+
+
+(asdf:defsystem "topic-maps/ctm/encoding-tests"
+  :description "Slice 20H: qualified ISO-8859-5 decoding, IANA aliases and original CXTM contract"
+  :depends-on ("topic-maps/ctm/triple-string-tests")
+  :components ((:file "tests/ctm-iso-8859-5"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.encoding.tests :run-tests)))

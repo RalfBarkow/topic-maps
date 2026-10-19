@@ -176,7 +176,7 @@ occtype: * extra;." topic-maps.ctm:ctm-rejection :expected-separator 17 2 12)
     ("unterminated-string" "topic - \"Name." topic-maps.ctm:ctm-rejection :unterminated-string 8 1 9)
     ("unicode-escape" "topic - \"\\u0x00\"." topic-maps.ctm:ctm-rejection :invalid-unicode-escape 12 1 13)
     ("triple-unclosed" "topic t: \"\"\"x." topic-maps.ctm:ctm-rejection :unterminated-string 9 1 10)
-    ("iso88595-still-unsupported" "%encoding \"iso-8859-5\"
+    ("iso88591-still-unsupported" "%encoding \"iso-8859-1\"
 topic." topic-maps.ctm:ctm-unsupported :unsupported-encoding 11 1 12)
     ("template-topic-type" "def f($t) $t. end f(*)" topic-maps.ctm:invalid-template-argument :invalid-template-argument 10 1 11)
     ("template-name-type" "def f($n) topic - $n. end f(*)" topic-maps.ctm:invalid-template-argument :invalid-template-argument 18 1 19)
