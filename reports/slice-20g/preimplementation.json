@@ -1,0 +1,234 @@
+{
+  "baseCommit": "1ef5768ce6913f0c04da111d5f525b6d50a27e0b",
+  "runtime": "SBCL 2.5.4",
+  "freshProcess": true,
+  "network": "denied",
+  "cases": [
+    {
+      "label": "quoted-unclosed",
+      "sourceText": "topic - \"x",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "unterminated-string",
+        "position": 8,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 9,
+        "source": "quoted-unclosed",
+        "message": "UNTERMINATED-STRING in quoted-unclosed at CHARACTER 8 (line 1, column 9): Unterminated quoted string."
+      }
+    },
+    {
+      "label": "quoted-invalid-escape",
+      "sourceText": "topic - \"\\q\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-string-escape",
+        "position": 10,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 11,
+        "source": "quoted-invalid-escape",
+        "message": "INVALID-STRING-ESCAPE in quoted-invalid-escape at CHARACTER 10 (line 1, column 11): Unknown string escape."
+      }
+    },
+    {
+      "label": "quoted-invalid-u4",
+      "sourceText": "topic - \"\\u00x0\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-unicode-escape",
+        "position": 13,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 14,
+        "source": "quoted-invalid-u4",
+        "message": "INVALID-UNICODE-ESCAPE in quoted-invalid-u4 at CHARACTER 13 (line 1, column 14): Expected hexadecimal escape digit."
+      }
+    },
+    {
+      "label": "quoted-short-U6",
+      "sourceText": "topic - \"\\U0000\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-unicode-escape",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 16,
+        "source": "quoted-short-U6",
+        "message": "INVALID-UNICODE-ESCAPE in quoted-short-U6 at CHARACTER 15 (line 1, column 16): Expected hexadecimal escape digit."
+      }
+    },
+    {
+      "label": "quoted-surrogate",
+      "sourceText": "topic - \"\\uD800\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-unicode",
+        "position": 8,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 9,
+        "source": "quoted-surrogate",
+        "message": "INVALID-UNICODE in quoted-surrogate at CHARACTER 8 (line 1, column 9): Not a Unicode scalar value."
+      }
+    },
+    {
+      "label": "quoted-out-of-range",
+      "sourceText": "topic - \"\\U110000\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-unicode",
+        "position": 8,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 9,
+        "source": "quoted-out-of-range",
+        "message": "INVALID-UNICODE in quoted-out-of-range at CHARACTER 8 (line 1, column 9): Not a Unicode scalar value."
+      }
+    },
+    {
+      "label": "quoted-error-LF",
+      "sourceText": "topic.\nother - \"\\q\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-string-escape",
+        "position": 17,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 11,
+        "source": "quoted-error-LF",
+        "message": "INVALID-STRING-ESCAPE in quoted-error-LF at CHARACTER 17 (line 2, column 11): Unknown string escape."
+      }
+    },
+    {
+      "label": "quoted-error-CR",
+      "sourceText": "topic.\rother - \"\\q\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-string-escape",
+        "position": 17,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 11,
+        "source": "quoted-error-CR",
+        "message": "INVALID-STRING-ESCAPE in quoted-error-CR at CHARACTER 17 (line 2, column 11): Unknown string escape."
+      }
+    },
+    {
+      "label": "quoted-error-CRLF",
+      "sourceText": "topic.\r\nother - \"\\q\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-string-escape",
+        "position": 18,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 11,
+        "source": "quoted-error-CRLF",
+        "message": "INVALID-STRING-ESCAPE in quoted-error-CRLF at CHARACTER 18 (line 2, column 11): Unknown string escape."
+      }
+    },
+    {
+      "label": "quoted-unicode-prefix",
+      "sourceText": "topic - \"\u00c4\\q\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-string-escape",
+        "position": 11,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 12,
+        "source": "quoted-unicode-prefix",
+        "message": "INVALID-STRING-ESCAPE in quoted-unicode-prefix at CHARACTER 11 (line 1, column 12): Unknown string escape."
+      }
+    },
+    {
+      "label": "quoted-adjacent-token",
+      "sourceText": "topic occtype: \"a\"x.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "expected-separator",
+        "position": 18,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 19,
+        "source": "quoted-adjacent-token",
+        "message": "EXPECTED-SEPARATOR in quoted-adjacent-token at CHARACTER 18 (line 1, column 19): Topic-tail statements need a semicolon separator."
+      }
+    },
+    {
+      "label": "quoted-variant-missing-scope",
+      "sourceText": "topic - \"N\" (\"V\").",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "expected-variant-scope",
+        "position": 16,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 17,
+        "source": "quoted-variant-missing-scope",
+        "message": "EXPECTED-VARIANT-SCOPE in quoted-variant-missing-scope at CHARACTER 16 (line 1, column 17): A Variant requires an explicit '@' Scope."
+      }
+    }
+  ],
+  "originals": [
+    {
+      "original": "ctm/in/occurrence-string-triple.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-string-triple.ctm",
+      "result": {
+        "condition": "CTM-UNSUPPORTED",
+        "code": "triple-quoted-string",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "ctm/in/occurrence-string-triple.ctm",
+        "message": "TRIPLE-QUOTED-STRING in ctm/in/occurrence-string-triple.ctm at CHARACTER 15 (line 2, column 10): Triple quoted literals are outside Slice 1."
+      }
+    },
+    {
+      "original": "ctm/in/occurrence-string-triple2.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-string-triple2.ctm",
+      "result": {
+        "condition": "CTM-UNSUPPORTED",
+        "code": "triple-quoted-string",
+        "position": 17,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 12,
+        "source": "ctm/in/occurrence-string-triple2.ctm",
+        "message": "TRIPLE-QUOTED-STRING in ctm/in/occurrence-string-triple2.ctm at CHARACTER 17 (line 2, column 12): Triple quoted literals are outside Slice 1."
+      }
+    },
+    {
+      "original": "ctm/in/unicode-escape-u4-triple-string.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/unicode-escape-u4-triple-string.ctm",
+      "result": {
+        "condition": "CTM-UNSUPPORTED",
+        "code": "triple-quoted-string",
+        "position": 8,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 3,
+        "source": "ctm/in/unicode-escape-u4-triple-string.ctm",
+        "message": "TRIPLE-QUOTED-STRING in ctm/in/unicode-escape-u4-triple-string.ctm at CHARACTER 8 (line 2, column 3): Triple quoted literals are outside Slice 1."
+      }
+    },
+    {
+      "original": "ctm/in/unicode-escape-u6-triple-string.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/unicode-escape-u6-triple-string.ctm",
+      "result": {
+        "condition": "CTM-UNSUPPORTED",
+        "code": "triple-quoted-string",
+        "position": 8,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 3,
+        "source": "ctm/in/unicode-escape-u6-triple-string.ctm",
+        "message": "TRIPLE-QUOTED-STRING in ctm/in/unicode-escape-u6-triple-string.ctm at CHARACTER 8 (line 2, column 3): Triple quoted literals are outside Slice 1."
+      }
+    }
+  ]
+}

@@ -136,3 +136,9 @@
 (asdf:test-system "topic-maps/ctm/ctm-integer-tests")
 (let ((prefix (uiop:getenv "TOPIC_MAPS_CTM_INTEGER_REPORT")))
   (when prefix (uiop:symbol-call :topic-maps.ctm-integer.tests :write-reports prefix)))
+
+
+;; Slice 20G: four original Triple Strings after retained stage reports.
+(asdf:test-system "topic-maps/ctm/triple-string-tests")
+(let ((prefix (uiop:getenv "TOPIC_MAPS_TRIPLE_REPORT")))
+  (when prefix (uiop:symbol-call :topic-maps.triple.tests :write-reports prefix)))

@@ -43,27 +43,37 @@
           (t (return)))))
 
 (defun read-ctm-string (lexer start)
-  (when (and (eql #\" (peek-character lexer)) (eql #\" (peek-character lexer 1)))
-    (problem 'ctm-unsupported :triple-quoted-string start "Triple quoted literals are outside Slice 1."))
-  (with-output-to-string (out)
-    (loop for c = (take-character lexer) do
-      (cond ((null c) (problem 'ctm-rejection :unterminated-string start "Unterminated quoted string."))
-            ((char= c #\") (return))
-            ((char= c #\\)
-             (let ((escape (take-character lexer)))
-               (case escape
-                 (#\n (write-char #\Newline out)) (#\r (write-char #\Return out))
-                 (#\t (write-char #\Tab out)) (#\" (write-char #\" out)) (#\\ (write-char #\\ out))
-                 ((#\u #\U)
-                  (let ((code 0))
-                    (dotimes (i (if (char= escape #\u) 4 6))
-                      (let* ((digit (take-character lexer)) (value (and digit (digit-char-p digit 16))))
-                        (unless value
-                          (problem 'ctm-rejection :invalid-unicode-escape (1- (lexer-cursor lexer)) "Expected hexadecimal escape digit."))
-                        (setf code (+ (* code 16) value))))
-                    (write-char (scalar-character code start) out)))
-                 (otherwise (problem 'ctm-rejection :invalid-string-escape (1- (lexer-cursor lexer)) "Unknown string escape.")))))
-            (t (write-char c out))))))
+  ;; NEXT-TOKEN has consumed the first quote. Triple strings share the exact
+  ;; same escape/scalar path; only their opening and closing delimiters differ.
+  (let ((triple (and (eql #\" (peek-character lexer))
+                     (eql #\" (peek-character lexer 1)))))
+    (when triple (incf (lexer-cursor lexer) 2))
+    (with-output-to-string (out)
+      (loop for c = (take-character lexer) do
+        (cond ((null c)
+               (problem 'ctm-rejection :unterminated-string start
+                        (if triple "Unterminated triple-quoted string." "Unterminated quoted string.")))
+              ((char= c #\")
+               (cond ((not triple) (return))
+                     ((and (eql #\" (peek-character lexer))
+                           (eql #\" (peek-character lexer 1)))
+                      (incf (lexer-cursor lexer) 2) (return))
+                     (t (write-char c out))))
+              ((char= c #\\)
+               (let ((escape (take-character lexer)))
+                 (case escape
+                   (#\n (write-char #\Newline out)) (#\r (write-char #\Return out))
+                   (#\t (write-char #\Tab out)) (#\" (write-char #\" out)) (#\\ (write-char #\\ out))
+                   ((#\u #\U)
+                    (let ((code 0))
+                      (dotimes (i (if (char= escape #\u) 4 6))
+                        (let* ((digit (take-character lexer)) (value (and digit (digit-char-p digit 16))))
+                          (unless value
+                            (problem 'ctm-rejection :invalid-unicode-escape (1- (lexer-cursor lexer)) "Expected hexadecimal escape digit."))
+                          (setf code (+ (* code 16) value))))
+                      (write-char (scalar-character code start) out)))
+                   (otherwise (problem 'ctm-rejection :invalid-string-escape (1- (lexer-cursor lexer)) "Unknown string escape.")))))
+              (t (write-char c out)))))))
 
 (defun scan-name (lexer)
   (loop

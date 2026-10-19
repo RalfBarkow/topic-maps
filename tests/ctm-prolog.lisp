@@ -96,7 +96,7 @@
                   ("encoding-unclosed-name" "%encoding \"UTF-8" :invalid-encoding-declaration 16)))
     (destructuring-bind (label text code position) spec (negative-text label text code position)))
   (negative-text "known-resource-policy" "%include <child.ctm>" :resource-resolver-required 0 'topic-maps.ctm:ctm-unsupported :include)
-  (negative-text "known-triple-string-unsupported" "topic occ: \"\"\"x\"\"\"." :triple-quoted-string 11 'topic-maps.ctm:ctm-unsupported)
+  (negative-text "known-string-unclosed" "topic occ: \"\"\"x" :unterminated-string 11)
   (negative-text "known-charset-unsupported-text" "%encoding \"iso-8859-5\"" :unsupported-encoding 11 'topic-maps.ctm:ctm-unsupported)
   (negative-text "encoding-newline-before-name" (format nil "%encoding~%\"UTF-8\"") :invalid-encoding-declaration 9))
 

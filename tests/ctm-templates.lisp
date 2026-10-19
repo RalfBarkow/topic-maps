@@ -320,10 +320,14 @@
                 (eq :unknown-mergemap-notation (topic-maps.ctm:error-code condition)))))
   (dolist (text '("def f() a - \"\"\"N\"\"\". end" "%include <other>"))
     (check (if (search "%include" text) "diagnostic:Include-requires-explicit-resolver"
-               (concatenate 'string "diagnostic:unchanged-excluded-feature:" text))
-           (let ((c (condition-from (lambda () (read-text text)))))
-             (and (typep c 'topic-maps.ctm:ctm-unsupported)
-                  (or (not (search "%include" text)) (eq :resource-resolver-required (topic-maps.ctm:error-code c))))))))
+               "diagnostic:triple-string-body-supported")
+           (if (search "%include" text)
+               (let ((c (condition-from (lambda () (read-text text)))))
+                 (and (typep c 'topic-maps.ctm:ctm-unsupported)
+                      (eq :resource-resolver-required (topic-maps.ctm:error-code c))))
+               (let* ((map (read-text (concatenate 'string text " f()")))
+                      (name (first (topic-names (named map "a")))))
+                 (and name (equal "N" (topic-name-value name)) (invariant map)))))))
 
 (defun original-cases ()
   (setf *observations* nil *rejections* nil)

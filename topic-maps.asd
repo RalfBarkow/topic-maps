@@ -298,3 +298,12 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.ctm-integer.tests :run-tests)))
+
+
+(asdf:defsystem "topic-maps/ctm/triple-string-tests"
+  :description "Slice 20G: four original Triple String contracts and existing string value paths"
+  :depends-on ("topic-maps/ctm/ctm-integer-tests")
+  :components ((:file "tests/ctm-triple-strings"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.triple.tests :run-tests)))

@@ -192,7 +192,7 @@
                     (handler-case (progn (read-text text) nil)
                       (ctm-unsupported (c) (eq :resource-resolver-required (error-code c)))))
                    ((find #\~ text) (typep (read-text text) 'topic-maps.tmdm:topic-map))
-                   (t (unsupported-p text)))))
+                   (t (string= "triple" (topic-name-value (first (topic-names (first-topic (read-text text))))))))))
     (check "scope-on-bare-topic-rejected"
            (eq :unexpected-token (error-code (rejection "a @theme."))))
     (check "scoped-name-now-deserialized"
