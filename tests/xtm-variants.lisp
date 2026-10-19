@@ -343,3 +343,115 @@
   (setf *variant-controls* nil)
   (variant-text-controls) (variant-merge-controls) (variant-scope-error-controls) (variant-syntax-controls)
   (setf *variant-controls* (nreverse *variant-controls*)))
+
+(defun variant-merge-original-model-checks (map raw)
+  (let* ((owner (by-id map "topic")) (other (by-id map "topic2")) (theme (by-id map "theme"))
+         (type (by-si map (default-name-type-identifier)))
+         (names (topic-names owner)) (first-name (find "Topic" names :key #'topic-name-value :test #'equal))
+         (second-name (find "Topic 2" names :key #'topic-name-value :test #'equal))
+         (root (topic-maps.xml:parse-octets raw (make-instance 'topic-maps.xtm::source-handler)))
+         (source-topics (topic-maps.xtm::elements root)))
+    (check "variant-merge-original:source-shared-item-identifier-and-values"
+      (and (= 2 (length source-topics))
+        (equal '("topic" "topic2") (mapcar (lambda (node) (topic-maps.xtm::attr node "id")) source-topics))
+        (every (lambda (node) (equal "http://example.org/#topic"
+          (topic-maps.xtm::attr (first (topic-maps.xtm::elements node)) "href"))) source-topics)))
+    (check "variant-merge-original:counts-and-canonical-topic-eq"
+      (and (= 3 (length (topic-map-topics map))) (null (topic-map-associations map))
+        (eq owner other) (eq owner (canonical-topic owner))
+        (= 2 (length names)) (= 2 (length (all-variants map))) (variants-current-p map)))
+    (check "variant-merge-original:exact-identifier-sets"
+      (and (same-identifiers-p (item-identifiers owner)
+          (list (concatenate 'string *document* "#topic") (concatenate 'string *document* "#topic2") "http://example.org/#topic"))
+        (null (topic-subject-identifiers owner)) (null (topic-subject-locators owner))
+        (equal (list (concatenate 'string *document* "#theme")) (item-identifiers theme))
+        (null (topic-subject-identifiers theme)) (null (topic-subject-locators theme))
+        (null (item-identifiers type)) (equal (list (default-name-type-identifier)) (topic-subject-identifiers type))
+        (null (topic-subject-locators type)) (null (item-identifiers map))
+        (null (topic-names type)) (null (topic-names theme))
+        (topic-maps.tmdm::validate-map-item-identifiers map)))
+    (check "variant-merge-original:two-distinct-names-with-canonical-parent-and-type"
+      (and first-name second-name (not (eq first-name second-name))
+        (every (lambda (name) (and (eq name (canonical-topic-name name)) (eq owner (topic-name-parent name))
+          (eq type (topic-name-type name)) (null (topic-name-scope name))
+          (null (item-identifiers name)) (null (item-reifier name)))) names)))
+    (dolist (row '(("Topic" "TOPIC!") ("Topic 2" "TOPIC2!")))
+      (let* ((name (find (first row) names :key #'topic-name-value :test #'equal)) (vs (topic-name-variants name)) (v (first vs)))
+        (check (concatenate 'string "variant-merge-original:variant-parent-value-datatype-scope:" (first row))
+          (and (= 1 (length vs)) (eq v (canonical-variant v)) (eq name (variant-parent v))
+            (equal (second row) (variant-value v)) (equal (string-datatype) (variant-datatype v))
+            (scope-eq-p (variant-scope v) (list theme)) (null (item-identifiers v)) (null (item-reifier v))))))
+    (check "variant-merge-original:variants-stay-distinct"
+      (not (eq (first (topic-name-variants first-name)) (first (topic-name-variants second-name)))))))
+
+(defun variant-merge-original-retained-handles (raw expected-map expected-cxtm)
+  ;; Same qualified source tree and reader operations as STAGED-NAME-CONTROL,
+  ;; using the full unchanged original octets, including their document root.
+  (let* ((topic-maps.xtm::*document-iri* *document*)
+         (topic-maps.xtm::*source-key* "xtm2/in/merge-itemid-with-variants.xtm")
+         (root (topic-maps.xml:parse-octets raw (make-instance 'topic-maps.xtm::source-handler)))
+         (map (make-topic-map)) (old-owner nil) (old-name nil) (old-variant nil) (old-theme nil) (stages nil))
+    (topic-maps.xtm::validate-source root)
+    (loop for node in (topic-maps.xtm::elements root) for step from 1 do
+      (topic-maps.xtm::read-topic node map)
+      (when (= step 1)
+        (setf old-owner (by-id map "topic") old-name (first (topic-names old-owner))
+              old-variant (first (topic-name-variants old-name)) old-theme (by-id map "theme"))
+        (check "variant-merge-original:retained-first-topic-before-merge"
+          (and (= 1 (length (topic-names old-owner))) (= 1 (length (all-variants map)))
+            (eq old-owner (canonical-topic old-owner)) (eq old-name (variant-parent old-variant)))))
+      (push (topic-maps.test-foundation::fields "afterTopic" step "model" (variant-model-data map)) stages))
+    (let* ((owner (by-id map "topic2")) (name (find "Topic" (topic-names owner) :key #'topic-name-value :test #'equal))
+           (v (first (topic-name-variants name))) (before (variant-state map)))
+      (check "variant-merge-original:retained-topic-name-variant-theme-eq-after-merge"
+        (and (not (eq old-owner owner)) (eq owner (canonical-topic old-owner)) (eq owner (by-id map "topic"))
+          (eq name old-name) (eq name (canonical-topic-name old-name)) (eq owner (topic-name-parent old-name))
+          (eq v old-variant) (eq v (canonical-variant old-variant)) (eq name (variant-parent old-variant))
+          (eq old-theme (by-id map "theme")) (scope-eq-p (variant-scope old-variant) (list old-theme))
+          (variants-current-p map)))
+      (check "variant-merge-original:staged-original-equals-public-api-model-and-bytes"
+        (and (equalp (variant-model-data expected-map) (variant-model-data map))
+          (equalp expected-cxtm (topic-maps.cxtm:canonicalize-octets map :base-locator *document*))
+          (equal before (variant-state map)))))
+    (coerce (nreverse stages) 'vector)))
+
+(defun variant-merge-original-contract ()
+  (let* ((id "xtm2/in/merge-itemid-with-variants.xtm")
+         (*document* (concatenate 'string "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/" id))
+         (source (corpus-path id)) (baseline (corpus-path "xtm2/baseline/merge-itemid-with-variants.xtm.cxtm"))
+         (raw (file-bytes source)) (copy (copy-seq raw)) (expected (file-bytes baseline))
+         (case (topic-maps.test-foundation:make-test-case :id id :category :valid :source-pathname source
+           :document-iri *document* :expected-outcome :cxtm-equal :expected-baseline baseline
+           :clauses '("XTM 2.0 4.5,4.6,4.10,4.12,4.13,4.16" "TMDM 5.3.5,5.4,5.5,6.2" "CXTM 3,4")))
+         (map nil) (actual nil) (c nil) (before nil) (stages nil))
+    (setf *cases* (append *cases* (list case)))
+    (handler-case
+        (progn
+          (setf map (deserialize-octets raw :document-iri *document* :source-key id) before (variant-state map)
+                actual (topic-maps.cxtm:canonicalize-octets map :base-locator *document*))
+          (variant-merge-original-model-checks map raw)
+          (setf stages (variant-merge-original-retained-handles raw map actual)))
+      (error (condition) (setf c condition)))
+    (record-original-result case actual expected c)
+    (setf *variant-merge-outputs* (list (topic-maps.test-foundation::fields
+      "id" id "documentIRI" *document* "sourceKey" id "sourceBytes" (length raw)
+      "sourceHex" (format nil "~{~2,'0X~}" (coerce raw 'list)) "sourceText" (babel:octets-to-string raw :encoding :utf-8)
+      "actualCXTM" (when actual (babel:octets-to-string actual :encoding :utf-8))
+      "expectedCXTM" (babel:octets-to-string expected :encoding :utf-8)
+      "actualBytes" (when actual (length actual)) "expectedBytes" (length expected)
+      "firstDifferentByte" (when actual (mismatch actual expected)) "condition" (negative-condition-data c)
+      "model" (when map (variant-model-data map)) "originalReaderStages" stages
+      "status" (string-downcase (string (topic-maps.test-foundation:test-case-status case))))))
+    (when c (error c))
+    (check "variant-merge-original:byte-exact" (equalp actual expected))
+    (check "variant-merge-original:source-preserved" (equalp raw copy))
+    (check "variant-merge-original:pure" (equal before (variant-state map)))
+    (check "variant-merge-original:deterministic" (equalp actual (topic-maps.cxtm:canonicalize-octets map :base-locator *document*)))
+    (check "variant-merge-original:repeat-pure" (equal before (variant-state map)))
+    (let ((other (deserialize-octets raw :document-iri *document* :source-key "independent:variant-merge-provenance")))
+      (check "variant-merge-original:source-key-only-provenance"
+        (and (equalp (variant-model-data map) (variant-model-data other))
+          (equalp actual (topic-maps.cxtm:canonicalize-octets other :base-locator *document*)))))
+    (check "variant-merge-original:57-unique-case-records"
+      (and (= 57 (length *cases*)) (= 49 (count :valid *cases* :key #'topic-maps.test-foundation:test-case-category))
+        (= 57 (length (remove-duplicates *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal)))))))

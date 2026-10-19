@@ -1,0 +1,22 @@
+{
+  "kind": "original-variant-merge-candidate",
+  "baseCommit": "39c125bf9d462f538403aa633c56054511c210da",
+  "id": "xtm2/in/merge-itemid-with-variants.xtm",
+  "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-variants.xtm",
+  "sourceBytes": 641,
+  "sourceSHA256": "1712d72a0f3d908a259c539c13197af5e0d405a1572bbfd865aed8603b1edb45",
+  "baselineBytes": 919,
+  "baselineSHA256": "f157b2f40fa516c51dcc99cc7e151ed709d9ae3e29ba5c5c2bb5d9e9ef8a016a",
+  "priorEvidence": {
+    "path": "reports/slice-21g/diagnostic-changes.json",
+    "registeredInSlice21G": false,
+    "observation": {
+      "id": "xtm2/in/merge-itemid-with-variants.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-variants.xtm",
+      "condition": null,
+      "status": "deserialized",
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#theme</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>#topic2</locator>\n<locator>http://example.org/#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n<name number=\"2\">\n<value>Topic 2</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>TOPIC2!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "byteExact": true
+    }
+  }
+}

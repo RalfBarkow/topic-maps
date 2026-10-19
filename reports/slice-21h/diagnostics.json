@@ -1,0 +1,8 @@
+{
+  "kind": "read-only-observations-no-extra-registration",
+  "originalObservations": 124,
+  "unchangedOriginalObservations": 124,
+  "diagnosticChanges": [],
+  "priorSlice21GObservationReproduced": true,
+  "newlyRegisteredCase": "xtm2/in/merge-itemid-with-variants.xtm"
+}

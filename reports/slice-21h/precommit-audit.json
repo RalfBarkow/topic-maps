@@ -1,0 +1,29 @@
+{
+  "kind": "slice-21h-precommit-integrity-audit",
+  "verifiedAtUTC": "2026-10-19T20:47:48.132621+00:00",
+  "branch": "codex/xtm-slice-21h",
+  "parent": "39c125bf9d462f538403aa633c56054511c210da",
+  "initialIndexAndWorktree": "clean",
+  "trackedChanges": [
+    "tests/xtm-identity.lisp",
+    "tests/xtm-variants.lisp",
+    "topic-maps.asd"
+  ],
+  "newPathPrefixes": [
+    "reports/slice-21h/"
+  ],
+  "otherNewPaths": [
+    "docs/slice-21h-xtm-variant-merge-original.md",
+    "scripts/validate-slice-21h.py"
+  ],
+  "trackedBaseFilesVerified": 4262,
+  "protectedBaseFilesVerified": 4259,
+  "historicalReportsVerified": 2013,
+  "pinnedCorpusFilesVerified": 2006,
+  "allExecutionSourceHashesUnchanged": true,
+  "productionCodeUnchanged": true,
+  "allProtectedFilesUnchanged": true,
+  "acceptedValidationRuns": 40,
+  "acceptancePassed": true,
+  "gitDiffCheckPassed": true
+}
