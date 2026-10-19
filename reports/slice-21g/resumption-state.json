@@ -1,0 +1,26 @@
+{
+  "kind": "slice-21g-resumption-audit",
+  "resumedAtUTC": "2026-10-19T20:06:30.123941+00:00",
+  "branch": "codex/xtm-slice-21g",
+  "head": "a8d514d5a3a6026bc5440c67ab666630783398b3",
+  "index": "clean",
+  "existingFilesSHA256": {
+    "src/xtm/reader.lisp": "0d64a81d731f6cb030c3ece32708004240ade82adaadad7834406c70f021d315",
+    "tests/ctm-xtm-mergemap.lisp": "cbdf80563b28222960eb903011b0fddc50d199d2350ab0384f5af5ea88e52ebd",
+    "tests/xtm-identity.lisp": "87e2c09c3860d80d6e983fa91fbbb9998d4e8ff6f3c5a90f70f2a214b0fbf392",
+    "tests/xtm-name-item-identities.lisp": "9d0d2d665131fc7691ff42951ce9a5dfa54122a6e4d4a38bb02f9f70f9087f71",
+    "tests/xtm-name-scopes.lisp": "7ed0d03eb1b11f014254011a7f2732f6ba35f8ad23f5892a53eb4694504e63fc",
+    "tests/xtm-names.lisp": "db4c91598152368f708cbf924da89be7e67bb379ecbe116fbf3b8ee1178c9483",
+    "tests/xtm-negative-originals.lisp": "cc7f88a941b0d5f2a62840c1672585e11f4ec17efb2b14b27e1b8384b8c8c6e5",
+    "topic-maps.asd": "93589c7772c470318cef1fd60a2eebb4220591fc7b7aabfd75527c133d194284",
+    "reports/slice-21g/baseline-xtm.json": "e3146e26d03efbd9f0e64e6496fcda6a363c8569f0bc4bac532d18f2fe28a50e",
+    "reports/slice-21g/baseline.log": "981331d8c05c366ef90740747056d4c9c593fb8f2106b891ea4b01b2a093c553",
+    "reports/slice-21g/before-diagnostics.json": "6471835abb267891bb8d83d5d1f9a624779fac10760b1a9fbce543f63d67149c",
+    "reports/slice-21g/candidate-inventory.json": "c7195a007b01143dbcdb94b9f6d1c0b39e9989bc2f9d546030b5ade0000b698b",
+    "reports/slice-21g/diagnostics.lisp": "a4d288f62d8f517c645db8d8f368598164ac42a389adbcd534af200b47f9c7fe",
+    "reports/slice-21g/initial-state.json": "d605be642314656ef7624393260f57d83f229b70ac8e3a7481cf29443f8a5af0",
+    "tests/xtm-variants.lisp": "a3fc5a59dce97d0f5deb1f953e873b82fd20c22ff259d077e94d31ea08dfab6c"
+  },
+  "savedDevelopmentReportSHA256": "8ba5a3891a76580430972c7d3cff043176be8a01e5844dbdb5fe9309f30e93b6",
+  "begunWorkPreserved": true
+}

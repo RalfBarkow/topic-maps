@@ -250,7 +250,7 @@
     (iid-error-control (first row) (format nil "<topic id='a'><name>~A<value>N</value></name></topic>" (second row)) 'xtm-rejection (third row)))
   (iid-error-control "after-value" "<topic id='a'><name><value>N</value><itemIdentity href='urn:n'/></name></topic>" 'xtm-rejection :element-order)
   (iid-error-control "reifier-stays-unsupported" "<topic id='a'><name reifier='#r'><itemIdentity href='urn:n'/><value>N</value></name></topic>" 'xtm-unsupported :reification)
-  (iid-error-control "variant-stays-unsupported" "<topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic>" 'xtm-unsupported :unsupported-construct))
+  (iid-error-control "variant-resourceRef-stays-unsupported" "<topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceRef href='urn:excluded'/></variant></name></topic>" 'xtm-unsupported :unsupported-construct))
 
 (defun iid-tests ()
   (setf *iid-controls* nil)

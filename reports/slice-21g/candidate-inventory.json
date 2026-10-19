@@ -1,0 +1,132 @@
+{
+  "kind": "original-textual-variant-candidates",
+  "baseCommit": "a8d514d5a3a6026bc5440c67ab666630783398b3",
+  "candidates": [
+    {
+      "id": "xtm2/in/variant.xtm",
+      "category": "valid",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm",
+      "sourceBytes": 307,
+      "sourceSHA256": "b69e6c1143e087133a2c8016f1cd656e7a1e138dd5dc82bb55ca6e049203806a",
+      "baselineBytes": 597,
+      "baselineSHA256": "7076e59abf281e3439045bdc3fde7887ff5772ccc532f77c68b177b3ea2ff68b",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM variant is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+        "line": 5,
+        "column": 16,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm",
+        "sourceKey": "xtm2/in/variant.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/in/variant-duplicate.xtm",
+      "category": "valid",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm",
+      "sourceBytes": 455,
+      "sourceSHA256": "e256a746059346bf0779d42bbc9c72089edb44833507d5e5a7b21bae742dee06",
+      "baselineBytes": 597,
+      "baselineSHA256": "7076e59abf281e3439045bdc3fde7887ff5772ccc532f77c68b177b3ea2ff68b",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM variant is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+        "line": 5,
+        "column": 16,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm",
+        "sourceKey": "xtm2/in/variant-duplicate.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/in/variant-scope-duplicate.xtm",
+      "category": "valid",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm",
+      "sourceBytes": 345,
+      "sourceSHA256": "949b3c8917bab79ad450567a011e78007bc36631d4d918c8ee70ce6a6ce653cf",
+      "baselineBytes": 597,
+      "baselineSHA256": "7076e59abf281e3439045bdc3fde7887ff5772ccc532f77c68b177b3ea2ff68b",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM variant is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+        "line": 5,
+        "column": 16,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm",
+        "sourceKey": "xtm2/in/variant-scope-duplicate.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/in/variant-scope-multiple.xtm",
+      "category": "valid",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm",
+      "sourceBytes": 343,
+      "sourceSHA256": "27bad5bbd96149964923ef11a9ff0b024461d9e13c6ba151e2f22dc78ab73fd5",
+      "baselineBytes": 731,
+      "baselineSHA256": "1ffe1be12d2706189c2a1ebb0d3626c51cecc40c467ea51ef28834cbcad4526f",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM variant is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-scope-multiple.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+        "line": 5,
+        "column": 16,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm",
+        "sourceKey": "xtm2/in/variant-scope-multiple.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/in/variant-inherit.xtm",
+      "category": "valid",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+      "sourceBytes": 372,
+      "sourceSHA256": "ca041e98ef6f7ecde47a8ca6fcda2bc764cd01cd4d0f2c912ab73daf7892eeef",
+      "baselineBytes": 793,
+      "baselineSHA256": "32b352e866673a8da7adc00db887a80d14eceea86dc09f260c05f30bdf38e450",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM variant is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-inherit.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm), approximately 8:16: XTM variant is not implemented in this subset.",
+        "line": 8,
+        "column": 16,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+        "sourceKey": "xtm2/in/variant-inherit.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+      "category": "invalid",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+      "sourceBytes": 404,
+      "sourceSHA256": "91a6ec6e0d36c0b5e996969a3cebaef074417d44804de87487603aa80c6c922d",
+      "baselineBytes": null,
+      "baselineSHA256": null,
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM variant is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/variant-missing-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm), approximately 8:16: XTM variant is not implemented in this subset.",
+        "line": 8,
+        "column": 16,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "sourceKey": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "cause": null
+      }
+    }
+  ]
+}

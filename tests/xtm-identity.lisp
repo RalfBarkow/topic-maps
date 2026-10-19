@@ -18,6 +18,9 @@
 (defvar *scope-controls* nil)
 (defvar *iid-outputs* nil)
 (defvar *iid-controls* nil)
+(defvar *variant-outputs* nil)
+(defvar *variant-negative-outputs* nil)
+(defvar *variant-controls* nil)
 (defun check (name truth)
   (push name *checks*)
   (unless truth (error "XTM test failed: ~A" name))
@@ -249,7 +252,7 @@
     (dolist (spec (list (list "xml" "<a><b></a>" 'xtm-xml-error :fail)
                        (list "xtm" (document "<topic id='2bad'/>") 'xtm-rejection :fail)
                        (list "tmdm" (document "<itemIdentity href='#a'/><topic id='a'/>") 'item-identifier-error :fail)
-                       (list "unsupported" (document "<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic>") 'xtm-unsupported :unsupported)))
+                       (list "unsupported" (document "<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceRef href='urn:excluded'/></variant></name></topic>") 'xtm-unsupported :unsupported)))
       (let ((case (case-record))
             (c (condition-from (lambda () (deserialize-octets (bytes (second spec)) :document-iri *document*)))))
         (record-original-result case nil #() c)
@@ -414,7 +417,7 @@
                   "<!DOCTYPE topicMap SYSTEM 'http://127.0.0.1:9/no-xtm-network'>"
                   "<!DOCTYPE topicMap [<!ENTITY e SYSTEM 'file:///tmp/no-xtm-file'>]>"))
     (rejection (concatenate 'string "doctype:" body) (concatenate 'string body (document "")) 'xtm-xml-error :doctype-forbidden))
-  (dolist (spec '(("unsupported-name-variant" "<topic id='a'><name><value>Name</value><variant><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic>" :unsupported-construct)
+  (dolist (spec '(("unsupported-name-variant-resourceRef" "<topic id='a'><name><value>Name</value><variant><scope><topicRef href='#s'/></scope><resourceRef href='urn:excluded'/></variant></name></topic>" :unsupported-construct)
                   ("unsupported-occurrence" "<topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData>v</resourceData></occurrence></topic>" :unsupported-construct)
                   ("unsupported-association" "<association><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)
                   ("unsupported-mergemap" "<mergeMap href='other.xtm'/>" :unsupported-construct)))
@@ -469,10 +472,10 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
-  (setf *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil)
+  (setf *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil)
   (handler-case
       (progn (original-contracts) (negative-original-controls) (negative-original-contracts)
-             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (result-classification-tests)
+             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -491,7 +494,7 @@
            (array (items) (coerce items 'vector)))
       (with-open-file (out pathname :direction :output :if-exists :supersede :external-format :utf-8)
         (topic-maps.test-foundation::emit-json-value
-          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity subset, 43 positive and seven cause-qualified negative original contracts; no CTM Mergemap integration"
+          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant subset, 48 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration"
                   "corpusCommit" "cd165b150176c1d6842b37be9cc9051b40d4996b"
                   "statuses" (fields "pass" (count :pass cases :key #'topic-maps.test-foundation:test-case-status)
                                      "fail" (count :fail cases :key #'topic-maps.test-foundation:test-case-status)
@@ -518,6 +521,9 @@
                   "scopeControls" (array *scope-controls*)
                   "nameItemIdentityOriginals" (array *iid-outputs*)
                   "nameItemIdentityControls" (array *iid-controls*)
+                  "variantOriginals" (array *variant-outputs*)
+                  "variantNegativeOriginals" (array *variant-negative-outputs*)
+                  "variantControls" (array *variant-controls*)
                   "actualAndExpected" (array (loop for (id actual expected model condition source-length) in *outputs* collect
                     (fields "id" id "actual" (when actual (babel:octets-to-string actual :encoding :utf-8))
                             "expected" (babel:octets-to-string expected :encoding :utf-8) "byteLength" (when actual (length actual))

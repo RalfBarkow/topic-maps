@@ -280,7 +280,7 @@
                   ("ii-after-value" "<name><value>N</value><itemIdentity href='#name'/></name>" :element-order)
                   ("variant-before-value" "<name><variant><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant><value>N</value></name>" :element-order)))
     (name-error-control (first spec) (format nil "<topic id='a'>~A</topic>" (second spec)) 'xtm-rejection (third spec)))
-  (dolist (spec '(("variant" "<name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name>" :unsupported-construct)
+  (dolist (spec '(("variant-resourceRef" "<name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceRef href='urn:excluded'/></variant></name>" :unsupported-construct)
                   ("reifier" "<name reifier='#r'><value>N</value></name>" :reification)))
     (name-error-control (concatenate 'string "unsupported-" (first spec))
       (format nil "<topic id='a'>~A</topic>" (second spec)) 'xtm-unsupported (third spec)))
