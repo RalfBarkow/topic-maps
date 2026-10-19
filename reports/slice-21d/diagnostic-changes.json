@@ -1,0 +1,1504 @@
+{
+  "kind": "read-only-diagnostic-observations-no-additional-registration",
+  "changes": [
+    {
+      "id": "xtm2/in/itemid-name.xtm",
+      "before": {
+        "id": "xtm2/in/itemid-name.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-name.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm",
+          "sourceKey": "xtm2/in/itemid-name.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/itemid-name.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM itemIdentity is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-name.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm), approximately 4:39: XTM itemIdentity is not implemented in this subset.",
+          "line": 4,
+          "column": 39,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm",
+          "sourceKey": "xtm2/in/itemid-name.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/itemid-variant.xtm",
+      "before": {
+        "id": "xtm2/in/itemid-variant.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-variant.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+          "sourceKey": "xtm2/in/itemid-variant.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/itemid-variant.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-variant.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+          "sourceKey": "xtm2/in/itemid-variant.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-names.xtm",
+      "before": {
+        "id": "xtm2/in/merge-itemid-with-names.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-names.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/merge-itemid-with-names.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-names.xtm), approximately 4:11: XTM name is not implemented in this subset.",
+          "line": 4,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-names.xtm",
+          "sourceKey": "xtm2/in/merge-itemid-with-names.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/merge-itemid-with-names.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-names.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>#topic2</locator>\n<locator>http://example.org/#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topics</value>\n<type topicref=\"2\"></type>\n</name>\n<name number=\"2\">\n<value>Topics 2</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-variants.xtm",
+      "before": {
+        "id": "xtm2/in/merge-itemid-with-variants.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-variants.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/merge-itemid-with-variants.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-variants.xtm), approximately 4:11: XTM name is not implemented in this subset.",
+          "line": 4,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-variants.xtm",
+          "sourceKey": "xtm2/in/merge-itemid-with-variants.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/merge-itemid-with-variants.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-variants.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/merge-itemid-with-variants.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-variants.xtm), approximately 6:16: XTM variant is not implemented in this subset.",
+          "line": 6,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-variants.xtm",
+          "sourceKey": "xtm2/in/merge-itemid-with-variants.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-duplicate-iid.xtm",
+      "before": {
+        "id": "xtm2/in/name-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-iid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM itemIdentity is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm), approximately 4:39: XTM itemIdentity is not implemented in this subset.",
+          "line": 4,
+          "column": 39,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-iid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-duplicate-merge.xtm",
+      "before": {
+        "id": "xtm2/in/name-duplicate-merge.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-merge.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate-merge.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-merge.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-merge.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-merge.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-duplicate-merge.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-merge.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topics</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#flertall</locator>\n<locator>#plural</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-duplicate-reified.xtm",
+      "before": {
+        "id": "xtm2/in/name-duplicate-reified.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm), approximately 3:31: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-duplicate-reified.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/name-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm), approximately 3:31: XTM Reification is outside this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-duplicate-reified2.xtm",
+      "before": {
+        "id": "xtm2/in/name-duplicate-reified2.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate-reified2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm), approximately 3:31: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified2.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-duplicate-reified2.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/name-duplicate-reified2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm), approximately 3:31: XTM Reification is outside this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified2.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-duplicate-reified3.xtm",
+      "before": {
+        "id": "xtm2/in/name-duplicate-reified3.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate-reified3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm), approximately 3:31: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified3.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-duplicate-reified3.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/name-duplicate-reified3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm), approximately 3:31: XTM Reification is outside this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified3.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-duplicate-reified4.xtm",
+      "before": {
+        "id": "xtm2/in/name-duplicate-reified4.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate-reified4.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm), approximately 3:31: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified4.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-duplicate-reified4.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/name-duplicate-reified4.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm), approximately 3:31: XTM Reification is outside this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified4.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-duplicate.xtm",
+      "before": {
+        "id": "xtm2/in/name-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate.xtm",
+          "sourceKey": "xtm2/in/name-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-escaping.xtm",
+      "before": {
+        "id": "xtm2/in/name-escaping.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-escaping.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-escaping.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-escaping.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-escaping.xtm",
+          "sourceKey": "xtm2/in/name-escaping.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-escaping.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-escaping.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#att</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>&lt;AT&amp;T&gt;</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-reifier.xtm",
+      "before": {
+        "id": "xtm2/in/name-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm), approximately 3:30: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 30,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm",
+          "sourceKey": "xtm2/in/name-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/name-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm), approximately 3:30: XTM Reification is outside this subset.",
+          "line": 3,
+          "column": 30,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm",
+          "sourceKey": "xtm2/in/name-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-scope-duplicate-merged.xtm",
+      "before": {
+        "id": "xtm2/in/name-scope-duplicate-merged.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-duplicate-merged.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+          "sourceKey": "xtm2/in/name-scope-duplicate-merged.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-scope-duplicate-merged.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-duplicate-merged.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+          "sourceKey": "xtm2/in/name-scope-duplicate-merged.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-scope-duplicate.xtm",
+      "before": {
+        "id": "xtm2/in/name-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+          "sourceKey": "xtm2/in/name-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+          "sourceKey": "xtm2/in/name-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-scope-multiple.xtm",
+      "before": {
+        "id": "xtm2/in/name-scope-multiple.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-multiple.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+          "sourceKey": "xtm2/in/name-scope-multiple.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-scope-multiple.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-multiple.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+          "sourceKey": "xtm2/in/name-scope-multiple.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-scope.xtm",
+      "before": {
+        "id": "xtm2/in/name-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+          "sourceKey": "xtm2/in/name-scope.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+          "sourceKey": "xtm2/in/name-scope.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-type-after-bad.xtm",
+      "before": {
+        "id": "xtm2/in/name-type-after-bad.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-after-bad.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-type-after-bad.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-after-bad.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-after-bad.xtm",
+          "sourceKey": "xtm2/in/name-type-after-bad.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-type-after-bad.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-after-bad.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#other</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Other</value>\n<type topicref=\"3\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topics</value>\n<type topicref=\"3\"></type>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#nametype</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-type-after.xtm",
+      "before": {
+        "id": "xtm2/in/name-type-after.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-after.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-type-after.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-after.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-after.xtm",
+          "sourceKey": "xtm2/in/name-type-after.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-type-after.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-after.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topics</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#nametype</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-type-before.xtm",
+      "before": {
+        "id": "xtm2/in/name-type-before.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-before.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-type-before.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-before.xtm), approximately 6:11: XTM name is not implemented in this subset.",
+          "line": 6,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-before.xtm",
+          "sourceKey": "xtm2/in/name-type-before.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-type-before.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-before.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topics</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#nametype</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-type-scope.xtm",
+      "before": {
+        "id": "xtm2/in/name-type-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-type-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+          "sourceKey": "xtm2/in/name-type-scope.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-type-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-type-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm), approximately 5:14: XTM scope is not implemented in this subset.",
+          "line": 5,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+          "sourceKey": "xtm2/in/name-type-scope.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-type.xtm",
+      "before": {
+        "id": "xtm2/in/name-type.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-type.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type.xtm",
+          "sourceKey": "xtm2/in/name-type.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-type.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topics</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>http://psi.ontopia.net/xtm/basename/#plural</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-unicode.xtm",
+      "before": {
+        "id": "xtm2/in/name-unicode.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-unicode.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-unicode.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-unicode.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-unicode.xtm",
+          "sourceKey": "xtm2/in/name-unicode.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-unicode.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-unicode.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>馬籠</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/name.xtm",
+      "before": {
+        "id": "xtm2/in/name.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name.xtm",
+          "sourceKey": "xtm2/in/name.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-datatype-unknown.xtm",
+      "before": {
+        "id": "xtm2/in/variant-datatype-unknown.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-datatype-unknown.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+          "sourceKey": "xtm2/in/variant-datatype-unknown.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-datatype-unknown.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-datatype-unknown.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+          "sourceKey": "xtm2/in/variant-datatype-unknown.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-iid.xtm",
+      "before": {
+        "id": "xtm2/in/variant-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate-iid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate-iid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-reifier.xtm",
+      "before": {
+        "id": "xtm2/in/variant-duplicate-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-duplicate-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm), approximately 5:35: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 35,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "before": {
+        "id": "xtm2/in/variant-duplicate-reifier2.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate-reifier2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate-reifier2.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-duplicate-reifier2.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate-reifier2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm), approximately 5:35: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 35,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate-reifier2.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-duplicate.xtm",
+      "before": {
+        "id": "xtm2/in/variant-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-inherit.xtm",
+      "before": {
+        "id": "xtm2/in/variant-inherit.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-inherit.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+          "sourceKey": "xtm2/in/variant-inherit.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-inherit.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-inherit.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+          "sourceKey": "xtm2/in/variant-inherit.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-reifier.xtm",
+      "before": {
+        "id": "xtm2/in/variant-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm",
+          "sourceKey": "xtm2/in/variant-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm), approximately 5:35: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 35,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm",
+          "sourceKey": "xtm2/in/variant-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-resourcedata-uri.xtm",
+      "before": {
+        "id": "xtm2/in/variant-resourcedata-uri.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourcedata-uri.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+          "sourceKey": "xtm2/in/variant-resourcedata-uri.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-resourcedata-uri.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourcedata-uri.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+          "sourceKey": "xtm2/in/variant-resourcedata-uri.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-resourceref-relative.xtm",
+      "before": {
+        "id": "xtm2/in/variant-resourceref-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourceref-relative.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+          "sourceKey": "xtm2/in/variant-resourceref-relative.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-resourceref-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourceref-relative.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref-relative.xtm",
+          "sourceKey": "xtm2/in/variant-resourceref-relative.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-resourceref.xtm",
+      "before": {
+        "id": "xtm2/in/variant-resourceref.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourceref.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+          "sourceKey": "xtm2/in/variant-resourceref.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-resourceref.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-resourceref.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourceref.xtm",
+          "sourceKey": "xtm2/in/variant-resourceref.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-scope-duplicate.xtm",
+      "before": {
+        "id": "xtm2/in/variant-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm",
+          "sourceKey": "xtm2/in/variant-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-duplicate.xtm",
+          "sourceKey": "xtm2/in/variant-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-scope-multiple.xtm",
+      "before": {
+        "id": "xtm2/in/variant-scope-multiple.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-scope-multiple.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm",
+          "sourceKey": "xtm2/in/variant-scope-multiple.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-scope-multiple.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-scope-multiple.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-scope-multiple.xtm",
+          "sourceKey": "xtm2/in/variant-scope-multiple.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant.xtm",
+      "before": {
+        "id": "xtm2/in/variant.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm",
+          "sourceKey": "xtm2/in/variant.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm), approximately 5:16: XTM variant is not implemented in this subset.",
+          "line": 5,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant.xtm",
+          "sourceKey": "xtm2/in/variant.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    },
+    {
+      "id": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+      "before": {
+        "id": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM name is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/variant-missing-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm), approximately 3:11: XTM name is not implemented in this subset.",
+          "line": 3,
+          "column": 11,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+          "sourceKey": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/variant-missing-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+          "sourceKey": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "The formerly unsupported Name is now processed; any remaining excluded Name feature stays Unsupported."
+    }
+  ],
+  "unchangedOriginalObservations": 86,
+  "newByteExactOriginals": [
+    "xtm2/in/name.xtm",
+    "xtm2/in/name-unicode.xtm",
+    "xtm2/in/name-escaping.xtm",
+    "xtm2/in/name-duplicate.xtm",
+    "xtm2/in/name-duplicate-merge.xtm",
+    "xtm2/in/merge-itemid-with-names.xtm",
+    "xtm2/in/name-type.xtm",
+    "xtm2/in/name-type-before.xtm",
+    "xtm2/in/name-type-after.xtm",
+    "xtm2/in/name-type-after-bad.xtm"
+  ]
+}

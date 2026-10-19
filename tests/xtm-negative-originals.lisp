@@ -148,7 +148,7 @@
     (dolist (row (list (list "accepted-is-fail" nil :fail)
                        (list "arbitrary-error-is-fail" (make-condition 'simple-error :format-control "local guard control") :fail)
                        (list "xml-error-is-fail" (condition-from (lambda () (read-body "<a><b></a>"))) :fail)
-                       (list "unsupported-is-not-pass" (condition-from (lambda () (read-body "<topic id='a'><name><value>N</value></name></topic>"))) :unsupported)
+                       (list "unsupported-is-not-pass" (condition-from (lambda () (read-body "<topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value></name></topic>"))) :unsupported)
                        (list "wrong-xtm-cause-is-fail" (condition-from (lambda () (read-body "<topic id='2bad'/>"))) :fail)
                        (list "same-code-wrong-element-is-fail" (condition-from (lambda () (read-body "<unknown/>"))) :fail)))
       (destructuring-bind (label c status) row

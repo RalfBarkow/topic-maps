@@ -121,6 +121,41 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                     (attributes node nil nil)
                     (unless (elements node) (reject :empty-instance-of "instanceOf needs at least one topicRef." node))
                     (dolist (child (elements node)) (validate child '("topicRef"))))
+                   ((string= name "name")
+                    (attributes node '("reifier") nil)
+                    (check-reifier node)
+                    (let ((phase 0) (type-seen nil) (value-seen nil))
+                      (dolist (child (elements node))
+                        (check-namespace child)
+                        (let* ((kind (node-name child))
+                               (next (position kind '("itemIdentity" "type" "scope" "value" "variant") :test #'string=)))
+                          (unless next (reject :unexpected-element (format nil "Unexpected ~A element." kind) child))
+                          (when (or (< next phase) (and (string= kind "variant") (not value-seen)))
+                            (reject :element-order "name child order is invalid." child))
+                          (setf phase next)
+                          (cond
+                            ((string= kind "type")
+                             (when type-seen (reject :duplicate-name-type "Only one name type is allowed." child))
+                             (setf type-seen t))
+                            ((string= kind "value")
+                             (when value-seen (reject :duplicate-name-value "Only one name value is allowed." child))
+                             (setf value-seen t))
+                            ;; Valid extension points remain explicitly unsupported.
+                            ;; Their complete subgrammars are outside this subset.
+                            (t (unsupported child)))
+                          (validate child '("type" "value"))))
+                      (unless value-seen (reject :missing-name-value "name requires a value element." node))))
+                   ((string= name "type")
+                    (attributes node nil nil)
+                    (let ((refs (elements node)))
+                      (unless (= 1 (length refs)) (reject :type-cardinality "type requires exactly one topicRef." node))
+                      (validate (first refs) '("topicRef"))))
+                   ((string= name "value")
+                    (attributes node nil nil)
+                    ;; VALUE accepts all character data, including empty text and
+                    ;; whitespace. ELEMENTS would apply the wrong text policy.
+                    (dolist (child (node-children node))
+                      (unless (stringp child) (reject :unexpected-child "value accepts character data only." child))))
                    ((string= name "topicRef") (reference-iri node))
                    ((member name '("itemIdentity" "subjectIdentifier" "subjectLocator") :test #'string=)
                     (leaf-href node))
@@ -146,20 +181,34 @@ constructs' complete subgrammars is made. XML errors have already been checked."
       (topic-maps.tmdm:make-association map (core-topic map "type-instance")
         (list (list (core-topic map "type") type)
               (list (core-topic map "instance") (topic-maps.tmdm:canonical-topic owner)))))))
+(defun read-name (node owner map)
+  (let* ((children (elements node))
+         (type-node (find "type" children :key #'node-name :test #'string=))
+         (value-node (find "value" children :key #'node-name :test #'string=))
+         (value (with-output-to-string (out)
+                  (dolist (part (node-children value-node)) (write-string part out)))))
+    ;; SAX has already resolved XML character/entity references. Preserve the
+    ;; resulting Unicode sequence without trimming or decoding it again.
+    (if type-node
+        (topic-maps.tmdm:add-name owner value
+          :type (find-reference-topic map (reference-iri (first (elements type-node)))))
+        (topic-maps.tmdm:add-default-name owner value))))
 (defun read-topic (node map)
   (let ((topic (topic-maps.tmdm:intern-topic map :item-identifier
                  (concatenate 'string *document-iri* "#" (collapse-space (attr node "id"))))))
     (dolist (child (elements node))
       (let ((name (node-name child)))
-        (if (string= name "instanceOf") (read-instance-of child topic map)
-            (setf topic (topic-maps.tmdm:add-topic-identifier topic
-                          (cond ((string= name "itemIdentity") :item-identifier)
-                                ((string= name "subjectIdentifier") :subject-identifier)
-                                (t :subject-locator))
-                          (leaf-href child))))))
+        (cond
+          ((string= name "instanceOf") (read-instance-of child topic map))
+          ((string= name "name") (read-name child topic map))
+          (t (setf topic (topic-maps.tmdm:add-topic-identifier topic
+                           (cond ((string= name "itemIdentity") :item-identifier)
+                                 ((string= name "subjectIdentifier") :subject-identifier)
+                                 (t :subject-locator))
+                           (leaf-href child)))))))
     (topic-maps.tmdm:canonical-topic topic)))
 (defun deserialize-octets (bytes &key document-iri source-key)
-  "Deserialize raw XML octets into a new TMDM Topic Map (XTM 2.0 identity subset).
+  "Deserialize raw XML octets into a new TMDM Topic Map (XTM 2.0 identity/Name subset).
 DOCUMENT-IRI is required, absolute and fragment-free. SOURCE-KEY is a diagnostic
 label only. XML positions are approximate SAX line/column values, not spans.
 XML-policy errors, XTM rejection/unsupported and original TMDM conflicts remain

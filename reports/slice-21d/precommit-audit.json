@@ -1,0 +1,34 @@
+{
+  "baseCommit": "0eed7189a0cdd535c980c2160ae2065de21f5d93",
+  "branch": "codex/xtm-slice-21d",
+  "checkedAtUTC": "2026-10-19T13:16:38.110505+00:00",
+  "changedBaseFiles": [
+    "src/xtm/reader.lisp",
+    "tests/ctm-xtm-mergemap.lisp",
+    "tests/xtm-identity.lisp",
+    "tests/xtm-negative-originals.lisp",
+    "topic-maps.asd"
+  ],
+  "unchangedBaseFilesVerified": 3778,
+  "historicalReportsVerified": 1546,
+  "pinnedCorpusFilesVerified": 2006,
+  "validatedOutputCopiedByteForByte": true,
+  "allAcceptanceRunsMatchedExpectedExitCodes": true,
+  "productionChangesLimitedToXTMReader": true,
+  "TMDM_CTM_CXTM_XML_Unchanged": true,
+  "xtm": {
+    "pass": 43,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 81
+  },
+  "ctm": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "retained33OriginalResultsUnchanged": true,
+  "tenNewNameOriginalsByteExact": true,
+  "onlyNameRelatedDiagnosticChanges": true
+}

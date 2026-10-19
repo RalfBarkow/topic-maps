@@ -232,15 +232,15 @@
              (uiop:symbol-call :topic-maps.include.tests :run-tests)))
 
 (asdf:defsystem "topic-maps/xtm"
-  :description "XTM 2.0 identity/instanceOf subset using the qualified XML byte boundary"
+  :description "XTM 2.0 identity, instanceOf and basic Names using the qualified XML byte boundary"
   :version "0.19.1" :license "MIT" :depends-on ("topic-maps/tmdm" "topic-maps/xml") :serial t
   :components ((:file "src/xtm/package") (:file "src/xtm/iri") (:file "src/xtm/reader"))
   :in-order-to ((asdf:test-op (asdf:test-op "topic-maps/xtm/tests"))))
 
 (asdf:defsystem "topic-maps/xtm/tests"
-  :description "XTM identity checks, 26 original CXTM contracts and seven cause-qualified negative originals"
+  :description "XTM identity/Name checks, 36 original CXTM contracts and seven cause-qualified negative originals"
   :depends-on ("topic-maps/xtm" "topic-maps/cxtm" "topic-maps") :serial t
-  :components ((:file "tests/xtm-identity") (:file "tests/xtm-negative-originals"))
+  :components ((:file "tests/xtm-identity") (:file "tests/xtm-negative-originals") (:file "tests/xtm-names"))
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.xtm.tests :run-tests)))
