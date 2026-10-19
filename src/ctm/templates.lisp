@@ -94,7 +94,7 @@ already inside one lexer token. Embedded syntax is skipped with balanced depth."
        ;; Topic. In particular an unused QName still needs a bound prefix, and
        ;; a resolved prefix must not be percent-decoded again at variable use.
        (make-template-argument :kind :iri :token token :value (literal-iri-reference parser)))
-      ((:string :integer :decimal :date :datetime :excluded-literal)
+      ((:string :integer :decimal :date :datetime :ctm-integer)
        (let ((plain (and (eq :string (token-kind token)) (not (next-punctuation-p parser #\^)))))
          (multiple-value-bind (value datatype) (read-literal parser)
            (make-template-argument :kind :literal :token token :value value :datatype datatype :plain-string-p plain))))
@@ -194,8 +194,7 @@ already inside one lexer token. Embedded syntax is skipped with balanced depth."
   (let ((token (look parser)))
     (cond ((eq :variable (token-kind token)) (syntax-variable parser parameters))
           ((member (token-kind token) '(:iri :qname :integer :decimal :date :datetime)) (consume parser))
-          ((eq :excluded-literal (token-kind token))
-           (problem 'ctm-unsupported :occurrence-literal-datatype (token-position token) "The separate '*' literal remains unsupported."))
+          ((eq :ctm-integer (token-kind token)) (consume parser))
           ((eq :string (token-kind token))
            (consume parser)
            (when (punctuation-p parser #\^)
@@ -234,7 +233,7 @@ already inside one lexer token. Embedded syntax is skipped with balanced depth."
   (consume parser) (syntax-expect parser #\()
   (unless (punctuation-p parser #\))
     (loop
-      (if (member (token-kind (look parser)) '(:string :integer :decimal :date :datetime :excluded-literal))
+      (if (member (token-kind (look parser)) '(:string :integer :decimal :date :datetime :ctm-integer))
           (syntax-literal parser parameters) (syntax-reference parser parameters))
       (unless (punctuation-p parser #\,) (return)) (consume parser)))
   (syntax-expect parser #\)))

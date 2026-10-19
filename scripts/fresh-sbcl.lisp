@@ -130,3 +130,9 @@
 (let ((prefix (uiop:getenv "TOPIC_MAPS_EMPTY2_REPORT")))
   (when prefix
     (uiop:symbol-call :topic-maps.registered-original.tests :write-empty2-reports prefix)))
+
+
+;; Slice 20F: original CTM-integer literal after all retained stage reports.
+(asdf:test-system "topic-maps/ctm/ctm-integer-tests")
+(let ((prefix (uiop:getenv "TOPIC_MAPS_CTM_INTEGER_REPORT")))
+  (when prefix (uiop:symbol-call :topic-maps.ctm-integer.tests :write-reports prefix)))

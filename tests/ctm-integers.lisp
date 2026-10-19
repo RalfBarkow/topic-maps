@@ -131,8 +131,15 @@
                     (topic-maps.tmdm:occurrence-datatype (first (all-occurrences (read-text (format nil "a t: ~A." value))))))))
   (dolist (value '("2000-12-31T12:00:60+01:00" "2000-12-31T12:00:60-01:00" "*"))
     (let ((condition (ctm-condition (format nil "a t: ~A." value))))
-      (check (concatenate 'string "excluded-numeric-sugar:" value)
-             (and (typep condition 'ctm-unsupported) (eq (if (string= value "*") :occurrence-literal-datatype :datetime-leap-second-context) (error-code condition)) (= 5 (error-position condition))))))
+      (check (if (string= value "*") "integer-slice-now-allows-ctm-integer"
+                 (concatenate 'string "excluded-numeric-sugar:" value))
+             (if (string= value "*")
+                 (let ((item (first (all-occurrences (read-text "a t: *.")))))
+                   (and (null condition) (equal "*" (topic-maps.tmdm:occurrence-value item))
+                        (equal "http://psi.topicmaps.org/iso13250/ctm-integer"
+                               (topic-maps.tmdm:occurrence-datatype item))))
+                 (and (typep condition 'ctm-unsupported) (eq :datetime-leap-second-context (error-code condition))
+                      (= 5 (error-position condition)))))))
   (let* ((map (read-text "a. t.")) (owner (local-topic map "a")) (typ (local-topic map "t")) (state (map-state map)))
     (let ((condition (occurrence-condition (lambda () (topic-maps.tmdm:add-occurrence owner typ "1.0" :datatype (topic-maps.tmdm:integer-datatype))))))
       (check "invalid-integer-api-rejected-atomically" (and (eq :invalid-integer-value (topic-maps.tmdm:occurrence-error-code condition)) (equal state (map-state map)))))

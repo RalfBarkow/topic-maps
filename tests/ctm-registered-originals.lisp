@@ -86,6 +86,7 @@
             (type (local map doc (if (equal name "occurrence-qname-value") "wikipedia" "occtype")))
             (items (when owner (topic-occurrences owner))) (o (first items))
             (expected (cond
+              ((equal name "occurrence-ctm-integer") (list "*" "http://psi.topicmaps.org/iso13250/ctm-integer"))
               ((equal name "occurrence-decimal-dot-neg2") (list "-0.03" (decimal-datatype)))
               ((equal name "occurrence-decimal-dot-pos") (list "0.3" (decimal-datatype)))
               ((equal name "occurrence-decimal-leading-zeros2") (list "2.3" (decimal-datatype)))

@@ -128,7 +128,7 @@
                    ("a t \"x\"." ctm-rejection :expected-occurrence-type-separator 4)
                    ("a t:\"x\" r:\"y\"." ctm-rejection :expected-separator 8)
                    ("a t: 2000-12-31T12:00:60+01:00." ctm-unsupported :datetime-leap-second-context 5)
-                   ("a t:*." ctm-unsupported :occurrence-literal-datatype 4)
+                   ("a t:*x." ctm-rejection :invalid-occurrence-literal 4)
                    ("a t: 42x." ctm-rejection :invalid-occurrence-literal 5)
                    ("a t:\"x\"^^datatype." ctm-rejection :expected-datatype-iri 9)
                    ("a t:\"x\"^<urn:d>." ctm-rejection :invalid-datatype-marker 7)
@@ -149,7 +149,7 @@
          (= 1 (length (topic-maps.tmdm:occurrence-scope
                         (first (all-occurrences (read-text "a t:\"x\" @theme.")))))))
   (dolist (text '("a t:\"x\" ~reifier." "a t: 2000-12-31T12:00:60+01:00." "a t: 2000-12-31T12:00:60-01:00." "a t:* ."))
-    (check (concatenate 'string "occurrence-feature-boundary:" text) (if (find #\~ text) (null (ctm-condition text)) (typep (ctm-condition text) 'ctm-unsupported)))))
+    (check (concatenate 'string "occurrence-feature-boundary:" text) (if (or (find #\~ text) (find #\* text)) (null (ctm-condition text)) (typep (ctm-condition text) 'ctm-unsupported)))))
 
 (defun occurrence-api-tests ()
   (let* ((map (read-text "a. t.")) (a (local-topic map "a")) (type (local-topic map "t"))

@@ -180,9 +180,10 @@ The owning information item is not constructed until this function finishes."
                              :datetime-bce-timezone-rollover :datetime-leap-second-context)
                          (token-position token) "DateTime normalization is outside the supported BCE/leap-second calendar context."))
          (values value (topic-maps.tmdm:datetime-datatype))))
-      (:excluded-literal
-       (problem 'ctm-unsupported (if (eq context :variant) :variant-literal-datatype :occurrence-literal-datatype) (token-position token)
-                "The separate CTM '*' literal is outside this slice."))
+      (:ctm-integer
+       (consume parser)
+       ;; CTM 3.4.1 [33]: opaque lexical value, unrelated to Wildcards/counters.
+       (values "*" "http://psi.topicmaps.org/iso13250/ctm-integer"))
       (:string
        (consume parser)
        (if (punctuation-p parser #\^)

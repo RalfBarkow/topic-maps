@@ -1,0 +1,344 @@
+{
+  "baseCommit": "341cfa2306788e2943bdf11ced5ee32a8ba74894",
+  "runtime": "SBCL 2.5.4",
+  "freshProcess": true,
+  "network": "denied",
+  "cases": [
+    {
+      "label": "double-star",
+      "sourceText": "topic\nocctype: **;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "double-star",
+        "message": "INVALID-OCCURRENCE-LITERAL in double-star at CHARACTER 15 (line 2, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "suffix-name",
+      "sourceText": "topic\nocctype: *foo;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "suffix-name",
+        "message": "INVALID-OCCURRENCE-LITERAL in suffix-name at CHARACTER 15 (line 2, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "suffix-digit",
+      "sourceText": "topic\nocctype: *1;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "suffix-digit",
+        "message": "INVALID-OCCURRENCE-LITERAL in suffix-digit at CHARACTER 15 (line 2, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "suffix-question",
+      "sourceText": "topic\nocctype: *?;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "suffix-question",
+        "message": "INVALID-OCCURRENCE-LITERAL in suffix-question at CHARACTER 15 (line 2, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "suffix-colon",
+      "sourceText": "topic\nocctype: *:;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "suffix-colon",
+        "message": "INVALID-OCCURRENCE-LITERAL in suffix-colon at CHARACTER 15 (line 2, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "signed-plus",
+      "sourceText": "topic\nocctype: +*;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "signed-plus",
+        "message": "INVALID-OCCURRENCE-LITERAL in signed-plus at CHARACTER 15 (line 2, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "signed-minus",
+      "sourceText": "topic\nocctype: -*;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "expected-occurrence-value",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "signed-minus",
+        "message": "EXPECTED-OCCURRENCE-VALUE in signed-minus at CHARACTER 15 (line 2, column 10): Expected a supported CTM literal value."
+      }
+    },
+    {
+      "label": "date-looking",
+      "sourceText": "topic\nocctype: *-1;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-date-year",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "date-looking",
+        "message": "INVALID-DATE-YEAR in date-looking at CHARACTER 15 (line 2, column 10): Expected a valid timezone-free XSD 1.0 date: nonzero year, valid month/day and no leading plus or extended-year zeroes."
+      }
+    },
+    {
+      "label": "datetime-looking",
+      "sourceText": "topic\nocctype: *T;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-date-year",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "datetime-looking",
+        "message": "INVALID-DATE-YEAR in datetime-looking at CHARACTER 15 (line 2, column 10): Expected a valid XSD 1.0 dateTime."
+      }
+    },
+    {
+      "label": "decimal-looking",
+      "sourceText": "topic\nocctype: *.5;.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "decimal-looking",
+        "message": "INVALID-OCCURRENCE-LITERAL in decimal-looking at CHARACTER 15 (line 2, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "qualified-bare",
+      "sourceText": "topic\nocctype: *^^<urn:d>;.",
+      "result": {
+        "condition": "CTM-UNSUPPORTED",
+        "code": "occurrence-literal-datatype",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "qualified-bare",
+        "message": "OCCURRENCE-LITERAL-DATATYPE in qualified-bare at CHARACTER 15 (line 2, column 10): The separate CTM '*' literal is outside this slice."
+      }
+    },
+    {
+      "label": "missing-separator",
+      "sourceText": "topic\nocctype: * extra;.",
+      "result": {
+        "condition": "CTM-UNSUPPORTED",
+        "code": "occurrence-literal-datatype",
+        "position": 15,
+        "positionUnit": "character",
+        "line": 2,
+        "column": 10,
+        "source": "missing-separator",
+        "message": "OCCURRENCE-LITERAL-DATATYPE in missing-separator at CHARACTER 15 (line 2, column 10): The separate CTM '*' literal is outside this slice."
+      }
+    },
+    {
+      "label": "topic-position",
+      "sourceText": "*.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "expected-topic-identity",
+        "position": 0,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 1,
+        "source": "topic-position",
+        "message": "EXPECTED-TOPIC-IDENTITY in topic-position at CHARACTER 0 (line 1, column 1): Expected topic identity."
+      }
+    },
+    {
+      "label": "name-position",
+      "sourceText": "topic - *.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "expected-name-value",
+        "position": 8,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 9,
+        "source": "name-position",
+        "message": "EXPECTED-NAME-VALUE in name-position at CHARACTER 8 (line 1, column 9): Expected a quoted name value after '-' or the name type separator."
+      }
+    },
+    {
+      "label": "wildcard-value",
+      "sourceText": "topic t: ?.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "expected-occurrence-value",
+        "position": 9,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 10,
+        "source": "wildcard-value",
+        "message": "EXPECTED-OCCURRENCE-VALUE in wildcard-value at CHARACTER 9 (line 1, column 10): Expected a supported CTM literal value."
+      }
+    },
+    {
+      "label": "named-wildcard-value",
+      "sourceText": "topic t: ?named.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "expected-occurrence-value",
+        "position": 9,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 10,
+        "source": "named-wildcard-value",
+        "message": "EXPECTED-OCCURRENCE-VALUE in named-wildcard-value at CHARACTER 9 (line 1, column 10): Expected a supported CTM literal value."
+      }
+    },
+    {
+      "label": "variable-outside",
+      "sourceText": "topic t: $value.",
+      "result": {
+        "condition": "UNBOUND-TEMPLATE-VARIABLE",
+        "code": "variable-outside-template",
+        "position": 9,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 10,
+        "source": "variable-outside",
+        "message": "VARIABLE-OUTSIDE-TEMPLATE in variable-outside at CHARACTER 9 (line 1, column 10): Variables are only allowed within templates."
+      }
+    },
+    {
+      "label": "invalid-integer",
+      "sourceText": "topic t: 42x.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 9,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 10,
+        "source": "invalid-integer",
+        "message": "INVALID-OCCURRENCE-LITERAL in invalid-integer at CHARACTER 9 (line 1, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "invalid-exponent",
+      "sourceText": "topic t: 1e3.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 9,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 10,
+        "source": "invalid-exponent",
+        "message": "INVALID-OCCURRENCE-LITERAL in invalid-exponent at CHARACTER 9 (line 1, column 10): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "variant-suffix",
+      "sourceText": "topic - \"Name\" (*x @s).",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-occurrence-literal",
+        "position": 16,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 17,
+        "source": "variant-suffix",
+        "message": "INVALID-OCCURRENCE-LITERAL in variant-suffix at CHARACTER 16 (line 1, column 17): Malformed numeric/date literal."
+      }
+    },
+    {
+      "label": "unterminated-string",
+      "sourceText": "topic - \"Name.",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "unterminated-string",
+        "position": 8,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 9,
+        "source": "unterminated-string",
+        "message": "UNTERMINATED-STRING in unterminated-string at CHARACTER 8 (line 1, column 9): Unterminated quoted string."
+      }
+    },
+    {
+      "label": "unicode-escape",
+      "sourceText": "topic - \"\\u0x00\".",
+      "result": {
+        "condition": "CTM-REJECTION",
+        "code": "invalid-unicode-escape",
+        "position": 12,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 13,
+        "source": "unicode-escape",
+        "message": "INVALID-UNICODE-ESCAPE in unicode-escape at CHARACTER 12 (line 1, column 13): Expected hexadecimal escape digit."
+      }
+    },
+    {
+      "label": "triple-still-unsupported",
+      "sourceText": "topic t: \"\"\"x\"\"\".",
+      "result": {
+        "condition": "CTM-UNSUPPORTED",
+        "code": "triple-quoted-string",
+        "position": 9,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 10,
+        "source": "triple-still-unsupported",
+        "message": "TRIPLE-QUOTED-STRING in triple-still-unsupported at CHARACTER 9 (line 1, column 10): Triple quoted literals are outside Slice 1."
+      }
+    },
+    {
+      "label": "iso88595-still-unsupported",
+      "sourceText": "%encoding \"iso-8859-5\"\ntopic.",
+      "result": {
+        "condition": "CTM-UNSUPPORTED",
+        "code": "unsupported-encoding",
+        "position": 11,
+        "positionUnit": "character",
+        "line": 1,
+        "column": 12,
+        "source": "iso88595-still-unsupported",
+        "message": "UNSUPPORTED-ENCODING in iso88595-still-unsupported at CHARACTER 11 (line 1, column 12): Only UTF-8 CTM input is implemented."
+      }
+    }
+  ]
+}

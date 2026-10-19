@@ -77,11 +77,11 @@
                  (return))))
           (t (return)))))
 
-(defun excluded-literal-p (text)
+(defun ctm-integer-literal-p (text)
   (string= text "*"))
 
 (defun read-number-token (lexer start)
-  "One token path for Integer, Decimal, Date and DateTime; * remains excluded.
+  "One token path for Integer, Decimal, Date, DateTime and the exact * literal.
 A dot followed by a digit can belong to a decimal; a terminal dot stays punctuation."
   (setf (lexer-cursor lexer) start)
   (loop for c = (peek-character lexer)
@@ -98,7 +98,7 @@ A dot followed by a digit can belong to a decimal; a terminal dot stays punctuat
            (multiple-value-bind (parts reason) (topic-maps.tmdm::datetime-parts value)
              (unless parts (problem 'ctm-rejection reason start "Expected a valid XSD 1.0 dateTime."))
              (make-token :kind :datetime :value value :position start)))
-          ((excluded-literal-p value) (make-token :kind :excluded-literal :value value :position start))
+          ((ctm-integer-literal-p value) (make-token :kind :ctm-integer :value value :position start))
           ((position #\- value :start (if (and (plusp (length value)) (find (char value 0) "+-")) 1 0))
            (multiple-value-bind (a date-end end reason) (topic-maps.tmdm::date-lexical-bounds value)
              (unless (and a (= date-end end))

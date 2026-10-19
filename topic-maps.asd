@@ -289,3 +289,12 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.registered-original.tests :run-empty2-tests)))
+
+
+(asdf:defsystem "topic-maps/ctm/ctm-integer-tests"
+  :description "Slice 20F: CTM '*' literal, original CXTM contract and existing shared literal paths"
+  :depends-on ("topic-maps/ctm/empty2-tests")
+  :components ((:file "tests/ctm-integer-literal"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.ctm-integer.tests :run-tests)))
