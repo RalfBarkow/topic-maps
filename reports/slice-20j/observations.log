@@ -1,0 +1,517 @@
+FOUNDATION-PASS: 54 infrastructure checks; 231 valid, 42 invalid, 231 baselines, 22 auxiliaries; 273 CTM cases NOT-RUN, zero CTM passes.
+CTM-IDENTITY-SEMANTICS-PASS: 123 checks, 5 imported semantic cases, required prefix rejection; no CXTM equality passes.
+CTM-MERGING-SEMANTICS-PASS: 646 checks, 11 pinned semantic cases; no CXTM equality passes.
+CTM-ASSOCIATIONS-SEMANTICS-PASS: 657 checks, 8 pinned cases; no CXTM equality passes.
+CXTM ctm/in/simple.ctm: PASS
+CXTM ctm/in/subject-identifier.ctm: PASS
+CXTM ctm/in/subject-locator.ctm: PASS
+CXTM ctm/in/item-identifier.ctm: PASS
+CXTM ctm/in/name.ctm: PASS
+CXTM ctm/in/topic-subject-identifier.ctm: PASS
+CXTM ctm/in/topic-subject-identifier-wrapped.ctm: PASS
+CXTM ctm/in/topic-subject-identifier-duplicate.ctm: PASS
+CXTM ctm/in/topic-subject-locator.ctm: PASS
+CXTM ctm/in/topic-subject-locator-wrapped.ctm: PASS
+CXTM ctm/in/topic-subject-locator-semi.ctm: PASS
+CXTM ctm/in/topic-subject-locator-duplicate.ctm: PASS
+CXTM ctm/in/topic-item-identifier.ctm: PASS
+CXTM ctm/in/topic-item-identifier-wrapped.ctm: PASS
+CXTM ctm/in/topic-item-identifier-duplicate.ctm: PASS
+CXTM ctm/in/name-duplicate.ctm: PASS
+CXTM ctm/in/association.ctm: PASS
+CXTM ctm/in/association-binary.ctm: PASS
+CXTM ctm/in/association-binary-duplicate.ctm: PASS
+CXTM ctm/in/association-type-sid.ctm: PASS
+CXTM ctm/in/association-with-comment.ctm: PASS
+CXTM ctm/in/association-with-comment2.ctm: PASS
+CXTM ctm/in/association-with-comment3.ctm: PASS
+CXTM ctm/in/association-with-comment4.ctm: PASS
+CXTM-PASS: 445 checks; 24 original byte comparisons; 25 imported PASS, 248 NOT-RUN.
+OCCURRENCE-CXTM ctm/in/occurrence-string.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-string2.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-uri-relative.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-two.ctm: PASS
+OCCURRENCES-PASS: 1101 checks; 4 new byte-equal baselines; 29 imported PASS, 244 NOT-RUN.
+PREFIX-CXTM ctm/in/occurrence-explicit-datatype.ctm: PASS (359 bytes)
+PREFIX-CXTM ctm/in/occurrence-datatype-unknown.ctm: PASS (339 bytes)
+PREFIX-CXTM ctm/in/prefix-duplicate.ctm: PASS (141 bytes)
+PREFIX-CXTM ctm/in/prefix-duplicate2.ctm: PASS (260 bytes)
+PREFIX-CXTM ctm/in/prefix-multiline.ctm: PASS (141 bytes)
+PREFIX-REJECTION ctm/invalid/prefix-collision.ctm: PREFIX-COLLISION in ctm/invalid/prefix-collision.ctm at CHARACTER 43 (line 2, column 9): Prefix "ex" is already bound to "http://www.example.org/", not "http://www.example.net/".
+PREFIX-REJECTION ctm/invalid/prefix-undefined2.ctm: UNDEFINED-PREFIX in ctm/invalid/prefix-undefined2.ctm at CHARACTER 136 (line 6, column 15): Prefix "xsd" has no binding.
+PREFIX-DATATYPES-PASS: 150 checks; 5 new byte-exact baselines, 2 specific rejections; 36 imported PASS, 237 NOT-RUN.
+INTEGER-CXTM ctm/in/occurrence-integer.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer2.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-plus-sign.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-minus-sign.ctm: PASS (352 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-leading-zeros.ctm: PASS (1741 bytes)
+INTEGER-CXTM ctm/in/occurrence-explicit-datatype2.ctm: PASS (352 bytes)
+INTEGERS-PASS: 665 checks; 6 new byte-exact baselines; 42 imported PASS, 231 NOT-RUN.
+DECIMAL-CXTM ctm/in/occurrence-decimal.ctm: PASS (353 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-dot.ctm: PASS (353 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-dot-neg.ctm: PASS (354 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-leading-zeros.ctm: PASS (353 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-minus-sign.ctm: PASS (354 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-plus-sign.ctm: PASS (353 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-1.0.ctm: PASS (353 bytes)
+DECIMALS-PASS: 715 checks; 7 new byte-exact baselines; 49 imported PASS, 224 NOT-RUN.
+DATE-CXTM ctm/in/occurrence-date.ctm: PASS (357 bytes)
+DATE-CXTM ctm/in/occurrence-date2.ctm: PASS (357 bytes)
+DATE-CXTM ctm/in/occurrence-date3.ctm: PASS (1066 bytes)
+DATE-CXTM ctm/in/occurrence-date-negative.ctm: PASS (358 bytes)
+DATE-CXTM ctm/in/occurrence-date-another-century.ctm: PASS (359 bytes)
+DATE-REJECTION ctm/invalid/date-invalid-day.ctm: PASS (INVALID-DATE-DAY at 2:14)
+DATE-REJECTION ctm/invalid/date-invalid-month.ctm: PASS (INVALID-DATE-MONTH at 2:14)
+DATE-REJECTION ctm/invalid/date-invalid-year.ctm: PASS (INVALID-DATE-YEAR at 2:14)
+DATE-REJECTION ctm/invalid/date-invalid-year2.ctm: PASS (INVALID-DATE-YEAR at 6:14)
+DATE-REJECTION ctm/invalid/date-invalid-year3.ctm: PASS (INVALID-DATE-YEAR at 6:14)
+DATES-PASS: 1806 checks; 5 new exact baselines and 5 specific rejections; 59 imported PASS, 214 NOT-RUN.
+DATETIME-CXTM ctm/in/occurrence-datetime.ctm: PASS (370 bytes)
+DATETIME-CXTM ctm/in/occurrence-datetime2.ctm: FAIL-known-baseline-discrepancy (370 bytes)
+DATETIME-CXTM ctm/in/occurrence-datetime-fractional.ctm: PASS (677 bytes)
+DATETIME-CXTM ctm/in/occurrence-datetime-timezone.ctm: PASS (674 bytes)
+DATETIME-CXTM ctm/in/occurrence-datetime-timezone2.ctm: FAIL-known-baseline-discrepancy (674 bytes)
+DATETIMES-PASS: 217 semantic checks; corpus: 62 PASS, 2 known normative discrepancy FAIL, 209 NOT-RUN.
+TIMEZONES-PASS: 1944 checks; 1681 signed offset minutes, pure canonicalization and lexical TMDM equality.
+TYPED-NAME-CXTM ctm/in/name.ctm: PASS
+TYPED-NAME-CXTM ctm/in/name2.ctm: PASS
+TYPED-NAME-CXTM ctm/in/name-type.ctm: PASS
+TYPED-NAME-CXTM ctm/in/name-duplicate.ctm: PASS
+TYPED-NAMES-PASS: 106 checks; four original comparisons; 64 PASS, 2 known FAIL, 207 NOT-RUN.
+SCOPE-CXTM ctm/in/name-scope.ctm: PASS (615 bytes)
+SCOPE-CXTM ctm/in/occurrence-scope.ctm: PASS (646 bytes)
+SCOPE-CXTM ctm/in/association-scope.ctm: PASS (794 bytes)
+SCOPES-PASS: 293 checks; 3 original byte-exact comparisons; 67 PASS, 2 known FAIL, 204 NOT-RUN.
+VARIANT-CXTM ctm/in/variant.ctm: PASS (592 bytes)
+VARIANT-CXTM ctm/in/variants.ctm: PASS (857 bytes)
+VARIANT-CXTM ctm/in/variant-duplicate.ctm: PASS (592 bytes)
+VARIANTS-PASS: 324 checks; 3 original byte-exact comparisons, 1 specific rejection; 71 PASS, 2 known FAIL, 200 NOT-RUN.
+REFERENCE-CXTM ctm/in/wildcard.ctm: PASS (113 bytes), counter 1
+REFERENCE-CXTM ctm/in/wildcard-named.ctm: PASS (117 bytes), counter 1
+REFERENCE-CXTM ctm/in/wildcard-named2.ctm: PASS (301 bytes), counter 3
+REFERENCE-CXTM ctm/in/wildcard-named-merge.ctm: PASS (117 bytes), counter 1
+REFERENCE-CXTM ctm/in/association-scope-embedded.ctm: PASS (1651 bytes), counter 2
+REFERENCE-CXTM ctm/in/association-scope-embedded2.ctm: PASS (1863 bytes), counter 3
+REFERENCE-CXTM ctm/in/association-type-embedded.ctm: PASS (727 bytes), counter 1
+REFERENCE-CXTM ctm/in/association-type-embedded-merge.ctm: PASS (622 bytes), counter 2
+REFERENCE-CXTM ctm/in/embedded-semicolon.ctm: PASS (727 bytes), counter 1
+REFERENCE-CXTM ctm/in/name-scope-embedded.ctm: PASS (1331 bytes), counter 2
+REFERENCE-CXTM ctm/in/name-scope-embedded2.ctm: PASS (1543 bytes), counter 3
+REFERENCE-CXTM ctm/in/name-type-embedded.ctm: PASS (495 bytes), counter 1
+REFERENCE-CXTM ctm/in/nested-twice.ctm: PASS (737 bytes), counter 2
+REFERENCE-CXTM ctm/in/occurrence-scope-embedded.ctm: PASS (1503 bytes), counter 2
+REFERENCE-CXTM ctm/in/occurrence-scope-embedded2.ctm: PASS (1715 bytes), counter 3
+REFERENCE-CXTM ctm/in/occurrence-type-embedded.ctm: PASS (573 bytes), counter 1
+REFERENCE-CXTM ctm/in/role-player-embedded.ctm: PASS (721 bytes), counter 1
+REFERENCE-CXTM ctm/in/role-type-embedded.ctm: PASS (721 bytes), counter 1
+REFERENCE-CXTM ctm/in/subject-identifier-embedded.ctm: PASS (597 bytes), counter 1
+REFERENCE-CXTM ctm/in/variant-scope-embedded.ctm: PASS (1637 bytes), counter 3
+REFERENCE-CXTM ctm/in/variant-scope-embedded2.ctm: PASS (1985 bytes), counter 4
+REFERENCES-PASS: 238 checks; 21 original byte-exact comparisons and 1 specific rejection; 93 PASS, 2 known FAIL, 178 NOT-RUN.
+ITEM-IDENTIFIERS-PASS: 244 checks; 7 manually constructed original XTM2 baseline comparisons; no XTM reader or imported status changes.
+REIFICATION-CXTM ctm/in/tm-reifier.ctm: PASS (126 bytes)
+REIFICATION-CXTM ctm/in/tm-reifier2.ctm: PASS (347 bytes)
+REIFICATION-CXTM ctm/in/tm-reifier3.ctm: PASS (128 bytes)
+REIFICATION-CXTM ctm/in/name-reifier.ctm: PASS (433 bytes)
+REIFICATION-CXTM ctm/in/variant-reifier.ctm: PASS (697 bytes)
+REIFICATION-CXTM ctm/in/occurrence-reifier.ctm: PASS (464 bytes)
+REIFICATION-CXTM ctm/in/occurrence-reifier-nested.ctm: PASS (678 bytes)
+REIFICATION-CXTM ctm/in/occurrence-reifier-nested-nested.ctm: PASS (947 bytes)
+REIFICATION-CXTM ctm/in/association-reifier.ctm: PASS (612 bytes)
+REIFICATION-CXTM ctm/in/role-reifier.ctm: PASS (612 bytes)
+REIFICATION-CXTM ctm/in/role-duplicate-reified-qnames.ctm: PASS (736 bytes)
+REIFICATION-PASS: 236 checks; 11 original byte-exact comparisons, 2 specific rejections; 106 PASS, 2 known FAIL, 165 NOT-RUN.
+ARITY-CXTM ctm/in/association-duplicate-role.ctm: PASS (1157 bytes)
+ASSOCIATION-ARITY-PASS: 337 checks; one new original CTM/CXTM contract; 107 PASS, 2 known FAIL, 164 NOT-RUN.
+RELATIONSHIP-CXTM ctm/in/isa-relationship.ctm: PASS (963 bytes)
+RELATIONSHIP-CXTM ctm/in/isa-relationship-duplicate.ctm: PASS (963 bytes)
+RELATIONSHIP-CXTM ctm/in/isa-relationship-duplicate2.ctm: PASS (963 bytes)
+RELATIONSHIP-CXTM ctm/in/isa-relationship-embedded.ctm: PASS (1181 bytes)
+RELATIONSHIP-CXTM ctm/in/isa-relationship-type-qname.ctm: PASS (991 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship.ctm: PASS (977 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship-duplicate.ctm: PASS (977 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship-duplicate2.ctm: PASS (977 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship-embedded.ctm: PASS (1190 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship-supertype-qname.ctm: PASS (1005 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-merge-away.ctm: PASS (1590 bytes)
+RELATIONSHIP-CXTM ctm/in/subject-identifier-topicref.ctm: PASS (989 bytes)
+RELATIONSHIP-CXTM ctm/in/item-identifier-topicref.ctm: PASS (985 bytes)
+TYPE-RELATIONSHIPS-PASS: 1016 checks; 13 original CXTM contracts; 120 PASS, 2 known FAIL, 151 NOT-RUN.
+TEMPLATE-CXTM ctm/in/association-scope-embedded3.ctm: PASS (2431 bytes)
+TEMPLATE-CXTM ctm/in/association-scope-embedded4.ctm: PASS (3613 bytes)
+TEMPLATE-CXTM ctm/in/name-scope-embedded3.ctm: PASS (2105 bytes)
+TEMPLATE-CXTM ctm/in/name-scope-embedded4.ctm: PASS (3284 bytes)
+TEMPLATE-CXTM ctm/in/occurrence-scope-embedded3.ctm: PASS (2277 bytes)
+TEMPLATE-CXTM ctm/in/occurrence-scope-embedded4.ctm: PASS (3457 bytes)
+TEMPLATE-CXTM ctm/in/prefix-template-scope.ctm: PASS (263 bytes)
+TEMPLATE-CXTM ctm/in/template-ambiguous-parameter.ctm: PASS (376 bytes)
+TEMPLATE-CXTM ctm/in/template-ambiguous-parameter2.ctm: PASS (407 bytes)
+TEMPLATE-CXTM ctm/in/template-ambiguous-parameter3.ctm: PASS (399 bytes)
+TEMPLATE-CXTM ctm/in/template-ambiguous-parameter4.ctm: PASS (1506 bytes)
+TEMPLATE-CXTM ctm/in/template-assoc-embedded-topic.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-duplicate-name.ctm: PASS (438 bytes)
+TEMPLATE-CXTM ctm/in/template-forward-ref.ctm: PASS (825 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-embedded.ctm: PASS (401 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-embedded2.ctm: PASS (401 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-noargs-isa.ctm: PASS (963 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-noargs2.ctm: PASS (828 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-prefix-notation.ctm: PASS (328 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-twice.ctm: PASS (402 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named.ctm: PASS (331 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named2.ctm: PASS (331 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named3.ctm: PASS (646 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named4.ctm: PASS (331 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named5.ctm: PASS (577 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named6.ctm: PASS (581 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard.ctm: PASS (484 bytes)
+TEMPLATE-CXTM ctm/in/template-item-identifier.ctm: PASS (131 bytes)
+TEMPLATE-CXTM ctm/in/template-item-identifier2.ctm: PASS (131 bytes)
+TEMPLATE-CXTM ctm/in/template-item-identifier4.ctm: PASS (157 bytes)
+TEMPLATE-CXTM ctm/in/template-nested-occtype.ctm: PASS (576 bytes)
+TEMPLATE-CXTM ctm/in/template-nested-occtype2.ctm: PASS (737 bytes)
+TEMPLATE-CXTM ctm/in/template-noop.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-noop2.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-noop3.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-references.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-simple.ctm: PASS (114 bytes)
+TEMPLATE-CXTM ctm/in/template-subject-identifier.ctm: PASS (141 bytes)
+TEMPLATE-CXTM ctm/in/template-subject-locator.ctm: PASS (131 bytes)
+TEMPLATE-CXTM ctm/in/template-subject-locator2.ctm: PASS (131 bytes)
+TEMPLATE-CXTM ctm/in/template-subject-locator4.ctm: PASS (194 bytes)
+TEMPLATE-CXTM ctm/in/template-topic-nested.ctm: PASS (678 bytes)
+TEMPLATE-CXTM ctm/in/template-topic-nested2.ctm: PASS (596 bytes)
+TEMPLATE-CXTM ctm/in/template-typed-value.ctm: PASS (351 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard-named.ctm: PASS (211 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard-named2.ctm: PASS (211 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard-named3.ctm: PASS (211 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard-named4.ctm: PASS (919 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard.ctm: PASS (203 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard2.ctm: PASS (293 bytes)
+TEMPLATE-CXTM ctm/in/tmlab-tmql-issue-48.ctm: PASS (2358 bytes)
+TEMPLATE-CXTM ctm/in/topic-embedded-template-invocation.ctm: PASS (1357 bytes)
+TEMPLATE-CXTM ctm/in/topic-identifier-eq-template-name.ctm: PASS (207 bytes)
+TEMPLATE-CXTM ctm/in/topic-template-invocation-unary.ctm: PASS (328 bytes)
+TEMPLATE-CXTM ctm/in/topic-template-invocation.ctm: PASS (328 bytes)
+TEMPLATE-CXTM ctm/in/variant-scope-embedded3.ctm: PASS (2547 bytes)
+TEMPLATE-CXTM ctm/in/variant-scope-embedded4.ctm: PASS (3734 bytes)
+TEMPLATE-REJECTION ctm/invalid/embedded-topic-template.ctm: PASS (INVALID-TEMPLATE-BODY)
+TEMPLATE-REJECTION ctm/invalid/occurrence-explicit-datatype-as-parameter.ctm: PASS (VARIABLE-DATATYPE)
+TEMPLATE-REJECTION ctm/invalid/prefix-template-scope.ctm: PASS (INVALID-TEMPLATE-BODY)
+TEMPLATE-REJECTION ctm/invalid/template-bad-type.ctm: PASS (INVALID-TEMPLATE-ARGUMENT)
+TEMPLATE-REJECTION ctm/invalid/template-missing-args.ctm: PASS (TEMPLATE-ARITY)
+TEMPLATE-REJECTION ctm/invalid/template-missing-def.ctm: PASS (UNDEFINED-TEMPLATE)
+TEMPLATE-REJECTION ctm/invalid/template-name-collision.ctm: PASS (DUPLICATE-TEMPLATE)
+TEMPLATE-REJECTION ctm/invalid/tm-reifier-in-template.ctm: PASS (INVALID-TEMPLATE-BODY)
+TEMPLATE-REJECTION ctm/invalid/variable-undefined.ctm: PASS (VARIABLE-OUTSIDE-TEMPLATE)
+TEMPLATE-REJECTION ctm/invalid/variable-undefined2.ctm: PASS (VARIABLE-OUTSIDE-TEMPLATE)
+TEMPLATES-PASS: 297 checks; 57 byte-exact originals, 10 specific rejections; 187 PASS, 2 known FAIL, 84 NOT-RUN.
+MAP-IMPORT-PASS: 275 checks; no CTM import contracts executed.
+MERGEMAP-CXTM ctm/in/mergemap.ctm: PASS (1511 bytes)
+MERGEMAP-CXTM ctm/in/mergemap-syntax-qname.ctm: PASS (1511 bytes)
+MERGEMAP-CXTM ctm/in/mergemap-template.ctm: PASS (1529 bytes)
+MERGEMAP-CXTM ctm/in/mergemap-tm-reifier.ctm: PASS (134 bytes)
+MERGEMAP-REJECTION ctm/invalid/mergemap-missing-syntax-iri.ctm: PASS (EXPECTED-MERGEMAP-NOTATION)
+MERGEMAP-REJECTION ctm/invalid/mergemap-template.ctm: PASS (UNDEFINED-TEMPLATE)
+MERGEMAP-REJECTION ctm/invalid/mergemap-unknown-syntax.ctm: PASS (UNKNOWN-MERGEMAP-NOTATION)
+MERGEMAP-PASS: 118 checks; four byte-exact originals, three specific rejections.
+INCLUDE-CXTM ctm/in/include.ctm: PASS (1939/1939 bytes)
+INCLUDE-CXTM ctm/in/include-prefix.ctm: PASS (140/140 bytes)
+INCLUDE-CXTM ctm/in/include-prefix2.ctm: PASS (261/261 bytes)
+INCLUDE-CXTM ctm/in/include-template.ctm: FAIL (353/401 bytes)
+INCLUDE-CXTM ctm/in/include-template-wildcard.ctm: PASS (330/330 bytes)
+INCLUDE-CXTM ctm/in/include-tm-reifier.ctm: PASS (375/375 bytes)
+INCLUDE-CXTM ctm/in/include-topicref.ctm: PASS (1490/1490 bytes)
+INCLUDE-CXTM ctm/in/include-wildcard.ctm: PASS (499/499 bytes)
+INCLUDE-CXTM ctm/in/include-wildcard2.ctm: FAIL (719/669 bytes)
+INCLUDE-REJECTION ctm/invalid/include-prefix.ctm: PASS (UNDEFINED-PREFIX)
+INCLUDE-REJECTION ctm/invalid/include-prefix2.ctm: PASS (UNDEFINED-PREFIX)
+INCLUDE-REJECTION ctm/invalid/include-xtm.ctm: PASS (INVALID-IRI)
+INCLUDE-PASS: 93 checks; seven byte-exact originals, three rejections, two explicit baseline FAILs.
+XTM-ADAPTER-BOUNDARY-PASS: explicit adapter required before resource retrieval
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+XTM-MERGEMAP-CHECK-PASS original:raw-vector-eq-at-XTM-reader
+XTM-MERGEMAP-CHECK-PASS original:XTM-document-and-source-key
+XTM-MERGEMAP-CHECK-PASS original:actual-child-map-and-import-operation
+XTM-MERGEMAP-CHECK-PASS original:source-preserved-after-import
+XTM-MERGEMAP-CHECK-PASS original:imported-content-is-copied-and-resolves-eq
+XTM-MERGEMAP-CHECK-PASS original:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS original:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS original:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS original:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS original:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS original:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS original:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS original:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS original:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS original:deterministic
+XTM-MERGEMAP-CHECK-PASS original:raw-slots-and-retained-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS original:one-request-one-reader-one-import
+XTM-MERGEMAP-CHECK-PASS original:1519-byte-original-baseline-exact
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:exact-resolver-contract
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:exact-resolver-contract
+XTM-MERGEMAP-CHECK-PASS notation-QName:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS notation-QName:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS notation-QName:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS notation-QName:exact-resolver-contract
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:exact-resolver-contract
+XTM-MERGEMAP-CHECK-PASS source-key:does-not-change-topic-identifiers-or-model
+XTM-MERGEMAP-CHECK-PASS UTF16:negative-control-CTM-UTF8-cannot-decode
+XTM-MERGEMAP-CHECK-PASS UTF16:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS UTF16:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS UTF16:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS UTF16:original-bytes-eq-at-qualified-XML-boundary
+XTM-MERGEMAP-CHECK-PASS UTF16:no-CTM-decoding-no-byte-mutation
+XTM-MERGEMAP-CHECK-PASS resolver:generic-byte-vector-storage-supported-without-decoding
+XTM-MERGEMAP-CHECK-PASS repeat:1:source-raw-state-preserved
+XTM-MERGEMAP-CHECK-PASS repeat:2:source-raw-state-preserved
+XTM-MERGEMAP-CHECK-PASS repeat:all-retained-target-handles-canonical
+XTM-MERGEMAP-CHECK-PASS repeat:two-actual-resolver-and-import-calls
+XTM-MERGEMAP-CHECK-PASS repeat:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS repeat:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS repeat:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS repeat:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS repeat:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS repeat:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS repeat:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS repeat:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS repeat:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS repeat:deterministic
+XTM-MERGEMAP-CHECK-PASS repeat:raw-slots-and-retained-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS mixed:NIL:actual-model-counts-and-canonical-refs
+XTM-MERGEMAP-CHECK-PASS mixed:NIL:notation-dispatch-order
+XTM-MERGEMAP-CHECK-PASS mixed:NIL:deterministic
+XTM-MERGEMAP-CHECK-PASS mixed:NIL:raw-slots-and-retained-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS mixed:T:actual-model-counts-and-canonical-refs
+XTM-MERGEMAP-CHECK-PASS mixed:T:notation-dispatch-order
+XTM-MERGEMAP-CHECK-PASS mixed:T:deterministic
+XTM-MERGEMAP-CHECK-PASS mixed:T:raw-slots-and-retained-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS mixed:construction-order-independent-CXTM
+XTM-MERGEMAP-CHECK-PASS nested:relative-XTM-resource-and-child-caller-context
+XTM-MERGEMAP-CHECK-PASS forward:identity-merge-shared-player-EQ
+XTM-MERGEMAP-CHECK-PASS forward:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS forward:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS forward:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS forward:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS forward:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS forward:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS metadata:source-map-state-and-reifier-EQ-preserved
+XTM-MERGEMAP-CHECK-PASS metadata:map-identifiers-and-map-reifier-not-copied
+XTM-MERGEMAP-CHECK-PASS metadata:source-map-not-a-content-item
+XTM-MERGEMAP-CHECK-PASS metadata:actual-import-was-reached
+XTM-MERGEMAP-CHECK-PASS missing-resolver:condition-and-code
+XTM-MERGEMAP-CHECK-PASS missing-resolver:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS missing-resolver:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS unknown-resource:condition-and-code
+XTM-MERGEMAP-CHECK-PASS unknown-resource:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS unknown-resource:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS resolver-refusal:condition-and-code
+XTM-MERGEMAP-CHECK-PASS resolver-refusal:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS resolver-refusal:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS resolver-refusal:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS invalid-result:("text" "source"):condition-and-code
+XTM-MERGEMAP-CHECK-PASS invalid-result:("text" "source"):parent-directive-location
+XTM-MERGEMAP-CHECK-PASS invalid-result:("text" "source"):resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(256) "source"):condition-and-code
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(256) "source"):parent-directive-location
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(256) "source"):resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(60) 42):condition-and-code
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(60) 42):parent-directive-location
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(60) 42):resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS malformed-XML:condition-and-code
+XTM-MERGEMAP-CHECK-PASS malformed-XML:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS malformed-XML:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS malformed-XML:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS malformed-XML:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:condition-and-code
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:condition-and-code
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS bad-version:condition-and-code
+XTM-MERGEMAP-CHECK-PASS bad-version:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS bad-version:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS bad-version:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS bad-version:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS bad-namespace:condition-and-code
+XTM-MERGEMAP-CHECK-PASS bad-namespace:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS bad-namespace:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS bad-namespace:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS bad-namespace:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS bad-id:condition-and-code
+XTM-MERGEMAP-CHECK-PASS bad-id:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS bad-id:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS bad-id:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS bad-id:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:condition-and-code
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:condition-and-code
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS unsupported-name:condition-and-code
+XTM-MERGEMAP-CHECK-PASS unsupported-name:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS unsupported-name:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS unsupported-name:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS unsupported-name:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS TMDM-child-core-conflict:condition-and-code
+XTM-MERGEMAP-CHECK-PASS TMDM-child-core-conflict:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS TMDM-child-core-conflict:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS TMDM-child-core-conflict:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS unknown-notation:is-CTM-rejection-before-fetch
+XTM-MERGEMAP-CHECK-PASS conflict:ITEM:actual-import-precise-cause
+XTM-MERGEMAP-CHECK-PASS conflict:ITEM:both-models-and-raw-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS conflict:ITEM:import-condition-preserved-at-directive
+XTM-MERGEMAP-CHECK-PASS conflict:CORE:actual-import-precise-cause
+XTM-MERGEMAP-CHECK-PASS conflict:CORE:both-models-and-raw-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS conflict:CORE:import-condition-preserved-at-directive
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-syntax-qname.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-syntax-qname.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-template.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-template.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-tm-reifier.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-tm-reifier.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-prefix.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-prefix.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-prefix2.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-prefix2.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-template.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-template.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-template-wildcard.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-template-wildcard.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-tm-reifier.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-tm-reifier.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-topicref.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-topicref.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-wildcard.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-wildcard.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-wildcard2.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-wildcard2.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/mergemap-missing-syntax-iri.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/mergemap-template.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/mergemap-unknown-syntax.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/include-prefix.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/include-prefix2.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/include-xtm.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS only-one-new-original-contract
+XTM-MERGEMAP-CHECK-PASS unique-check-names
+XTM-MERGEMAP-PASS: 217 checks; actual 1519-byte original contract PASS
+REGISTERED-ORIGINAL ctm/in/comment-ml.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-ml-nested.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-ml-nested2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl3.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl4.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl5.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl6.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/empty.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/association-qname-iid.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/item-identifier-INF.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/item-identifier-relative.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/qname-date.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/qname-digits.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/rootless-uri.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-identifier-dot.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-identifier-non-http.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-identifier-relative.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-locator-dot.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-locator-relative.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/topic-identifier-INF.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/topic-identifier-unicode.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-decimal-dot-neg2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-decimal-dot-pos.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-decimal-leading-zeros2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-duplicate-string.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-duplicate-uri.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-qname-value.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-string-multiline.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-string-multiline2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-uri-semicolon.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/prefix-multiline2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/prefix-multiline3.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/prefix-multiline4.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/prefix-with-qm.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/string-escape.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/string-escape2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/unicode-escape-u4.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/unicode-escape-u6.ctm: PASS
+REGISTERED-ORIGINALS-PASS: 286 checks; forty actual byte-exact original contracts
+REGISTERED-NEGATIVE ctm/invalid/occurrence-double-positive-infinity.ctm: PASS; EXPECTED-OCCURRENCE-VALUE in ctm/invalid/occurrence-double-positive-infinity.ctm at CHARACTER 15 (line 2, column 10): Expected a supported CTM literal value.
+REGISTERED-NEGATIVE ctm/invalid/occurrence-double-negative-infinity.ctm: PASS; EXPECTED-OCCURRENCE-VALUE in ctm/invalid/occurrence-double-negative-infinity.ctm at CHARACTER 15 (line 2, column 10): Expected a supported CTM literal value.
+REGISTERED-NEGATIVE ctm/invalid/qname-hyphen.ctm: PASS; UNEXPECTED-TOKEN in ctm/invalid/qname-hyphen.ctm at CHARACTER 38 (line 3, column 3): Unexpected token after topic or name.
+REGISTERED-NEGATIVE ctm/invalid/string-unbalanced.ctm: PASS; UNTERMINATED-STRING in ctm/invalid/string-unbalanced.ctm at CHARACTER 8 (line 1, column 9): Unterminated quoted string.
+REGISTERED-NEGATIVE ctm/invalid/string-unicode.ctm: PASS; INVALID-UNICODE-ESCAPE in ctm/invalid/string-unicode.ctm at CHARACTER 11 (line 1, column 12): Expected hexadecimal escape digit.
+REGISTERED-NEGATIVE ctm/invalid/string-unicode2.ctm: PASS; INVALID-UNICODE-ESCAPE in ctm/invalid/string-unicode2.ctm at CHARACTER 15 (line 1, column 16): Expected hexadecimal escape digit.
+REGISTERED-NEGATIVE ctm/invalid/topic-id-illegal.ctm: PASS; UNEXPECTED-CHARACTER in ctm/invalid/topic-id-illegal.ctm at CHARACTER 0 (line 1, column 1): Unexpected character #\COMBINING_DOUBLE_INVERTED_BREVE.
+REGISTERED-NEGATIVES-PASS: 25 checks; 7 intended original rejections registered; 0 remain NOT-RUN
+PROLOG-ORIGINAL ctm/invalid/BOM-contradicts-encoding.ctm: PASS; ENCODING-CONFLICT in ctm/invalid/BOM-contradicts-encoding.ctm at BYTE 14: Encoding "iso-8859-1" conflicts with explicitly selected "UTF-8".
+PROLOG-ORIGINAL ctm/invalid/unknown-directive.ctm: PASS; UNKNOWN-DIRECTIVE in ctm/invalid/unknown-directive.ctm at CHARACTER 0 (line 1, column 1): Unknown CTM directive %ctm.
+PROLOG-ORIGINAL ctm/invalid/wrong-version.ctm: PASS; INVALID-VERSION in ctm/invalid/wrong-version.ctm at CHARACTER 9 (line 1, column 10): The only CTM version is the exact spelling 1.0.
+PROLOG-PASS: 171 checks; three intended original rejections
+EMPTY2-ORIGINAL ctm/in/empty2.ctm: PASS; 23 byte-exact CXTM bytes
+EMPTY2-PASS: 13 checks; one actual original contract
+CTM-INTEGER-ORIGINAL ctm/in/occurrence-ctm-integer.ctm: PASS; 356 byte-exact CXTM bytes
+CTM-INTEGER-PASS: 112 checks; one original plus 31 positive and 26 negative controls
+TRIPLE-ORIGINAL ctm/in/occurrence-string-triple.ctm: PASS; 367 byte-exact CXTM bytes
+TRIPLE-ORIGINAL ctm/in/occurrence-string-triple2.ctm: PASS; 370 byte-exact CXTM bytes
+TRIPLE-ORIGINAL ctm/in/unicode-escape-u4-triple-string.ctm: PASS; 331 byte-exact CXTM bytes
+TRIPLE-ORIGINAL ctm/in/unicode-escape-u6-triple-string.ctm: PASS; 331 byte-exact CXTM bytes
+TRIPLE-PASS: 226 checks; four originals plus 77 positive and 31 negative controls
+ENCODING-ORIGINAL ctm/in/encoding-8859-5.ctm: PASS; 337 byte-exact CXTM bytes
+ENCODING-PASS: 722 checks; 256 byte mappings, one original, 74 positive and 33 negative controls

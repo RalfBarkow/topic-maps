@@ -1,0 +1,336 @@
+{
+  "kind": "ctm-template-tail-documentation-validation",
+  "baseCommit": "bc04a1657f0b548ec5cdf2862aeed6a1ad0630b8",
+  "branch": "codex/ctm-slice-20j",
+  "startedAtUTC": "2026-10-19T11:42:06.176995+00:00",
+  "finishedAtUTC": "2026-10-19T11:42:49.742664+00:00",
+  "runtime": "SBCL 2.5.4",
+  "runs": [
+    {
+      "label": "source-preparation",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "python3",
+        "/Users/rgb/workspace/topic-maps/reports/slice-20j/reproduce.py",
+        "--prepare",
+        "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-20j-m9x036e_/sources"
+      ],
+      "network": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T11:42:06.180916+00:00",
+      "exitCode": 0,
+      "finishedAtUTC": "2026-10-19T11:42:09.347892+00:00"
+    },
+    {
+      "label": "xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "tests/cxml-probe.lisp"
+      ],
+      "network": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T11:42:09.348921+00:00",
+      "exitCode": 0,
+      "finishedAtUTC": "2026-10-19T11:42:16.409176+00:00"
+    },
+    {
+      "label": "xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "scripts/fresh-xtm.lisp"
+      ],
+      "network": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T11:42:16.409853+00:00",
+      "exitCode": 0,
+      "finishedAtUTC": "2026-10-19T11:42:17.970671+00:00"
+    },
+    {
+      "label": "regression",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)",
+        "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+      ],
+      "network": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T11:42:17.971310+00:00",
+      "exitCode": 0,
+      "finishedAtUTC": "2026-10-19T11:42:38.675830+00:00"
+    },
+    {
+      "label": "observations",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-20j-m9x036e_/observe.lisp"
+      ],
+      "network": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T11:42:38.676917+00:00",
+      "exitCode": 0,
+      "finishedAtUTC": "2026-10-19T11:42:46.792820+00:00"
+    }
+  ],
+  "sourcePreparation": {
+    "sources": [
+      {
+        "name": "cxml",
+        "sha256": "18fls3bx7vmnxfa6qara8fxp316d8kb3izar0kysvqg6l0a45a51",
+        "source": "/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source",
+        "url": "http://beta.quicklisp.org/archive/cxml/2020-06-10/cxml-20200610-git.tgz",
+        "version": "20200610-git"
+      },
+      {
+        "name": "closure-common",
+        "sha256": "0k5r2qxn122pxi301ijir3nayi9sg4d7yiy276l36qmzwhp4mg5n",
+        "source": "/nix/store/yw7j44h85ilvrg9jsnwcyz048nbl3cl9-source",
+        "url": "http://beta.quicklisp.org/archive/closure-common/2018-10-18/closure-common-20181018-git.tgz",
+        "version": "20181018-git"
+      },
+      {
+        "name": "babel",
+        "sha256": "0359bj3yr6frybcmg8qr5vi4q8hzbsb7hmvxdc0jgkfz3c33q667",
+        "source": "/nix/store/76bbavhilddfxd2b56inkdzi6ym860cs-source",
+        "url": "http://beta.quicklisp.org/archive/babel/2024-10-12/babel-20241012-git.tgz",
+        "version": "20241012-git"
+      },
+      {
+        "name": "alexandria",
+        "sha256": "0jq0n59s0r9yl374f0zpdnaflb5g853yqvax7ka8rnypspyykwdw",
+        "source": "/nix/store/i6nnd3amy08a3f3v8q76nh9kw9434z29-source",
+        "url": "http://beta.quicklisp.org/archive/alexandria/2024-10-12/alexandria-20241012-git.tgz",
+        "version": "20241012-git"
+      },
+      {
+        "name": "trivial-features",
+        "sha256": "0r33ycg1wsmglbsychglzkd6fachnnqfzd0w9mhpwi6cz94hx7c3",
+        "source": "/nix/store/fldw3972prvmlv87f0qf69myk79kz1g4-source",
+        "url": "http://beta.quicklisp.org/archive/trivial-features/2023-06-18/trivial-features-20230618-git.tgz",
+        "version": "20230618-git"
+      },
+      {
+        "name": "trivial-gray-streams",
+        "sha256": "0iw6q5hx7x8sc5s7ikvsjccsksbm0rd13d54mkrg62sc56hjywrm",
+        "source": "/nix/store/sk5ab989c1q4yb1b6rwh0rsa5d2iiq5b-source",
+        "url": "http://beta.quicklisp.org/archive/trivial-gray-streams/2024-10-12/trivial-gray-streams-20241012-git.tgz",
+        "version": "20241012-git"
+      },
+      {
+        "name": "puri",
+        "sha256": "0gq2rsr0aihs0z20v4zqvmdl4szq53b52rh97pvnmwrlbn4mapmd",
+        "source": "/nix/store/9h9dj9dlm06x99n3px6vsqh40c6djan8-source",
+        "url": "http://beta.quicklisp.org/archive/puri/2020-10-16/puri-20201016-git.tgz",
+        "version": "20201016-git"
+      }
+    ],
+    "patches": [
+      {
+        "package": "cxml",
+        "patch": "patches/cxml-19d0b.patch",
+        "sha256": "86720fb7960057def9092e8e75332ce45348b9809766667b8e6b1901c7cf5f24",
+        "changedFiles": {
+          "xml/xml-parse.lisp": {
+            "before": "ab9adf0468889ad59cce2eef51530504a77a2c460d73ca291f9625e0bad4ea00",
+            "after": "fe8be457127977b41a198d70426c3d194499af123a68cd165e27886993931d30"
+          }
+        },
+        "application": "patching file 'xml/xml-parse.lisp'"
+      },
+      {
+        "package": "closure-common",
+        "patch": "patches/closure-common-19d0b.patch",
+        "sha256": "bbe8e956a147f6f122025e3c355bb13cf0d55ad811d1d4003f9ab50976aed74a",
+        "changedFiles": {
+          "encodings.lisp": {
+            "before": "f7bf3ebbb2e37fdb8f497320a2e8770196f31a51cb74b43a48b82fa6b12cb442",
+            "after": "d9c1cd3f66ae2189988ada0da75568a198a17b082b1609b20a085eeb3b0e73e1"
+          },
+          "xstream.lisp": {
+            "before": "b373d1c4b880a1ee41e779db046f84e3a252d843700ece826151111269ce45e8",
+            "after": "1acdc5eecb03022488c0cf0274a021844035c6ad6aa5a9fd2cc1cd0c5819d338"
+          }
+        },
+        "application": "patching file encodings.lisp\npatching file xstream.lisp"
+      }
+    ],
+    "effectiveSources": [
+      {
+        "name": "cxml",
+        "source": "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-20j-m9x036e_/sources/cxml"
+      },
+      {
+        "name": "closure-common",
+        "source": "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-20j-m9x036e_/sources/closure-common"
+      },
+      {
+        "name": "babel",
+        "source": "/nix/store/76bbavhilddfxd2b56inkdzi6ym860cs-source"
+      },
+      {
+        "name": "alexandria",
+        "source": "/nix/store/i6nnd3amy08a3f3v8q76nh9kw9434z29-source"
+      },
+      {
+        "name": "trivial-features",
+        "source": "/nix/store/fldw3972prvmlv87f0qf69myk79kz1g4-source"
+      },
+      {
+        "name": "trivial-gray-streams",
+        "source": "/nix/store/sk5ab989c1q4yb1b6rwh0rsa5d2iiq5b-source"
+      },
+      {
+        "name": "puri",
+        "source": "/nix/store/9h9dj9dlm06x99n3px6vsqh40c6djan8-source"
+      }
+    ],
+    "sourceRegistry": "(:source-registry (:tree \"/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-20j-m9x036e_/sources/cxml/\") (:tree \"/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-20j-m9x036e_/sources/closure-common/\") (:tree \"/nix/store/76bbavhilddfxd2b56inkdzi6ym860cs-source/\") (:tree \"/nix/store/i6nnd3amy08a3f3v8q76nh9kw9434z29-source/\") (:tree \"/nix/store/fldw3972prvmlv87f0qf69myk79kz1g4-source/\") (:tree \"/nix/store/sk5ab989c1q4yb1b6rwh0rsa5d2iiq5b-source/\") (:tree \"/nix/store/9h9dj9dlm06x99n3px6vsqh40c6djan8-source/\") :ignore-inherited-configuration)"
+  },
+  "retainedLispChecks": 12100,
+  "retainedChecks": {
+    "FOUNDATION": 54,
+    "CTM-IDENTITY-SEMANTICS": 123,
+    "CTM-MERGING-SEMANTICS": 646,
+    "CTM-ASSOCIATIONS-SEMANTICS": 657,
+    "CXTM": 445,
+    "OCCURRENCES": 1101,
+    "PREFIX-DATATYPES": 150,
+    "INTEGERS": 665,
+    "DECIMALS": 715,
+    "DATES": 1806,
+    "DATETIMES": 217,
+    "TIMEZONES": 1944,
+    "TYPED-NAMES": 106,
+    "SCOPES": 293,
+    "VARIANTS": 324,
+    "REFERENCES": 238,
+    "ITEM-IDENTIFIERS": 244,
+    "REIFICATION": 236,
+    "ASSOCIATION-ARITY": 337,
+    "TYPE-RELATIONSHIPS": 1016,
+    "TEMPLATES": 297,
+    "MAP-IMPORT": 275,
+    "MERGEMAP": 118,
+    "INCLUDE": 93
+  },
+  "stageChecks": {
+    "XTM-MERGEMAP": 217,
+    "REGISTERED-ORIGINALS": 286,
+    "REGISTERED-NEGATIVES": 25,
+    "PROLOG": 171,
+    "EMPTY2": 13,
+    "CTM-INTEGER": 112,
+    "TRIPLE": 226,
+    "ENCODING": 722
+  },
+  "xmlQualificationChecks": 146,
+  "standaloneXTMChecks": 327,
+  "pythonUnitTests": 2,
+  "nfcOracleComparisons": 16294,
+  "originalObservationsReproduced": 7,
+  "explorativeControlsReproduced": 12,
+  "expandedBaselineComparisons": 3,
+  "ctmStatusesBefore": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "ctmStatusesAfter": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "ctmStatusChanges": [],
+  "xtmCorpusStatuses": {
+    "pass": 6,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 118
+  },
+  "allRetainedReportsEqualToSlice20H": [
+    "reports/slice-20h/retained/core.json",
+    "reports/slice-20h/retained/core.json.arity.json",
+    "reports/slice-20h/retained/core.json.associations.json",
+    "reports/slice-20h/retained/core.json.cxtm.json",
+    "reports/slice-20h/retained/core.json.dates.json",
+    "reports/slice-20h/retained/core.json.datetimes.json",
+    "reports/slice-20h/retained/core.json.decimals.json",
+    "reports/slice-20h/retained/core.json.identifiers.json",
+    "reports/slice-20h/retained/core.json.include.json",
+    "reports/slice-20h/retained/core.json.integers.json",
+    "reports/slice-20h/retained/core.json.map-import.json",
+    "reports/slice-20h/retained/core.json.mergemap.json",
+    "reports/slice-20h/retained/core.json.merging.json",
+    "reports/slice-20h/retained/core.json.occurrences.json",
+    "reports/slice-20h/retained/core.json.prefixes.json",
+    "reports/slice-20h/retained/core.json.references.json",
+    "reports/slice-20h/retained/core.json.reification.json",
+    "reports/slice-20h/retained/core.json.relationships.json",
+    "reports/slice-20h/retained/core.json.scopes.json",
+    "reports/slice-20h/retained/core.json.semantics.json",
+    "reports/slice-20h/retained/core.json.templates.json",
+    "reports/slice-20h/retained/core.json.timezones.json",
+    "reports/slice-20h/retained/core.json.typed-names.json",
+    "reports/slice-20h/retained/core.json.variants.json",
+    "reports/slice-20h/retained/slice20a.cxtm.json",
+    "reports/slice-20h/retained/slice20a.registration.json",
+    "reports/slice-20h/retained/slice20a.validation.json",
+    "reports/slice-20h/retained/slice20b.cxtm.json",
+    "reports/slice-20h/retained/slice20b.negative.json",
+    "reports/slice-20h/retained/slice20b.validation.json",
+    "reports/slice-20h/retained/slice20c.cxtm.json",
+    "reports/slice-20h/retained/slice20c.prolog.json",
+    "reports/slice-20h/retained/slice20c.validation.json",
+    "reports/slice-20h/retained/slice20e.cxtm.json",
+    "reports/slice-20h/retained/slice20e.registration.json",
+    "reports/slice-20h/retained/slice20e.validation.json",
+    "reports/slice-20h/retained/slice20f.cxtm.json",
+    "reports/slice-20h/retained/slice20f.literal.json",
+    "reports/slice-20h/retained/slice20f.validation.json",
+    "reports/slice-20h/retained/slice20g.cxtm.json",
+    "reports/slice-20h/retained/slice20g.triple.json",
+    "reports/slice-20h/retained/slice20g.validation.json",
+    "reports/slice-20h/retained/xtm-mergemap.cxtm.json",
+    "reports/slice-20h/retained/xtm-mergemap.integration.json",
+    "reports/slice-20h/retained/xtm-mergemap.validation.json",
+    "reports/slice-20h/retained/xtm.json",
+    "reports/slice-20h/current.validation.json",
+    "reports/slice-20h/current.cxtm.json",
+    "reports/slice-20h/current.encoding.json"
+  ],
+  "allBaseTrackedFileBytesUnchanged": true,
+  "baseTrackedFilesVerified": 3519,
+  "historicalReportsVerified": 1288,
+  "pinnedCorpusFilesVerified": 2006,
+  "newDependencyDownloads": 0,
+  "languageOrRegistrationChanges": false,
+  "persistentLispImagesTouched": false,
+  "fullOfflineNixRebuild": "NOT-RUN; verified local pinned Store sources and unchanged XML patches.",
+  "executionAuthorization": "Regular require_escalated approval; no symlink or sandbox configuration changes.",
+  "acceptancePassed": true
+}

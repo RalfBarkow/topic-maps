@@ -1,0 +1,411 @@
+[
+  {
+    "label": "expanded-ambiguous5",
+    "originalControlOnly": "ctm/in/template-ambiguous-parameter5.ctm",
+    "sourceText": "topic <http://www.example.org/something/>; =<http://www.example.org/something/>; ^<http://www.example.org/something/>.",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm",
+    "condition": null,
+    "model": {
+      "topicCount": 1,
+      "associationCount": 0,
+      "topics": [
+        {
+          "ordinal": 1,
+          "itemIdentifiers": [
+            "http://www.example.org/something/",
+            "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm#topic"
+          ],
+          "subjectIdentifiers": [
+            "http://www.example.org/something/"
+          ],
+          "subjectLocators": [
+            "http://www.example.org/something/"
+          ],
+          "names": [],
+          "occurrences": []
+        }
+      ]
+    },
+    "associations": [],
+    "referencesCurrent": true,
+    "canonicalizationPreservesMap": true,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something/</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something/</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something/</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "actualBytes": 353,
+    "expectedBytes": 353,
+    "byteExact": true
+  },
+  {
+    "label": "expanded-ambiguous6",
+    "originalControlOnly": "ctm/in/template-ambiguous-parameter6.ctm",
+    "sourceText": "%prefix ex <http://www.example.org/> topic ex:something; =ex:something; ^ex:something; occ: ex:something.",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm",
+    "condition": null,
+    "model": {
+      "topicCount": 2,
+      "associationCount": 0,
+      "topics": [
+        {
+          "ordinal": 1,
+          "itemIdentifiers": [
+            "http://www.example.org/something",
+            "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm#topic"
+          ],
+          "subjectIdentifiers": [
+            "http://www.example.org/something"
+          ],
+          "subjectLocators": [
+            "http://www.example.org/something"
+          ],
+          "names": [],
+          "occurrences": [
+            {
+              "value": "http://www.example.org/something",
+              "datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+              "parent": 1,
+              "type": 2,
+              "scope": []
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "itemIdentifiers": [
+            "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm#occ"
+          ],
+          "subjectIdentifiers": [],
+          "subjectLocators": [],
+          "names": [],
+          "occurrences": []
+        }
+      ]
+    },
+    "associations": [],
+    "referencesCurrent": true,
+    "canonicalizationPreservesMap": true,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occ</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.example.org/something</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+    "actualBytes": 613,
+    "expectedBytes": 613,
+    "byteExact": true
+  },
+  {
+    "label": "expanded-subject-identifier2",
+    "originalControlOnly": "ctm/in/template-subject-identifier2.ctm",
+    "sourceText": "topic <http://psi.example.org/fake>.",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm",
+    "condition": null,
+    "model": {
+      "topicCount": 1,
+      "associationCount": 0,
+      "topics": [
+        {
+          "ordinal": 1,
+          "itemIdentifiers": [
+            "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm#topic"
+          ],
+          "subjectIdentifiers": [
+            "http://psi.example.org/fake"
+          ],
+          "subjectLocators": [],
+          "names": [],
+          "occurrences": []
+        }
+      ]
+    },
+    "associations": [],
+    "referencesCurrent": true,
+    "canonicalizationPreservesMap": true,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://psi.example.org/fake</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "actualBytes": 204,
+    "expectedBytes": 204,
+    "byteExact": true
+  },
+  {
+    "label": "head-variable-IRI",
+    "originalControlOnly": null,
+    "sourceText": "def t($v) $v. end t(<http://www.example.org/entity>)",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": null,
+    "model": {
+      "topicCount": 1,
+      "associationCount": 0,
+      "topics": [
+        {
+          "ordinal": 1,
+          "itemIdentifiers": [],
+          "subjectIdentifiers": [
+            "http://www.example.org/entity"
+          ],
+          "subjectLocators": [],
+          "names": [],
+          "occurrences": []
+        }
+      ]
+    },
+    "associations": [],
+    "referencesCurrent": true,
+    "canonicalizationPreservesMap": true,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://www.example.org/entity</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+    "actualBytes": 143,
+    "expectedBytes": null,
+    "byteExact": false
+  },
+  {
+    "label": "head-variable-item-identifier",
+    "originalControlOnly": null,
+    "sourceText": "def t($v) $v. end t(^<http://www.example.org/entity>)",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": null,
+    "model": {
+      "topicCount": 1,
+      "associationCount": 0,
+      "topics": [
+        {
+          "ordinal": 1,
+          "itemIdentifiers": [
+            "http://www.example.org/entity"
+          ],
+          "subjectIdentifiers": [],
+          "subjectLocators": [],
+          "names": [],
+          "occurrences": []
+        }
+      ]
+    },
+    "associations": [],
+    "referencesCurrent": true,
+    "canonicalizationPreservesMap": true,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>http://www.example.org/entity</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "actualBytes": 137,
+    "expectedBytes": null,
+    "byteExact": false
+  },
+  {
+    "label": "head-variable-subject-locator",
+    "originalControlOnly": null,
+    "sourceText": "def t($v) $v. end t(=<http://www.example.org/entity>)",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": null,
+    "model": {
+      "topicCount": 1,
+      "associationCount": 0,
+      "topics": [
+        {
+          "ordinal": 1,
+          "itemIdentifiers": [],
+          "subjectIdentifiers": [],
+          "subjectLocators": [
+            "http://www.example.org/entity"
+          ],
+          "names": [],
+          "occurrences": []
+        }
+      ]
+    },
+    "associations": [],
+    "referencesCurrent": true,
+    "canonicalizationPreservesMap": true,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectLocators>\n<locator>http://www.example.org/entity</locator>\n</subjectLocators>\n</topic>\n</topicMap>\n",
+    "actualBytes": 137,
+    "expectedBytes": null,
+    "byteExact": false
+  },
+  {
+    "label": "IRI-variable-in-explicit-identities-type-player-and-literal",
+    "originalControlOnly": null,
+    "sourceText": "def t($v) $v. holder =$v; ^$v; occ: $v. $v($v : $v) end t(<http://www.example.org/entity>)",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": null,
+    "model": {
+      "topicCount": 2,
+      "associationCount": 1,
+      "topics": [
+        {
+          "ordinal": 1,
+          "itemIdentifiers": [
+            "http://www.example.org/entity",
+            "https://example.invalid/slice20i/control.ctm#holder"
+          ],
+          "subjectIdentifiers": [
+            "http://www.example.org/entity"
+          ],
+          "subjectLocators": [
+            "http://www.example.org/entity"
+          ],
+          "names": [],
+          "occurrences": [
+            {
+              "value": "http://www.example.org/entity",
+              "datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+              "parent": 1,
+              "type": 2,
+              "scope": []
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "itemIdentifiers": [
+            "https://example.invalid/slice20i/control.ctm#occ"
+          ],
+          "subjectIdentifiers": [],
+          "subjectLocators": [],
+          "names": [],
+          "occurrences": []
+        }
+      ]
+    },
+    "associations": [
+      {
+        "typeSI": [
+          "http://www.example.org/entity"
+        ],
+        "roles": [
+          {
+            "typeSI": [
+              "http://www.example.org/entity"
+            ],
+            "playerSI": [
+              "http://www.example.org/entity"
+            ]
+          }
+        ]
+      }
+    ],
+    "referencesCurrent": true,
+    "canonicalizationPreservesMap": true,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occ</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://www.example.org/entity</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/entity</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#holder</locator>\n<locator>http://www.example.org/entity</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.example.org/entity</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"2\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"2\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "actualBytes": 806,
+    "expectedBytes": null,
+    "byteExact": false
+  },
+  {
+    "label": "unmarked-tail-even-without-invocation",
+    "originalControlOnly": null,
+    "sourceText": "def t($v) topic $v. end",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": {
+      "condition": "INVALID-TEMPLATE-BODY",
+      "message": "TEMPLATE-IDENTITY-TAIL in unmarked-tail-even-without-invocation at CHARACTER 18 (line 1, column 19): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+      "code": "template-identity-tail",
+      "position": 18,
+      "line": 1,
+      "column": 19,
+      "positionUnit": "character",
+      "source": "unmarked-tail-even-without-invocation",
+      "cause": null,
+      "context": null
+    },
+    "model": null,
+    "associations": null,
+    "referencesCurrent": false,
+    "canonicalizationPreservesMap": false,
+    "actualCXTM": null,
+    "actualBytes": null,
+    "expectedBytes": null,
+    "byteExact": false
+  },
+  {
+    "label": "item-identifier-cannot-be-literal",
+    "originalControlOnly": null,
+    "sourceText": "def t($v) topic occ: $v. end t(^<http://www.example.org/entity>)",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": {
+      "condition": "INVALID-TEMPLATE-ARGUMENT",
+      "message": "INVALID-TEMPLATE-ARGUMENT in item-identifier-cannot-be-literal at CHARACTER 21 (line 1, column 22): The bound argument cannot be used as a literal.",
+      "code": "invalid-template-argument",
+      "position": 21,
+      "line": 1,
+      "column": 22,
+      "positionUnit": "character",
+      "source": "item-identifier-cannot-be-literal",
+      "cause": null,
+      "context": "((NAME t DEFINITION-POSITION 0 INVOCATION-POSITION 29 DEFINITION-SOURCE\n  item-identifier-cannot-be-literal DEFINITION-DOCUMENT-IRI\n  https://example.invalid/slice20i/control.ctm INVOCATION-SOURCE\n  item-identifier-cannot-be-literal INVOCATION-DOCUMENT-IRI\n  https://example.invalid/slice20i/control.ctm))"
+    },
+    "model": null,
+    "associations": null,
+    "referencesCurrent": false,
+    "canonicalizationPreservesMap": false,
+    "actualCXTM": null,
+    "actualBytes": null,
+    "expectedBytes": null,
+    "byteExact": false
+  },
+  {
+    "label": "subject-locator-cannot-be-literal",
+    "originalControlOnly": null,
+    "sourceText": "def t($v) topic occ: $v. end t(=<http://www.example.org/entity>)",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": {
+      "condition": "INVALID-TEMPLATE-ARGUMENT",
+      "message": "INVALID-TEMPLATE-ARGUMENT in subject-locator-cannot-be-literal at CHARACTER 21 (line 1, column 22): The bound argument cannot be used as a literal.",
+      "code": "invalid-template-argument",
+      "position": 21,
+      "line": 1,
+      "column": 22,
+      "positionUnit": "character",
+      "source": "subject-locator-cannot-be-literal",
+      "cause": null,
+      "context": "((NAME t DEFINITION-POSITION 0 INVOCATION-POSITION 29 DEFINITION-SOURCE\n  subject-locator-cannot-be-literal DEFINITION-DOCUMENT-IRI\n  https://example.invalid/slice20i/control.ctm INVOCATION-SOURCE\n  subject-locator-cannot-be-literal INVOCATION-DOCUMENT-IRI\n  https://example.invalid/slice20i/control.ctm))"
+    },
+    "model": null,
+    "associations": null,
+    "referencesCurrent": false,
+    "canonicalizationPreservesMap": false,
+    "actualCXTM": null,
+    "actualBytes": null,
+    "expectedBytes": null,
+    "byteExact": false
+  },
+  {
+    "label": "second-item-identifier-in-IRI-slot",
+    "originalControlOnly": null,
+    "sourceText": "def t($a,$b) topic1 ^$a. topic2 ^$b. end t(<http://www.example.org/>,^<http://www.example.org/>)",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": {
+      "condition": "INVALID-TEMPLATE-ARGUMENT",
+      "message": "INVALID-TEMPLATE-ARGUMENT in second-item-identifier-in-IRI-slot at CHARACTER 33 (line 1, column 34): The bound argument cannot be used as an IRI after = or ^.",
+      "code": "invalid-template-argument",
+      "position": 33,
+      "line": 1,
+      "column": 34,
+      "positionUnit": "character",
+      "source": "second-item-identifier-in-IRI-slot",
+      "cause": null,
+      "context": "((NAME t DEFINITION-POSITION 0 INVOCATION-POSITION 41 DEFINITION-SOURCE\n  second-item-identifier-in-IRI-slot DEFINITION-DOCUMENT-IRI\n  https://example.invalid/slice20i/control.ctm INVOCATION-SOURCE\n  second-item-identifier-in-IRI-slot INVOCATION-DOCUMENT-IRI\n  https://example.invalid/slice20i/control.ctm))"
+    },
+    "model": null,
+    "associations": null,
+    "referencesCurrent": false,
+    "canonicalizationPreservesMap": false,
+    "actualCXTM": null,
+    "actualBytes": null,
+    "expectedBytes": null,
+    "byteExact": false
+  },
+  {
+    "label": "second-subject-locator-in-IRI-slot",
+    "originalControlOnly": null,
+    "sourceText": "def t($a,$b) topic1 =$a. topic2 =$b. end t(<http://www.example.org/>,=<http://www.example.org/>)",
+    "documentIRI": "https://example.invalid/slice20i/control.ctm",
+    "condition": {
+      "condition": "INVALID-TEMPLATE-ARGUMENT",
+      "message": "INVALID-TEMPLATE-ARGUMENT in second-subject-locator-in-IRI-slot at CHARACTER 33 (line 1, column 34): The bound argument cannot be used as an IRI after = or ^.",
+      "code": "invalid-template-argument",
+      "position": 33,
+      "line": 1,
+      "column": 34,
+      "positionUnit": "character",
+      "source": "second-subject-locator-in-IRI-slot",
+      "cause": null,
+      "context": "((NAME t DEFINITION-POSITION 0 INVOCATION-POSITION 41 DEFINITION-SOURCE\n  second-subject-locator-in-IRI-slot DEFINITION-DOCUMENT-IRI\n  https://example.invalid/slice20i/control.ctm INVOCATION-SOURCE\n  second-subject-locator-in-IRI-slot INVOCATION-DOCUMENT-IRI\n  https://example.invalid/slice20i/control.ctm))"
+    },
+    "model": null,
+    "associations": null,
+    "referencesCurrent": false,
+    "canonicalizationPreservesMap": false,
+    "actualCXTM": null,
+    "actualBytes": null,
+    "expectedBytes": null,
+    "byteExact": false
+  }
+]

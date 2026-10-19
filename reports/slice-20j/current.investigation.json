@@ -1,0 +1,1171 @@
+{
+  "kind": "ctm-template-tail-investigation",
+  "baseCommit": "bc04a1657f0b548ec5cdf2862aeed6a1ad0630b8",
+  "runtime": "SBCL 2.5.4",
+  "corpusCommit": "cd165b150176c1d6842b37be9cc9051b40d4996b",
+  "statuses": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "caseStatusChanges": [],
+  "originalComparisonsPerformed": 0,
+  "expandedControlComparisons": 3,
+  "normativeReference": "https://www.isotopicmaps.org/ctm/ctm.html",
+  "normativeFindings": [
+    {
+      "id": "N-tail",
+      "epistemicOrigin": "norm-derived",
+      "sections": {
+        "3.9": [
+          50,
+          51,
+          52
+        ],
+        "3.3.6": [
+          17
+        ],
+        "3.3.5": [
+          12
+        ]
+      },
+      "derivation": "[50] -> [51] -> [52] -> [17] -> [12]",
+      "result": "No variable alternative in this unmarked Tail slot."
+    },
+    {
+      "id": "N-variables",
+      "epistemicOrigin": "norm-derived",
+      "sections": {
+        "3.3.6": [
+          13,
+          18,
+          19
+        ],
+        "3.3.7": [
+          20
+        ],
+        "3.4.1": [
+          28
+        ]
+      },
+      "result": "Explicit variable uses in Topic identity/reference, marked SL/II and literal contexts."
+    },
+    {
+      "id": "N-templates",
+      "epistemicOrigin": "norm-derived",
+      "sections": {
+        "3.14": [
+          63,
+          64,
+          65,
+          66,
+          67
+        ],
+        "3.15": [
+          68,
+          69,
+          70
+        ]
+      },
+      "result": "Template-only variables, positional binding and use-context constraints."
+    }
+  ],
+  "compatibilityHypothesis": {
+    "id": "H-SI-tail",
+    "epistemicOrigin": "hypothesized",
+    "implemented": false,
+    "scope": "Only the Subject Identifier branch of [52] inside a Template Tail.",
+    "additionalRule": "template-tail-subject-identifier ::= iri-ref | variable",
+    "bindingRequirement": "Variable must denote an IRI reference (IRI or resolved QName), added as an SI of the owner.",
+    "rejectedBindings": [
+      "marked item identifier",
+      "marked subject locator",
+      "Topic-only argument",
+      "non-IRI literal"
+    ],
+    "identityKindsMustBePreserved": true,
+    "textualMarkerStrippingAllowed": false,
+    "doesNotChange": [
+      "Topic-head variables",
+      "Type/Player Topic references",
+      "literal substitution"
+    ],
+    "historicalIntentEstablished": false
+  },
+  "historicalQualification": {
+    "localCorpusStatus": "vendor/cxtm/ctm/STATUS.txt: 2010-03-31",
+    "projectIndex": "https://www.isotopicmaps.org/ctm/ links the same reference URL as 2010-03-31",
+    "separateDatedNormTextsCompared": false,
+    "historicalNormChangeEstablished": false
+  },
+  "cases": [
+    {
+      "id": "ctm/in/template-ambiguous-parameter5.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm",
+      "category": "VALID",
+      "expectedOutcome": "CXTM-EQUAL",
+      "sourceBytes": 146,
+      "sourceHex": "0A 23 20 55 73 69 6E 67 20 61 6E 20 49 52 49 20 61 72 67 75 6D 65 6E 74 20 69 6E 20 64 69 66 66 65 72 65 6E 74 20 63 6F 6E 74 65 78 74 73 0A 0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 29 0A 20 20 74 6F 70 69 63 20 24 69 72 69 3B 20 3D 24 69 72 69 3B 20 5E 24 69 72 69 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 73 6F 6D 65 74 68 69 6E 67 2F 3E 29 0A",
+      "sourceText": "\n# Using an IRI argument in different contexts\n\ndef template($iri)\n  topic $iri; =$iri; ^$iri.\nend\n\ntemplate(<http://www.example.org/something/>)\n",
+      "baselinePath": "/Users/rgb/workspace/topic-maps/vendor/cxtm/ctm/baseline/template-ambiguous-parameter5.ctm.cxtm",
+      "baselineBytes": 353,
+      "baselineText": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something/</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something/</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something/</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-ambiguous-parameter5.ctm at CHARACTER 79 (line 5, column 13): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 79,
+        "line": 5,
+        "column": 13,
+        "positionUnit": "character",
+        "source": "ctm/in/template-ambiguous-parameter5.ctm",
+        "cause": null,
+        "context": null
+      },
+      "model": null,
+      "actualCXTM": null,
+      "actualBytes": null,
+      "byteExact": false,
+      "canonicalizationPreservesMap": false,
+      "referencesCurrent": false,
+      "sourceSHA256": "5a4310d6f077776996700a77cd037ca30b1b616f7235128f9500ef16c5cd78a8",
+      "sourcePythonBytes": "b'\\n# Using an IRI argument in different contexts\\n\\ndef template($iri)\\n  topic $iri; =$iri; ^$iri.\\nend\\n\\ntemplate(<http://www.example.org/something/>)\\n'",
+      "variables": [
+        {
+          "variable": "$iri",
+          "position": 61,
+          "line": 4,
+          "column": 14,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$iri",
+          "position": 75,
+          "line": 5,
+          "column": 9,
+          "role": "Subject Identifier im Topic Tail (unmarkiert)",
+          "roleOrigin": "inferred"
+        },
+        {
+          "variable": "$iri",
+          "position": 82,
+          "line": 5,
+          "column": 16,
+          "role": "Subject Locator nach =",
+          "roleOrigin": "inferred"
+        },
+        {
+          "variable": "$iri",
+          "position": 89,
+          "line": 5,
+          "column": 23,
+          "role": "Item Identifier nach ^",
+          "roleOrigin": "inferred"
+        }
+      ],
+      "declaration": "def template($iri)",
+      "bindings": [
+        [
+          "$iri",
+          "<http://www.example.org/something/>"
+        ]
+      ],
+      "invocations": [
+        {
+          "text": "template(<http://www.example.org/something/>)",
+          "position": 100,
+          "line": 8
+        }
+      ],
+      "baselineSHA256": "a90bb867d36b9d99061d3815c6ce41a1cd4d8909c49adc7ce9cc1c9bfe06303f",
+      "expandedControl": {
+        "label": "expanded-ambiguous5",
+        "originalControlOnly": "ctm/in/template-ambiguous-parameter5.ctm",
+        "sourceText": "topic <http://www.example.org/something/>; =<http://www.example.org/something/>; ^<http://www.example.org/something/>.",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm",
+        "condition": null,
+        "model": {
+          "topicCount": 1,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "http://www.example.org/something/",
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm#topic"
+              ],
+              "subjectIdentifiers": [
+                "http://www.example.org/something/"
+              ],
+              "subjectLocators": [
+                "http://www.example.org/something/"
+              ],
+              "names": [],
+              "occurrences": []
+            }
+          ]
+        },
+        "associations": [],
+        "referencesCurrent": true,
+        "canonicalizationPreservesMap": true,
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something/</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something/</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something/</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "actualBytes": 353,
+        "expectedBytes": 353,
+        "byteExact": true
+      },
+      "classification": {
+        "A": "marked SL/II and literal uses",
+        "B": "unmarked Tail SI variable",
+        "C": "possible specification omission, unproven",
+        "D": "positive source-admissibility expectation only"
+      },
+      "status": "not-run",
+      "observation": {
+        "id": "ctm/in/template-ambiguous-parameter5.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm",
+        "category": "VALID",
+        "expectedOutcome": "CXTM-EQUAL",
+        "sourceBytes": 146,
+        "sourceHex": "0A 23 20 55 73 69 6E 67 20 61 6E 20 49 52 49 20 61 72 67 75 6D 65 6E 74 20 69 6E 20 64 69 66 66 65 72 65 6E 74 20 63 6F 6E 74 65 78 74 73 0A 0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 29 0A 20 20 74 6F 70 69 63 20 24 69 72 69 3B 20 3D 24 69 72 69 3B 20 5E 24 69 72 69 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 73 6F 6D 65 74 68 69 6E 67 2F 3E 29 0A",
+        "sourceText": "\n# Using an IRI argument in different contexts\n\ndef template($iri)\n  topic $iri; =$iri; ^$iri.\nend\n\ntemplate(<http://www.example.org/something/>)\n",
+        "baselinePath": "/Users/rgb/workspace/topic-maps/vendor/cxtm/ctm/baseline/template-ambiguous-parameter5.ctm.cxtm",
+        "baselineBytes": 353,
+        "baselineText": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something/</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something/</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something/</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-ambiguous-parameter5.ctm at CHARACTER 79 (line 5, column 13): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 79,
+          "line": 5,
+          "column": 13,
+          "positionUnit": "character",
+          "source": "ctm/in/template-ambiguous-parameter5.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "actualCXTM": null,
+        "actualBytes": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": false,
+        "referencesCurrent": false
+      },
+      "originalComparisonPerformed": false,
+      "argumentCheckReached": false,
+      "evidenceOrigins": {
+        "sourceAndCondition": "observed",
+        "intendedRoles": "inferred",
+        "grammar": "norm-derived",
+        "compatibilityRule": "hypothesized"
+      },
+      "compatibilityRule": "H-SI-tail",
+      "normativeReferences": [
+        "N-tail",
+        "N-variables",
+        "N-templates"
+      ],
+      "expandedComparison": {
+        "epistemicOrigin": "observed",
+        "originalTemplateExecutedSuccessfully": false,
+        "actualBytes": 353,
+        "expectedBytes": 353,
+        "actualSHA256": "a90bb867d36b9d99061d3815c6ce41a1cd4d8909c49adc7ce9cc1c9bfe06303f",
+        "expectedSHA256": "a90bb867d36b9d99061d3815c6ce41a1cd4d8909c49adc7ce9cc1c9bfe06303f",
+        "firstDifferentByte": null
+      }
+    },
+    {
+      "id": "ctm/in/template-ambiguous-parameter6.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm",
+      "category": "VALID",
+      "expectedOutcome": "CXTM-EQUAL",
+      "sourceBytes": 163,
+      "sourceHex": "0A 25 70 72 65 66 69 78 20 65 78 20 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 0A 0A 23 20 55 73 69 6E 67 20 61 20 51 4E 61 6D 65 20 61 72 67 75 6D 65 6E 74 20 69 6E 20 64 69 66 66 65 72 65 6E 74 20 63 6F 6E 74 65 78 74 73 0A 0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 71 29 0A 20 20 74 6F 70 69 63 20 24 71 3B 20 3D 24 71 3B 20 5E 24 71 3B 20 6F 63 63 3A 20 24 71 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 65 78 3A 73 6F 6D 65 74 68 69 6E 67 29 0A",
+      "sourceText": "\n%prefix ex <http://www.example.org/>\n\n# Using a QName argument in different contexts\n\ndef template($q)\n  topic $q; =$q; ^$q; occ: $q.\nend\n\ntemplate(ex:something)\n",
+      "baselinePath": "/Users/rgb/workspace/topic-maps/vendor/cxtm/ctm/baseline/template-ambiguous-parameter6.ctm.cxtm",
+      "baselineBytes": 613,
+      "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occ</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.example.org/something</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+      "condition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-ambiguous-parameter6.ctm at CHARACTER 114 (line 7, column 11): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 114,
+        "line": 7,
+        "column": 11,
+        "positionUnit": "character",
+        "source": "ctm/in/template-ambiguous-parameter6.ctm",
+        "cause": null,
+        "context": null
+      },
+      "model": null,
+      "actualCXTM": null,
+      "actualBytes": null,
+      "byteExact": false,
+      "canonicalizationPreservesMap": false,
+      "referencesCurrent": false,
+      "sourceSHA256": "d2fd507bbbd544b6eae6caf4497c18e746165a5868a1d8e644eb18815db44d50",
+      "sourcePythonBytes": "b'\\n%prefix ex <http://www.example.org/>\\n\\n# Using a QName argument in different contexts\\n\\ndef template($q)\\n  topic $q; =$q; ^$q; occ: $q.\\nend\\n\\ntemplate(ex:something)\\n'",
+      "variables": [
+        {
+          "variable": "$q",
+          "position": 100,
+          "line": 6,
+          "column": 14,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$q",
+          "position": 112,
+          "line": 7,
+          "column": 9,
+          "role": "Subject Identifier im Topic Tail (unmarkiert)",
+          "roleOrigin": "inferred"
+        },
+        {
+          "variable": "$q",
+          "position": 117,
+          "line": 7,
+          "column": 14,
+          "role": "Subject Locator nach =",
+          "roleOrigin": "inferred"
+        },
+        {
+          "variable": "$q",
+          "position": 122,
+          "line": 7,
+          "column": 19,
+          "role": "Item Identifier nach ^",
+          "roleOrigin": "inferred"
+        },
+        {
+          "variable": "$q",
+          "position": 131,
+          "line": 7,
+          "column": 28,
+          "role": "Occurrence-Literal; Datentyp xsd:anyURI",
+          "roleOrigin": "inferred"
+        }
+      ],
+      "declaration": "def template($q)",
+      "bindings": [
+        [
+          "$q",
+          "ex:something → http://www.example.org/something"
+        ]
+      ],
+      "invocations": [
+        {
+          "text": "template(ex:something)",
+          "position": 140,
+          "line": 10
+        }
+      ],
+      "baselineSHA256": "3b20e3168ad1260c2a4fcb2b5b4b0026324a78263f2431d6637473087eecd672",
+      "expandedControl": {
+        "label": "expanded-ambiguous6",
+        "originalControlOnly": "ctm/in/template-ambiguous-parameter6.ctm",
+        "sourceText": "%prefix ex <http://www.example.org/> topic ex:something; =ex:something; ^ex:something; occ: ex:something.",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm",
+        "condition": null,
+        "model": {
+          "topicCount": 2,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "http://www.example.org/something",
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm#topic"
+              ],
+              "subjectIdentifiers": [
+                "http://www.example.org/something"
+              ],
+              "subjectLocators": [
+                "http://www.example.org/something"
+              ],
+              "names": [],
+              "occurrences": [
+                {
+                  "value": "http://www.example.org/something",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": []
+                }
+              ]
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm#occ"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": []
+            }
+          ]
+        },
+        "associations": [],
+        "referencesCurrent": true,
+        "canonicalizationPreservesMap": true,
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occ</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.example.org/something</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "actualBytes": 613,
+        "expectedBytes": 613,
+        "byteExact": true
+      },
+      "classification": {
+        "A": "marked SL/II and literal uses",
+        "B": "unmarked Tail SI variable",
+        "C": "possible specification omission, unproven",
+        "D": "positive source-admissibility expectation only"
+      },
+      "status": "not-run",
+      "observation": {
+        "id": "ctm/in/template-ambiguous-parameter6.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm",
+        "category": "VALID",
+        "expectedOutcome": "CXTM-EQUAL",
+        "sourceBytes": 163,
+        "sourceHex": "0A 25 70 72 65 66 69 78 20 65 78 20 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 0A 0A 23 20 55 73 69 6E 67 20 61 20 51 4E 61 6D 65 20 61 72 67 75 6D 65 6E 74 20 69 6E 20 64 69 66 66 65 72 65 6E 74 20 63 6F 6E 74 65 78 74 73 0A 0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 71 29 0A 20 20 74 6F 70 69 63 20 24 71 3B 20 3D 24 71 3B 20 5E 24 71 3B 20 6F 63 63 3A 20 24 71 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 65 78 3A 73 6F 6D 65 74 68 69 6E 67 29 0A",
+        "sourceText": "\n%prefix ex <http://www.example.org/>\n\n# Using a QName argument in different contexts\n\ndef template($q)\n  topic $q; =$q; ^$q; occ: $q.\nend\n\ntemplate(ex:something)\n",
+        "baselinePath": "/Users/rgb/workspace/topic-maps/vendor/cxtm/ctm/baseline/template-ambiguous-parameter6.ctm.cxtm",
+        "baselineBytes": 613,
+        "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occ</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.example.org/something</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-ambiguous-parameter6.ctm at CHARACTER 114 (line 7, column 11): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 114,
+          "line": 7,
+          "column": 11,
+          "positionUnit": "character",
+          "source": "ctm/in/template-ambiguous-parameter6.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "actualCXTM": null,
+        "actualBytes": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": false,
+        "referencesCurrent": false
+      },
+      "originalComparisonPerformed": false,
+      "argumentCheckReached": false,
+      "evidenceOrigins": {
+        "sourceAndCondition": "observed",
+        "intendedRoles": "inferred",
+        "grammar": "norm-derived",
+        "compatibilityRule": "hypothesized"
+      },
+      "compatibilityRule": "H-SI-tail",
+      "normativeReferences": [
+        "N-tail",
+        "N-variables",
+        "N-templates"
+      ],
+      "expandedComparison": {
+        "epistemicOrigin": "observed",
+        "originalTemplateExecutedSuccessfully": false,
+        "actualBytes": 613,
+        "expectedBytes": 613,
+        "actualSHA256": "3b20e3168ad1260c2a4fcb2b5b4b0026324a78263f2431d6637473087eecd672",
+        "expectedSHA256": "3b20e3168ad1260c2a4fcb2b5b4b0026324a78263f2431d6637473087eecd672",
+        "firstDifferentByte": null
+      }
+    },
+    {
+      "id": "ctm/in/template-subject-identifier2.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm",
+      "category": "VALID",
+      "expectedOutcome": "CXTM-EQUAL",
+      "sourceBytes": 81,
+      "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 29 0A 20 20 20 20 74 6F 70 69 63 20 24 69 72 69 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3C 68 74 74 70 3A 2F 2F 70 73 69 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 66 61 6B 65 3E 29 0A",
+      "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(<http://psi.example.org/fake>)\n",
+      "baselinePath": "/Users/rgb/workspace/topic-maps/vendor/cxtm/ctm/baseline/template-subject-identifier2.ctm.cxtm",
+      "baselineBytes": 204,
+      "baselineText": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://psi.example.org/fake</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-subject-identifier2.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 34,
+        "line": 3,
+        "column": 15,
+        "positionUnit": "character",
+        "source": "ctm/in/template-subject-identifier2.ctm",
+        "cause": null,
+        "context": null
+      },
+      "model": null,
+      "actualCXTM": null,
+      "actualBytes": null,
+      "byteExact": false,
+      "canonicalizationPreservesMap": false,
+      "referencesCurrent": false,
+      "sourceSHA256": "ffc9a5554b9c908386f6888ef29ccda5cc433e5519924db52f9441769e1df014",
+      "sourcePythonBytes": "b'\\ndef template($iri)\\n    topic $iri.\\nend\\n\\ntemplate(<http://psi.example.org/fake>)\\n'",
+      "variables": [
+        {
+          "variable": "$iri",
+          "position": 14,
+          "line": 2,
+          "column": 14,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$iri",
+          "position": 30,
+          "line": 3,
+          "column": 11,
+          "role": "Subject Identifier im Topic Tail (unmarkiert)",
+          "roleOrigin": "inferred"
+        }
+      ],
+      "declaration": "def template($iri)",
+      "bindings": [
+        [
+          "$iri",
+          "<http://psi.example.org/fake>"
+        ]
+      ],
+      "invocations": [
+        {
+          "text": "template(<http://psi.example.org/fake>)",
+          "position": 41,
+          "line": 6
+        }
+      ],
+      "baselineSHA256": "e138a02738dc4a2526c465b11fa6915bed84724a31748eb3578ddf0f8ab16253",
+      "expandedControl": {
+        "label": "expanded-subject-identifier2",
+        "originalControlOnly": "ctm/in/template-subject-identifier2.ctm",
+        "sourceText": "topic <http://psi.example.org/fake>.",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm",
+        "condition": null,
+        "model": {
+          "topicCount": 1,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm#topic"
+              ],
+              "subjectIdentifiers": [
+                "http://psi.example.org/fake"
+              ],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": []
+            }
+          ]
+        },
+        "associations": [],
+        "referencesCurrent": true,
+        "canonicalizationPreservesMap": true,
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://psi.example.org/fake</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "actualBytes": 204,
+        "expectedBytes": 204,
+        "byteExact": true
+      },
+      "classification": {
+        "A": "marked SL/II and literal uses",
+        "B": "unmarked Tail SI variable",
+        "C": "possible specification omission, unproven",
+        "D": "positive source-admissibility expectation only"
+      },
+      "status": "not-run",
+      "observation": {
+        "id": "ctm/in/template-subject-identifier2.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm",
+        "category": "VALID",
+        "expectedOutcome": "CXTM-EQUAL",
+        "sourceBytes": 81,
+        "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 29 0A 20 20 20 20 74 6F 70 69 63 20 24 69 72 69 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3C 68 74 74 70 3A 2F 2F 70 73 69 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 66 61 6B 65 3E 29 0A",
+        "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(<http://psi.example.org/fake>)\n",
+        "baselinePath": "/Users/rgb/workspace/topic-maps/vendor/cxtm/ctm/baseline/template-subject-identifier2.ctm.cxtm",
+        "baselineBytes": 204,
+        "baselineText": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://psi.example.org/fake</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-subject-identifier2.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 34,
+          "line": 3,
+          "column": 15,
+          "positionUnit": "character",
+          "source": "ctm/in/template-subject-identifier2.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "actualCXTM": null,
+        "actualBytes": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": false,
+        "referencesCurrent": false
+      },
+      "originalComparisonPerformed": false,
+      "argumentCheckReached": false,
+      "evidenceOrigins": {
+        "sourceAndCondition": "observed",
+        "intendedRoles": "inferred",
+        "grammar": "norm-derived",
+        "compatibilityRule": "hypothesized"
+      },
+      "compatibilityRule": "H-SI-tail",
+      "normativeReferences": [
+        "N-tail",
+        "N-variables",
+        "N-templates"
+      ],
+      "expandedComparison": {
+        "epistemicOrigin": "observed",
+        "originalTemplateExecutedSuccessfully": false,
+        "actualBytes": 204,
+        "expectedBytes": 204,
+        "actualSHA256": "e138a02738dc4a2526c465b11fa6915bed84724a31748eb3578ddf0f8ab16253",
+        "expectedSHA256": "e138a02738dc4a2526c465b11fa6915bed84724a31748eb3578ddf0f8ab16253",
+        "firstDifferentByte": null
+      }
+    },
+    {
+      "id": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-item-identifier-2nd-arg.ctm",
+      "category": "INVALID",
+      "expectedOutcome": "CTM-REJECTION",
+      "sourceBytes": 167,
+      "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 31 2C 20 24 69 72 69 32 29 0A 20 20 20 20 74 6F 70 69 63 31 20 24 69 72 69 31 2E 0A 20 20 20 20 74 6F 70 69 63 32 20 24 69 72 69 32 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 2C 20 20 20 20 20 23 20 76 61 6C 69 64 0A 20 20 20 20 20 20 20 20 5E 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 29 20 20 20 20 20 23 20 69 6E 76 61 6C 69 64 0A",
+      "sourceText": "\ndef template($iri1, $iri2)\n    topic1 $iri1.\n    topic2 $iri2.\nend\n\ntemplate(<http://www.example.org/>,     # valid\n        ^<http://www.example.org/>)     # invalid\n",
+      "baselinePath": null,
+      "baselineBytes": null,
+      "baselineText": null,
+      "condition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-item-identifier-2nd-arg.ctm at CHARACTER 44 (line 3, column 17): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 44,
+        "line": 3,
+        "column": 17,
+        "positionUnit": "character",
+        "source": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "cause": null,
+        "context": null
+      },
+      "model": null,
+      "actualCXTM": null,
+      "actualBytes": null,
+      "byteExact": false,
+      "canonicalizationPreservesMap": false,
+      "referencesCurrent": false,
+      "sourceSHA256": "ceb46d4457532cc5b432d5e601275cc6950bb105088e2b2ccfa4ffa5fbe82266",
+      "sourcePythonBytes": "b'\\ndef template($iri1, $iri2)\\n    topic1 $iri1.\\n    topic2 $iri2.\\nend\\n\\ntemplate(<http://www.example.org/>,     # valid\\n        ^<http://www.example.org/>)     # invalid\\n'",
+      "variables": [
+        {
+          "variable": "$iri1",
+          "position": 14,
+          "line": 2,
+          "column": 14,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$iri2",
+          "position": 21,
+          "line": 2,
+          "column": 21,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$iri1",
+          "position": 39,
+          "line": 3,
+          "column": 12,
+          "role": "Subject Identifier von topic1 (unmarkiert)",
+          "roleOrigin": "inferred"
+        },
+        {
+          "variable": "$iri2",
+          "position": 57,
+          "line": 4,
+          "column": 12,
+          "role": "Subject Identifier von topic2 (unmarkiert)",
+          "roleOrigin": "inferred"
+        }
+      ],
+      "declaration": "def template($iri1, $iri2)",
+      "bindings": [
+        [
+          "$iri1",
+          "<http://www.example.org/>"
+        ],
+        [
+          "$iri2",
+          "^<http://www.example.org/>"
+        ]
+      ],
+      "invocations": [
+        {
+          "text": "template(<http://www.example.org/>,     # valid\n        ^<http://www.example.org/>)",
+          "position": 69,
+          "line": 7
+        }
+      ],
+      "classification": {
+        "A": "marked argument as Topic reference",
+        "B": "unmarked Tail SI variable",
+        "C": "intended contextual rejection not reached",
+        "D": null
+      },
+      "status": "not-run",
+      "observation": {
+        "id": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "category": "INVALID",
+        "expectedOutcome": "CTM-REJECTION",
+        "sourceBytes": 167,
+        "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 31 2C 20 24 69 72 69 32 29 0A 20 20 20 20 74 6F 70 69 63 31 20 24 69 72 69 31 2E 0A 20 20 20 20 74 6F 70 69 63 32 20 24 69 72 69 32 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 2C 20 20 20 20 20 23 20 76 61 6C 69 64 0A 20 20 20 20 20 20 20 20 5E 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 29 20 20 20 20 20 23 20 69 6E 76 61 6C 69 64 0A",
+        "sourceText": "\ndef template($iri1, $iri2)\n    topic1 $iri1.\n    topic2 $iri2.\nend\n\ntemplate(<http://www.example.org/>,     # valid\n        ^<http://www.example.org/>)     # invalid\n",
+        "baselinePath": null,
+        "baselineBytes": null,
+        "baselineText": null,
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-item-identifier-2nd-arg.ctm at CHARACTER 44 (line 3, column 17): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 44,
+          "line": 3,
+          "column": 17,
+          "positionUnit": "character",
+          "source": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "actualCXTM": null,
+        "actualBytes": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": false,
+        "referencesCurrent": false
+      },
+      "originalComparisonPerformed": false,
+      "argumentCheckReached": false,
+      "evidenceOrigins": {
+        "sourceAndCondition": "observed",
+        "intendedRoles": "inferred",
+        "grammar": "norm-derived",
+        "compatibilityRule": "hypothesized"
+      },
+      "compatibilityRule": "H-SI-tail",
+      "normativeReferences": [
+        "N-tail",
+        "N-variables",
+        "N-templates"
+      ],
+      "intendedArgumentCheck": {
+        "epistemicOrigin": "inferred",
+        "argumentIndex": 2,
+        "parameter": "$iri2",
+        "identityKind": "item-identifier",
+        "targetContext": "unmarked Subject Identifier Tail slot",
+        "basis": "invalid corpus category, source argument marker and, for two arguments, original invalid comment"
+      }
+    },
+    {
+      "id": "ctm/invalid/template-item-identifier3.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-item-identifier3.ctm",
+      "category": "INVALID",
+      "expectedOutcome": "CTM-REJECTION",
+      "sourceBytes": 78,
+      "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 29 0A 20 20 20 20 74 6F 70 69 63 20 24 69 72 69 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 5E 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 29 0A",
+      "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(^<http://www.example.org/>)\n",
+      "baselinePath": null,
+      "baselineBytes": null,
+      "baselineText": null,
+      "condition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-item-identifier3.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 34,
+        "line": 3,
+        "column": 15,
+        "positionUnit": "character",
+        "source": "ctm/invalid/template-item-identifier3.ctm",
+        "cause": null,
+        "context": null
+      },
+      "model": null,
+      "actualCXTM": null,
+      "actualBytes": null,
+      "byteExact": false,
+      "canonicalizationPreservesMap": false,
+      "referencesCurrent": false,
+      "sourceSHA256": "4c7ed0ab1574462b8939379f745a28942aa380fc6cc7fabae597fdc7bb21225f",
+      "sourcePythonBytes": "b'\\ndef template($iri)\\n    topic $iri.\\nend\\n\\ntemplate(^<http://www.example.org/>)\\n'",
+      "variables": [
+        {
+          "variable": "$iri",
+          "position": 14,
+          "line": 2,
+          "column": 14,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$iri",
+          "position": 30,
+          "line": 3,
+          "column": 11,
+          "role": "Subject Identifier von topic (unmarkiert)",
+          "roleOrigin": "inferred"
+        }
+      ],
+      "declaration": "def template($iri)",
+      "bindings": [
+        [
+          "$iri",
+          "^<http://www.example.org/>"
+        ]
+      ],
+      "invocations": [
+        {
+          "text": "template(^<http://www.example.org/>)",
+          "position": 41,
+          "line": 6
+        }
+      ],
+      "classification": {
+        "A": "marked argument as Topic reference",
+        "B": "unmarked Tail SI variable",
+        "C": "intended contextual rejection not reached",
+        "D": null
+      },
+      "status": "not-run",
+      "observation": {
+        "id": "ctm/invalid/template-item-identifier3.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-item-identifier3.ctm",
+        "category": "INVALID",
+        "expectedOutcome": "CTM-REJECTION",
+        "sourceBytes": 78,
+        "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 29 0A 20 20 20 20 74 6F 70 69 63 20 24 69 72 69 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 5E 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 29 0A",
+        "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(^<http://www.example.org/>)\n",
+        "baselinePath": null,
+        "baselineBytes": null,
+        "baselineText": null,
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-item-identifier3.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 34,
+          "line": 3,
+          "column": 15,
+          "positionUnit": "character",
+          "source": "ctm/invalid/template-item-identifier3.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "actualCXTM": null,
+        "actualBytes": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": false,
+        "referencesCurrent": false
+      },
+      "originalComparisonPerformed": false,
+      "argumentCheckReached": false,
+      "evidenceOrigins": {
+        "sourceAndCondition": "observed",
+        "intendedRoles": "inferred",
+        "grammar": "norm-derived",
+        "compatibilityRule": "hypothesized"
+      },
+      "compatibilityRule": "H-SI-tail",
+      "normativeReferences": [
+        "N-tail",
+        "N-variables",
+        "N-templates"
+      ],
+      "intendedArgumentCheck": {
+        "epistemicOrigin": "inferred",
+        "argumentIndex": 1,
+        "parameter": "$iri",
+        "identityKind": "item-identifier",
+        "targetContext": "unmarked Subject Identifier Tail slot",
+        "basis": "invalid corpus category, source argument marker and, for two arguments, original invalid comment"
+      }
+    },
+    {
+      "id": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-subject-locator-2nd-arg.ctm",
+      "category": "INVALID",
+      "expectedOutcome": "CTM-REJECTION",
+      "sourceBytes": 167,
+      "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 31 2C 20 24 69 72 69 32 29 0A 20 20 20 20 74 6F 70 69 63 31 20 24 69 72 69 31 2E 0A 20 20 20 20 74 6F 70 69 63 32 20 24 69 72 69 32 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 2C 20 20 20 20 20 23 20 76 61 6C 69 64 0A 20 20 20 20 20 20 20 20 20 3D 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 29 20 20 20 20 23 20 69 6E 76 61 6C 69 64 0A",
+      "sourceText": "\ndef template($iri1, $iri2)\n    topic1 $iri1.\n    topic2 $iri2.\nend\n\ntemplate(<http://www.example.org/>,     # valid\n         =<http://www.example.org/>)    # invalid\n",
+      "baselinePath": null,
+      "baselineBytes": null,
+      "baselineText": null,
+      "condition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-subject-locator-2nd-arg.ctm at CHARACTER 44 (line 3, column 17): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 44,
+        "line": 3,
+        "column": 17,
+        "positionUnit": "character",
+        "source": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "cause": null,
+        "context": null
+      },
+      "model": null,
+      "actualCXTM": null,
+      "actualBytes": null,
+      "byteExact": false,
+      "canonicalizationPreservesMap": false,
+      "referencesCurrent": false,
+      "sourceSHA256": "e7e8ca08ad1dec89549afbe2d3cf90098269031f239ddae37258bf87ba4c018f",
+      "sourcePythonBytes": "b'\\ndef template($iri1, $iri2)\\n    topic1 $iri1.\\n    topic2 $iri2.\\nend\\n\\ntemplate(<http://www.example.org/>,     # valid\\n         =<http://www.example.org/>)    # invalid\\n'",
+      "variables": [
+        {
+          "variable": "$iri1",
+          "position": 14,
+          "line": 2,
+          "column": 14,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$iri2",
+          "position": 21,
+          "line": 2,
+          "column": 21,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$iri1",
+          "position": 39,
+          "line": 3,
+          "column": 12,
+          "role": "Subject Identifier von topic1 (unmarkiert)",
+          "roleOrigin": "inferred"
+        },
+        {
+          "variable": "$iri2",
+          "position": 57,
+          "line": 4,
+          "column": 12,
+          "role": "Subject Identifier von topic2 (unmarkiert)",
+          "roleOrigin": "inferred"
+        }
+      ],
+      "declaration": "def template($iri1, $iri2)",
+      "bindings": [
+        [
+          "$iri1",
+          "<http://www.example.org/>"
+        ],
+        [
+          "$iri2",
+          "=<http://www.example.org/>"
+        ]
+      ],
+      "invocations": [
+        {
+          "text": "template(<http://www.example.org/>,     # valid\n         =<http://www.example.org/>)",
+          "position": 69,
+          "line": 7
+        }
+      ],
+      "classification": {
+        "A": "marked argument as Topic reference",
+        "B": "unmarked Tail SI variable",
+        "C": "intended contextual rejection not reached",
+        "D": null
+      },
+      "status": "not-run",
+      "observation": {
+        "id": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "category": "INVALID",
+        "expectedOutcome": "CTM-REJECTION",
+        "sourceBytes": 167,
+        "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 31 2C 20 24 69 72 69 32 29 0A 20 20 20 20 74 6F 70 69 63 31 20 24 69 72 69 31 2E 0A 20 20 20 20 74 6F 70 69 63 32 20 24 69 72 69 32 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 2C 20 20 20 20 20 23 20 76 61 6C 69 64 0A 20 20 20 20 20 20 20 20 20 3D 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 29 20 20 20 20 23 20 69 6E 76 61 6C 69 64 0A",
+        "sourceText": "\ndef template($iri1, $iri2)\n    topic1 $iri1.\n    topic2 $iri2.\nend\n\ntemplate(<http://www.example.org/>,     # valid\n         =<http://www.example.org/>)    # invalid\n",
+        "baselinePath": null,
+        "baselineBytes": null,
+        "baselineText": null,
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-subject-locator-2nd-arg.ctm at CHARACTER 44 (line 3, column 17): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 44,
+          "line": 3,
+          "column": 17,
+          "positionUnit": "character",
+          "source": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "actualCXTM": null,
+        "actualBytes": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": false,
+        "referencesCurrent": false
+      },
+      "originalComparisonPerformed": false,
+      "argumentCheckReached": false,
+      "evidenceOrigins": {
+        "sourceAndCondition": "observed",
+        "intendedRoles": "inferred",
+        "grammar": "norm-derived",
+        "compatibilityRule": "hypothesized"
+      },
+      "compatibilityRule": "H-SI-tail",
+      "normativeReferences": [
+        "N-tail",
+        "N-variables",
+        "N-templates"
+      ],
+      "intendedArgumentCheck": {
+        "epistemicOrigin": "inferred",
+        "argumentIndex": 2,
+        "parameter": "$iri2",
+        "identityKind": "subject-locator",
+        "targetContext": "unmarked Subject Identifier Tail slot",
+        "basis": "invalid corpus category, source argument marker and, for two arguments, original invalid comment"
+      }
+    },
+    {
+      "id": "ctm/invalid/template-subject-locator3.ctm",
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-subject-locator3.ctm",
+      "category": "INVALID",
+      "expectedOutcome": "CTM-REJECTION",
+      "sourceBytes": 78,
+      "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 29 0A 20 20 20 20 74 6F 70 69 63 20 24 69 72 69 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3D 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 29 0A",
+      "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(=<http://www.example.org/>)\n",
+      "baselinePath": null,
+      "baselineBytes": null,
+      "baselineText": null,
+      "condition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-subject-locator3.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 34,
+        "line": 3,
+        "column": 15,
+        "positionUnit": "character",
+        "source": "ctm/invalid/template-subject-locator3.ctm",
+        "cause": null,
+        "context": null
+      },
+      "model": null,
+      "actualCXTM": null,
+      "actualBytes": null,
+      "byteExact": false,
+      "canonicalizationPreservesMap": false,
+      "referencesCurrent": false,
+      "sourceSHA256": "d53c835df922469d65e5103f48b38faa94be56c06a4cb1da356a8ad6b277496d",
+      "sourcePythonBytes": "b'\\ndef template($iri)\\n    topic $iri.\\nend\\n\\ntemplate(=<http://www.example.org/>)\\n'",
+      "variables": [
+        {
+          "variable": "$iri",
+          "position": 14,
+          "line": 2,
+          "column": 14,
+          "role": "Parameterdeklaration",
+          "roleOrigin": "observed"
+        },
+        {
+          "variable": "$iri",
+          "position": 30,
+          "line": 3,
+          "column": 11,
+          "role": "Subject Identifier von topic (unmarkiert)",
+          "roleOrigin": "inferred"
+        }
+      ],
+      "declaration": "def template($iri)",
+      "bindings": [
+        [
+          "$iri",
+          "=<http://www.example.org/>"
+        ]
+      ],
+      "invocations": [
+        {
+          "text": "template(=<http://www.example.org/>)",
+          "position": 41,
+          "line": 6
+        }
+      ],
+      "classification": {
+        "A": "marked argument as Topic reference",
+        "B": "unmarked Tail SI variable",
+        "C": "intended contextual rejection not reached",
+        "D": null
+      },
+      "status": "not-run",
+      "observation": {
+        "id": "ctm/invalid/template-subject-locator3.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-subject-locator3.ctm",
+        "category": "INVALID",
+        "expectedOutcome": "CTM-REJECTION",
+        "sourceBytes": 78,
+        "sourceHex": "0A 64 65 66 20 74 65 6D 70 6C 61 74 65 28 24 69 72 69 29 0A 20 20 20 20 74 6F 70 69 63 20 24 69 72 69 2E 0A 65 6E 64 0A 0A 74 65 6D 70 6C 61 74 65 28 3D 3C 68 74 74 70 3A 2F 2F 77 77 77 2E 65 78 61 6D 70 6C 65 2E 6F 72 67 2F 3E 29 0A",
+        "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(=<http://www.example.org/>)\n",
+        "baselinePath": null,
+        "baselineBytes": null,
+        "baselineText": null,
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-subject-locator3.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 34,
+          "line": 3,
+          "column": 15,
+          "positionUnit": "character",
+          "source": "ctm/invalid/template-subject-locator3.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "actualCXTM": null,
+        "actualBytes": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": false,
+        "referencesCurrent": false
+      },
+      "originalComparisonPerformed": false,
+      "argumentCheckReached": false,
+      "evidenceOrigins": {
+        "sourceAndCondition": "observed",
+        "intendedRoles": "inferred",
+        "grammar": "norm-derived",
+        "compatibilityRule": "hypothesized"
+      },
+      "compatibilityRule": "H-SI-tail",
+      "normativeReferences": [
+        "N-tail",
+        "N-variables",
+        "N-templates"
+      ],
+      "intendedArgumentCheck": {
+        "epistemicOrigin": "inferred",
+        "argumentIndex": 1,
+        "parameter": "$iri",
+        "identityKind": "subject-locator",
+        "targetContext": "unmarked Subject Identifier Tail slot",
+        "basis": "invalid corpus category, source argument marker and, for two arguments, original invalid comment"
+      }
+    }
+  ]
+}

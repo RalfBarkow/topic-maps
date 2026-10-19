@@ -1,0 +1,26 @@
+{
+  "head": "bc04a1657f0b548ec5cdf2862aeed6a1ad0630b8",
+  "branch": "codex/ctm-slice-20h",
+  "indexClean": true,
+  "worktreeClean": true,
+  "trackedFilesBytesUnchanged": 3519,
+  "pinnedCorpusFilesVerified": 2006,
+  "network": "denied",
+  "repositoryFileWrites": "denied by sandbox-exec",
+  "originalsExecuted": 7,
+  "successfulOriginalDeserializations": 0,
+  "caseRecordsUnchanged": true,
+  "registeredCTMStatuses": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "xtmStoredStatuses": {
+    "pass": 6,
+    "fail": 0,
+    "not-run": 118
+  },
+  "newRegistrations": 0,
+  "commitsCreated": 0
+}

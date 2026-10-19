@@ -1,0 +1,44 @@
+{
+  "origin": "Slice 20I temporary investigation",
+  "baseCommit": "bc04a1657f0b548ec5cdf2862aeed6a1ad0630b8",
+  "originalDirectory": "/private/tmp/ctm-slice-20i-i6qgrhfp",
+  "all3519TrackedFilesMatchBeforeImport": true,
+  "files": {
+    "investigation.json": {
+      "sha256": "00982b79427563add6b81b5884e3805833081e700b3042bd67aac038aba1a534",
+      "bytes": 11948
+    },
+    "controls.json": {
+      "sha256": "71b3d429e511c78195005d98907cec0a12580eb3e9e64a82a49cd944988edb4a",
+      "bytes": 13982
+    },
+    "detailed-inventory.json": {
+      "sha256": "d5885796a69f1f07a7bd6396a331308319d6ae8a042b054d71f2bbaed93c87b2",
+      "bytes": 30150
+    },
+    "execution.json": {
+      "sha256": "ce2e3998c4a991db330cda4da4293fecb53db3fabeebad47134f4aec89db61d1",
+      "bytes": 318
+    },
+    "final-audit.json": {
+      "sha256": "d03f73c1ffbdcd102b7dce2378555578ef8a659a66a6ac555cda6c470102486a",
+      "bytes": 622
+    },
+    "before-sha256.json": {
+      "sha256": "2d4288487927b968a7c798035bbf5076186998c724bdcbdbd5ae723216099873",
+      "bytes": 419921
+    },
+    "probe-full.log": {
+      "sha256": "8aeb207aaedb1bef27e2b123b869880dac333ed8e975bb1250ec2e75060af03c",
+      "bytes": 38270
+    },
+    "controls.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "policy.sb": {
+      "sha256": "2611daf1ef2d8009429e3e05c3863a1410f7226cc1cac4937dd6d0c16bdc37f2",
+      "bytes": 104
+    }
+  }
+}
