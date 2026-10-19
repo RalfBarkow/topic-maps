@@ -1,0 +1,21 @@
+{
+  "runtime": "SBCL 2.5.4",
+  "retainedLispChecks": 12100,
+  "xmlQualificationChecks": 146,
+  "standaloneXTMChecks": 327,
+  "xtmMergemapChecks": 217,
+  "registeredOriginalChecks": 286,
+  "newActualByteExactContracts": 40,
+  "ctmStatusesAfter": {
+    "pass": 245,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 24
+  },
+  "xtmCorpusStatuses": {
+    "pass": 6,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 118
+  }
+}

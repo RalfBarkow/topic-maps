@@ -1,0 +1,174 @@
+[
+  {
+    "id": "ctm/invalid/occurrence-double-negative-infinity.ctm",
+    "status": "pass",
+    "sourceSHA256": "805ca374ef89630eb0657e01842779342597eb35f827f22596095fadb907159d",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/occurrence-double-negative-infinity.ctm",
+    "normativeReason": "Bare -INF is neither a CTM number nor another literal alternative.",
+    "clauses": [
+      "CTM 3.4.1 [28]-[34]",
+      "CTM 3.10 [56]"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "EXPECTED-OCCURRENCE-VALUE in ctm/invalid/occurrence-double-negative-infinity.ctm at CHARACTER 15 (line 2, column 10): Expected a supported CTM literal value.",
+      "code": "expected-occurrence-value",
+      "position": 15,
+      "line": 2,
+      "column": 10,
+      "positionUnit": "character",
+      "source": "ctm/invalid/occurrence-double-negative-infinity.ctm",
+      "cause": null,
+      "context": null
+    },
+    "normativeValidated": true,
+    "qualification": null
+  },
+  {
+    "id": "ctm/invalid/occurrence-double-positive-infinity.ctm",
+    "status": "pass",
+    "sourceSHA256": "a7790e59c72e8c93757cf7bcef23ea893d7365e34cb8f874dda7743f0713e12f",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/occurrence-double-positive-infinity.ctm",
+    "normativeReason": "Bare INF is neither a CTM number nor another literal alternative.",
+    "clauses": [
+      "CTM 3.4.1 [28]-[34]",
+      "CTM 3.10 [56]"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "EXPECTED-OCCURRENCE-VALUE in ctm/invalid/occurrence-double-positive-infinity.ctm at CHARACTER 15 (line 2, column 10): Expected a supported CTM literal value.",
+      "code": "expected-occurrence-value",
+      "position": 15,
+      "line": 2,
+      "column": 10,
+      "positionUnit": "character",
+      "source": "ctm/invalid/occurrence-double-positive-infinity.ctm",
+      "cause": null,
+      "context": null
+    },
+    "normativeValidated": true,
+    "qualification": null
+  },
+  {
+    "id": "ctm/invalid/qname-hyphen.ctm",
+    "status": "pass",
+    "sourceSHA256": "4f1062fdfeb62d3bf531a0402b6e8188107466d4dc3c77bdf69167e79c7ba3b5",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/qname-hyphen.ctm",
+    "normativeReason": "A QName local part cannot start with a hyphen.",
+    "clauses": [
+      "CTM 3.3.4 [9]-[11]",
+      "CTM 3.3.6 [14]-[16]"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "UNEXPECTED-TOKEN in ctm/invalid/qname-hyphen.ctm at CHARACTER 38 (line 3, column 3): Unexpected token after topic or name.",
+      "code": "unexpected-token",
+      "position": 38,
+      "line": 3,
+      "column": 3,
+      "positionUnit": "character",
+      "source": "ctm/invalid/qname-hyphen.ctm",
+      "cause": null,
+      "context": null
+    },
+    "normativeValidated": true,
+    "qualification": null
+  },
+  {
+    "id": "ctm/invalid/string-unbalanced.ctm",
+    "status": "pass",
+    "sourceSHA256": "238244e9cc7476d7e00bb6fb03fc5b2f1ed5453d9fe386cdbc95f7af549df1dd",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/string-unbalanced.ctm",
+    "normativeReason": "The escaped quote is content; the quoted string lacks a closing delimiter.",
+    "clauses": [
+      "CTM 3.4.1 [37]-[40]",
+      "CTM 3.4.2 [41]"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "UNTERMINATED-STRING in ctm/invalid/string-unbalanced.ctm at CHARACTER 8 (line 1, column 9): Unterminated quoted string.",
+      "code": "unterminated-string",
+      "position": 8,
+      "line": 1,
+      "column": 9,
+      "positionUnit": "character",
+      "source": "ctm/invalid/string-unbalanced.ctm",
+      "cause": null,
+      "context": null
+    },
+    "normativeValidated": true,
+    "qualification": null
+  },
+  {
+    "id": "ctm/invalid/string-unicode.ctm",
+    "status": "pass",
+    "sourceSHA256": "9aab2abd525c64ffe54089744fe166c1555fedf0b4e649d396bf35dfa8be17ed",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/string-unicode.ctm",
+    "normativeReason": "Uppercase U requires six hexadecimal digits; the closing quote follows four.",
+    "clauses": [
+      "CTM 3.4.2 [42]"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "INVALID-UNICODE-ESCAPE in ctm/invalid/string-unicode.ctm at CHARACTER 11 (line 1, column 12): Expected hexadecimal escape digit.",
+      "code": "invalid-unicode-escape",
+      "position": 11,
+      "line": 1,
+      "column": 12,
+      "positionUnit": "character",
+      "source": "ctm/invalid/string-unicode.ctm",
+      "cause": null,
+      "context": null
+    },
+    "normativeValidated": true,
+    "qualification": null
+  },
+  {
+    "id": "ctm/invalid/string-unicode2.ctm",
+    "status": "pass",
+    "sourceSHA256": "2c1450ae8ce2737700754ba464d063bd70a7292fe8ef975261df1f3d389d7f80",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/string-unicode2.ctm",
+    "normativeReason": "G cannot be decoded as a hexadecimal digit; see the printed-class qualification.",
+    "clauses": [
+      "CTM 3.4.2 [42]-[43] and hexadecimal decoding prose"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "INVALID-UNICODE-ESCAPE in ctm/invalid/string-unicode2.ctm at CHARACTER 15 (line 1, column 16): Expected hexadecimal escape digit.",
+      "code": "invalid-unicode-escape",
+      "position": 15,
+      "line": 1,
+      "column": 16,
+      "positionUnit": "character",
+      "source": "ctm/invalid/string-unicode2.ctm",
+      "cause": null,
+      "context": null
+    },
+    "normativeValidated": true,
+    "qualification": "Printed production [43] includes all letters; rejection follows the hexadecimal decoding requirement in 3.4.2 prose, not that character class alone."
+  },
+  {
+    "id": "ctm/invalid/topic-id-illegal.ctm",
+    "status": "pass",
+    "sourceSHA256": "ab2e85abeb982d84ea4fad19a491e943a0a4c0916aa6cb7fdc966b7c32a5fa59",
+    "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/topic-id-illegal.ctm",
+    "normativeReason": "U+0361 is allowed inside an identifier, but not as its first character.",
+    "clauses": [
+      "CTM 3.3.6 [14]-[16]"
+    ],
+    "condition": {
+      "condition": "CTM-REJECTION",
+      "message": "UNEXPECTED-CHARACTER in ctm/invalid/topic-id-illegal.ctm at CHARACTER 0 (line 1, column 1): Unexpected character #\\COMBINING_DOUBLE_INVERTED_BREVE.",
+      "code": "unexpected-character",
+      "position": 0,
+      "line": 1,
+      "column": 1,
+      "positionUnit": "character",
+      "source": "ctm/invalid/topic-id-illegal.ctm",
+      "cause": null,
+      "context": null
+    },
+    "normativeValidated": true,
+    "qualification": null
+  }
+]

@@ -1,0 +1,18 @@
+warning: Git tree '/Users/rgb/workspace/topic-maps' has uncommitted changes
+{
+  "runtime": "SBCL 2.5.4",
+  "retainedLispChecks": 12100,
+  "newXTMIntegrationChecks": 217,
+  "ctmStatuses": {
+    "pass": 205,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 64
+  },
+  "xtmCorpusStatuses": {
+    "pass": 6,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 118
+  }
+}

@@ -265,3 +265,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.registered-original.tests :run-tests)))
+
+
+(asdf:defsystem "topic-maps/ctm/registered-negative-tests"
+  :description "Slice 20B: intended syntax rejections of seven unchanged negative originals"
+  :depends-on ("topic-maps/ctm/registered-original-tests")
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.registered-original.tests :run-negative-tests)))

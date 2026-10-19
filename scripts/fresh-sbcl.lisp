@@ -111,3 +111,10 @@
 (let ((prefix (uiop:getenv "TOPIC_MAPS_REGISTERED_ORIGINALS_REPORT")))
   (when prefix
     (uiop:symbol-call :topic-maps.registered-original.tests :write-reports prefix)))
+
+
+;; Slice 20B runs after the unchanged Slice 20A snapshot in the same fresh process.
+(asdf:test-system "topic-maps/ctm/registered-negative-tests")
+(let ((prefix (uiop:getenv "TOPIC_MAPS_REGISTERED_NEGATIVES_REPORT")))
+  (when prefix
+    (uiop:symbol-call :topic-maps.registered-original.tests :write-negative-reports prefix)))
