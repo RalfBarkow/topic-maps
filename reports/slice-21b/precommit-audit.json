@@ -1,0 +1,28 @@
+{
+  "baseCommit": "1a2808b2d123184b2494f93b19738a31fc27fd52",
+  "branch": "codex/xtm-slice-21b",
+  "checkedAtUTC": "2026-10-19T12:25:17.940922+00:00",
+  "changedBaseFiles": [
+    "tests/xtm-identity.lisp",
+    "topic-maps.asd"
+  ],
+  "unchangedBaseFilesVerified": 3591,
+  "historicalReportsVerified": 1361,
+  "pinnedCorpusFilesVerified": 2006,
+  "validatedOutputCopiedByteForByte": true,
+  "allAcceptanceRunsMatchedExpectedExitCodes": true,
+  "productionCodeUnchanged": true,
+  "xtm": {
+    "pass": 26,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 98
+  },
+  "ctm": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "newNegativeOriginalsRegistered": 0
+}

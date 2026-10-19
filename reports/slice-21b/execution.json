@@ -1,0 +1,505 @@
+{
+  "kind": "xtm-original-registration-validation",
+  "baseCommit": "1a2808b2d123184b2494f93b19738a31fc27fd52",
+  "branch": "codex/xtm-slice-21b",
+  "runtime": "SBCL 2.5.4",
+  "startedAtUTC": "2026-10-19T12:22:12.861407+00:00",
+  "finishedAtUTC": "2026-10-19T12:22:59.947283+00:00",
+  "runs": [
+    {
+      "label": "source-preparation",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "python3",
+        "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21b.py",
+        "--prepare",
+        "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21b-sources-40nedw8e/sources"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:12.866364+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T12:22:15.790759+00:00"
+    },
+    {
+      "label": "xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "tests/cxml-probe.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:15.799873+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T12:22:22.220960+00:00"
+    },
+    {
+      "label": "xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "scripts/fresh-xtm.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:22.221514+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T12:22:23.903854+00:00"
+    },
+    {
+      "label": "regression",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:23.906763+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "finishedAtUTC": "2026-10-19T12:22:51.336173+00:00"
+    },
+    {
+      "label": "control-mismatch",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21b/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:51.336942+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T12:22:52.592139+00:00"
+    },
+    {
+      "label": "control-xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21b/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:52.593126+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T12:22:53.719121+00:00"
+    },
+    {
+      "label": "control-xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21b/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:53.719656+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T12:22:54.971539+00:00"
+    },
+    {
+      "label": "control-tmdm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21b/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:54.972174+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T12:22:56.068380+00:00"
+    },
+    {
+      "label": "control-unsupported",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-21b/failure-controls.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-19T12:22:56.068874+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 1,
+      "finishedAtUTC": "2026-10-19T12:22:57.099064+00:00"
+    }
+  ],
+  "sourcePreparation": "source-preparation.json",
+  "retainedLispChecks": 12100,
+  "retainedChecks": {
+    "FOUNDATION": 54,
+    "CTM-IDENTITY-SEMANTICS": 123,
+    "CTM-MERGING-SEMANTICS": 646,
+    "CTM-ASSOCIATIONS-SEMANTICS": 657,
+    "CXTM": 445,
+    "OCCURRENCES": 1101,
+    "PREFIX-DATATYPES": 150,
+    "INTEGERS": 665,
+    "DECIMALS": 715,
+    "DATES": 1806,
+    "DATETIMES": 217,
+    "TIMEZONES": 1944,
+    "TYPED-NAMES": 106,
+    "SCOPES": 293,
+    "VARIANTS": 324,
+    "REFERENCES": 238,
+    "ITEM-IDENTIFIERS": 244,
+    "REIFICATION": 236,
+    "ASSOCIATION-ARITY": 337,
+    "TYPE-RELATIONSHIPS": 1016,
+    "TEMPLATES": 297,
+    "MAP-IMPORT": 275,
+    "MERGEMAP": 118,
+    "INCLUDE": 93
+  },
+  "stageChecks": {
+    "XTM-MERGEMAP": 217,
+    "REGISTERED-ORIGINALS": 286,
+    "REGISTERED-NEGATIVES": 25,
+    "PROLOG": 171,
+    "EMPTY2": 13,
+    "CTM-INTEGER": 112,
+    "TRIPLE": 226,
+    "ENCODING": 722
+  },
+  "xmlQualificationChecks": 146,
+  "standaloneXTMChecks": 640,
+  "retainedXTMCheckNamesPreserved": 327,
+  "originalComparisons": 26,
+  "newOriginalComparisons": 20,
+  "xtmStatusesBefore": {
+    "pass": 6,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 118
+  },
+  "xtmStatusesAfter": {
+    "pass": 26,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 98
+  },
+  "xtmStatusChanges": [
+    {
+      "id": "xtm2/in/itemid-duplicate.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/itemid-fragment.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/itemid-relative.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/itemid.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-types.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/merge-itemid.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/merge-subjid.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/merge-subjloc.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjid-duplicate.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjid-escaping.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjid-escaping2.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjid-fragment.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjid-relative.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjid-sameas-itemid.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjid.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjloc-duplicate.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjloc-fragment.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjloc-multiple.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjloc-relative.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    },
+    {
+      "id": "xtm2/in/subjloc.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "actualOutcome": "cxtm-match"
+    }
+  ],
+  "ctmStatusesBefore": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "ctmStatusesAfter": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  },
+  "ctmStatusChanges": [],
+  "knownFailuresUnchanged": [
+    "ctm/in/include-template.ctm",
+    "ctm/in/include-wildcard2.ctm",
+    "ctm/in/occurrence-datetime-timezone2.ctm",
+    "ctm/in/occurrence-datetime2.ctm"
+  ],
+  "negativeXTMOriginalsRegistered": 0,
+  "pythonUnitTests": 2,
+  "nfcOracleComparisons": 16294,
+  "faultInjectionControls": [
+    {
+      "mode": "mismatch",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "cxtm-mismatch",
+      "condition": null,
+      "countedAsOriginalPass": false
+    },
+    {
+      "mode": "xml",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "XTM-XML-ERROR",
+        "code": "xml-not-well-formed",
+        "message": "XTM XML-NOT-WELL-FORMED at xtm2/in/empty.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/empty.xtm), approximately 1:11: Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n"
+      },
+      "countedAsOriginalPass": false
+    },
+    {
+      "mode": "xtm",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-id",
+        "message": "XTM INVALID-ID at xtm2/in/empty.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/empty.xtm), approximately 1:81: topic/@id must be an XML Schema ID."
+      },
+      "countedAsOriginalPass": false
+    },
+    {
+      "mode": "tmdm",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "OCCURRENCE-IDENTIFIER-ERROR",
+        "code": "duplicate-item-identifier",
+        "message": "Occurrence DUPLICATE-ITEM-IDENTIFIER: Locator already identifies a different information item."
+      },
+      "countedAsOriginalPass": false
+    },
+    {
+      "mode": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/empty.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/empty.xtm), approximately 1:83: XTM name is not implemented in this subset."
+      },
+      "countedAsOriginalPass": false
+    }
+  ],
+  "allRetainedNonXTMReportsEqualToSlice20J": [
+    "reports/slice-20j/retained/core.json",
+    "reports/slice-20j/retained/core.json.arity.json",
+    "reports/slice-20j/retained/core.json.associations.json",
+    "reports/slice-20j/retained/core.json.cxtm.json",
+    "reports/slice-20j/retained/core.json.dates.json",
+    "reports/slice-20j/retained/core.json.datetimes.json",
+    "reports/slice-20j/retained/core.json.decimals.json",
+    "reports/slice-20j/retained/core.json.identifiers.json",
+    "reports/slice-20j/retained/core.json.include.json",
+    "reports/slice-20j/retained/core.json.integers.json",
+    "reports/slice-20j/retained/core.json.map-import.json",
+    "reports/slice-20j/retained/core.json.mergemap.json",
+    "reports/slice-20j/retained/core.json.merging.json",
+    "reports/slice-20j/retained/core.json.occurrences.json",
+    "reports/slice-20j/retained/core.json.prefixes.json",
+    "reports/slice-20j/retained/core.json.references.json",
+    "reports/slice-20j/retained/core.json.reification.json",
+    "reports/slice-20j/retained/core.json.relationships.json",
+    "reports/slice-20j/retained/core.json.scopes.json",
+    "reports/slice-20j/retained/core.json.semantics.json",
+    "reports/slice-20j/retained/core.json.templates.json",
+    "reports/slice-20j/retained/core.json.timezones.json",
+    "reports/slice-20j/retained/core.json.typed-names.json",
+    "reports/slice-20j/retained/core.json.variants.json",
+    "reports/slice-20j/retained/slice20a.cxtm.json",
+    "reports/slice-20j/retained/slice20a.registration.json",
+    "reports/slice-20j/retained/slice20a.validation.json",
+    "reports/slice-20j/retained/slice20b.cxtm.json",
+    "reports/slice-20j/retained/slice20b.negative.json",
+    "reports/slice-20j/retained/slice20b.validation.json",
+    "reports/slice-20j/retained/slice20c.cxtm.json",
+    "reports/slice-20j/retained/slice20c.prolog.json",
+    "reports/slice-20j/retained/slice20c.validation.json",
+    "reports/slice-20j/retained/slice20e.cxtm.json",
+    "reports/slice-20j/retained/slice20e.registration.json",
+    "reports/slice-20j/retained/slice20e.validation.json",
+    "reports/slice-20j/retained/slice20f.cxtm.json",
+    "reports/slice-20j/retained/slice20f.literal.json",
+    "reports/slice-20j/retained/slice20f.validation.json",
+    "reports/slice-20j/retained/slice20g.cxtm.json",
+    "reports/slice-20j/retained/slice20g.triple.json",
+    "reports/slice-20j/retained/slice20g.validation.json",
+    "reports/slice-20j/retained/xtm-mergemap.cxtm.json",
+    "reports/slice-20j/retained/xtm-mergemap.integration.json",
+    "reports/slice-20j/retained/xtm-mergemap.validation.json",
+    "reports/slice-20j/current.validation.json",
+    "reports/slice-20j/current.cxtm.json",
+    "reports/slice-20j/current.encoding.json"
+  ],
+  "historicalReportFilesVerified": 1361,
+  "protectedBaseFilesVerified": 3591,
+  "pinnedCorpusFilesVerified": 2006,
+  "historicalReportsUnchanged": true,
+  "originalSourcesAndBaselinesUnchanged": true,
+  "languageImplementationUnchanged": true,
+  "newDependencyDownloads": 0,
+  "persistentLispImagesTouched": false,
+  "fullOfflineNixRebuild": "NOT-RUN; verified local pinned Store sources and existing qualified XML patches.",
+  "executionAuthorization": "Regular require_escalated approval after managed sandbox symlink launch error; no symlink or configuration changes.",
+  "acceptancePassed": true
+}

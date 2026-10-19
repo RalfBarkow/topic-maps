@@ -1,0 +1,208 @@
+{
+  "kind": "slice-21a-candidate-inventory-only",
+  "baseCommit": "1a2808b2d123184b2494f93b19738a31fc27fd52",
+  "origin": "Verified temporary Slice 21A matrix; not execution evidence for Slice 21B.",
+  "originMatrixSHA256": "fd2a40558b0421f84ad570313b063ea38122d69af90e65b8c205ccf289c010af",
+  "candidates": [
+    {
+      "id": "xtm2/in/itemid-duplicate.xtm",
+      "group": "item-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-duplicate.xtm",
+      "sourceSHA256": "de03c886bc3559bfbbbba3efd99f737d21dd98274337a6e6d20249bd2be15ab4",
+      "sourceBytes": 141,
+      "baseline": "xtm2/baseline/itemid-duplicate.xtm.cxtm",
+      "baselineBytes": 114,
+      "baselineSHA256": "28899734b2fcdb39ba7d8c6747baeaf520f29164f66bac8350c1b36c8ff5c0ef"
+    },
+    {
+      "id": "xtm2/in/itemid-fragment.xtm",
+      "group": "item-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-fragment.xtm",
+      "sourceSHA256": "8d91a15a7c8a5c409ef64ac089f9b713812e80f1899c0750aff8bb22cd16c183",
+      "sourceBytes": 142,
+      "baseline": "xtm2/baseline/itemid-fragment.xtm.cxtm",
+      "baselineBytes": 141,
+      "baselineSHA256": "bf6566a7c3444b15ea8d88c96e14da00c0939af42cf1f4d3f9423b33744d06dc"
+    },
+    {
+      "id": "xtm2/in/itemid-relative.xtm",
+      "group": "item-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-relative.xtm",
+      "sourceSHA256": "eb184bf6d43b30c4948c83939f712a6533ebf66e9051810eb1022de53ce917e9",
+      "sourceBytes": 160,
+      "baseline": "xtm2/baseline/itemid-relative.xtm.cxtm",
+      "baselineBytes": 159,
+      "baselineSHA256": "d39d1bac13b95c205f723ae58ee61c59347a9f162e397dd09813d511576008f6"
+    },
+    {
+      "id": "xtm2/in/itemid.xtm",
+      "group": "item-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid.xtm",
+      "sourceSHA256": "aeb88fc3bb3f40f2621e330b114d81520160e8245018357d08956e3f3090f80b",
+      "sourceBytes": 160,
+      "baseline": "xtm2/baseline/itemid.xtm.cxtm",
+      "baselineBytes": 159,
+      "baselineSHA256": "eb50870a51d07a05a9c702edd7e2ccbb42d2c28308fe5a4a3d689c7668563e80"
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-types.xtm",
+      "group": "merging",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-types.xtm",
+      "sourceSHA256": "59e09290227949b321090efb2e18d51d4c3989ffbfef043183ffe3eb3a7c1ffc",
+      "sourceBytes": 394,
+      "baseline": "xtm2/baseline/merge-itemid-with-types.xtm.cxtm",
+      "baselineBytes": 1478,
+      "baselineSHA256": "607f7da355368d3c8c3a92434be3fb9c7d3e4c8e0d08362541641e11d0a53597"
+    },
+    {
+      "id": "xtm2/in/merge-itemid.xtm",
+      "group": "merging",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid.xtm",
+      "sourceSHA256": "365c9ef953b195cdc54cef6e5ce75959530212f7e3f458c2b3597c951e232937",
+      "sourceBytes": 246,
+      "baseline": "xtm2/baseline/merge-itemid.xtm.cxtm",
+      "baselineBytes": 186,
+      "baselineSHA256": "0b7be3cb50b40742a54dbcfec2db3b42d4ebde8c85a2a7d6166ed157a6b72b76"
+    },
+    {
+      "id": "xtm2/in/merge-subjid.xtm",
+      "group": "merging",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-subjid.xtm",
+      "sourceSHA256": "c5626addd6c81aef44b1ac30d4dafa4bbe7402d36020ace2b6c770c403b3f41a",
+      "sourceBytes": 256,
+      "baseline": "xtm2/baseline/merge-subjid.xtm.cxtm",
+      "baselineBytes": 229,
+      "baselineSHA256": "59043be6a88d0429c161da6c8a5b32f69c43575d4229dde7f1143570478c649f"
+    },
+    {
+      "id": "xtm2/in/merge-subjloc.xtm",
+      "group": "merging",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-subjloc.xtm",
+      "sourceSHA256": "e7d9f6f200c3f8dfff1e7b0b62a26ed2d51f53c99925a774f684ff1e7056f7d8",
+      "sourceBytes": 250,
+      "baseline": "xtm2/baseline/merge-subjloc.xtm.cxtm",
+      "baselineBytes": 223,
+      "baselineSHA256": "a2a230ba28be060e8a757624798b418dac86a55861771ac1f60b53951d9b477f"
+    },
+    {
+      "id": "xtm2/in/subjid-duplicate.xtm",
+      "group": "subject-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-duplicate.xtm",
+      "sourceSHA256": "ede80c9c329997c17c4422bdd02cd60a2c9bae6ebc88905d47e18f8f40df5272",
+      "sourceBytes": 191,
+      "baseline": "xtm2/baseline/subjid-duplicate.xtm.cxtm",
+      "baselineBytes": 186,
+      "baselineSHA256": "48c5654ff242a46d5307ebf8f8217e30a5e751ef0d7f14dea1451c569814c1ad"
+    },
+    {
+      "id": "xtm2/in/subjid-escaping.xtm",
+      "group": "subject-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-escaping.xtm",
+      "sourceSHA256": "88d6dd1eb9853a8dd64f471fa73d8cb83ea93e9f23ac204b0afce009c7924cde",
+      "sourceBytes": 177,
+      "baseline": "xtm2/baseline/subjid-escaping.xtm.cxtm",
+      "baselineBytes": 214,
+      "baselineSHA256": "861f3f34d9d7f7f45f6b252c9b3f50bab34bb13ff9c1d2d7e2a7ac75ac66ff88"
+    },
+    {
+      "id": "xtm2/in/subjid-escaping2.xtm",
+      "group": "subject-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-escaping2.xtm",
+      "sourceSHA256": "c1501dfceb8bc8b3f5bced3a8014e2ad0fb07a24b2481d97bacbb5c87305f52c",
+      "sourceBytes": 179,
+      "baseline": "xtm2/baseline/subjid-escaping2.xtm.cxtm",
+      "baselineBytes": 214,
+      "baselineSHA256": "8bc72a814fa9a6b48fb5608f0e907ea5a0d4ef1ce4bbf5d0255db0531a814ff3"
+    },
+    {
+      "id": "xtm2/in/subjid-fragment.xtm",
+      "group": "subject-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-fragment.xtm",
+      "sourceSHA256": "0494cfd57abc7c74b0540f16126f7e3f263bfc02c633071aa715dadd317cd455",
+      "sourceBytes": 184,
+      "baseline": "xtm2/baseline/subjid-fragment.xtm.cxtm",
+      "baselineBytes": 183,
+      "baselineSHA256": "c231b7338ea3d8d8619a61c9870727b7d134e44c36355494c3f273423ceaf793"
+    },
+    {
+      "id": "xtm2/in/subjid-relative.xtm",
+      "group": "subject-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-relative.xtm",
+      "sourceSHA256": "a4382629022bb3622bf8de49aebf4f8cc2b1322a407e60ec5941eecd95a7f670",
+      "sourceBytes": 149,
+      "baseline": "xtm2/baseline/subjid-relative.xtm.cxtm",
+      "baselineBytes": 186,
+      "baselineSHA256": "48c5654ff242a46d5307ebf8f8217e30a5e751ef0d7f14dea1451c569814c1ad"
+    },
+    {
+      "id": "xtm2/in/subjid-sameas-itemid.xtm",
+      "group": "subject-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-sameas-itemid.xtm",
+      "sourceSHA256": "906f9b41356fb1f836ad4b357383b9831cc0ac79c5cae2c65b8c1f8d1b4b8cd7",
+      "sourceBytes": 222,
+      "baseline": "xtm2/baseline/subjid-sameas-itemid.xtm.cxtm",
+      "baselineBytes": 251,
+      "baselineSHA256": "f6e5d4c9ca348356e78ef3cce5ba9353f19c3573b006b1def1c3c3bd9a51826e"
+    },
+    {
+      "id": "xtm2/in/subjid.xtm",
+      "group": "subject-identifier",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid.xtm",
+      "sourceSHA256": "eb5180db0f6e4b6607cb77c8bdd07008f4ff623a397f05a9ed68089232ea5c05",
+      "sourceBytes": 165,
+      "baseline": "xtm2/baseline/subjid.xtm.cxtm",
+      "baselineBytes": 202,
+      "baselineSHA256": "06d7adbdef4f37557a18d5a926a7d385967d6494facd021c44bdd092f5d852e8"
+    },
+    {
+      "id": "xtm2/in/subjloc-duplicate.xtm",
+      "group": "subject-locator",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-duplicate.xtm",
+      "sourceSHA256": "b29fb45c977c6fdb5cb5a74d4551c2ba19537d837aee57f28fb7e75319eaf19c",
+      "sourceBytes": 185,
+      "baseline": "xtm2/baseline/subjloc-duplicate.xtm.cxtm",
+      "baselineBytes": 180,
+      "baselineSHA256": "d0bd49f5d2ec66ee7385607d79dc4b172c71ed88b7e34aed78087a2c05034742"
+    },
+    {
+      "id": "xtm2/in/subjloc-fragment.xtm",
+      "group": "subject-locator",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-fragment.xtm",
+      "sourceSHA256": "dfdd314cf01305e089d28952256319752224a65f80a50dc3805241e8766ec3fc",
+      "sourceBytes": 143,
+      "baseline": "xtm2/baseline/subjloc-fragment.xtm.cxtm",
+      "baselineBytes": 177,
+      "baselineSHA256": "e1fb28f5c9983d742f4dfa7c9386802dc364b05d3a67ec1fb6317a0f92a43c36"
+    },
+    {
+      "id": "xtm2/in/subjloc-multiple.xtm",
+      "group": "subject-locator",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-multiple.xtm",
+      "sourceSHA256": "590e9c591f1ad7d076fd165a00ee7123911026794a014df3bc1538e3502b4aea",
+      "sourceBytes": 219,
+      "baseline": "xtm2/baseline/subjloc-multiple.xtm.cxtm",
+      "baselineBytes": 243,
+      "baselineSHA256": "fa7a9c4b624be76511fb63dbfbbd2c1063f2725870de787f386620824c95ba8a"
+    },
+    {
+      "id": "xtm2/in/subjloc-relative.xtm",
+      "group": "subject-locator",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-relative.xtm",
+      "sourceSHA256": "431f4fbba958ef4d94b7ff6e0caea6dae25b4c029c47eda3e0e5cbc5166c00be",
+      "sourceBytes": 146,
+      "baseline": "xtm2/baseline/subjloc-relative.xtm.cxtm",
+      "baselineBytes": 180,
+      "baselineSHA256": "d0bd49f5d2ec66ee7385607d79dc4b172c71ed88b7e34aed78087a2c05034742"
+    },
+    {
+      "id": "xtm2/in/subjloc.xtm",
+      "group": "subject-locator",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc.xtm",
+      "sourceSHA256": "c6b8ce542fbe8b3250780c5100f56c439dc64b276de257694f1e0a7a05d88786",
+      "sourceBytes": 162,
+      "baseline": "xtm2/baseline/subjloc.xtm.cxtm",
+      "baselineBytes": 196,
+      "baselineSHA256": "5ba34de82144be6adc6666d4d4fb9ee4d1a5a92e1b2aaf69a98d1fbf387f2154"
+    }
+  ]
+}

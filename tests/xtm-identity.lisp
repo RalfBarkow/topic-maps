@@ -61,29 +61,161 @@
     (check (concatenate 'string label ":roles-played-eq") (and (member instance (topic-roles-played owner) :test #'eq) (member type-role (topic-roles-played type) :test #'eq)))
     (check (concatenate 'string label ":canonical-handles") (and (eq a (canonical-association a)) (every (lambda (r) (eq r (canonical-association-role r))) roles)))))
 
+;; Slice 21A's twenty successful, previously unregistered originals. Keep this
+;; explicit: similar filenames and .sub helpers are not additional contracts.
+(defparameter *additional-originals*
+  '("itemid-duplicate" "itemid-fragment" "itemid-relative" "itemid"
+    "merge-itemid-with-types" "merge-itemid" "merge-subjid" "merge-subjloc"
+    "subjid-duplicate" "subjid-escaping" "subjid-escaping2" "subjid-fragment"
+    "subjid-relative" "subjid-sameas-itemid" "subjid"
+    "subjloc-duplicate" "subjloc-fragment" "subjloc-multiple" "subjloc-relative" "subjloc"))
+
+(defun references-current-p (map)
+  (let ((topics (topic-map-topics map)) (associations (topic-map-associations map)))
+    (flet ((live (topic) (and (member topic topics :test #'eq) (eq topic (canonical-topic topic)))))
+      (and
+        (every (lambda (topic) (and (live topic) (eq map (topic-parent topic))
+          (every (lambda (role) (and (eq topic (association-role-player role))
+            (member (association-role-parent role) associations :test #'eq)
+            (member role (association-roles (association-role-parent role)) :test #'eq)))
+            (topic-roles-played topic)))) topics)
+        (every (lambda (a) (and (eq a (canonical-association a)) (eq map (association-parent a))
+          (live (association-type a)) (every #'live (association-scope a))
+          (every (lambda (role) (and (eq role (canonical-association-role role))
+            (eq a (association-role-parent role)) (live (association-role-type role))
+            (live (association-role-player role))
+            (member role (topic-roles-played (association-role-player role)) :test #'eq)))
+            (association-roles a)))) associations)))))
+
+(defun same-identifiers-p (a b)
+  (and (= (length a) (length b)) (null (set-exclusive-or a b :test #'equal))))
+
+(defun additional-model-checks (name map)
+  (let* ((topic (by-id map "topic"))
+         (ii (list (concatenate 'string *document* "#topic"))) (si nil) (sl nil)
+         (directory (subseq *document* 0 (1+ (position #\/ *document* :from-end t))))
+         (shared "http://example.org/#topic"))
+    (check (concatenate 'string name ":declared-topic-live-eq")
+           (and topic (eq topic (canonical-topic topic)) (member topic (topic-map-topics map) :test #'eq)))
+    (cond
+      ((equal name "itemid-fragment") (push (concatenate 'string *document* "#topic2") ii))
+      ((equal name "itemid-relative") (push (concatenate 'string directory "more-tests/test.xtm#topic") ii))
+      ((equal name "itemid") (push shared ii))
+      ((member name '("merge-itemid" "merge-itemid-with-types" "merge-subjid" "merge-subjloc") :test #'equal)
+       (push (concatenate 'string *document* "#topic2") ii)
+       (cond ((member name '("merge-itemid" "merge-itemid-with-types") :test #'equal) (push shared ii))
+             ((equal name "merge-subjid") (push shared si))
+             (t (push shared sl)))
+       (check (concatenate 'string name ":merged-declarations-eq") (eq topic (by-id map "topic2"))))
+      ((member name '("subjid-duplicate" "subjid-relative") :test #'equal)
+       (push (concatenate 'string directory "photo.jpg") si))
+      ((equal name "subjid-escaping") (push "http://example.org/test+folder/#topic" si))
+      ((equal name "subjid-escaping2") (push "http://example.org/test folder/#topic" si))
+      ((equal name "subjid-fragment") (push (concatenate 'string *document* "#topic") si))
+      ((equal name "subjid-sameas-itemid")
+       (push "http://psi.example.org/test" ii) (push "http://psi.example.org/test" si))
+      ((equal name "subjid") (push shared si))
+      ((member name '("subjloc-duplicate" "subjloc-relative") :test #'equal)
+       (push (concatenate 'string directory "photo.jpg") sl))
+      ((equal name "subjloc-fragment") (push (concatenate 'string *document* "#topic") sl))
+      ((equal name "subjloc-multiple") (setf sl (list shared "http://example.org/#subject")))
+      ((equal name "subjloc") (push shared sl)))
+    (check (concatenate 'string name ":exact-ii-set") (same-identifiers-p ii (topic-item-identifiers topic)))
+    (check (concatenate 'string name ":exact-si-set") (same-identifiers-p si (topic-subject-identifiers topic)))
+    (check (concatenate 'string name ":exact-sl-set") (same-identifiers-p sl (topic-subject-locators topic)))
+    (check (concatenate 'string name ":no-unrequested-statements-or-reification")
+      (and (null (item-identifiers map)) (null (item-reifier map))
+        (every (lambda (topic) (and (null (topic-names topic)) (null (topic-occurrences topic))
+                                   (null (topic-reified topic)))) (topic-map-topics map))))
+    (when (equal name "merge-itemid-with-types")
+      (dolist (type-id '("topictype1" "topictype2"))
+        (let* ((type (by-id map type-id))
+               (role (find type (loop for a in (topic-map-associations map) append (association-roles a))
+                           :key #'association-role-player :test #'eq))
+               (a (and role (association-role-parent role))))
+          (check (concatenate 'string name ":forward-reference:" type-id)
+            (and type role (eq type (canonical-topic type))
+              (equal (list (concatenate 'string *document* "#" type-id)) (topic-item-identifiers type))
+              (eq (association-role-type role) (core map "type"))
+              (eq (association-type a) (core map "type-instance"))
+              (= 2 (length (association-roles a)))
+              (find-if (lambda (r) (and (eq topic (association-role-player r))
+                                       (eq (core map "instance") (association-role-type r)))) (association-roles a))))))
+      (dolist (core-id '("type" "instance" "type-instance"))
+        (check (concatenate 'string name ":core-no-extra-ii:" core-id)
+               (null (topic-item-identifiers (core map core-id))))))))
+
+(defun original-condition-data (condition)
+  (when condition
+    (let ((code (cond ((typep condition 'topic-maps.xtm:xtm-error) (error-code condition))
+                      ((typep condition 'item-identifier-error) (item-identifier-error-code condition)))))
+      (topic-maps.test-foundation::fields
+        "class" (string (type-of condition)) "code" (when code (string-downcase (string code)))
+        "message" (princ-to-string condition)))))
+
+(defun record-original-result (case actual expected condition)
+  ;; No rejection (XML, XTM or TMDM) can satisfy a positive original contract.
+  (topic-maps.test-foundation:record-result case
+    (cond ((typep condition 'xtm-unsupported) :unsupported) (condition :execution-error)
+          ((equalp actual expected) :cxtm-match) (t :cxtm-mismatch))
+    :diagnostics (list (if condition (format nil "~A: ~A" (type-of condition) condition)
+                         (format nil "Actual ~D bytes; original baseline ~D bytes." (length actual) (length expected))))))
+
+(defun original-model-data (map)
+  (when map
+    (flet ((array (items) (coerce items 'vector))
+           (fields (&rest args) (apply #'topic-maps.test-foundation::fields args)))
+      (let ((topics (topic-map-topics map)))
+        (labels ((ref (topic) (1+ (position topic topics :test #'eq))))
+          (fields "topicCount" (length topics) "associationCount" (length (topic-map-associations map))
+            "canonicalParentsAndInverseReferences" (if (references-current-p map) :true :false)
+            "topics" (array (loop for topic in topics collect
+              (fields "ordinal" (ref topic) "itemIdentifiers" (array (topic-item-identifiers topic))
+                "subjectIdentifiers" (array (topic-subject-identifiers topic)) "subjectLocators" (array (topic-subject-locators topic)))))
+            "associations" (array (loop for a in (topic-map-associations map) collect
+              (fields "type" (ref (association-type a)) "roles" (array (loop for role in (association-roles a) collect
+                (fields "type" (ref (association-role-type role)) "player" (ref (association-role-player role))))))))))))))
+
 (defun original-contracts ()
   (setf *cases* nil *outputs* nil)
-  (dolist (name '("empty" "topic" "itemid-tm" "topic-type" "topic-type-duplicate" "merge-three-way"))
+  (dolist (name (append '("empty" "topic" "itemid-tm" "topic-type" "topic-type-duplicate" "merge-three-way") *additional-originals*))
     (let* ((id (format nil "xtm2/in/~A.xtm" name))
            (iri (concatenate 'string "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/" id))
            (source (corpus-path id)) (baseline (corpus-path (format nil "xtm2/baseline/~A.xtm.cxtm" name)))
            (case (topic-maps.test-foundation:make-test-case :id id :category :valid :source-pathname source
                    :document-iri iri :expected-outcome :cxtm-equal :expected-baseline baseline
                    :clauses '("XTM 2.0 4.3-4.9,4.20" "TMDM 5.1-5.3,5.7-5.8,6,7.2" "CXTM 3.13,3.18,4")))
-           (map (deserialize-octets (file-bytes source) :document-iri iri :source-key id))
-           (before (public-state map))
-           (actual (topic-maps.cxtm:canonicalize-octets map :base-locator iri))
-           (expected (file-bytes baseline)))
-      (topic-maps.test-foundation:record-result case (if (equalp actual expected) :cxtm-match :cxtm-mismatch)
-        :diagnostics (list (format nil "Actual ~D bytes; original baseline ~D bytes." (length actual) (length expected))))
-      (push case *cases*) (push (list id actual expected) *outputs*)
+           (raw (file-bytes source)) (raw-before (copy-seq raw))
+           (expected (file-bytes baseline)) (map nil) (actual nil) (condition nil) (before nil))
+      (push case *cases*)
+      (handler-case
+          (setf map (deserialize-octets raw :document-iri iri :source-key id)
+                before (public-state map)
+                actual (topic-maps.cxtm:canonicalize-octets map :base-locator iri))
+        (error (c) (setf condition c)))
+      (record-original-result case actual expected condition)
+      (push (list id actual expected (original-model-data map) (original-condition-data condition) (length raw)) *outputs*)
+      (when condition (error condition))
       (check (concatenate 'string name ":original-byte-exact") (equalp actual expected))
       (check (concatenate 'string name ":pure") (equal before (public-state map)))
       (check (concatenate 'string name ":deterministic") (equalp actual (topic-maps.cxtm:canonicalize-octets map :base-locator iri)))
+      (check (concatenate 'string name ":repeat-pure") (equal before (public-state map)))
       (check (concatenate 'string name ":topic-count") (= (length (topic-map-topics map))
-        (cond ((member name '("empty" "itemid-tm") :test #'equal) 0) ((member name '("topic-type" "topic-type-duplicate") :test #'equal) 5) (t 1))))
+        (cond ((member name '("empty" "itemid-tm") :test #'equal) 0)
+              ((member name '("topic-type" "topic-type-duplicate") :test #'equal) 5)
+              ((equal name "merge-itemid-with-types") 6) (t 1))))
       (check (concatenate 'string name ":association-count") (= (length (topic-map-associations map))
-        (if (member name '("topic-type" "topic-type-duplicate") :test #'equal) 1 0)))
+        (cond ((member name '("topic-type" "topic-type-duplicate") :test #'equal) 1)
+              ((equal name "merge-itemid-with-types") 2) (t 0))))
+      (check (concatenate 'string name ":canonical-parent-and-inverse-eq") (references-current-p map))
+      (check (concatenate 'string name ":source-octets-preserved") (equalp raw raw-before))
+      (when (member name *additional-originals* :test #'equal)
+        (let* ((*document* iri)
+               (other (deserialize-octets raw :document-iri iri :source-key "different-provenance-only")))
+          (additional-model-checks name map)
+          (check (concatenate 'string name ":source-key-only-provenance")
+            (and (equalp (original-model-data map) (original-model-data other))
+                 (equalp actual (topic-maps.cxtm:canonicalize-octets other :base-locator iri))))))
       (when (equal name "topic")
         (check "topic:actual-item-locator" (equal (topic-item-identifiers (first (topic-map-topics map))) (list (concatenate 'string iri "#topic")))))
       (when (equal name "itemid-tm")
@@ -92,7 +224,30 @@
         (check "merge:three-identifiers" (= 3 (length (topic-item-identifiers (first (topic-map-topics map)))))))
       (when (member name '("topic-type" "topic-type-duplicate") :test #'equal)
         (let ((*document* iri)) (graph-checks name map (by-id map "xtm") (by-id map "format"))))))
-  (setf *cases* (nreverse *cases*) *outputs* (nreverse *outputs*)))
+  (setf *cases* (nreverse *cases*) *outputs* (nreverse *outputs*))
+  (check "originals:26-unique-case-records"
+    (and (= 26 (length *cases*))
+         (= 26 (length (remove-duplicates *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal))))))
+
+(defun result-classification-tests ()
+  (flet ((case-record () (topic-maps.test-foundation:make-test-case
+                         :id "local:classification-control" :category :valid :expected-outcome :cxtm-equal)))
+    (let* ((case (case-record)) (expected (third (first *outputs*))) (actual (copy-seq expected)))
+      (setf (aref actual 0) (logxor 1 (aref actual 0)))
+      (record-original-result case actual expected nil)
+      (check "classification:changed-actual-cxtm-is-fail"
+        (and (eq :fail (topic-maps.test-foundation:test-case-status case))
+             (eq :cxtm-mismatch (topic-maps.test-foundation:test-case-actual-outcome case)))))
+    (dolist (spec (list (list "xml" "<a><b></a>" 'xtm-xml-error :fail)
+                       (list "xtm" (document "<topic id='2bad'/>") 'xtm-rejection :fail)
+                       (list "tmdm" (document "<itemIdentity href='#a'/><topic id='a'/>") 'item-identifier-error :fail)
+                       (list "unsupported" (document "<topic id='a'><name><value>N</value></name></topic>") 'xtm-unsupported :unsupported)))
+      (let ((case (case-record))
+            (c (condition-from (lambda () (deserialize-octets (bytes (second spec)) :document-iri *document*)))))
+        (record-original-result case nil #() c)
+        (check (concatenate 'string "classification:" (first spec) ":never-positive-pass")
+          (and (typep c (third spec)) (eq (fourth spec) (topic-maps.test-foundation:test-case-status case))
+               (not (eq :cxtm-match (topic-maps.test-foundation:test-case-actual-outcome case)))))))))
 
 (defun semantic-tests ()
   (dolist (body '("<topic id='a'><instanceOf><topicRef href='#b'/></instanceOf></topic><topic id='b'/>"
@@ -307,9 +462,16 @@
 
 (defun run-tests ()
   (setf *checks* nil *fixture* nil)
-  (original-contracts) (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test)
+  (handler-case
+      (progn (original-contracts) (result-classification-tests)
+             (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
+    (error (condition)
+      ;; Preserve the actual failed outcome before ASDF propagates the failure.
+      (let ((report (uiop:getenv "TOPIC_MAPS_XTM_REPORT")))
+        (when report (write-report report)))
+      (error condition)))
   (check "checks:unique-test-names" (= (length *checks*) (length (remove-duplicates *checks* :test #'equal))))
-  (format t "XTM-SUMMARY ~D PASS 0 FAIL; 6 original CXTM PASS; helper source PASS~%" (length *checks*))
+  (format t "XTM-SUMMARY ~D PASS 0 FAIL; ~D original CXTM PASS; helper source PASS~%" (length *checks*) (length *cases*))
   (length *checks*))
 
 (defun write-report (pathname)
@@ -318,11 +480,12 @@
            (array (items) (coerce items 'vector)))
       (with-open-file (out pathname :direction :output :if-exists :supersede :external-format :utf-8)
         (topic-maps.test-foundation::emit-json-value
-          (fields "scope" "XTM 2.0 identity subset, six registered positive contracts only; no CTM Mergemap integration"
+          (fields "scope" "XTM 2.0 identity subset, 26 registered positive contracts only; no CTM Mergemap integration"
                   "corpusCommit" "cd165b150176c1d6842b37be9cc9051b40d4996b"
                   "statuses" (fields "pass" (count :pass cases :key #'topic-maps.test-foundation:test-case-status)
                                      "fail" (count :fail cases :key #'topic-maps.test-foundation:test-case-status)
-                                     "unsupported" 0 "not-run" 0)
+                                     "unsupported" (count :unsupported cases :key #'topic-maps.test-foundation:test-case-status)
+                                     "not-run" (count :not-run cases :key #'topic-maps.test-foundation:test-case-status))
                   "otherCorpusInputs" (fields "positiveUnexecuted" (- (length (directory (corpus-path "xtm2/in/*.xtm"))) (length cases))
                                               "negativeUnregisteredUnexecuted" (length (directory (corpus-path "xtm2/invalid/*.xtm"))))
                   "checks" (array (reverse *checks*))
@@ -332,10 +495,13 @@
                             "status" (string-downcase (symbol-name (topic-maps.test-foundation:test-case-status case)))
                             "actualOutcome" (string-downcase (symbol-name (topic-maps.test-foundation:test-case-actual-outcome case)))
                             "diagnostics" (array (topic-maps.test-foundation:test-case-diagnostics case)))))
-                  "helperSource" (fields "id" "ctm/in/mergemap-xtm.sub" "status" "pass" "topics" (length (topic-map-topics fixture))
-                                         "associations" (length (topic-map-associations fixture)) "roles" 2
+                  "helperSource" (fields "id" "ctm/in/mergemap-xtm.sub" "status" (if fixture "pass" "not-run") "topics" (when fixture (length (topic-map-topics fixture)))
+                                         "associations" (when fixture (length (topic-map-associations fixture))) "roles" 2
                                          "ctmMergemapContract" "NOT-RUN; direct helper deserialization only")
-                  "actualAndExpected" (array (loop for (id actual expected) in *outputs* collect
-                    (fields "id" id "actual" (babel:octets-to-string actual :encoding :utf-8)
-                            "expected" (babel:octets-to-string expected :encoding :utf-8) "byteLength" (length actual))))) out)
+                  "actualAndExpected" (array (loop for (id actual expected model condition source-length) in *outputs* collect
+                    (fields "id" id "actual" (when actual (babel:octets-to-string actual :encoding :utf-8))
+                            "expected" (babel:octets-to-string expected :encoding :utf-8) "byteLength" (when actual (length actual))
+                            "expectedByteLength" (length expected) "sourceByteLength" source-length
+                            "firstDifferentByte" (when actual (mismatch actual expected))
+                            "model" model "condition" condition)))) out)
         (terpri out)))))

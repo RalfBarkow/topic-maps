@@ -1,0 +1,8 @@
+{
+  "head": "1a2808b2d123184b2494f93b19738a31fc27fd52",
+  "branch": "codex/ctm-slice-20j",
+  "indexClean": true,
+  "worktreeClean": true,
+  "startedAtUTC": "2026-10-19T12:16:53.199457+00:00",
+  "sandboxStartupError": "writable root /Users/rgb/.nix-profile contains symlink component /Users/rgb/.nix-profile; symlinked writable roots are not supported."
+}

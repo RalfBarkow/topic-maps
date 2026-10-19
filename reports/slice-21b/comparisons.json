@@ -1,0 +1,1449 @@
+{
+  "kind": "actual-original-cxtm-comparisons",
+  "cases": [
+    {
+      "id": "xtm2/in/empty.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/empty.xtm",
+      "sourceKey": "xtm2/in/empty.xtm",
+      "sourceBytes": 76,
+      "sourceSHA256": "b40e5d02289f58917df1ed5b0837ead0d7aab819fdf373c490e4c36f43d9f9b8",
+      "baseline": "xtm2/baseline/empty.xtm.cxtm",
+      "baselineSHA256": "b73d0754d52b3bee5e20d60761da3118acd4e53695419024882de8750732fa68",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "actualSHA256": "b73d0754d52b3bee5e20d60761da3118acd4e53695419024882de8750732fa68",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 0,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "empty:original-byte-exact",
+        "empty:pure",
+        "empty:deterministic",
+        "empty:repeat-pure",
+        "empty:topic-count",
+        "empty:association-count",
+        "empty:canonical-parent-and-inverse-eq",
+        "empty:source-octets-preserved"
+      ]
+    },
+    {
+      "id": "xtm2/in/topic.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/topic.xtm",
+      "sourceKey": "xtm2/in/topic.xtm",
+      "sourceBytes": 111,
+      "sourceSHA256": "ff7fb91c0a3966ba553262f44d5658c4fd3917042fb58effb6bb6e09d1d6154b",
+      "baseline": "xtm2/baseline/topic.xtm.cxtm",
+      "baselineSHA256": "28899734b2fcdb39ba7d8c6747baeaf520f29164f66bac8350c1b36c8ff5c0ef",
+      "expectedBytes": 114,
+      "actualBytes": 114,
+      "actualSHA256": "28899734b2fcdb39ba7d8c6747baeaf520f29164f66bac8350c1b36c8ff5c0ef",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/topic.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "topic:original-byte-exact",
+        "topic:pure",
+        "topic:deterministic",
+        "topic:repeat-pure",
+        "topic:topic-count",
+        "topic:association-count",
+        "topic:canonical-parent-and-inverse-eq",
+        "topic:source-octets-preserved",
+        "topic:actual-item-locator"
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-tm.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-tm.xtm",
+      "sourceKey": "xtm2/in/itemid-tm.xtm",
+      "sourceBytes": 117,
+      "sourceSHA256": "921633cbcdec8fa25e2fff57cb40d13eca8e351bfb5cbc12d162c404821a34da",
+      "baseline": "xtm2/baseline/itemid-tm.xtm.cxtm",
+      "baselineSHA256": "d88295ed8eaa485ba2d8ae90a8d6b9583b9474667c09a1326b565d4604016100",
+      "expectedBytes": 94,
+      "actualBytes": 94,
+      "actualSHA256": "d88295ed8eaa485ba2d8ae90a8d6b9583b9474667c09a1326b565d4604016100",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 0,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "itemid-tm:original-byte-exact",
+        "itemid-tm:pure",
+        "itemid-tm:deterministic",
+        "itemid-tm:repeat-pure",
+        "itemid-tm:topic-count",
+        "itemid-tm:association-count",
+        "itemid-tm:canonical-parent-and-inverse-eq",
+        "itemid-tm:source-octets-preserved"
+      ]
+    },
+    {
+      "id": "xtm2/in/topic-type.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/topic-type.xtm",
+      "sourceKey": "xtm2/in/topic-type.xtm",
+      "sourceBytes": 173,
+      "sourceSHA256": "4187dc53b4604dba84e51213c09b59474b7447a3171aeffc2dff7415e1f62159",
+      "baseline": "xtm2/baseline/topic-type.xtm.cxtm",
+      "baselineSHA256": "ed55e8e4f86d9039f337035f5c6be6d9cce1de652c2b47d08ecccb318369eac6",
+      "expectedBytes": 963,
+      "actualBytes": 963,
+      "actualSHA256": "ed55e8e4f86d9039f337035f5c6be6d9cce1de652c2b47d08ecccb318369eac6",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 5,
+        "associationCount": 1,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/topic-type.xtm#xtm"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 2,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/topic-type.xtm#format"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 3,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/type-instance"
+            ],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 4,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/type"
+            ],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 5,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/instance"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": [
+          {
+            "type": 3,
+            "roles": [
+              {
+                "type": 4,
+                "player": 2
+              },
+              {
+                "type": 5,
+                "player": 1
+              }
+            ]
+          }
+        ]
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "topic-type:original-byte-exact",
+        "topic-type:pure",
+        "topic-type:deterministic",
+        "topic-type:repeat-pure",
+        "topic-type:topic-count",
+        "topic-type:association-count",
+        "topic-type:canonical-parent-and-inverse-eq",
+        "topic-type:source-octets-preserved",
+        "topic-type:counts",
+        "topic-type:map-parent-eq",
+        "topic-type:association-type-eq",
+        "topic-type:role-parent-eq",
+        "topic-type:players-eq",
+        "topic-type:roles-played-eq",
+        "topic-type:canonical-handles"
+      ]
+    },
+    {
+      "id": "xtm2/in/topic-type-duplicate.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/topic-type-duplicate.xtm",
+      "sourceKey": "xtm2/in/topic-type-duplicate.xtm",
+      "sourceBytes": 206,
+      "sourceSHA256": "394740e8e5dc1c527a676211371a71e5c6460e97d34e16cc7cfa7ca4dfff02cc",
+      "baseline": "xtm2/baseline/topic-type-duplicate.xtm.cxtm",
+      "baselineSHA256": "ed55e8e4f86d9039f337035f5c6be6d9cce1de652c2b47d08ecccb318369eac6",
+      "expectedBytes": 963,
+      "actualBytes": 963,
+      "actualSHA256": "ed55e8e4f86d9039f337035f5c6be6d9cce1de652c2b47d08ecccb318369eac6",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 5,
+        "associationCount": 1,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/topic-type-duplicate.xtm#xtm"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 2,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/topic-type-duplicate.xtm#format"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 3,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/type-instance"
+            ],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 4,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/type"
+            ],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 5,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/instance"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": [
+          {
+            "type": 3,
+            "roles": [
+              {
+                "type": 4,
+                "player": 2
+              },
+              {
+                "type": 5,
+                "player": 1
+              }
+            ]
+          }
+        ]
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "topic-type-duplicate:original-byte-exact",
+        "topic-type-duplicate:pure",
+        "topic-type-duplicate:deterministic",
+        "topic-type-duplicate:repeat-pure",
+        "topic-type-duplicate:topic-count",
+        "topic-type-duplicate:association-count",
+        "topic-type-duplicate:canonical-parent-and-inverse-eq",
+        "topic-type-duplicate:source-octets-preserved",
+        "topic-type-duplicate:counts",
+        "topic-type-duplicate:map-parent-eq",
+        "topic-type-duplicate:association-type-eq",
+        "topic-type-duplicate:role-parent-eq",
+        "topic-type-duplicate:players-eq",
+        "topic-type-duplicate:roles-played-eq",
+        "topic-type-duplicate:canonical-handles"
+      ]
+    },
+    {
+      "id": "xtm2/in/merge-three-way.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-three-way.xtm",
+      "sourceKey": "xtm2/in/merge-three-way.xtm",
+      "sourceBytes": 222,
+      "sourceSHA256": "79f9c11f0549b104e929750cd57acd79a84c10a9f61349653977dfe0b0df48b8",
+      "baseline": "xtm2/baseline/merge-three-way.xtm.cxtm",
+      "baselineSHA256": "8c8d35cbbe56bf960dc2407b8b7c75faf84e8e337c99166eaf28a4cab3939310",
+      "expectedBytes": 168,
+      "actualBytes": 168,
+      "actualSHA256": "8c8d35cbbe56bf960dc2407b8b7c75faf84e8e337c99166eaf28a4cab3939310",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-three-way.xtm#topic2",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-three-way.xtm#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-three-way.xtm#topic3"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "merge-three-way:original-byte-exact",
+        "merge-three-way:pure",
+        "merge-three-way:deterministic",
+        "merge-three-way:repeat-pure",
+        "merge-three-way:topic-count",
+        "merge-three-way:association-count",
+        "merge-three-way:canonical-parent-and-inverse-eq",
+        "merge-three-way:source-octets-preserved"
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-duplicate.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-duplicate.xtm",
+      "sourceKey": "xtm2/in/itemid-duplicate.xtm",
+      "sourceBytes": 141,
+      "sourceSHA256": "de03c886bc3559bfbbbba3efd99f737d21dd98274337a6e6d20249bd2be15ab4",
+      "baseline": "xtm2/baseline/itemid-duplicate.xtm.cxtm",
+      "baselineSHA256": "28899734b2fcdb39ba7d8c6747baeaf520f29164f66bac8350c1b36c8ff5c0ef",
+      "expectedBytes": 114,
+      "actualBytes": 114,
+      "actualSHA256": "28899734b2fcdb39ba7d8c6747baeaf520f29164f66bac8350c1b36c8ff5c0ef",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-duplicate.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "itemid-duplicate:original-byte-exact",
+        "itemid-duplicate:pure",
+        "itemid-duplicate:deterministic",
+        "itemid-duplicate:repeat-pure",
+        "itemid-duplicate:topic-count",
+        "itemid-duplicate:association-count",
+        "itemid-duplicate:canonical-parent-and-inverse-eq",
+        "itemid-duplicate:source-octets-preserved",
+        "itemid-duplicate:declared-topic-live-eq",
+        "itemid-duplicate:exact-ii-set",
+        "itemid-duplicate:exact-si-set",
+        "itemid-duplicate:exact-sl-set",
+        "itemid-duplicate:no-unrequested-statements-or-reification",
+        "itemid-duplicate:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-fragment.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-fragment.xtm",
+      "sourceKey": "xtm2/in/itemid-fragment.xtm",
+      "sourceBytes": 142,
+      "sourceSHA256": "8d91a15a7c8a5c409ef64ac089f9b713812e80f1899c0750aff8bb22cd16c183",
+      "baseline": "xtm2/baseline/itemid-fragment.xtm.cxtm",
+      "baselineSHA256": "bf6566a7c3444b15ea8d88c96e14da00c0939af42cf1f4d3f9423b33744d06dc",
+      "expectedBytes": 141,
+      "actualBytes": 141,
+      "actualSHA256": "bf6566a7c3444b15ea8d88c96e14da00c0939af42cf1f4d3f9423b33744d06dc",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-fragment.xtm#topic2",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-fragment.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "itemid-fragment:original-byte-exact",
+        "itemid-fragment:pure",
+        "itemid-fragment:deterministic",
+        "itemid-fragment:repeat-pure",
+        "itemid-fragment:topic-count",
+        "itemid-fragment:association-count",
+        "itemid-fragment:canonical-parent-and-inverse-eq",
+        "itemid-fragment:source-octets-preserved",
+        "itemid-fragment:declared-topic-live-eq",
+        "itemid-fragment:exact-ii-set",
+        "itemid-fragment:exact-si-set",
+        "itemid-fragment:exact-sl-set",
+        "itemid-fragment:no-unrequested-statements-or-reification",
+        "itemid-fragment:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-relative.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-relative.xtm",
+      "sourceKey": "xtm2/in/itemid-relative.xtm",
+      "sourceBytes": 160,
+      "sourceSHA256": "eb184bf6d43b30c4948c83939f712a6533ebf66e9051810eb1022de53ce917e9",
+      "baseline": "xtm2/baseline/itemid-relative.xtm.cxtm",
+      "baselineSHA256": "d39d1bac13b95c205f723ae58ee61c59347a9f162e397dd09813d511576008f6",
+      "expectedBytes": 159,
+      "actualBytes": 159,
+      "actualSHA256": "d39d1bac13b95c205f723ae58ee61c59347a9f162e397dd09813d511576008f6",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/more-tests/test.xtm#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-relative.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "itemid-relative:original-byte-exact",
+        "itemid-relative:pure",
+        "itemid-relative:deterministic",
+        "itemid-relative:repeat-pure",
+        "itemid-relative:topic-count",
+        "itemid-relative:association-count",
+        "itemid-relative:canonical-parent-and-inverse-eq",
+        "itemid-relative:source-octets-preserved",
+        "itemid-relative:declared-topic-live-eq",
+        "itemid-relative:exact-ii-set",
+        "itemid-relative:exact-si-set",
+        "itemid-relative:exact-sl-set",
+        "itemid-relative:no-unrequested-statements-or-reification",
+        "itemid-relative:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid.xtm",
+      "sourceKey": "xtm2/in/itemid.xtm",
+      "sourceBytes": 160,
+      "sourceSHA256": "aeb88fc3bb3f40f2621e330b114d81520160e8245018357d08956e3f3090f80b",
+      "baseline": "xtm2/baseline/itemid.xtm.cxtm",
+      "baselineSHA256": "eb50870a51d07a05a9c702edd7e2ccbb42d2c28308fe5a4a3d689c7668563e80",
+      "expectedBytes": 159,
+      "actualBytes": 159,
+      "actualSHA256": "eb50870a51d07a05a9c702edd7e2ccbb42d2c28308fe5a4a3d689c7668563e80",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "http://example.org/#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "itemid:original-byte-exact",
+        "itemid:pure",
+        "itemid:deterministic",
+        "itemid:repeat-pure",
+        "itemid:topic-count",
+        "itemid:association-count",
+        "itemid:canonical-parent-and-inverse-eq",
+        "itemid:source-octets-preserved",
+        "itemid:declared-topic-live-eq",
+        "itemid:exact-ii-set",
+        "itemid:exact-si-set",
+        "itemid:exact-sl-set",
+        "itemid:no-unrequested-statements-or-reification",
+        "itemid:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-types.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-types.xtm",
+      "sourceKey": "xtm2/in/merge-itemid-with-types.xtm",
+      "sourceBytes": 394,
+      "sourceSHA256": "59e09290227949b321090efb2e18d51d4c3989ffbfef043183ffe3eb3a7c1ffc",
+      "baseline": "xtm2/baseline/merge-itemid-with-types.xtm.cxtm",
+      "baselineSHA256": "607f7da355368d3c8c3a92434be3fb9c7d3e4c8e0d08362541641e11d0a53597",
+      "expectedBytes": 1478,
+      "actualBytes": 1478,
+      "actualSHA256": "607f7da355368d3c8c3a92434be3fb9c7d3e4c8e0d08362541641e11d0a53597",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 6,
+        "associationCount": 2,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "http://example.org/#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-types.xtm#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-types.xtm#topic2"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 2,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-types.xtm#topictype1"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 3,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/type-instance"
+            ],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 4,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/type"
+            ],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 5,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/instance"
+            ],
+            "subjectLocators": []
+          },
+          {
+            "ordinal": 6,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-types.xtm#topictype2"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          }
+        ],
+        "associations": [
+          {
+            "type": 3,
+            "roles": [
+              {
+                "type": 4,
+                "player": 2
+              },
+              {
+                "type": 5,
+                "player": 1
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "roles": [
+              {
+                "type": 4,
+                "player": 6
+              },
+              {
+                "type": 5,
+                "player": 1
+              }
+            ]
+          }
+        ]
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "merge-itemid-with-types:original-byte-exact",
+        "merge-itemid-with-types:pure",
+        "merge-itemid-with-types:deterministic",
+        "merge-itemid-with-types:repeat-pure",
+        "merge-itemid-with-types:topic-count",
+        "merge-itemid-with-types:association-count",
+        "merge-itemid-with-types:canonical-parent-and-inverse-eq",
+        "merge-itemid-with-types:source-octets-preserved",
+        "merge-itemid-with-types:declared-topic-live-eq",
+        "merge-itemid-with-types:merged-declarations-eq",
+        "merge-itemid-with-types:exact-ii-set",
+        "merge-itemid-with-types:exact-si-set",
+        "merge-itemid-with-types:exact-sl-set",
+        "merge-itemid-with-types:no-unrequested-statements-or-reification",
+        "merge-itemid-with-types:forward-reference:topictype1",
+        "merge-itemid-with-types:forward-reference:topictype2",
+        "merge-itemid-with-types:core-no-extra-ii:type",
+        "merge-itemid-with-types:core-no-extra-ii:instance",
+        "merge-itemid-with-types:core-no-extra-ii:type-instance",
+        "merge-itemid-with-types:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/merge-itemid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid.xtm",
+      "sourceKey": "xtm2/in/merge-itemid.xtm",
+      "sourceBytes": 246,
+      "sourceSHA256": "365c9ef953b195cdc54cef6e5ce75959530212f7e3f458c2b3597c951e232937",
+      "baseline": "xtm2/baseline/merge-itemid.xtm.cxtm",
+      "baselineSHA256": "0b7be3cb50b40742a54dbcfec2db3b42d4ebde8c85a2a7d6166ed157a6b72b76",
+      "expectedBytes": 186,
+      "actualBytes": 186,
+      "actualSHA256": "0b7be3cb50b40742a54dbcfec2db3b42d4ebde8c85a2a7d6166ed157a6b72b76",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "http://example.org/#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid.xtm#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid.xtm#topic2"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "merge-itemid:original-byte-exact",
+        "merge-itemid:pure",
+        "merge-itemid:deterministic",
+        "merge-itemid:repeat-pure",
+        "merge-itemid:topic-count",
+        "merge-itemid:association-count",
+        "merge-itemid:canonical-parent-and-inverse-eq",
+        "merge-itemid:source-octets-preserved",
+        "merge-itemid:declared-topic-live-eq",
+        "merge-itemid:merged-declarations-eq",
+        "merge-itemid:exact-ii-set",
+        "merge-itemid:exact-si-set",
+        "merge-itemid:exact-sl-set",
+        "merge-itemid:no-unrequested-statements-or-reification",
+        "merge-itemid:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/merge-subjid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-subjid.xtm",
+      "sourceKey": "xtm2/in/merge-subjid.xtm",
+      "sourceBytes": 256,
+      "sourceSHA256": "c5626addd6c81aef44b1ac30d4dafa4bbe7402d36020ace2b6c770c403b3f41a",
+      "baseline": "xtm2/baseline/merge-subjid.xtm.cxtm",
+      "baselineSHA256": "59043be6a88d0429c161da6c8a5b32f69c43575d4229dde7f1143570478c649f",
+      "expectedBytes": 229,
+      "actualBytes": 229,
+      "actualSHA256": "59043be6a88d0429c161da6c8a5b32f69c43575d4229dde7f1143570478c649f",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-subjid.xtm#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-subjid.xtm#topic2"
+            ],
+            "subjectIdentifiers": [
+              "http://example.org/#topic"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "merge-subjid:original-byte-exact",
+        "merge-subjid:pure",
+        "merge-subjid:deterministic",
+        "merge-subjid:repeat-pure",
+        "merge-subjid:topic-count",
+        "merge-subjid:association-count",
+        "merge-subjid:canonical-parent-and-inverse-eq",
+        "merge-subjid:source-octets-preserved",
+        "merge-subjid:declared-topic-live-eq",
+        "merge-subjid:merged-declarations-eq",
+        "merge-subjid:exact-ii-set",
+        "merge-subjid:exact-si-set",
+        "merge-subjid:exact-sl-set",
+        "merge-subjid:no-unrequested-statements-or-reification",
+        "merge-subjid:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/merge-subjloc.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-subjloc.xtm",
+      "sourceKey": "xtm2/in/merge-subjloc.xtm",
+      "sourceBytes": 250,
+      "sourceSHA256": "e7d9f6f200c3f8dfff1e7b0b62a26ed2d51f53c99925a774f684ff1e7056f7d8",
+      "baseline": "xtm2/baseline/merge-subjloc.xtm.cxtm",
+      "baselineSHA256": "a2a230ba28be060e8a757624798b418dac86a55861771ac1f60b53951d9b477f",
+      "expectedBytes": 223,
+      "actualBytes": 223,
+      "actualSHA256": "a2a230ba28be060e8a757624798b418dac86a55861771ac1f60b53951d9b477f",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-subjloc.xtm#topic",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-subjloc.xtm#topic2"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [
+              "http://example.org/#topic"
+            ]
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "merge-subjloc:original-byte-exact",
+        "merge-subjloc:pure",
+        "merge-subjloc:deterministic",
+        "merge-subjloc:repeat-pure",
+        "merge-subjloc:topic-count",
+        "merge-subjloc:association-count",
+        "merge-subjloc:canonical-parent-and-inverse-eq",
+        "merge-subjloc:source-octets-preserved",
+        "merge-subjloc:declared-topic-live-eq",
+        "merge-subjloc:merged-declarations-eq",
+        "merge-subjloc:exact-ii-set",
+        "merge-subjloc:exact-si-set",
+        "merge-subjloc:exact-sl-set",
+        "merge-subjloc:no-unrequested-statements-or-reification",
+        "merge-subjloc:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjid-duplicate.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-duplicate.xtm",
+      "sourceKey": "xtm2/in/subjid-duplicate.xtm",
+      "sourceBytes": 191,
+      "sourceSHA256": "ede80c9c329997c17c4422bdd02cd60a2c9bae6ebc88905d47e18f8f40df5272",
+      "baseline": "xtm2/baseline/subjid-duplicate.xtm.cxtm",
+      "baselineSHA256": "48c5654ff242a46d5307ebf8f8217e30a5e751ef0d7f14dea1451c569814c1ad",
+      "expectedBytes": 186,
+      "actualBytes": 186,
+      "actualSHA256": "48c5654ff242a46d5307ebf8f8217e30a5e751ef0d7f14dea1451c569814c1ad",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-duplicate.xtm#topic"
+            ],
+            "subjectIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/photo.jpg"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjid-duplicate:original-byte-exact",
+        "subjid-duplicate:pure",
+        "subjid-duplicate:deterministic",
+        "subjid-duplicate:repeat-pure",
+        "subjid-duplicate:topic-count",
+        "subjid-duplicate:association-count",
+        "subjid-duplicate:canonical-parent-and-inverse-eq",
+        "subjid-duplicate:source-octets-preserved",
+        "subjid-duplicate:declared-topic-live-eq",
+        "subjid-duplicate:exact-ii-set",
+        "subjid-duplicate:exact-si-set",
+        "subjid-duplicate:exact-sl-set",
+        "subjid-duplicate:no-unrequested-statements-or-reification",
+        "subjid-duplicate:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjid-escaping.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-escaping.xtm",
+      "sourceKey": "xtm2/in/subjid-escaping.xtm",
+      "sourceBytes": 177,
+      "sourceSHA256": "88d6dd1eb9853a8dd64f471fa73d8cb83ea93e9f23ac204b0afce009c7924cde",
+      "baseline": "xtm2/baseline/subjid-escaping.xtm.cxtm",
+      "baselineSHA256": "861f3f34d9d7f7f45f6b252c9b3f50bab34bb13ff9c1d2d7e2a7ac75ac66ff88",
+      "expectedBytes": 214,
+      "actualBytes": 214,
+      "actualSHA256": "861f3f34d9d7f7f45f6b252c9b3f50bab34bb13ff9c1d2d7e2a7ac75ac66ff88",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-escaping.xtm#topic"
+            ],
+            "subjectIdentifiers": [
+              "http://example.org/test+folder/#topic"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjid-escaping:original-byte-exact",
+        "subjid-escaping:pure",
+        "subjid-escaping:deterministic",
+        "subjid-escaping:repeat-pure",
+        "subjid-escaping:topic-count",
+        "subjid-escaping:association-count",
+        "subjid-escaping:canonical-parent-and-inverse-eq",
+        "subjid-escaping:source-octets-preserved",
+        "subjid-escaping:declared-topic-live-eq",
+        "subjid-escaping:exact-ii-set",
+        "subjid-escaping:exact-si-set",
+        "subjid-escaping:exact-sl-set",
+        "subjid-escaping:no-unrequested-statements-or-reification",
+        "subjid-escaping:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjid-escaping2.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-escaping2.xtm",
+      "sourceKey": "xtm2/in/subjid-escaping2.xtm",
+      "sourceBytes": 179,
+      "sourceSHA256": "c1501dfceb8bc8b3f5bced3a8014e2ad0fb07a24b2481d97bacbb5c87305f52c",
+      "baseline": "xtm2/baseline/subjid-escaping2.xtm.cxtm",
+      "baselineSHA256": "8bc72a814fa9a6b48fb5608f0e907ea5a0d4ef1ce4bbf5d0255db0531a814ff3",
+      "expectedBytes": 214,
+      "actualBytes": 214,
+      "actualSHA256": "8bc72a814fa9a6b48fb5608f0e907ea5a0d4ef1ce4bbf5d0255db0531a814ff3",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-escaping2.xtm#topic"
+            ],
+            "subjectIdentifiers": [
+              "http://example.org/test folder/#topic"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjid-escaping2:original-byte-exact",
+        "subjid-escaping2:pure",
+        "subjid-escaping2:deterministic",
+        "subjid-escaping2:repeat-pure",
+        "subjid-escaping2:topic-count",
+        "subjid-escaping2:association-count",
+        "subjid-escaping2:canonical-parent-and-inverse-eq",
+        "subjid-escaping2:source-octets-preserved",
+        "subjid-escaping2:declared-topic-live-eq",
+        "subjid-escaping2:exact-ii-set",
+        "subjid-escaping2:exact-si-set",
+        "subjid-escaping2:exact-sl-set",
+        "subjid-escaping2:no-unrequested-statements-or-reification",
+        "subjid-escaping2:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjid-fragment.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-fragment.xtm",
+      "sourceKey": "xtm2/in/subjid-fragment.xtm",
+      "sourceBytes": 184,
+      "sourceSHA256": "0494cfd57abc7c74b0540f16126f7e3f263bfc02c633071aa715dadd317cd455",
+      "baseline": "xtm2/baseline/subjid-fragment.xtm.cxtm",
+      "baselineSHA256": "c231b7338ea3d8d8619a61c9870727b7d134e44c36355494c3f273423ceaf793",
+      "expectedBytes": 183,
+      "actualBytes": 183,
+      "actualSHA256": "c231b7338ea3d8d8619a61c9870727b7d134e44c36355494c3f273423ceaf793",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-fragment.xtm#topic"
+            ],
+            "subjectIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-fragment.xtm#topic"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjid-fragment:original-byte-exact",
+        "subjid-fragment:pure",
+        "subjid-fragment:deterministic",
+        "subjid-fragment:repeat-pure",
+        "subjid-fragment:topic-count",
+        "subjid-fragment:association-count",
+        "subjid-fragment:canonical-parent-and-inverse-eq",
+        "subjid-fragment:source-octets-preserved",
+        "subjid-fragment:declared-topic-live-eq",
+        "subjid-fragment:exact-ii-set",
+        "subjid-fragment:exact-si-set",
+        "subjid-fragment:exact-sl-set",
+        "subjid-fragment:no-unrequested-statements-or-reification",
+        "subjid-fragment:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjid-relative.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-relative.xtm",
+      "sourceKey": "xtm2/in/subjid-relative.xtm",
+      "sourceBytes": 149,
+      "sourceSHA256": "a4382629022bb3622bf8de49aebf4f8cc2b1322a407e60ec5941eecd95a7f670",
+      "baseline": "xtm2/baseline/subjid-relative.xtm.cxtm",
+      "baselineSHA256": "48c5654ff242a46d5307ebf8f8217e30a5e751ef0d7f14dea1451c569814c1ad",
+      "expectedBytes": 186,
+      "actualBytes": 186,
+      "actualSHA256": "48c5654ff242a46d5307ebf8f8217e30a5e751ef0d7f14dea1451c569814c1ad",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-relative.xtm#topic"
+            ],
+            "subjectIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/photo.jpg"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjid-relative:original-byte-exact",
+        "subjid-relative:pure",
+        "subjid-relative:deterministic",
+        "subjid-relative:repeat-pure",
+        "subjid-relative:topic-count",
+        "subjid-relative:association-count",
+        "subjid-relative:canonical-parent-and-inverse-eq",
+        "subjid-relative:source-octets-preserved",
+        "subjid-relative:declared-topic-live-eq",
+        "subjid-relative:exact-ii-set",
+        "subjid-relative:exact-si-set",
+        "subjid-relative:exact-sl-set",
+        "subjid-relative:no-unrequested-statements-or-reification",
+        "subjid-relative:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjid-sameas-itemid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-sameas-itemid.xtm",
+      "sourceKey": "xtm2/in/subjid-sameas-itemid.xtm",
+      "sourceBytes": 222,
+      "sourceSHA256": "906f9b41356fb1f836ad4b357383b9831cc0ac79c5cae2c65b8c1f8d1b4b8cd7",
+      "baseline": "xtm2/baseline/subjid-sameas-itemid.xtm.cxtm",
+      "baselineSHA256": "f6e5d4c9ca348356e78ef3cce5ba9353f19c3573b006b1def1c3c3bd9a51826e",
+      "expectedBytes": 251,
+      "actualBytes": 251,
+      "actualSHA256": "f6e5d4c9ca348356e78ef3cce5ba9353f19c3573b006b1def1c3c3bd9a51826e",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "http://psi.example.org/test",
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid-sameas-itemid.xtm#topic"
+            ],
+            "subjectIdentifiers": [
+              "http://psi.example.org/test"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjid-sameas-itemid:original-byte-exact",
+        "subjid-sameas-itemid:pure",
+        "subjid-sameas-itemid:deterministic",
+        "subjid-sameas-itemid:repeat-pure",
+        "subjid-sameas-itemid:topic-count",
+        "subjid-sameas-itemid:association-count",
+        "subjid-sameas-itemid:canonical-parent-and-inverse-eq",
+        "subjid-sameas-itemid:source-octets-preserved",
+        "subjid-sameas-itemid:declared-topic-live-eq",
+        "subjid-sameas-itemid:exact-ii-set",
+        "subjid-sameas-itemid:exact-si-set",
+        "subjid-sameas-itemid:exact-sl-set",
+        "subjid-sameas-itemid:no-unrequested-statements-or-reification",
+        "subjid-sameas-itemid:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid.xtm",
+      "sourceKey": "xtm2/in/subjid.xtm",
+      "sourceBytes": 165,
+      "sourceSHA256": "eb5180db0f6e4b6607cb77c8bdd07008f4ff623a397f05a9ed68089232ea5c05",
+      "baseline": "xtm2/baseline/subjid.xtm.cxtm",
+      "baselineSHA256": "06d7adbdef4f37557a18d5a926a7d385967d6494facd021c44bdd092f5d852e8",
+      "expectedBytes": 202,
+      "actualBytes": 202,
+      "actualSHA256": "06d7adbdef4f37557a18d5a926a7d385967d6494facd021c44bdd092f5d852e8",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjid.xtm#topic"
+            ],
+            "subjectIdentifiers": [
+              "http://example.org/#topic"
+            ],
+            "subjectLocators": []
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjid:original-byte-exact",
+        "subjid:pure",
+        "subjid:deterministic",
+        "subjid:repeat-pure",
+        "subjid:topic-count",
+        "subjid:association-count",
+        "subjid:canonical-parent-and-inverse-eq",
+        "subjid:source-octets-preserved",
+        "subjid:declared-topic-live-eq",
+        "subjid:exact-ii-set",
+        "subjid:exact-si-set",
+        "subjid:exact-sl-set",
+        "subjid:no-unrequested-statements-or-reification",
+        "subjid:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjloc-duplicate.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-duplicate.xtm",
+      "sourceKey": "xtm2/in/subjloc-duplicate.xtm",
+      "sourceBytes": 185,
+      "sourceSHA256": "b29fb45c977c6fdb5cb5a74d4551c2ba19537d837aee57f28fb7e75319eaf19c",
+      "baseline": "xtm2/baseline/subjloc-duplicate.xtm.cxtm",
+      "baselineSHA256": "d0bd49f5d2ec66ee7385607d79dc4b172c71ed88b7e34aed78087a2c05034742",
+      "expectedBytes": 180,
+      "actualBytes": 180,
+      "actualSHA256": "d0bd49f5d2ec66ee7385607d79dc4b172c71ed88b7e34aed78087a2c05034742",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-duplicate.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/photo.jpg"
+            ]
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjloc-duplicate:original-byte-exact",
+        "subjloc-duplicate:pure",
+        "subjloc-duplicate:deterministic",
+        "subjloc-duplicate:repeat-pure",
+        "subjloc-duplicate:topic-count",
+        "subjloc-duplicate:association-count",
+        "subjloc-duplicate:canonical-parent-and-inverse-eq",
+        "subjloc-duplicate:source-octets-preserved",
+        "subjloc-duplicate:declared-topic-live-eq",
+        "subjloc-duplicate:exact-ii-set",
+        "subjloc-duplicate:exact-si-set",
+        "subjloc-duplicate:exact-sl-set",
+        "subjloc-duplicate:no-unrequested-statements-or-reification",
+        "subjloc-duplicate:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjloc-fragment.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-fragment.xtm",
+      "sourceKey": "xtm2/in/subjloc-fragment.xtm",
+      "sourceBytes": 143,
+      "sourceSHA256": "dfdd314cf01305e089d28952256319752224a65f80a50dc3805241e8766ec3fc",
+      "baseline": "xtm2/baseline/subjloc-fragment.xtm.cxtm",
+      "baselineSHA256": "e1fb28f5c9983d742f4dfa7c9386802dc364b05d3a67ec1fb6317a0f92a43c36",
+      "expectedBytes": 177,
+      "actualBytes": 177,
+      "actualSHA256": "e1fb28f5c9983d742f4dfa7c9386802dc364b05d3a67ec1fb6317a0f92a43c36",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-fragment.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-fragment.xtm#topic"
+            ]
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjloc-fragment:original-byte-exact",
+        "subjloc-fragment:pure",
+        "subjloc-fragment:deterministic",
+        "subjloc-fragment:repeat-pure",
+        "subjloc-fragment:topic-count",
+        "subjloc-fragment:association-count",
+        "subjloc-fragment:canonical-parent-and-inverse-eq",
+        "subjloc-fragment:source-octets-preserved",
+        "subjloc-fragment:declared-topic-live-eq",
+        "subjloc-fragment:exact-ii-set",
+        "subjloc-fragment:exact-si-set",
+        "subjloc-fragment:exact-sl-set",
+        "subjloc-fragment:no-unrequested-statements-or-reification",
+        "subjloc-fragment:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjloc-multiple.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-multiple.xtm",
+      "sourceKey": "xtm2/in/subjloc-multiple.xtm",
+      "sourceBytes": 219,
+      "sourceSHA256": "590e9c591f1ad7d076fd165a00ee7123911026794a014df3bc1538e3502b4aea",
+      "baseline": "xtm2/baseline/subjloc-multiple.xtm.cxtm",
+      "baselineSHA256": "fa7a9c4b624be76511fb63dbfbbd2c1063f2725870de787f386620824c95ba8a",
+      "expectedBytes": 243,
+      "actualBytes": 243,
+      "actualSHA256": "fa7a9c4b624be76511fb63dbfbbd2c1063f2725870de787f386620824c95ba8a",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-multiple.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [
+              "http://example.org/#subject",
+              "http://example.org/#topic"
+            ]
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjloc-multiple:original-byte-exact",
+        "subjloc-multiple:pure",
+        "subjloc-multiple:deterministic",
+        "subjloc-multiple:repeat-pure",
+        "subjloc-multiple:topic-count",
+        "subjloc-multiple:association-count",
+        "subjloc-multiple:canonical-parent-and-inverse-eq",
+        "subjloc-multiple:source-octets-preserved",
+        "subjloc-multiple:declared-topic-live-eq",
+        "subjloc-multiple:exact-ii-set",
+        "subjloc-multiple:exact-si-set",
+        "subjloc-multiple:exact-sl-set",
+        "subjloc-multiple:no-unrequested-statements-or-reification",
+        "subjloc-multiple:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjloc-relative.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-relative.xtm",
+      "sourceKey": "xtm2/in/subjloc-relative.xtm",
+      "sourceBytes": 146,
+      "sourceSHA256": "431f4fbba958ef4d94b7ff6e0caea6dae25b4c029c47eda3e0e5cbc5166c00be",
+      "baseline": "xtm2/baseline/subjloc-relative.xtm.cxtm",
+      "baselineSHA256": "d0bd49f5d2ec66ee7385607d79dc4b172c71ed88b7e34aed78087a2c05034742",
+      "expectedBytes": 180,
+      "actualBytes": 180,
+      "actualSHA256": "d0bd49f5d2ec66ee7385607d79dc4b172c71ed88b7e34aed78087a2c05034742",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc-relative.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/photo.jpg"
+            ]
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjloc-relative:original-byte-exact",
+        "subjloc-relative:pure",
+        "subjloc-relative:deterministic",
+        "subjloc-relative:repeat-pure",
+        "subjloc-relative:topic-count",
+        "subjloc-relative:association-count",
+        "subjloc-relative:canonical-parent-and-inverse-eq",
+        "subjloc-relative:source-octets-preserved",
+        "subjloc-relative:declared-topic-live-eq",
+        "subjloc-relative:exact-ii-set",
+        "subjloc-relative:exact-si-set",
+        "subjloc-relative:exact-sl-set",
+        "subjloc-relative:no-unrequested-statements-or-reification",
+        "subjloc-relative:source-key-only-provenance"
+      ]
+    },
+    {
+      "id": "xtm2/in/subjloc.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc.xtm",
+      "sourceKey": "xtm2/in/subjloc.xtm",
+      "sourceBytes": 162,
+      "sourceSHA256": "c6b8ce542fbe8b3250780c5100f56c439dc64b276de257694f1e0a7a05d88786",
+      "baseline": "xtm2/baseline/subjloc.xtm.cxtm",
+      "baselineSHA256": "5ba34de82144be6adc6666d4d4fb9ee4d1a5a92e1b2aaf69a98d1fbf387f2154",
+      "expectedBytes": 196,
+      "actualBytes": 196,
+      "actualSHA256": "5ba34de82144be6adc6666d4d4fb9ee4d1a5a92e1b2aaf69a98d1fbf387f2154",
+      "firstDifferentByte": null,
+      "byteExact": true,
+      "condition": null,
+      "status": "pass",
+      "model": {
+        "topicCount": 1,
+        "associationCount": 0,
+        "canonicalParentsAndInverseReferences": true,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/subjloc.xtm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [
+              "http://example.org/#topic"
+            ]
+          }
+        ],
+        "associations": []
+      },
+      "executedInASDFTestOp": true,
+      "checks": [
+        "subjloc:original-byte-exact",
+        "subjloc:pure",
+        "subjloc:deterministic",
+        "subjloc:repeat-pure",
+        "subjloc:topic-count",
+        "subjloc:association-count",
+        "subjloc:canonical-parent-and-inverse-eq",
+        "subjloc:source-octets-preserved",
+        "subjloc:declared-topic-live-eq",
+        "subjloc:exact-ii-set",
+        "subjloc:exact-si-set",
+        "subjloc:exact-sl-set",
+        "subjloc:no-unrequested-statements-or-reification",
+        "subjloc:source-key-only-provenance"
+      ]
+    }
+  ]
+}

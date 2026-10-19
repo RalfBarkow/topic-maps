@@ -1,0 +1,56 @@
+{
+  "kind": "executor-fault-injection-controls-not-corpus-results",
+  "controls": [
+    {
+      "mode": "mismatch",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "cxtm-mismatch",
+      "condition": null,
+      "countedAsOriginalPass": false
+    },
+    {
+      "mode": "xml",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "XTM-XML-ERROR",
+        "code": "xml-not-well-formed",
+        "message": "XTM XML-NOT-WELL-FORMED at xtm2/in/empty.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/empty.xtm), approximately 1:11: Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n"
+      },
+      "countedAsOriginalPass": false
+    },
+    {
+      "mode": "xtm",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-id",
+        "message": "XTM INVALID-ID at xtm2/in/empty.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/empty.xtm), approximately 1:81: topic/@id must be an XML Schema ID."
+      },
+      "countedAsOriginalPass": false
+    },
+    {
+      "mode": "tmdm",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "OCCURRENCE-IDENTIFIER-ERROR",
+        "code": "duplicate-item-identifier",
+        "message": "Occurrence DUPLICATE-ITEM-IDENTIFIER: Locator already identifies a different information item."
+      },
+      "countedAsOriginalPass": false
+    },
+    {
+      "mode": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "actualOutcome": "unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/empty.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/empty.xtm), approximately 1:83: XTM name is not implemented in this subset."
+      },
+      "countedAsOriginalPass": false
+    }
+  ]
+}
