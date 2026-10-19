@@ -1,0 +1,291 @@
+{
+  "kind": "observations-no-additional-registration",
+  "changes": [
+    {
+      "id": "xtm2/in/name-scope-duplicate-merged.xtm",
+      "before": {
+        "id": "xtm2/in/name-scope-duplicate-merged.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-duplicate-merged.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+          "sourceKey": "xtm2/in/name-scope-duplicate-merged.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-scope-duplicate-merged.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Emne</value>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#no</locator>\n<locator>#norwegian</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "A formerly Unsupported Name Scope is processed; the next excluded feature remains Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-scope-duplicate.xtm",
+      "before": {
+        "id": "xtm2/in/name-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+          "sourceKey": "xtm2/in/name-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#norwegian</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Emne</value>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "A formerly Unsupported Name Scope is processed; the next excluded feature remains Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-scope-multiple.xtm",
+      "before": {
+        "id": "xtm2/in/name-scope-multiple.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-multiple.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+          "sourceKey": "xtm2/in/name-scope-multiple.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-scope-multiple.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#danish</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#norwegian</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Emne</value>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "A formerly Unsupported Name Scope is processed; the next excluded feature remains Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-scope.xtm",
+      "before": {
+        "id": "xtm2/in/name-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+          "sourceKey": "xtm2/in/name-scope.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#norwegian</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Emne</value>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "A formerly Unsupported Name Scope is processed; the next excluded feature remains Unsupported."
+    },
+    {
+      "id": "xtm2/in/name-type-scope.xtm",
+      "before": {
+        "id": "xtm2/in/name-type-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-type-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm), approximately 5:14: XTM scope is not implemented in this subset.",
+          "line": 5,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+          "sourceKey": "xtm2/in/name-type-scope.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-type-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#norwegian</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Emner</value>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</name>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>http://psi.ontopia.net/xtm/basename/#plural</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "A formerly Unsupported Name Scope is processed; the next excluded feature remains Unsupported."
+    },
+    {
+      "id": "xtm2/in/variant-inherit.xtm",
+      "before": {
+        "id": "xtm2/in/variant-inherit.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-inherit.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+          "sourceKey": "xtm2/in/variant-inherit.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-inherit.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-inherit.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm), approximately 8:16: XTM variant is not implemented in this subset.",
+          "line": 8,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-inherit.xtm",
+          "sourceKey": "xtm2/in/variant-inherit.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "A formerly Unsupported Name Scope is processed; the next excluded feature remains Unsupported."
+    },
+    {
+      "id": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+      "before": {
+        "id": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/variant-missing-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+          "line": 4,
+          "column": 14,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+          "sourceKey": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/variant-missing-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm), approximately 8:16: XTM variant is not implemented in this subset.",
+          "line": 8,
+          "column": 16,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/variant-missing-scope-duplicate.xtm",
+          "sourceKey": "xtm2/invalid/variant-missing-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "warrant": "A formerly Unsupported Name Scope is processed; the next excluded feature remains Unsupported."
+    }
+  ],
+  "unchangedOriginalObservations": 117,
+  "newByteExactOriginals": [
+    "xtm2/in/name-scope.xtm",
+    "xtm2/in/name-scope-multiple.xtm",
+    "xtm2/in/name-scope-duplicate.xtm",
+    "xtm2/in/name-scope-duplicate-merged.xtm",
+    "xtm2/in/name-type-scope.xtm"
+  ],
+  "counterprobeFixtureChanges": [
+    {
+      "before": {
+        "label": "unsupported-is-not-pass",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM scope is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:90: XTM scope is not implemented in this subset.",
+          "line": 1,
+          "column": 90,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "local:xtm-semantic-test",
+          "cause": null
+        },
+        "status": "unsupported",
+        "registeredAsOriginal": false
+      },
+      "after": {
+        "label": "unsupported-is-not-pass",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM itemIdentity is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM itemIdentity is not implemented in this subset.",
+          "line": 1,
+          "column": 108,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "local:xtm-semantic-test",
+          "cause": null
+        },
+        "status": "unsupported",
+        "registeredAsOriginal": false
+      },
+      "reason": "Valid Name Item Identity replaces the now supported Scope as Unsupported guard."
+    }
+  ]
+}

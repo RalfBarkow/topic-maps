@@ -124,7 +124,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                    ((string= name "name")
                     (attributes node '("reifier") nil)
                     (check-reifier node)
-                    (let ((phase 0) (type-seen nil) (value-seen nil))
+                    (let ((phase 0) (type-seen nil) (scope-seen nil) (value-seen nil))
                       (dolist (child (elements node))
                         (check-namespace child)
                         (let* ((kind (node-name child))
@@ -137,19 +137,26 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                             ((string= kind "type")
                              (when type-seen (reject :duplicate-name-type "Only one name type is allowed." child))
                              (setf type-seen t))
+                            ((string= kind "scope")
+                             (when scope-seen (reject :duplicate-name-scope "Only one name scope is allowed." child))
+                             (setf scope-seen t))
                             ((string= kind "value")
                              (when value-seen (reject :duplicate-name-value "Only one name value is allowed." child))
                              (setf value-seen t))
                             ;; Valid extension points remain explicitly unsupported.
                             ;; Their complete subgrammars are outside this subset.
                             (t (unsupported child)))
-                          (validate child '("type" "value"))))
+                          (validate child '("type" "scope" "value"))))
                       (unless value-seen (reject :missing-name-value "name requires a value element." node))))
                    ((string= name "type")
                     (attributes node nil nil)
                     (let ((refs (elements node)))
                       (unless (= 1 (length refs)) (reject :type-cardinality "type requires exactly one topicRef." node))
                       (validate (first refs) '("topicRef"))))
+                   ((string= name "scope")
+                    (attributes node nil nil)
+                    (unless (elements node) (reject :empty-scope "scope requires at least one topicRef." node))
+                    (dolist (child (elements node)) (validate child '("topicRef"))))
                    ((string= name "value")
                     (attributes node nil nil)
                     ;; VALUE accepts all character data, including empty text and
@@ -184,15 +191,20 @@ constructs' complete subgrammars is made. XML errors have already been checked."
 (defun read-name (node owner map)
   (let* ((children (elements node))
          (type-node (find "type" children :key #'node-name :test #'string=))
+         (scope-node (find "scope" children :key #'node-name :test #'string=))
+         (type (when type-node (find-reference-topic map (reference-iri (first (elements type-node))))))
+         (scope (when scope-node (mapcar (lambda (ref) (find-reference-topic map (reference-iri ref)))
+                                        (elements scope-node))))
          (value-node (find "value" children :key #'node-name :test #'string=))
          (value (with-output-to-string (out)
                   (dolist (part (node-children value-node)) (write-string part out)))))
     ;; SAX has already resolved XML character/entity references. Preserve the
     ;; resulting Unicode sequence without trimming or decoding it again.
+    ;; ADD-NAME owns canonical set semantics and normalization after merging.
     (if type-node
         (topic-maps.tmdm:add-name owner value
-          :type (find-reference-topic map (reference-iri (first (elements type-node)))))
-        (topic-maps.tmdm:add-default-name owner value))))
+          :type type :scope scope)
+        (topic-maps.tmdm:add-default-name owner value :scope scope))))
 (defun read-topic (node map)
   (let ((topic (topic-maps.tmdm:intern-topic map :item-identifier
                  (concatenate 'string *document-iri* "#" (collapse-space (attr node "id"))))))

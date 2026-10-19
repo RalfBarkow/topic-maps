@@ -1,0 +1,25 @@
+{
+  "kind": "precommit-acceptance-audit",
+  "baseCommit": "d034a8deafa7cf74b2264ea8a7bd5cc0950806bf",
+  "branch": "codex/xtm-slice-21e",
+  "acceptancePassed": true,
+  "allInitialTrackedFilesVerified": 3891,
+  "modifiedBaseFiles": [
+    "src/xtm/reader.lisp",
+    "tests/ctm-xtm-mergemap.lisp",
+    "tests/xtm-identity.lisp",
+    "tests/xtm-names.lisp",
+    "tests/xtm-negative-originals.lisp",
+    "topic-maps.asd"
+  ],
+  "productionFilesModified": [
+    "src/xtm/reader.lisp"
+  ],
+  "newFileCount": 112,
+  "historicalReportsUnchanged": true,
+  "pinnedSourcesAndBaselinesUnchanged": true,
+  "executionSourcesStillMatchValidatedSHA256": true,
+  "indexInitiallyClean": true,
+  "noUnrelatedNewFiles": true,
+  "sourceState": "uncommitted final validated content; commit is created after this audit"
+}

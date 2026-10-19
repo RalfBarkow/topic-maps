@@ -1,0 +1,106 @@
+{
+  "kind": "name-scope-candidates-baseline-properties-only",
+  "baseCommit": "d034a8deafa7cf74b2264ea8a7bd5cc0950806bf",
+  "candidates": [
+    {
+      "id": "xtm2/in/name-scope.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+      "sourceBytes": 227,
+      "sourceSHA256": "44b14ba5da4048c383a337ef1f15d18cf5d5d718ffe848bf3811eefac4090224",
+      "baselineBytes": 483,
+      "baselineSHA256": "9a1258dbc6c26b835717205c081ad4db72d347c9b4a13bcf9e80adbecbca4584",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM scope is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+        "line": 4,
+        "column": 14,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope.xtm",
+        "sourceKey": "xtm2/in/name-scope.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/in/name-scope-multiple.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+      "sourceBytes": 262,
+      "sourceSHA256": "fefe14d0d9689dfcb25d1a660a16ed0b950105cb8a71863a071ffc813cf7aaee",
+      "baselineBytes": 618,
+      "baselineSHA256": "de65aae448329c7ed5281b3f9c6783915fcf92c4bf756512875a64fd52393686",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM scope is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-multiple.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+        "line": 4,
+        "column": 14,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-multiple.xtm",
+        "sourceKey": "xtm2/in/name-scope-multiple.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/in/name-scope-duplicate.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+      "sourceBytes": 265,
+      "sourceSHA256": "4bfc5ce2e6c9addc5aa4c384728542dc50111911d34a923732746c2764df8d51",
+      "baselineBytes": 483,
+      "baselineSHA256": "9a1258dbc6c26b835717205c081ad4db72d347c9b4a13bcf9e80adbecbca4584",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM scope is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+        "line": 4,
+        "column": 14,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate.xtm",
+        "sourceKey": "xtm2/in/name-scope-duplicate.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/in/name-scope-duplicate-merged.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+      "sourceBytes": 325,
+      "sourceSHA256": "043e54de5da62a74cb132d6a022593612461faa6fcee55e552703a239672e0c7",
+      "baselineBytes": 506,
+      "baselineSHA256": "9764166e65434b0f20aad62bc2b133d00a37d2be31ebcf1a8090e5c3299e89fa",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM scope is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-scope-duplicate-merged.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm), approximately 4:14: XTM scope is not implemented in this subset.",
+        "line": 4,
+        "column": 14,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-scope-duplicate-merged.xtm",
+        "sourceKey": "xtm2/in/name-scope-duplicate-merged.xtm",
+        "cause": null
+      }
+    },
+    {
+      "id": "xtm2/in/name-type-scope.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+      "sourceBytes": 310,
+      "sourceSHA256": "4ba8f4cdcf1e40e8ac76b5c3bec6883faa18bd1fb955e94450bf3cee1060fb72",
+      "baselineBytes": 471,
+      "baselineSHA256": "ccb9fde3906f36fe58218488149465325043295d705c399ade1cfb2c4c3da469",
+      "beforeCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM scope is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-type-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm), approximately 5:14: XTM scope is not implemented in this subset.",
+        "line": 5,
+        "column": 14,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-type-scope.xtm",
+        "sourceKey": "xtm2/in/name-type-scope.xtm",
+        "cause": null
+      }
+    }
+  ]
+}

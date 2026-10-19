@@ -1,0 +1,1076 @@
+CORPUS-INTEGRITY-PASS: {"auxiliary": 22, "baselines": 231, "invalid": 42, "missingBaselines": [], "unmatchedBaselines": [], "valid": 231}
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.017s
+
+OK
+; compiling file "/Users/rgb/workspace/topic-maps/src/package.lisp" (written 13 OCT 2026 11:05:43 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/package-tmpGHU3ALSV.fasl
+; compilation finished in 0:00:00.002
+; compiling file "/Users/rgb/workspace/topic-maps/src/filesystem.lisp" (written 13 OCT 2026 11:09:14 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/filesystem-tmpAAURSO1.fasl
+; compilation finished in 0:00:00.019
+; compiling file "/Users/rgb/workspace/topic-maps/src/corpus.lisp" (written 13 OCT 2026 11:09:14 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/corpus-tmp5GEXGEG5.fasl
+; compilation finished in 0:00:00.113
+; compiling file "/Users/rgb/workspace/topic-maps/src/report.lisp" (written 14 OCT 2026 05:51:46 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/report-tmpAR3FSGEY.fasl
+; compilation finished in 0:00:00.061
+; compiling file "/Users/rgb/workspace/topic-maps/tests/package.lisp" (written 13 OCT 2026 11:17:48 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/package-tmpJAIDFZTC.fasl
+; compilation finished in 0:00:00.043
+; compiling file "/Users/rgb/workspace/topic-maps/tests/foundation.lisp" (written 14 OCT 2026 05:51:46 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/foundation-tmp8V3J6PE9.fasl
+; compilation finished in 0:00:00.139
+FOUNDATION-PASS: 54 infrastructure checks; 231 valid, 42 invalid, 231 baselines, 22 auxiliaries; 273 CTM cases NOT-RUN, zero CTM passes.
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/package.lisp" (written 18 OCT 2026 12:43:22 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/package-tmp9V47YWQF.fasl
+; compilation finished in 0:00:00.003
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/integers.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/integers-tmp9BN22RMA.fasl
+; compilation finished in 0:00:00.018
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/decimals.lisp" (written 16 OCT 2026 08:18:19 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/decimals-tmp1CXFJSK9.fasl
+; compilation finished in 0:00:00.020
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/dates.lisp" (written 16 OCT 2026 12:57:36 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/dates-tmpX4BRKI0R.fasl
+; compilation finished in 0:00:00.084
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/datetimes.lisp" (written 17 OCT 2026 07:39:44 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/datetimes-tmpQ371UGST.fasl
+; compilation finished in 0:00:00.087
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/items.lisp" (written 18 OCT 2026 06:51:54 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/items-tmp2OWI3Q7U.fasl
+; compilation finished in 0:00:00.155
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/core-subjects.lisp" (written 18 OCT 2026 09:07:18 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/core-subjects-tmp9KKTJMYV.fasl
+; compilation finished in 0:00:00.018
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/item-identifiers.lisp" (written 18 OCT 2026 06:55:56 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/item-identifiers-tmpJU0JWO19.fasl
+; compilation finished in 0:00:00.075
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/reification.lisp" (written 18 OCT 2026 12:43:22 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/reification-tmpZX2WN8N4.fasl
+; compilation finished in 0:00:00.069
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/merging.lisp" (written 18 OCT 2026 12:49:58 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/merging-tmpOU81XRV0.fasl
+; compilation finished in 0:00:00.141
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/occurrences.lisp" (written 18 OCT 2026 06:52:49 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/occurrences-tmpY2ML9CFA.fasl
+; compilation finished in 0:00:00.035
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/variants.lisp" (written 18 OCT 2026 06:52:49 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/variants-tmpX2JYJDQE.fasl
+; compilation finished in 0:00:00.038
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/associations.lisp" (written 18 OCT 2026 06:52:49 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/associations-tmpOPCILR65.fasl
+; compilation finished in 0:00:00.025
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/import.lisp" (written 18 OCT 2026 12:43:24 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/tmdm/import-tmpRV9F8A9A.fasl
+; compilation finished in 0:00:00.028
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/package.lisp" (written 18 OCT 2026 11:06:05 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/package-tmpK2ZAJT4I.fasl
+; compilation finished in 0:00:00.002
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/conditions.lisp" (written 18 OCT 2026 11:06:05 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/conditions-tmpUX5S4ADN.fasl
+; compilation finished in 0:00:00.019
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/unicode.lisp" (written 19 OCT 2026 09:22:48 AM):
+
+; file: /Users/rgb/workspace/topic-maps/src/ctm/unicode.lisp
+; in: DEFUN SCALAR-CHARACTER
+;     (TOPIC-MAPS.CTM::PROBLEM 'TOPIC-MAPS.CTM:CTM-UNSUPPORTED
+;                              :CHARACTER-REPERTOIRE POSITION
+;                              "The Common Lisp implementation cannot represent this Unicode character.")
+; 
+; note: deleting unreachable code
+
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/unicode-tmp10401X32.fasl
+; compilation finished in 0:00:00.078
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/iri.lisp" (written 18 OCT 2026 02:50:41 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/iri-tmpZ7CBRM0G.fasl
+; compilation finished in 0:00:00.068
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/lexer.lisp" (written 19 OCT 2026 08:42:53 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/lexer-tmp9OZEQ0G2.fasl
+; compilation finished in 0:00:00.157
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/reader.lisp" (written 19 OCT 2026 09:18:04 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/reader-tmpB2JTL1W9.fasl
+; compilation finished in 0:00:00.430
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/templates.lisp" (written 19 OCT 2026 08:25:49 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/templates-tmpP3BI68WQ.fasl
+; compilation finished in 0:00:00.120
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/resources.lisp" (written 19 OCT 2026 07:23:54 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/resources-tmpQDARA81Z.fasl
+; compilation finished in 0:00:00.046
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-package.lisp" (written 14 OCT 2026 06:12:17 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-package-tmpYEMMM7SE.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-identity.lisp" (written 19 OCT 2026 08:42:53 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-identity-tmp73HU0RPK.fasl
+; compilation finished in 0:00:00.158
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-report.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-report-tmpIO5N7K88.fasl
+; compilation finished in 0:00:00.015
+CTM-IDENTITY-SEMANTICS-PASS: 123 checks, 5 imported semantic cases, required prefix rejection; no CXTM equality passes.
+; 
+; compilation unit finished
+;   printed 1 note
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-merging.lisp" (written 14 OCT 2026 07:41:46 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-merging-tmpCM21U60Z.fasl
+; compilation finished in 0:00:00.073
+; compiling file "/Users/rgb/workspace/topic-maps/tests/merge-graphs.lisp" (written 14 OCT 2026 07:41:46 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/merge-graphs-tmp9DT7SEFG.fasl
+; compilation finished in 0:00:00.033
+CTM-MERGING-SEMANTICS-PASS: 646 checks, 11 pinned semantic cases; no CXTM equality passes.
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-associations.lisp" (written 18 OCT 2026 11:30:53 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-associations-tmp8065ESJT.fasl
+; compilation finished in 0:00:00.074
+; compiling file "/Users/rgb/workspace/topic-maps/tests/association-graphs.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/association-graphs-tmp7S8Z6FGF.fasl
+; compilation finished in 0:00:00.017
+; compiling file "/Users/rgb/workspace/topic-maps/tests/association-report.lisp" (written 14 OCT 2026 08:37:02 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/association-report-tmpSIT3QPKP.fasl
+; compilation finished in 0:00:00.011
+CTM-ASSOCIATIONS-SEMANTICS-PASS: 657 checks, 8 pinned cases; no CXTM equality passes.
+; compiling file "/Users/rgb/workspace/topic-maps/src/cxtm/package.lisp" (written 14 OCT 2026 05:49:40 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/cxtm/package-tmpE0PA0714.fasl
+; compilation finished in 0:00:00.006
+; compiling file "/Users/rgb/workspace/topic-maps/src/cxtm/nfc-data.lisp" (written 14 OCT 2026 05:59:26 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/cxtm/nfc-data-tmpJRWHHVG0.fasl
+; compilation finished in 0:00:00.197
+; compiling file "/Users/rgb/workspace/topic-maps/src/cxtm/unicode.lisp" (written 14 OCT 2026 05:59:27 PM):
+
+; file: /Users/rgb/workspace/topic-maps/src/cxtm/unicode.lisp
+; in: DEFUN NFC
+;     (TOPIC-MAPS.CXTM::FAIL :UNSUPPORTED-CHARACTER
+;                            "Lisp character repertoire is insufficient." T)
+; 
+; note: deleting unreachable code
+
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/cxtm/unicode-tmp4WZVROCX.fasl
+; compilation finished in 0:00:00.037
+; compiling file "/Users/rgb/workspace/topic-maps/src/cxtm/canonicalizer.lisp" (written 18 OCT 2026 09:07:18 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/cxtm/canonicalizer-tmpA0I3UKX8.fasl
+; compilation finished in 0:00:00.132
+; compiling file "/Users/rgb/workspace/topic-maps/tests/cxtm.lisp" (written 18 OCT 2026 06:55:56 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/cxtm-tmp267Y2N80.fasl
+; compilation finished in 0:00:00.146
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-occurrences.lisp" (written 19 OCT 2026 08:25:49 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-occurrences-tmpOUPE5FSJ.fasl
+; compilation finished in 0:00:00.145
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-prefixes.lisp" (written 19 OCT 2026 07:23:54 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-prefixes-tmpIGHCU6ZA.fasl
+; compilation finished in 0:00:00.068
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-integers.lisp" (written 19 OCT 2026 08:25:49 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-integers-tmpBO0TUGLK.fasl
+; compilation finished in 0:00:00.135
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-decimals.lisp" (written 16 OCT 2026 08:22:14 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-decimals-tmpIIXPIQNW.fasl
+; compilation finished in 0:00:00.144
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-dates.lisp" (written 16 OCT 2026 08:46:50 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-dates-tmpOHM494YR.fasl
+; compilation finished in 0:00:00.105
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-datetimes.lisp" (written 17 OCT 2026 07:37:00 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-datetimes-tmpOVFB07XF.fasl
+; compilation finished in 0:00:00.100
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-datetime-timezones.lisp" (written 17 OCT 2026 07:40:43 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-datetime-timezones-tmpG6VFGMYP.fasl
+; compilation finished in 0:00:00.059
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-typed-names.lisp" (written 18 OCT 2026 06:55:56 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-typed-names-tmp4QIPRMOF.fasl
+; compilation finished in 0:00:00.073
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-scopes.lisp" (written 18 OCT 2026 11:31:38 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-scopes-tmpGW0QV22K.fasl
+; compilation finished in 0:00:00.140
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-variants.lisp" (written 18 OCT 2026 11:32:21 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-variants-tmp2K9J0HSR.fasl
+; compilation finished in 0:00:00.131
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-references.lisp" (written 18 OCT 2026 02:57:43 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-references-tmpP44I4E0Y.fasl
+; compilation finished in 0:00:00.090
+; compiling file "/Users/rgb/workspace/topic-maps/tests/item-identifiers.lisp" (written 18 OCT 2026 07:00:02 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/item-identifiers-tmp63LQ7EX6.fasl
+; compilation finished in 0:00:00.143
+; compiling file "/Users/rgb/workspace/topic-maps/tests/reification.lisp" (written 18 OCT 2026 07:09:43 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/reification-tmp86F1A8FB.fasl
+; compilation finished in 0:00:00.178
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-association-arity.lisp" (written 18 OCT 2026 11:30:53 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-association-arity-tmpH7D4HL98.fasl
+; compilation finished in 0:00:00.197
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-type-relationships.lisp" (written 18 OCT 2026 09:20:20 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-type-relationships-tmpCDM7YXYI.fasl
+; compilation finished in 0:00:00.110
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-templates.lisp" (written 19 OCT 2026 08:42:53 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-templates-tmpLM57P5P.fasl
+; compilation finished in 0:00:00.129
+; compiling file "/Users/rgb/workspace/topic-maps/tests/map-import.lisp" (written 18 OCT 2026 12:54:30 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/map-import-tmpZE69DN33.fasl
+; compilation finished in 0:00:00.121
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-mergemap.lisp" (written 18 OCT 2026 11:06:05 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-mergemap-tmpG8099TO3.fasl
+; compilation finished in 0:00:00.136
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-include.lisp" (written 18 OCT 2026 03:05:02 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-include-tmpTASQCYAW.fasl
+; compilation finished in 0:00:00.089
+CXTM ctm/in/simple.ctm: PASS
+CXTM ctm/in/subject-identifier.ctm: PASS
+CXTM ctm/in/subject-locator.ctm: PASS
+CXTM ctm/in/item-identifier.ctm: PASS
+CXTM ctm/in/name.ctm: PASS
+CXTM ctm/in/topic-subject-identifier.ctm: PASS
+CXTM ctm/in/topic-subject-identifier-wrapped.ctm: PASS
+CXTM ctm/in/topic-subject-identifier-duplicate.ctm: PASS
+CXTM ctm/in/topic-subject-locator.ctm: PASS
+CXTM ctm/in/topic-subject-locator-wrapped.ctm: PASS
+CXTM ctm/in/topic-subject-locator-semi.ctm: PASS
+CXTM ctm/in/topic-subject-locator-duplicate.ctm: PASS
+CXTM ctm/in/topic-item-identifier.ctm: PASS
+CXTM ctm/in/topic-item-identifier-wrapped.ctm: PASS
+CXTM ctm/in/topic-item-identifier-duplicate.ctm: PASS
+CXTM ctm/in/name-duplicate.ctm: PASS
+CXTM ctm/in/association.ctm: PASS
+CXTM ctm/in/association-binary.ctm: PASS
+CXTM ctm/in/association-binary-duplicate.ctm: PASS
+CXTM ctm/in/association-type-sid.ctm: PASS
+CXTM ctm/in/association-with-comment.ctm: PASS
+CXTM ctm/in/association-with-comment2.ctm: PASS
+CXTM ctm/in/association-with-comment3.ctm: PASS
+CXTM ctm/in/association-with-comment4.ctm: PASS
+CXTM-PASS: 445 checks; 24 original byte comparisons; 25 imported PASS, 248 NOT-RUN.
+OCCURRENCE-CXTM ctm/in/occurrence-string.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-string2.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-uri-relative.ctm: PASS
+OCCURRENCE-CXTM ctm/in/occurrence-two.ctm: PASS
+OCCURRENCES-PASS: 1101 checks; 4 new byte-equal baselines; 29 imported PASS, 244 NOT-RUN.
+PREFIX-CXTM ctm/in/occurrence-explicit-datatype.ctm: PASS (359 bytes)
+PREFIX-CXTM ctm/in/occurrence-datatype-unknown.ctm: PASS (339 bytes)
+PREFIX-CXTM ctm/in/prefix-duplicate.ctm: PASS (141 bytes)
+PREFIX-CXTM ctm/in/prefix-duplicate2.ctm: PASS (260 bytes)
+PREFIX-CXTM ctm/in/prefix-multiline.ctm: PASS (141 bytes)
+PREFIX-REJECTION ctm/invalid/prefix-collision.ctm: PREFIX-COLLISION in ctm/invalid/prefix-collision.ctm at CHARACTER 43 (line 2, column 9): Prefix "ex" is already bound to "http://www.example.org/", not "http://www.example.net/".
+PREFIX-REJECTION ctm/invalid/prefix-undefined2.ctm: UNDEFINED-PREFIX in ctm/invalid/prefix-undefined2.ctm at CHARACTER 136 (line 6, column 15): Prefix "xsd" has no binding.
+PREFIX-DATATYPES-PASS: 150 checks; 5 new byte-exact baselines, 2 specific rejections; 36 imported PASS, 237 NOT-RUN.
+INTEGER-CXTM ctm/in/occurrence-integer.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer2.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-plus-sign.ctm: PASS (351 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-minus-sign.ctm: PASS (352 bytes)
+INTEGER-CXTM ctm/in/occurrence-integer-leading-zeros.ctm: PASS (1741 bytes)
+INTEGER-CXTM ctm/in/occurrence-explicit-datatype2.ctm: PASS (352 bytes)
+INTEGERS-PASS: 665 checks; 6 new byte-exact baselines; 42 imported PASS, 231 NOT-RUN.
+DECIMAL-CXTM ctm/in/occurrence-decimal.ctm: PASS (353 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-dot.ctm: PASS (353 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-dot-neg.ctm: PASS (354 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-leading-zeros.ctm: PASS (353 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-minus-sign.ctm: PASS (354 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-plus-sign.ctm: PASS (353 bytes)
+DECIMAL-CXTM ctm/in/occurrence-decimal-1.0.ctm: PASS (353 bytes)
+DECIMALS-PASS: 715 checks; 7 new byte-exact baselines; 49 imported PASS, 224 NOT-RUN.
+DATE-CXTM ctm/in/occurrence-date.ctm: PASS (357 bytes)
+DATE-CXTM ctm/in/occurrence-date2.ctm: PASS (357 bytes)
+DATE-CXTM ctm/in/occurrence-date3.ctm: PASS (1066 bytes)
+DATE-CXTM ctm/in/occurrence-date-negative.ctm: PASS (358 bytes)
+DATE-CXTM ctm/in/occurrence-date-another-century.ctm: PASS (359 bytes)
+DATE-REJECTION ctm/invalid/date-invalid-day.ctm: PASS (INVALID-DATE-DAY at 2:14)
+DATE-REJECTION ctm/invalid/date-invalid-month.ctm: PASS (INVALID-DATE-MONTH at 2:14)
+DATE-REJECTION ctm/invalid/date-invalid-year.ctm: PASS (INVALID-DATE-YEAR at 2:14)
+DATE-REJECTION ctm/invalid/date-invalid-year2.ctm: PASS (INVALID-DATE-YEAR at 6:14)
+DATE-REJECTION ctm/invalid/date-invalid-year3.ctm: PASS (INVALID-DATE-YEAR at 6:14)
+DATES-PASS: 1806 checks; 5 new exact baselines and 5 specific rejections; 59 imported PASS, 214 NOT-RUN.
+DATETIME-CXTM ctm/in/occurrence-datetime.ctm: PASS (370 bytes)
+DATETIME-CXTM ctm/in/occurrence-datetime2.ctm: FAIL-known-baseline-discrepancy (370 bytes)
+DATETIME-CXTM ctm/in/occurrence-datetime-fractional.ctm: PASS (677 bytes)
+DATETIME-CXTM ctm/in/occurrence-datetime-timezone.ctm: PASS (674 bytes)
+DATETIME-CXTM ctm/in/occurrence-datetime-timezone2.ctm: FAIL-known-baseline-discrepancy (674 bytes)
+DATETIMES-PASS: 217 semantic checks; corpus: 62 PASS, 2 known normative discrepancy FAIL, 209 NOT-RUN.
+TIMEZONES-PASS: 1944 checks; 1681 signed offset minutes, pure canonicalization and lexical TMDM equality.
+TYPED-NAME-CXTM ctm/in/name.ctm: PASS
+TYPED-NAME-CXTM ctm/in/name2.ctm: PASS
+TYPED-NAME-CXTM ctm/in/name-type.ctm: PASS
+TYPED-NAME-CXTM ctm/in/name-duplicate.ctm: PASS
+TYPED-NAMES-PASS: 106 checks; four original comparisons; 64 PASS, 2 known FAIL, 207 NOT-RUN.
+SCOPE-CXTM ctm/in/name-scope.ctm: PASS (615 bytes)
+SCOPE-CXTM ctm/in/occurrence-scope.ctm: PASS (646 bytes)
+SCOPE-CXTM ctm/in/association-scope.ctm: PASS (794 bytes)
+SCOPES-PASS: 293 checks; 3 original byte-exact comparisons; 67 PASS, 2 known FAIL, 204 NOT-RUN.
+VARIANT-CXTM ctm/in/variant.ctm: PASS (592 bytes)
+VARIANT-CXTM ctm/in/variants.ctm: PASS (857 bytes)
+VARIANT-CXTM ctm/in/variant-duplicate.ctm: PASS (592 bytes)
+VARIANTS-PASS: 324 checks; 3 original byte-exact comparisons, 1 specific rejection; 71 PASS, 2 known FAIL, 200 NOT-RUN.
+REFERENCE-CXTM ctm/in/wildcard.ctm: PASS (113 bytes), counter 1
+REFERENCE-CXTM ctm/in/wildcard-named.ctm: PASS (117 bytes), counter 1
+REFERENCE-CXTM ctm/in/wildcard-named2.ctm: PASS (301 bytes), counter 3
+REFERENCE-CXTM ctm/in/wildcard-named-merge.ctm: PASS (117 bytes), counter 1
+REFERENCE-CXTM ctm/in/association-scope-embedded.ctm: PASS (1651 bytes), counter 2
+REFERENCE-CXTM ctm/in/association-scope-embedded2.ctm: PASS (1863 bytes), counter 3
+REFERENCE-CXTM ctm/in/association-type-embedded.ctm: PASS (727 bytes), counter 1
+REFERENCE-CXTM ctm/in/association-type-embedded-merge.ctm: PASS (622 bytes), counter 2
+REFERENCE-CXTM ctm/in/embedded-semicolon.ctm: PASS (727 bytes), counter 1
+REFERENCE-CXTM ctm/in/name-scope-embedded.ctm: PASS (1331 bytes), counter 2
+REFERENCE-CXTM ctm/in/name-scope-embedded2.ctm: PASS (1543 bytes), counter 3
+REFERENCE-CXTM ctm/in/name-type-embedded.ctm: PASS (495 bytes), counter 1
+REFERENCE-CXTM ctm/in/nested-twice.ctm: PASS (737 bytes), counter 2
+REFERENCE-CXTM ctm/in/occurrence-scope-embedded.ctm: PASS (1503 bytes), counter 2
+REFERENCE-CXTM ctm/in/occurrence-scope-embedded2.ctm: PASS (1715 bytes), counter 3
+REFERENCE-CXTM ctm/in/occurrence-type-embedded.ctm: PASS (573 bytes), counter 1
+REFERENCE-CXTM ctm/in/role-player-embedded.ctm: PASS (721 bytes), counter 1
+REFERENCE-CXTM ctm/in/role-type-embedded.ctm: PASS (721 bytes), counter 1
+REFERENCE-CXTM ctm/in/subject-identifier-embedded.ctm: PASS (597 bytes), counter 1
+REFERENCE-CXTM ctm/in/variant-scope-embedded.ctm: PASS (1637 bytes), counter 3
+REFERENCE-CXTM ctm/in/variant-scope-embedded2.ctm: PASS (1985 bytes), counter 4
+REFERENCES-PASS: 238 checks; 21 original byte-exact comparisons and 1 specific rejection; 93 PASS, 2 known FAIL, 178 NOT-RUN.
+ITEM-IDENTIFIERS-PASS: 244 checks; 7 manually constructed original XTM2 baseline comparisons; no XTM reader or imported status changes.
+REIFICATION-CXTM ctm/in/tm-reifier.ctm: PASS (126 bytes)
+REIFICATION-CXTM ctm/in/tm-reifier2.ctm: PASS (347 bytes)
+REIFICATION-CXTM ctm/in/tm-reifier3.ctm: PASS (128 bytes)
+REIFICATION-CXTM ctm/in/name-reifier.ctm: PASS (433 bytes)
+REIFICATION-CXTM ctm/in/variant-reifier.ctm: PASS (697 bytes)
+REIFICATION-CXTM ctm/in/occurrence-reifier.ctm: PASS (464 bytes)
+REIFICATION-CXTM ctm/in/occurrence-reifier-nested.ctm: PASS (678 bytes)
+REIFICATION-CXTM ctm/in/occurrence-reifier-nested-nested.ctm: PASS (947 bytes)
+REIFICATION-CXTM ctm/in/association-reifier.ctm: PASS (612 bytes)
+REIFICATION-CXTM ctm/in/role-reifier.ctm: PASS (612 bytes)
+REIFICATION-CXTM ctm/in/role-duplicate-reified-qnames.ctm: PASS (736 bytes)
+REIFICATION-PASS: 236 checks; 11 original byte-exact comparisons, 2 specific rejections; 106 PASS, 2 known FAIL, 165 NOT-RUN.
+ARITY-CXTM ctm/in/association-duplicate-role.ctm: PASS (1157 bytes)
+ASSOCIATION-ARITY-PASS: 337 checks; one new original CTM/CXTM contract; 107 PASS, 2 known FAIL, 164 NOT-RUN.
+RELATIONSHIP-CXTM ctm/in/isa-relationship.ctm: PASS (963 bytes)
+RELATIONSHIP-CXTM ctm/in/isa-relationship-duplicate.ctm: PASS (963 bytes)
+RELATIONSHIP-CXTM ctm/in/isa-relationship-duplicate2.ctm: PASS (963 bytes)
+RELATIONSHIP-CXTM ctm/in/isa-relationship-embedded.ctm: PASS (1181 bytes)
+RELATIONSHIP-CXTM ctm/in/isa-relationship-type-qname.ctm: PASS (991 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship.ctm: PASS (977 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship-duplicate.ctm: PASS (977 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship-duplicate2.ctm: PASS (977 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship-embedded.ctm: PASS (1190 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-relationship-supertype-qname.ctm: PASS (1005 bytes)
+RELATIONSHIP-CXTM ctm/in/ako-merge-away.ctm: PASS (1590 bytes)
+RELATIONSHIP-CXTM ctm/in/subject-identifier-topicref.ctm: PASS (989 bytes)
+RELATIONSHIP-CXTM ctm/in/item-identifier-topicref.ctm: PASS (985 bytes)
+TYPE-RELATIONSHIPS-PASS: 1016 checks; 13 original CXTM contracts; 120 PASS, 2 known FAIL, 151 NOT-RUN.
+TEMPLATE-CXTM ctm/in/association-scope-embedded3.ctm: PASS (2431 bytes)
+TEMPLATE-CXTM ctm/in/association-scope-embedded4.ctm: PASS (3613 bytes)
+TEMPLATE-CXTM ctm/in/name-scope-embedded3.ctm: PASS (2105 bytes)
+TEMPLATE-CXTM ctm/in/name-scope-embedded4.ctm: PASS (3284 bytes)
+TEMPLATE-CXTM ctm/in/occurrence-scope-embedded3.ctm: PASS (2277 bytes)
+TEMPLATE-CXTM ctm/in/occurrence-scope-embedded4.ctm: PASS (3457 bytes)
+TEMPLATE-CXTM ctm/in/prefix-template-scope.ctm: PASS (263 bytes)
+TEMPLATE-CXTM ctm/in/template-ambiguous-parameter.ctm: PASS (376 bytes)
+TEMPLATE-CXTM ctm/in/template-ambiguous-parameter2.ctm: PASS (407 bytes)
+TEMPLATE-CXTM ctm/in/template-ambiguous-parameter3.ctm: PASS (399 bytes)
+TEMPLATE-CXTM ctm/in/template-ambiguous-parameter4.ctm: PASS (1506 bytes)
+TEMPLATE-CXTM ctm/in/template-assoc-embedded-topic.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-duplicate-name.ctm: PASS (438 bytes)
+TEMPLATE-CXTM ctm/in/template-forward-ref.ctm: PASS (825 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-embedded.ctm: PASS (401 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-embedded2.ctm: PASS (401 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-noargs-isa.ctm: PASS (963 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-noargs2.ctm: PASS (828 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-prefix-notation.ctm: PASS (328 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-twice.ctm: PASS (402 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named.ctm: PASS (331 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named2.ctm: PASS (331 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named3.ctm: PASS (646 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named4.ctm: PASS (331 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named5.ctm: PASS (577 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard-named6.ctm: PASS (581 bytes)
+TEMPLATE-CXTM ctm/in/template-invocation-wildcard.ctm: PASS (484 bytes)
+TEMPLATE-CXTM ctm/in/template-item-identifier.ctm: PASS (131 bytes)
+TEMPLATE-CXTM ctm/in/template-item-identifier2.ctm: PASS (131 bytes)
+TEMPLATE-CXTM ctm/in/template-item-identifier4.ctm: PASS (157 bytes)
+TEMPLATE-CXTM ctm/in/template-nested-occtype.ctm: PASS (576 bytes)
+TEMPLATE-CXTM ctm/in/template-nested-occtype2.ctm: PASS (737 bytes)
+TEMPLATE-CXTM ctm/in/template-noop.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-noop2.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-noop3.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-references.ctm: PASS (23 bytes)
+TEMPLATE-CXTM ctm/in/template-simple.ctm: PASS (114 bytes)
+TEMPLATE-CXTM ctm/in/template-subject-identifier.ctm: PASS (141 bytes)
+TEMPLATE-CXTM ctm/in/template-subject-locator.ctm: PASS (131 bytes)
+TEMPLATE-CXTM ctm/in/template-subject-locator2.ctm: PASS (131 bytes)
+TEMPLATE-CXTM ctm/in/template-subject-locator4.ctm: PASS (194 bytes)
+TEMPLATE-CXTM ctm/in/template-topic-nested.ctm: PASS (678 bytes)
+TEMPLATE-CXTM ctm/in/template-topic-nested2.ctm: PASS (596 bytes)
+TEMPLATE-CXTM ctm/in/template-typed-value.ctm: PASS (351 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard-named.ctm: PASS (211 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard-named2.ctm: PASS (211 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard-named3.ctm: PASS (211 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard-named4.ctm: PASS (919 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard.ctm: PASS (203 bytes)
+TEMPLATE-CXTM ctm/in/template-wildcard2.ctm: PASS (293 bytes)
+TEMPLATE-CXTM ctm/in/tmlab-tmql-issue-48.ctm: PASS (2358 bytes)
+TEMPLATE-CXTM ctm/in/topic-embedded-template-invocation.ctm: PASS (1357 bytes)
+TEMPLATE-CXTM ctm/in/topic-identifier-eq-template-name.ctm: PASS (207 bytes)
+TEMPLATE-CXTM ctm/in/topic-template-invocation-unary.ctm: PASS (328 bytes)
+TEMPLATE-CXTM ctm/in/topic-template-invocation.ctm: PASS (328 bytes)
+TEMPLATE-CXTM ctm/in/variant-scope-embedded3.ctm: PASS (2547 bytes)
+TEMPLATE-CXTM ctm/in/variant-scope-embedded4.ctm: PASS (3734 bytes)
+TEMPLATE-REJECTION ctm/invalid/embedded-topic-template.ctm: PASS (INVALID-TEMPLATE-BODY)
+TEMPLATE-REJECTION ctm/invalid/occurrence-explicit-datatype-as-parameter.ctm: PASS (VARIABLE-DATATYPE)
+TEMPLATE-REJECTION ctm/invalid/prefix-template-scope.ctm: PASS (INVALID-TEMPLATE-BODY)
+TEMPLATE-REJECTION ctm/invalid/template-bad-type.ctm: PASS (INVALID-TEMPLATE-ARGUMENT)
+TEMPLATE-REJECTION ctm/invalid/template-missing-args.ctm: PASS (TEMPLATE-ARITY)
+TEMPLATE-REJECTION ctm/invalid/template-missing-def.ctm: PASS (UNDEFINED-TEMPLATE)
+TEMPLATE-REJECTION ctm/invalid/template-name-collision.ctm: PASS (DUPLICATE-TEMPLATE)
+TEMPLATE-REJECTION ctm/invalid/tm-reifier-in-template.ctm: PASS (INVALID-TEMPLATE-BODY)
+TEMPLATE-REJECTION ctm/invalid/variable-undefined.ctm: PASS (VARIABLE-OUTSIDE-TEMPLATE)
+TEMPLATE-REJECTION ctm/invalid/variable-undefined2.ctm: PASS (VARIABLE-OUTSIDE-TEMPLATE)
+TEMPLATES-PASS: 297 checks; 57 byte-exact originals, 10 specific rejections; 187 PASS, 2 known FAIL, 84 NOT-RUN.
+MAP-IMPORT-PASS: 275 checks; no CTM import contracts executed.
+MERGEMAP-CXTM ctm/in/mergemap.ctm: PASS (1511 bytes)
+MERGEMAP-CXTM ctm/in/mergemap-syntax-qname.ctm: PASS (1511 bytes)
+MERGEMAP-CXTM ctm/in/mergemap-template.ctm: PASS (1529 bytes)
+MERGEMAP-CXTM ctm/in/mergemap-tm-reifier.ctm: PASS (134 bytes)
+MERGEMAP-REJECTION ctm/invalid/mergemap-missing-syntax-iri.ctm: PASS (EXPECTED-MERGEMAP-NOTATION)
+MERGEMAP-REJECTION ctm/invalid/mergemap-template.ctm: PASS (UNDEFINED-TEMPLATE)
+MERGEMAP-REJECTION ctm/invalid/mergemap-unknown-syntax.ctm: PASS (UNKNOWN-MERGEMAP-NOTATION)
+MERGEMAP-PASS: 118 checks; four byte-exact originals, three specific rejections.
+INCLUDE-CXTM ctm/in/include.ctm: PASS (1939/1939 bytes)
+INCLUDE-CXTM ctm/in/include-prefix.ctm: PASS (140/140 bytes)
+INCLUDE-CXTM ctm/in/include-prefix2.ctm: PASS (261/261 bytes)
+INCLUDE-CXTM ctm/in/include-template.ctm: FAIL (353/401 bytes)
+INCLUDE-CXTM ctm/in/include-template-wildcard.ctm: PASS (330/330 bytes)
+INCLUDE-CXTM ctm/in/include-tm-reifier.ctm: PASS (375/375 bytes)
+INCLUDE-CXTM ctm/in/include-topicref.ctm: PASS (1490/1490 bytes)
+INCLUDE-CXTM ctm/in/include-wildcard.ctm: PASS (499/499 bytes)
+INCLUDE-CXTM ctm/in/include-wildcard2.ctm: FAIL (719/669 bytes)
+INCLUDE-REJECTION ctm/invalid/include-prefix.ctm: PASS (UNDEFINED-PREFIX)
+INCLUDE-REJECTION ctm/invalid/include-prefix2.ctm: PASS (UNDEFINED-PREFIX)
+INCLUDE-REJECTION ctm/invalid/include-xtm.ctm: PASS (INVALID-IRI)
+INCLUDE-PASS: 93 checks; seven byte-exact originals, three rejections, two explicit baseline FAILs.
+; 
+; compilation unit finished
+;   printed 1 note
+XTM-ADAPTER-BOUNDARY-PASS: explicit adapter required before resource retrieval
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/package.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/package-tmpTZOONXRW.fasl
+; compilation finished in 0:00:00.004
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/definline.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/definline-tmpWN0UKDSV.fasl
+; compilation finished in 0:00:00.004
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/characters.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/characters-tmpBF3HHBTQ.fasl
+; compilation finished in 0:00:00.032
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/syntax.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/syntax-tmpGYUNPZCY.fasl
+; compilation finished in 0:00:00.028
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/encodings.lisp" (written 19 OCT 2026 03:31:51 PM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/encodings-tmpD68Q8WCA.fasl
+; compilation finished in 0:00:00.206
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/encodings-data.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/encodings-data-tmp7MK9KM9C.fasl
+; compilation finished in 0:00:00.057
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/xstream.lisp" (written 19 OCT 2026 03:31:51 PM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/xstream-tmpJJ71X849.fasl
+; compilation finished in 0:00:00.131
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/ystream.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/ystream-tmp1VUK6SR2.fasl
+; compilation finished in 0:00:00.262
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/hax.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/closure-common/hax-tmpR2FIHSUG.fasl
+; compilation finished in 0:00:00.037
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/package.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/package-tmp8PYELRKX.fasl
+; compilation finished in 0:00:00.003
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/util.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/util-tmpEHTOKYT0.fasl
+; compilation finished in 0:00:00.014
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/sax-handler.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/sax-handler-tmpS6U1VHI9.fasl
+; compilation finished in 0:00:00.313
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xml-name-rune-p.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xml-name-rune-p-tmpVTFK6ZJW.fasl
+; compilation finished in 0:00:00.041
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/split-sequence.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/split-sequence-tmp75WVSJEW.fasl
+; compilation finished in 0:00:00.018
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xml-parse.lisp" (written 19 OCT 2026 03:31:51 PM):
+
+; file: /private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xml-parse.lisp
+; in: DEFSTRUCT ZSTREAM
+;     (DEFSTRUCT CXML::ZSTREAM
+;       CXML::TOKEN-CATEGORY
+;       CXML::TOKEN-SEMANTIC
+;       CXML::INPUT-STACK)
+; --> EVAL-WHEN 
+; ==>
+;   (SB-KERNEL::%COMPILER-DEFSTRUCT
+;    '#<SB-KERNEL:DEFSTRUCT-DESCRIPTION CXML::ZSTREAM {70048F3ED3}>
+;    '#(#<SB-KERNEL:LAYOUT for T {7000000003}>
+;       #<SB-KERNEL:LAYOUT (ID=1) for STRUCTURE-OBJECT {7000000083}>))
+; 
+; caught STYLE-WARNING:
+;   Previously compiled calls to CXML::ZSTREAM-P and CXML::ZSTREAM-INPUT-STACK
+;   could not be inlined because the structure definition for CXML::ZSTREAM was not
+;   yet seen. To avoid this warning, DEFSTRUCT should precede references to the
+;   affected functions, or they must be declared locally notinline at each call
+;   site.
+
+; in: DEFSTRUCT XML-HEADER
+;     (DEFSTRUCT CXML::XML-HEADER
+;       CXML::VERSION
+;       CXML::ENCODING
+;       (CXML::STANDALONE-P NIL))
+; --> EVAL-WHEN 
+; ==>
+;   (SB-KERNEL::%COMPILER-DEFSTRUCT
+;    '#<SB-KERNEL:DEFSTRUCT-DESCRIPTION CXML::XML-HEADER {7008E1F553}>
+;    '#(#<SB-KERNEL:LAYOUT for T {7000000003}>
+;       #<SB-KERNEL:LAYOUT (ID=1) for STRUCTURE-OBJECT {7000000083}>))
+; 
+; caught STYLE-WARNING:
+;   Previously compiled calls to CXML::XML-HEADER-ENCODING and
+;   CXML::XML-HEADER-STANDALONE-P could not be inlined because the structure
+;   definition for CXML::XML-HEADER was not yet seen. To avoid this warning,
+;   DEFSTRUCT should precede references to the affected functions, or they must be
+;   declared locally notinline at each call site.
+
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xml-parse-tmpBU5UM3S4.fasl
+; compilation finished in 0:00:01.289
+WARNING:
+   Lisp compilation had style-warnings while
+   compiling #<CLOSURE-SOURCE-FILE "cxml/xml" "xml-parse">
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/unparse.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/unparse-tmpOBHVA3CD.fasl
+; compilation finished in 0:00:00.214
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xmls-compat.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xmls-compat-tmpJ6ELVFLF.fasl
+; compilation finished in 0:00:00.050
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/recoder.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/recoder-tmpULDB0RG.fasl
+; compilation finished in 0:00:00.051
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xmlns-normalizer.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/xmlns-normalizer-tmpUTZ0UUTE.fasl
+; compilation finished in 0:00:00.019
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/space-normalizer.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/space-normalizer-tmpOOSRA8PZ.fasl
+; compilation finished in 0:00:00.019
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/catalog.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/catalog-tmpDMIL0RVK.fasl
+; compilation finished in 0:00:00.095
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/sax-proxy.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/sax-proxy-tmp8MR9IMIO.fasl
+; compilation finished in 0:00:00.056
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/atdoc-configuration.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/xml/atdoc-configuration-tmpJQDKAVAY.fasl
+; compilation finished in 0:00:00.002
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/package.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/package-tmp3I8CEEQY.fasl
+; compilation finished in 0:00:00.007
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/dom-impl.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; file: /private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/dom-impl.lisp
+; in: DEFSTRUCT ROD-STREAM
+;     (DEFSTRUCT RUNE-DOM::ROD-STREAM (RUNE-DOM::BUF NIL) (POSITION 0))
+; --> EVAL-WHEN 
+; ==>
+;   (SB-KERNEL::%COMPILER-DEFSTRUCT
+;    '#<SB-KERNEL:DEFSTRUCT-DESCRIPTION RUNE-DOM::ROD-STREAM {70069DC463}>
+;    '#(#<SB-KERNEL:LAYOUT for T {7000000003}>
+;       #<SB-KERNEL:LAYOUT (ID=1) for STRUCTURE-OBJECT {7000000083}>))
+; 
+; caught STYLE-WARNING:
+;   Previously compiled call to RUNE-DOM::ROD-STREAM-BUF could not be inlined
+;   because the structure definition for RUNE-DOM::ROD-STREAM was not yet seen. To
+;   avoid this warning, DEFSTRUCT should precede references to the affected
+;   functions, or they must be declared locally notinline at each call site.
+
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/dom-impl-tmpA3RHFLWZ.fasl
+; compilation finished in 0:00:00.397
+WARNING:
+   Lisp compilation had style-warnings while
+   compiling #<CLOSURE-SOURCE-FILE "cxml/dom" "rune-impl">
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/dom-builder.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/dom-builder-tmpYZIB7VXO.fasl
+; compilation finished in 0:00:00.056
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/dom-sax.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/dom/dom-sax-tmpR8PK79V8.fasl
+; compilation finished in 0:00:00.037
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/klacks/package.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/klacks/package-tmpN1ZVB1HZ.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/klacks/klacks.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/klacks/klacks-tmpZGRRPISB.fasl
+; compilation finished in 0:00:00.056
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/klacks/klacks-impl.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/klacks/klacks-impl-tmpFNKDE5XP.fasl
+; compilation finished in 0:00:00.205
+; compiling file "/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/klacks/tap-source.lisp" (written 01 JAN 1970 01:00:01 AM):
+
+; wrote /tmp/topic-maps-fasls/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-21e-sources-3_ypxutj/sources/cxml/klacks/tap-source-tmpRJTU435C.fasl
+; compilation finished in 0:00:00.026
+; compiling file "/Users/rgb/workspace/topic-maps/src/xml/package.lisp" (written 18 OCT 2026 06:10:38 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/xml/package-tmpI9WG87JK.fasl
+; compilation finished in 0:00:00.001
+; compiling file "/Users/rgb/workspace/topic-maps/src/xml/parser.lisp" (written 18 OCT 2026 06:10:38 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/xml/parser-tmpYDE6I9E6.fasl
+; compilation finished in 0:00:00.008
+; compiling file "/Users/rgb/workspace/topic-maps/src/xtm/package.lisp" (written 18 OCT 2026 09:42:42 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/xtm/package-tmp319UV2V8.fasl
+; compilation finished in 0:00:00.008
+; compiling file "/Users/rgb/workspace/topic-maps/src/xtm/iri.lisp" (written 18 OCT 2026 09:50:17 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/xtm/iri-tmpLYQINFYS.fasl
+; compilation finished in 0:00:00.100
+; compiling file "/Users/rgb/workspace/topic-maps/src/xtm/reader.lisp" (written 19 OCT 2026 03:26:32 PM):
+
+; file: /Users/rgb/workspace/topic-maps/src/xtm/reader.lisp
+; in: DEFSTRUCT NODE
+;     (DEFSTRUCT TOPIC-MAPS.XTM::NODE
+;       TOPIC-MAPS.XTM::URI
+;       TOPIC-MAPS.XTM::NAME
+;       TOPIC-MAPS.XTM::ATTRIBUTES
+;       TOPIC-MAPS.XTM::CHILDREN
+;       TOPIC-MAPS.XTM::LINE
+;       TOPIC-MAPS.XTM::COLUMN)
+; --> EVAL-WHEN 
+; ==>
+;   (SB-KERNEL::%COMPILER-DEFSTRUCT
+;    '#<SB-KERNEL:DEFSTRUCT-DESCRIPTION TOPIC-MAPS.XTM::NODE {7005E5EFB3}>
+;    '#(#<SB-KERNEL:LAYOUT for T {7000000003}>
+;       #<SB-KERNEL:LAYOUT (ID=1) for STRUCTURE-OBJECT {7000000083}>))
+; 
+; caught STYLE-WARNING:
+;   Previously compiled calls to TOPIC-MAPS.XTM::NODE-LINE and
+;   TOPIC-MAPS.XTM::NODE-COLUMN could not be inlined because the structure
+;   definition for TOPIC-MAPS.XTM::NODE was not yet seen. To avoid this warning,
+;   DEFSTRUCT should precede references to the affected functions, or they must be
+;   declared locally notinline at each call site.
+
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/xtm/reader-tmpGA31XWNO.fasl
+; compilation finished in 0:00:00.090
+WARNING:
+   Lisp compilation had style-warnings while
+   compiling #<CL-SOURCE-FILE "topic-maps/xtm" "src/xtm/reader">
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/xtm.lisp" (written 18 OCT 2026 11:06:05 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/src/ctm/xtm-tmp5HT23M6C.fasl
+; compilation finished in 0:00:00.008
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-xtm-mergemap.lisp" (written 19 OCT 2026 03:25:06 PM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-xtm-mergemap-tmpA60KLDKY.fasl
+; compilation finished in 0:00:00.172
+XTM-MERGEMAP-CHECK-PASS original:raw-vector-eq-at-XTM-reader
+XTM-MERGEMAP-CHECK-PASS original:XTM-document-and-source-key
+XTM-MERGEMAP-CHECK-PASS original:actual-child-map-and-import-operation
+XTM-MERGEMAP-CHECK-PASS original:source-preserved-after-import
+XTM-MERGEMAP-CHECK-PASS original:imported-content-is-copied-and-resolves-eq
+XTM-MERGEMAP-CHECK-PASS original:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS original:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS original:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS original:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS original:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS original:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS original:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS original:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS original:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS original:deterministic
+XTM-MERGEMAP-CHECK-PASS original:raw-slots-and-retained-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS original:one-request-one-reader-one-import
+XTM-MERGEMAP-CHECK-PASS original:1519-byte-original-baseline-exact
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS relative-full-IRI:exact-resolver-contract
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS absolute-full-IRI:exact-resolver-contract
+XTM-MERGEMAP-CHECK-PASS notation-QName:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS notation-QName:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS notation-QName:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS notation-QName:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS notation-QName:exact-resolver-contract
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS resource-and-notation-QName:exact-resolver-contract
+XTM-MERGEMAP-CHECK-PASS source-key:does-not-change-topic-identifiers-or-model
+XTM-MERGEMAP-CHECK-PASS UTF16:negative-control-CTM-UTF8-cannot-decode
+XTM-MERGEMAP-CHECK-PASS UTF16:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS UTF16:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS UTF16:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS UTF16:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS UTF16:original-bytes-eq-at-qualified-XML-boundary
+XTM-MERGEMAP-CHECK-PASS UTF16:no-CTM-decoding-no-byte-mutation
+XTM-MERGEMAP-CHECK-PASS resolver:generic-byte-vector-storage-supported-without-decoding
+XTM-MERGEMAP-CHECK-PASS repeat:1:source-raw-state-preserved
+XTM-MERGEMAP-CHECK-PASS repeat:2:source-raw-state-preserved
+XTM-MERGEMAP-CHECK-PASS repeat:all-retained-target-handles-canonical
+XTM-MERGEMAP-CHECK-PASS repeat:two-actual-resolver-and-import-calls
+XTM-MERGEMAP-CHECK-PASS repeat:seven-topics-two-associations-four-roles
+XTM-MERGEMAP-CHECK-PASS repeat:distinct-local-identities-no-include-aliases
+XTM-MERGEMAP-CHECK-PASS repeat:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS repeat:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS repeat:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS repeat:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS repeat:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS repeat:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS repeat:three-shared-core-subjects
+XTM-MERGEMAP-CHECK-PASS repeat:deterministic
+XTM-MERGEMAP-CHECK-PASS repeat:raw-slots-and-retained-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS mixed:NIL:actual-model-counts-and-canonical-refs
+XTM-MERGEMAP-CHECK-PASS mixed:NIL:notation-dispatch-order
+XTM-MERGEMAP-CHECK-PASS mixed:NIL:deterministic
+XTM-MERGEMAP-CHECK-PASS mixed:NIL:raw-slots-and-retained-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS mixed:T:actual-model-counts-and-canonical-refs
+XTM-MERGEMAP-CHECK-PASS mixed:T:notation-dispatch-order
+XTM-MERGEMAP-CHECK-PASS mixed:T:deterministic
+XTM-MERGEMAP-CHECK-PASS mixed:T:raw-slots-and-retained-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS mixed:construction-order-independent-CXTM
+XTM-MERGEMAP-CHECK-PASS nested:relative-XTM-resource-and-child-caller-context
+XTM-MERGEMAP-CHECK-PASS forward:identity-merge-shared-player-EQ
+XTM-MERGEMAP-CHECK-PASS forward:child:association-type-eq
+XTM-MERGEMAP-CHECK-PASS forward:child:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS forward:child:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS forward:parent:association-type-eq
+XTM-MERGEMAP-CHECK-PASS forward:parent:role-types-and-players-eq
+XTM-MERGEMAP-CHECK-PASS forward:parent:parents-and-roles-played-eq
+XTM-MERGEMAP-CHECK-PASS metadata:source-map-state-and-reifier-EQ-preserved
+XTM-MERGEMAP-CHECK-PASS metadata:map-identifiers-and-map-reifier-not-copied
+XTM-MERGEMAP-CHECK-PASS metadata:source-map-not-a-content-item
+XTM-MERGEMAP-CHECK-PASS metadata:actual-import-was-reached
+XTM-MERGEMAP-CHECK-PASS missing-resolver:condition-and-code
+XTM-MERGEMAP-CHECK-PASS missing-resolver:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS missing-resolver:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS unknown-resource:condition-and-code
+XTM-MERGEMAP-CHECK-PASS unknown-resource:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS unknown-resource:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS resolver-refusal:condition-and-code
+XTM-MERGEMAP-CHECK-PASS resolver-refusal:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS resolver-refusal:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS resolver-refusal:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS invalid-result:("text" "source"):condition-and-code
+XTM-MERGEMAP-CHECK-PASS invalid-result:("text" "source"):parent-directive-location
+XTM-MERGEMAP-CHECK-PASS invalid-result:("text" "source"):resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(256) "source"):condition-and-code
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(256) "source"):parent-directive-location
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(256) "source"):resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(60) 42):condition-and-code
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(60) 42):parent-directive-location
+XTM-MERGEMAP-CHECK-PASS invalid-result:(#(60) 42):resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS malformed-XML:condition-and-code
+XTM-MERGEMAP-CHECK-PASS malformed-XML:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS malformed-XML:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS malformed-XML:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS malformed-XML:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:condition-and-code
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS invalid-UTF8:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:condition-and-code
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS DOCTYPE-file-denied:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS bad-version:condition-and-code
+XTM-MERGEMAP-CHECK-PASS bad-version:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS bad-version:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS bad-version:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS bad-version:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS bad-namespace:condition-and-code
+XTM-MERGEMAP-CHECK-PASS bad-namespace:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS bad-namespace:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS bad-namespace:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS bad-namespace:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS bad-id:condition-and-code
+XTM-MERGEMAP-CHECK-PASS bad-id:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS bad-id:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS bad-id:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS bad-id:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:condition-and-code
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS unsupported-XTM-mergeMap:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:condition-and-code
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS unsupported-reification:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS unsupported-name-item-identity:condition-and-code
+XTM-MERGEMAP-CHECK-PASS unsupported-name-item-identity:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS unsupported-name-item-identity:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS unsupported-name-item-identity:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS unsupported-name-item-identity:child-source-document-and-XML-position
+XTM-MERGEMAP-CHECK-PASS TMDM-child-core-conflict:condition-and-code
+XTM-MERGEMAP-CHECK-PASS TMDM-child-core-conflict:parent-directive-location
+XTM-MERGEMAP-CHECK-PASS TMDM-child-core-conflict:resource-and-notation-context
+XTM-MERGEMAP-CHECK-PASS TMDM-child-core-conflict:original-condition-retained
+XTM-MERGEMAP-CHECK-PASS unknown-notation:is-CTM-rejection-before-fetch
+XTM-MERGEMAP-CHECK-PASS conflict:ITEM:actual-import-precise-cause
+XTM-MERGEMAP-CHECK-PASS conflict:ITEM:both-models-and-raw-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS conflict:ITEM:import-condition-preserved-at-directive
+XTM-MERGEMAP-CHECK-PASS conflict:CORE:actual-import-precise-cause
+XTM-MERGEMAP-CHECK-PASS conflict:CORE:both-models-and-raw-handles-unchanged
+XTM-MERGEMAP-CHECK-PASS conflict:CORE:import-condition-preserved-at-directive
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-syntax-qname.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-syntax-qname.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-template.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-template.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-tm-reifier.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/mergemap-tm-reifier.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-prefix.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-prefix.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-prefix2.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-prefix2.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-template.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-template.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-template-wildcard.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-template-wildcard.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-tm-reifier.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-tm-reifier.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-topicref.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-topicref.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-wildcard.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-wildcard.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-wildcard2.ctm:model-and-original-comparison
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/in/include-wildcard2.ctm:unchanged-executed-output
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/mergemap-missing-syntax-iri.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/mergemap-template.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/mergemap-unknown-syntax.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/include-prefix.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/include-prefix2.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS adapter-loaded:ctm/invalid/include-xtm.ctm:same-intended-rejection
+XTM-MERGEMAP-CHECK-PASS only-one-new-original-contract
+XTM-MERGEMAP-CHECK-PASS unique-check-names
+XTM-MERGEMAP-PASS: 217 checks; actual 1519-byte original contract PASS
+; 
+; compilation unit finished
+;   caught 4 STYLE-WARNING conditions
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-registered-originals.lisp" (written 19 OCT 2026 09:18:04 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-registered-originals-tmpD801X3GJ.fasl
+; compilation finished in 0:00:00.135
+REGISTERED-ORIGINAL ctm/in/comment-ml.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-ml-nested.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-ml-nested2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl3.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl4.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl5.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/comment-sl6.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/empty.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/association-qname-iid.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/item-identifier-INF.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/item-identifier-relative.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/qname-date.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/qname-digits.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/rootless-uri.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-identifier-dot.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-identifier-non-http.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-identifier-relative.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-locator-dot.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/subject-locator-relative.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/topic-identifier-INF.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/topic-identifier-unicode.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-decimal-dot-neg2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-decimal-dot-pos.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-decimal-leading-zeros2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-duplicate-string.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-duplicate-uri.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-qname-value.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-string-multiline.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-string-multiline2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/occurrence-uri-semicolon.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/prefix-multiline2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/prefix-multiline3.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/prefix-multiline4.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/prefix-with-qm.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/string-escape.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/string-escape2.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/unicode-escape-u4.ctm: PASS
+REGISTERED-ORIGINAL ctm/in/unicode-escape-u6.ctm: PASS
+REGISTERED-ORIGINALS-PASS: 286 checks; forty actual byte-exact original contracts
+REGISTERED-NEGATIVE ctm/invalid/occurrence-double-positive-infinity.ctm: PASS; EXPECTED-OCCURRENCE-VALUE in ctm/invalid/occurrence-double-positive-infinity.ctm at CHARACTER 15 (line 2, column 10): Expected a supported CTM literal value.
+REGISTERED-NEGATIVE ctm/invalid/occurrence-double-negative-infinity.ctm: PASS; EXPECTED-OCCURRENCE-VALUE in ctm/invalid/occurrence-double-negative-infinity.ctm at CHARACTER 15 (line 2, column 10): Expected a supported CTM literal value.
+REGISTERED-NEGATIVE ctm/invalid/qname-hyphen.ctm: PASS; UNEXPECTED-TOKEN in ctm/invalid/qname-hyphen.ctm at CHARACTER 38 (line 3, column 3): Unexpected token after topic or name.
+REGISTERED-NEGATIVE ctm/invalid/string-unbalanced.ctm: PASS; UNTERMINATED-STRING in ctm/invalid/string-unbalanced.ctm at CHARACTER 8 (line 1, column 9): Unterminated quoted string.
+REGISTERED-NEGATIVE ctm/invalid/string-unicode.ctm: PASS; INVALID-UNICODE-ESCAPE in ctm/invalid/string-unicode.ctm at CHARACTER 11 (line 1, column 12): Expected hexadecimal escape digit.
+REGISTERED-NEGATIVE ctm/invalid/string-unicode2.ctm: PASS; INVALID-UNICODE-ESCAPE in ctm/invalid/string-unicode2.ctm at CHARACTER 15 (line 1, column 16): Expected hexadecimal escape digit.
+REGISTERED-NEGATIVE ctm/invalid/topic-id-illegal.ctm: PASS; UNEXPECTED-CHARACTER in ctm/invalid/topic-id-illegal.ctm at CHARACTER 0 (line 1, column 1): Unexpected character #\COMBINING_DOUBLE_INVERTED_BREVE.
+REGISTERED-NEGATIVES-PASS: 25 checks; 7 intended original rejections registered; 0 remain NOT-RUN
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-prolog.lisp" (written 19 OCT 2026 09:18:04 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-prolog-tmpGOW1GC70.fasl
+; compilation finished in 0:00:00.080
+PROLOG-ORIGINAL ctm/invalid/BOM-contradicts-encoding.ctm: PASS; ENCODING-CONFLICT in ctm/invalid/BOM-contradicts-encoding.ctm at BYTE 14: Encoding "iso-8859-1" conflicts with explicitly selected "UTF-8".
+PROLOG-ORIGINAL ctm/invalid/unknown-directive.ctm: PASS; UNKNOWN-DIRECTIVE in ctm/invalid/unknown-directive.ctm at CHARACTER 0 (line 1, column 1): Unknown CTM directive %ctm.
+PROLOG-ORIGINAL ctm/invalid/wrong-version.ctm: PASS; INVALID-VERSION in ctm/invalid/wrong-version.ctm at CHARACTER 9 (line 1, column 10): The only CTM version is the exact spelling 1.0.
+PROLOG-PASS: 171 checks; three intended original rejections
+EMPTY2-ORIGINAL ctm/in/empty2.ctm: PASS; 23 byte-exact CXTM bytes
+EMPTY2-PASS: 13 checks; one actual original contract
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-integer-literal.lisp" (written 19 OCT 2026 09:18:04 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-integer-literal-tmp9ZHTLHSG.fasl
+; compilation finished in 0:00:00.087
+CTM-INTEGER-ORIGINAL ctm/in/occurrence-ctm-integer.ctm: PASS; 356 byte-exact CXTM bytes
+CTM-INTEGER-PASS: 112 checks; one original plus 31 positive and 26 negative controls
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-triple-strings.lisp" (written 19 OCT 2026 08:57:06 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-triple-strings-tmpRW73Q691.fasl
+; compilation finished in 0:00:00.067
+TRIPLE-ORIGINAL ctm/in/occurrence-string-triple.ctm: PASS; 367 byte-exact CXTM bytes
+TRIPLE-ORIGINAL ctm/in/occurrence-string-triple2.ctm: PASS; 370 byte-exact CXTM bytes
+TRIPLE-ORIGINAL ctm/in/unicode-escape-u4-triple-string.ctm: PASS; 331 byte-exact CXTM bytes
+TRIPLE-ORIGINAL ctm/in/unicode-escape-u6-triple-string.ctm: PASS; 331 byte-exact CXTM bytes
+TRIPLE-PASS: 226 checks; four originals plus 77 positive and 31 negative controls
+; compiling file "/Users/rgb/workspace/topic-maps/tests/ctm-iso-8859-5.lisp" (written 19 OCT 2026 09:26:55 AM):
+
+; wrote /tmp/topic-maps-fasls/Users/rgb/workspace/topic-maps/tests/ctm-iso-8859-5-tmp4TM0ME1F.fasl
+; compilation finished in 0:00:00.113
+ENCODING-ORIGINAL ctm/in/encoding-8859-5.ctm: PASS; 337 byte-exact CXTM bytes
+ENCODING-PASS: 722 checks; 256 byte mappings, one original, 74 positive and 33 negative controls
+NFC-ORACLE-PASS: 16294 independent Unicode 15.1.0 comparisons (canonical mappings, all Hangul, 1000 seeded combining sequences)
+REPORT-JSON-PASS: deterministic schema, draft qualification, case contracts and only warranted imported status changes
+BASELINE-SEMANTIC-EVIDENCE-PASS: five frozen baselines support the selected properties; no canonicalization claimed
+MERGING-BASELINE-SEMANTIC-EVIDENCE-PASS: 11 frozen baselines; no canonicalization or canonical numbering
+ASSOCIATION-BASELINE-SEMANTIC-EVIDENCE-PASS: 8 frozen baselines, Role items and roles-played; no canonicalization
+CXTM-INDEPENDENT-PASS: 176 byte-exact unchanged baselines; 4 explicit normative discrepancy; canonical XML and reference integrity
+OCCURRENCE-INDEPENDENT-PASS: four original sources, actual parents/types, lexical values, datatype locators, no extra items
+PREFIX-INDEPENDENT-PASS: 7 original sources, 5 model observations, 2 specific rejections with independently checked positions
+INTEGER-INDEPENDENT-PASS: 6 original sources/model observations; 143 arithmetic-oracle probes, including 10000-digit integers
+DECIMAL-INDEPENDENT-PASS: 7 original sources/model observations; 157 Decimal arithmetic-oracle probes, including 10000-digit components
+DATE-INDEPENDENT-PASS: 5 original sources/model observations; 5 specific rejections; 396 arbitrary-precision calendar probes; 15 century decisions
+DATETIME-INDEPENDENT-PASS: 5 original model observations; 45 exact calendar/fraction probes; 2 documented discrepancies
+TIMEZONE-INDEPENDENT-PASS: 1774 exact UTC probes; 1681 signed offset minutes; stored strings and CXTM checked separately
+TYPED-NAMES-INDEPENDENT-PASS: four original sources, exact identifier sets and Name value/Parent/Type relations
+SCOPES-INDEPENDENT-PASS: three original model observations, Topic identity categories and Scope sets; independent XML ordering/Role references
+VARIANTS-INDEPENDENT-PASS: three original model observations; Parent identity, datatype locators, Scope sets and XML ordering
+REFERENCES-INDEPENDENT-PASS: 21 original model graphs; identity categories, generated locators/counters, Parent/Type/Player/Scope/Variant relations
+ITEM-IDENTIFIERS-INDEPENDENT-PASS: 7 hand-built original XTM2 baseline matches; all seven II positions, locator ordering and Topic references; no XTM deserialization claim
+REIFICATION-INDEPENDENT-PASS: 11 original model observations, canonical Topic identity and bidirectional Reifier references; 2 specific rejection reasons/positions
+ARITY-INDEPENDENT-PASS: original Topic/Role object observations; 12 canonical XML witnesses with complete Role references
+RELATIONSHIPS-INDEPENDENT-PASS: 13 original TMDM reference graphs; eight exact Core Subject locators; 304 atomic conflict observations
+TEMPLATES-INDEPENDENT-PASS: 57 original model graphs and 10 specific rejection contracts
+MAP-IMPORT-REPORT-PASS: model/metadata/reference evidence only; imported contracts unchanged
+MERGEMAP-INDEPENDENT-PASS: four unchanged byte baselines/model identities; three intended negative causes and exact resources
+INCLUDE-INDEPENDENT-PASS: nine model traces, each alias level, separate two baseline discrepancies, three intended negative causes
