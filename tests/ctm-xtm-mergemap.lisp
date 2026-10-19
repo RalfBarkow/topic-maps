@@ -277,7 +277,7 @@
       (list "bad-id" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='2bad'/></topicMap>") 'topic-maps.xtm:xtm-rejection :invalid-id)
       (list "unsupported-XTM-mergeMap" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><mergeMap href='other.xtm'/></topicMap>") 'topic-maps.xtm:xtm-unsupported :unsupported-construct)
       (list "unsupported-reification" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#r'/>") 'topic-maps.xtm:xtm-unsupported :reification)
-      (list "unsupported-name-item-identity" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='t'><name><itemIdentity href='#n'/><value>N</value></name></topic></topicMap>") 'topic-maps.xtm:xtm-unsupported :unsupported-construct)))
+      (list "unsupported-name-variant" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='t'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>") 'topic-maps.xtm:xtm-unsupported :unsupported-construct)))
       (destructuring-bind (label raw cause code) spec
         (multiple-value-bind (resolver calls) (resources (list (list *child* raw "bad:child-source")))
           (let* ((c (failure label text (if (eq cause 'topic-maps.xtm:xtm-unsupported) 'topic-maps.ctm:mergemap-source-unsupported 'topic-maps.ctm:mergemap-source-error)

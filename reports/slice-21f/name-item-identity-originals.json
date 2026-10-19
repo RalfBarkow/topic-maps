@@ -1,0 +1,129 @@
+{
+  "kind": "executed-name-item-identity-originals",
+  "cases": [
+    {
+      "id": "xtm2/in/itemid-name.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm",
+      "sourceKey": "xtm2/in/itemid-name.xtm",
+      "sourceBytes": 196,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D22746F706963223E0A202020203C6E616D653E0A2020202020203C6974656D4964656E7469747920687265663D22237468652D6E616D65222F3E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">\n    <name>\n      <itemIdentity href=\"#the-name\"/>\n      <value>Topic</value>\n    </name>\n  </topic>\n</topicMap>\n",
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 395,
+      "expectedBytes": 395,
+      "firstDifferentByte": null,
+      "condition": null,
+      "model": {
+        "identity": {
+          "topicCount": 2,
+          "associationCount": 0,
+          "canonicalParentsAndInverseReferences": true,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm#topic"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": []
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [],
+              "subjectIdentifiers": [
+                "http://psi.topicmaps.org/iso13250/model/topic-name"
+              ],
+              "subjectLocators": []
+            }
+          ],
+          "associations": []
+        },
+        "mapItemIdentifiers": [],
+        "canonicalNameParentTypeReferences": true,
+        "names": [
+          {
+            "value": "Topic",
+            "parent": 1,
+            "type": 2,
+            "scope": [],
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm#the-name"
+            ],
+            "variantCount": 0
+          }
+        ]
+      },
+      "status": "pass",
+      "sourceSHA256": "95d64ef5047e6b8e21ac956abc44a8d02d18163b1fe50980d4e382fa67f73776",
+      "baselineSHA256": "5fc741733b889754c7d7f0fffc2bb4ee266ef46cad694630a0b92e93f1a17cd3",
+      "actualSHA256": "5fc741733b889754c7d7f0fffc2bb4ee266ef46cad694630a0b92e93f1a17cd3",
+      "executedInASDFTestOp": true
+    },
+    {
+      "id": "xtm2/in/name-duplicate-iid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm",
+      "sourceKey": "xtm2/in/name-duplicate-iid.xtm",
+      "sourceBytes": 285,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D22746F706963223E0A202020203C6E616D653E0A2020202020203C6974656D4964656E7469747920687265663D22237468652D6E616D65222F3E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A202020203C2F6E616D653E0A202020203C6E616D653E0A2020202020203C6974656D4964656E7469747920687265663D22237468652D6E616D65222F3E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">\n    <name>\n      <itemIdentity href=\"#the-name\"/>\n      <value>Topic</value>\n    </name>\n    <name>\n      <itemIdentity href=\"#the-name\"/>\n      <value>Topic</value>\n    </name>\n  </topic>\n</topicMap>\n",
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 395,
+      "expectedBytes": 395,
+      "firstDifferentByte": null,
+      "condition": null,
+      "model": {
+        "identity": {
+          "topicCount": 2,
+          "associationCount": 0,
+          "canonicalParentsAndInverseReferences": true,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm#topic"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": []
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [],
+              "subjectIdentifiers": [
+                "http://psi.topicmaps.org/iso13250/model/topic-name"
+              ],
+              "subjectLocators": []
+            }
+          ],
+          "associations": []
+        },
+        "mapItemIdentifiers": [],
+        "canonicalNameParentTypeReferences": true,
+        "names": [
+          {
+            "value": "Topic",
+            "parent": 1,
+            "type": 2,
+            "scope": [],
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm#the-name"
+            ],
+            "variantCount": 0
+          }
+        ]
+      },
+      "status": "pass",
+      "sourceSHA256": "b878a68cb4c2eaaae70cb8c587fc5110392dece181e064b523831e685654cfdf",
+      "baselineSHA256": "5fc741733b889754c7d7f0fffc2bb4ee266ef46cad694630a0b92e93f1a17cd3",
+      "actualSHA256": "5fc741733b889754c7d7f0fffc2bb4ee266ef46cad694630a0b92e93f1a17cd3",
+      "executedInASDFTestOp": true
+    }
+  ],
+  "excludedNegativeOriginals": [
+    "xtm2/invalid/reifier-collision.xtm",
+    "xtm2/invalid/role-duplicate-reified.xtm",
+    "xtm2/invalid/topicref-no-fragment-id.xtm",
+    "xtm2/invalid/variant-missing-scope-duplicate.xtm"
+  ]
+}

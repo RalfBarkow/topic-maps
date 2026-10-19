@@ -1,0 +1,111 @@
+{
+  "kind": "observations-no-additional-registration",
+  "changes": [
+    {
+      "id": "xtm2/in/itemid-name.xtm",
+      "before": {
+        "id": "xtm2/in/itemid-name.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM itemIdentity is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-name.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm), approximately 4:39: XTM itemIdentity is not implemented in this subset.",
+          "line": 4,
+          "column": 39,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm",
+          "sourceKey": "xtm2/in/itemid-name.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/itemid-name.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-name.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "A formerly Unsupported Name Item Identity is processed; excluded features remain Unsupported and native model conflicts remain distinct."
+    },
+    {
+      "id": "xtm2/in/name-duplicate-iid.xtm",
+      "before": {
+        "id": "xtm2/in/name-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM itemIdentity is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/name-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm), approximately 4:39: XTM itemIdentity is not implemented in this subset.",
+          "line": 4,
+          "column": 39,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-iid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/name-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-iid.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "warrant": "A formerly Unsupported Name Item Identity is processed; excluded features remain Unsupported and native model conflicts remain distinct."
+    }
+  ],
+  "unchangedOriginalObservations": 122,
+  "newByteExactOriginals": [
+    "xtm2/in/itemid-name.xtm",
+    "xtm2/in/name-duplicate-iid.xtm"
+  ],
+  "counterprobeFixtureChanges": [
+    {
+      "before": {
+        "label": "unsupported-is-not-pass",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM itemIdentity is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM itemIdentity is not implemented in this subset.",
+          "line": 1,
+          "column": 108,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "local:xtm-semantic-test",
+          "cause": null
+        },
+        "status": "unsupported",
+        "registeredAsOriginal": false
+      },
+      "after": {
+        "label": "unsupported-is-not-pass",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM variant is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM variant is not implemented in this subset.",
+          "line": 1,
+          "column": 108,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "local:xtm-semantic-test",
+          "cause": null
+        },
+        "status": "unsupported",
+        "registeredAsOriginal": false
+      },
+      "reason": "Valid Name Variant replaces the now supported Name Item Identity as Unsupported guard."
+    }
+  ]
+}

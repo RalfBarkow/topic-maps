@@ -1,0 +1,173 @@
+{
+  "kind": "executor-fault-controls-not-corpus-results",
+  "controls": [
+    {
+      "family": "positive",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "positive",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "positive",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "positive",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "positive",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "negative",
+      "mode": "accepted",
+      "actualOutcome": "ctm-acceptance",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 26,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "negative",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 26,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "negative",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 26,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "negative",
+      "mode": "wrong-cause",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 26,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "name",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 33,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "name",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 33,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "name",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 33,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "name",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 33,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "scope",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 43,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "scope",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 43,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "scope",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 43,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "scope",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 43,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "iid",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 48,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "iid",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 48,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "iid",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 48,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "iid",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 48,
+      "faultCountedAsPass": false
+    }
+  ]
+}

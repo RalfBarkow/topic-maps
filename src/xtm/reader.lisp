@@ -134,6 +134,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                             (reject :element-order "name child order is invalid." child))
                           (setf phase next)
                           (cond
+                            ((string= kind "itemIdentity") nil)
                             ((string= kind "type")
                              (when type-seen (reject :duplicate-name-type "Only one name type is allowed." child))
                              (setf type-seen t))
@@ -146,7 +147,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                             ;; Valid extension points remain explicitly unsupported.
                             ;; Their complete subgrammars are outside this subset.
                             (t (unsupported child)))
-                          (validate child '("type" "scope" "value"))))
+                          (validate child '("itemIdentity" "type" "scope" "value"))))
                       (unless value-seen (reject :missing-name-value "name requires a value element." node))))
                    ((string= name "type")
                     (attributes node nil nil)
@@ -201,10 +202,14 @@ constructs' complete subgrammars is made. XML errors have already been checked."
     ;; SAX has already resolved XML character/entity references. Preserve the
     ;; resulting Unicode sequence without trimming or decoding it again.
     ;; ADD-NAME owns canonical set semantics and normalization after merging.
-    (if type-node
-        (topic-maps.tmdm:add-name owner value
-          :type type :scope scope)
-        (topic-maps.tmdm:add-default-name owner value :scope scope))))
+    (let ((name (if type-node
+                    (topic-maps.tmdm:add-name owner value :type type :scope scope)
+                    (topic-maps.tmdm:add-default-name owner value :scope scope))))
+      ;; Item identifiers belong to the canonical Name, never its owner/type.
+      ;; Use the shared model API for set semantics and global conflicts.
+      (dolist (child children name)
+        (when (string= (node-name child) "itemIdentity")
+          (setf name (topic-maps.tmdm:add-item-identifier name (leaf-href child))))))))
 (defun read-topic (node map)
   (let ((topic (topic-maps.tmdm:intern-topic map :item-identifier
                  (concatenate 'string *document-iri* "#" (collapse-space (attr node "id"))))))

@@ -221,7 +221,6 @@
     (scope-error-control (first spec) (format nil "<topic id='a'><name>~A<value>N</value></name></topic>" (second spec)) 'xtm-rejection (third spec)))
   (scope-error-control "after-value" "<topic id='a'><name><value>N</value><scope><topicRef href='#s'/></scope></name></topic>" 'xtm-rejection :element-order)
   (dolist (spec '(("variant-stays-unsupported" "<name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name>" :unsupported-construct)
-    ("name-II-stays-unsupported" "<name><itemIdentity href='#n'/><scope><topicRef href='#s'/></scope><value>N</value></name>" :unsupported-construct)
     ("name-reifier-stays-unsupported" "<name reifier='#r'><scope><topicRef href='#s'/></scope><value>N</value></name>" :reification)))
     (scope-error-control (first spec) (format nil "<topic id='a'>~A</topic>" (second spec)) 'xtm-unsupported (third spec)))
   (scope-error-control "occurrence-stays-unsupported" "<topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic>" 'xtm-unsupported :unsupported-construct)

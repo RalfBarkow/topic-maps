@@ -1,0 +1,17 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+XTM-CHECK-PASS preflight:parent:subjectIdentifier:retained-eq-and-identifier-union
+XTM-CHECK-PASS preflight:parent:subjectIdentifier:canonical-references
+XTM-CHECK-PASS preflight:parent:subjectLocator:retained-eq-and-identifier-union
+XTM-CHECK-PASS preflight:parent:subjectLocator:canonical-references
+XTM-CHECK-PASS preflight:parent:itemIdentity:retained-eq-and-identifier-union
+XTM-CHECK-PASS preflight:parent:itemIdentity:canonical-references
+XTM-CHECK-PASS preflight:theme:subjectIdentifier:retained-eq-and-identifier-union
+XTM-CHECK-PASS preflight:theme:subjectIdentifier:canonical-references
+XTM-CHECK-PASS preflight:theme:subjectLocator:retained-eq-and-identifier-union
+XTM-CHECK-PASS preflight:theme:subjectLocator:canonical-references
+XTM-CHECK-PASS preflight:theme:itemIdentity:retained-eq-and-identifier-union
+XTM-CHECK-PASS preflight:theme:itemIdentity:canonical-references
