@@ -103,3 +103,11 @@
               (error "XTM integration requires the prepared qualified source registry.")))))
     (asdf:test-system "topic-maps/ctm/xtm-tests")
     (uiop:symbol-call :topic-maps.xtm-mergemap.tests :write-reports prefix)))
+
+
+;; Slice 20A registration always runs after the retained suites and the optional
+;; XTM adapter. Historical reports above remain snapshots of their own stages.
+(asdf:test-system "topic-maps/ctm/registered-original-tests")
+(let ((prefix (uiop:getenv "TOPIC_MAPS_REGISTERED_ORIGINALS_REPORT")))
+  (when prefix
+    (uiop:symbol-call :topic-maps.registered-original.tests :write-reports prefix)))

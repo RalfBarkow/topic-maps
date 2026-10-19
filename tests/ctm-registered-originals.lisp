@@ -1,0 +1,250 @@
+(defpackage #:topic-maps.registered-original.tests
+  (:use #:cl #:topic-maps.tmdm)
+  (:export #:run-tests #:write-reports #:candidate-groups))
+(in-package #:topic-maps.registered-original.tests)
+
+;; One selection of the existing discovered Case Records, not another registry.
+(defparameter *groups*
+  '((:comments "comment-ml" "comment-ml-nested" "comment-ml-nested2" "comment-sl" "comment-sl2"
+               "comment-sl3" "comment-sl4" "comment-sl5" "comment-sl6" "empty")
+    (:identity "association-qname-iid" "item-identifier-INF" "item-identifier-relative" "qname-date" "qname-digits"
+               "rootless-uri" "subject-identifier-dot" "subject-identifier-non-http" "subject-identifier-relative"
+               "subject-locator-dot" "subject-locator-relative" "topic-identifier-INF" "topic-identifier-unicode")
+    (:occurrences "occurrence-decimal-dot-neg2" "occurrence-decimal-dot-pos" "occurrence-decimal-leading-zeros2"
+                  "occurrence-duplicate-string" "occurrence-duplicate-uri" "occurrence-qname-value"
+                  "occurrence-string-multiline" "occurrence-string-multiline2" "occurrence-uri-semicolon")
+    (:prefixes "prefix-multiline2" "prefix-multiline3" "prefix-multiline4" "prefix-with-qm")
+    (:escapes "string-escape" "string-escape2" "unicode-escape-u4" "unicode-escape-u6")))
+(defun candidate-groups () (copy-tree *groups*))
+(defvar *checks* nil)
+(defvar *rows* nil)
+(defvar *results* nil)
+(defvar *entry-statuses* nil)
+(defun check (label truth)
+  (unless truth (error "Registered original check failed: ~A" label))
+  (push label *checks*))
+(defun fields (&rest args) (apply #'topic-maps.test-foundation::fields args))
+(defun binary (path) (topic-maps.ctm.tests::binary-file path))
+(defun same-set (a b &optional (test #'equal))
+  (and (= (length a) (length b)) (subsetp a b :test test) (subsetp b a :test test)))
+(defun local (map doc name)
+  (find-if (lambda (topic) (member (concatenate 'string doc "#" name) (topic-item-identifiers topic) :test #'equal))
+           (topic-map-topics map)))
+(defun single-identity (map kind value)
+  (let ((topics (topic-map-topics map)))
+    (and (= 1 (length topics)) (null (topic-map-associations map))
+         (let ((topic (first topics)))
+           (and (equal (topic-item-identifiers topic) (when (eq kind :ii) (list value)))
+                (equal (topic-subject-identifiers topic) (when (eq kind :si) (list value)))
+                (equal (topic-subject-locators topic) (when (eq kind :sl) (list value)))
+                (null (topic-names topic)) (null (topic-occurrences topic)))))))
+(defun plain-locals-p (map doc names)
+  (and (= (length names) (length (topic-map-topics map))) (null (topic-map-associations map))
+       (every (lambda (name) (let ((topic (local map doc name)))
+         (and topic (equal (list (concatenate 'string doc "#" name)) (topic-item-identifiers topic))
+              (null (topic-subject-identifiers topic)) (null (topic-subject-locators topic))
+              (null (topic-names topic)) (null (topic-occurrences topic))))) names)))
+(defun semantic-witness (name group map doc)
+  "Independent concrete object properties, in addition to exact XML equality."
+  (ecase group
+    (:comments
+     (plain-locals-p map doc
+       (cond ((member name '("empty" "comment-sl3") :test #'equal) nil)
+             ((member name '("comment-ml" "comment-ml-nested" "comment-ml-nested2" "comment-sl2") :test #'equal) '("topic1" "topic3"))
+             ((equal name "comment-sl6") '("topic" "topic2")) (t '("topic")))))
+    (:identity
+     (if (equal name "association-qname-iid")
+         (let* ((base "http://www.example.org/my-ctm#")
+                (a (first (topic-map-associations map))) (roles (when a (association-roles a)))
+                (topics (topic-map-topics map)))
+           (flet ((named (suffix) (find-if (lambda (topic) (equal (list (concatenate 'string base suffix)) (topic-item-identifiers topic))) topics)))
+             (and (= 3 (length topics)) (= 1 (length (topic-map-associations map))) (= 1 (length roles))
+                  (every (lambda (topic) (and (null (topic-subject-identifiers topic)) (null (topic-subject-locators topic)))) topics)
+                  (eq (named "assoctype") (association-type a)) (eq (named "roletype") (association-role-type (first roles)))
+                  (eq (named "topic") (association-role-player (first roles))) (eq a (association-role-parent (first roles))))))
+         (let ((expected (cond
+            ((member name '("item-identifier-INF" "topic-identifier-INF") :test #'equal) (list :ii (concatenate 'string doc "#INF")))
+            ((equal name "item-identifier-relative") (list :ii (concatenate 'string doc "#topic")))
+            ((equal name "topic-identifier-unicode") (list :ii (concatenate 'string doc "#ü͡ØΨ㬟͡")))
+            ((equal name "qname-date") '(:si "http://psi.semagia.com/iso8601/1947-01-08"))
+            ((equal name "qname-digits") '(:si "http://psi.example.org/007"))
+            ((equal name "rootless-uri") '(:si "urn:uuid:d84e2777-8928-4bd4-a3e4-8ca835f92304"))
+            ((equal name "subject-identifier-dot") '(:si "http://psi.example.org/fake"))
+            ((equal name "subject-identifier-non-http") '(:si "ftp://psi.example.org/photo.jpg"))
+            ((equal name "subject-identifier-relative") (list :si (concatenate 'string doc "#fake")))
+            ((equal name "subject-locator-dot") '(:sl "http://www.example.org/"))
+            ((equal name "subject-locator-relative") (list :sl (concatenate 'string doc "#fake"))))))
+           (and expected (single-identity map (first expected) (second expected))))))
+    (:prefixes
+     (if (equal name "prefix-with-qm")
+         (single-identity map :sl "http://www.youtube.com/watch?v=fd85SK7dESU")
+         (single-identity map :si "http://psi.example.org/fake")))
+    (:occurrences
+     (let* ((owner (local map doc (if (equal name "occurrence-qname-value") "john" "topic")))
+            (type (local map doc (if (equal name "occurrence-qname-value") "wikipedia" "occtype")))
+            (items (when owner (topic-occurrences owner))) (o (first items))
+            (expected (cond
+              ((equal name "occurrence-decimal-dot-neg2") (list "-0.03" (decimal-datatype)))
+              ((equal name "occurrence-decimal-dot-pos") (list "0.3" (decimal-datatype)))
+              ((equal name "occurrence-decimal-leading-zeros2") (list "2.3" (decimal-datatype)))
+              ((equal name "occurrence-duplicate-string") (list "Occurrence" (string-datatype)))
+              ((equal name "occurrence-duplicate-uri") (list "http://www.example.org/resource" (iri-datatype)))
+              ((equal name "occurrence-qname-value") (list "http://en.wikipedia.org/wiki/John_Lennon" (iri-datatype)))
+              ((equal name "occurrence-string-multiline") (list (format nil "Occurrence~%Value") (string-datatype)))
+              ((equal name "occurrence-string-multiline2") (list (format nil "Occurrence~C~CValue" #\Return #\Newline) (string-datatype)))
+              ((equal name "occurrence-uri-semicolon") (list "http://www.example.org/;something;;somewhere" (iri-datatype))))))
+       (and owner type (= 2 (length (topic-map-topics map))) (= 1 (length items)) (null (topic-map-associations map))
+            (every (lambda (topic) (null (topic-names topic))) (topic-map-topics map))
+            (eq owner (occurrence-parent o)) (eq type (occurrence-type o))
+            (equal expected (list (occurrence-value o) (occurrence-datatype o)))
+            (null (occurrence-scope o)) (null (item-identifiers o)))))
+    (:escapes
+     (let* ((owner (local map doc (cond ((equal name "string-escape") "topic") ((equal name "string-escape2") "A00") (t "zztop"))))
+            (names (when owner (topic-names owner)))
+            (type (find-if (lambda (topic) (member (default-name-type-identifier) (topic-subject-identifiers topic) :test #'equal)) (topic-map-topics map)))
+            (expected (cond ((equal name "string-escape") (list "\\" "Quote (\") character" (format nil "Some whitespace ~C~C~C" #\Newline #\Return #\Tab)))
+                            ((equal name "string-escape2") '("A00")) (t '("ZZ Top")))))
+       (and owner type (= 2 (length (topic-map-topics map))) (null (topic-map-associations map))
+            (same-set expected (mapcar #'topic-name-value names))
+            (every (lambda (n) (and (eq owner (topic-name-parent n)) (eq type (topic-name-type n))
+                                    (null (topic-name-scope n)) (null (topic-name-variants n)))) names))))))
+
+(defun identity-fields (case)
+  (list (topic-maps.test-foundation:test-case-id case) (topic-maps.test-foundation:test-case-category case)
+        (topic-maps.test-foundation:test-case-source-pathname case) (topic-maps.test-foundation:test-case-document-iri case)
+        (topic-maps.test-foundation:test-case-expected-outcome case) (topic-maps.test-foundation:test-case-expected-baseline case)
+        (topic-maps.test-foundation:test-case-clauses case)))
+(defun exercise-case (case group)
+  "Record only an actual comparison. Rejections/errors never become empty Maps."
+  (let* ((id (topic-maps.test-foundation:test-case-id case)) (doc (topic-maps.test-foundation:test-case-document-iri case))
+         (name (pathname-name (topic-maps.test-foundation:test-case-source-pathname case)))
+         (identity (copy-tree (identity-fields case))) (source (binary (topic-maps.test-foundation:test-case-source-pathname case)))
+         (evidence nil) (result nil))
+    (handler-case
+        (let* ((map (topic-maps.ctm:deserialize-file (topic-maps.test-foundation:test-case-source-pathname case) :document-iri doc :source-name id))
+               (held (topic-maps.import.tests::handles map)) (before (topic-maps.import.tests::state map held))
+               (actual (topic-maps.cxtm:canonicalize-octets map :base-locator doc))
+               (expected (binary (topic-maps.test-foundation:test-case-expected-baseline case))) (different (mismatch actual expected)))
+          (check (concatenate 'string id ":actual-TMDM-properties-and-EQ-references") (semantic-witness name group map doc))
+          (check (concatenate 'string id ":canonicalization-preserves-raw-objects-and-handles")
+            (equal before (topic-maps.import.tests::state map held)))
+          (check (concatenate 'string id ":deterministic-canonical-octets")
+            (equalp actual (topic-maps.cxtm:canonicalize-octets map :base-locator doc)))
+          (check (concatenate 'string id ":unmodified-source-bytes") (equalp source (binary (topic-maps.test-foundation:test-case-source-pathname case))))
+          (topic-maps.test-foundation:record-result case (if different :cxtm-mismatch :cxtm-match)
+            :diagnostics (when different (list (format nil "First different byte ~D; actual ~D bytes, expected ~D bytes." different (length actual) (length expected)))))
+          (setf evidence (fields "actualBytes" (length actual) "expectedBytes" (length expected)
+                                "firstDifferentByte" different "model" (topic-maps.template.tests::observe map))
+                result (list :id id :base doc :actual (topic-maps.ctm::decode-utf8 actual)
+                             :expected (topic-maps.ctm::decode-utf8 expected) :match (null different) :bytes (length actual))))
+      ((or topic-maps.ctm:ctm-unsupported topic-maps.cxtm:cxtm-unsupported) (condition)
+        (topic-maps.test-foundation:record-result case :unsupported :diagnostics (list (format nil "~A: ~A" (type-of condition) condition))))
+      (error (condition)
+        (topic-maps.test-foundation:record-result case :execution-error :diagnostics (list (format nil "~A: ~A" (type-of condition) condition)))))
+    (check (concatenate 'string id ":same-contract-identity-after-execution") (equal identity (identity-fields case)))
+    (values
+      (fields "id" id "group" (string-downcase (symbol-name group))
+              "sourcePathname" id "documentIRI" doc
+              "baseline" (format nil "ctm/baseline/~A.ctm.cxtm" name)
+              "status" (topic-maps.test-foundation::word (topic-maps.test-foundation:test-case-status case))
+              "actualOutcome" (topic-maps.test-foundation::word (topic-maps.test-foundation:test-case-actual-outcome case))
+              "diagnostics" (coerce (topic-maps.test-foundation:test-case-diagnostics case) 'vector)
+              "sourceBytes" (length source) "comparison" evidence)
+      result)))
+
+
+(defun case-state (case)
+  (copy-tree
+    (list (identity-fields case)
+          (topic-maps.test-foundation:test-case-status case)
+          (topic-maps.test-foundation:test-case-actual-outcome case)
+          (topic-maps.test-foundation:test-case-diagnostics case))))
+
+(defun run-tests ()
+  ;; Use the same Case Records populated by the retained suites. A direct ASDF
+  ;; invocation may initialize those suites, but must never replace their corpus.
+  (unless topic-maps.ctm.tests::*cxtm-corpus*
+    (topic-maps.include.tests:run-tests))
+  (setf *checks* nil *rows* nil *results* nil)
+  (let* ((corpus topic-maps.ctm.tests::*cxtm-corpus*)
+         (root (topic-maps.test-foundation:corpus-root corpus))
+         (ids (loop for (group . names) in *groups*
+                    append (mapcar (lambda (name) (format nil "ctm/in/~A.ctm" name)) names)))
+         (cases (topic-maps.test-foundation:corpus-cases corpus))
+         (previous (mapcar (lambda (case) (cons case (case-state case))) cases))
+         (old-results (copy-tree topic-maps.ctm.tests::*cxtm-results*))
+         (base (format nil "https://ctm-tests.example.invalid/~A/"
+                       (getf (topic-maps.test-foundation:corpus-metadata corpus) :commit))))
+    (setf *entry-statuses*
+          (copy-list (getf (topic-maps.test-foundation:summarize-corpus corpus) :statuses)))
+    (check "registration:forty-distinct-selected-originals"
+      (and (= 40 (length ids)) (= 40 (length (remove-duplicates ids :test #'equal)))
+           (equal '(10 13 9 4 4) (mapcar (lambda (group) (length (cdr group))) *groups*))))
+    (check "registration:existing-corpus-correspondence"
+      (getf (topic-maps.test-foundation:verify-correspondence corpus) :ok))
+    (dolist (group *groups*)
+      (dolist (name (cdr group))
+        (let* ((id (format nil "ctm/in/~A.ctm" name))
+               (selected (topic-maps.test-foundation:select-cases corpus :id id))
+               (case (first selected)))
+          (check (concatenate 'string id ":unique-existing-positive-contract")
+            (and (= 1 (length selected)) (member case cases :test #'eq)
+                 (eq :valid (topic-maps.test-foundation:test-case-category case))
+                 (eq :cxtm-equal (topic-maps.test-foundation:test-case-expected-outcome case))
+                 (eq :not-run (topic-maps.test-foundation:test-case-status case))
+                 (null (topic-maps.test-foundation:test-case-actual-outcome case))))
+          (check (concatenate 'string id ":pinned-source-baseline-and-document-IRI")
+            (and (equal (truename (merge-pathnames id root))
+                        (truename (topic-maps.test-foundation:test-case-source-pathname case)))
+                 (equal (truename (merge-pathnames (format nil "ctm/baseline/~A.ctm.cxtm" name) root))
+                        (truename (topic-maps.test-foundation:test-case-expected-baseline case)))
+                 (equal (concatenate 'string base id)
+                        (topic-maps.test-foundation:test-case-document-iri case))))
+          (multiple-value-bind (row result) (exercise-case case (car group))
+            (push row *rows*)
+            (when result (push result *results*)))
+          (format t "~&REGISTERED-ORIGINAL ~A: ~A~{ ~A~}~%" id
+            (topic-maps.test-foundation:test-case-status case)
+            (topic-maps.test-foundation:test-case-diagnostics case)))))
+    (setf *rows* (nreverse *rows*) *results* (nreverse *results*))
+    (check "registration:forty-actual-byte-comparisons-pass"
+      (and (= 40 (length *rows*) (length *results*))
+           (every (lambda (result) (getf result :match)) *results*)
+           (every (lambda (id) (eq :pass (topic-maps.test-foundation:test-case-status
+                                (first (topic-maps.test-foundation:select-cases corpus :id id))))) ids)))
+    (check "registration:all-previous-case-records-and-observations-preserved"
+      (and (eq corpus topic-maps.ctm.tests::*cxtm-corpus*)
+           (equal cases (topic-maps.test-foundation:corpus-cases corpus))
+           (every (lambda (entry)
+                    (if (member (topic-maps.test-foundation:test-case-id (car entry)) ids :test #'equal)
+                        (equal (first (cdr entry)) (identity-fields (car entry)))
+                        (equal (cdr entry) (case-state (car entry))))) previous)
+           (equal old-results topic-maps.ctm.tests::*cxtm-results*)))
+    (let ((after (getf (topic-maps.test-foundation:summarize-corpus corpus) :statuses)))
+      (check "registration:only-forty-NOT-RUN-to-PASS-transitions"
+        (and (= (+ 40 (getf *entry-statuses* :pass)) (getf after :pass))
+             (= (- (getf *entry-statuses* :not-run) 40) (getf after :not-run))
+             (= (getf *entry-statuses* :fail) (getf after :fail))
+             (= (getf *entry-statuses* :unsupported) (getf after :unsupported)))))
+    (setf topic-maps.ctm.tests::*cxtm-results*
+          (append topic-maps.ctm.tests::*cxtm-results* *results*)))
+  (check "registration:unique-check-names"
+    (= (length *checks*) (length (remove-duplicates *checks* :test #'equal))))
+  (setf *checks* (nreverse *checks*))
+  (format t "~&REGISTERED-ORIGINALS-PASS: ~D checks; forty actual byte-exact original contracts~%" (length *checks*))
+  t)
+
+(defun write-reports (prefix)
+  (with-open-file (out (concatenate 'string prefix ".registration.json")
+                       :direction :output :if-exists :supersede :if-does-not-exist :create)
+    (topic-maps.test-foundation::emit-json-value
+      (fields "kind" "ctm-registered-original-execution"
+              "passed" (length *checks*) "failed" 0
+              "entryStatuses" (topic-maps.test-foundation::counts-object *entry-statuses*)
+              "checks" (coerce *checks* 'vector) "cases" (coerce *rows* 'vector)) out)
+    (terpri out))
+  (topic-maps.ctm.tests::write-cxtm-report
+    (concatenate 'string prefix ".validation.json")
+    (concatenate 'string prefix ".cxtm.json")
+    :additional-checks *checks*
+    :scope "Slice 20A: forty newly executed original CTM comparisons; prior Case Records, observations and four known DateTime/Include FAILs retained. Full retained regression and XTM integration are evidenced separately."))
