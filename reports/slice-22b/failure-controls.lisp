@@ -1,0 +1,32 @@
+;; Disposable executor controls for the one Slice-22B positive Case Record.
+;; Reuse the existing ASDF runner, public parser/reader and result classifier.
+(require :asdf)
+(assert (string= "2.5.4" (lisp-implementation-version)))
+(setf *compile-verbose* nil *load-verbose* nil)
+(asdf:load-asd (merge-pathnames "../../topic-maps.asd" *load-truename*))
+(asdf:load-system "topic-maps/xtm/tests")
+(let* ((target "xtm2/in/variant-duplicate-reifier2.xtm")
+       (mode (uiop:getenv "TOPIC_MAPS_22B_FAULT"))
+       (iri (concatenate 'string "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/" target)))
+  (if (string= mode "mismatch")
+      (let ((saved (symbol-function 'topic-maps.cxtm:canonicalize-octets)))
+        (setf (symbol-function 'topic-maps.cxtm:canonicalize-octets)
+          (lambda (map &rest args)
+            (let ((actual (apply saved map args)))
+              (if (equal iri (getf args :base-locator))
+                  (let ((changed (copy-seq actual))) (setf (aref changed 0) (logxor 1 (aref changed 0))) changed)
+                  actual)))))
+      (let* ((saved (symbol-function 'topic-maps.xtm:deserialize-octets))
+             (source (cond
+               ((string= mode "xml") "<a><b></a>")
+               ((string= mode "xtm") (topic-maps.xtm.tests::document "<topic id='2bad'/>"))
+               ((string= mode "unsupported") (topic-maps.xtm.tests::document
+                 "<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>"))
+               ((string= mode "tmdm") (topic-maps.xtm.tests::document
+                 "<topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData>A</resourceData></variant><variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData>B</resourceData></variant></name></topic>"))
+               (t (error "Unknown Slice-22B executor fault ~S" mode)))))
+        (setf (symbol-function 'topic-maps.xtm:deserialize-octets)
+          (lambda (raw &rest args)
+            (apply saved (if (equal target (getf args :source-key)) (topic-maps.xtm.tests::bytes source) raw) args)))))
+  (asdf:test-system "topic-maps/xtm"))
+(error "Fault injection did not cause the required ASDF failure.")

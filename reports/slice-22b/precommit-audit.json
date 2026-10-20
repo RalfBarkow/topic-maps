@@ -1,0 +1,43 @@
+{
+  "kind": "slice-22b-precommit-audit",
+  "baseCommit": "b12ece02faa039e816fca3750acd9eceb6be1513",
+  "branch": "codex/conformance-slice-22b",
+  "auditedAtUTC": "2026-10-20T13:26:29.334842+00:00",
+  "initialHeadIndexAndWorktreeVerified": true,
+  "originalTrackedFiles": 6323,
+  "allowedChangedStartingFiles": [
+    "tests/xtm-identity.lisp",
+    "tests/xtm-variant-reification.lisp",
+    "topic-maps.asd"
+  ],
+  "protectedStartingFilesUnchanged": 6320,
+  "historicalReportFilesUnchanged": 4049,
+  "pinnedCorpusFilesVerified": 2006,
+  "newRegisteredOriginals": [
+    "xtm2/in/variant-duplicate-reifier2.xtm"
+  ],
+  "previous70OriginalRecordsUnchanged": true,
+  "previous8NegativeOriginalsUnchanged": true,
+  "baselineReportsByteIdenticalTo22A": 154,
+  "readerDiagnosticsByteIdenticalTo22A": 124,
+  "actualCXTMBytes": 702,
+  "baselineCXTMBytes": 702,
+  "byteExact": true,
+  "nativeRetainedHandleCanonicalEQ": true,
+  "finalXTMChecks": 2396,
+  "oldXTMChecksRetained": 2384,
+  "executorControls": 108,
+  "newExecutorControls": 5,
+  "allExpectedASDFFailureExitsObserved": true,
+  "faultsNeverCountedAsPASS": true,
+  "closureDeltaExactlyOneCase": true,
+  "other64OpenCaseStatusesUnchanged": true,
+  "newNormativeDecisions": 0,
+  "productionCodeChanged": false,
+  "hyperdocUnchangedAndClean": true,
+  "hyperdocInspectedFilesUnchanged": 14,
+  "newDocumentationLocalLinksResolve": true,
+  "allNewJSONParsed": 335,
+  "validationToolsSyntaxParsed": true,
+  "auditPassed": true
+}

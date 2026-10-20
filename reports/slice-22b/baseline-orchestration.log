@@ -1,0 +1,1 @@
+{"acceptancePassed": true, "xtm": {"pass": 70, "fail": 0, "unsupported": 0, "not-run": 54}, "ctm": {"pass": 262, "fail": 4, "unsupported": 0, "not-run": 7}, "checks": 2384, "output": "/private/tmp/tm-slice-22b-dcywzonm/baseline"}

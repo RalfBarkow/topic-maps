@@ -1,0 +1,723 @@
+[
+  {
+    "label": "positive-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "4c687fd2c986f9fa146c855aae581c22188be8e5f2a96db9731f4d4831f61add",
+    "afterSHA256": "14daa8aecbaa22c15351091a1f41ee8bf7c8aea9fae3e9782153e2538b59cbd2"
+  },
+  {
+    "label": "positive-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "2d23953c8a5104d049324f5eb844a4c8cff21950596e5da5adee6c9abc9e50b4",
+    "afterSHA256": "64bcd48ea29934a26d39e048a39e16e1120c5957a6155cbc3c88e525c57a4520"
+  },
+  {
+    "label": "positive-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "e73d0c4e9456a452634abd216623690635428e4b2ac4745fdd71e882beddca06",
+    "afterSHA256": "454675e86b3c4cf5bcee2cf587945c6774cc575b4a26aa378bd6ba877dd83e47"
+  },
+  {
+    "label": "positive-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "42c313b50d589a7d2072a9e059156c39895449ebd34d6fe54bd159bf273743a9",
+    "afterSHA256": "406d58753334a9d12707af20d3cad21589303e3c031d28460f561b90bda2606d"
+  },
+  {
+    "label": "positive-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "1ef972a424d2f8610e1aac0be99622c2f90f60c5bb7232620550ab68cf0e8055",
+    "afterSHA256": "dda6ea516de9d28c5628017271163682580edfbcd539d84681a4dad103e4c5f7"
+  },
+  {
+    "label": "negative-control-accepted",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "85f3a9718a683b9bc653a005cdd4fb58f59fec99cbac0d22fba313dcc0768ff2",
+    "afterSHA256": "d141bad69fc70c537d52877525efc8e11716680e64fa3cde849b7aa855e8cf00"
+  },
+  {
+    "label": "negative-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "bf57229e9aa5edfe3206bf0cf2bfcb0f9789ca77b3adc8f5223867f7da5e477c",
+    "afterSHA256": "950da5892aad3ece4010fc7d50b9294f58a88fef46669daae291425fca156299"
+  },
+  {
+    "label": "negative-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "4f3f69387405c9f41698fe47903057b48b36438e6b66ff68b05cfceabb7ee168",
+    "afterSHA256": "7b60433eb31d1b7776cf76db3bd21bd66c23b3e3d6c85b3609d9a8c99a670ec4"
+  },
+  {
+    "label": "negative-control-wrong-cause",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "91ecb183e94a4dcd4bd85b81e5e2feb69e720c9c54438acb30f0cca50f6b78bb",
+    "afterSHA256": "e3c58fecbd1dfe8087e7f054ae7fbf6706754cfac80bcb6a17cafa02469ca81f"
+  },
+  {
+    "label": "name-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "1736fb088ddd137d547cce9ebecaed359be9747585ebb18b75ed9b8bce1c871c",
+    "afterSHA256": "f67b4e65b149bc774f5a415c64041b83aeac899c8ffcdb5aec1e0612cb42cde7"
+  },
+  {
+    "label": "name-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "b8a9756177b1d4336622a1f3a4456fa53ca8ef7d5246bac4fd172768077b90d4",
+    "afterSHA256": "f88b9e5158b2d5f13f0dea71cc5d08d1d36c035f6af4ee0a1cc5fd4d91987ef3"
+  },
+  {
+    "label": "name-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "ea66e4436d740197dd633e9b88e0c20c9f64faee6e0113045036d927cfc4e7fd",
+    "afterSHA256": "6b9bfbca902009eceaf89dbad874a441306963e4971e92ab069685a4701dadde"
+  },
+  {
+    "label": "name-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "be9a3041c4f792db3a50717a16673e26fd1ea632eaffa6b10f95d8a5ae0a6cec",
+    "afterSHA256": "a44778cc060e6fd25638d112bb2d586fa624ef6814da419bcbb73c0bbb7d9e50"
+  },
+  {
+    "label": "scope-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "7984ab09215308511fec723cca1b97cdec7191e18db31d68328840e6dd557ca0",
+    "afterSHA256": "e275b4a1c983cd6ea1024300324d1277f1eaa43f3c45b1e9cdc7a8032d3fa85b"
+  },
+  {
+    "label": "scope-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "0b8726f28608bb1b3d7dce4d92360f0abc7862c09eadc1d7338d260950398eea",
+    "afterSHA256": "81451d786d390f053b1116deb6d0a79bd7a7908a63d6485710864b24d9f32dcb"
+  },
+  {
+    "label": "scope-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "d403c8be2853bc1d35454c8bc80d75c5e8d1d4d2de72e59f11291c0d15b76204",
+    "afterSHA256": "72992d31299e4a6786c2e2d6cab36d2156e5257b2bdcf6fc2a81d759ad67f817"
+  },
+  {
+    "label": "scope-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "0ea9be36e515b012d448d1fd90c37eb5d8e2517c8eaf76b48afaa724538dbf58",
+    "afterSHA256": "6c28ab0e9df77f8566690c4cf14491161a230fd050dda51e00b7472b0d271212"
+  },
+  {
+    "label": "iid-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "20480d7b1eac77dff939e1e1b9ee201388b83da33afe3a90743ef78da551021c",
+    "afterSHA256": "dd2bc0d1af1fd1d5d8a44b51f1291b62047380f3b09521556d18941429b5dc1f"
+  },
+  {
+    "label": "iid-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "f4415d6691b9b9d75f722185a53a2930283731d170cf24727e6bd492f57d142f",
+    "afterSHA256": "f2312ecfd9b568936e36278b212026545b44badb1d8249cff68e855ff2961117"
+  },
+  {
+    "label": "iid-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "fb218fcca85652627b86b0146e4b6ea862a1d66ae565f9b2172e35b8c2b28157",
+    "afterSHA256": "9a4301ccb2c7937738337f8ea96935c07a5309dd4705d39309e1bbf58c5410e1"
+  },
+  {
+    "label": "iid-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "418ec09b13f7a3463100080c7aa7e1d28afc7f786b9f91d0998fe87c09cb754b",
+    "afterSHA256": "1ea26312f8504318f8439fb35bda13d7f7a5f2db2d22500788b756cfb8c5b43c"
+  },
+  {
+    "label": "variant-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "90099eee4d05f1456e09cd6ec823303a91d73153cfda2d12b8308db2a5b3b6d5",
+    "afterSHA256": "0ff5d75ec38ccb61a3038cc495cddbd39b15f77388544c9b93599c6aef472348"
+  },
+  {
+    "label": "variant-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "520ebb3250b74a169d3685b65411444bb0ae32f9ddb09a2bcf66b8ab61fcc811",
+    "afterSHA256": "f854b59b645970c6969baa66dae813c406ec8d7d4affc4501869c14035b98598"
+  },
+  {
+    "label": "variant-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "0690611a1bf860fc6cf031baf16e2534ada08a0d34b95c4cb11aec82670e2213",
+    "afterSHA256": "28d953bc7eb089b6e310ddc7058c4967d6e5298446818fbc581aef50665bc746"
+  },
+  {
+    "label": "variant-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "76a1f57683669e429c9ae9b72457e49e11094a32ce47aaec38b0c9b13f4bcc20",
+    "afterSHA256": "0806b75e464728da5798eb5d372eebec7a912682061517c1d7b64272b2ec09ed"
+  },
+  {
+    "label": "variant-negative-control-accepted",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "ab09a4c0d24ddf70c6e5852a89bd0bcd840b3b4cbf8a6bdb6a0d2c1391cef235",
+    "afterSHA256": "9882217b014d8a17cd27697b3e3ae0fcdd9004ed370fe4c752024e738a01e21e"
+  },
+  {
+    "label": "variant-negative-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "4efffacfd797ccb9d1900e0608cac20a88ae45d9a88b8f7397efe2d0028c258f",
+    "afterSHA256": "6cce6b6735fbd32d84b4295890809cbdc74b757663eece4e26b5f6523f6633d5"
+  },
+  {
+    "label": "variant-negative-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "4a7ec6dfec2e0e7fe086f6dfe9da8e7d64920749732957f69e94f93dde68f3c0",
+    "afterSHA256": "92be27de56df5b4880a3f5c7155bd660a429390898437bbf91d3c2efcd87d33d"
+  },
+  {
+    "label": "variant-negative-control-wrong-cause",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "12e37277849b797726941b89df80e20e63d4a7dd630f786566d1132f40be8f55",
+    "afterSHA256": "93f231ee96ac7cd1a08c32ebbbf5f05f72e0f69e4d07555e0a056d6f67c3ca8c"
+  },
+  {
+    "label": "variant-negative-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "cfe2b36cfbf878dbbbe4916c55bffa98c224e6c3bba8b4f970398c1a1fa7a88c",
+    "afterSHA256": "3ac80eb6686ee85ab3c9b5a8ad269688f2c945e740d0608aeea65efd39a63eb3"
+  },
+  {
+    "label": "merge-variant-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "572b3cfe730e1e74a18413d1876fdb76ae914c9b1486cfddd99467ffe55b39bf",
+    "afterSHA256": "69e1664854ec1b3e6ee2560debd6f59c7dda0ba3b37b7e3b4de8edd7c2de3c20"
+  },
+  {
+    "label": "merge-variant-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "7e8fcf7a973f8b0932ac40d1986a3eac10640dd35de14a2288e7d7ad214bf766",
+    "afterSHA256": "a049ddc511a1c030d5d51a0288bbf12e452f94bf2ae71cfeb66a374a41c20249"
+  },
+  {
+    "label": "merge-variant-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "fa2069b546a060e584cb4204d03fffb73310cbebde101c3c7ff4bcf5b1d60bb8",
+    "afterSHA256": "ecbc3f4d5ff65c0c8d100237c799c0c2fc0f06370b9405a589003773708420cb"
+  },
+  {
+    "label": "merge-variant-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "74aa7a7577ccc4610035a5dd3d34f6e0e03c0e48792f7c093f50cebf36020740",
+    "afterSHA256": "17edbe805695a986f042187d225436ebd57536a481c4a83befea7fce67b97b5a"
+  },
+  {
+    "label": "merge-variant-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "4b183e574b65ae34eff89f9b5b655a83a1114c5595d57f85c9bac69359c3af3b",
+    "afterSHA256": "64f164b74a2e2cc59494124d937cd9f91522da994914575d265784424209cc91"
+  },
+  {
+    "label": "resource-ref-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "a0cc2df5660a82a897e3896767d478a0a7540dd8516f2f5a3ae1965670347937",
+    "afterSHA256": "56454e832abd7433a01844bfdc973f35219ce88c71fa24797ddd16af48bbc04a"
+  },
+  {
+    "label": "resource-ref-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "d977259b73b26f1d2c2d980a9316c14ee76e4ce7a5bff0d4ebbd00760faf54fc",
+    "afterSHA256": "b7bb182b2059a181cb2baf0008c39c1a65f7449535cd660bc0bbc5ca32feaefd"
+  },
+  {
+    "label": "resource-ref-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "bf6c3a3142a320e2ca011ddc7481448ecd915282f14a3a8d60f30f35cae311e2",
+    "afterSHA256": "647018745dda97d2bdb57c0df93982f6f168cef9d7c976dddbb5b8c40a867d7f"
+  },
+  {
+    "label": "resource-ref-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "442c0f5a0371a699793ae54f71ac489c16313440cb52936ee8baf399f7694c04",
+    "afterSHA256": "126e22b5ae9db0178aa1483ce7036a2aa7c36243c226920fa084316ac7754353"
+  },
+  {
+    "label": "resource-ref-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "9207fa6307681c0015d193152455b9896e328d2fc09892059ccace48df51f733",
+    "afterSHA256": "c466ea34893b48b1c43985575c0be7ad7933bf2e976581084e3e48c1f426afbf"
+  },
+  {
+    "label": "resource-ref-relative-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "7c2db59e2c5560c5b63247d17325a891c74d175fc68507217b5c30885d3885ef",
+    "afterSHA256": "54cc2b2ea416ebbfa00dafd8585f5cf161a2e69818c4efe9bfd4824c9fc272bf"
+  },
+  {
+    "label": "resource-ref-relative-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "6c0b197654f24521384b7fb6ec9d9eb754490675eeb713ba8f4ab41ddee894d6",
+    "afterSHA256": "206f5fc90666f186013e7d66939729b453b3cc493a87e1d7f36b65df64e0e7a7"
+  },
+  {
+    "label": "resource-ref-relative-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "0ceecd4ba7bdefeb187a5c96115268955517f742c0ee7861b35d48d03fd72e4b",
+    "afterSHA256": "fe4ee9e0276d706149092600f2ca80d8217af6fa05d813da4a27cf5119e05e10"
+  },
+  {
+    "label": "resource-ref-relative-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "42ebf604a5914ead5da70148eb8a8e1c91ca24d74e1c0216015d3fa980b565d9",
+    "afterSHA256": "ba0ca23cda153904c69e0fd8f95140878fa94b960ec7636389ca69a28dc2a12c"
+  },
+  {
+    "label": "resource-ref-relative-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "dcd8536e500942510de26d30b13a8ece9094ffc5c2301a146e61fe053e0a8b80",
+    "afterSHA256": "ade5b5985ef5958a92a2066068f2f4010aec76d5f2ebf9e58faa75b95796a7bf"
+  },
+  {
+    "label": "uri-data-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "7ecaf19ba6c5f04079a49be9d67178c514aa42b13be7de4157d8fe3502764b69",
+    "afterSHA256": "5ca9bd5825f5e9d01f4bed582c89e38f225f076d209a5cc75e2ca6e9183c45f4"
+  },
+  {
+    "label": "uri-data-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "f34f844b22058ded999454ea713d074c2a82b03dda46f6f1a4223058b81b996f",
+    "afterSHA256": "813c1cf76700bfbdeaeff7a607055b52a7fe552a0e9acfef620ca32e1701cd19"
+  },
+  {
+    "label": "uri-data-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "b6af635cbddb148a2319aa623523b3588ef86f0ef4bfd13845bf32735b355d89",
+    "afterSHA256": "70a96c317cf8c61d8274919131ff8e5b5348fa593ef49d478dd65b5b8d2f1b7d"
+  },
+  {
+    "label": "uri-data-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "0cc0dd541c3f4fb5fc165be57d58c59da1043987267057bb2abaea9a29f58484",
+    "afterSHA256": "7c1736b7267e8f98edf42cdb42c33da49626dd2c25a78c6dd82b3b6ed835c03b"
+  },
+  {
+    "label": "uri-data-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "20ea933c19018fd570547828494a750f17b454f5ded655295be5171318f6ed45",
+    "afterSHA256": "f99e0160800370f16dca38a70ab53386977c599cb1c36b379ad1108f897421e4"
+  },
+  {
+    "label": "variant-iid-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "b7de74ae693682278c7b836dc051028b8a80c0bf36e900bd8274ace627dfddc5",
+    "afterSHA256": "d35b71ef38ac90c20b51a0c90ff72ba0dd25639ae2a044e7573ce396893006d5"
+  },
+  {
+    "label": "variant-iid-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "a200580489275b565d91d8593c502a010b0d4e64c1d6f06d37f93993a12432e7",
+    "afterSHA256": "408d5f0d9f69aefc06662e2bff4b89d0eb36cf6efe031e4228bf203289480ee8"
+  },
+  {
+    "label": "variant-iid-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "17769eb796dddbfcad5bc7eff4b23897a8465ae85f5226af248c724237e77618",
+    "afterSHA256": "8deb470a772a0cb6c0e5267ce60453bec64671ce0579efa860daae07618bf777"
+  },
+  {
+    "label": "variant-iid-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "85a4a4847a8f19771e8cacdc0a8f32ee2b13695bc4a9ed3f527fd527e0fa3a2d",
+    "afterSHA256": "25641d70c50111ddfab9fa244f12e2143fcc65715e80a1622b102e8100a39d76"
+  },
+  {
+    "label": "variant-iid-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "c72b1b000eddb488af02b2773e6fe6cfb87ca13c75b6f04b1ca760fef5bebacf",
+    "afterSHA256": "d8207c22a87eca9524ab91735e5964eedb7be5321a5a8755d3118dac722655a4"
+  },
+  {
+    "label": "variant-iid-duplicate-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "13b79ede416f302d45d1e551907ff3cd48ebd9a33ffa51eaa95baea021312091",
+    "afterSHA256": "6972be18b854243b899393a575bc7a30aedd7ae537782c7c0bde0c79549cbd38"
+  },
+  {
+    "label": "variant-iid-duplicate-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "5e4fc74403af41c7d3ce4a2410976f80a2034bb591a7b7b20dfbb6446785af82",
+    "afterSHA256": "e846bd18183964d7df675f60c7c53ef8cedd2227a8a52bcbc915c003f5dc4e50"
+  },
+  {
+    "label": "variant-iid-duplicate-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "bc2696da0d092c055cbb0907c78531443b831c423ad575febb63179520086025",
+    "afterSHA256": "37e5efb78a6aeb83f35a44bebf329f0415de9ab288f5f9708b2535bc8baf4d61"
+  },
+  {
+    "label": "variant-iid-duplicate-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "304ae152e4c1be062ed5da918354a6da2ee488264feaac119dfde16c499f76cc",
+    "afterSHA256": "cda51798644ceb7bf9c7e88f3aff9d1bb9a63ffc6e5be91d4b039ecb6a4b1fc6"
+  },
+  {
+    "label": "variant-iid-duplicate-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "c629b6c706d015a82b589cf1263b2caf3862c41b17ac2cabbe71d9f2851e5da9",
+    "afterSHA256": "c267a520833b01fbf14197aa012638486514a30bfa05bf81640aeb0260c99202"
+  },
+  {
+    "label": "map-reifier-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "391187a503276c13c8510c6db4e774d91f9559e0d52fb8a356d2cea560e18e68",
+    "afterSHA256": "541a5636df44a5427584fcd7093ccb6c6dd7581004f3e923509d3729904b9226"
+  },
+  {
+    "label": "map-reifier-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "e95fb241de31000ad8e54f0de5a1db4b56c10190c60201626ad7815524ce1949",
+    "afterSHA256": "ae75ea6f53fd66f7e55be400defcf97a55a4778cd78a4a32ae18fe131f7b671a"
+  },
+  {
+    "label": "map-reifier-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "1b245df1a0c534b44c14cecccafc2c1f1ba04c7637698771a8a8e0d86ab4791b",
+    "afterSHA256": "9885fb23dc89344478118edd6729463f0fa2e2364afe65e2526c77fc16bc6213"
+  },
+  {
+    "label": "map-reifier-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "d719e117a5f0c5a3accc3a8b402c8e2b5fb549fa70c0ce592e79be085330e9d9",
+    "afterSHA256": "e92363de3874282d1529811dcd2864cd60b8bb17f42dd357ef0b564973f03ed0"
+  },
+  {
+    "label": "map-reifier-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "4fde58cdaaf045b8ca5fcf381582f2a83dbf7dd2d642400ec4b6e70771eae078",
+    "afterSHA256": "d743e79ae9b31a36667c5c35254516ee1915ba3c6630fa5ea38097cae6854812"
+  },
+  {
+    "label": "map-reifier-condition-control-wrong-cause",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "43d56a19d242518d3aa6e47284b5181e58986fc642184ea6a8c6c6db64d49de3",
+    "afterSHA256": "d27823bab7f04ec685ecdffa6620c3b1cf1e1543a98fc12314216f616a12ae98"
+  },
+  {
+    "label": "name-reifier-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "e4bcefb0eb075f8b3cd619c7ad63835a6dff0810acd51b82387ab0bad1549402",
+    "afterSHA256": "55f72a64e7d52335110be00f7d68c7b3831a75d5f2fcbd129adc8081d3a3dbdb"
+  },
+  {
+    "label": "name-reifier-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "5aa1e6eb8fed3e8f84db70e1210b8a4b86c56c9a170d1bf54cb2d46a6064404b",
+    "afterSHA256": "d03a896b20faac46736889fe88cea21f3c2131b90c3c1a485ad7df4b8e0fb0ac"
+  },
+  {
+    "label": "name-reifier-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "1f34c3ff294b43a832cbbd358cb0856448d20cf79b09685d2a6d529176e3768d",
+    "afterSHA256": "c2daa0f6b79ff22db7d77ca7dc7e956358a94741b7c21fc817f5c126299e701f"
+  },
+  {
+    "label": "name-reifier-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "b74ccdb6f69a2d1637ba4dd57df2810e5e90f92f6de8e16e8cb37bf8c9fe4679",
+    "afterSHA256": "73e1217039faff7bcffce4fc93cb9fc7bdca3e1c5b90a4286e57b6dbf58e535f"
+  },
+  {
+    "label": "name-reifier-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "3a0d19af573c93f6b643a7fe5d099859fcf028c5944b5c9bbb21c756e5c909c5",
+    "afterSHA256": "11da945aa2fe1a1d2ac051dafc19a54199a23996775c369016a61747f3d60ca9"
+  },
+  {
+    "label": "name-reifier-duplicate-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "7d18a419a9ffa4fda44ca2691b6f8b1d97355bb8f70bbcaec40e5cd6ab2bccc1",
+    "afterSHA256": "69c672c0987320f3886c68b16b1038ad100c17ab575b36958c9ef59ba92e805e"
+  },
+  {
+    "label": "name-reifier-duplicate-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "913e1f1ea00dc050f2ffb4cc72746e237f59b1488a4c95089c82e5c8f87db5fc",
+    "afterSHA256": "182d9a4c5d8b7e82e6d936729c9642891c1070468cd7dc8b41c036db9204a768"
+  },
+  {
+    "label": "name-reifier-duplicate-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "f1af4a32deaf18a6615fcf4f517558073d332c78cfdb8a229522f50a4da5695c",
+    "afterSHA256": "1c2901ac654297a5e90a2129bfc9fb69d8718c35015453e63f6aaf5ddab1c1b7"
+  },
+  {
+    "label": "name-reifier-duplicate-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "6c282d6546e23c74b9b77c15f2c173e6be78395498bcce5e9c01ffd5e38c3dbe",
+    "afterSHA256": "227c843a3769bbec45d93a592ea42b55e225d88365d6020510fb2b6d035a0b95"
+  },
+  {
+    "label": "name-reifier-duplicate-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "03d91e48d87478b98ddc854552b10d291cce64189bad3deae675946f6a7c1205",
+    "afterSHA256": "689c1473e376f32c272175173e88a31e627add57c074fa5d091f32561673cf07"
+  },
+  {
+    "label": "name-reifier-condition-control-wrong-cause",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "f227e310dc5ae23b51e29a4766fab9acc82ce33bf4b4053c67923c5e051cac4d",
+    "afterSHA256": "b5f68f19404332081dd6bf9c0576e96071c7a123f577ef642babcccf2efae709"
+  },
+  {
+    "label": "name-followup2-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "5dc6ea543b9b7a7d18b3e9eb27290605db111f86797a4afe3dcf27624501d66d",
+    "afterSHA256": "d760cd5bc61a1dbb04fee810310c802b5f51788738658d38735cafb834f63cf2"
+  },
+  {
+    "label": "name-followup2-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "bbf7bbbd16c8554504a6666afe8881a6b0f24441b8382aec621fa682f0477200",
+    "afterSHA256": "f16fe3e98f99176c2c1fc478e67a8236287eb8ba468e8dba6dea93c803607e82"
+  },
+  {
+    "label": "name-followup2-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "f90bc187ac5d95ef9fb55b4c5692c8d729e8dc879852c3ca5e0e031067fb3466",
+    "afterSHA256": "69a3da91d7b3a4dec0c025bb65d0f441ef043ae6654708b3a46c4babc3d40361"
+  },
+  {
+    "label": "name-followup2-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "0d3f93b1cacc3efcab5b0236e417705748942aee354541de9533cab7cc852ccd",
+    "afterSHA256": "2fa4ea1a9f54a772ffa31063c6c231c3c6c7da5dead65a97a64188bb491ad3fe"
+  },
+  {
+    "label": "name-followup2-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "43f34f14d2737d53eadd26949512ac731ebfd6694738a2f7471d076c186e7e36",
+    "afterSHA256": "c4c3ee0b6b8b10609c9b9e4ec4beb67b0e004e39be8b9791398c1c2038d9152a"
+  },
+  {
+    "label": "name-followup3-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "813620fe6f0f6e75c341d0d67c400f4a9caf7fc8a0c5d75df81079aa66b7f7a6",
+    "afterSHA256": "955cdd052e14cbbc45f15babcf46091118919b2241fa622e10580c538649937b"
+  },
+  {
+    "label": "name-followup3-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "423e51b931f59d50f9925799310e1f805de82e2ba686aa5da50cdc8d525cf266",
+    "afterSHA256": "6f78f0ee5dbf1efc6d6b95ac78af5dd20909c27702827ea8f229c8e3f4f14e1e"
+  },
+  {
+    "label": "name-followup3-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "c6902095ada413a5354155d3ef094c3c598386541d00cd777f46df90b6aa518f",
+    "afterSHA256": "3b042d174f48ec2c666848efaa8868282d0a53d6a814cf9d569979184105f923"
+  },
+  {
+    "label": "name-followup3-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "d3ea741c0c149161cae56c837e7499978f15622028a3d5ba34060c8ef4b04619",
+    "afterSHA256": "96fc96464197783a2d4e4234770b1f65c82fa23fc6487555bffa12ccae5e0f2d"
+  },
+  {
+    "label": "name-followup3-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "48a65f822a56501610240666ca0242b3023ada5ad583b02cc89ae697348185ad",
+    "afterSHA256": "eaec30c67b386c6c2304d46a11960d0971339307b0b85ae28f8b068be42ec542"
+  },
+  {
+    "label": "name-followup4-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "deb39a06a2795e14d3c3e23b84ff48daa70d5872cd8b2cd425dc61bd634e305b",
+    "afterSHA256": "7c6d271f60067437ff1abdd296188d14609d97865fc4ef0757f6c3372cf23765"
+  },
+  {
+    "label": "name-followup4-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "343028cc9ac704269543830076ccdf1d5a4c5f422faea75b9a64ec9a563d314b",
+    "afterSHA256": "161a4e2a1b3716a0183ed7591455ad3b49a513592d396c086f808447d937a20b"
+  },
+  {
+    "label": "name-followup4-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "aa46e3eab26310cc7ad79b8d139f3bb451077b23a0318e333298066399e93671",
+    "afterSHA256": "92a622fa532cd58f8e3db03094577dc54845c76185712240edc5147009b64851"
+  },
+  {
+    "label": "name-followup4-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "a2366befe34ef2e90eafcc40858148d8f10bf052abe00515dec4f29e65d977c0",
+    "afterSHA256": "edce394fcdb484a76f1043f0cf3b211a09bd4a65f3a9fc46d0db376c8e0220fe"
+  },
+  {
+    "label": "name-followup4-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "4912d49198e10088ba7f455cb6f7ed05fbb9f0912d3bf119b4de74b172cbd027",
+    "afterSHA256": "4a71d4b8ac23310e462caf2127e5cd767796bc918dff10e4d7a4cec3271a8caf"
+  },
+  {
+    "label": "variant-reifier-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "d16f0bad8cc465b38ad76d34e0eb35443e5ba0c58f638c9e06a6255993ad3890",
+    "afterSHA256": "9f25303c0294a76a8096c766ec031a259053fb95440c1339d4a510e85e2de135"
+  },
+  {
+    "label": "variant-reifier-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "d9b3803d68d8d45f65b6b8fe5c498483832b5e13c2669b2c08ace9b52db1f5c4",
+    "afterSHA256": "8c24f6bbcb8d85d813fea0aaf68f31734219f80e6597811b55857b2b888ad239"
+  },
+  {
+    "label": "variant-reifier-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "7257c71c4530ac2a36ed8c023c94c265ac54abc662f581232a2a936fa1266604",
+    "afterSHA256": "047d9f648f30628c84ae882c672c7d7cec5eb320f300cbb05bd6648f127aa63c"
+  },
+  {
+    "label": "variant-reifier-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "75de442030bfd73bbe3c8ee9798c70fc6595183689396de02923e85df9c371fb",
+    "afterSHA256": "86ec9769d2c95c60e632ac640ab0b478c258d6a69e1ecd4ba8ef8ecdc7f88315"
+  },
+  {
+    "label": "variant-reifier-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "8d11a74109d639fec5c7a78ef4aa3fac5be55ff56240eb6671f9f66eb4670173",
+    "afterSHA256": "e851d92f8e1421cb92a0429a190aabc418497a5f8037b9232de7b83269936539"
+  },
+  {
+    "label": "variant-reifier-duplicate-control-mismatch",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "bb3cc5e8b50c50a28909a84b4c3285270feaecd6e1c0aa78983f9f04e61f5dcb",
+    "afterSHA256": "704769124fa600fac6a5ae1d30553d7229bdd27801564119957acb739e2b727e"
+  },
+  {
+    "label": "variant-reifier-duplicate-control-xml",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "c7e07bf169554dce9977458013279acb2a22892c114d6958fcbfacd967cf3aa4",
+    "afterSHA256": "c481b28ded337c36d4858ab464d467d7e99f119d76342bb53eac0a608712daca"
+  },
+  {
+    "label": "variant-reifier-duplicate-control-unsupported",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "cada57e8add945d92d1dbfc48b339d80ac5fec781adc060e0de3cf2cdf0b82fe",
+    "afterSHA256": "f3815408aed9077ba6c6cba949bf76e455421df312f89862a92795f1889b1564"
+  },
+  {
+    "label": "variant-reifier-duplicate-control-tmdm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "88f7210ada9d37840675e53491f46f8e97dc4607458e8301654ed4f47a82510b",
+    "afterSHA256": "7dcf3183fbe4270d4973800bdfd3de62cc5fef8ac1877774f031ebcd41ea7443"
+  },
+  {
+    "label": "variant-reifier-duplicate-control-xtm",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "2b98976194dab15d36f266880f0286b64e2bfea9c8d4c063a25865650320164a",
+    "afterSHA256": "6f2dfa03eef5dbbb21cec81fb232c607d8fc732ef87d560e7dfaec284ff442ba"
+  },
+  {
+    "label": "variant-reifier-condition-control-wrong-cause",
+    "allBehavioralFieldsUnchanged": true,
+    "onlyMetadataChange": "/scope: 62 -> 63 positive capacity",
+    "beforeSHA256": "aa3066a96f9be250234fbfe546586ceb87e8812853488c6806206d85ddeb26c7",
+    "afterSHA256": "23df707fcb16a94b2537c4bbc72644142b6ff54ce8c16d55d4e5c517866d23a7"
+  }
+]

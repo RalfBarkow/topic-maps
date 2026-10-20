@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21o.py",
+    "--sbcl",
+    "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "--output",
+    "/private/tmp/tm-slice-22b-dcywzonm/baseline"
+  ],
+  "startedAtUTC": "2026-10-20T10:06:47.663772+00:00",
+  "finishedAtUTC": "2026-10-20T11:30:47.524178+00:00",
+  "exitCode": 0,
+  "allOriginalTrackedHashesUnchanged": true
+}

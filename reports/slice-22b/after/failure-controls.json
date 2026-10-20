@@ -1,0 +1,741 @@
+{
+  "kind": "executor-fault-controls-not-corpus-results",
+  "controls": [
+    {
+      "label": "positive-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "positive-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "positive-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "positive-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "positive-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "negative-control-accepted",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "negative-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "negative-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "negative-control-wrong-cause",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "scope-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "scope-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "scope-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "scope-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "iid-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "iid-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "iid-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "iid-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-accepted",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-wrong-cause",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-condition-control-wrong-cause",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-condition-control-wrong-cause",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-mismatch",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-xml",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-unsupported",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-tmdm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-xtm",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-condition-control-wrong-cause",
+      "retained": true,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-mismatch",
+      "retained": false,
+      "target": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "condition": null,
+      "caseStatus": "fail",
+      "retainedOriginalPASS": 70,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-xml",
+      "retained": false,
+      "target": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "XTM-XML-ERROR",
+        "code": "xml-not-well-formed",
+        "detail": "Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+        "message": "XTM XML-NOT-WELL-FORMED at xtm2/in/variant-duplicate-reifier2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm), approximately 1:11: Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+        "line": 1,
+        "column": 11,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm",
+        "sourceKey": "xtm2/in/variant-duplicate-reifier2.xtm",
+        "cause": {
+          "class": "WELL-FORMEDNESS-VIOLATION",
+          "code": null,
+          "detail": null,
+          "message": "Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+          "line": null,
+          "column": null,
+          "positionUnit": null,
+          "documentIRI": null,
+          "sourceKey": null,
+          "cause": null
+        }
+      },
+      "caseStatus": "fail",
+      "retainedOriginalPASS": 70,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-xtm",
+      "retained": false,
+      "target": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-id",
+        "detail": "topic/@id must be an XML Schema ID.",
+        "message": "XTM INVALID-ID at xtm2/in/variant-duplicate-reifier2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm), approximately 1:81: topic/@id must be an XML Schema ID.",
+        "line": 1,
+        "column": 81,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm",
+        "sourceKey": "xtm2/in/variant-duplicate-reifier2.xtm",
+        "cause": null
+      },
+      "caseStatus": "fail",
+      "retainedOriginalPASS": 70,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-unsupported",
+      "retained": false,
+      "target": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at xtm2/in/variant-duplicate-reifier2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm",
+        "sourceKey": "xtm2/in/variant-duplicate-reifier2.xtm",
+        "cause": null
+      },
+      "caseStatus": "unsupported",
+      "retainedOriginalPASS": 70,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-tmdm",
+      "retained": false,
+      "target": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "condition": {
+        "class": "REIFICATION-ERROR",
+        "code": "reifier-conflict",
+        "detail": "Topic already reifies a different information item.",
+        "message": "Reification REIFIER-CONFLICT: Topic already reifies a different information item.",
+        "line": null,
+        "column": null,
+        "positionUnit": null,
+        "documentIRI": null,
+        "sourceKey": null,
+        "cause": null
+      },
+      "caseStatus": "fail",
+      "retainedOriginalPASS": 70,
+      "expectedASDFFailureObserved": true,
+      "faultCountedAsPass": false
+    }
+  ],
+  "retained": 103,
+  "new": 5,
+  "allExpectedFailureExitsObserved": true
+}
