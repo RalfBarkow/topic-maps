@@ -1,0 +1,27 @@
+--- unchanged-original-baseline
++++ fresh-actual
+@@ -1,18 +1,17 @@
+ <topicMap>
+ <topic number="1">
++<itemIdentifiers>
++<locator>#occtype</locator>
++</itemIdentifiers>
++</topic>
++<topic number="2">
+ <itemIdentifiers>
+ <locator>#topic</locator>
+ </itemIdentifiers>
+ <occurrence number="1">
+ <value>Test</value>
+ <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+-<type topicref="2"></type>
++<type topicref="1"></type>
+ </occurrence>
+ </topic>
+-<topic number="2">
+-<itemIdentifiers>
+-<locator>#occtype</locator>
+-<locator>include-template.sub#occtype</locator>
+-</itemIdentifiers>
+-</topic>
+ </topicMap>

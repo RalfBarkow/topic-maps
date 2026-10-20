@@ -1,0 +1,41 @@
+--- unchanged-original-baseline
++++ fresh-actual
+@@ -1,14 +1,5 @@
+ <topicMap>
+ <topic number="1">
+-<itemIdentifiers>
+-<locator>#$__1.foo</locator>
+-</itemIdentifiers>
+-<name number="1">
+-<value>Sub Sub</value>
+-<type topicref="4"></type>
+-</name>
+-</topic>
+-<topic number="2">
+ <itemIdentifiers>
+ <locator>#$__2.foo</locator>
+ </itemIdentifiers>
+@@ -17,12 +8,22 @@
+ <type topicref="4"></type>
+ </name>
+ </topic>
+-<topic number="3">
++<topic number="2">
+ <itemIdentifiers>
+ <locator>#$__3.foo</locator>
+ </itemIdentifiers>
+ <name number="1">
+ <value>Master</value>
++<type topicref="4"></type>
++</name>
++</topic>
++<topic number="3">
++<itemIdentifiers>
++<locator>#$__1.foo</locator>
++<locator>include-wildcard2.sub#$__1.foo</locator>
++</itemIdentifiers>
++<name number="1">
++<value>Sub Sub</value>
+ <type topicref="4"></type>
+ </name>
+ </topic>

@@ -1,0 +1,140 @@
+{
+  "kind": "slice-22c-final-read-only-evidence-audit",
+  "timeUTC": "2026-10-20T21:38:32.213463+00:00",
+  "baseCommit": "bc9dcfb02f945422970d65266dc66b991806777d",
+  "observedHEAD": "bc9dcfb02f945422970d65266dc66b991806777d",
+  "branch": "codex/conformance-slice-22c",
+  "baseTrackedFilesVerified": 6891,
+  "historicalReportsVerified": 4615,
+  "pinnedCorpusFilesVerified": 2006,
+  "allOriginalFilesUnchanged": true,
+  "onlyNewSlice22CPaths": true,
+  "hyperdocUnchanged": false,
+  "hyperdocHead": "0cc5ce5aeb20e683c886c0e30b2d305be92e2136",
+  "hyperdocHeadAtStart": "306b7fd99fc2611a248e0927ce52a808abb7cc76",
+  "hyperdocClean": true,
+  "hyperdocInspectedSourceCount": 14,
+  "hyperdocSourceHashesUnchanged": 13,
+  "hyperdocChangedSourceHashes": {
+    "dreyeck/tests/project-ctm.lisp": {
+      "before": "6e9cc191c2fb1c9b53f39c7b031691baf2ba2cb2075b062c8ba0fbea9411dff2",
+      "after": "50f0f08cee1773d1ce2198956700be546afb388b868e7c5b0fc88b2576f30950"
+    }
+  },
+  "hyperdocChangedPathsSinceStart": [
+    "docs/exchange/2026-10-20-juergen-ctm-import-feedback.md",
+    "docs/project-ctm-exchange-review.md",
+    "dreyeck/pages/project/Implementation Assignments.html",
+    "dreyeck/tests/project-ctm.lisp",
+    "dreyeck/work/project/hyperdoc-project.ctm",
+    "dreyeck/work/project/hyperdoc-project.ctm.sha256"
+  ],
+  "hyperdocTouchedBySlice": false,
+  "hyperdocProvenance": "Observed neighbouring-repository change during interruption, after the completed offline regression; earlier audit retained in audit-before-resume.json. No writes or loads by Slice 22C.",
+  "regressionProcesses": 114,
+  "expectedFaultExits": 108,
+  "readerDiagnostics": 124,
+  "byteIdenticalBehavioralReports": 159,
+  "completeOriginalComparisons": 4,
+  "templateObservations": 7,
+  "expandedControls": 3,
+  "decisionCounts": {
+    "A": 1,
+    "B": 0,
+    "C": 12
+  },
+  "statuses": {
+    "CTM": {
+      "pass": 262,
+      "fail": 4,
+      "not-run": 7
+    },
+    "XTM": {
+      "pass": 71,
+      "fail": 0,
+      "not-run": 53
+    },
+    "total": {
+      "pass": 333,
+      "fail": 4,
+      "not-run": 60
+    }
+  },
+  "newRegistrations": 0,
+  "allJSONParsed": 183,
+  "localMarkdownLinks": [
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/case-evidence.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "slice-22c-original-evidence.md"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/source-review.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/comparisons/"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "slice-22a-conformance-closure.md"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/regression/execution.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/execution.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/regression-comparison.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/observation-comparison.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/integrity.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/precommit-audit.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/artifacts.json"
+    },
+    {
+      "document": "docs/slice-22c-normative-decisions.md",
+      "target": "../reports/slice-22c/audit-before-resume.json"
+    },
+    {
+      "document": "docs/slice-22c-original-evidence.md",
+      "target": "slice-22c-normative-decisions.md"
+    },
+    {
+      "document": "docs/slice-22c-original-evidence.md",
+      "target": "../reports/slice-22c/case-evidence.json"
+    }
+  ],
+  "examinedToolHashes": {
+    "scripts/validate-slice-22b.py": "9089b36f3e960225d6183d8d3eab729c3fad34db83933b71eb7db9a774b775b5",
+    "scripts/validate-slice-21o.py": "d69a31c35de8a6889cb32fc831782060a96ef8b69b906d7827db57ffe0092f9f",
+    "reports/slice-22a/observations.lisp": "daf9f36c5a52a7c4d25ac8a4bdf767d759b178fe2ee7c2d29652563197119b06",
+    "reports/slice-20j/controls.lisp": "34d6d95254f56cb5c3adc2c6bc2b4f4916e2972e7c35bad98921aeeec90a44b2",
+    "reports/slice-22c/reproduce.py": "45aa9d3d312db365fbae29126fa04a2b9ee1e44c8fa5294ae7ca5484e6d5c2f7",
+    "reports/slice-22c/auxiliary.lisp": "4893bf0143bf7ae45f1d7fb283b9f5ca8fa8672fa9e958f915eb39eae48f8a6c",
+    "reports/slice-22c/build-evidence.py": "065b5a9e4e99dedf63edfe982347b1cb05b17c1455ec7de7ffdfcdb5aa0c2af0",
+    "reports/slice-22c/audit-evidence.py": "0aa4f0e00a6abbe33dcdab8a63831720a803b4e71dbd973b4989312405f1fee1"
+  },
+  "sandboxStartupError": "UnsupportedOperation(\"writable root /Users/rgb/.nix-profile contains symlink component /Users/rgb/.nix-profile; symlinked writable roots are not supported.\nIf this writable root is at or beneath CODEX_HOME and you trust its symlink targets, set `allow_symlinked_codex_home = true` at the top level of `$CODEX_HOME/config.toml` (normally `~/.codex/config.toml`) on the execution host, then restart Codex or its executor. This opt-out trusts targets outside CODEX_HOME and targets changed between commands. It does not apply to other writable roots.\")",
+  "sandboxResolution": "Regular require_escalated approval; canonical SBCL path and explicit child sandbox. No symlink/config edits or approval bypass.",
+  "passed": true
+}

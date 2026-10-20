@@ -1,0 +1,122 @@
+{
+  "kind": "slice-22c-read-only-normative-investigation",
+  "baseCommit": "bc9dcfb02f945422970d65266dc66b991806777d",
+  "branch": "codex/conformance-slice-22c",
+  "runtime": "SBCL 2.5.4",
+  "startedAtUTC": "2026-10-20T13:59:21.389467+00:00",
+  "finishedAtUTC": "2026-10-20T13:59:46.011169+00:00",
+  "runs": [
+    {
+      "label": "source-preparation",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "python3",
+        "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21o.py",
+        "--prepare",
+        "/private/tmp/tm-slice-22c-5zds879t/observed/sources"
+      ],
+      "exitCode": 0,
+      "startedAtUTC": "2026-10-20T13:59:21.942094+00:00",
+      "finishedAtUTC": "2026-10-20T13:59:25.013706+00:00",
+      "network": "denied in test children",
+      "repositoryWrites": "denied in test children",
+      "freshProcess": true
+    },
+    {
+      "label": "ctm-observations",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-22a/observations.lisp"
+      ],
+      "exitCode": 0,
+      "startedAtUTC": "2026-10-20T13:59:25.017241+00:00",
+      "finishedAtUTC": "2026-10-20T13:59:37.507319+00:00",
+      "network": "denied in test children",
+      "repositoryWrites": "denied in test children",
+      "freshProcess": true
+    },
+    {
+      "label": "xtm-auxiliary-observations",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-22c/auxiliary.lisp"
+      ],
+      "exitCode": 0,
+      "startedAtUTC": "2026-10-20T13:59:37.507472+00:00",
+      "finishedAtUTC": "2026-10-20T13:59:38.949232+00:00",
+      "network": "denied in test children",
+      "repositoryWrites": "denied in test children",
+      "freshProcess": true
+    }
+  ],
+  "regressionDirectory": "/private/tmp/tm-slice-22c-5zds879t/regression",
+  "reusedFreshRegression": true,
+  "regressionStartedAtUTC": "2026-10-20T13:53:55.981677+00:00",
+  "regressionFinishedAtUTC": "2026-10-20T13:57:21.778153+00:00",
+  "regressionProcesses": 114,
+  "regressionBehavioralReportsByteIdentical": 159,
+  "diagnosticObservations": 124,
+  "faultControls": 108,
+  "additionalObservationProcesses": 2,
+  "ctmOriginalObservations": 11,
+  "xtmOriginalObservations": 124,
+  "auxiliaryReads": 2,
+  "statusesBefore": {
+    "XTM": {
+      "pass": 71,
+      "fail": 0,
+      "not-run": 53
+    },
+    "CTM": {
+      "pass": 262,
+      "fail": 4,
+      "not-run": 7
+    },
+    "total": {
+      "pass": 333,
+      "fail": 4,
+      "not-run": 60
+    }
+  },
+  "statusesAfter": {
+    "XTM": {
+      "pass": 71,
+      "fail": 0,
+      "not-run": 53
+    },
+    "CTM": {
+      "pass": 262,
+      "fail": 4,
+      "not-run": 7
+    },
+    "total": {
+      "pass": 333,
+      "fail": 4,
+      "not-run": 60
+    }
+  },
+  "newOriginalPASS": 0,
+  "productionChanged": false,
+  "registrationChanged": false,
+  "originalSourcesAndBaselinesUnchanged": true,
+  "historicalReportsUnchanged": true,
+  "newDownloads": 0,
+  "persistentImages": false,
+  "validationPassed": true
+}

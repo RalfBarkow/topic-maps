@@ -1,0 +1,197 @@
+{
+  "kind": "slice-22c-source-quality-and-clause-review-not-a-copy-of-standards",
+  "reviewDate": "2026-10-20",
+  "localInventory": {
+    "epistemicStatus": "observed",
+    "scope": [
+      "repository tracked files; references/ and docs/",
+      "reports/slice-22a and reports/slice-22b",
+      "previous temporary Slice-22A and Slice-22B work directories"
+    ],
+    "available": [
+      "Historical source citations and paraphrases in reports/slice-22a/normative-review.json and matrix.json",
+      "Executable observations and byte-preserved historical corpus",
+      "vendor/cxtm/ctm/STATUS.txt names draft 2010-03-31"
+    ],
+    "publishedStandardFilesLocated": [],
+    "publishedPreviewFilesLocated": [],
+    "fullHomeSearchClaimed": false,
+    "limitation": "Lokale Berichte sind frühere Interpretationen, keine nachweisbaren vollständigen ISO-Normkopien."
+  },
+  "sources": [
+    {
+      "id": "CTM-HTML",
+      "url": "https://www.isotopicmaps.org/ctm/ctm.html",
+      "targetEdition": "ISO/IEC 13250-6:2010",
+      "quality": "public HTML; draft provenance, not verified published edition",
+      "clauses": [
+        "3.2",
+        "3.3.5 [12]",
+        "3.3.6 [13]-[19]",
+        "3.3.7 [20]-[21]",
+        "3.3.8",
+        "3.4 [28]",
+        "3.8 [49]",
+        "3.9 [50]-[55]",
+        "3.14 [63]-[67]",
+        "3.15 [68]-[70]",
+        "3.16.2 [73]"
+      ],
+      "epistemicStatus": "derived",
+      "finding": "Tail-SI: [50]→[51]→[52]→[17]→[12], ohne variable. Kopf [49]→[13], Referenz [20]→[13], markierte Identitäten [18]/[19] und Literal [28] erlauben Variablen. §§3.14–3.15 verlangen Template-Kontext, Positionsbindung und kontextgerechte Substitution. §3.16.2 verarbeitet das Kind mit eigener Document IRI, unmittelbarer Eltern-IRI als Wildcard-IRI und gemeinsam fortgeschriebenem Zähler; es ergänzt Include-Identifier und importiert Templates am Include-Ort. Keine Löschoperation ist beschrieben.",
+      "publishedEquivalenceVerified": false
+    },
+    {
+      "id": "CTM-LANDING",
+      "url": "https://www.isotopicmaps.org/ctm/",
+      "quality": "editors project page, stale FCD status, useful only for link provenance",
+      "epistemicStatus": "observed",
+      "finding": "Der Link auf ctm.html ist als Current CTM draft (2010-03-31) bezeichnet. Der Seitentitel des verlinkten Texts allein beweist keine Publikationsidentität."
+    },
+    {
+      "id": "CTM-PREVIEW",
+      "url": "https://cdn.standards.iteh.ai/samples/43940/6663ee28c1604551ac6adc02e22c6bb6/ISO-IEC-13250-6-2010.pdf",
+      "quality": "public third-party-hosted preview of published first edition 2010-11-15; extracted text inspected online",
+      "epistemicStatus": "observed",
+      "coverage": "11 PDF pages; normative body only printed pages 1–5 through §3.4.2. Later contents entries are not clause text.",
+      "clauses": [
+        "2, printed p.1",
+        "3.2, pp.1–2",
+        "3.3.5–3.3.8, pp.3–4",
+        "3.4.1, pp.4–5",
+        "3.4.2, p.5"
+      ],
+      "finding": "Die Vorschau bindet direkte DateTime-Literale ausdrücklich an XSDT-Gültigkeit. §3.2 ergänzt die Forderung nach einem gültigen TMDM-Modell; §3.4.2 verwendet shall statt should der HTML-Fassung. Damit ist Wortlautidentität bereits im verfügbaren Ausschnitt widerlegt; daraus folgt noch keine konkrete Änderung späterer Klauseln.",
+      "missing": "§§3.8–3.9 gedruckte S.6–7; §§3.14–3.15 S.8–9; §3.16.2 S.10; zugehörige EBNF/Anhang B S.13–14.",
+      "visualVerification": "Two browser PDF screenshot attempts (PDF pages 8,10, zero-based) returned Cache miss; no visual claim. No local download.",
+      "downloaded": false
+    },
+    {
+      "id": "XTM-HTML",
+      "url": "https://www.isotopicmaps.org/sam/sam-xtm/",
+      "targetEdition": "ISO/IEC 13250-3:2007",
+      "quality": "2006-06-19 public FDIS-labelled HTML; introduction explicitly asserts identity with published ISO standard",
+      "epistemicStatus": "derived",
+      "clauses": [
+        "4.2",
+        "4.3.3–4.3.4",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.21",
+        "5"
+      ],
+      "finding": "§4.21 deserialisiert die externe Ressource mit deren IRI und überträgt ihre Topics und Associations. Quell-Map-Identifier sind kein genannter Importoperand. §§4.4/4.6 ordnen itemIdentity dem jeweiligen Map-Item zu. §5 fordert ein isomorphes Ergebnis. Eine Cache-/Zyklusregel ist in den geprüften Klauseln nicht angegeben.",
+      "limit": "Publikationsidentität ist die ausdrückliche editorische Erklärung, kein eigener Bytevergleich mit ISO-PDF; kein Wechsel zur Ausgabe 2013."
+    },
+    {
+      "id": "TMDM-HTML",
+      "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/",
+      "targetEdition": "ISO/IEC 13250-2:2006",
+      "quality": "public HTML explicitly asserting identity with published ISO standard",
+      "epistemicStatus": "derived",
+      "clauses": [
+        "4.4",
+        "5.1",
+        "5.2",
+        "5.3.5",
+        "6.1–6.2"
+      ],
+      "finding": "Map-Identifier gehören zum Map-Item. Topic-Gleichheit und die Vereinigung der Topic-Eigenschaften regeln Duplikate; §6.2 setzt denselben Parent voraus. Freie Identifier-Vergabe in §5.1 ist kein zusätzlicher XTM-Importbefehl. TMDM legt keine Dokument-Cache-Strategie fest.",
+      "limit": "Keine separate Prozessor-Konformitätsklausel; §1. Keine eigenständige ISO-PDF-Prüfung."
+    },
+    {
+      "id": "CXTM-HTML",
+      "url": "https://www.isotopicmaps.org/cxtm/cxtm.html",
+      "targetEdition": "ISO/IEC 13250-4:2009",
+      "quality": "public 2009-01-27 text; no publication-identity statement found",
+      "epistemicStatus": "derived",
+      "clauses": [
+        "2",
+        "3.13",
+        "3.16 dateTime branch",
+        "3.17–3.18"
+      ],
+      "finding": "§3.16 verweist für dateTime auf die kanonische lexikalische XSD-Darstellung; §2 nennt XSD Datatypes Second Edition vom 28.10.2004. Der endgültige ISO-2009-Wortlaut dieses Zweigs wurde nicht verfügbar verifiziert.",
+      "publishedEquivalenceVerified": false,
+      "needed": "Veröffentlichte ISO/IEC 13250-4:2009 §§2 und 3.16 sowie gegebenenfalls einschlägige Berichtigungen; für Identifierdarstellung §§3.13,3.17–3.18."
+    },
+    {
+      "id": "XSD-2004",
+      "url": "https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/",
+      "quality": "dated primary W3C Recommendation, second edition 2004-10-28",
+      "epistemicStatus": "derived",
+      "clauses": [
+        "3.2.7",
+        "3.2.7.1",
+        "3.2.7.2",
+        "3.2.7.3",
+        "D.1",
+        "E.1"
+      ],
+      "finding": "Zeitzonenwerte haben die UTC-Kanonik Z. 2011-01-01T00:00:00+02:00 und 2010-12-31T22:00:00Z sind wertgleich. Sekunden 60 sind nicht pauschal lexikalisch verboten: D.1 behandelt ungeeignete Schaltsekundenpositionen als Minutenübertrag. September 19 erfüllt keine dort genannte mögliche Tageslage, auch nicht mit ±14 Stunden. E.1 illustriert Überlauf bei Arithmetik, ist kein eigenständiger CTM-Importalgorithmus. Die nicht zeitzonierte Eingabe erhält kein Z. Keine Anwendung von XSD 1.1."
+    },
+    {
+      "id": "XSD-ERRATA",
+      "url": "https://www.w3.org/2004/03/xmlschema-errata",
+      "quality": "primary second-edition errata page, revision marker 2010-08-19",
+      "epistemicStatus": "observed",
+      "finding": "Der Abschnitt Errata for Part 2 (Datatypes) enthält keine Einträge. Das ist der gelesene Seitenstand, keine allgemeine Behauptung, dass nie weitere Fehler gemeldet wurden."
+    },
+    {
+      "id": "ISO-CATALOG",
+      "urls": [
+        "https://www.iso.org/standard/43940.html",
+        "https://www.iso.org/standard/40018.html",
+        "https://www.iso.org/standard/40017.html",
+        "https://www.iso.org/standard/52120.html",
+        "https://www.iso.org/committee/45374/x/catalogue/"
+      ],
+      "quality": "official edition metadata and catalogue, not normative clause text",
+      "epistemicStatus": "observed",
+      "finding": "Bestätigt die vier Zielausgaben. 13250-3:2007 wurde durch 2013 ersetzt; dieser Auftrag bleibt ausdrücklich bei 2007. In den geprüften Katalogeinträgen wurden keine separat bezeichneten Corrigenda zu diesen Zielausgaben aufgefunden. Dies beweist nicht deren Nichtexistenz oder die Richtigkeit aller öffentlichen Fassungen."
+    }
+  ],
+  "newStandardCopiesSaved": false,
+  "paidStandardAcquired": false,
+  "openPrimaryRequests": [
+    {
+      "id": "Q-CTM",
+      "source": "ISO/IEC 13250-6:2010",
+      "clauses": "3.8–3.9 (pp.6–7), 3.14–3.15 (pp.8–9), 3.16.2 (p.10), associated EBNF/Annex B (pp.13–14)",
+      "request": "Auftraggeber stellt rechtmäßig zugängliche Auszüge bereit oder lässt diese Klauseln samt einschlägiger Berichtigungen gegen die HTML-Fassung prüfen. Keine neue Erwerbsaktion in diesem Slice."
+    },
+    {
+      "id": "Q-CXTM",
+      "source": "ISO/IEC 13250-4:2009",
+      "clauses": "2; 3.16 dateTime branch; relevant corrigenda",
+      "request": "Publikationsabgleich des XSD-Verweises und der dateTime-Kanonisierung. Bis dahin bleibt B für die beiden DateTime-Fälle eine bedingte technische Schlussfolgerung."
+    },
+    {
+      "id": "Q-XTM-LOOP",
+      "source": "ISO/IEC 13250-3:2007; ISO/IEC JTC 1/SC 34 interpretation/corrigenda if any",
+      "clauses": "4.2, 4.21, 5; interaction with TMDM 5.3.5 and 6.1–6.2",
+      "request": "Beleg oder fachlich freigegebene Auslegung zur wiederholten Dokument-IRI und zyklischen Deserialisierung; Modellabschluss getrennt von Resolver-/Cache-Verfahren entscheiden."
+    },
+    {
+      "id": "Q-ERRATA",
+      "source": "ISO target editions and responsible standards body",
+      "clauses": "Relevant publication-to-public-text equivalence and corrections",
+      "request": "Vor uneingeschränkter Gesamtkonformität die Zielausgaben und einschlägigen Berichtigungen bestätigen; Katalogsuche ist kein Negativbeweis."
+    }
+  ],
+  "searchScope": {
+    "domains": [
+      "iso.org",
+      "isotopicmaps.org",
+      "w3.org"
+    ],
+    "queries": [
+      "ISO/IEC 13250-6:2010 corrigendum",
+      "ISO/IEC 13250-3:2007 corrigendum",
+      "ISO/IEC 13250-4:2009 3.16",
+      "ISO/IEC 13250-2:2006"
+    ],
+    "result": "No new authoritative full later CTM clauses or final CXTM 3.16 obtained; the second-edition W3C errata page was inspected."
+  }
+}

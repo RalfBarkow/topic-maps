@@ -1,0 +1,270 @@
+{
+  "ctm/in/include-template.ctm": {
+    "classification": "C",
+    "scope": "Definition/import/invocation environment and extra definition-source II",
+    "claim": "The current model contains only caller-document identifiers. Whether the published later clauses require the baseline extra II is not established.",
+    "conditionalConclusion": "B is supported by the inspected HTML interpretation; no eager Topic exists in the observed child.",
+    "references": [
+      "CTM-HTML:3.2,3.14–3.16.2",
+      "CTM-PREVIEW",
+      "TMDM-HTML:5.1,5.2,6.2"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Verify declaration vs invocation environment before proposing any identifier change.",
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/in/include-wildcard2.ctm": {
+    "classification": "C",
+    "scope": "Retention of nested include wildcard item identifier",
+    "claim": "The child-origin II remains in the observed map, whereas the baseline omits it. Its removal is not justified by the inspected text.",
+    "conditionalConclusion": "B under inspected HTML; publication-equivalent include text still needed.",
+    "references": [
+      "CTM-HTML:3.2,3.3.8,3.16.2",
+      "CTM-PREVIEW",
+      "TMDM-HTML:5.1,6.1–6.2"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Verify the exact published include identifier operation; preserve both observed identifiers meanwhile.",
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/in/occurrence-datetime-timezone2.ctm": {
+    "classification": "C",
+    "scope": "Final ISO CXTM edition decision; XSD-level conclusion separately supported",
+    "claim": "Current value/canonical bytes have direct XSD support and contradict the public-CXTM reading of the historical baseline. Final B requires the unavailable published CXTM clause.",
+    "conditionalConclusion": "B under CXTM-HTML plus XSD-2004; this is not an unconditional ISO-edition B.",
+    "references": [
+      "CTM-PREVIEW:3.4.1 printed p.5",
+      "CXTM-HTML:2,3.16",
+      "XSD-2004:3.2.7.1–3.2.7.3,D.1,E.1",
+      "XSD-ERRATA"
+    ],
+    "openQuestions": [
+      "Q-CXTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Retain FAIL; verify published CXTM 3.16, then separately approve a documented baseline exception, never rewrite the original baseline.",
+    "changeFrom22A": "Tightens earlier edition-qualified B to formal C; observations and XSD reasoning are unchanged, but missing final CXTM clause is now a decision gate.",
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/in/occurrence-datetime2.ctm": {
+    "classification": "C",
+    "scope": "Final ISO CXTM edition decision; XSD-level conclusion separately supported",
+    "claim": "Current value/canonical bytes have direct XSD support and contradict the public-CXTM reading of the historical baseline. Final B requires the unavailable published CXTM clause.",
+    "conditionalConclusion": "B under CXTM-HTML plus XSD-2004; this is not an unconditional ISO-edition B.",
+    "references": [
+      "CTM-PREVIEW:3.4.1 printed p.5",
+      "CXTM-HTML:2,3.16",
+      "XSD-2004:3.2.7.1–3.2.7.3,D.1,E.1",
+      "XSD-ERRATA"
+    ],
+    "openQuestions": [
+      "Q-CXTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Retain FAIL; verify published CXTM 3.16, then separately approve a documented baseline exception, never rewrite the original baseline.",
+    "changeFrom22A": "Tightens earlier edition-qualified B to formal C; observations and XSD reasoning are unchanged, but missing final CXTM clause is now a decision gate.",
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/in/template-ambiguous-parameter5.ctm": {
+    "classification": "C",
+    "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+    "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+    "conditionalConclusion": "Body invalid under inspected HTML. The expanded control reproduces baseline bytes but does not validate the original template.",
+    "references": [
+      "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+      "CTM-LANDING",
+      "CTM-PREVIEW"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Keep NOT-RUN. Decide any documented corpus exception only after edition check; compatibility grammar would need separate authorization.",
+    "historicalIntent": {
+      "epistemicStatus": "hypothesized",
+      "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+    },
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/in/template-ambiguous-parameter6.ctm": {
+    "classification": "C",
+    "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+    "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+    "conditionalConclusion": "Body invalid under inspected HTML. The expanded control reproduces baseline bytes but does not validate the original template.",
+    "references": [
+      "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+      "CTM-LANDING",
+      "CTM-PREVIEW"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Keep NOT-RUN. Decide any documented corpus exception only after edition check; compatibility grammar would need separate authorization.",
+    "historicalIntent": {
+      "epistemicStatus": "hypothesized",
+      "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+    },
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/in/template-subject-identifier2.ctm": {
+    "classification": "C",
+    "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+    "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+    "conditionalConclusion": "Body invalid under inspected HTML. The expanded control reproduces baseline bytes but does not validate the original template.",
+    "references": [
+      "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+      "CTM-LANDING",
+      "CTM-PREVIEW"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Keep NOT-RUN. Decide any documented corpus exception only after edition check; compatibility grammar would need separate authorization.",
+    "historicalIntent": {
+      "epistemicStatus": "hypothesized",
+      "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+    },
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/invalid/template-item-identifier-2nd-arg.ctm": {
+    "classification": "C",
+    "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+    "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+    "conditionalConclusion": "Body invalid under inspected HTML. This does not qualify the historical argument-rejection contract.",
+    "references": [
+      "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+      "CTM-LANDING",
+      "CTM-PREVIEW"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Keep NOT-RUN. A body-syntax negative acceptance contract would require a separate agreement even if final grammar confirms exclusion.",
+    "historicalIntent": {
+      "epistemicStatus": "hypothesized",
+      "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+    },
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/invalid/template-item-identifier3.ctm": {
+    "classification": "C",
+    "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+    "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+    "conditionalConclusion": "Body invalid under inspected HTML. This does not qualify the historical argument-rejection contract.",
+    "references": [
+      "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+      "CTM-LANDING",
+      "CTM-PREVIEW"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Keep NOT-RUN. A body-syntax negative acceptance contract would require a separate agreement even if final grammar confirms exclusion.",
+    "historicalIntent": {
+      "epistemicStatus": "hypothesized",
+      "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+    },
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/invalid/template-subject-locator-2nd-arg.ctm": {
+    "classification": "C",
+    "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+    "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+    "conditionalConclusion": "Body invalid under inspected HTML. This does not qualify the historical argument-rejection contract.",
+    "references": [
+      "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+      "CTM-LANDING",
+      "CTM-PREVIEW"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Keep NOT-RUN. A body-syntax negative acceptance contract would require a separate agreement even if final grammar confirms exclusion.",
+    "historicalIntent": {
+      "epistemicStatus": "hypothesized",
+      "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+    },
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "ctm/invalid/template-subject-locator3.ctm": {
+    "classification": "C",
+    "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+    "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+    "conditionalConclusion": "Body invalid under inspected HTML. This does not qualify the historical argument-rejection contract.",
+    "references": [
+      "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+      "CTM-LANDING",
+      "CTM-PREVIEW"
+    ],
+    "openQuestions": [
+      "Q-CTM",
+      "Q-ERRATA"
+    ],
+    "nextAction": "Keep NOT-RUN. A body-syntax negative acceptance contract would require a separate agreement even if final grammar confirms exclusion.",
+    "historicalIntent": {
+      "epistemicStatus": "hypothesized",
+      "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+    },
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  },
+  "xtm2/in/mergemap-itemid.xtm": {
+    "classification": "A",
+    "scope": "Missing non-cyclic XTM mergeMap operation, not a claim that the baseline is fully normative",
+    "claim": "The conforming non-cyclic source and available subresource require content import. The current reader rejects mergeMap before returning a model.",
+    "references": [
+      "XTM-HTML:4.2,4.4–4.6,4.21,5",
+      "TMDM-HTML:5.1,5.2,5.3.5,6.1–6.2"
+    ],
+    "openQuestions": [
+      "Q-ERRATA"
+    ],
+    "minimalCorrection": "In a separately authorized 22H, resolve pinned child bytes using the child Document IRI and native content import; preserve topic identifiers and target-map identity. No root-map II transfer solely for baseline matching.",
+    "baselineAspect": {
+      "epistemicStatus": "derived",
+      "claim": "The expected child map II is outside the 4.21 import operands. Child model proves that this II belongs to the child Map, not its Topic. No current successful original model exists, so calling the whole case B would fail the requested B definition."
+    },
+    "nextAction": "Plan normative mergeMap support separately; its result may still disagree with this historical baseline. Do not forecast this original as an unconditional PASS.",
+    "changeFrom22A": "Resolves the absent non-cyclic import as A using publication-identical declared XTM text; isolates the baseline root-II conflict rather than treating unsupported as an acceptable B result.",
+    "epistemicStatus": "derived",
+    "evidenceStrength": "publication-identical declared public XTM/TMDM plus fresh execution"
+  },
+  "xtm2/in/mergemap-loop.xtm": {
+    "classification": "C",
+    "scope": "Cyclic deserialization semantics and finite model completion",
+    "claim": "Root and subresource reference each other before their local Topic. The current rejection is unsupported, not cycle handling. The inspected rules do not prescribe a repeated-document cache or cycle error.",
+    "references": [
+      "XTM-HTML:4.2,4.21,5",
+      "TMDM-HTML:5.3.5,6.1–6.2"
+    ],
+    "openQuestions": [
+      "Q-XTM-LOOP",
+      "Q-ERRATA"
+    ],
+    "conditionalConclusion": "A finite closure retaining both document-qualified topic identifiers is consistent with the baseline; its operational derivation needs explicit qualification.",
+    "nextAction": "Separately approve a finite resolver/graph-completion acceptance contract before implementing or registering this cyclic original.",
+    "epistemicStatus": "derived",
+    "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+  }
+}

@@ -1,0 +1,598 @@
+{
+  "kind": "slice-22b-delta-to-immutable-slice-22a-matrix",
+  "sourceMatrix": "reports/slice-22a/matrix.json",
+  "sourceMatrixSHA256": "86fa8f644456b513975440cde62b1b7db115c2d238064d94ced26051dd22cf90",
+  "changedCase": "xtm2/in/variant-duplicate-reifier2.xtm",
+  "newPASS": 1,
+  "otherOpenCasesUnchanged": 64,
+  "remainingOpenCases": 64,
+  "newCapability": false,
+  "newNormativeDecision": false,
+  "cases": [
+    {
+      "id": "ctm/in/include-template.ctm",
+      "before": "fail",
+      "after": "fail",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/in/include-wildcard2.ctm",
+      "before": "fail",
+      "after": "fail",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/in/occurrence-datetime-timezone2.ctm",
+      "before": "fail",
+      "after": "fail",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/in/occurrence-datetime2.ctm",
+      "before": "fail",
+      "after": "fail",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/in/template-ambiguous-parameter5.ctm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/in/template-ambiguous-parameter6.ctm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/in/template-subject-identifier2.ctm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/invalid/template-item-identifier3.ctm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "ctm/invalid/template-subject-locator3.ctm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-binary-duplicate.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-binary.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid2.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid3.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified2.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified3.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified4.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-role.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-instanceof-duplicate.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-instanceof-scope.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-reifier.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-scope.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association-ternary.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/association.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/itemid-association.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/itemid-occurrence.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/itemid-role.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-association.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-occurrences.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/mergemap-itemid.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/mergemap-loop.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/mergemap-merge.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/mergemap-tm-reifier.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/mergemap.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-datatype-unknown.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-iid.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-iid2.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-reifier.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-reifier.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-resourcedata-uri.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-resourceref-relative.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-resourceref.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-scope-duplicate.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence-scope.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/occurrence.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-iid.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-iid2.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified2.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified3.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified4.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/role-reifier.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/variant-datatype-unknown.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "before": "not-run",
+      "after": "pass",
+      "changed": true,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/invalid/reifier-collision.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/invalid/role-duplicate-reified.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    },
+    {
+      "id": "xtm2/invalid/topicref-no-fragment-id.xtm",
+      "before": "not-run",
+      "after": "not-run",
+      "changed": false,
+      "readerConditionUnchanged": true,
+      "newCapability": false,
+      "newNormativeDecision": false
+    }
+  ]
+}

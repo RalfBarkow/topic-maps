@@ -1,0 +1,12 @@
+[
+  {
+    "name": "ctm-observations.json",
+    "sha256": "ecec85dadeeb8fa71e6bd3c614f63a307980371660b9ea1c756f1fbbbb9e311e",
+    "byteIdenticalTo22A": true
+  },
+  {
+    "name": "controls.json",
+    "sha256": "71b3d429e511c78195005d98907cec0a12580eb3e9e64a82a49cd944988edb4a",
+    "byteIdenticalTo22A": true
+  }
+]

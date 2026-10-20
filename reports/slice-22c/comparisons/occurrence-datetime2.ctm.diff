@@ -1,0 +1,11 @@
+--- unchanged-original-baseline
++++ fresh-actual
+@@ -9,7 +9,7 @@
+ <locator>#topic</locator>
+ </itemIdentifiers>
+ <occurrence number="1">
+-<value>1976-09-19T12:01:60</value>
++<value>1976-09-19T12:02:00</value>
+ <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+ <type topicref="1"></type>
+ </occurrence>

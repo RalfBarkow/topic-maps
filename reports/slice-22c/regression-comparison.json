@@ -1,0 +1,956 @@
+[
+  {
+    "previous": "reports/slice-22b/after/xtm.json",
+    "fresh": "regression/xtm.json",
+    "sha256": "627f4548e9fd3aefe062e935c7620162e038707d5e75319850e01511c8d4b40a",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/ctm.validation.json",
+    "fresh": "regression/ctm.validation.json",
+    "sha256": "649536de5ac2248087913b2e085f9ba6eb930f9bcc1c51101a3a80498a8954df",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/ctm.cxtm.json",
+    "fresh": "regression/ctm.cxtm.json",
+    "sha256": "c31cbcb34283224b3a38627d9adad83ea51c247f38aed621e1970265c22b60d7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/ctm.encoding.json",
+    "fresh": "regression/ctm.encoding.json",
+    "sha256": "8079e24cb820d31b214fe57247c655bb94912ecdfda1b4747140b7e49e224c70",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/after-diagnostics.json",
+    "fresh": "regression/after-diagnostics.json",
+    "sha256": "620aa562cbc28018d9fc548cfa71cd6407b2246b1e132061b779511555fc303d",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/original-contract.json",
+    "fresh": "regression/original-contract.json",
+    "sha256": "91595fb361f35da54587c1c43807af9939d315324efc250be019c1ce169a4e94",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json",
+    "fresh": "regression/retained/core.json",
+    "sha256": "c4a303e4baf0d5ce41f3b1e1c4e8be90104eb1946a344305873b339e1089672a",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.arity.json",
+    "fresh": "regression/retained/core.json.arity.json",
+    "sha256": "02ffd2fbfd379ec140e13f665190c84e6781af9394fe194e8ddef4175e21b7e0",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.associations.json",
+    "fresh": "regression/retained/core.json.associations.json",
+    "sha256": "31b1e7a0552904f8f1bcbb6028d461a04460c3945d0534773bbbb57034e2e64f",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.cxtm.json",
+    "fresh": "regression/retained/core.json.cxtm.json",
+    "sha256": "345f5aa519ef48363cc7c282de4462027ef5502efc7f461115fb7f97447b5d6b",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.dates.json",
+    "fresh": "regression/retained/core.json.dates.json",
+    "sha256": "92c38576019d05ff80903b189a264b3b85d422957797be7b8c0459348e4e8580",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.datetimes.json",
+    "fresh": "regression/retained/core.json.datetimes.json",
+    "sha256": "4badf7237d6e25df7b5e30673adf04b259ab57750562deea3635ff5c78d847c4",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.decimals.json",
+    "fresh": "regression/retained/core.json.decimals.json",
+    "sha256": "3147c6d3ae1a8cf6041d4008be3dc177411139a5737b8122c9e1b41eb188d1ed",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.identifiers.json",
+    "fresh": "regression/retained/core.json.identifiers.json",
+    "sha256": "5107966e75b2599a8b3b02b82e320967eb7588263ab129011a079dd77d3582a9",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.include.json",
+    "fresh": "regression/retained/core.json.include.json",
+    "sha256": "f740b70dfbf8e5790f4ab8ac3df3e40ef62fa18a47dcee7f12f2e6d7c573eea7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.integers.json",
+    "fresh": "regression/retained/core.json.integers.json",
+    "sha256": "2419f3e8d99593cfd69ca4558b20bf15e73a3bf0e36704f4e41d54680888d5a7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.map-import.json",
+    "fresh": "regression/retained/core.json.map-import.json",
+    "sha256": "883052223d825e6e0b86b128e4e0ebb92432e57395cebf32a42c43f43530864e",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.mergemap.json",
+    "fresh": "regression/retained/core.json.mergemap.json",
+    "sha256": "591f425d16b5a208eaf37777ef6fa4fca6cb2483e2004e33946703e316203172",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.merging.json",
+    "fresh": "regression/retained/core.json.merging.json",
+    "sha256": "d38e3ba85aaaceb63bcd481b1c3670f70efca876afc4b5ff92032c91c099d5c3",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.occurrences.json",
+    "fresh": "regression/retained/core.json.occurrences.json",
+    "sha256": "39fa2536763bbc926b6190711daf43a3094de56b15274b7dd44cef5af5f478aa",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.prefixes.json",
+    "fresh": "regression/retained/core.json.prefixes.json",
+    "sha256": "d141483564a941ab7f24a92fd7409c2c578931561c2b2b9940e166dda5ac1a08",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.references.json",
+    "fresh": "regression/retained/core.json.references.json",
+    "sha256": "bfe5fd9aca4701d10853c33e984663b50a6acb67e767d5d5c2f84f3bd98b521d",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.reification.json",
+    "fresh": "regression/retained/core.json.reification.json",
+    "sha256": "c5037082b0fd507707290b434ab648e4645341899362fd11be6752d579997890",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.relationships.json",
+    "fresh": "regression/retained/core.json.relationships.json",
+    "sha256": "d96021c0f00c98129f54646535f0995ca5f9c39d2f0b8a8814d00e2eab37171c",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.scopes.json",
+    "fresh": "regression/retained/core.json.scopes.json",
+    "sha256": "1f05cb6c023553798cd94940384c3170d3aaac7d513d9769c07dc096a034158b",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.semantics.json",
+    "fresh": "regression/retained/core.json.semantics.json",
+    "sha256": "7ae0747a6fd87e7726513f3d8e3b49c6c123337a3364922c005c35216a62d561",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.templates.json",
+    "fresh": "regression/retained/core.json.templates.json",
+    "sha256": "db48a8b16592d7d0a307f01adea791598827b71507e27485f75c8ef2a6977052",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.timezones.json",
+    "fresh": "regression/retained/core.json.timezones.json",
+    "sha256": "cd17799042eb4c76a7bbfcc81d1c82e3f88b390ed106dbf5c5d7ee5e8b136142",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.typed-names.json",
+    "fresh": "regression/retained/core.json.typed-names.json",
+    "sha256": "9df3ea1fcc45d82c16d79eab0348630a9eb3bd3e36715af820576b3008276630",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/core.json.variants.json",
+    "fresh": "regression/retained/core.json.variants.json",
+    "sha256": "8a7d5c5cf202f4cb1f1b444675ed4042bf7d3a343132291d4a2985d55db27804",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20a.cxtm.json",
+    "fresh": "regression/retained/slice20a.cxtm.json",
+    "sha256": "17e36847bb5e388bdadf8fef307618ad572edd2804c1ec4ed434dfbc96d519c5",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20a.registration.json",
+    "fresh": "regression/retained/slice20a.registration.json",
+    "sha256": "d7aed73e0c1af267c4d768131decedc4275d9d0657dcc514429d88e148782750",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20a.validation.json",
+    "fresh": "regression/retained/slice20a.validation.json",
+    "sha256": "3cd52cea97f159fed2f914a17e8ba5ff46df1c62d826fce0497014a34f5504c6",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20b.cxtm.json",
+    "fresh": "regression/retained/slice20b.cxtm.json",
+    "sha256": "35325d09bd6f95f846a65f49e9c399dfc58fb07c2061977d7dd1ddda5f2686e5",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20b.negative.json",
+    "fresh": "regression/retained/slice20b.negative.json",
+    "sha256": "f6bf74664aea8945130b11d7cfad64a85d045e776234f618c2c1a69530d83b34",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20b.validation.json",
+    "fresh": "regression/retained/slice20b.validation.json",
+    "sha256": "a4dd336ffb2c3879fc19f29ca82f0be9f1a35fdd189c5daabad9bd51e2b5c619",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20c.cxtm.json",
+    "fresh": "regression/retained/slice20c.cxtm.json",
+    "sha256": "4d413a41f05ccae5a757b55719487aa15c829bbfd90aac283d4cbb7f4517d121",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20c.prolog.json",
+    "fresh": "regression/retained/slice20c.prolog.json",
+    "sha256": "b8d69869130df56e82dbc038e4928b4c4ea62e3ef6cd2056f8c194b169e575f2",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20c.validation.json",
+    "fresh": "regression/retained/slice20c.validation.json",
+    "sha256": "8853fa1ada1e4a280aaaeec2fcfdf2705ebb11b139e5a30794bc8e5954b85f2d",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20e.cxtm.json",
+    "fresh": "regression/retained/slice20e.cxtm.json",
+    "sha256": "acb18edfb47075b32f7386331edb587af6248837092656a58303459ae6ab4b06",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20e.registration.json",
+    "fresh": "regression/retained/slice20e.registration.json",
+    "sha256": "a6a3b1ed6d6f5bcda1c965fa2ad6fbe254ce4e17b1fb625792cdd8e8e43740a1",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20e.validation.json",
+    "fresh": "regression/retained/slice20e.validation.json",
+    "sha256": "fd071befb1ea4164b0f27ad7c67c7ee1cad757f85d938b5cf43a8f92fc733694",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20f.cxtm.json",
+    "fresh": "regression/retained/slice20f.cxtm.json",
+    "sha256": "c36c3fa2ae01a75226225e25e452053472a0df90becac085950236a783d6223b",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20f.literal.json",
+    "fresh": "regression/retained/slice20f.literal.json",
+    "sha256": "ac01f1e7c12bab95584c7bce4f7e4e69fe794adc5de244df705a8bd803b309a7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20f.validation.json",
+    "fresh": "regression/retained/slice20f.validation.json",
+    "sha256": "6fc257aca3c5d6f971fac4b2bead7867edf6b2aab53fcd4096b4b16a909d4f5f",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20g.cxtm.json",
+    "fresh": "regression/retained/slice20g.cxtm.json",
+    "sha256": "13831c6bd1a444fc98853c9d0da4af8d4c8c73294112b43bf4c30a9879b40902",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20g.triple.json",
+    "fresh": "regression/retained/slice20g.triple.json",
+    "sha256": "bbdd7917dba49c0facd273968a416f8effe99615f4248ceb3cdacaac2b9ae201",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/slice20g.validation.json",
+    "fresh": "regression/retained/slice20g.validation.json",
+    "sha256": "7ad73640869b6112b0f7c4c70400cc71c419312bf92b728c1dca1b0b946144aa",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/xtm-mergemap.cxtm.json",
+    "fresh": "regression/retained/xtm-mergemap.cxtm.json",
+    "sha256": "bae54fe6500a7b7aeb51d2933746a2b87b7622ea007b4207476af305d13f2761",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/xtm-mergemap.integration.json",
+    "fresh": "regression/retained/xtm-mergemap.integration.json",
+    "sha256": "99f1318647ce2794548a1e992f5509edb777cd0fa32cb5536067df1095caad9e",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/retained/xtm-mergemap.validation.json",
+    "fresh": "regression/retained/xtm-mergemap.validation.json",
+    "sha256": "25bdb4b3c64990c634cf7dd52a64c02aae0c64d4cdbfd69f94e4e24b20914da3",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/iid-control-mismatch.json",
+    "fresh": "regression/iid-control-mismatch.json",
+    "sha256": "dd2bc0d1af1fd1d5d8a44b51f1291b62047380f3b09521556d18941429b5dc1f",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/iid-control-tmdm.json",
+    "fresh": "regression/iid-control-tmdm.json",
+    "sha256": "1ea26312f8504318f8439fb35bda13d7f7a5f2db2d22500788b756cfb8c5b43c",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/iid-control-unsupported.json",
+    "fresh": "regression/iid-control-unsupported.json",
+    "sha256": "9a4301ccb2c7937738337f8ea96935c07a5309dd4705d39309e1bbf58c5410e1",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/iid-control-xml.json",
+    "fresh": "regression/iid-control-xml.json",
+    "sha256": "f2312ecfd9b568936e36278b212026545b44badb1d8249cff68e855ff2961117",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/map-reifier-condition-control-wrong-cause.json",
+    "fresh": "regression/map-reifier-condition-control-wrong-cause.json",
+    "sha256": "d27823bab7f04ec685ecdffa6620c3b1cf1e1543a98fc12314216f616a12ae98",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/map-reifier-control-mismatch.json",
+    "fresh": "regression/map-reifier-control-mismatch.json",
+    "sha256": "541a5636df44a5427584fcd7093ccb6c6dd7581004f3e923509d3729904b9226",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/map-reifier-control-tmdm.json",
+    "fresh": "regression/map-reifier-control-tmdm.json",
+    "sha256": "e92363de3874282d1529811dcd2864cd60b8bb17f42dd357ef0b564973f03ed0",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/map-reifier-control-unsupported.json",
+    "fresh": "regression/map-reifier-control-unsupported.json",
+    "sha256": "9885fb23dc89344478118edd6729463f0fa2e2364afe65e2526c77fc16bc6213",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/map-reifier-control-xml.json",
+    "fresh": "regression/map-reifier-control-xml.json",
+    "sha256": "ae75ea6f53fd66f7e55be400defcf97a55a4778cd78a4a32ae18fe131f7b671a",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/map-reifier-control-xtm.json",
+    "fresh": "regression/map-reifier-control-xtm.json",
+    "sha256": "d743e79ae9b31a36667c5c35254516ee1915ba3c6630fa5ea38097cae6854812",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/merge-variant-control-mismatch.json",
+    "fresh": "regression/merge-variant-control-mismatch.json",
+    "sha256": "69e1664854ec1b3e6ee2560debd6f59c7dda0ba3b37b7e3b4de8edd7c2de3c20",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/merge-variant-control-tmdm.json",
+    "fresh": "regression/merge-variant-control-tmdm.json",
+    "sha256": "17edbe805695a986f042187d225436ebd57536a481c4a83befea7fce67b97b5a",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/merge-variant-control-unsupported.json",
+    "fresh": "regression/merge-variant-control-unsupported.json",
+    "sha256": "ecbc3f4d5ff65c0c8d100237c799c0c2fc0f06370b9405a589003773708420cb",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/merge-variant-control-xml.json",
+    "fresh": "regression/merge-variant-control-xml.json",
+    "sha256": "a049ddc511a1c030d5d51a0288bbf12e452f94bf2ae71cfeb66a374a41c20249",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/merge-variant-control-xtm.json",
+    "fresh": "regression/merge-variant-control-xtm.json",
+    "sha256": "64f164b74a2e2cc59494124d937cd9f91522da994914575d265784424209cc91",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-control-mismatch.json",
+    "fresh": "regression/name-control-mismatch.json",
+    "sha256": "f67b4e65b149bc774f5a415c64041b83aeac899c8ffcdb5aec1e0612cb42cde7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-control-tmdm.json",
+    "fresh": "regression/name-control-tmdm.json",
+    "sha256": "a44778cc060e6fd25638d112bb2d586fa624ef6814da419bcbb73c0bbb7d9e50",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-control-unsupported.json",
+    "fresh": "regression/name-control-unsupported.json",
+    "sha256": "6b9bfbca902009eceaf89dbad874a441306963e4971e92ab069685a4701dadde",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-control-xml.json",
+    "fresh": "regression/name-control-xml.json",
+    "sha256": "f88b9e5158b2d5f13f0dea71cc5d08d1d36c035f6af4ee0a1cc5fd4d91987ef3",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup2-control-mismatch.json",
+    "fresh": "regression/name-followup2-control-mismatch.json",
+    "sha256": "d760cd5bc61a1dbb04fee810310c802b5f51788738658d38735cafb834f63cf2",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup2-control-tmdm.json",
+    "fresh": "regression/name-followup2-control-tmdm.json",
+    "sha256": "2fa4ea1a9f54a772ffa31063c6c231c3c6c7da5dead65a97a64188bb491ad3fe",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup2-control-unsupported.json",
+    "fresh": "regression/name-followup2-control-unsupported.json",
+    "sha256": "69a3da91d7b3a4dec0c025bb65d0f441ef043ae6654708b3a46c4babc3d40361",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup2-control-xml.json",
+    "fresh": "regression/name-followup2-control-xml.json",
+    "sha256": "f16fe3e98f99176c2c1fc478e67a8236287eb8ba468e8dba6dea93c803607e82",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup2-control-xtm.json",
+    "fresh": "regression/name-followup2-control-xtm.json",
+    "sha256": "c4c3ee0b6b8b10609c9b9e4ec4beb67b0e004e39be8b9791398c1c2038d9152a",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup3-control-mismatch.json",
+    "fresh": "regression/name-followup3-control-mismatch.json",
+    "sha256": "955cdd052e14cbbc45f15babcf46091118919b2241fa622e10580c538649937b",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup3-control-tmdm.json",
+    "fresh": "regression/name-followup3-control-tmdm.json",
+    "sha256": "96fc96464197783a2d4e4234770b1f65c82fa23fc6487555bffa12ccae5e0f2d",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup3-control-unsupported.json",
+    "fresh": "regression/name-followup3-control-unsupported.json",
+    "sha256": "3b042d174f48ec2c666848efaa8868282d0a53d6a814cf9d569979184105f923",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup3-control-xml.json",
+    "fresh": "regression/name-followup3-control-xml.json",
+    "sha256": "6f78f0ee5dbf1efc6d6b95ac78af5dd20909c27702827ea8f229c8e3f4f14e1e",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup3-control-xtm.json",
+    "fresh": "regression/name-followup3-control-xtm.json",
+    "sha256": "eaec30c67b386c6c2304d46a11960d0971339307b0b85ae28f8b068be42ec542",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup4-control-mismatch.json",
+    "fresh": "regression/name-followup4-control-mismatch.json",
+    "sha256": "7c6d271f60067437ff1abdd296188d14609d97865fc4ef0757f6c3372cf23765",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup4-control-tmdm.json",
+    "fresh": "regression/name-followup4-control-tmdm.json",
+    "sha256": "edce394fcdb484a76f1043f0cf3b211a09bd4a65f3a9fc46d0db376c8e0220fe",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup4-control-unsupported.json",
+    "fresh": "regression/name-followup4-control-unsupported.json",
+    "sha256": "92a622fa532cd58f8e3db03094577dc54845c76185712240edc5147009b64851",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup4-control-xml.json",
+    "fresh": "regression/name-followup4-control-xml.json",
+    "sha256": "161a4e2a1b3716a0183ed7591455ad3b49a513592d396c086f808447d937a20b",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-followup4-control-xtm.json",
+    "fresh": "regression/name-followup4-control-xtm.json",
+    "sha256": "4a71d4b8ac23310e462caf2127e5cd767796bc918dff10e4d7a4cec3271a8caf",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-condition-control-wrong-cause.json",
+    "fresh": "regression/name-reifier-condition-control-wrong-cause.json",
+    "sha256": "b5f68f19404332081dd6bf9c0576e96071c7a123f577ef642babcccf2efae709",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-control-mismatch.json",
+    "fresh": "regression/name-reifier-control-mismatch.json",
+    "sha256": "55f72a64e7d52335110be00f7d68c7b3831a75d5f2fcbd129adc8081d3a3dbdb",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-control-tmdm.json",
+    "fresh": "regression/name-reifier-control-tmdm.json",
+    "sha256": "73e1217039faff7bcffce4fc93cb9fc7bdca3e1c5b90a4286e57b6dbf58e535f",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-control-unsupported.json",
+    "fresh": "regression/name-reifier-control-unsupported.json",
+    "sha256": "c2daa0f6b79ff22db7d77ca7dc7e956358a94741b7c21fc817f5c126299e701f",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-control-xml.json",
+    "fresh": "regression/name-reifier-control-xml.json",
+    "sha256": "d03a896b20faac46736889fe88cea21f3c2131b90c3c1a485ad7df4b8e0fb0ac",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-control-xtm.json",
+    "fresh": "regression/name-reifier-control-xtm.json",
+    "sha256": "11da945aa2fe1a1d2ac051dafc19a54199a23996775c369016a61747f3d60ca9",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-duplicate-control-mismatch.json",
+    "fresh": "regression/name-reifier-duplicate-control-mismatch.json",
+    "sha256": "69c672c0987320f3886c68b16b1038ad100c17ab575b36958c9ef59ba92e805e",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-duplicate-control-tmdm.json",
+    "fresh": "regression/name-reifier-duplicate-control-tmdm.json",
+    "sha256": "227c843a3769bbec45d93a592ea42b55e225d88365d6020510fb2b6d035a0b95",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-duplicate-control-unsupported.json",
+    "fresh": "regression/name-reifier-duplicate-control-unsupported.json",
+    "sha256": "1c2901ac654297a5e90a2129bfc9fb69d8718c35015453e63f6aaf5ddab1c1b7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-duplicate-control-xml.json",
+    "fresh": "regression/name-reifier-duplicate-control-xml.json",
+    "sha256": "182d9a4c5d8b7e82e6d936729c9642891c1070468cd7dc8b41c036db9204a768",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/name-reifier-duplicate-control-xtm.json",
+    "fresh": "regression/name-reifier-duplicate-control-xtm.json",
+    "sha256": "689c1473e376f32c272175173e88a31e627add57c074fa5d091f32561673cf07",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/negative-control-accepted.json",
+    "fresh": "regression/negative-control-accepted.json",
+    "sha256": "d141bad69fc70c537d52877525efc8e11716680e64fa3cde849b7aa855e8cf00",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/negative-control-unsupported.json",
+    "fresh": "regression/negative-control-unsupported.json",
+    "sha256": "7b60433eb31d1b7776cf76db3bd21bd66c23b3e3d6c85b3609d9a8c99a670ec4",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/negative-control-wrong-cause.json",
+    "fresh": "regression/negative-control-wrong-cause.json",
+    "sha256": "e3c58fecbd1dfe8087e7f054ae7fbf6706754cfac80bcb6a17cafa02469ca81f",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/negative-control-xml.json",
+    "fresh": "regression/negative-control-xml.json",
+    "sha256": "950da5892aad3ece4010fc7d50b9294f58a88fef46669daae291425fca156299",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/positive-control-mismatch.json",
+    "fresh": "regression/positive-control-mismatch.json",
+    "sha256": "14daa8aecbaa22c15351091a1f41ee8bf7c8aea9fae3e9782153e2538b59cbd2",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/positive-control-tmdm.json",
+    "fresh": "regression/positive-control-tmdm.json",
+    "sha256": "406d58753334a9d12707af20d3cad21589303e3c031d28460f561b90bda2606d",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/positive-control-unsupported.json",
+    "fresh": "regression/positive-control-unsupported.json",
+    "sha256": "454675e86b3c4cf5bcee2cf587945c6774cc575b4a26aa378bd6ba877dd83e47",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/positive-control-xml.json",
+    "fresh": "regression/positive-control-xml.json",
+    "sha256": "64bcd48ea29934a26d39e048a39e16e1120c5957a6155cbc3c88e525c57a4520",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/positive-control-xtm.json",
+    "fresh": "regression/positive-control-xtm.json",
+    "sha256": "dda6ea516de9d28c5628017271163682580edfbcd539d84681a4dad103e4c5f7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-control-mismatch.json",
+    "fresh": "regression/resource-ref-control-mismatch.json",
+    "sha256": "56454e832abd7433a01844bfdc973f35219ce88c71fa24797ddd16af48bbc04a",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-control-tmdm.json",
+    "fresh": "regression/resource-ref-control-tmdm.json",
+    "sha256": "126e22b5ae9db0178aa1483ce7036a2aa7c36243c226920fa084316ac7754353",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-control-unsupported.json",
+    "fresh": "regression/resource-ref-control-unsupported.json",
+    "sha256": "647018745dda97d2bdb57c0df93982f6f168cef9d7c976dddbb5b8c40a867d7f",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-control-xml.json",
+    "fresh": "regression/resource-ref-control-xml.json",
+    "sha256": "b7bb182b2059a181cb2baf0008c39c1a65f7449535cd660bc0bbc5ca32feaefd",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-control-xtm.json",
+    "fresh": "regression/resource-ref-control-xtm.json",
+    "sha256": "c466ea34893b48b1c43985575c0be7ad7933bf2e976581084e3e48c1f426afbf",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-relative-control-mismatch.json",
+    "fresh": "regression/resource-ref-relative-control-mismatch.json",
+    "sha256": "54cc2b2ea416ebbfa00dafd8585f5cf161a2e69818c4efe9bfd4824c9fc272bf",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-relative-control-tmdm.json",
+    "fresh": "regression/resource-ref-relative-control-tmdm.json",
+    "sha256": "ba0ca23cda153904c69e0fd8f95140878fa94b960ec7636389ca69a28dc2a12c",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-relative-control-unsupported.json",
+    "fresh": "regression/resource-ref-relative-control-unsupported.json",
+    "sha256": "fe4ee9e0276d706149092600f2ca80d8217af6fa05d813da4a27cf5119e05e10",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-relative-control-xml.json",
+    "fresh": "regression/resource-ref-relative-control-xml.json",
+    "sha256": "206f5fc90666f186013e7d66939729b453b3cc493a87e1d7f36b65df64e0e7a7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/resource-ref-relative-control-xtm.json",
+    "fresh": "regression/resource-ref-relative-control-xtm.json",
+    "sha256": "ade5b5985ef5958a92a2066068f2f4010aec76d5f2ebf9e58faa75b95796a7bf",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/scope-control-mismatch.json",
+    "fresh": "regression/scope-control-mismatch.json",
+    "sha256": "e275b4a1c983cd6ea1024300324d1277f1eaa43f3c45b1e9cdc7a8032d3fa85b",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/scope-control-tmdm.json",
+    "fresh": "regression/scope-control-tmdm.json",
+    "sha256": "6c28ab0e9df77f8566690c4cf14491161a230fd050dda51e00b7472b0d271212",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/scope-control-unsupported.json",
+    "fresh": "regression/scope-control-unsupported.json",
+    "sha256": "72992d31299e4a6786c2e2d6cab36d2156e5257b2bdcf6fc2a81d759ad67f817",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/scope-control-xml.json",
+    "fresh": "regression/scope-control-xml.json",
+    "sha256": "81451d786d390f053b1116deb6d0a79bd7a7908a63d6485710864b24d9f32dcb",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/uri-data-control-mismatch.json",
+    "fresh": "regression/uri-data-control-mismatch.json",
+    "sha256": "5ca9bd5825f5e9d01f4bed582c89e38f225f076d209a5cc75e2ca6e9183c45f4",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/uri-data-control-tmdm.json",
+    "fresh": "regression/uri-data-control-tmdm.json",
+    "sha256": "7c1736b7267e8f98edf42cdb42c33da49626dd2c25a78c6dd82b3b6ed835c03b",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/uri-data-control-unsupported.json",
+    "fresh": "regression/uri-data-control-unsupported.json",
+    "sha256": "70a96c317cf8c61d8274919131ff8e5b5348fa593ef49d478dd65b5b8d2f1b7d",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/uri-data-control-xml.json",
+    "fresh": "regression/uri-data-control-xml.json",
+    "sha256": "813c1cf76700bfbdeaeff7a607055b52a7fe552a0e9acfef620ca32e1701cd19",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/uri-data-control-xtm.json",
+    "fresh": "regression/uri-data-control-xtm.json",
+    "sha256": "f99e0160800370f16dca38a70ab53386977c599cb1c36b379ad1108f897421e4",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-control-mismatch.json",
+    "fresh": "regression/variant-control-mismatch.json",
+    "sha256": "0ff5d75ec38ccb61a3038cc495cddbd39b15f77388544c9b93599c6aef472348",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-control-tmdm.json",
+    "fresh": "regression/variant-control-tmdm.json",
+    "sha256": "0806b75e464728da5798eb5d372eebec7a912682061517c1d7b64272b2ec09ed",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-control-unsupported.json",
+    "fresh": "regression/variant-control-unsupported.json",
+    "sha256": "28d953bc7eb089b6e310ddc7058c4967d6e5298446818fbc581aef50665bc746",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-control-xml.json",
+    "fresh": "regression/variant-control-xml.json",
+    "sha256": "f854b59b645970c6969baa66dae813c406ec8d7d4affc4501869c14035b98598",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-control-mismatch.json",
+    "fresh": "regression/variant-iid-control-mismatch.json",
+    "sha256": "d35b71ef38ac90c20b51a0c90ff72ba0dd25639ae2a044e7573ce396893006d5",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-control-tmdm.json",
+    "fresh": "regression/variant-iid-control-tmdm.json",
+    "sha256": "25641d70c50111ddfab9fa244f12e2143fcc65715e80a1622b102e8100a39d76",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-control-unsupported.json",
+    "fresh": "regression/variant-iid-control-unsupported.json",
+    "sha256": "8deb470a772a0cb6c0e5267ce60453bec64671ce0579efa860daae07618bf777",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-control-xml.json",
+    "fresh": "regression/variant-iid-control-xml.json",
+    "sha256": "408d5f0d9f69aefc06662e2bff4b89d0eb36cf6efe031e4228bf203289480ee8",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-control-xtm.json",
+    "fresh": "regression/variant-iid-control-xtm.json",
+    "sha256": "d8207c22a87eca9524ab91735e5964eedb7be5321a5a8755d3118dac722655a4",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-duplicate-control-mismatch.json",
+    "fresh": "regression/variant-iid-duplicate-control-mismatch.json",
+    "sha256": "6972be18b854243b899393a575bc7a30aedd7ae537782c7c0bde0c79549cbd38",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-duplicate-control-tmdm.json",
+    "fresh": "regression/variant-iid-duplicate-control-tmdm.json",
+    "sha256": "cda51798644ceb7bf9c7e88f3aff9d1bb9a63ffc6e5be91d4b039ecb6a4b1fc6",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-duplicate-control-unsupported.json",
+    "fresh": "regression/variant-iid-duplicate-control-unsupported.json",
+    "sha256": "37e5efb78a6aeb83f35a44bebf329f0415de9ab288f5f9708b2535bc8baf4d61",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-duplicate-control-xml.json",
+    "fresh": "regression/variant-iid-duplicate-control-xml.json",
+    "sha256": "e846bd18183964d7df675f60c7c53ef8cedd2227a8a52bcbc915c003f5dc4e50",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-iid-duplicate-control-xtm.json",
+    "fresh": "regression/variant-iid-duplicate-control-xtm.json",
+    "sha256": "c267a520833b01fbf14197aa012638486514a30bfa05bf81640aeb0260c99202",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-negative-control-accepted.json",
+    "fresh": "regression/variant-negative-control-accepted.json",
+    "sha256": "9882217b014d8a17cd27697b3e3ae0fcdd9004ed370fe4c752024e738a01e21e",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-negative-control-tmdm.json",
+    "fresh": "regression/variant-negative-control-tmdm.json",
+    "sha256": "3ac80eb6686ee85ab3c9b5a8ad269688f2c945e740d0608aeea65efd39a63eb3",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-negative-control-unsupported.json",
+    "fresh": "regression/variant-negative-control-unsupported.json",
+    "sha256": "92be27de56df5b4880a3f5c7155bd660a429390898437bbf91d3c2efcd87d33d",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-negative-control-wrong-cause.json",
+    "fresh": "regression/variant-negative-control-wrong-cause.json",
+    "sha256": "93f231ee96ac7cd1a08c32ebbbf5f05f72e0f69e4d07555e0a056d6f67c3ca8c",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-negative-control-xml.json",
+    "fresh": "regression/variant-negative-control-xml.json",
+    "sha256": "6cce6b6735fbd32d84b4295890809cbdc74b757663eece4e26b5f6523f6633d5",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-condition-control-wrong-cause.json",
+    "fresh": "regression/variant-reifier-condition-control-wrong-cause.json",
+    "sha256": "23df707fcb16a94b2537c4bbc72644142b6ff54ce8c16d55d4e5c517866d23a7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-control-mismatch.json",
+    "fresh": "regression/variant-reifier-control-mismatch.json",
+    "sha256": "9f25303c0294a76a8096c766ec031a259053fb95440c1339d4a510e85e2de135",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-control-tmdm.json",
+    "fresh": "regression/variant-reifier-control-tmdm.json",
+    "sha256": "86ec9769d2c95c60e632ac640ab0b478c258d6a69e1ecd4ba8ef8ecdc7f88315",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-control-unsupported.json",
+    "fresh": "regression/variant-reifier-control-unsupported.json",
+    "sha256": "047d9f648f30628c84ae882c672c7d7cec5eb320f300cbb05bd6648f127aa63c",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-control-xml.json",
+    "fresh": "regression/variant-reifier-control-xml.json",
+    "sha256": "8c24f6bbcb8d85d813fea0aaf68f31734219f80e6597811b55857b2b888ad239",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-control-xtm.json",
+    "fresh": "regression/variant-reifier-control-xtm.json",
+    "sha256": "e851d92f8e1421cb92a0429a190aabc418497a5f8037b9232de7b83269936539",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-duplicate-control-mismatch.json",
+    "fresh": "regression/variant-reifier-duplicate-control-mismatch.json",
+    "sha256": "704769124fa600fac6a5ae1d30553d7229bdd27801564119957acb739e2b727e",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-duplicate-control-tmdm.json",
+    "fresh": "regression/variant-reifier-duplicate-control-tmdm.json",
+    "sha256": "7dcf3183fbe4270d4973800bdfd3de62cc5fef8ac1877774f031ebcd41ea7443",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-duplicate-control-unsupported.json",
+    "fresh": "regression/variant-reifier-duplicate-control-unsupported.json",
+    "sha256": "f3815408aed9077ba6c6cba949bf76e455421df312f89862a92795f1889b1564",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-duplicate-control-xml.json",
+    "fresh": "regression/variant-reifier-duplicate-control-xml.json",
+    "sha256": "c481b28ded337c36d4858ab464d467d7e99f119d76342bb53eac0a608712daca",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-duplicate-control-xtm.json",
+    "fresh": "regression/variant-reifier-duplicate-control-xtm.json",
+    "sha256": "6f2dfa03eef5dbbb21cec81fb232c607d8fc732ef87d560e7dfaec284ff442ba",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-followup-control-mismatch.json",
+    "fresh": "regression/variant-reifier-followup-control-mismatch.json",
+    "sha256": "9bad2a03851e6c4bef5f1583db10969cb787d879a325ff34b95ce0fae5909d9f",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-followup-control-tmdm.json",
+    "fresh": "regression/variant-reifier-followup-control-tmdm.json",
+    "sha256": "f8c9c3ef19de35c414ad3693e4d170cfa8479d52f7ec87f3d69ae3f9fbdfdfa9",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-followup-control-unsupported.json",
+    "fresh": "regression/variant-reifier-followup-control-unsupported.json",
+    "sha256": "a9a363fdb0c31ea1fe232adefdf04dbaf6ba84763e2b0d18a880d7c807d7ee58",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-followup-control-xml.json",
+    "fresh": "regression/variant-reifier-followup-control-xml.json",
+    "sha256": "6154fafe6829efe097278dd4b2064d29636942207ba00be14319a1a4f677abf7",
+    "byteIdentical": true
+  },
+  {
+    "previous": "reports/slice-22b/after/variant-reifier-followup-control-xtm.json",
+    "fresh": "regression/variant-reifier-followup-control-xtm.json",
+    "sha256": "55b7db83c2678d51a1f0bbdb63f8b823a6b57eb59239c45b32640363810704e0",
+    "byteIdentical": true
+  }
+]

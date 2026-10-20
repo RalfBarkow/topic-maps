@@ -1,0 +1,3849 @@
+{
+  "kind": "slice-22c-independent-normative-decisions-no-registration",
+  "baseCommit": "bc9dcfb02f945422970d65266dc66b991806777d",
+  "matrixSHA256": "86fa8f644456b513975440cde62b1b7db115c2d238064d94ced26051dd22cf90",
+  "closureDeltaSHA256": "5212d8f1e313c75edf55bbc505578b72920b2f71603633628189efa37da9c756",
+  "cases": [
+    {
+      "id": "ctm/in/include-template.ctm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "fail",
+      "registeredAfter": "fail",
+      "source": {
+        "path": "vendor/cxtm/ctm/in/include-template.ctm",
+        "bytes": 48,
+        "sha256": "345ee0e00a096195979bdc64cc8aad272e5c60ebeee185c69c4223b5c911f674",
+        "hex": "25696e636c756465203c696e636c7564652d74656d706c6174652e7375623e0a0a74656d706c61746528746f70696329",
+        "text": "%include <include-template.sub>\n\ntemplate(topic)"
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm",
+      "baseline": {
+        "path": "vendor/cxtm/ctm/baseline/include-template.ctm.cxtm",
+        "bytes": 401,
+        "sha256": "ebf9e7acc9dd9487ebf19c9f2dc1c8af3933e0371d9a506eee307923c5d65d0c",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6f6363757272656e6365206e756d6265723d2231223e0a3c76616c75653e546573743c2f76616c75653e0a3c64617461747970653e687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d6123737472696e673c2f64617461747970653e0a3c7479706520746f7069637265663d2232223e3c2f747970653e0a3c2f6f6363757272656e63653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e236f6363747970653c2f6c6f6361746f723e0a3c6c6f6361746f723e696e636c7564652d74656d706c6174652e737562236f6363747970653c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Test</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n<locator>include-template.sub#occtype</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": null,
+      "nativeModel": {
+        "topicCount": 2,
+        "associationCount": 0,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [],
+            "occurrences": [
+              {
+                "value": "Test",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "parent": 1,
+                "type": 2,
+                "scope": []
+              }
+            ]
+          },
+          {
+            "ordinal": 2,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm#occtype"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [],
+            "occurrences": []
+          }
+        ]
+      },
+      "observation": {
+        "id": "ctm/in/include-template.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm",
+        "sourceKey": "ctm/in/include-template.ctm",
+        "sourceBytes": 48,
+        "sourceHex": "25696E636C756465203C696E636C7564652D74656D706C6174652E7375623E0A0A74656D706C61746528746F70696329",
+        "sourceText": "%include <include-template.sub>\n\ntemplate(topic)",
+        "condition": null,
+        "model": {
+          "topicCount": 2,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm#topic"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": [
+                {
+                  "value": "Test",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": []
+                }
+              ]
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm#occtype"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": []
+            }
+          ]
+        },
+        "finalCounter": 0,
+        "requests": [
+          {
+            "resourceIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.sub",
+            "purpose": "INCLUDE",
+            "fromDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm",
+            "notation": null,
+            "sourceKey": "ctm/in/include-template.sub"
+          }
+        ],
+        "environments": [
+          {
+            "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.sub",
+            "wildcardIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm",
+            "initialCounter": 0,
+            "finalCounter": 0,
+            "templateCount": 1,
+            "model": {
+              "topicCount": 0,
+              "associationCount": 0,
+              "topics": []
+            }
+          },
+          {
+            "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm",
+            "wildcardIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm",
+            "initialCounter": 0,
+            "finalCounter": 0,
+            "templateCount": 1,
+            "model": {
+              "topicCount": 2,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm#topic"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": [
+                    {
+                      "value": "Test",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": []
+                    }
+                  ]
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm#occtype"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                }
+              ]
+            }
+          }
+        ],
+        "aliasTransfers": [
+          {
+            "childDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.sub",
+            "parentDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-template.ctm",
+            "before": {
+              "topicCount": 0,
+              "associationCount": 0,
+              "topics": []
+            },
+            "after": {
+              "topicCount": 0,
+              "associationCount": 0,
+              "topics": []
+            }
+          }
+        ],
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Test</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "actualBytes": 353,
+        "expectedBytes": 401,
+        "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Test</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n<locator>include-template.sub#occtype</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "firstDifferentByte": 58,
+        "byteExact": false,
+        "canonicalizationPreservesMap": true,
+        "referencesCurrent": true
+      },
+      "priorClassification": "unresolved-requirement",
+      "priorDecision": "C",
+      "priorJustification": "B nach bisheriger Mirror-Auslegung plausibel; formaler Abschluss C, weil veröffentlichte spätere CTM-Klauseln hier nicht vollständig primär verifiziert sind.",
+      "decision": {
+        "classification": "C",
+        "scope": "Definition/import/invocation environment and extra definition-source II",
+        "claim": "The current model contains only caller-document identifiers. Whether the published later clauses require the baseline extra II is not established.",
+        "conditionalConclusion": "B is supported by the inspected HTML interpretation; no eager Topic exists in the observed child.",
+        "references": [
+          "CTM-HTML:3.2,3.14–3.16.2",
+          "CTM-PREVIEW",
+          "TMDM-HTML:5.1,5.2,6.2"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Verify declaration vs invocation environment before proposing any identifier change.",
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": {
+        "bytes": 353,
+        "sha256": "15326a49da9e44f4a3f886414aa2134cf3ba0f7682bb52259e3b64138ac5e864",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e236f6363747970653c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6f6363757272656e6365206e756d6265723d2231223e0a3c76616c75653e546573743c2f76616c75653e0a3c64617461747970653e687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d6123737472696e673c2f64617461747970653e0a3c7479706520746f7069637265663d2231223e3c2f747970653e0a3c2f6f6363757272656e63653e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Test</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+      },
+      "comparison": {
+        "executed": true,
+        "byteExact": false,
+        "firstDifferentByte": 58
+      },
+      "nativeModelUnavailableReason": null,
+      "completeModelComparison": {
+        "kind": "report-only-XML-view-not-a-replacement-TMDM",
+        "topicAlignment": [
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#occtype"
+            ],
+            "actualTopicNumber": "1",
+            "expectedTopicNumber": "2"
+          },
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#topic"
+            ],
+            "actualTopicNumber": "2",
+            "expectedTopicNumber": "1"
+          }
+        ],
+        "nativePropertiesMatchActualCXTM": true,
+        "actual": {
+          "element": "topicMap",
+          "attributes": {},
+          "text": "",
+          "children": [
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#occtype",
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#occtype"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#topic",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "occurrence",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "Test",
+                      "children": []
+                    },
+                    {
+                      "element": "datatype",
+                      "attributes": {},
+                      "text": "http://www.w3.org/2001/XMLSchema#string",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "itemIdentifiers:#occtype"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#topic"
+            }
+          ]
+        },
+        "expected": {
+          "element": "topicMap",
+          "attributes": {},
+          "text": "",
+          "children": [
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#occtype",
+                      "children": []
+                    },
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "include-template.sub#occtype",
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#occtype"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#topic",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "occurrence",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "Test",
+                      "children": []
+                    },
+                    {
+                      "element": "datatype",
+                      "attributes": {},
+                      "text": "http://www.w3.org/2001/XMLSchema#string",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "itemIdentifiers:#occtype"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#topic"
+            }
+          ]
+        },
+        "differences": [
+          {
+            "path": "/children/0/children/0/children",
+            "actual": [
+              {
+                "element": "locator",
+                "attributes": {},
+                "text": "#occtype",
+                "children": []
+              }
+            ],
+            "expected": [
+              {
+                "element": "locator",
+                "attributes": {},
+                "text": "#occtype",
+                "children": []
+              },
+              {
+                "element": "locator",
+                "attributes": {},
+                "text": "include-template.sub#occtype",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "completeCXTMUnifiedDiff": "--- unchanged-original-baseline\n+++ fresh-actual\n@@ -1,18 +1,17 @@\n <topicMap>\n <topic number=\"1\">\n+<itemIdentifiers>\n+<locator>#occtype</locator>\n+</itemIdentifiers>\n+</topic>\n+<topic number=\"2\">\n <itemIdentifiers>\n <locator>#topic</locator>\n </itemIdentifiers>\n <occurrence number=\"1\">\n <value>Test</value>\n <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n-<type topicref=\"2\"></type>\n+<type topicref=\"1\"></type>\n </occurrence>\n </topic>\n-<topic number=\"2\">\n-<itemIdentifiers>\n-<locator>#occtype</locator>\n-<locator>include-template.sub#occtype</locator>\n-</itemIdentifiers>\n-</topic>\n </topicMap>\n",
+      "auxiliarySources": [
+        {
+          "path": "vendor/cxtm/ctm/in/include-template.sub",
+          "bytes": 52,
+          "sha256": "d40daa6f573eac03e72c45ee8d018a23bffa97f0dcc28d4bcd481a7e5d11205f",
+          "hex": "0a6465662074656d706c6174652824746f706963290a202024746f706963206f6363747970653a202254657374222e0a656e640a",
+          "text": "\ndef template($topic)\n  $topic occtype: \"Test\".\nend\n"
+        }
+      ]
+    },
+    {
+      "id": "ctm/in/include-wildcard2.ctm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "fail",
+      "registeredAfter": "fail",
+      "source": {
+        "path": "vendor/cxtm/ctm/in/include-wildcard2.ctm",
+        "bytes": 50,
+        "sha256": "1e55e65bad772df558b27e9566b06e3529392983a18f9d9fc1d73518d85597c9",
+        "hex": "25696e636c756465203c696e636c7564652d77696c6463617264322e7375623e0a0a3f666f6f202d20224d6173746572222e",
+        "text": "%include <include-wildcard2.sub>\n\n?foo - \"Master\"."
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm",
+      "baseline": {
+        "path": "vendor/cxtm/ctm/baseline/include-wildcard2.ctm.cxtm",
+        "bytes": 669,
+        "sha256": "cd55c6eb2fe686d73209d074ee42b576d0fdeab5efcc62f3beff24ced69ba327",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23245f5f312e666f6f3c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e537562205375623c2f76616c75653e0a3c7479706520746f7069637265663d2234223e3c2f747970653e0a3c2f6e616d653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23245f5f322e666f6f3c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e5375623c2f76616c75653e0a3c7479706520746f7069637265663d2234223e3c2f747970653e0a3c2f6e616d653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2233223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23245f5f332e666f6f3c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e4d61737465723c2f76616c75653e0a3c7479706520746f7069637265663d2234223e3c2f747970653e0a3c2f6e616d653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2234223e0a3c7375626a6563744964656e746966696572733e0a3c6c6f6361746f723e687474703a2f2f7073692e746f7069636d6170732e6f72672f69736f31333235302f6d6f64656c2f746f7069632d6e616d653c2f6c6f6361746f723e0a3c2f7375626a6563744964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#$__1.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Sub Sub</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#$__2.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Sub</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#$__3.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Master</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": null,
+      "nativeModel": {
+        "topicCount": 4,
+        "associationCount": 0,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__1.foo",
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [
+              {
+                "value": "Sub Sub",
+                "parent": 1,
+                "type": 2,
+                "scope": [],
+                "variantCount": 0
+              }
+            ],
+            "occurrences": []
+          },
+          {
+            "ordinal": 2,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/topic-name"
+            ],
+            "subjectLocators": [],
+            "names": [],
+            "occurrences": []
+          },
+          {
+            "ordinal": 3,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__2.foo"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [
+              {
+                "value": "Sub",
+                "parent": 3,
+                "type": 2,
+                "scope": [],
+                "variantCount": 0
+              }
+            ],
+            "occurrences": []
+          },
+          {
+            "ordinal": 4,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__3.foo"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [
+              {
+                "value": "Master",
+                "parent": 4,
+                "type": 2,
+                "scope": [],
+                "variantCount": 0
+              }
+            ],
+            "occurrences": []
+          }
+        ]
+      },
+      "observation": {
+        "id": "ctm/in/include-wildcard2.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm",
+        "sourceKey": "ctm/in/include-wildcard2.ctm",
+        "sourceBytes": 50,
+        "sourceHex": "25696E636C756465203C696E636C7564652D77696C6463617264322E7375623E0A0A3F666F6F202D20224D6173746572222E",
+        "sourceText": "%include <include-wildcard2.sub>\n\n?foo - \"Master\".",
+        "condition": null,
+        "model": {
+          "topicCount": 4,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__1.foo",
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [
+                {
+                  "value": "Sub Sub",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "variantCount": 0
+                }
+              ],
+              "occurrences": []
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [],
+              "subjectIdentifiers": [
+                "http://psi.topicmaps.org/iso13250/model/topic-name"
+              ],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": []
+            },
+            {
+              "ordinal": 3,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__2.foo"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [
+                {
+                  "value": "Sub",
+                  "parent": 3,
+                  "type": 2,
+                  "scope": [],
+                  "variantCount": 0
+                }
+              ],
+              "occurrences": []
+            },
+            {
+              "ordinal": 4,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__3.foo"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [
+                {
+                  "value": "Master",
+                  "parent": 4,
+                  "type": 2,
+                  "scope": [],
+                  "variantCount": 0
+                }
+              ],
+              "occurrences": []
+            }
+          ]
+        },
+        "finalCounter": 3,
+        "requests": [
+          {
+            "resourceIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub",
+            "purpose": "INCLUDE",
+            "fromDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm",
+            "notation": null,
+            "sourceKey": "ctm/in/include-wildcard2.sub"
+          },
+          {
+            "resourceIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub2",
+            "purpose": "INCLUDE",
+            "fromDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub",
+            "notation": null,
+            "sourceKey": "ctm/in/include-wildcard2.sub2"
+          }
+        ],
+        "environments": [
+          {
+            "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub2",
+            "wildcardIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub",
+            "initialCounter": 0,
+            "finalCounter": 1,
+            "templateCount": 0,
+            "model": {
+              "topicCount": 2,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub Sub",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                }
+              ]
+            }
+          },
+          {
+            "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub",
+            "wildcardIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm",
+            "initialCounter": 0,
+            "finalCounter": 2,
+            "templateCount": 0,
+            "model": {
+              "topicCount": 3,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub Sub",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 3,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__2.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub",
+                      "parent": 3,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                }
+              ]
+            }
+          },
+          {
+            "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm",
+            "wildcardIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm",
+            "initialCounter": 0,
+            "finalCounter": 3,
+            "templateCount": 0,
+            "model": {
+              "topicCount": 4,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__1.foo",
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub Sub",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 3,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__2.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub",
+                      "parent": 3,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 4,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__3.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Master",
+                      "parent": 4,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                }
+              ]
+            }
+          }
+        ],
+        "aliasTransfers": [
+          {
+            "childDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub2",
+            "parentDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub",
+            "before": {
+              "topicCount": 2,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub Sub",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                }
+              ]
+            },
+            "after": {
+              "topicCount": 2,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub Sub",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                }
+              ]
+            }
+          },
+          {
+            "childDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub",
+            "parentDocumentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm",
+            "before": {
+              "topicCount": 3,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub Sub",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 3,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__2.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub",
+                      "parent": 3,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                }
+              ]
+            },
+            "after": {
+              "topicCount": 3,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__1.foo",
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.sub#$__1.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub Sub",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 3,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/include-wildcard2.ctm#$__2.foo"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "Sub",
+                      "parent": 3,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                }
+              ]
+            }
+          }
+        ],
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#$__2.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Sub</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#$__3.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Master</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#$__1.foo</locator>\n<locator>include-wildcard2.sub#$__1.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Sub Sub</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "actualBytes": 719,
+        "expectedBytes": 669,
+        "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#$__1.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Sub Sub</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#$__2.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Sub</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#$__3.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Master</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "firstDifferentByte": 61,
+        "byteExact": false,
+        "canonicalizationPreservesMap": true,
+        "referencesCurrent": true
+      },
+      "priorClassification": "unresolved-requirement",
+      "priorDecision": "C",
+      "priorJustification": "B nach bisheriger Mirror-Auslegung plausibel; formaler Abschluss C, weil veröffentlichte spätere CTM-Klauseln hier nicht vollständig primär verifiziert sind.",
+      "decision": {
+        "classification": "C",
+        "scope": "Retention of nested include wildcard item identifier",
+        "claim": "The child-origin II remains in the observed map, whereas the baseline omits it. Its removal is not justified by the inspected text.",
+        "conditionalConclusion": "B under inspected HTML; publication-equivalent include text still needed.",
+        "references": [
+          "CTM-HTML:3.2,3.3.8,3.16.2",
+          "CTM-PREVIEW",
+          "TMDM-HTML:5.1,6.1–6.2"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Verify the exact published include identifier operation; preserve both observed identifiers meanwhile.",
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": {
+        "bytes": 719,
+        "sha256": "be6e7114120452715b740956b25d8c1ec263814d2210e6ea323976055ecc082e",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23245f5f322e666f6f3c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e5375623c2f76616c75653e0a3c7479706520746f7069637265663d2234223e3c2f747970653e0a3c2f6e616d653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23245f5f332e666f6f3c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e4d61737465723c2f76616c75653e0a3c7479706520746f7069637265663d2234223e3c2f747970653e0a3c2f6e616d653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2233223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23245f5f312e666f6f3c2f6c6f6361746f723e0a3c6c6f6361746f723e696e636c7564652d77696c6463617264322e73756223245f5f312e666f6f3c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e537562205375623c2f76616c75653e0a3c7479706520746f7069637265663d2234223e3c2f747970653e0a3c2f6e616d653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2234223e0a3c7375626a6563744964656e746966696572733e0a3c6c6f6361746f723e687474703a2f2f7073692e746f7069636d6170732e6f72672f69736f31333235302f6d6f64656c2f746f7069632d6e616d653c2f6c6f6361746f723e0a3c2f7375626a6563744964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#$__2.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Sub</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#$__3.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Master</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#$__1.foo</locator>\n<locator>include-wildcard2.sub#$__1.foo</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Sub Sub</value>\n<type topicref=\"4\"></type>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "comparison": {
+        "executed": true,
+        "byteExact": false,
+        "firstDifferentByte": 61
+      },
+      "nativeModelUnavailableReason": null,
+      "completeModelComparison": {
+        "kind": "report-only-XML-view-not-a-replacement-TMDM",
+        "topicAlignment": [
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#$__2.foo"
+            ],
+            "actualTopicNumber": "1",
+            "expectedTopicNumber": "2"
+          },
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#$__3.foo"
+            ],
+            "actualTopicNumber": "2",
+            "expectedTopicNumber": "3"
+          },
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#$__1.foo"
+            ],
+            "actualTopicNumber": "3",
+            "expectedTopicNumber": "1"
+          },
+          {
+            "anchor": [
+              "subjectIdentifiers",
+              "http://psi.topicmaps.org/iso13250/model/topic-name"
+            ],
+            "actualTopicNumber": "4",
+            "expectedTopicNumber": "4"
+          }
+        ],
+        "nativePropertiesMatchActualCXTM": true,
+        "actual": {
+          "element": "topicMap",
+          "attributes": {},
+          "text": "",
+          "children": [
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#$__1.foo",
+                      "children": []
+                    },
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "include-wildcard2.sub#$__1.foo",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "Sub Sub",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#$__1.foo"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#$__2.foo",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "Sub",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#$__2.foo"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#$__3.foo",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "Master",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#$__3.foo"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "subjectIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "http://psi.topicmaps.org/iso13250/model/topic-name",
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+            }
+          ]
+        },
+        "expected": {
+          "element": "topicMap",
+          "attributes": {},
+          "text": "",
+          "children": [
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#$__1.foo",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "Sub Sub",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#$__1.foo"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#$__2.foo",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "Sub",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#$__2.foo"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#$__3.foo",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "Master",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#$__3.foo"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "subjectIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "http://psi.topicmaps.org/iso13250/model/topic-name",
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+            }
+          ]
+        },
+        "differences": [
+          {
+            "path": "/children/0/children/0/children",
+            "actual": [
+              {
+                "element": "locator",
+                "attributes": {},
+                "text": "#$__1.foo",
+                "children": []
+              },
+              {
+                "element": "locator",
+                "attributes": {},
+                "text": "include-wildcard2.sub#$__1.foo",
+                "children": []
+              }
+            ],
+            "expected": [
+              {
+                "element": "locator",
+                "attributes": {},
+                "text": "#$__1.foo",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "completeCXTMUnifiedDiff": "--- unchanged-original-baseline\n+++ fresh-actual\n@@ -1,14 +1,5 @@\n <topicMap>\n <topic number=\"1\">\n-<itemIdentifiers>\n-<locator>#$__1.foo</locator>\n-</itemIdentifiers>\n-<name number=\"1\">\n-<value>Sub Sub</value>\n-<type topicref=\"4\"></type>\n-</name>\n-</topic>\n-<topic number=\"2\">\n <itemIdentifiers>\n <locator>#$__2.foo</locator>\n </itemIdentifiers>\n@@ -17,12 +8,22 @@\n <type topicref=\"4\"></type>\n </name>\n </topic>\n-<topic number=\"3\">\n+<topic number=\"2\">\n <itemIdentifiers>\n <locator>#$__3.foo</locator>\n </itemIdentifiers>\n <name number=\"1\">\n <value>Master</value>\n+<type topicref=\"4\"></type>\n+</name>\n+</topic>\n+<topic number=\"3\">\n+<itemIdentifiers>\n+<locator>#$__1.foo</locator>\n+<locator>include-wildcard2.sub#$__1.foo</locator>\n+</itemIdentifiers>\n+<name number=\"1\">\n+<value>Sub Sub</value>\n <type topicref=\"4\"></type>\n </name>\n </topic>\n",
+      "auxiliarySources": [
+        {
+          "path": "vendor/cxtm/ctm/in/include-wildcard2.sub",
+          "bytes": 49,
+          "sha256": "d715a10dfd9fc01f0d37397d0ecf36ca169902144f6091d5e7ca036598d63efd",
+          "hex": "25696e636c756465203c696e636c7564652d77696c6463617264322e737562323e0a0a3f666f6f202d2022537562222e0a",
+          "text": "%include <include-wildcard2.sub2>\n\n?foo - \"Sub\".\n"
+        },
+        {
+          "path": "vendor/cxtm/ctm/in/include-wildcard2.sub2",
+          "bytes": 19,
+          "sha256": "c78cc6ff88b6b04cddc5703f502783f3c739d082b744db21f10d2393c36a2a3d",
+          "hex": "0a3f666f6f202d202253756220537562222e0a",
+          "text": "\n?foo - \"Sub Sub\".\n"
+        }
+      ]
+    },
+    {
+      "id": "ctm/in/occurrence-datetime-timezone2.ctm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "fail",
+      "registeredAfter": "fail",
+      "source": {
+        "path": "vendor/cxtm/ctm/in/occurrence-datetime-timezone2.ctm",
+        "bytes": 92,
+        "sha256": "4240411defe0618e6a6431d624cfbe480607e4d15c83c10d0c6a5a85c2fafa7c",
+        "hex": "6461746574696d65202d20226461746574696d6522202e0a0a736f6d652d746f706963202d2022736f6d6520746f70696322203b0a20206461746574696d653a20323031312d30312d30315430303a30303a30302b30323a30300a2e",
+        "text": "datetime - \"datetime\" .\n\nsome-topic - \"some topic\" ;\n  datetime: 2011-01-01T00:00:00+02:00\n."
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm",
+      "baseline": {
+        "path": "vendor/cxtm/ctm/baseline/occurrence-datetime-timezone2.ctm.cxtm",
+        "bytes": 679,
+        "sha256": "fe840f8b3a6a7b068d08592373ab71ebe757f6d3e03c0bee792deab74b6b6080",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e236461746574696d653c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e6461746574696d653c2f76616c75653e0a3c7479706520746f7069637265663d2233223e3c2f747970653e0a3c2f6e616d653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23736f6d652d746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e736f6d6520746f7069633c2f76616c75653e0a3c7479706520746f7069637265663d2233223e3c2f747970653e0a3c2f6e616d653e0a3c6f6363757272656e6365206e756d6265723d2231223e0a3c76616c75653e323031312d30312d30315430303a30303a30302b30323a30303c2f76616c75653e0a3c64617461747970653e687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61236461746554696d653c2f64617461747970653e0a3c7479706520746f7069637265663d2231223e3c2f747970653e0a3c2f6f6363757272656e63653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2233223e0a3c7375626a6563744964656e746966696572733e0a3c6c6f6361746f723e687474703a2f2f7073692e746f7069636d6170732e6f72672f69736f31333235302f6d6f64656c2f746f7069632d6e616d653c2f6c6f6361746f723e0a3c2f7375626a6563744964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#datetime</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>datetime</value>\n<type topicref=\"3\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#some-topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>some topic</value>\n<type topicref=\"3\"></type>\n</name>\n<occurrence number=\"1\">\n<value>2011-01-01T00:00:00+02:00</value>\n<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": null,
+      "nativeModel": {
+        "topicCount": 3,
+        "associationCount": 0,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm#datetime"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [
+              {
+                "value": "datetime",
+                "parent": 1,
+                "type": 2,
+                "scope": [],
+                "variantCount": 0
+              }
+            ],
+            "occurrences": []
+          },
+          {
+            "ordinal": 2,
+            "itemIdentifiers": [],
+            "subjectIdentifiers": [
+              "http://psi.topicmaps.org/iso13250/model/topic-name"
+            ],
+            "subjectLocators": [],
+            "names": [],
+            "occurrences": []
+          },
+          {
+            "ordinal": 3,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm#some-topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [
+              {
+                "value": "some topic",
+                "parent": 3,
+                "type": 2,
+                "scope": [],
+                "variantCount": 0
+              }
+            ],
+            "occurrences": [
+              {
+                "value": "2010-12-31T22:00:00Z",
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "parent": 3,
+                "type": 1,
+                "scope": []
+              }
+            ]
+          }
+        ]
+      },
+      "observation": {
+        "id": "ctm/in/occurrence-datetime-timezone2.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm",
+        "sourceKey": "ctm/in/occurrence-datetime-timezone2.ctm",
+        "sourceBytes": 92,
+        "sourceHex": "6461746574696D65202D20226461746574696D6522202E0A0A736F6D652D746F706963202D2022736F6D6520746F70696322203B0A20206461746574696D653A20323031312D30312D30315430303A30303A30302B30323A30300A2E",
+        "sourceText": "datetime - \"datetime\" .\n\nsome-topic - \"some topic\" ;\n  datetime: 2011-01-01T00:00:00+02:00\n.",
+        "condition": null,
+        "model": {
+          "topicCount": 3,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm#datetime"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [
+                {
+                  "value": "datetime",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "variantCount": 0
+                }
+              ],
+              "occurrences": []
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [],
+              "subjectIdentifiers": [
+                "http://psi.topicmaps.org/iso13250/model/topic-name"
+              ],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": []
+            },
+            {
+              "ordinal": 3,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm#some-topic"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [
+                {
+                  "value": "some topic",
+                  "parent": 3,
+                  "type": 2,
+                  "scope": [],
+                  "variantCount": 0
+                }
+              ],
+              "occurrences": [
+                {
+                  "value": "2010-12-31T22:00:00Z",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                  "parent": 3,
+                  "type": 1,
+                  "scope": []
+                }
+              ]
+            }
+          ]
+        },
+        "finalCounter": 0,
+        "requests": [],
+        "environments": [
+          {
+            "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm",
+            "wildcardIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm",
+            "initialCounter": 0,
+            "finalCounter": 0,
+            "templateCount": 0,
+            "model": {
+              "topicCount": 3,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm#datetime"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "datetime",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                },
+                {
+                  "ordinal": 3,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime-timezone2.ctm#some-topic"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [
+                    {
+                      "value": "some topic",
+                      "parent": 3,
+                      "type": 2,
+                      "scope": [],
+                      "variantCount": 0
+                    }
+                  ],
+                  "occurrences": [
+                    {
+                      "value": "2010-12-31T22:00:00Z",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "parent": 3,
+                      "type": 1,
+                      "scope": []
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "aliasTransfers": [],
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#datetime</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>datetime</value>\n<type topicref=\"3\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#some-topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>some topic</value>\n<type topicref=\"3\"></type>\n</name>\n<occurrence number=\"1\">\n<value>2010-12-31T22:00:00Z</value>\n<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "actualBytes": 674,
+        "expectedBytes": 679,
+        "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#datetime</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>datetime</value>\n<type topicref=\"3\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#some-topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>some topic</value>\n<type topicref=\"3\"></type>\n</name>\n<occurrence number=\"1\">\n<value>2011-01-01T00:00:00+02:00</value>\n<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "firstDifferentByte": 382,
+        "byteExact": false,
+        "canonicalizationPreservesMap": true,
+        "referencesCurrent": true
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "B",
+      "priorJustification": "B durch untersuchte XSD-1.0-/CXTM-Regeln gestützt; öffentliche CXTM-Fassung/Errata im abschließenden Editionsreview bestätigen.",
+      "decision": {
+        "classification": "C",
+        "scope": "Final ISO CXTM edition decision; XSD-level conclusion separately supported",
+        "claim": "Current value/canonical bytes have direct XSD support and contradict the public-CXTM reading of the historical baseline. Final B requires the unavailable published CXTM clause.",
+        "conditionalConclusion": "B under CXTM-HTML plus XSD-2004; this is not an unconditional ISO-edition B.",
+        "references": [
+          "CTM-PREVIEW:3.4.1 printed p.5",
+          "CXTM-HTML:2,3.16",
+          "XSD-2004:3.2.7.1–3.2.7.3,D.1,E.1",
+          "XSD-ERRATA"
+        ],
+        "openQuestions": [
+          "Q-CXTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Retain FAIL; verify published CXTM 3.16, then separately approve a documented baseline exception, never rewrite the original baseline.",
+        "changeFrom22A": "Tightens earlier edition-qualified B to formal C; observations and XSD reasoning are unchanged, but missing final CXTM clause is now a decision gate.",
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": {
+        "bytes": 674,
+        "sha256": "b15755d77327c002ae1e3c75c0fa8ac2de7f50f6175153012e0e88d8ba86dcff",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e236461746574696d653c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e6461746574696d653c2f76616c75653e0a3c7479706520746f7069637265663d2233223e3c2f747970653e0a3c2f6e616d653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23736f6d652d746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6e616d65206e756d6265723d2231223e0a3c76616c75653e736f6d6520746f7069633c2f76616c75653e0a3c7479706520746f7069637265663d2233223e3c2f747970653e0a3c2f6e616d653e0a3c6f6363757272656e6365206e756d6265723d2231223e0a3c76616c75653e323031302d31322d33315432323a30303a30305a3c2f76616c75653e0a3c64617461747970653e687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61236461746554696d653c2f64617461747970653e0a3c7479706520746f7069637265663d2231223e3c2f747970653e0a3c2f6f6363757272656e63653e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2233223e0a3c7375626a6563744964656e746966696572733e0a3c6c6f6361746f723e687474703a2f2f7073692e746f7069636d6170732e6f72672f69736f31333235302f6d6f64656c2f746f7069632d6e616d653c2f6c6f6361746f723e0a3c2f7375626a6563744964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#datetime</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>datetime</value>\n<type topicref=\"3\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#some-topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>some topic</value>\n<type topicref=\"3\"></type>\n</name>\n<occurrence number=\"1\">\n<value>2010-12-31T22:00:00Z</value>\n<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "comparison": {
+        "executed": true,
+        "byteExact": false,
+        "firstDifferentByte": 382
+      },
+      "nativeModelUnavailableReason": null,
+      "completeModelComparison": {
+        "kind": "report-only-XML-view-not-a-replacement-TMDM",
+        "topicAlignment": [
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#datetime"
+            ],
+            "actualTopicNumber": "1",
+            "expectedTopicNumber": "1"
+          },
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#some-topic"
+            ],
+            "actualTopicNumber": "2",
+            "expectedTopicNumber": "2"
+          },
+          {
+            "anchor": [
+              "subjectIdentifiers",
+              "http://psi.topicmaps.org/iso13250/model/topic-name"
+            ],
+            "actualTopicNumber": "3",
+            "expectedTopicNumber": "3"
+          }
+        ],
+        "nativePropertiesMatchActualCXTM": true,
+        "actual": {
+          "element": "topicMap",
+          "attributes": {},
+          "text": "",
+          "children": [
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#datetime",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "datetime",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#datetime"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#some-topic",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "some topic",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "occurrence",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "2010-12-31T22:00:00Z",
+                      "children": []
+                    },
+                    {
+                      "element": "datatype",
+                      "attributes": {},
+                      "text": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "itemIdentifiers:#datetime"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#some-topic"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "subjectIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "http://psi.topicmaps.org/iso13250/model/topic-name",
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+            }
+          ]
+        },
+        "expected": {
+          "element": "topicMap",
+          "attributes": {},
+          "text": "",
+          "children": [
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#datetime",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "datetime",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#datetime"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#some-topic",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "name",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "some topic",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "occurrence",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "2011-01-01T00:00:00+02:00",
+                      "children": []
+                    },
+                    {
+                      "element": "datatype",
+                      "attributes": {},
+                      "text": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "itemIdentifiers:#datetime"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#some-topic"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "subjectIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "http://psi.topicmaps.org/iso13250/model/topic-name",
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "subjectIdentifiers:http://psi.topicmaps.org/iso13250/model/topic-name"
+            }
+          ]
+        },
+        "differences": [
+          {
+            "path": "/children/1/children/2/children/0/text",
+            "actual": "2010-12-31T22:00:00Z",
+            "expected": "2011-01-01T00:00:00+02:00"
+          }
+        ]
+      },
+      "completeCXTMUnifiedDiff": "--- unchanged-original-baseline\n+++ fresh-actual\n@@ -17,7 +17,7 @@\n <type topicref=\"3\"></type>\n </name>\n <occurrence number=\"1\">\n-<value>2011-01-01T00:00:00+02:00</value>\n+<value>2010-12-31T22:00:00Z</value>\n <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n <type topicref=\"1\"></type>\n </occurrence>\n",
+      "auxiliarySources": []
+    },
+    {
+      "id": "ctm/in/occurrence-datetime2.ctm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "fail",
+      "registeredAfter": "fail",
+      "source": {
+        "path": "vendor/cxtm/ctm/in/occurrence-datetime2.ctm",
+        "bytes": 122,
+        "sha256": "75f6b381203abd7ffb0d0a398abb4ad2aea10b676772d54e8086adf52df88ab1",
+        "hex": "efbbbf230a23205465737420666f72206c656170207365636f6e64732c200a2320632e662e203c687474703a2f2f70726f6a656374732e746f7069636d6170736c61622e64652f6973737565732f323536333e0a230a746f7069630a6f6363747970653a20313937362d30392d31395431323a30313a3630202e",
+        "text": "﻿#\n# Test for leap seconds, \n# c.f. <http://projects.topicmapslab.de/issues/2563>\n#\ntopic\nocctype: 1976-09-19T12:01:60 ."
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm",
+      "baseline": {
+        "path": "vendor/cxtm/ctm/baseline/occurrence-datetime2.ctm.cxtm",
+        "bytes": 370,
+        "sha256": "90bd6e740db72cb46a9fcee9329b70d0963bc6317300e498c941e00d9ff5c55f",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e236f6363747970653c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6f6363757272656e6365206e756d6265723d2231223e0a3c76616c75653e313937362d30392d31395431323a30313a36303c2f76616c75653e0a3c64617461747970653e687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61236461746554696d653c2f64617461747970653e0a3c7479706520746f7069637265663d2231223e3c2f747970653e0a3c2f6f6363757272656e63653e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>1976-09-19T12:01:60</value>\n<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": null,
+      "nativeModel": {
+        "topicCount": 2,
+        "associationCount": 0,
+        "topics": [
+          {
+            "ordinal": 1,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm#topic"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [],
+            "occurrences": [
+              {
+                "value": "1976-09-19T12:02:00",
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "parent": 1,
+                "type": 2,
+                "scope": []
+              }
+            ]
+          },
+          {
+            "ordinal": 2,
+            "itemIdentifiers": [
+              "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm#occtype"
+            ],
+            "subjectIdentifiers": [],
+            "subjectLocators": [],
+            "names": [],
+            "occurrences": []
+          }
+        ]
+      },
+      "observation": {
+        "id": "ctm/in/occurrence-datetime2.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm",
+        "sourceKey": "ctm/in/occurrence-datetime2.ctm",
+        "sourceBytes": 122,
+        "sourceHex": "EFBBBF230A23205465737420666F72206C656170207365636F6E64732C200A2320632E662E203C687474703A2F2F70726F6A656374732E746F7069636D6170736C61622E64652F6973737565732F323536333E0A230A746F7069630A6F6363747970653A20313937362D30392D31395431323A30313A3630202E",
+        "sourceText": "﻿#\n# Test for leap seconds, \n# c.f. <http://projects.topicmapslab.de/issues/2563>\n#\ntopic\nocctype: 1976-09-19T12:01:60 .",
+        "condition": null,
+        "model": {
+          "topicCount": 2,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm#topic"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": [
+                {
+                  "value": "1976-09-19T12:02:00",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": []
+                }
+              ]
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [
+                "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm#occtype"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": []
+            }
+          ]
+        },
+        "finalCounter": 0,
+        "requests": [],
+        "environments": [
+          {
+            "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm",
+            "wildcardIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm",
+            "initialCounter": 0,
+            "finalCounter": 0,
+            "templateCount": 0,
+            "model": {
+              "topicCount": 2,
+              "associationCount": 0,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm#topic"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": [
+                    {
+                      "value": "1976-09-19T12:02:00",
+                      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "parent": 1,
+                      "type": 2,
+                      "scope": []
+                    }
+                  ]
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [
+                    "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/occurrence-datetime2.ctm#occtype"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": [],
+                  "names": [],
+                  "occurrences": []
+                }
+              ]
+            }
+          }
+        ],
+        "aliasTransfers": [],
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>1976-09-19T12:02:00</value>\n<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "actualBytes": 370,
+        "expectedBytes": 370,
+        "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>1976-09-19T12:01:60</value>\n<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "firstDifferentByte": 232,
+        "byteExact": false,
+        "canonicalizationPreservesMap": true,
+        "referencesCurrent": true
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "B",
+      "priorJustification": "B durch untersuchte XSD-1.0-/CXTM-Regeln gestützt; öffentliche CXTM-Fassung/Errata im abschließenden Editionsreview bestätigen.",
+      "decision": {
+        "classification": "C",
+        "scope": "Final ISO CXTM edition decision; XSD-level conclusion separately supported",
+        "claim": "Current value/canonical bytes have direct XSD support and contradict the public-CXTM reading of the historical baseline. Final B requires the unavailable published CXTM clause.",
+        "conditionalConclusion": "B under CXTM-HTML plus XSD-2004; this is not an unconditional ISO-edition B.",
+        "references": [
+          "CTM-PREVIEW:3.4.1 printed p.5",
+          "CXTM-HTML:2,3.16",
+          "XSD-2004:3.2.7.1–3.2.7.3,D.1,E.1",
+          "XSD-ERRATA"
+        ],
+        "openQuestions": [
+          "Q-CXTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Retain FAIL; verify published CXTM 3.16, then separately approve a documented baseline exception, never rewrite the original baseline.",
+        "changeFrom22A": "Tightens earlier edition-qualified B to formal C; observations and XSD reasoning are unchanged, but missing final CXTM clause is now a decision gate.",
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": {
+        "bytes": 370,
+        "sha256": "2cdbdd98349a1f830ec2f49c2331d2c5220492c1d8b75563db8623ecb38e76fd",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e236f6363747970653c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6f6363757272656e6365206e756d6265723d2231223e0a3c76616c75653e313937362d30392d31395431323a30323a30303c2f76616c75653e0a3c64617461747970653e687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d61236461746554696d653c2f64617461747970653e0a3c7479706520746f7069637265663d2231223e3c2f747970653e0a3c2f6f6363757272656e63653e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>1976-09-19T12:02:00</value>\n<datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+      },
+      "comparison": {
+        "executed": true,
+        "byteExact": false,
+        "firstDifferentByte": 232
+      },
+      "nativeModelUnavailableReason": null,
+      "completeModelComparison": {
+        "kind": "report-only-XML-view-not-a-replacement-TMDM",
+        "topicAlignment": [
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#occtype"
+            ],
+            "actualTopicNumber": "1",
+            "expectedTopicNumber": "1"
+          },
+          {
+            "anchor": [
+              "itemIdentifiers",
+              "#topic"
+            ],
+            "actualTopicNumber": "2",
+            "expectedTopicNumber": "2"
+          }
+        ],
+        "nativePropertiesMatchActualCXTM": true,
+        "actual": {
+          "element": "topicMap",
+          "attributes": {},
+          "text": "",
+          "children": [
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#occtype",
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#occtype"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#topic",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "occurrence",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "1976-09-19T12:02:00",
+                      "children": []
+                    },
+                    {
+                      "element": "datatype",
+                      "attributes": {},
+                      "text": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "itemIdentifiers:#occtype"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#topic"
+            }
+          ]
+        },
+        "expected": {
+          "element": "topicMap",
+          "attributes": {},
+          "text": "",
+          "children": [
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#occtype",
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#occtype"
+            },
+            {
+              "element": "topic",
+              "attributes": {},
+              "text": "",
+              "children": [
+                {
+                  "element": "itemIdentifiers",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "locator",
+                      "attributes": {},
+                      "text": "#topic",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "element": "occurrence",
+                  "attributes": {},
+                  "text": "",
+                  "children": [
+                    {
+                      "element": "value",
+                      "attributes": {},
+                      "text": "1976-09-19T12:01:60",
+                      "children": []
+                    },
+                    {
+                      "element": "datatype",
+                      "attributes": {},
+                      "text": "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "children": []
+                    },
+                    {
+                      "element": "type",
+                      "attributes": {
+                        "topicref": "itemIdentifiers:#occtype"
+                      },
+                      "text": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ],
+              "identity": "itemIdentifiers:#topic"
+            }
+          ]
+        },
+        "differences": [
+          {
+            "path": "/children/1/children/1/children/0/text",
+            "actual": "1976-09-19T12:02:00",
+            "expected": "1976-09-19T12:01:60"
+          }
+        ]
+      },
+      "completeCXTMUnifiedDiff": "--- unchanged-original-baseline\n+++ fresh-actual\n@@ -9,7 +9,7 @@\n <locator>#topic</locator>\n </itemIdentifiers>\n <occurrence number=\"1\">\n-<value>1976-09-19T12:01:60</value>\n+<value>1976-09-19T12:02:00</value>\n <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>\n <type topicref=\"1\"></type>\n </occurrence>\n",
+      "auxiliarySources": []
+    },
+    {
+      "id": "ctm/in/template-ambiguous-parameter5.ctm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/ctm/in/template-ambiguous-parameter5.ctm",
+        "bytes": 146,
+        "sha256": "5a4310d6f077776996700a77cd037ca30b1b616f7235128f9500ef16c5cd78a8",
+        "hex": "0a23205573696e6720616e2049524920617267756d656e7420696e20646966666572656e7420636f6e74657874730a0a6465662074656d706c6174652824697269290a2020746f70696320246972693b203d246972693b205e246972692e0a656e640a0a74656d706c617465283c687474703a2f2f7777772e6578616d706c652e6f72672f736f6d657468696e672f3e290a",
+        "text": "\n# Using an IRI argument in different contexts\n\ndef template($iri)\n  topic $iri; =$iri; ^$iri.\nend\n\ntemplate(<http://www.example.org/something/>)\n"
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm",
+      "baseline": {
+        "path": "vendor/cxtm/ctm/baseline/template-ambiguous-parameter5.ctm.cxtm",
+        "bytes": 353,
+        "sha256": "a90bb867d36b9d99061d3815c6ce41a1cd4d8909c49adc7ce9cc1c9bfe06303f",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c7375626a6563744964656e746966696572733e0a3c6c6f6361746f723e687474703a2f2f7777772e6578616d706c652e6f72672f736f6d657468696e672f3c2f6c6f6361746f723e0a3c2f7375626a6563744964656e746966696572733e0a3c7375626a6563744c6f6361746f72733e0a3c6c6f6361746f723e687474703a2f2f7777772e6578616d706c652e6f72672f736f6d657468696e672f3c2f6c6f6361746f723e0a3c2f7375626a6563744c6f6361746f72733e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c6c6f6361746f723e687474703a2f2f7777772e6578616d706c652e6f72672f736f6d657468696e672f3c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something/</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something/</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something/</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-ambiguous-parameter5.ctm at CHARACTER 79 (line 5, column 13): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 79,
+        "line": 5,
+        "column": 13,
+        "positionUnit": "character",
+        "source": "ctm/in/template-ambiguous-parameter5.ctm",
+        "cause": null,
+        "context": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "ctm/in/template-ambiguous-parameter5.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm",
+        "sourceKey": "ctm/in/template-ambiguous-parameter5.ctm",
+        "sourceBytes": 146,
+        "sourceHex": "0A23205573696E6720616E2049524920617267756D656E7420696E20646966666572656E7420636F6E74657874730A0A6465662074656D706C6174652824697269290A2020746F70696320246972693B203D246972693B205E246972692E0A656E640A0A74656D706C617465283C687474703A2F2F7777772E6578616D706C652E6F72672F736F6D657468696E672F3E290A",
+        "sourceText": "\n# Using an IRI argument in different contexts\n\ndef template($iri)\n  topic $iri; =$iri; ^$iri.\nend\n\ntemplate(<http://www.example.org/something/>)\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-ambiguous-parameter5.ctm at CHARACTER 79 (line 5, column 13): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 79,
+          "line": 5,
+          "column": 13,
+          "positionUnit": "character",
+          "source": "ctm/in/template-ambiguous-parameter5.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "finalCounter": null,
+        "requests": [],
+        "environments": [],
+        "aliasTransfers": [],
+        "actualCXTM": null,
+        "actualBytes": null,
+        "expectedBytes": 353,
+        "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something/</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something/</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something/</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "firstDifferentByte": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": null,
+        "referencesCurrent": null
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "C",
+      "priorJustification": "HTML-Ableitung [50]→[51]→[52]→[17]→[12] geprüft; vollständigen veröffentlichten Grammatiktext abgleichen, keine stillschweigende Erweiterung.",
+      "decision": {
+        "classification": "C",
+        "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+        "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+        "conditionalConclusion": "Body invalid under inspected HTML. The expanded control reproduces baseline bytes but does not validate the original template.",
+        "references": [
+          "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+          "CTM-LANDING",
+          "CTM-PREVIEW"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Keep NOT-RUN. Decide any documented corpus exception only after edition check; compatibility grammar would need separate authorization.",
+        "historicalIntent": {
+          "epistemicStatus": "hypothesized",
+          "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+        },
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "templateAnalysis": {
+        "variables": [
+          {
+            "variable": "$iri",
+            "position": 61,
+            "line": 4,
+            "column": 14,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$iri",
+            "position": 75,
+            "line": 5,
+            "column": 9,
+            "role": "Subject Identifier im Topic Tail (unmarkiert)"
+          },
+          {
+            "variable": "$iri",
+            "position": 82,
+            "line": 5,
+            "column": 16,
+            "role": "Subject Locator nach ="
+          },
+          {
+            "variable": "$iri",
+            "position": 89,
+            "line": 5,
+            "column": 23,
+            "role": "Item Identifier nach ^"
+          }
+        ],
+        "declaration": "def template($iri)",
+        "bindings": [
+          [
+            "$iri",
+            "<http://www.example.org/something/>"
+          ]
+        ],
+        "invocations": [
+          {
+            "text": "template(<http://www.example.org/something/>)",
+            "position": 100,
+            "line": 8
+          }
+        ]
+      },
+      "intendedNegativeCause": null,
+      "variablePositionsReverifiedFromOriginal": true,
+      "templateAnalysisProvenance": {
+        "positions": "observed: reverified from unchanged original text",
+        "roles": "derived: manually reviewed against source syntax and cited grammar",
+        "historicalArgumentIntent": "inferred from original argument markers and comments; not an executed argument check"
+      },
+      "expandedControls": [
+        {
+          "label": "expanded-ambiguous5",
+          "originalControlOnly": "ctm/in/template-ambiguous-parameter5.ctm",
+          "sourceText": "topic <http://www.example.org/something/>; =<http://www.example.org/something/>; ^<http://www.example.org/something/>.",
+          "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm",
+          "condition": null,
+          "model": {
+            "topicCount": 1,
+            "associationCount": 0,
+            "topics": [
+              {
+                "ordinal": 1,
+                "itemIdentifiers": [
+                  "http://www.example.org/something/",
+                  "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter5.ctm#topic"
+                ],
+                "subjectIdentifiers": [
+                  "http://www.example.org/something/"
+                ],
+                "subjectLocators": [
+                  "http://www.example.org/something/"
+                ],
+                "names": [],
+                "occurrences": []
+              }
+            ]
+          },
+          "associations": [],
+          "referencesCurrent": true,
+          "canonicalizationPreservesMap": true,
+          "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something/</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something/</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something/</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+          "actualBytes": 353,
+          "expectedBytes": 353,
+          "byteExact": true
+        }
+      ],
+      "auxiliarySources": []
+    },
+    {
+      "id": "ctm/in/template-ambiguous-parameter6.ctm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/ctm/in/template-ambiguous-parameter6.ctm",
+        "bytes": 163,
+        "sha256": "d2fd507bbbd544b6eae6caf4497c18e746165a5868a1d8e644eb18815db44d50",
+        "hex": "0a25707265666978206578203c687474703a2f2f7777772e6578616d706c652e6f72672f3e0a0a23205573696e67206120514e616d6520617267756d656e7420696e20646966666572656e7420636f6e74657874730a0a6465662074656d706c617465282471290a2020746f7069632024713b203d24713b205e24713b206f63633a2024712e0a656e640a0a74656d706c6174652865783a736f6d657468696e67290a",
+        "text": "\n%prefix ex <http://www.example.org/>\n\n# Using a QName argument in different contexts\n\ndef template($q)\n  topic $q; =$q; ^$q; occ: $q.\nend\n\ntemplate(ex:something)\n"
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm",
+      "baseline": {
+        "path": "vendor/cxtm/ctm/baseline/template-ambiguous-parameter6.ctm.cxtm",
+        "bytes": 613,
+        "sha256": "3b20e3168ad1260c2a4fcb2b5b4b0026324a78263f2431d6637473087eecd672",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e236f63633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c7375626a6563744964656e746966696572733e0a3c6c6f6361746f723e687474703a2f2f7777772e6578616d706c652e6f72672f736f6d657468696e673c2f6c6f6361746f723e0a3c2f7375626a6563744964656e746966696572733e0a3c7375626a6563744c6f6361746f72733e0a3c6c6f6361746f723e687474703a2f2f7777772e6578616d706c652e6f72672f736f6d657468696e673c2f6c6f6361746f723e0a3c2f7375626a6563744c6f6361746f72733e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c6c6f6361746f723e687474703a2f2f7777772e6578616d706c652e6f72672f736f6d657468696e673c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c6f6363757272656e6365206e756d6265723d2231223e0a3c76616c75653e687474703a2f2f7777772e6578616d706c652e6f72672f736f6d657468696e673c2f76616c75653e0a3c64617461747970653e687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d6123616e795552493c2f64617461747970653e0a3c7479706520746f7069637265663d2231223e3c2f747970653e0a3c2f6f6363757272656e63653e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occ</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.example.org/something</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-ambiguous-parameter6.ctm at CHARACTER 114 (line 7, column 11): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 114,
+        "line": 7,
+        "column": 11,
+        "positionUnit": "character",
+        "source": "ctm/in/template-ambiguous-parameter6.ctm",
+        "cause": null,
+        "context": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "ctm/in/template-ambiguous-parameter6.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm",
+        "sourceKey": "ctm/in/template-ambiguous-parameter6.ctm",
+        "sourceBytes": 163,
+        "sourceHex": "0A25707265666978206578203C687474703A2F2F7777772E6578616D706C652E6F72672F3E0A0A23205573696E67206120514E616D6520617267756D656E7420696E20646966666572656E7420636F6E74657874730A0A6465662074656D706C617465282471290A2020746F7069632024713B203D24713B205E24713B206F63633A2024712E0A656E640A0A74656D706C6174652865783A736F6D657468696E67290A",
+        "sourceText": "\n%prefix ex <http://www.example.org/>\n\n# Using a QName argument in different contexts\n\ndef template($q)\n  topic $q; =$q; ^$q; occ: $q.\nend\n\ntemplate(ex:something)\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-ambiguous-parameter6.ctm at CHARACTER 114 (line 7, column 11): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 114,
+          "line": 7,
+          "column": 11,
+          "positionUnit": "character",
+          "source": "ctm/in/template-ambiguous-parameter6.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "finalCounter": null,
+        "requests": [],
+        "environments": [],
+        "aliasTransfers": [],
+        "actualCXTM": null,
+        "actualBytes": null,
+        "expectedBytes": 613,
+        "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occ</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.example.org/something</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "firstDifferentByte": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": null,
+        "referencesCurrent": null
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "C",
+      "priorJustification": "HTML-Ableitung [50]→[51]→[52]→[17]→[12] geprüft; vollständigen veröffentlichten Grammatiktext abgleichen, keine stillschweigende Erweiterung.",
+      "decision": {
+        "classification": "C",
+        "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+        "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+        "conditionalConclusion": "Body invalid under inspected HTML. The expanded control reproduces baseline bytes but does not validate the original template.",
+        "references": [
+          "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+          "CTM-LANDING",
+          "CTM-PREVIEW"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Keep NOT-RUN. Decide any documented corpus exception only after edition check; compatibility grammar would need separate authorization.",
+        "historicalIntent": {
+          "epistemicStatus": "hypothesized",
+          "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+        },
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "templateAnalysis": {
+        "variables": [
+          {
+            "variable": "$q",
+            "position": 100,
+            "line": 6,
+            "column": 14,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$q",
+            "position": 112,
+            "line": 7,
+            "column": 9,
+            "role": "Subject Identifier im Topic Tail (unmarkiert)"
+          },
+          {
+            "variable": "$q",
+            "position": 117,
+            "line": 7,
+            "column": 14,
+            "role": "Subject Locator nach ="
+          },
+          {
+            "variable": "$q",
+            "position": 122,
+            "line": 7,
+            "column": 19,
+            "role": "Item Identifier nach ^"
+          },
+          {
+            "variable": "$q",
+            "position": 131,
+            "line": 7,
+            "column": 28,
+            "role": "Occurrence-Literal; Datentyp xsd:anyURI"
+          }
+        ],
+        "declaration": "def template($q)",
+        "bindings": [
+          [
+            "$q",
+            "ex:something → http://www.example.org/something"
+          ]
+        ],
+        "invocations": [
+          {
+            "text": "template(ex:something)",
+            "position": 140,
+            "line": 10
+          }
+        ]
+      },
+      "intendedNegativeCause": null,
+      "variablePositionsReverifiedFromOriginal": true,
+      "templateAnalysisProvenance": {
+        "positions": "observed: reverified from unchanged original text",
+        "roles": "derived: manually reviewed against source syntax and cited grammar",
+        "historicalArgumentIntent": "inferred from original argument markers and comments; not an executed argument check"
+      },
+      "expandedControls": [
+        {
+          "label": "expanded-ambiguous6",
+          "originalControlOnly": "ctm/in/template-ambiguous-parameter6.ctm",
+          "sourceText": "%prefix ex <http://www.example.org/> topic ex:something; =ex:something; ^ex:something; occ: ex:something.",
+          "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm",
+          "condition": null,
+          "model": {
+            "topicCount": 2,
+            "associationCount": 0,
+            "topics": [
+              {
+                "ordinal": 1,
+                "itemIdentifiers": [
+                  "http://www.example.org/something",
+                  "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm#topic"
+                ],
+                "subjectIdentifiers": [
+                  "http://www.example.org/something"
+                ],
+                "subjectLocators": [
+                  "http://www.example.org/something"
+                ],
+                "names": [],
+                "occurrences": [
+                  {
+                    "value": "http://www.example.org/something",
+                    "datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+                    "parent": 1,
+                    "type": 2,
+                    "scope": []
+                  }
+                ]
+              },
+              {
+                "ordinal": 2,
+                "itemIdentifiers": [
+                  "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-ambiguous-parameter6.ctm#occ"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": [],
+                "names": [],
+                "occurrences": []
+              }
+            ]
+          },
+          "associations": [],
+          "referencesCurrent": true,
+          "canonicalizationPreservesMap": true,
+          "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occ</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://www.example.org/something</locator>\n</subjectIdentifiers>\n<subjectLocators>\n<locator>http://www.example.org/something</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/something</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.example.org/something</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+          "actualBytes": 613,
+          "expectedBytes": 613,
+          "byteExact": true
+        }
+      ],
+      "auxiliarySources": []
+    },
+    {
+      "id": "ctm/in/template-subject-identifier2.ctm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/ctm/in/template-subject-identifier2.ctm",
+        "bytes": 81,
+        "sha256": "ffc9a5554b9c908386f6888ef29ccda5cc433e5519924db52f9441769e1df014",
+        "hex": "0a6465662074656d706c6174652824697269290a20202020746f70696320246972692e0a656e640a0a74656d706c617465283c687474703a2f2f7073692e6578616d706c652e6f72672f66616b653e290a",
+        "text": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(<http://psi.example.org/fake>)\n"
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm",
+      "baseline": {
+        "path": "vendor/cxtm/ctm/baseline/template-subject-identifier2.ctm.cxtm",
+        "bytes": 204,
+        "sha256": "e138a02738dc4a2526c465b11fa6915bed84724a31748eb3578ddf0f8ab16253",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c7375626a6563744964656e746966696572733e0a3c6c6f6361746f723e687474703a2f2f7073692e6578616d706c652e6f72672f66616b653c2f6c6f6361746f723e0a3c2f7375626a6563744964656e746966696572733e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://psi.example.org/fake</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-subject-identifier2.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 34,
+        "line": 3,
+        "column": 15,
+        "positionUnit": "character",
+        "source": "ctm/in/template-subject-identifier2.ctm",
+        "cause": null,
+        "context": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "ctm/in/template-subject-identifier2.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm",
+        "sourceKey": "ctm/in/template-subject-identifier2.ctm",
+        "sourceBytes": 81,
+        "sourceHex": "0A6465662074656D706C6174652824697269290A20202020746F70696320246972692E0A656E640A0A74656D706C617465283C687474703A2F2F7073692E6578616D706C652E6F72672F66616B653E290A",
+        "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(<http://psi.example.org/fake>)\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/in/template-subject-identifier2.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 34,
+          "line": 3,
+          "column": 15,
+          "positionUnit": "character",
+          "source": "ctm/in/template-subject-identifier2.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "finalCounter": null,
+        "requests": [],
+        "environments": [],
+        "aliasTransfers": [],
+        "actualCXTM": null,
+        "actualBytes": null,
+        "expectedBytes": 204,
+        "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://psi.example.org/fake</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "firstDifferentByte": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": null,
+        "referencesCurrent": null
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "C",
+      "priorJustification": "HTML-Ableitung [50]→[51]→[52]→[17]→[12] geprüft; vollständigen veröffentlichten Grammatiktext abgleichen, keine stillschweigende Erweiterung.",
+      "decision": {
+        "classification": "C",
+        "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+        "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+        "conditionalConclusion": "Body invalid under inspected HTML. The expanded control reproduces baseline bytes but does not validate the original template.",
+        "references": [
+          "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+          "CTM-LANDING",
+          "CTM-PREVIEW"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Keep NOT-RUN. Decide any documented corpus exception only after edition check; compatibility grammar would need separate authorization.",
+        "historicalIntent": {
+          "epistemicStatus": "hypothesized",
+          "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+        },
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "templateAnalysis": {
+        "variables": [
+          {
+            "variable": "$iri",
+            "position": 14,
+            "line": 2,
+            "column": 14,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$iri",
+            "position": 30,
+            "line": 3,
+            "column": 11,
+            "role": "Subject Identifier im Topic Tail (unmarkiert)"
+          }
+        ],
+        "declaration": "def template($iri)",
+        "bindings": [
+          [
+            "$iri",
+            "<http://psi.example.org/fake>"
+          ]
+        ],
+        "invocations": [
+          {
+            "text": "template(<http://psi.example.org/fake>)",
+            "position": 41,
+            "line": 6
+          }
+        ]
+      },
+      "intendedNegativeCause": null,
+      "variablePositionsReverifiedFromOriginal": true,
+      "templateAnalysisProvenance": {
+        "positions": "observed: reverified from unchanged original text",
+        "roles": "derived: manually reviewed against source syntax and cited grammar",
+        "historicalArgumentIntent": "inferred from original argument markers and comments; not an executed argument check"
+      },
+      "expandedControls": [
+        {
+          "label": "expanded-subject-identifier2",
+          "originalControlOnly": "ctm/in/template-subject-identifier2.ctm",
+          "sourceText": "topic <http://psi.example.org/fake>.",
+          "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm",
+          "condition": null,
+          "model": {
+            "topicCount": 1,
+            "associationCount": 0,
+            "topics": [
+              {
+                "ordinal": 1,
+                "itemIdentifiers": [
+                  "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/in/template-subject-identifier2.ctm#topic"
+                ],
+                "subjectIdentifiers": [
+                  "http://psi.example.org/fake"
+                ],
+                "subjectLocators": [],
+                "names": [],
+                "occurrences": []
+              }
+            ]
+          },
+          "associations": [],
+          "referencesCurrent": true,
+          "canonicalizationPreservesMap": true,
+          "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>http://psi.example.org/fake</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+          "actualBytes": 204,
+          "expectedBytes": 204,
+          "byteExact": true
+        }
+      ],
+      "auxiliarySources": []
+    },
+    {
+      "id": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+      "epistemicStatus": "observed",
+      "category": "invalid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "bytes": 167,
+        "sha256": "ceb46d4457532cc5b432d5e601275cc6950bb105088e2b2ccfa4ffa5fbe82266",
+        "hex": "0a6465662074656d706c6174652824697269312c202469726932290a20202020746f706963312024697269312e0a20202020746f706963322024697269322e0a656e640a0a74656d706c617465283c687474703a2f2f7777772e6578616d706c652e6f72672f3e2c2020202020232076616c69640a20202020202020205e3c687474703a2f2f7777772e6578616d706c652e6f72672f3e2920202020202320696e76616c69640a",
+        "text": "\ndef template($iri1, $iri2)\n    topic1 $iri1.\n    topic2 $iri2.\nend\n\ntemplate(<http://www.example.org/>,     # valid\n        ^<http://www.example.org/>)     # invalid\n"
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-item-identifier-2nd-arg.ctm",
+      "baseline": null,
+      "actualCondition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-item-identifier-2nd-arg.ctm at CHARACTER 44 (line 3, column 17): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 44,
+        "line": 3,
+        "column": 17,
+        "positionUnit": "character",
+        "source": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "cause": null,
+        "context": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "sourceKey": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "sourceBytes": 167,
+        "sourceHex": "0A6465662074656D706C6174652824697269312C202469726932290A20202020746F706963312024697269312E0A20202020746F706963322024697269322E0A656E640A0A74656D706C617465283C687474703A2F2F7777772E6578616D706C652E6F72672F3E2C2020202020232076616C69640A20202020202020205E3C687474703A2F2F7777772E6578616D706C652E6F72672F3E2920202020202320696E76616C69640A",
+        "sourceText": "\ndef template($iri1, $iri2)\n    topic1 $iri1.\n    topic2 $iri2.\nend\n\ntemplate(<http://www.example.org/>,     # valid\n        ^<http://www.example.org/>)     # invalid\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-item-identifier-2nd-arg.ctm at CHARACTER 44 (line 3, column 17): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 44,
+          "line": 3,
+          "column": 17,
+          "positionUnit": "character",
+          "source": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "finalCounter": null,
+        "requests": [],
+        "environments": [],
+        "aliasTransfers": [],
+        "actualCXTM": null,
+        "actualBytes": null,
+        "expectedBytes": null,
+        "expectedCXTM": null,
+        "firstDifferentByte": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": null,
+        "referencesCurrent": null
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "C",
+      "priorJustification": "HTML-Ableitung [50]→[51]→[52]→[17]→[12] geprüft; vollständigen veröffentlichten Grammatiktext abgleichen, keine stillschweigende Erweiterung. Die frühe Body-Syntaxablehnung ist keine erreichte Prüfung des markierten Arguments.",
+      "decision": {
+        "classification": "C",
+        "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+        "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+        "conditionalConclusion": "Body invalid under inspected HTML. This does not qualify the historical argument-rejection contract.",
+        "references": [
+          "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+          "CTM-LANDING",
+          "CTM-PREVIEW"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Keep NOT-RUN. A body-syntax negative acceptance contract would require a separate agreement even if final grammar confirms exclusion.",
+        "historicalIntent": {
+          "epistemicStatus": "hypothesized",
+          "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+        },
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "templateAnalysis": {
+        "variables": [
+          {
+            "variable": "$iri1",
+            "position": 14,
+            "line": 2,
+            "column": 14,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$iri2",
+            "position": 21,
+            "line": 2,
+            "column": 21,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$iri1",
+            "position": 39,
+            "line": 3,
+            "column": 12,
+            "role": "Subject Identifier von topic1 (unmarkiert)"
+          },
+          {
+            "variable": "$iri2",
+            "position": 57,
+            "line": 4,
+            "column": 12,
+            "role": "Subject Identifier von topic2 (unmarkiert)"
+          }
+        ],
+        "declaration": "def template($iri1, $iri2)",
+        "bindings": [
+          [
+            "$iri1",
+            "<http://www.example.org/>"
+          ],
+          [
+            "$iri2",
+            "^<http://www.example.org/>"
+          ]
+        ],
+        "invocations": [
+          {
+            "text": "template(<http://www.example.org/>,     # valid\n        ^<http://www.example.org/>)",
+            "position": 69,
+            "line": 7
+          }
+        ]
+      },
+      "intendedNegativeCause": {
+        "argumentPosition": 2,
+        "marker": "^",
+        "cause": "Argument 2 mit ^ ist für den beabsichtigten unmarkierten SI-Verwendungskontext ungeeignet.",
+        "currentlyReached": false,
+        "actualBlockingCause": "INVALID-TEMPLATE-BODY/:template-identity-tail",
+        "evidence": "Originalkörper und markiertes Argument; bei 2nd-arg Originalkommentar valid/invalid."
+      },
+      "variablePositionsReverifiedFromOriginal": true,
+      "templateAnalysisProvenance": {
+        "positions": "observed: reverified from unchanged original text",
+        "roles": "derived: manually reviewed against source syntax and cited grammar",
+        "historicalArgumentIntent": "inferred from original argument markers and comments; not an executed argument check"
+      },
+      "expandedControls": [],
+      "auxiliarySources": []
+    },
+    {
+      "id": "ctm/invalid/template-item-identifier3.ctm",
+      "epistemicStatus": "observed",
+      "category": "invalid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/ctm/invalid/template-item-identifier3.ctm",
+        "bytes": 78,
+        "sha256": "4c7ed0ab1574462b8939379f745a28942aa380fc6cc7fabae597fdc7bb21225f",
+        "hex": "0a6465662074656d706c6174652824697269290a20202020746f70696320246972692e0a656e640a0a74656d706c617465285e3c687474703a2f2f7777772e6578616d706c652e6f72672f3e290a",
+        "text": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(^<http://www.example.org/>)\n"
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-item-identifier3.ctm",
+      "baseline": null,
+      "actualCondition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-item-identifier3.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 34,
+        "line": 3,
+        "column": 15,
+        "positionUnit": "character",
+        "source": "ctm/invalid/template-item-identifier3.ctm",
+        "cause": null,
+        "context": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "ctm/invalid/template-item-identifier3.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-item-identifier3.ctm",
+        "sourceKey": "ctm/invalid/template-item-identifier3.ctm",
+        "sourceBytes": 78,
+        "sourceHex": "0A6465662074656D706C6174652824697269290A20202020746F70696320246972692E0A656E640A0A74656D706C617465285E3C687474703A2F2F7777772E6578616D706C652E6F72672F3E290A",
+        "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(^<http://www.example.org/>)\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-item-identifier3.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 34,
+          "line": 3,
+          "column": 15,
+          "positionUnit": "character",
+          "source": "ctm/invalid/template-item-identifier3.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "finalCounter": null,
+        "requests": [],
+        "environments": [],
+        "aliasTransfers": [],
+        "actualCXTM": null,
+        "actualBytes": null,
+        "expectedBytes": null,
+        "expectedCXTM": null,
+        "firstDifferentByte": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": null,
+        "referencesCurrent": null
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "C",
+      "priorJustification": "HTML-Ableitung [50]→[51]→[52]→[17]→[12] geprüft; vollständigen veröffentlichten Grammatiktext abgleichen, keine stillschweigende Erweiterung. Die frühe Body-Syntaxablehnung ist keine erreichte Prüfung des markierten Arguments.",
+      "decision": {
+        "classification": "C",
+        "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+        "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+        "conditionalConclusion": "Body invalid under inspected HTML. This does not qualify the historical argument-rejection contract.",
+        "references": [
+          "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+          "CTM-LANDING",
+          "CTM-PREVIEW"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Keep NOT-RUN. A body-syntax negative acceptance contract would require a separate agreement even if final grammar confirms exclusion.",
+        "historicalIntent": {
+          "epistemicStatus": "hypothesized",
+          "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+        },
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "templateAnalysis": {
+        "variables": [
+          {
+            "variable": "$iri",
+            "position": 14,
+            "line": 2,
+            "column": 14,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$iri",
+            "position": 30,
+            "line": 3,
+            "column": 11,
+            "role": "Subject Identifier von topic (unmarkiert)"
+          }
+        ],
+        "declaration": "def template($iri)",
+        "bindings": [
+          [
+            "$iri",
+            "^<http://www.example.org/>"
+          ]
+        ],
+        "invocations": [
+          {
+            "text": "template(^<http://www.example.org/>)",
+            "position": 41,
+            "line": 6
+          }
+        ]
+      },
+      "intendedNegativeCause": {
+        "argumentPosition": 1,
+        "marker": "^",
+        "cause": "Argument 1 mit ^ ist für den beabsichtigten unmarkierten SI-Verwendungskontext ungeeignet.",
+        "currentlyReached": false,
+        "actualBlockingCause": "INVALID-TEMPLATE-BODY/:template-identity-tail",
+        "evidence": "Originalkörper und markiertes Argument; bei 2nd-arg Originalkommentar valid/invalid."
+      },
+      "variablePositionsReverifiedFromOriginal": true,
+      "templateAnalysisProvenance": {
+        "positions": "observed: reverified from unchanged original text",
+        "roles": "derived: manually reviewed against source syntax and cited grammar",
+        "historicalArgumentIntent": "inferred from original argument markers and comments; not an executed argument check"
+      },
+      "expandedControls": [],
+      "auxiliarySources": []
+    },
+    {
+      "id": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+      "epistemicStatus": "observed",
+      "category": "invalid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "bytes": 167,
+        "sha256": "e7e8ca08ad1dec89549afbe2d3cf90098269031f239ddae37258bf87ba4c018f",
+        "hex": "0a6465662074656d706c6174652824697269312c202469726932290a20202020746f706963312024697269312e0a20202020746f706963322024697269322e0a656e640a0a74656d706c617465283c687474703a2f2f7777772e6578616d706c652e6f72672f3e2c2020202020232076616c69640a2020202020202020203d3c687474703a2f2f7777772e6578616d706c652e6f72672f3e29202020202320696e76616c69640a",
+        "text": "\ndef template($iri1, $iri2)\n    topic1 $iri1.\n    topic2 $iri2.\nend\n\ntemplate(<http://www.example.org/>,     # valid\n         =<http://www.example.org/>)    # invalid\n"
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-subject-locator-2nd-arg.ctm",
+      "baseline": null,
+      "actualCondition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-subject-locator-2nd-arg.ctm at CHARACTER 44 (line 3, column 17): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 44,
+        "line": 3,
+        "column": 17,
+        "positionUnit": "character",
+        "source": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "cause": null,
+        "context": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "sourceKey": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "sourceBytes": 167,
+        "sourceHex": "0A6465662074656D706C6174652824697269312C202469726932290A20202020746F706963312024697269312E0A20202020746F706963322024697269322E0A656E640A0A74656D706C617465283C687474703A2F2F7777772E6578616D706C652E6F72672F3E2C2020202020232076616C69640A2020202020202020203D3C687474703A2F2F7777772E6578616D706C652E6F72672F3E29202020202320696E76616C69640A",
+        "sourceText": "\ndef template($iri1, $iri2)\n    topic1 $iri1.\n    topic2 $iri2.\nend\n\ntemplate(<http://www.example.org/>,     # valid\n         =<http://www.example.org/>)    # invalid\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-subject-locator-2nd-arg.ctm at CHARACTER 44 (line 3, column 17): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 44,
+          "line": 3,
+          "column": 17,
+          "positionUnit": "character",
+          "source": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "finalCounter": null,
+        "requests": [],
+        "environments": [],
+        "aliasTransfers": [],
+        "actualCXTM": null,
+        "actualBytes": null,
+        "expectedBytes": null,
+        "expectedCXTM": null,
+        "firstDifferentByte": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": null,
+        "referencesCurrent": null
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "C",
+      "priorJustification": "HTML-Ableitung [50]→[51]→[52]→[17]→[12] geprüft; vollständigen veröffentlichten Grammatiktext abgleichen, keine stillschweigende Erweiterung. Die frühe Body-Syntaxablehnung ist keine erreichte Prüfung des markierten Arguments.",
+      "decision": {
+        "classification": "C",
+        "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+        "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+        "conditionalConclusion": "Body invalid under inspected HTML. This does not qualify the historical argument-rejection contract.",
+        "references": [
+          "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+          "CTM-LANDING",
+          "CTM-PREVIEW"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Keep NOT-RUN. A body-syntax negative acceptance contract would require a separate agreement even if final grammar confirms exclusion.",
+        "historicalIntent": {
+          "epistemicStatus": "hypothesized",
+          "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+        },
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "templateAnalysis": {
+        "variables": [
+          {
+            "variable": "$iri1",
+            "position": 14,
+            "line": 2,
+            "column": 14,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$iri2",
+            "position": 21,
+            "line": 2,
+            "column": 21,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$iri1",
+            "position": 39,
+            "line": 3,
+            "column": 12,
+            "role": "Subject Identifier von topic1 (unmarkiert)"
+          },
+          {
+            "variable": "$iri2",
+            "position": 57,
+            "line": 4,
+            "column": 12,
+            "role": "Subject Identifier von topic2 (unmarkiert)"
+          }
+        ],
+        "declaration": "def template($iri1, $iri2)",
+        "bindings": [
+          [
+            "$iri1",
+            "<http://www.example.org/>"
+          ],
+          [
+            "$iri2",
+            "=<http://www.example.org/>"
+          ]
+        ],
+        "invocations": [
+          {
+            "text": "template(<http://www.example.org/>,     # valid\n         =<http://www.example.org/>)",
+            "position": 69,
+            "line": 7
+          }
+        ]
+      },
+      "intendedNegativeCause": {
+        "argumentPosition": 2,
+        "marker": "=",
+        "cause": "Argument 2 mit = ist für den beabsichtigten unmarkierten SI-Verwendungskontext ungeeignet.",
+        "currentlyReached": false,
+        "actualBlockingCause": "INVALID-TEMPLATE-BODY/:template-identity-tail",
+        "evidence": "Originalkörper und markiertes Argument; bei 2nd-arg Originalkommentar valid/invalid."
+      },
+      "variablePositionsReverifiedFromOriginal": true,
+      "templateAnalysisProvenance": {
+        "positions": "observed: reverified from unchanged original text",
+        "roles": "derived: manually reviewed against source syntax and cited grammar",
+        "historicalArgumentIntent": "inferred from original argument markers and comments; not an executed argument check"
+      },
+      "expandedControls": [],
+      "auxiliarySources": []
+    },
+    {
+      "id": "ctm/invalid/template-subject-locator3.ctm",
+      "epistemicStatus": "observed",
+      "category": "invalid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/ctm/invalid/template-subject-locator3.ctm",
+        "bytes": 78,
+        "sha256": "d53c835df922469d65e5103f48b38faa94be56c06a4cb1da356a8ad6b277496d",
+        "hex": "0a6465662074656d706c6174652824697269290a20202020746f70696320246972692e0a656e640a0a74656d706c617465283d3c687474703a2f2f7777772e6578616d706c652e6f72672f3e290a",
+        "text": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(=<http://www.example.org/>)\n"
+      },
+      "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-subject-locator3.ctm",
+      "baseline": null,
+      "actualCondition": {
+        "condition": "INVALID-TEMPLATE-BODY",
+        "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-subject-locator3.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+        "code": "template-identity-tail",
+        "position": 34,
+        "line": 3,
+        "column": 15,
+        "positionUnit": "character",
+        "source": "ctm/invalid/template-subject-locator3.ctm",
+        "cause": null,
+        "context": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "ctm/invalid/template-subject-locator3.ctm",
+        "documentIRI": "https://ctm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/ctm/invalid/template-subject-locator3.ctm",
+        "sourceKey": "ctm/invalid/template-subject-locator3.ctm",
+        "sourceBytes": 78,
+        "sourceHex": "0A6465662074656D706C6174652824697269290A20202020746F70696320246972692E0A656E640A0A74656D706C617465283D3C687474703A2F2F7777772E6578616D706C652E6F72672F3E290A",
+        "sourceText": "\ndef template($iri)\n    topic $iri.\nend\n\ntemplate(=<http://www.example.org/>)\n",
+        "condition": {
+          "condition": "INVALID-TEMPLATE-BODY",
+          "message": "TEMPLATE-IDENTITY-TAIL in ctm/invalid/template-subject-locator3.ctm at CHARACTER 34 (line 3, column 15): Unmarked variable identities in Topic Tails remain outside the supported grammar.",
+          "code": "template-identity-tail",
+          "position": 34,
+          "line": 3,
+          "column": 15,
+          "positionUnit": "character",
+          "source": "ctm/invalid/template-subject-locator3.ctm",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "finalCounter": null,
+        "requests": [],
+        "environments": [],
+        "aliasTransfers": [],
+        "actualCXTM": null,
+        "actualBytes": null,
+        "expectedBytes": null,
+        "expectedCXTM": null,
+        "firstDifferentByte": null,
+        "byteExact": false,
+        "canonicalizationPreservesMap": null,
+        "referencesCurrent": null
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "C",
+      "priorJustification": "HTML-Ableitung [50]→[51]→[52]→[17]→[12] geprüft; vollständigen veröffentlichten Grammatiktext abgleichen, keine stillschweigende Erweiterung. Die frühe Body-Syntaxablehnung ist keine erreichte Prüfung des markierten Arguments.",
+      "decision": {
+        "classification": "C",
+        "scope": "Published-edition legality of unmarked additional SI variable in Topic Tail",
+        "claim": "The inspected HTML excludes this body position. The current condition occurs there before argument qualification; later published grammar has not been verified.",
+        "conditionalConclusion": "Body invalid under inspected HTML. This does not qualify the historical argument-rejection contract.",
+        "references": [
+          "CTM-HTML:3.3.5–3.3.7,3.4,3.8–3.9,3.14–3.15",
+          "CTM-LANDING",
+          "CTM-PREVIEW"
+        ],
+        "openQuestions": [
+          "Q-CTM",
+          "Q-ERRATA"
+        ],
+        "nextAction": "Keep NOT-RUN. A body-syntax negative acceptance contract would require a separate agreement even if final grammar confirms exclusion.",
+        "historicalIntent": {
+          "epistemicStatus": "hypothesized",
+          "claim": "The corpus may have assumed variable substitution in an additional SI tail position; no editor decision/erratum proving that intention was found."
+        },
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "templateAnalysis": {
+        "variables": [
+          {
+            "variable": "$iri",
+            "position": 14,
+            "line": 2,
+            "column": 14,
+            "role": "Parameterdeklaration"
+          },
+          {
+            "variable": "$iri",
+            "position": 30,
+            "line": 3,
+            "column": 11,
+            "role": "Subject Identifier von topic (unmarkiert)"
+          }
+        ],
+        "declaration": "def template($iri)",
+        "bindings": [
+          [
+            "$iri",
+            "=<http://www.example.org/>"
+          ]
+        ],
+        "invocations": [
+          {
+            "text": "template(=<http://www.example.org/>)",
+            "position": 41,
+            "line": 6
+          }
+        ]
+      },
+      "intendedNegativeCause": {
+        "argumentPosition": 1,
+        "marker": "=",
+        "cause": "Argument 1 mit = ist für den beabsichtigten unmarkierten SI-Verwendungskontext ungeeignet.",
+        "currentlyReached": false,
+        "actualBlockingCause": "INVALID-TEMPLATE-BODY/:template-identity-tail",
+        "evidence": "Originalkörper und markiertes Argument; bei 2nd-arg Originalkommentar valid/invalid."
+      },
+      "variablePositionsReverifiedFromOriginal": true,
+      "templateAnalysisProvenance": {
+        "positions": "observed: reverified from unchanged original text",
+        "roles": "derived: manually reviewed against source syntax and cited grammar",
+        "historicalArgumentIntent": "inferred from original argument markers and comments; not an executed argument check"
+      },
+      "expandedControls": [],
+      "auxiliarySources": []
+    },
+    {
+      "id": "xtm2/in/mergemap-itemid.xtm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/xtm2/in/mergemap-itemid.xtm",
+        "bytes": 148,
+        "sha256": "23de617d6e201374ec3f9c12e02be88bc555dd7dbcd262e854c8e9a3f96966d1",
+        "hex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e0a20203c6d657267654d617020687265663d226d657267656d61702d6974656d69642e737562222f3e0a20203c746f7069632069643d22746f706963223e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap-itemid.sub\"/>\n  <topic id=\"topic\">\n  </topic>\n</topicMap>\n"
+      },
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+      "baseline": {
+        "path": "vendor/cxtm/xtm2/baseline/mergemap-itemid.xtm.cxtm",
+        "bytes": 314,
+        "sha256": "03c5c1694e572674c0982f3b01d8c2fb323159ba6436857924814ea1e7a2d5d7",
+        "hex": "3c746f7069634d61703e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e6d657267656d61702d6974656d69642e737562237468652d746f7069632d6d61703c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e6d657267656d61702d6974656d69642e73756223746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<itemIdentifiers>\n<locator>mergemap-itemid.sub#the-topic-map</locator>\n</itemIdentifiers>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-itemid.sub#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM mergeMap is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-itemid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm), approximately 2:41: XTM mergeMap is not implemented in this subset.",
+        "line": 2,
+        "column": 41,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+        "sourceKey": "xtm2/in/mergemap-itemid.xtm",
+        "cause": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "xtm2/in/mergemap-itemid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-itemid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm), approximately 2:41: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 41,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+          "sourceKey": "xtm2/in/mergemap-itemid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "priorClassification": "normative-conflict",
+      "priorDecision": "C",
+      "priorJustification": "Vorläufiger Konflikt: Baseline überträgt Quell-Map-II, 4.21 nennt nur Topics/Associations; endgültige Norm-/Errataentscheidung offen. Keine Zusage eines PASS.",
+      "decision": {
+        "classification": "A",
+        "scope": "Missing non-cyclic XTM mergeMap operation, not a claim that the baseline is fully normative",
+        "claim": "The conforming non-cyclic source and available subresource require content import. The current reader rejects mergeMap before returning a model.",
+        "references": [
+          "XTM-HTML:4.2,4.4–4.6,4.21,5",
+          "TMDM-HTML:5.1,5.2,5.3.5,6.1–6.2"
+        ],
+        "openQuestions": [
+          "Q-ERRATA"
+        ],
+        "minimalCorrection": "In a separately authorized 22H, resolve pinned child bytes using the child Document IRI and native content import; preserve topic identifiers and target-map identity. No root-map II transfer solely for baseline matching.",
+        "baselineAspect": {
+          "epistemicStatus": "derived",
+          "claim": "The expected child map II is outside the 4.21 import operands. Child model proves that this II belongs to the child Map, not its Topic. No current successful original model exists, so calling the whole case B would fail the requested B definition."
+        },
+        "nextAction": "Plan normative mergeMap support separately; its result may still disagree with this historical baseline. Do not forecast this original as an unconditional PASS.",
+        "changeFrom22A": "Resolves the absent non-cyclic import as A using publication-identical declared XTM text; isolates the baseline root-II conflict rather than treating unsupported as an acceptable B result.",
+        "epistemicStatus": "derived",
+        "evidenceStrength": "publication-identical declared public XTM/TMDM plus fresh execution"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "sourceReferenceGraph": [
+        {
+          "fromDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+          "href": "mergemap-itemid.sub",
+          "toDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.sub"
+        }
+      ],
+      "auxiliaryObservations": [
+        {
+          "id": "xtm2/in/mergemap-itemid.sub",
+          "kind": "auxiliary-source-only-not-an-original-contract",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.sub",
+          "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6974656D4964656E7469747920687265663D22237468652D746F7069632D6D6170222F3E0A20203C746F7069632069643D22746F706963223E202020200A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+          "sourceBytes": 151,
+          "condition": null,
+          "nativeModel": {
+            "topicCount": 1,
+            "associationCount": 0,
+            "canonicalParentsAndInverseReferences": true,
+            "topics": [
+              {
+                "ordinal": 1,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.sub#topic"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              }
+            ],
+            "associations": []
+          },
+          "mapItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.sub#the-topic-map"
+          ],
+          "actualCXTM": "<topicMap>\n<itemIdentifiers>\n<locator>#the-topic-map</locator>\n</itemIdentifiers>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+          "actualBytes": 185,
+          "canonicalizationPreservesMap": true,
+          "referencesCurrent": true
+        }
+      ],
+      "auxiliarySources": [
+        {
+          "path": "vendor/cxtm/xtm2/in/mergemap-itemid.sub",
+          "bytes": 151,
+          "sha256": "20cfc5dafa42543648b9f3ee4f41434f56f7fe7679afb0f4a1c870bde2415c01",
+          "hex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e0a20203c6974656d4964656e7469747920687265663d22237468652d746f7069632d6d6170222f3e0a20203c746f7069632069643d22746f706963223e202020200a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+          "text": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <itemIdentity href=\"#the-topic-map\"/>\n  <topic id=\"topic\">    \n  </topic>\n</topicMap>\n"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/mergemap-loop.xtm",
+      "epistemicStatus": "observed",
+      "category": "valid",
+      "registeredBefore": "not-run",
+      "registeredAfter": "not-run",
+      "source": {
+        "path": "vendor/cxtm/xtm2/in/mergemap-loop.xtm",
+        "bytes": 150,
+        "sha256": "033f5191ccfa3af9382a9cc6c47720f9b63b990f9485f10c3d2ac8d113b1cedb",
+        "hex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e0a20203c6d657267654d617020687265663d226d657267656d61702d6c6f6f702e737562222f3e0a20203c746f7069632069643d22746f706963223e202020200a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap-loop.sub\"/>\n  <topic id=\"topic\">    \n  </topic>\n</topicMap>\n"
+      },
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+      "baseline": {
+        "path": "vendor/cxtm/xtm2/baseline/mergemap-loop.xtm.cxtm",
+        "bytes": 222,
+        "sha256": "f0f56a0e2cf22ba274b6f10ef20cd128841908ed0f3e10de3b67b218c394fc6f",
+        "hex": "3c746f7069634d61703e0a3c746f706963206e756d6265723d2231223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e23746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c746f706963206e756d6265723d2232223e0a3c6974656d4964656e746966696572733e0a3c6c6f6361746f723e6d657267656d61702d6c6f6f702e73756223746f7069633c2f6c6f6361746f723e0a3c2f6974656d4964656e746966696572733e0a3c2f746f7069633e0a3c2f746f7069634d61703e0a",
+        "text": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-loop.sub#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n"
+      },
+      "actualCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM mergeMap is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-loop.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm), approximately 2:39: XTM mergeMap is not implemented in this subset.",
+        "line": 2,
+        "column": 39,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+        "sourceKey": "xtm2/in/mergemap-loop.xtm",
+        "cause": null
+      },
+      "nativeModel": null,
+      "observation": {
+        "id": "xtm2/in/mergemap-loop.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-loop.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm), approximately 2:39: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 39,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+          "sourceKey": "xtm2/in/mergemap-loop.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "priorClassification": "unresolved-requirement",
+      "priorDecision": "C",
+      "priorJustification": "Positive Baseline fordert Terminierung mit beiden Dokumenten. Explizite Zyklus-/Cache-Semantik im geprüften Text nicht angegeben; Profilentscheidung/Primärbeleg erforderlich.",
+      "decision": {
+        "classification": "C",
+        "scope": "Cyclic deserialization semantics and finite model completion",
+        "claim": "Root and subresource reference each other before their local Topic. The current rejection is unsupported, not cycle handling. The inspected rules do not prescribe a repeated-document cache or cycle error.",
+        "references": [
+          "XTM-HTML:4.2,4.21,5",
+          "TMDM-HTML:5.3.5,6.1–6.2"
+        ],
+        "openQuestions": [
+          "Q-XTM-LOOP",
+          "Q-ERRATA"
+        ],
+        "conditionalConclusion": "A finite closure retaining both document-qualified topic identifiers is consistent with the baseline; its operational derivation needs explicit qualification.",
+        "nextAction": "Separately approve a finite resolver/graph-completion acceptance contract before implementing or registering this cyclic original.",
+        "epistemicStatus": "derived",
+        "evidenceStrength": "explicit missing primary clause or interpretation; bounded conclusion from available sources"
+      },
+      "actualCXTM": null,
+      "comparison": {
+        "executed": false,
+        "byteExact": null,
+        "firstDifferentByte": null
+      },
+      "nativeModelUnavailableReason": "Reader rejected before returning an original map; no replacement map constructed.",
+      "sourceReferenceGraph": [
+        {
+          "fromDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+          "href": "mergemap-loop.sub",
+          "toDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.sub"
+        },
+        {
+          "fromDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.sub",
+          "href": "mergemap-loop.xtm",
+          "toDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm"
+        }
+      ],
+      "auxiliaryObservations": [
+        {
+          "id": "xtm2/in/mergemap-loop.sub",
+          "kind": "auxiliary-source-only-not-an-original-contract",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.sub",
+          "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6D657267654D617020687265663D226D657267656D61702D6C6F6F702E78746D222F3E0A20203C746F7069632069643D22746F706963223E202020200A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+          "sourceBytes": 150,
+          "condition": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-loop.sub (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.sub), approximately 2:39: XTM mergeMap is not implemented in this subset.",
+            "line": 2,
+            "column": 39,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.sub",
+            "sourceKey": "xtm2/in/mergemap-loop.sub",
+            "cause": null
+          },
+          "nativeModel": null,
+          "mapItemIdentifiers": null,
+          "actualCXTM": null,
+          "actualBytes": null,
+          "canonicalizationPreservesMap": null,
+          "referencesCurrent": null
+        }
+      ],
+      "auxiliarySources": [
+        {
+          "path": "vendor/cxtm/xtm2/in/mergemap-loop.sub",
+          "bytes": 150,
+          "sha256": "94e4a9ac5ea85c2f5025cf8feff5e8eb62f5981795b0d19a8a64af1b2f69835c",
+          "hex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e0a20203c6d657267654d617020687265663d226d657267656d61702d6c6f6f702e78746d222f3e0a20203c746f7069632069643d22746f706963223e202020200a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+          "text": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap-loop.xtm\"/>\n  <topic id=\"topic\">    \n  </topic>\n</topicMap>\n"
+        }
+      ]
+    }
+  ],
+  "decisionCounts": {
+    "A": 1,
+    "B": 0,
+    "C": 12
+  },
+  "statusChanges": 0,
+  "newPASS": 0
+}

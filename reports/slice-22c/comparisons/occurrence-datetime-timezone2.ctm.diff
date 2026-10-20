@@ -1,0 +1,11 @@
+--- unchanged-original-baseline
++++ fresh-actual
+@@ -17,7 +17,7 @@
+ <type topicref="3"></type>
+ </name>
+ <occurrence number="1">
+-<value>2011-01-01T00:00:00+02:00</value>
++<value>2010-12-31T22:00:00Z</value>
+ <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+ <type topicref="1"></type>
+ </occurrence>
