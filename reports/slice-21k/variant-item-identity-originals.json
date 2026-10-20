@@ -1,0 +1,173 @@
+{
+  "kind": "executed-original-variant-item-identity-registration",
+  "cases": [
+    {
+      "id": "xtm2/in/itemid-variant.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+      "sourceKey": "xtm2/in/itemid-variant.xtm",
+      "sourceBytes": 351,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E20200A20203C746F7069632069643D22746F706963223E0A202020203C6E616D653E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A2020202020203C76617269616E743E0A20202020202020203C6974656D4964656E7469747920687265663D22237468652D76617269616E74222F3E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D2223636F6D6D616E64222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174613E544F504943213C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant>\n        <itemIdentity href=\"#the-variant\"/>\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceVariantCount": 1,
+      "variantIdentifier": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm#the-variant",
+      "model": {
+        "nameModel": {
+          "identity": {
+            "topicCount": 3,
+            "associationCount": 0,
+            "canonicalParentsAndInverseReferences": true,
+            "topics": [
+              {
+                "ordinal": 1,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm#topic"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              },
+              {
+                "ordinal": 2,
+                "itemIdentifiers": [],
+                "subjectIdentifiers": [
+                  "http://psi.topicmaps.org/iso13250/model/topic-name"
+                ],
+                "subjectLocators": []
+              },
+              {
+                "ordinal": 3,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm#command"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              }
+            ],
+            "associations": []
+          },
+          "mapItemIdentifiers": [],
+          "canonicalNameParentTypeReferences": true,
+          "names": [
+            {
+              "value": "Topic",
+              "parent": 1,
+              "type": 2,
+              "scope": [],
+              "itemIdentifiers": [],
+              "variantCount": 1
+            }
+          ]
+        },
+        "canonicalVariantReferences": true,
+        "variants": [
+          {
+            "value": "TOPIC!",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "parentName": 1,
+            "scope": [
+              3
+            ],
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm#the-variant"
+            ],
+            "reifier": null
+          }
+        ]
+      },
+      "condition": null,
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n<itemIdentifiers>\n<locator>#the-variant</locator>\n</itemIdentifiers>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n<itemIdentifiers>\n<locator>#the-variant</locator>\n</itemIdentifiers>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 666,
+      "expectedBytes": 666,
+      "firstDifferentByte": null,
+      "status": "pass",
+      "sourceSHA256": "73cd8cd0cea5d56f990f0653428b0cb954d730f2c2785f95cd5a0979d05dc9e3",
+      "baselineSHA256": "e35c1eb8965421ab8c2125856623bb86079c59c07f094e0719735b3628f8382b",
+      "actualSHA256": "e35c1eb8965421ab8c2125856623bb86079c59c07f094e0719735b3628f8382b",
+      "executedInASDFTestOp": true
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-iid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+      "sourceKey": "xtm2/in/variant-duplicate-iid.xtm",
+      "sourceBytes": 543,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E20200A20203C746F7069632069643D22746F706963223E0A202020203C6E616D653E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A2020202020203C76617269616E743E0A20202020202020203C6974656D4964656E7469747920687265663D22237468652D76617269616E74222F3E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D2223636F6D6D616E64222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174613E544F504943213C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A2020202020203C76617269616E743E0A20202020202020203C6974656D4964656E7469747920687265663D22237468652D76617269616E74222F3E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D2223636F6D6D616E64222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174613E544F504943213C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant>\n        <itemIdentity href=\"#the-variant\"/>\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n      <variant>\n        <itemIdentity href=\"#the-variant\"/>\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceVariantCount": 2,
+      "variantIdentifier": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm#the-variant",
+      "model": {
+        "nameModel": {
+          "identity": {
+            "topicCount": 3,
+            "associationCount": 0,
+            "canonicalParentsAndInverseReferences": true,
+            "topics": [
+              {
+                "ordinal": 1,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm#topic"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              },
+              {
+                "ordinal": 2,
+                "itemIdentifiers": [],
+                "subjectIdentifiers": [
+                  "http://psi.topicmaps.org/iso13250/model/topic-name"
+                ],
+                "subjectLocators": []
+              },
+              {
+                "ordinal": 3,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm#command"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              }
+            ],
+            "associations": []
+          },
+          "mapItemIdentifiers": [],
+          "canonicalNameParentTypeReferences": true,
+          "names": [
+            {
+              "value": "Topic",
+              "parent": 1,
+              "type": 2,
+              "scope": [],
+              "itemIdentifiers": [],
+              "variantCount": 1
+            }
+          ]
+        },
+        "canonicalVariantReferences": true,
+        "variants": [
+          {
+            "value": "TOPIC!",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "parentName": 1,
+            "scope": [
+              3
+            ],
+            "itemIdentifiers": [
+              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm#the-variant"
+            ],
+            "reifier": null
+          }
+        ]
+      },
+      "condition": null,
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n<itemIdentifiers>\n<locator>#the-variant</locator>\n</itemIdentifiers>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n<itemIdentifiers>\n<locator>#the-variant</locator>\n</itemIdentifiers>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 666,
+      "expectedBytes": 666,
+      "firstDifferentByte": null,
+      "status": "pass",
+      "sourceSHA256": "33bad7a941744e476b2facc1a89ab8a7cea1efe063a5869c211cc9053ea6f879",
+      "baselineSHA256": "e35c1eb8965421ab8c2125856623bb86079c59c07f094e0719735b3628f8382b",
+      "actualSHA256": "e35c1eb8965421ab8c2125856623bb86079c59c07f094e0719735b3628f8382b",
+      "executedInASDFTestOp": true
+    }
+  ]
+}

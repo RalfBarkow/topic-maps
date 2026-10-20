@@ -334,7 +334,7 @@
     ("resourceRef-missing-href" "<variant><scope><topicRef href='#s'/></scope><resourceRef/></variant>" :missing-attribute)))
     (variant-error-control (first row) (format nil "<topic id='a'><name><value>N</value>~A</name></topic>" (second row)) 'xtm-rejection (third row)))
   (dolist (row '(("resourceData-integer" "<variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant>" :resource-data-datatype)
-    ("itemIdentity" "<variant><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant>" :unsupported-construct)
+    ("reified-itemIdentity" "<variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant>" :reification)
     ("reifier" "<variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant>" :reification)
     ("datatype" "<variant><scope><topicRef href='#s'/></scope><resourceData datatype='urn:other'>V</resourceData></variant>" :resource-data-datatype)
     ("embedded-XML" "<variant><scope><topicRef href='#s'/></scope><resourceData><b xmlns='urn:other'>V</b></resourceData></variant>" :resource-data-markup)))

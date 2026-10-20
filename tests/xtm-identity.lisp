@@ -26,6 +26,8 @@
 (defvar *resource-ref-controls* nil)
 (defvar *uri-data-outputs* nil)
 (defvar *uri-data-controls* nil)
+(defvar *variant-iid-outputs* nil)
+(defvar *variant-iid-controls* nil)
 (defun check (name truth)
   (push name *checks*)
   (unless truth (error "XTM test failed: ~A" name))
@@ -477,10 +479,10 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
-  (setf *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil)
+  (setf *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil)
   (handler-case
       (progn (original-contracts) (negative-original-controls) (negative-original-contracts)
-             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (result-classification-tests)
+             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -499,7 +501,7 @@
            (array (items) (coerce items 'vector)))
       (with-open-file (out pathname :direction :output :if-exists :supersede :external-format :utf-8)
         (topic-maps.test-foundation::emit-json-value
-          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant subset, 52 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration"
+          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant subset, 54 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration"
                   "corpusCommit" "cd165b150176c1d6842b37be9cc9051b40d4996b"
                   "statuses" (fields "pass" (count :pass cases :key #'topic-maps.test-foundation:test-case-status)
                                      "fail" (count :fail cases :key #'topic-maps.test-foundation:test-case-status)
@@ -534,6 +536,8 @@
                   "variantResourceRefControls" (array *resource-ref-controls*)
                   "variantResourceDataURIOriginals" (array *uri-data-outputs*)
                   "variantResourceDataURIControls" (array *uri-data-controls*)
+                  "variantItemIdentityOriginals" (array *variant-iid-outputs*)
+                  "variantItemIdentityControls" (array *variant-iid-controls*)
                   "actualAndExpected" (array (loop for (id actual expected model condition source-length) in *outputs* collect
                     (fields "id" id "actual" (when actual (babel:octets-to-string actual :encoding :utf-8))
                             "expected" (babel:octets-to-string expected :encoding :utf-8) "byteLength" (when actual (length actual))

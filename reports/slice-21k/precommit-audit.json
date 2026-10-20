@@ -1,0 +1,43 @@
+{
+  "kind": "slice-21k-precommit-integrity-audit",
+  "verifiedAtUTC": "2026-10-20T05:53:19.689190+00:00",
+  "branch": "codex/xtm-slice-21k",
+  "parent": "49e4f2efb3df426d8ce249bc9b714bbd81323525",
+  "initialIndexAndWorktree": "clean",
+  "trackedChanges": [
+    "src/xtm/reader.lisp",
+    "tests/xtm-identity.lisp",
+    "tests/xtm-variants.lisp",
+    "topic-maps.asd"
+  ],
+  "productionChanges": [
+    "src/xtm/reader.lisp"
+  ],
+  "protectedSubsystemsUnchanged": [
+    "TMDM",
+    "CTM",
+    "CXTM",
+    "XML"
+  ],
+  "newPathPrefixes": [
+    "reports/slice-21k/"
+  ],
+  "otherNewPaths": [
+    "tests/xtm-variant-item-identities.lisp",
+    "scripts/validate-slice-21k.py",
+    "docs/slice-21k-xtm-variant-item-identity.md"
+  ],
+  "trackedBaseFilesVerified": 4748,
+  "protectedBaseFilesVerified": 4744,
+  "historicalReportsVerified": 2491,
+  "pinnedCorpusFilesVerified": 2006,
+  "allExecutionSourceHashesUnchanged": true,
+  "allProtectedFilesUnchanged": true,
+  "nativeVariantIdentifierAPIPreflightPassed": true,
+  "resourceModelAndOriginalResultsUnchanged": true,
+  "acceptedValidationRuns": 66,
+  "faultControls": 60,
+  "diagnosticChangesLimitedToRequestedOriginals": true,
+  "acceptancePassed": true,
+  "gitDiffCheckPassed": true
+}

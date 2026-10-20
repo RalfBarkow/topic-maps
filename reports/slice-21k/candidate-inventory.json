@@ -1,0 +1,58 @@
+{
+  "candidates": [
+    {
+      "id": "xtm2/in/itemid-variant.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+      "sourceBytes": 351,
+      "sourceSHA256": "73cd8cd0cea5d56f990f0653428b0cb954d730f2c2785f95cd5a0979d05dc9e3",
+      "baselineBytes": 666,
+      "baselineSHA256": "e35c1eb8965421ab8c2125856623bb86079c59c07f094e0719735b3628f8382b",
+      "beforeObservation": {
+        "id": "xtm2/in/itemid-variant.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM itemIdentity is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-variant.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm), approximately 6:44: XTM itemIdentity is not implemented in this subset.",
+          "line": 6,
+          "column": 44,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+          "sourceKey": "xtm2/in/itemid-variant.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-iid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+      "sourceBytes": 543,
+      "sourceSHA256": "33bad7a941744e476b2facc1a89ab8a7cea1efe063a5869c211cc9053ea6f879",
+      "baselineBytes": 666,
+      "baselineSHA256": "e35c1eb8965421ab8c2125856623bb86079c59c07f094e0719735b3628f8382b",
+      "beforeObservation": {
+        "id": "xtm2/in/variant-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM itemIdentity is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm), approximately 6:44: XTM itemIdentity is not implemented in this subset.",
+          "line": 6,
+          "column": 44,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+          "sourceKey": "xtm2/in/variant-duplicate-iid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    }
+  ]
+}

@@ -163,7 +163,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                           (when (< next phase) (reject :element-order "variant child order is invalid." child))
                           (setf phase next)
                           (cond
-                            ((string= kind "itemIdentity") (leaf-href child) (unsupported child))
+                            ((string= kind "itemIdentity") nil)
                             ((string= kind "scope")
                              (when scope-seen (reject :duplicate-variant-scope "Only one variant scope is allowed." child))
                              (setf scope-seen t))
@@ -171,7 +171,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                              (unless scope-seen (reject :missing-variant-scope "variant requires scope before its resource." child))
                              (when resource-seen (reject :variant-resource-cardinality "variant requires exactly one resource." child))
                              (setf resource-seen t)))
-                          (validate child '("scope" "resourceData" "resourceRef"))))
+                          (validate child '("itemIdentity" "scope" "resourceData" "resourceRef"))))
                       (unless scope-seen (reject :missing-variant-scope "variant requires a scope element." node))
                       (unless resource-seen (reject :missing-variant-resource "variant requires a resource element." node))))
                    ((string= name "resourceRef") (leaf-href node))
@@ -250,9 +250,14 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                       (t text))))
     ;; ADD-VARIANT canonicalizes the union and enforces the proper superset.
     ;; A nonempty explicit scope may still add no theme to the Name scope.
-    (topic-maps.tmdm:add-variant name value
-      :datatype (if (or reference-p uri-data-p) (topic-maps.tmdm:iri-datatype) (topic-maps.tmdm:string-datatype))
-      :scope (append (topic-maps.tmdm:topic-name-scope name) explicit))))
+    (let ((variant (topic-maps.tmdm:add-variant name value
+                     :datatype (if (or reference-p uri-data-p) (topic-maps.tmdm:iri-datatype) (topic-maps.tmdm:string-datatype))
+                     :scope (append (topic-maps.tmdm:topic-name-scope name) explicit))))
+      ;; Normalize first: an equal Variant may already own this identifier.
+      ;; Keep the native canonical result and its global conflict conditions.
+      (dolist (child children variant)
+        (when (string= (node-name child) "itemIdentity")
+          (setf variant (topic-maps.tmdm:add-item-identifier variant (leaf-href child))))))))
 (defun read-name (node owner map)
   (let* ((children (elements node))
          (type-node (find "type" children :key #'node-name :test #'string=))

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "xtm2/in/itemid-variant.xtm",
+    "before": {
+      "id": "xtm2/in/itemid-variant.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM itemIdentity is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-variant.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm), approximately 6:44: XTM itemIdentity is not implemented in this subset.",
+        "line": 6,
+        "column": 44,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+        "sourceKey": "xtm2/in/itemid-variant.xtm",
+        "cause": null
+      },
+      "status": "rejected",
+      "actualCXTM": null,
+      "byteExact": false
+    },
+    "after": {
+      "id": "xtm2/in/itemid-variant.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-variant.xtm",
+      "condition": null,
+      "status": "deserialized",
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n<itemIdentifiers>\n<locator>#the-variant</locator>\n</itemIdentifiers>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "byteExact": true
+    },
+    "reason": "Variant itemIdentity now uses the existing add-item-identifier API after native Variant normalization."
+  },
+  {
+    "id": "xtm2/in/variant-duplicate-iid.xtm",
+    "before": {
+      "id": "xtm2/in/variant-duplicate-iid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM itemIdentity is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/variant-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm), approximately 6:44: XTM itemIdentity is not implemented in this subset.",
+        "line": 6,
+        "column": 44,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+        "sourceKey": "xtm2/in/variant-duplicate-iid.xtm",
+        "cause": null
+      },
+      "status": "rejected",
+      "actualCXTM": null,
+      "byteExact": false
+    },
+    "after": {
+      "id": "xtm2/in/variant-duplicate-iid.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-iid.xtm",
+      "condition": null,
+      "status": "deserialized",
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n<itemIdentifiers>\n<locator>#the-variant</locator>\n</itemIdentifiers>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "byteExact": true
+    },
+    "reason": "Variant itemIdentity now uses the existing add-item-identifier API after native Variant normalization."
+  }
+]
