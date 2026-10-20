@@ -1,0 +1,34 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+Unhandled SB-C::INPUT-ERROR-IN-LOAD in thread #<SB-THREAD:THREAD tid=259 "main thread" RUNNING
+                                                 {7000828103}>:
+  READ error during LOAD:
+
+    end of file on #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp" {7000829243}>
+
+    (in form starting at line: 7, column: 42, file-position: 395)
+
+Backtrace for: #<SB-THREAD:THREAD tid=259 "main thread" RUNNING {7000828103}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<SB-C::INPUT-ERROR-IN-LOAD {70043E77A3}> #<unused argument> :QUIT T)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<SB-C::INPUT-ERROR-IN-LOAD {70043E77A3}>)
+2: (INVOKE-DEBUGGER #<SB-C::INPUT-ERROR-IN-LOAD {70043E77A3}>)
+3: (ERROR #<SB-C::INPUT-ERROR-IN-LOAD {70043E77A3}>)
+4: (SB-C:COMPILER-ERROR SB-C::INPUT-ERROR-IN-LOAD :CONDITION #<END-OF-FILE {70043E7773}> :POSITION 395 :LINE/COL NIL :STREAM #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp" {7000829243}>)
+5: (SB-C::%DO-FORMS-FROM-INFO #<FUNCTION (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {42CF3DB}> #<SB-C::SOURCE-INFO {7001852643}> SB-C::INPUT-ERROR-IN-LOAD)
+6: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp" {7000829243}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+7: ((LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp" {7000829243}> NIL)
+8: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<FUNCTION (LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) {42CF79B}> #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp" {7000829243}> NIL #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp" {7000829243}>)
+9: (LOAD #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp" {7000829243}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST :ERROR :EXTERNAL-FORMAT :DEFAULT)
+10: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp" {7000829243}>)
+11: ((FLET SB-UNIX::BODY :IN SB-IMPL::PROCESS-SCRIPT))
+12: ((FLET "WITHOUT-INTERRUPTS-BODY-" :IN SB-IMPL::PROCESS-SCRIPT))
+13: (SB-IMPL::PROCESS-SCRIPT "/Users/rgb/workspace/topic-maps/reports/slice-21l/failure-controls.lisp")
+14: (SB-IMPL::TOPLEVEL-INIT)
+15: ((FLET SB-UNIX::BODY :IN SB-IMPL::START-LISP))
+16: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::START-LISP))
+17: (SB-IMPL::%START-LISP)
+
+unhandled condition in --disable-debugger mode, quitting

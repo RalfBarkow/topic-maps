@@ -90,7 +90,8 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                     (attributes node '("version" "reifier") '("version"))
                     (unless (equal (attr node "version") "2.0")
                       (reject :invalid-version "This reader accepts XTM version 2.0 only." node))
-                    (check-reifier node)
+                    (when (attr node "reifier")
+                      (resolve-iri (attr node "reifier") *document-iri* node))
                     (let ((phase 0))
                       (dolist (child (elements node))
                         (let* ((name (node-name child))
@@ -225,6 +226,18 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                         (topic-maps.tmdm:topic-map-topics map))))
     (if topic (topic-maps.tmdm:canonical-topic topic)
         (topic-maps.tmdm:intern-topic map :item-identifier iri))))
+(defun read-map-reifier (node map)
+  ;; XTM 4.3.2 looks up Item Identifiers only, unlike topicRef (4.20).
+  ;; INTERN-TOPIC adds the II on a miss; any SI/II identity merging then
+  ;; follows the existing TMDM rules, independently of this lookup.
+  (when (attr node "reifier")
+    (let* ((iri (resolve-iri (attr node "reifier") *document-iri* node))
+           (topic (or (find iri (topic-maps.tmdm:topic-map-topics map)
+                        :test (lambda (iri topic)
+                                (member iri (topic-maps.tmdm:topic-item-identifiers topic) :test #'string=)))
+                      (topic-maps.tmdm:intern-topic map :item-identifier iri))))
+      (topic-maps.tmdm:set-item-reifier map topic)))
+  map)
 (defun core-topic (map local)
   (topic-maps.tmdm:intern-topic map :subject-identifier
     (concatenate 'string "http://psi.topicmaps.org/iso13250/model/" local)))
@@ -317,6 +330,8 @@ distinct. No resources are fetched. No externally supplied Map is mutated."
                         :line (sax:line-number handler) :column (sax:column-number handler)))))
            (map (topic-maps.tmdm:make-topic-map)))
       (validate-source root)
+      ;; The attribute is processed before itemIdentity and later Topic nodes.
+      (read-map-reifier root map)
       (dolist (child (elements root))
         (if (string= (node-name child) "itemIdentity")
             (topic-maps.tmdm:add-item-identifier map (leaf-href child))

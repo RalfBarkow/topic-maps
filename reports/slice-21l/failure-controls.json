@@ -1,0 +1,533 @@
+{
+  "kind": "executor-fault-controls-not-corpus-results",
+  "controls": [
+    {
+      "family": "positive",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "positive",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "positive",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "positive",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "positive",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 0,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "negative",
+      "mode": "accepted",
+      "actualOutcome": "ctm-acceptance",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 26,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "negative",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 26,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "negative",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 26,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "negative",
+      "mode": "wrong-cause",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 26,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "name",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 33,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "name",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 33,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "name",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 33,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "name",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 33,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "scope",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 43,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "scope",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 43,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "scope",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 43,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "scope",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 43,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "iid",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 48,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "iid",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 48,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "iid",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 48,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "iid",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 48,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 50,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 50,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 50,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 50,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-negative",
+      "mode": "accepted",
+      "actualOutcome": "ctm-acceptance",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 55,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-negative",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 55,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-negative",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 55,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-negative",
+      "mode": "wrong-cause",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 55,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-negative",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 55,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "merge-variant",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 56,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "merge-variant",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 56,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "merge-variant",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 56,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "merge-variant",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 56,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "merge-variant",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 56,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 57,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 57,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 57,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 57,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 57,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref-relative",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 58,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref-relative",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 58,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref-relative",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 58,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref-relative",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 58,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "resource-ref-relative",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 58,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "uri-data",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 59,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "uri-data",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 59,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "uri-data",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 59,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "uri-data",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 59,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "uri-data",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 59,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 60,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 60,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 60,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 60,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 60,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid-duplicate",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 61,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid-duplicate",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 61,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid-duplicate",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 61,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid-duplicate",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 61,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "variant-iid-duplicate",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 61,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "map-reifier",
+      "mode": "mismatch",
+      "actualOutcome": "cxtm-mismatch",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 62,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "map-reifier",
+      "mode": "xml",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 62,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "map-reifier",
+      "mode": "unsupported",
+      "actualOutcome": "unsupported",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 62,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "map-reifier",
+      "mode": "tmdm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 62,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "map-reifier",
+      "mode": "xtm",
+      "actualOutcome": "execution-error",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 62,
+      "faultCountedAsPass": false
+    },
+    {
+      "family": "map-reifier-condition",
+      "mode": "wrong-cause",
+      "actualOutcome": "foreign-reifier-rejected-as-wrong-condition",
+      "expectedASDFFailureObserved": true,
+      "retainedOriginalPasses": 63,
+      "faultCountedAsPass": false
+    }
+  ]
+}

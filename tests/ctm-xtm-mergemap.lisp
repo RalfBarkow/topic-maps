@@ -276,7 +276,7 @@
       (list "bad-namespace" (bytes "<topicMap version='2.0'/>") 'topic-maps.xtm:xtm-rejection :invalid-namespace)
       (list "bad-id" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='2bad'/></topicMap>") 'topic-maps.xtm:xtm-rejection :invalid-id)
       (list "unsupported-XTM-mergeMap" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><mergeMap href='other.xtm'/></topicMap>") 'topic-maps.xtm:xtm-unsupported :unsupported-construct)
-      (list "unsupported-reification" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#r'/>") 'topic-maps.xtm:xtm-unsupported :reification)
+      (list "unsupported-reification" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#r'><value>N</value></name></topic></topicMap>") 'topic-maps.xtm:xtm-unsupported :reification)
       (list "unsupported-name-variant-resourceData-datatype" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='t'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>") 'topic-maps.xtm:xtm-unsupported :resource-data-datatype)))
       (destructuring-bind (label raw cause code) spec
         (multiple-value-bind (resolver calls) (resources (list (list *child* raw "bad:child-source")))

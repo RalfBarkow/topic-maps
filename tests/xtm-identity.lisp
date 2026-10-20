@@ -28,6 +28,8 @@
 (defvar *uri-data-controls* nil)
 (defvar *variant-iid-outputs* nil)
 (defvar *variant-iid-controls* nil)
+(defvar *map-reifier-outputs* nil)
+(defvar *map-reifier-controls* nil)
 (defun check (name truth)
   (push name *checks*)
   (unless truth (error "XTM test failed: ~A" name))
@@ -429,7 +431,7 @@
                   ("unsupported-association" "<association><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)
                   ("unsupported-mergemap" "<mergeMap href='other.xtm'/>" :unsupported-construct)))
     (rejection (first spec) (document (second spec)) 'xtm-unsupported (third spec)))
-  (rejection "unsupported-reifier" "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#r'/>" 'xtm-unsupported :reification)
+  (rejection "unsupported-reifier" (document "<topic id='a'><name reifier='#r'><value>N</value></name></topic>") 'xtm-unsupported :reification)
   (let ((c (condition-from (lambda () (read-body (format nil "~%~%<topic id='2bad'/>"))))))
     (check "diagnostic:multiline-observed-position" (and (typep c 'xtm-rejection) (= 3 (error-line c)) (plusp (error-column c)))))
   (dolist (iri '(nil "relative.xtm" "https://example.test/a#fragment"))
@@ -479,10 +481,10 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
-  (setf *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil)
+  (setf *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil)
   (handler-case
       (progn (original-contracts) (negative-original-controls) (negative-original-contracts)
-             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (result-classification-tests)
+             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -501,7 +503,7 @@
            (array (items) (coerce items 'vector)))
       (with-open-file (out pathname :direction :output :if-exists :supersede :external-format :utf-8)
         (topic-maps.test-foundation::emit-json-value
-          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant subset, 54 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration"
+          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Map-Reification subset, 55 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration"
                   "corpusCommit" "cd165b150176c1d6842b37be9cc9051b40d4996b"
                   "statuses" (fields "pass" (count :pass cases :key #'topic-maps.test-foundation:test-case-status)
                                      "fail" (count :fail cases :key #'topic-maps.test-foundation:test-case-status)
@@ -538,6 +540,8 @@
                   "variantResourceDataURIControls" (array *uri-data-controls*)
                   "variantItemIdentityOriginals" (array *variant-iid-outputs*)
                   "variantItemIdentityControls" (array *variant-iid-controls*)
+                  "mapReifierOriginals" (array *map-reifier-outputs*)
+                  "mapReifierControls" (array (reverse *map-reifier-controls*))
                   "actualAndExpected" (array (loop for (id actual expected model condition source-length) in *outputs* collect
                     (fields "id" id "actual" (when actual (babel:octets-to-string actual :encoding :utf-8))
                             "expected" (babel:octets-to-string expected :encoding :utf-8) "byteLength" (when actual (length actual))

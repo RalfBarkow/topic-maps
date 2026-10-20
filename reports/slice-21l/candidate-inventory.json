@@ -1,0 +1,34 @@
+{
+  "candidates": [
+    {
+      "id": "xtm2/in/tm-reifier.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/tm-reifier.xtm",
+      "sourceBytes": 94,
+      "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e302220726569666965723d222372656966696572223e0a3c2f746f7069634d61703e0a",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\" reifier=\"#reifier\">\n</topicMap>\n",
+      "sourceSHA256": "092abcbbaef0cdbd0e3629708b25c5a5b07a8bf47d94cccb56f116fdd7585c9e",
+      "baselineBytes": 128,
+      "baselineSHA256": "53c9dc74e32578ef85c0c88ddf0eb52e265102d5fcc4a63b0f99b7e6d7c24e08",
+      "expectedCXTM": "<topicMap reifier=\"1\">\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "beforeObservation": {
+        "id": "xtm2/in/tm-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/tm-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/tm-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/tm-reifier.xtm), approximately 1:82: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 82,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/tm-reifier.xtm",
+          "sourceKey": "xtm2/in/tm-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    }
+  ]
+}

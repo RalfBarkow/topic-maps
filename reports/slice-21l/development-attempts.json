@@ -1,0 +1,23 @@
+{
+  "kind": "unsuccessful-development-attempts-not-acceptance",
+  "attempts": [
+    {
+      "attempt": 1,
+      "accepted": false,
+      "stage": "source-preparation",
+      "error": "sandbox-exec: sandbox_apply: Operation not permitted",
+      "cause": "The orchestrator was itself wrapped in sandbox-exec, preventing its own per-process sandbox_apply.",
+      "resolution": "Run the orchestrator with regular tool approval. All execution children still use the original explicit network/write-denying policy. No approval or symlink configuration changed.",
+      "log": "development-attempts/nested-sandbox.log"
+    },
+    {
+      "attempt": 2,
+      "accepted": false,
+      "stage": "first-executor-fault-control",
+      "error": "SB-C::INPUT-ERROR-IN-LOAD: end of file, form starting at line 7, column 42, file-position 395.",
+      "cause": "Missing closing parenthesis in the new failure-controls.lisp branch.",
+      "resolution": "Corrected the faultdriver; separately exercised three real failure paths; reran the entire acceptance with unchanged production code. Added retained-forward-handle purity assertions before the final run.",
+      "log": "development-attempts/faultdriver-read-error.log"
+    }
+  ]
+}

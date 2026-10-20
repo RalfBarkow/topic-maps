@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21l.py", line 285, in <module>
+    main()
+    ~~~~^^
+  File "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21l.py", line 165, in main
+    result = read(output / (label + '.json'))
+  File "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21l.py", line 32, in read
+    return json.loads(p.read_text())
+                      ~~~~~~~~~~~^^
+  File "/Users/rgb/.pyenv/versions/3.13.2/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rgb/.pyenv/versions/3.13.2/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rgb/.pyenv/versions/3.13.2/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/xtm-slice-21l-69div4vs/validated-2/positive-control-mismatch.json'

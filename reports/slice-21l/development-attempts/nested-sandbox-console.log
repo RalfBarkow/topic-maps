@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21l.py", line 285, in <module>
+    main()
+    ~~~~^^
+  File "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21l.py", line 108, in main
+    provenance = json.loads(run('source-preparation', ['python3', str(Path(__file__)), '--prepare', temp_name + '/sources'], env))
+                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21l.py", line 100, in run
+    assert result.returncode == expected_exit, f'{label}: see {output / (label + ".log")}'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: source-preparation: see /private/tmp/xtm-slice-21l-69div4vs/validated/source-preparation.log

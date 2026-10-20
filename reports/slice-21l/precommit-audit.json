@@ -1,0 +1,50 @@
+{
+  "kind": "slice-21l-independent-precommit-audit",
+  "baseCommit": "da36095dddc1354ee8558dc9d729f5cb2fe53ff5",
+  "branch": "codex/xtm-slice-21l",
+  "checkedAtUTC": "2026-10-20T07:49:09.930283+00:00",
+  "initialBranch": "codex/xtm-slice-21k",
+  "initialIndexAndWorktreeClean": true,
+  "currentIndexBeforeStageEmpty": true,
+  "changedExistingPaths": [
+    "src/xtm/reader.lisp",
+    "tests/ctm-xtm-mergemap.lisp",
+    "tests/xtm-identity.lisp",
+    "topic-maps.asd"
+  ],
+  "newNonReportPaths": [
+    "docs/slice-21l-xtm-topic-map-reification.md",
+    "scripts/validate-slice-21l.py",
+    "tests/xtm-map-reification.lisp"
+  ],
+  "acceptancePassed": true,
+  "freshSBCL": "2.5.4",
+  "processesWithNetworkAndRepositoryWriteDenial": 72,
+  "standaloneXTMChecks": 1972,
+  "retainedOriginalsUnchanged": 62,
+  "newOriginalCXTMByteComparison": "128/128 identical",
+  "executorFaultControls": 66,
+  "originalDiagnosticObservations": 124,
+  "changedDiagnosticObservations": 2,
+  "pinnedFilesVerified": 2006,
+  "historicalReportsVerified": 2687,
+  "protectedBaseFilesVerified": 4943,
+  "executionSourcesStillMatchValidatedHashes": true,
+  "sourcesBaselinesHistoricalReportsUnchanged": true,
+  "productionPathsChanged": [
+    "src/xtm/reader.lisp"
+  ],
+  "forbiddenSubsystemChanges": [],
+  "xtmStatuses": {
+    "pass": 63,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 61
+  },
+  "ctmStatuses": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  }
+}

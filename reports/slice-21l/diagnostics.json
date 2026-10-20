@@ -1,0 +1,89 @@
+{
+  "kind": "read-only-observations-no-extra-registration",
+  "originalObservations": 124,
+  "unchangedOriginalObservations": 122,
+  "diagnosticChanges": [
+    {
+      "id": "xtm2/in/tm-reifier.xtm",
+      "before": {
+        "id": "xtm2/in/tm-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/tm-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/tm-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/tm-reifier.xtm), approximately 1:82: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 82,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/tm-reifier.xtm",
+          "sourceKey": "xtm2/in/tm-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/tm-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/tm-reifier.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap reifier=\"1\">\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "reason": "Map Reification now constructs and assigns the native II-resolved reifier Topic."
+    },
+    {
+      "id": "xtm2/invalid/reifier-collision.xtm",
+      "before": {
+        "id": "xtm2/invalid/reifier-collision.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/invalid/reifier-collision.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm), approximately 1:82: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 82,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+          "sourceKey": "xtm2/invalid/reifier-collision.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/invalid/reifier-collision.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/reifier-collision.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm), approximately 3:36: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 36,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+          "sourceKey": "xtm2/invalid/reifier-collision.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "reason": "Map attribute is supported; schema validation now reaches excluded Occurrence processing. No negative contract registered."
+    }
+  ],
+  "registeredCases": [
+    "xtm2/in/tm-reifier.xtm"
+  ],
+  "negativeOriginalsRemainingNotRun": [
+    "xtm2/invalid/reifier-collision.xtm",
+    "xtm2/invalid/role-duplicate-reified.xtm",
+    "xtm2/invalid/topicref-no-fragment-id.xtm"
+  ],
+  "other122ObservationsUnchanged": true
+}
