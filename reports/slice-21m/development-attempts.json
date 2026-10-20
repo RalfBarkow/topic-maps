@@ -1,0 +1,34 @@
+{
+  "kind": "unsuccessful-development-runs-not-acceptance",
+  "attempts": [
+    {
+      "stage": "new-test-compilation",
+      "accepted": false,
+      "error": "Unmatched close parenthesis at tests/xtm-name-reification.lisp line 244, column 74.",
+      "resolution": "Removed the extra closing parenthesis in the new test definition.",
+      "log": "development-attempts/test-compile-error.log"
+    },
+    {
+      "stage": "test-name-uniqueness",
+      "accepted": false,
+      "error": "checks:unique-test-names; staged and public merge checks used the same purity labels.",
+      "resolution": "Added an explicit staged suffix; all check labels are required to be unique.",
+      "log": "development-attempts/duplicate-check-labels.log"
+    },
+    {
+      "stage": "new-faultdriver-read",
+      "accepted": false,
+      "error": "End of file in form starting at line 7, column 42, file-position 395.",
+      "resolution": "Closed the added COND branch; checked real mismatch, native Reification conflict and wrong-Condition fault paths before starting the full acceptance.",
+      "log": "development-attempts/faultdriver-read-error.log"
+    },
+    {
+      "stage": "full-validation-post-fault-report-check",
+      "accepted": false,
+      "error": "TypeError: NoneType object is not subscriptable at actual_condition class check.",
+      "cause": "A failed second original preserves the partial output list in push order. The driver selected its last element rather than matching the failed Case ID. The actual intended native reifier-conflict was correctly recorded on the failed case.",
+      "resolution": "Select by exact failed Case ID; rerun the complete acceptance with unchanged Reader and tests.",
+      "log": "development-attempts/validator-partial-report-selection.log"
+    }
+  ]
+}

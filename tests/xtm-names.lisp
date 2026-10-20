@@ -281,7 +281,7 @@
                   ("variant-before-value" "<name><variant><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant><value>N</value></name>" :element-order)))
     (name-error-control (first spec) (format nil "<topic id='a'>~A</topic>" (second spec)) 'xtm-rejection (third spec)))
   (dolist (spec '(("variant-resourceData-datatype" "<name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name>" :resource-data-datatype)
-                  ("reifier" "<name reifier='#r'><value>N</value></name>" :reification)))
+                  ("variant-reifier" "<name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name>" :reification)))
     (name-error-control (concatenate 'string "unsupported-" (first spec))
       (format nil "<topic id='a'>~A</topic>" (second spec)) 'xtm-unsupported (third spec)))
   (let* ((body (format nil "~%<topic id='a'>~% <name/>~%</topic>"))

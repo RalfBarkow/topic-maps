@@ -1,0 +1,64 @@
+{
+  "candidates": [
+    {
+      "id": "xtm2/in/name-reifier.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm",
+      "sourceBytes": 180,
+      "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e0a20203c746f7069632069643d22746f706963223e202020200a202020203c6e616d6520726569666965723d222372656966696572223e0a2020202020203c76616c75653e546f7069633c2f76616c75653e0a202020203c2f6e616d653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">    \n    <name reifier=\"#reifier\">\n      <value>Topic</value>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceSHA256": "6c7bc5c3ed096994578b40f7cf42d0509a4e1c6f5655e7b59abedd3bd851a44c",
+      "baselineBytes": 434,
+      "baselineSHA256": "ebe1d29a01d2a2693ec4154a03bbe65494745f421b013b45113ada095d4b2239",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\" reifier=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "beforeObservation": {
+        "id": "xtm2/in/name-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/name-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm), approximately 3:30: XTM Reification is outside this subset.",
+          "line": 3,
+          "column": 30,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-reifier.xtm",
+          "sourceKey": "xtm2/in/name-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/name-duplicate-reified.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm",
+      "sourceBytes": 251,
+      "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e0a20203c746f7069632069643d22746f706963223e202020200a202020203c6e616d6520726569666965723d22237265696669657231223e0a2020202020203c76616c75653e546f7069633c2f76616c75653e0a202020203c2f6e616d653e0a202020203c6e616d6520726569666965723d22237265696669657231223e0a2020202020203c76616c75653e546f7069633c2f76616c75653e0a202020203c2f6e616d653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">    \n    <name reifier=\"#reifier1\">\n      <value>Topic</value>\n    </name>\n    <name reifier=\"#reifier1\">\n      <value>Topic</value>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceSHA256": "ca99c45dd6515c620038860ffb7977fef88170d7fce85cfe536c4162470d3edb",
+      "baselineBytes": 435,
+      "baselineSHA256": "ecdd8cfed65c9536c4c8d91df4c92a94922ba0e67bb4d29c378617087ce0d1d7",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\" reifier=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "beforeObservation": {
+        "id": "xtm2/in/name-duplicate-reified.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at xtm2/in/name-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm), approximately 3:31: XTM Reification is outside this subset.",
+          "line": 3,
+          "column": 31,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified.xtm",
+          "sourceKey": "xtm2/in/name-duplicate-reified.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    }
+  ]
+}

@@ -124,7 +124,8 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                     (dolist (child (elements node)) (validate child '("topicRef"))))
                    ((string= name "name")
                     (attributes node '("reifier") nil)
-                    (check-reifier node)
+                    (when (attr node "reifier")
+                      (resolve-iri (attr node "reifier") *document-iri* node))
                     (let ((phase 0) (type-seen nil) (scope-seen nil) (value-seen nil))
                       (dolist (child (elements node))
                         (check-namespace child)
@@ -226,7 +227,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                         (topic-maps.tmdm:topic-map-topics map))))
     (if topic (topic-maps.tmdm:canonical-topic topic)
         (topic-maps.tmdm:intern-topic map :item-identifier iri))))
-(defun read-map-reifier (node map)
+(defun read-item-reifier (node item map)
   ;; XTM 4.3.2 looks up Item Identifiers only, unlike topicRef (4.20).
   ;; INTERN-TOPIC adds the II on a miss; any SI/II identity merging then
   ;; follows the existing TMDM rules, independently of this lookup.
@@ -236,8 +237,10 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                         :test (lambda (iri topic)
                                 (member iri (topic-maps.tmdm:topic-item-identifiers topic) :test #'string=)))
                       (topic-maps.tmdm:intern-topic map :item-identifier iri))))
-      (topic-maps.tmdm:set-item-reifier map topic)))
-  map)
+      (return-from read-item-reifier (topic-maps.tmdm:set-item-reifier item topic))))
+  item)
+(defun read-map-reifier (node map)
+  (read-item-reifier node map map))
 (defun core-topic (map local)
   (topic-maps.tmdm:intern-topic map :subject-identifier
     (concatenate 'string "http://psi.topicmaps.org/iso13250/model/" local)))
@@ -289,10 +292,16 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                     (topic-maps.tmdm:add-default-name owner value :scope scope))))
       ;; Item identifiers belong to the canonical Name, never its owner/type.
       ;; Use the shared model API for set semantics and global conflicts.
-      (dolist (child children name)
-        (cond ((string= (node-name child) "itemIdentity")
-               (setf name (topic-maps.tmdm:add-item-identifier name (leaf-href child))))
-              ((string= (node-name child) "variant") (read-variant child name map)))))))
+      (dolist (child children)
+        (when (string= (node-name child) "itemIdentity")
+          (setf name (topic-maps.tmdm:add-item-identifier name (leaf-href child)))))
+      ;; ADD-NAME may have returned an existing canonical Name. Reifier
+      ;; resolution/merging can normalize it again: retain the native result
+      ;; before processing Variants and return the current Name handle.
+      (setf name (read-item-reifier node name map))
+      (dolist (child children)
+        (when (string= (node-name child) "variant") (read-variant child name map)))
+      (topic-maps.tmdm:canonical-topic-name name))))
 (defun read-topic (node map)
   (let ((topic (topic-maps.tmdm:intern-topic map :item-identifier
                  (concatenate 'string *document-iri* "#" (collapse-space (attr node "id"))))))

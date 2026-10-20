@@ -220,7 +220,7 @@
     ("identity-after-topic" "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#r'><topic id='r'/><itemIdentity href='urn:map'/></topicMap>" :element-order)
     ("reifier-child" "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><reifier href='#r'/></topicMap>" :unexpected-element)))
     (map-reifier-error-control (first row) (second row) 'xtm-rejection (third row)))
-  (dolist (row '(("name-reification" "<topic id='a'><name reifier='#r'><value>N</value></name></topic>" :reification)
+  (dolist (row '(("name-with-variant-reification" "<topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic>" :reification)
     ("variant-reification" "<topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic>" :reification)
     ("occurrence-reification" "<topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic>" :unsupported-construct)
     ("association-role-reification" "<association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)

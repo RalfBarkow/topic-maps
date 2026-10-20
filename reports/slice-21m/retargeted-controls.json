@@ -1,0 +1,160 @@
+{
+  "controls": [
+    {
+      "field": "nameControls",
+      "before": {
+        "label": "unsupported-reifier",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#r'><value>N</value></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:unsupported-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 96,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:unsupported-reifier",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "unsupported-variant-reifier",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:unsupported-variant-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:121: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 121,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:unsupported-variant-reifier",
+          "cause": null
+        }
+      },
+      "reason": "Obsolete Name-Reification Unsupported control now exercises valid, excluded Variant Reification."
+    },
+    {
+      "field": "scopeControls",
+      "before": {
+        "label": "scope:name-reifier-stays-unsupported",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#r'><scope><topicRef href='#s'/></scope><value>N</value></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:scope:name-reifier-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 96,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:scope:name-reifier-stays-unsupported",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "scope:variant-reifier-stays-unsupported",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:scope:variant-reifier-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:157: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 157,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:scope:variant-reifier-stays-unsupported",
+          "cause": null
+        }
+      },
+      "reason": "Obsolete Name-Reification Unsupported control now exercises valid, excluded Variant Reification."
+    },
+    {
+      "field": "nameItemIdentityControls",
+      "before": {
+        "label": "iid:reifier-stays-unsupported",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#r'><itemIdentity href='urn:n'/><value>N</value></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:iid:reifier-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 96,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:iid:reifier-stays-unsupported",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "iid:variant-reifier-stays-unsupported",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:iid:variant-reifier-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:149: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 149,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:iid:variant-reifier-stays-unsupported",
+          "cause": null
+        }
+      },
+      "reason": "Obsolete Name-Reification Unsupported control now exercises valid, excluded Variant Reification."
+    },
+    {
+      "field": "mapReifierControls",
+      "before": {
+        "label": "name-reification",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name reifier='#r'><value>N</value></name></topic></topicMap>",
+        "expectedClass": "XTM-UNSUPPORTED",
+        "expectedCode": "reification",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:113: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 113,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-reification",
+          "cause": null
+        },
+        "atomicNativeOperation": null
+      },
+      "after": {
+        "label": "name-with-variant-reification",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "expectedClass": "XTM-UNSUPPORTED",
+        "expectedCode": "reification",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-with-variant-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:138: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 138,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-with-variant-reification",
+          "cause": null
+        },
+        "atomicNativeOperation": null
+      },
+      "reason": "Obsolete Name-Reification Unsupported control now exercises valid, excluded Variant Reification."
+    }
+  ]
+}
