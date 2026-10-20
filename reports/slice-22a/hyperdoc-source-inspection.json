@@ -1,0 +1,26 @@
+{
+  "root": "/Users/rgb/workspace/hyperdoc-dreyeck-ch",
+  "head": "306b7fd99fc2611a248e0927ce52a808abb7cc76",
+  "branch": "dreyeck.ch",
+  "status": "",
+  "files": {
+    "dreyeck.asd": "c5ada9a2d508dcbae7d8ee0cfe14ea3725a42e173f1725970d5b9f5127afe3f3",
+    "flake.nix": "ce070ada1e29eb0f272954fd9752bac707a9776cf48efacf913fe7aac970920b",
+    "flake.lock": "f82401946af9fa2467191c454f8ee3f288d76164a00bc41f96f9b36441ede4bc",
+    "dreyeck/src/tmdm-model-navigation.lisp": "de7bc3d250f382e6d14bb094a1f7efd4b84f810fa950266acffc6176377f0d3b",
+    "dreyeck/work/tmdm-model-reading.lisp": "2a97db5f53043d181975f021395656fd80ffcba26b4ba69b88c234f3600d4ca1",
+    "dreyeck/work/topic-maps-reading.lisp": "555cfb9772398112eee37055b5b3fcd3313b859894b179dbc6f7e1c226e2ac95",
+    "dreyeck/work/project/project-workspace.lisp": "41b5e8326d4d3b47f346fd3ea6f993d72abebe1675210ae5adc45efb88a56c14",
+    "dreyeck/tests/tmdm-model-reading.lisp": "8f40b065eeee7176bfa77a8df6ee6607272a99be8af05c239ed979aa4180e3c8",
+    "dreyeck/tests/topic-maps-reading.lisp": "044d743b7906fe5b8ed4bacdaea80f68e594d6b5a64246b5510a2b8c10f2623a",
+    "dreyeck/tests/project-ctm.lisp": "6e9cc191c2fb1c9b53f39c7b031691baf2ba2cb2075b062c8ba0fbea9411dff2",
+    "scripts/test-project-workspace.mjs": "99b37bedb362c82a400a02568897b957d032ddd9479772aa47138599ce644249",
+    "docs/tmdm-model-navigation.md": "b0751b9420087112125dda8ae8f8ac97d664be23bea9afd70e84517f75b81b31",
+    "docs/project-workspace-observations.md": "f60a10fb5d6df90d248dcd5247ea0a337a152bb6c28b69fa75ba834ce2c8dd7b",
+    "dreyeck/work/project/topic-maps-5a4a668-recovery.txt": "5dccf29cee54833755b2c86530745bfebffe81e36371d473b84978696eb12fac"
+  },
+  "inspection": "source inspection only; HyperDoc not loaded or modified in Slice 22A",
+  "currentTopicMapsPin": "5a4a66850403cdfe2755c6c88083a8e31af89628",
+  "pinCommitsNotInConformanceBranch": 1,
+  "mergeBaseWithConformanceBranch": "963f2a09444100d37e49cccbd6634879bd6742b5"
+}

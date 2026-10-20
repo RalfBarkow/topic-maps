@@ -1,0 +1,65 @@
+{
+  "kind": "reviewed-normative-and-source-evidence-not-conformance-certification",
+  "reviewDate": "2026-10-20",
+  "sources": {
+    "CTM": {
+      "edition": "ISO/IEC 13250-6:2010",
+      "url": "https://www.isotopicmaps.org/ctm/ctm.html",
+      "evidenceLimit": "Public HTML mirror; published 2010 preview confirms through 3.4.2, not full 3.9/3.14-3.16. Corpus targets draft 2010-03-31."
+    },
+    "XTM": {
+      "edition": "ISO/IEC 13250-3:2007 / XTM 2.0",
+      "url": "https://www.isotopicmaps.org/sam/sam-xtm/",
+      "evidenceLimit": "2006-06-19 public mirror explicitly states identity with published standard; ISO publication remains authoritative."
+    },
+    "TMDM": {
+      "edition": "ISO/IEC 13250-2:2006",
+      "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/",
+      "evidenceLimit": "Mirror states identity with publication; model has no standalone processor conformance section (1)."
+    },
+    "CXTM": {
+      "edition": "ISO/IEC 13250-4:2009",
+      "url": "https://www.isotopicmaps.org/cxtm/cxtm.html",
+      "evidenceLimit": "Public 2009-01-27 mirror; final edition/errata equivalence is a closure review obligation."
+    },
+    "XSD": {
+      "edition": "XML Schema 1.0 Part 2, Second Edition, 2004-10-28",
+      "url": "https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/",
+      "evidenceLimit": "Dated primary W3C Recommendation; no substitution of XSD 1.1."
+    },
+    "CTM-published-preview": {
+      "edition": "ISO/IEC 13250-6:2010(E), first edition 2010-11-15, 11-page preview",
+      "url": "https://cdn.standards.iteh.ai/samples/43940/6663ee28c1604551ac6adc02e22c6bb6/ISO-IEC-13250-6-2010.pdf",
+      "evidenceLimit": "Public published sample inspected online only; later clauses/complete grammar unavailable in preview. No local download."
+    },
+    "CanonicalXML": {
+      "edition": "W3C Canonical XML 1.0, Recommendation 2001-03-15",
+      "url": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+      "sections": "2.1–2.4; node-set and comment flag; XTM 4.16.3 determines use",
+      "evidenceLimit": "Primary W3C source; existing CXML :canonical option has not been qualified as this algorithm for the required XTM subset."
+    }
+  },
+  "localNormSnapshotsDownloaded": false,
+  "epistemicLabels": {
+    "observed": "Fresh execution or identified local source bytes",
+    "derived": "Reasoning from cited clauses, qualified by source edition limits",
+    "inferred": "Implementation-scope/dependency judgment from inspected code",
+    "hypothesized": "Historical extension intent without documentary proof",
+    "proposed": "Future acceptance; not implemented or authorized by this investigation"
+  },
+  "decisions": {
+    "ctmInclude": "C, previous B interpretation plausible under HTML, full published clauses not verified",
+    "ctmDateTime": "B supported by XSD 1.0/CXTM rules, final CXTM edition/errata qualification remains",
+    "ctmTemplateTail": "Excluded by inspected HTML grammar, formal edition decision C; no language extension",
+    "xtmMapItemID": "Tentative baseline conflict, decision C, XTM 4.21 only topics/associations",
+    "xtmMapLoop": "Decision C, finite cycle semantics need qualification"
+  },
+  "xmlPreflight": {
+    "path": "/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source/xml/unparse.lisp",
+    "sha256": "cef774a7a6a90b970e99939d923c4e564ecf903a7cfa72f4498356ee8253e87c",
+    "lines": "165–202",
+    "finding": "Existing canonical writer options are a capability to qualify, not proof of W3C Canonical XML 1.0 subset compliance.",
+    "readerSource": "src/xtm/reader.lisp",
+    "findingSourceHandler": "Current XML source nodes retain expanded names/attributes/text/children/positions, but not the full qualified-name/namespace context needed to select namespace nodes for XTM 4.16.3. That clause selects descendant element/attribute/character nodes; PI nodes are not selected, comments are excluded."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "runs": [
+    {
+      "label": "source-preparation",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "python3",
+        "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21o.py",
+        "--prepare",
+        "/private/tmp/tm-slice-22a-uou72huy/observation-sources"
+      ],
+      "startedAtUTC": "2026-10-20T09:28:48.192963+00:00",
+      "finishedAtUTC": "2026-10-20T09:28:52.897042+00:00",
+      "exitCode": 0,
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "observations",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-22a/observations.lisp"
+      ],
+      "startedAtUTC": "2026-10-20T09:28:52.909040+00:00",
+      "finishedAtUTC": "2026-10-20T09:29:09.325955+00:00",
+      "exitCode": 0,
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "supplemental-profile-probes",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/Users/rgb/workspace/topic-maps/reports/slice-22a/profile-probes.lisp"
+      ],
+      "startedAtUTC": "2026-10-20T09:35:25.259371+00:00",
+      "finishedAtUTC": "2026-10-20T09:35:27.887720+00:00",
+      "exitCode": 0,
+      "freshProcess": true,
+      "network": "denied",
+      "repositoryWrites": "denied"
+    }
+  ]
+}

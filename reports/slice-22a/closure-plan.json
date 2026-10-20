@@ -1,0 +1,909 @@
+{
+  "kind": "reviewed-conformance-closure-plan-not-implementation",
+  "baseCommit": "1c0b92c68fe1114b926d4405b553dfb096d2f425",
+  "profile": {
+    "name": "Profil 1 — CTM / XTM 2.0 / TMDM / CXTM",
+    "normativeTargets": {
+      "CTM": {
+        "edition": "ISO/IEC 13250-6:2010",
+        "url": "https://www.isotopicmaps.org/ctm/ctm.html",
+        "evidenceLimit": "Public HTML mirror; published 2010 preview confirms through 3.4.2, not full 3.9/3.14-3.16. Corpus targets draft 2010-03-31."
+      },
+      "XTM": {
+        "edition": "ISO/IEC 13250-3:2007 / XTM 2.0",
+        "url": "https://www.isotopicmaps.org/sam/sam-xtm/",
+        "evidenceLimit": "2006-06-19 public mirror explicitly states identity with published standard; ISO publication remains authoritative."
+      },
+      "TMDM": {
+        "edition": "ISO/IEC 13250-2:2006",
+        "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/",
+        "evidenceLimit": "Mirror states identity with publication; model has no standalone processor conformance section (1)."
+      },
+      "CXTM": {
+        "edition": "ISO/IEC 13250-4:2009",
+        "url": "https://www.isotopicmaps.org/cxtm/cxtm.html",
+        "evidenceLimit": "Public 2009-01-27 mirror; final edition/errata equivalence is a closure review obligation."
+      },
+      "XSD": {
+        "edition": "XML Schema 1.0 Part 2, Second Edition, 2004-10-28",
+        "url": "https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/",
+        "evidenceLimit": "Dated primary W3C Recommendation; no substitution of XSD 1.1."
+      },
+      "CTM-published-preview": {
+        "edition": "ISO/IEC 13250-6:2010(E), first edition 2010-11-15, 11-page preview",
+        "url": "https://cdn.standards.iteh.ai/samples/43940/6663ee28c1604551ac6adc02e22c6bb6/ISO-IEC-13250-6-2010.pdf",
+        "evidenceLimit": "Public published sample inspected online only; later clauses/complete grammar unavailable in preview. No local download."
+      }
+    },
+    "additionalNormativeInputs": {
+      "XML": "XML 1.0 Third Edition (2004-02-04), Namespaces in XML (1999-01-14), XML Infoset Second Edition (2004-02-04), XPointer Framework (2003-03-25), as dated in XTM 2; implementation mapping remains to audit",
+      "CanonicalXML": "W3C Canonical XML 1.0, 2001-03-15",
+      "IRI": "RFC 3986/3987, 2005; reviewed resolver profile",
+      "Unicode": "CTM referenced Unicode edition and CXTM NFC requirements must be clause-mapped; oracle counts do not replace that audit."
+    },
+    "requiredSystems": [
+      "topic-maps/tmdm",
+      "topic-maps/ctm",
+      "topic-maps/xtm",
+      "topic-maps/cxtm",
+      "topic-maps/ctm/xtm"
+    ],
+    "foundationSystemIsReader": false,
+    "corpusContracts": 397,
+    "ctmContracts": 273,
+    "xtmContracts": 124,
+    "excludedCollectionParts": [
+      "xtm1",
+      "xtm21",
+      "ltm",
+      "tmxml",
+      "jtm",
+      "jtm11",
+      "rdf",
+      "tmcl",
+      "snello"
+    ],
+    "auxiliariesNotContracts": [
+      ".sub/.sub2 fixture resources",
+      "baselines",
+      "collection web/release infrastructure"
+    ],
+    "notClaimed": [
+      "All Topic Maps standards coverage",
+      "XTM 1.0/2.1",
+      "TMCL/TMQL/reference-model implementation",
+      "Unrestricted processor conformance merely from complete corpus pass"
+    ],
+    "currentConformanceClaim": "Qualified subset with explicit operational limits and unresolved normative decisions; no unrestricted ISO conformance.",
+    "supplementalObligations": [
+      {
+        "id": "unknown-text-datatype",
+        "notation": "XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://example.com/bogus'>BOGUS</resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://example.invalid/slice-22a/profile",
+        "phase": "deserialize",
+        "registered": false,
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at unknown-text-datatype (https://example.invalid/slice-22a/profile), approximately 1:194: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 194,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://example.invalid/slice-22a/profile",
+          "sourceKey": "unknown-text-datatype",
+          "cause": null
+        },
+        "model": null,
+        "actualCXTM": null
+      },
+      {
+        "id": "anyType-XML",
+        "notation": "XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><f:span xmlns:f='urn:f'>X&amp;Y</f:span></resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://example.invalid/slice-22a/profile",
+        "phase": "deserialize",
+        "registered": false,
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at anyType-XML (https://example.invalid/slice-22a/profile), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 210,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://example.invalid/slice-22a/profile",
+          "sourceKey": "anyType-XML",
+          "cause": null
+        },
+        "model": null,
+        "actualCXTM": null
+      },
+      {
+        "id": "non-anyType-element-content",
+        "notation": "XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData><f:span xmlns:f='urn:f'>X</f:span></resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://example.invalid/slice-22a/profile",
+        "phase": "deserialize",
+        "registered": false,
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-markup",
+          "detail": "Embedded XML resourceData is outside this subset.",
+          "message": "XTM RESOURCE-DATA-MARKUP at non-anyType-element-content (https://example.invalid/slice-22a/profile), approximately 1:182: Embedded XML resourceData is outside this subset.",
+          "line": 1,
+          "column": 182,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://example.invalid/slice-22a/profile",
+          "sourceKey": "non-anyType-element-content",
+          "cause": null
+        },
+        "model": null,
+        "actualCXTM": null
+      },
+      {
+        "id": "anyURI-element-content",
+        "notation": "XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'><f:span xmlns:f='urn:f'>X</f:span></resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://example.invalid/slice-22a/profile",
+        "phase": "deserialize",
+        "registered": false,
+        "condition": {
+          "class": "XTM-REJECTION",
+          "code": "unexpected-child",
+          "detail": "anyURI resourceData cannot contain child elements.",
+          "message": "XTM UNEXPECTED-CHILD at anyURI-element-content (https://example.invalid/slice-22a/profile), approximately 1:233: anyURI resourceData cannot contain child elements.",
+          "line": 1,
+          "column": 233,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://example.invalid/slice-22a/profile",
+          "sourceKey": "anyURI-element-content",
+          "cause": null
+        },
+        "model": null,
+        "actualCXTM": null
+      },
+      {
+        "id": "DOCTYPE-policy",
+        "notation": "XTM",
+        "sourceText": "<!DOCTYPE topicMap><topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'></topicMap>",
+        "documentIRI": "https://example.invalid/slice-22a/profile",
+        "phase": "deserialize",
+        "registered": false,
+        "condition": {
+          "class": "XTM-XML-ERROR",
+          "code": "doctype-forbidden",
+          "detail": "DOCTYPE forbidden by the mandatory XML byte boundary.",
+          "message": "XTM DOCTYPE-FORBIDDEN at DOCTYPE-policy (https://example.invalid/slice-22a/profile), approximately 1:20: DOCTYPE forbidden by the mandatory XML byte boundary.",
+          "line": 1,
+          "column": 20,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://example.invalid/slice-22a/profile",
+          "sourceKey": "DOCTYPE-policy",
+          "cause": {
+            "class": "DOCTYPE-FORBIDDEN",
+            "code": null,
+            "detail": null,
+            "message": "Condition TOPIC-MAPS.XML:DOCTYPE-FORBIDDEN was signalled.",
+            "line": null,
+            "column": null,
+            "positionUnit": null,
+            "documentIRI": null,
+            "sourceKey": null,
+            "cause": null
+          }
+        },
+        "model": null,
+        "actualCXTM": null
+      },
+      {
+        "id": "declared-Shift-JIS-ASCII",
+        "notation": "CTM",
+        "sourceText": "%encoding \"Shift-JIS\" topic.",
+        "documentIRI": "https://example.invalid/slice-22a/profile",
+        "phase": "deserialize",
+        "registered": false,
+        "condition": {
+          "condition": "CTM-UNSUPPORTED",
+          "message": "UNSUPPORTED-ENCODING in declared-Shift-JIS-ASCII at CHARACTER 11 (line 1, column 12): Only UTF-8 and ISO-8859-5 CTM input are implemented.",
+          "code": "unsupported-encoding",
+          "position": 11,
+          "line": 1,
+          "column": 12,
+          "positionUnit": "character",
+          "source": "declared-Shift-JIS-ASCII",
+          "cause": null,
+          "context": null
+        },
+        "model": null,
+        "actualCXTM": null
+      },
+      {
+        "id": "date-timezone-canonicalization",
+        "notation": "CTM",
+        "sourceText": "topic occ: \"2000-01-01+02:00\"^^<http://www.w3.org/2001/XMLSchema#date>.",
+        "documentIRI": "https://example.invalid/slice-22a/profile",
+        "phase": "canonicalize",
+        "registered": false,
+        "condition": {
+          "class": "CXTM-UNSUPPORTED",
+          "code": "date-timezone-canonicalization",
+          "message": "CXTM DATE-TIMEZONE-CANONICALIZATION: XSD date recoverable-timezone canonicalization is outside this slice.",
+          "line": null,
+          "column": null,
+          "cause": null
+        },
+        "model": {
+          "topicCount": 2,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://example.invalid/slice-22a/profile#topic"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": [
+                {
+                  "value": "2000-01-01+02:00",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#date",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": []
+                }
+              ]
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [
+                "https://example.invalid/slice-22a/profile#occ"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": []
+            }
+          ]
+        },
+        "actualCXTM": null
+      },
+      {
+        "id": "BCE-datetime-rollover",
+        "notation": "CTM",
+        "sourceText": "topic occ: \"-0001-12-31T23:00:00-02:00\"^^<http://www.w3.org/2001/XMLSchema#dateTime>.",
+        "documentIRI": "https://example.invalid/slice-22a/profile",
+        "phase": "canonicalize",
+        "registered": false,
+        "condition": {
+          "class": "CXTM-UNSUPPORTED",
+          "code": "datetime-bce-timezone-rollover",
+          "message": "CXTM DATETIME-BCE-TIMEZONE-ROLLOVER: DateTime BCE rollover/leap-second context is outside this canonical subset.",
+          "line": null,
+          "column": null,
+          "cause": null
+        },
+        "model": {
+          "topicCount": 2,
+          "associationCount": 0,
+          "topics": [
+            {
+              "ordinal": 1,
+              "itemIdentifiers": [
+                "https://example.invalid/slice-22a/profile#topic"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": [
+                {
+                  "value": "-0001-12-31T23:00:00-02:00",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": []
+                }
+              ]
+            },
+            {
+              "ordinal": 2,
+              "itemIdentifiers": [
+                "https://example.invalid/slice-22a/profile#occ"
+              ],
+              "subjectIdentifiers": [],
+              "subjectLocators": [],
+              "names": [],
+              "occurrences": []
+            }
+          ]
+        },
+        "actualCXTM": null
+      }
+    ]
+  },
+  "slices": [
+    {
+      "slice": "22B",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "Bereits bestandenen Variant-Reification-Originalvertrag registrieren",
+      "originalCaseIDs": [
+        "xtm2/in/variant-duplicate-reifier2.xtm"
+      ],
+      "dependencies": [
+        "existing-Slice-21O"
+      ],
+      "codeAreas": [
+        "tests/xtm-variant-reification.lisp",
+        "tests/xtm-identity.lisp",
+        "topic-maps.asd",
+        "new evidence only"
+      ],
+      "modelIdentityAcceptance": [
+        "Parent-Name, kanonischer Variant, item-reifier/topic-reified EQ; Identifiertrennung; reine Kanonisierung; Source-Key-Unabhängigkeit; genau ein neuer Case Record"
+      ],
+      "expectedAdditionalOriginalPASS": 1,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "XTM 4.3,4.12-4.13",
+        "TMDM 5.5,6.3-6.4"
+      ],
+      "stopCondition": "Sobald aktuelle Originalbytes, native Prüfung oder 702-Byte-Vergleich abweichen; keine Produktionskorrektur in dieser Registrierungsaufgabe.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22C",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "Normedition, CTM-Auslegungen und XTM-mergeMap-Metadaten/Zyklen entscheiden",
+      "originalCaseIDs": [
+        "ctm/in/include-template.ctm",
+        "ctm/in/include-wildcard2.ctm",
+        "ctm/in/occurrence-datetime-timezone2.ctm",
+        "ctm/in/occurrence-datetime2.ctm",
+        "ctm/in/template-ambiguous-parameter5.ctm",
+        "ctm/in/template-ambiguous-parameter6.ctm",
+        "ctm/in/template-subject-identifier2.ctm",
+        "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "ctm/invalid/template-item-identifier3.ctm",
+        "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "ctm/invalid/template-subject-locator3.ctm",
+        "xtm2/in/mergemap-itemid.xtm",
+        "xtm2/in/mergemap-loop.xtm"
+      ],
+      "dependencies": [],
+      "codeAreas": [
+        "docs/",
+        "reports/",
+        "references only after approved normative review"
+      ],
+      "modelIdentityAcceptance": [
+        "Vollständigen veröffentlichten CTM-Text/Errata mit Mirror vergleichen; vier FAILs A/B/C entscheiden; sieben Tail-Fälle und intendierte negative Argumentprüfung getrennt behandeln; Map-II-Übertragung und Loop-Semantik belegen"
+      ],
+      "expectedAdditionalOriginalPASS": 0,
+      "conditionalGain": {
+        "ctmNegativeGrammarQualificationMaximum": 4,
+        "condition": "Nur falls eine ausdrücklich freigegebene Qualifikationsentscheidung die echte Body-Syntaxablehnung als Abschluss der generischen negativen Originalverträge akzeptiert; kein beobachteter zusätzlicher PASS und kein Ersatz für Kontextgegenproben."
+      },
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "CTM 3.9,3.14-3.16",
+        "XTM 4.21",
+        "TMDM 5.1-5.3",
+        "CXTM 3.16",
+        "XSD 1.0 3.2.7,D.1"
+      ],
+      "stopCondition": "Keine Grammatik-, Umgebungs- oder Map-Metadatenregel ohne Normbeleg implementieren. Bei fehlendem Volltext bleibt Entscheidung offen und Zähler unverändert.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22D",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "Gemeinsames textuelles resourceData für unbekannte absolute Datentypen vervollständigen",
+      "originalCaseIDs": [
+        "xtm2/in/variant-datatype-unknown.xtm"
+      ],
+      "dependencies": [
+        "existing-qualified-XML/resourceData"
+      ],
+      "codeAreas": [
+        "src/xtm/reader.lisp: validate-source/shared resource value path",
+        "existing XTM tests"
+      ],
+      "modelIdentityAcceptance": [
+        "BOGUS und Datentyp http://example.com/bogus exakt erhalten; keine Datentyp-Topics; kein URI-Resolving des Werts; Child-Elemente außerhalb anyType spezifisch ablehnen; xsd:string/anyURI erhalten"
+      ],
+      "expectedAdditionalOriginalPASS": 1,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "XTM 4.16.1-4.16.2",
+        "TMDM 4.3-4.4,5.5-5.6"
+      ],
+      "stopCondition": "Stop bei notwendiger Änderung von TMDM/CXTM oder unklarer Datentypkonvertierung; XML-anyType gehört in 22I.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22E",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "Occurrences über vorhandene native Operationen einschließlich Scope, II und Reification einlesen",
+      "originalCaseIDs": [
+        "xtm2/in/itemid-occurrence.xtm",
+        "xtm2/in/merge-itemid-with-occurrences.xtm",
+        "xtm2/in/occurrence-datatype-unknown.xtm",
+        "xtm2/in/occurrence-duplicate-iid.xtm",
+        "xtm2/in/occurrence-duplicate-iid2.xtm",
+        "xtm2/in/occurrence-duplicate-reifier.xtm",
+        "xtm2/in/occurrence-duplicate.xtm",
+        "xtm2/in/occurrence-reifier.xtm",
+        "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+        "xtm2/in/occurrence-resourcedata-uri.xtm",
+        "xtm2/in/occurrence-resourceref-relative.xtm",
+        "xtm2/in/occurrence-resourceref.xtm",
+        "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+        "xtm2/in/occurrence-scope-duplicate.xtm",
+        "xtm2/in/occurrence-scope.xtm",
+        "xtm2/in/occurrence.xtm",
+        "xtm2/invalid/reifier-collision.xtm"
+      ],
+      "dependencies": [
+        "22D for occurrence-datatype-unknown",
+        "existing TMDM occurrence/II/reifier APIs"
+      ],
+      "codeAreas": [
+        "src/xtm/reader.lisp: occurrence validation/deserialization",
+        "existing XTM ASDF harness"
+      ],
+      "modelIdentityAcceptance": [
+        "add-occurrence/canonical-occurrence native Vorprüfung; Parent/Type/Scope EQ; text/ref/anyURI-Werte; Scope-Themes nach Merging; II vor Reification am normalisierten Item; gleiche Occurrences vereinigen Metadaten; Map-/Occurrence-Reifier-Konflikt vorgesehen und atomar"
+      ],
+      "expectedAdditionalOriginalPASS": 17,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "XTM 4.3,4.6,4.13-4.17",
+        "TMDM 5.6,6.5"
+      ],
+      "stopCondition": "Stop vor TMDM-Änderung bei nativer API-Lücke oder vor fremder Fehlerursache; reifier-collision erst bei nativer reifier-conflict zählen.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22F",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "Explizite Associations und Roles gemeinsam mit Scope und Item Identity",
+      "originalCaseIDs": [
+        "xtm2/in/association-binary-duplicate.xtm",
+        "xtm2/in/association-binary.xtm",
+        "xtm2/in/association-duplicate-iid.xtm",
+        "xtm2/in/association-duplicate-iid2.xtm",
+        "xtm2/in/association-duplicate-iid3.xtm",
+        "xtm2/in/association-duplicate-role.xtm",
+        "xtm2/in/association-instanceof-duplicate.xtm",
+        "xtm2/in/association-instanceof-scope.xtm",
+        "xtm2/in/association-scope.xtm",
+        "xtm2/in/association-ternary.xtm",
+        "xtm2/in/association.xtm",
+        "xtm2/in/itemid-association.xtm",
+        "xtm2/in/itemid-role.xtm",
+        "xtm2/in/merge-itemid-with-association.xtm",
+        "xtm2/in/role-duplicate-iid.xtm",
+        "xtm2/in/role-duplicate-iid2.xtm",
+        "xtm2/invalid/topicref-no-fragment-id.xtm"
+      ],
+      "dependencies": [
+        "existing native association/role API"
+      ],
+      "codeAreas": [
+        "src/xtm/reader.lisp: association/role validation and readers",
+        "existing XTM ASDF harness"
+      ],
+      "modelIdentityAcceptance": [
+        "Unary/binary/ternary; Role-Type/Player/Parent EQ; Native make-association und kanonische Role-Handles; doppelte Roles/Associations; II-Vereinigung; Forward-/SI-/SL-/II-Merges; instanceOf-Synthese vs explizite Association, scoped Unterschied erhalten; negative Scope-Referenz ohne Fragment erreichen"
+      ],
+      "expectedAdditionalOriginalPASS": 17,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "XTM 4.6,4.13-4.14,4.18-4.20",
+        "TMDM 5.7-5.8,6.6-6.7,7.2"
+      ],
+      "stopCondition": "Stop bei unklarer Role-Zuordnung nach Normalisierung oder Modellfehler; keine zweite Identitätsrepräsentation oder Behandlung nach Dateinamen.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22G",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "Reification kanonischer Associations und Roles",
+      "originalCaseIDs": [
+        "xtm2/in/association-duplicate-reified.xtm",
+        "xtm2/in/association-duplicate-reified2.xtm",
+        "xtm2/in/association-duplicate-reified3.xtm",
+        "xtm2/in/association-duplicate-reified4.xtm",
+        "xtm2/in/association-reifier.xtm",
+        "xtm2/in/role-duplicate-reified.xtm",
+        "xtm2/in/role-duplicate-reified2.xtm",
+        "xtm2/in/role-duplicate-reified3.xtm",
+        "xtm2/in/role-duplicate-reified4.xtm",
+        "xtm2/in/role-reifier.xtm",
+        "xtm2/invalid/role-duplicate-reified.xtm"
+      ],
+      "dependencies": [
+        "22F",
+        "existing shared read-item-reifier"
+      ],
+      "codeAreas": [
+        "src/xtm/reader.lisp: normalized association/role attachment points",
+        "existing XTM ASDF harness"
+      ],
+      "modelIdentityAcceptance": [
+        "Native Vorprüfung vor Reader-Änderung; Normalisierung vor II/R-Zuweisung; alte Association-/Role-/Reifier-Handles kanonisch; Parent gehört zur Role-Gleichheit; Metadaten bleiben beim Association-Merge erhalten; verschiedene Parent-Associations dürfen nicht durch gemeinsamen Role-Reifier gleichgesetzt werden"
+      ],
+      "expectedAdditionalOriginalPASS": 11,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "XTM 4.3,4.18-4.19",
+        "TMDM 5.3.5,5.7-5.8,6.2,6.6-6.7"
+      ],
+      "stopCondition": "Stop vor TMDM-Änderung; negative Role erst bei beabsichtigtem reifier-conflict registrieren; gleichartige Quellfälle trotzdem jeweils tatsächlich vergleichen.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22H",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "XTM mergeMap über kontrollierte gepinnte Ressourcen",
+      "originalCaseIDs": [
+        "xtm2/in/mergemap-itemid.xtm",
+        "xtm2/in/mergemap-loop.xtm",
+        "xtm2/in/mergemap-merge.xtm",
+        "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+        "xtm2/in/mergemap-ontopia-issue-28.xtm",
+        "xtm2/in/mergemap-tm-reifier.xtm",
+        "xtm2/in/mergemap.xtm"
+      ],
+      "dependencies": [
+        "22C:map-metadata/cycles",
+        "existing qualified XML/IRI/import-map-content"
+      ],
+      "codeAreas": [
+        "src/xtm/reader.lisp",
+        "XTM resource boundary, reusing existing CTM resource/import principles",
+        "tests and pinned .sub sources"
+      ],
+      "modelIdentityAcceptance": [
+        "Child Document IRI, getrennte Source Keys; Fragmentverbot; finite Resolver-Tabelle inklusive Root; rekursive Ressourcen; SI/II-Cross-Merging; reine Quellen; root metadata getrennt von importiertem Inhalt; keine Netzwerkfallbacks"
+      ],
+      "expectedAdditionalOriginalPASS": {
+        "expectedOrdinary": 5,
+        "conditionalAdditional": 2,
+        "maximum": 7
+      },
+      "conditionalGain": {
+        "caseIDs": [
+          "xtm2/in/mergemap-itemid.xtm",
+          "xtm2/in/mergemap-loop.xtm"
+        ],
+        "condition": "Abnahme nur nach Klärung 22C und tatsächlichem Originalvergleich."
+      },
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "XTM 4.2,4.21",
+        "TMDM 5.1-5.3,6"
+      ],
+      "stopCondition": "Map-II darf nicht allein für Baselinekopie übertragen werden. Loop-Policy muss normativ/profilbezogen geklärt sein; ungeklärte Fälle bleiben offen, unabhängige Fälle dürfen qualifiziert werden.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22I",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "anyType/XML und übrige explizite Profil-Lücken schließen oder einschränken",
+      "originalCaseIDs": [],
+      "dependencies": [
+        "22C:explicit conformance profile",
+        "22D",
+        "qualified XML event/canonicalization review"
+      ],
+      "codeAreas": [
+        "src/xtm/reader.lisp: source-handler/resourceData",
+        "qualified XML adapter only if separately authorized",
+        "CTM/CXTM limits only after scoped normative approval",
+        "supplemental tests"
+      ],
+      "modelIdentityAcceptance": [
+        "W3C Canonical XML 1.0 für XTM-Subset ohne Kommentare qualifizieren; QName/Namespace-Kontext für ausgewählte Elemente/Attribute erhalten; XTM-Node-Set aus Elementen/Attributen/Zeichen bilden, unbenutzte Namespace-Knoten entfernen, PI und Kommentare nicht aufnehmen; vorhandenes CXML :canonical nicht ungeprüft als Beleg ansehen; nicht-anyType-Elementdiagnose unterscheiden; DOCTYPE/Entity-Policy als Betriebsprofil; Date/DateTime/BCE/Encoding-Normpflichten und Grenzen ausdrücklich entscheiden"
+      ],
+      "expectedAdditionalOriginalPASS": 0,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "XTM 4.16.2-4.16.3,5",
+        "Canonical XML 1.0 2.1-2.4",
+        "CTM 3.2,3.4,3.6",
+        "CXTM 3.16"
+      ],
+      "stopCondition": "Keine Vollkonformitätsbehauptung aus 397 Tests; bei neuer XML/TMDM/CXTM-Architektur oder ungeklärter Normpflicht vor Änderung stoppen und gesonderten Umfang entscheiden.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22J",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "Profil-1-Abschlussaudit: normative Klauselabdeckung, 397 Originale und Ausnahmen",
+      "originalCaseIDs": [
+        "ctm/in/include-template.ctm",
+        "ctm/in/include-wildcard2.ctm",
+        "ctm/in/occurrence-datetime-timezone2.ctm",
+        "ctm/in/occurrence-datetime2.ctm",
+        "ctm/in/template-ambiguous-parameter5.ctm",
+        "ctm/in/template-ambiguous-parameter6.ctm",
+        "ctm/in/template-subject-identifier2.ctm",
+        "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+        "ctm/invalid/template-item-identifier3.ctm",
+        "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+        "ctm/invalid/template-subject-locator3.ctm",
+        "xtm2/in/association-binary-duplicate.xtm",
+        "xtm2/in/association-binary.xtm",
+        "xtm2/in/association-duplicate-iid.xtm",
+        "xtm2/in/association-duplicate-iid2.xtm",
+        "xtm2/in/association-duplicate-iid3.xtm",
+        "xtm2/in/association-duplicate-reified.xtm",
+        "xtm2/in/association-duplicate-reified2.xtm",
+        "xtm2/in/association-duplicate-reified3.xtm",
+        "xtm2/in/association-duplicate-reified4.xtm",
+        "xtm2/in/association-duplicate-role.xtm",
+        "xtm2/in/association-instanceof-duplicate.xtm",
+        "xtm2/in/association-instanceof-scope.xtm",
+        "xtm2/in/association-reifier.xtm",
+        "xtm2/in/association-scope.xtm",
+        "xtm2/in/association-ternary.xtm",
+        "xtm2/in/association.xtm",
+        "xtm2/in/itemid-association.xtm",
+        "xtm2/in/itemid-occurrence.xtm",
+        "xtm2/in/itemid-role.xtm",
+        "xtm2/in/merge-itemid-with-association.xtm",
+        "xtm2/in/merge-itemid-with-occurrences.xtm",
+        "xtm2/in/mergemap-itemid.xtm",
+        "xtm2/in/mergemap-loop.xtm",
+        "xtm2/in/mergemap-merge.xtm",
+        "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+        "xtm2/in/mergemap-ontopia-issue-28.xtm",
+        "xtm2/in/mergemap-tm-reifier.xtm",
+        "xtm2/in/mergemap.xtm",
+        "xtm2/in/occurrence-datatype-unknown.xtm",
+        "xtm2/in/occurrence-duplicate-iid.xtm",
+        "xtm2/in/occurrence-duplicate-iid2.xtm",
+        "xtm2/in/occurrence-duplicate-reifier.xtm",
+        "xtm2/in/occurrence-duplicate.xtm",
+        "xtm2/in/occurrence-reifier.xtm",
+        "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+        "xtm2/in/occurrence-resourcedata-uri.xtm",
+        "xtm2/in/occurrence-resourceref-relative.xtm",
+        "xtm2/in/occurrence-resourceref.xtm",
+        "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+        "xtm2/in/occurrence-scope-duplicate.xtm",
+        "xtm2/in/occurrence-scope.xtm",
+        "xtm2/in/occurrence.xtm",
+        "xtm2/in/role-duplicate-iid.xtm",
+        "xtm2/in/role-duplicate-iid2.xtm",
+        "xtm2/in/role-duplicate-reified.xtm",
+        "xtm2/in/role-duplicate-reified2.xtm",
+        "xtm2/in/role-duplicate-reified3.xtm",
+        "xtm2/in/role-duplicate-reified4.xtm",
+        "xtm2/in/role-reifier.xtm",
+        "xtm2/in/variant-datatype-unknown.xtm",
+        "xtm2/in/variant-duplicate-reifier2.xtm",
+        "xtm2/invalid/reifier-collision.xtm",
+        "xtm2/invalid/role-duplicate-reified.xtm",
+        "xtm2/invalid/topicref-no-fragment-id.xtm"
+      ],
+      "dependencies": [
+        "22B-22I normative/implementation decisions"
+      ],
+      "codeAreas": [
+        "docs/",
+        "reports/",
+        "existing harness execution"
+      ],
+      "modelIdentityAcceptance": [
+        "397 eindeutige Originale, keine Hilfsressourcen mitzählen; native TMDM-Eigenschaften separat; CXTM-Byte-/Sortier-/NFC-/Reinheitsnachweise; dokumentierte genehmigte Abweichungen statt falscher PASS; Offline-Build/Run-Manifest und Paketversionen"
+      ],
+      "expectedAdditionalOriginalPASS": 0,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "Profile 1 target editions and their actual reviewed clauses"
+      ],
+      "stopCondition": "Tor A/B bleiben offen bei ungeklärter Klausel, unregistriertem unqualifiziertem Fall, künstlicher PASS-Zahl oder unerklärter Regression.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22K",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "HyperDoc-Abhängigkeit und bestehende native Inspector-Anbindung qualifizieren",
+      "originalCaseIDs": [],
+      "dependencies": [
+        "22J:approved profile / explicit remaining exceptions",
+        "separate HyperDoc change authorization"
+      ],
+      "codeAreas": [
+        "HyperDoc dreyeck.asd / flake.nix / lock configuration",
+        "existing dreyeck/inspector/tmdm and TMDM reading adapters",
+        "packaging tests"
+      ],
+      "modelIdentityAcceptance": [
+        "Einen reproduzierbaren Topic-Maps-Commit wählen; 5a4a668-Performance-Abzweig ausdrücklich qualifizieren statt still übernehmen; frische ASDF-Ladung CTM+XTM+Adapter; alle Modellobjekte EQ; Scoped Views und Reifier-/Parent-Navigation aller Item-Arten; keine zweite TMDM-Implementierung"
+      ],
+      "expectedAdditionalOriginalPASS": 0,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "Integration gate C; conformance gates remain separate"
+      ],
+      "stopCondition": "Stop bei ungeklärter Versions-/Performanceentscheidung, inkompatiblen Strukturen/alten FASLs oder erforderlicher TMDM-Semantikänderung.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    },
+    {
+      "slice": "22L",
+      "status": "proposed-not-authorized-by-Slice-22A",
+      "purpose": "Lernpfad in realem Workspace und Browser-Integration abnehmen",
+      "originalCaseIDs": [],
+      "dependencies": [
+        "22K",
+        "separate HyperDoc application/test authorization"
+      ],
+      "codeAreas": [
+        "HyperDoc existing topicmap projection/workspace",
+        "inspector views and Lisp/browser integration tests",
+        "versioned application CTM/XTM fixture"
+      ],
+      "modelIdentityAcceptance": [
+        "Geplantes Lernpfad-Fixture real importieren, native Objekte navigieren, Point/History verfolgen, SI-Alias-Merge mit alten Handles nachweisen, wiederholtes Rendering modellunverändernd, Start aus sauberem gepinntem Build, CTM/XTM Importparität bei bewusst gleichen Identitäten"
+      ],
+      "expectedAdditionalOriginalPASS": 0,
+      "conditionalGain": null,
+      "gainIsForecastOnly": true,
+      "normativeFunction": [
+        "Integration/application contract, not a replacement for ISO conformance"
+      ],
+      "stopCondition": "Keine Zettel-11326-Abschlussbehauptung ohne A+B+C; UI-Projektion darf kanonische Identität nicht neu erfinden; keine Abnahme allein aus Screenshot oder Testzahl.",
+      "sharedAcceptance": "Unveränderte Originalbytes/Document IRIs/Baselines; echte native Modellprüfungen; vollständiger bytegenauer CXTM-Vergleich bzw. qualifizierte negative Ursache; reguläre ASDF-Ausführung; vollständige frische Offline-Regression und Integritätsprüfung."
+    }
+  ],
+  "gates": [
+    {
+      "gate": "A",
+      "name": "Normative Konformität",
+      "current": "OPEN",
+      "required": [
+        "Verwendete veröffentlichte Editionen/Errata eindeutig und verfügbare Primärevidenz qualifizieren.",
+        "Alle vereinbarten Klauseln abgedeckt oder normativ begründete, ausdrücklich als Profilbeschränkung genehmigte Ausnahme.",
+        "Native TMDM-Identität, Merging, Parent-/Scope-/Reifier-Invarianten getrennt vom Austauschformat nachweisen.",
+        "CXTM-Kanonisierung, Sortierung, Unicode und Reinheit gesondert qualifizieren.",
+        "Keine offene A/B/C-Entscheidung oder unbekannte normative Anforderung als abgeschlossen behandeln."
+      ]
+    },
+    {
+      "gate": "B",
+      "name": "Testsuite",
+      "current": "OPEN",
+      "ideal": {
+        "CTM": {
+          "pass": 273,
+          "fail": 0,
+          "not-run": 0
+        },
+        "XTM": {
+          "pass": 124,
+          "fail": 0,
+          "not-run": 0
+        }
+      },
+      "required": [
+        "397 exakte eindeutige Originale in gepinntem Zustand; tatsächliche Originalausführung mit korrekter Document IRI.",
+        "Positive: native Modellprüfung und vollständiger Bytevergleich; negative: konkrete qualifizierte beabsichtigte Ursache.",
+        "Begründete Baselinekonflikte bleiben Testabweichungen; separate ausdrückliche Abschlussentscheidung statt Umbenennung in PASS.",
+        "Für verbleibende NOT-RUN-Fälle keine pauschale Vollabnahme; gegebenenfalls genehmigte Profilexklusion fallweise benennen.",
+        "Vollständige frische Offline-Regression, Integrität und unveränderte historische Provenienz."
+      ]
+    },
+    {
+      "gate": "C",
+      "name": "HyperDoc-Integration",
+      "current": "NOT-EXECUTED-IN-22A",
+      "required": [
+        "Verifizierte eigenständige ASDF-Systeme laden; Versionen/Registry/reproducible build festlegen.",
+        "Echte CTM-/XTM-Dokumente importieren und native TMDM-Objekte durch die UI-Projektion unverändert erreichbar halten.",
+        "Scopes, Roles, Parent-/Reifier-Beziehungen und alte kanonische Handles navigierbar machen.",
+        "Konkreter Lernpfad-Workspace besteht Lisp- und Browser-Integrationstests; Anwendungstest ersetzt A/B nicht."
+      ]
+    }
+  ],
+  "forecast": {
+    "actualRegisteredAdditionalPASSIn22A": 0,
+    "xtmAdditionalExpectedAfterOrdinaryImplementation": 52,
+    "xtmConditionalAdditional": 2,
+    "xtmMaximumAdditional": 54,
+    "ctmAdditionalImplementationPASSPromised": 0,
+    "ctmConditionalNegativeGrammarQualificationMaximum": 4,
+    "all397PASSGuaranteed": false,
+    "reason": "CTM-Norm-/Baselinekonflikte und XTM-Map-Metadaten/Loop-Entscheidungen sind keine reine Restimplementierung."
+  },
+  "integrationInspection": {
+    "root": "/Users/rgb/workspace/hyperdoc-dreyeck-ch",
+    "head": "306b7fd99fc2611a248e0927ce52a808abb7cc76",
+    "branch": "dreyeck.ch",
+    "status": "",
+    "files": {
+      "dreyeck.asd": "c5ada9a2d508dcbae7d8ee0cfe14ea3725a42e173f1725970d5b9f5127afe3f3",
+      "flake.nix": "ce070ada1e29eb0f272954fd9752bac707a9776cf48efacf913fe7aac970920b",
+      "flake.lock": "f82401946af9fa2467191c454f8ee3f288d76164a00bc41f96f9b36441ede4bc",
+      "dreyeck/src/tmdm-model-navigation.lisp": "de7bc3d250f382e6d14bb094a1f7efd4b84f810fa950266acffc6176377f0d3b",
+      "dreyeck/work/tmdm-model-reading.lisp": "2a97db5f53043d181975f021395656fd80ffcba26b4ba69b88c234f3600d4ca1",
+      "dreyeck/work/topic-maps-reading.lisp": "555cfb9772398112eee37055b5b3fcd3313b859894b179dbc6f7e1c226e2ac95",
+      "dreyeck/work/project/project-workspace.lisp": "41b5e8326d4d3b47f346fd3ea6f993d72abebe1675210ae5adc45efb88a56c14",
+      "dreyeck/tests/tmdm-model-reading.lisp": "8f40b065eeee7176bfa77a8df6ee6607272a99be8af05c239ed979aa4180e3c8",
+      "dreyeck/tests/topic-maps-reading.lisp": "044d743b7906fe5b8ed4bacdaea80f68e594d6b5a64246b5510a2b8c10f2623a",
+      "dreyeck/tests/project-ctm.lisp": "6e9cc191c2fb1c9b53f39c7b031691baf2ba2cb2075b062c8ba0fbea9411dff2",
+      "scripts/test-project-workspace.mjs": "99b37bedb362c82a400a02568897b957d032ddd9479772aa47138599ce644249",
+      "docs/tmdm-model-navigation.md": "b0751b9420087112125dda8ae8f8ac97d664be23bea9afd70e84517f75b81b31",
+      "docs/project-workspace-observations.md": "f60a10fb5d6df90d248dcd5247ea0a337a152bb6c28b69fa75ba834ce2c8dd7b",
+      "dreyeck/work/project/topic-maps-5a4a668-recovery.txt": "5dccf29cee54833755b2c86530745bfebffe81e36371d473b84978696eb12fac"
+    },
+    "inspection": "source inspection only; HyperDoc not loaded or modified in Slice 22A",
+    "currentTopicMapsPin": "5a4a66850403cdfe2755c6c88083a8e31af89628",
+    "pinCommitsNotInConformanceBranch": 1,
+    "mergeBaseWithConformanceBranch": "963f2a09444100d37e49cccbd6634879bd6742b5"
+  },
+  "integrationAcceptance": [
+    {
+      "criterion": 1,
+      "state": "source-supported; current closure revision integration untested",
+      "contract": "ASDF-Registry wählt einen sauberen gepinnten Topic-Maps-Checkout; explizit Reader/Model/CXTM/CTM-XTM-Adapter laden; package/class/symbol identities stimmen; kein zweites TMDM."
+    },
+    {
+      "criterion": 2,
+      "state": "existing CTM paths; XTM integration pending",
+      "contract": "Originalbytes, Document IRI, source key, encoding und endliche Resolver als Importparameter; Errors bleiben XML/XTM/CTM/Unsupported/native Conditions. Kein Implizitladen oder Netzwerkzugriff."
+    },
+    {
+      "criterion": 3,
+      "state": "native public APIs already implemented and regression-tested",
+      "contract": "Topics/Names/Variants/Occurrences/Associations/Roles/Scopes sind tatsächliche Common-Lisp-Objekte; EQ-Referenzen und canonical-* über Import/Merging erhalten."
+    },
+    {
+      "criterion": 4,
+      "state": "specialized Map/Topic/Name views exist; further item/scope/reifier views pending",
+      "contract": "Map→Association→Roles→Player/Type→Topic, Topic→Name→Variant, alle Scopes und Reifier mit inversen Links; Native Objektreferenz statt Label-/JSON-Ersatz. Source provenance remains dated."
+    },
+    {
+      "criterion": 5,
+      "state": "proposed application, not created/tested in 22A",
+      "contract": "Konkreter Lernpfad aus vier Lernschritten TMDM-Grundlagen, CTM-Import, XTM-Import, Identität/Merging; vier prerequisite-Associations (Grundlagen→CTM/XTM; CTM/XTM→Merging) mit Role-Types; Scope-Themes Anfänger/Sprache; Ressourcen/Labels aus echter CTM-/XTM-Quelle. Zusätzliche Type-/Theme-Topics zählen separat."
+    },
+    {
+      "criterion": 6,
+      "state": "model capability proven; current integration-boundary checks pending",
+      "contract": "Alias über SI/II importieren; UI-Origin und zurückbehaltene native Handles müssen canonical-topic EQ zum aktuellen Modell liefern; unveränderte CXTM-Kanonisierung. Projektion ist kein Identitätsmodell."
+    },
+    {
+      "criterion": 7,
+      "state": "older Lisp/browser tests exist; closure scenario pending",
+      "contract": "Frische Load-/Import-/EQ-Tests, gerenderte object-ref-Ziele, reale CLOG-Klicknavigation, Workspace Point/History, Parent-/Scope-/Reifier-Rückwege, Fehlerevidenz und reines Rendering."
+    },
+    {
+      "criterion": 8,
+      "state": "HyperDoc packaging explicitly open in current source",
+      "contract": "Lock ausgewählter gemeinsamer Revision und geprüfter Abhängigkeiten; keine bewegte/dirty Checkout-Abhängigkeit. Frische Images und Neukompilierung bei Layoutänderungen. Performanceabzweig 5a4a668 separat integrieren/qualifizieren oder gemessene Alternative wählen."
+    }
+  ],
+  "learningPathApplication": {
+    "status": "proposed-not-created-not-a-corpus-contract",
+    "reuse": "existing dreyeck/topicmap projection/Workspace and html-inspector-views object-ref",
+    "acceptance": [
+      "Lernschritt per Workspace-Zeichen wählen, echte prerequisite-Association/Role inspizieren und zum vorausgesetzten Lernschritt navigieren.",
+      "Native Referenzen vor/nach SI-/II-Alias-Merging EQ über canonical-*; Point/History beobachtbar.",
+      "CTM-/XTM-Fixtures verwenden absichtlich dieselben absoluten Identitäten/Document-IRI-Verträge; äquivalente native Ergebnisse und CXTM nur nach tatsächlicher Ausführung behaupten.",
+      "Vier Lernschritte sind Anwendungsobjekte, keine neu erfundenen Original-Case-IDs."
+    ]
+  }
+}

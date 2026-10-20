@@ -1,0 +1,50 @@
+{
+  "kind": "slice-22a-precommit-content-audit",
+  "baseCommit": "1c0b92c68fe1114b926d4405b553dfb096d2f425",
+  "branch": "codex/conformance-slice-22a",
+  "auditedAtUTC": "2026-10-20T09:54:19.265040+00:00",
+  "initialIndexAndWorktreeClean": true,
+  "all6024OriginalTrackedFilesByteUnchanged": true,
+  "historicalReportFilesVerified": 3752,
+  "pinnedOriginalAndBaselineFilesVerified": 2006,
+  "exactlyReproducedBehavioralReports": 154,
+  "freshBaselineProcesses": 109,
+  "expectedFaultExits": 103,
+  "additionalLispObservationProcesses": 2,
+  "matrixOriginals": 65,
+  "ctmOpenOriginals": 11,
+  "xtmOpenOriginals": 54,
+  "readableMatrixIDsEqualMachineMatrix": true,
+  "xtmFutureOriginalPartitionsExactly54": true,
+  "noForecastCountedAsActualPASS": true,
+  "newRegisteredPASS": 0,
+  "statusesUnchanged": {
+    "CTM": {
+      "pass": 262,
+      "fail": 4,
+      "not-run": 7,
+      "total": 273
+    },
+    "XTM": {
+      "pass": 70,
+      "fail": 0,
+      "not-run": 54,
+      "total": 124
+    },
+    "combined": {
+      "pass": 332,
+      "fail": 4,
+      "not-run": 61,
+      "total": 397
+    }
+  },
+  "hyperdocHead": "306b7fd99fc2611a248e0927ce52a808abb7cc76",
+  "hyperdoc14InspectedFilesUnchanged": true,
+  "hyperdocWorktreeClean": true,
+  "productionTestsRegistryCorpusBaselinesHistoricalReportsUntouched": true,
+  "newFilesOnlyAllowedDocumentationInvestigationEvidence": true,
+  "pythonToolSyntaxParsed": true,
+  "allNewJSONParsed": 175,
+  "newDocumentationLocalLinksResolve": true,
+  "auditPassed": true
+}
