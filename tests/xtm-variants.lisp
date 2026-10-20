@@ -38,7 +38,7 @@
         (topic-maps.test-foundation::fields "value" (variant-value v) "datatype" (variant-datatype v)
           "parentName" (1+ (position (variant-parent v) names :test #'eq))
           "scope" (coerce (mapcar (lambda (theme) (1+ (position theme topics :test #'eq))) (variant-scope v)) 'vector)
-          "itemIdentifiers" (coerce (item-identifiers v) 'vector) "reifier" nil)) 'vector))))
+          "itemIdentifiers" (coerce (item-identifiers v) 'vector) "reifier" (when (item-reifier v) (1+ (position (item-reifier v) topics :test #'eq))))) 'vector))))
 
 (defun variant-original-model-checks (spec map raw)
   (destructuring-bind (id count name-scope-ids variant-scope-ids source-count) spec
@@ -334,8 +334,8 @@
     ("resourceRef-missing-href" "<variant><scope><topicRef href='#s'/></scope><resourceRef/></variant>" :missing-attribute)))
     (variant-error-control (first row) (format nil "<topic id='a'><name><value>N</value>~A</name></topic>" (second row)) 'xtm-rejection (third row)))
   (dolist (row '(("resourceData-integer" "<variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant>" :resource-data-datatype)
-    ("reified-itemIdentity" "<variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant>" :reification)
-    ("reifier" "<variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant>" :reification)
+    ("reified-itemIdentity-excluded-datatype" "<variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant>" :resource-data-datatype)
+    ("reifier-excluded-datatype" "<variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant>" :resource-data-datatype)
     ("datatype" "<variant><scope><topicRef href='#s'/></scope><resourceData datatype='urn:other'>V</resourceData></variant>" :resource-data-datatype)
     ("embedded-XML" "<variant><scope><topicRef href='#s'/></scope><resourceData><b xmlns='urn:other'>V</b></resourceData></variant>" :resource-data-markup)))
     (variant-error-control (first row) (format nil "<topic id='a'><name><value>N</value>~A</name></topic>" (second row)) 'xtm-unsupported (third row))))

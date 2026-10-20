@@ -1,0 +1,361 @@
+{
+  "controls": [
+    {
+      "field": "nameControls",
+      "before": {
+        "label": "unsupported-variant-reifier",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:unsupported-variant-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:121: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 121,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:unsupported-variant-reifier",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "unsupported-variant-reifier-excluded-datatype",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 223,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:unsupported-variant-reifier-excluded-datatype",
+          "cause": null
+        }
+      }
+    },
+    {
+      "field": "scopeControls",
+      "before": {
+        "label": "scope:variant-reifier-stays-unsupported",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:scope:variant-reifier-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:157: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 157,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:scope:variant-reifier-stays-unsupported",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "scope:variant-reifier-excluded-datatype",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:259: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 259,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:scope:variant-reifier-excluded-datatype",
+          "cause": null
+        }
+      }
+    },
+    {
+      "field": "nameItemIdentityControls",
+      "before": {
+        "label": "iid:variant-reifier-stays-unsupported",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-syntax:iid:variant-reifier-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:149: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 149,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:iid:variant-reifier-stays-unsupported",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "iid:variant-reifier-excluded-datatype",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 251,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-syntax:iid:variant-reifier-excluded-datatype",
+          "cause": null
+        }
+      }
+    },
+    {
+      "field": "variantControls",
+      "before": {
+        "label": "reified-itemIdentity",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:reified-itemIdentity",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at variant-syntax:reified-itemIdentity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:121: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 121,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "variant-syntax:reified-itemIdentity",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "reified-itemIdentity-excluded-datatype",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:reified-itemIdentity-excluded-datatype",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reified-itemIdentity-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 251,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "variant-syntax:reified-itemIdentity-excluded-datatype",
+          "cause": null
+        }
+      }
+    },
+    {
+      "field": "variantControls",
+      "before": {
+        "label": "reifier",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:reifier",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at variant-syntax:reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:121: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 121,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "variant-syntax:reifier",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "reifier-excluded-datatype",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:reifier-excluded-datatype",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 223,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "variant-syntax:reifier-excluded-datatype",
+          "cause": null
+        }
+      }
+    },
+    {
+      "field": "variantItemIdentityControls",
+      "before": {
+        "label": "variant-iid:reification-still-unsupported",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:variant-iid:reification-still-unsupported",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at variant-syntax:variant-iid:reification-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:121: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 121,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "variant-syntax:variant-iid:reification-still-unsupported",
+          "cause": null
+        }
+      },
+      "after": {
+        "label": "variant-iid:reifier-excluded-datatype",
+        "kind": "negative-or-unsupported-XTM",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:variant-iid:reifier-excluded-datatype",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 251,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "variant-syntax:variant-iid:reifier-excluded-datatype",
+          "cause": null
+        }
+      }
+    },
+    {
+      "field": "mapReifierControls",
+      "before": {
+        "label": "name-with-variant-reification",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "expectedClass": "XTM-UNSUPPORTED",
+        "expectedCode": "reification",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name-with-variant-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:138: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 138,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-with-variant-reification",
+          "cause": null
+        },
+        "atomicNativeOperation": null
+      },
+      "after": {
+        "label": "name-with-variant-excluded-datatype",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "expectedClass": "XTM-UNSUPPORTED",
+        "expectedCode": "resource-data-datatype",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at name-with-variant-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 240,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name-with-variant-excluded-datatype",
+          "cause": null
+        },
+        "atomicNativeOperation": null
+      }
+    },
+    {
+      "field": "mapReifierControls",
+      "before": {
+        "label": "variant-reification",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "expectedClass": "XTM-UNSUPPORTED",
+        "expectedCode": "reification",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at variant-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:138: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 138,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "variant-reification",
+          "cause": null
+        },
+        "atomicNativeOperation": null
+      },
+      "after": {
+        "label": "variant-reifier-excluded-datatype",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "expectedClass": "XTM-UNSUPPORTED",
+        "expectedCode": "resource-data-datatype",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 240,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "variant-reifier-excluded-datatype",
+          "cause": null
+        },
+        "atomicNativeOperation": null
+      }
+    },
+    {
+      "field": "nameReifierControls",
+      "before": {
+        "label": "name:variant-remains-unsupported",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic></topicMap>",
+        "expectedClass": "XTM-UNSUPPORTED",
+        "expectedCode": "reification",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "reification",
+          "detail": "XTM Reification is outside this subset.",
+          "message": "XTM REIFICATION at name:variant-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:134: XTM Reification is outside this subset.",
+          "line": 1,
+          "column": 134,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name:variant-remains-unsupported",
+          "cause": null
+        },
+        "atomicNativeOperation": null
+      },
+      "after": {
+        "label": "name:variant-reifier-excluded-datatype",
+        "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "expectedClass": "XTM-UNSUPPORTED",
+        "expectedCode": "resource-data-datatype",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at name:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:236: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 1,
+          "column": 236,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+          "sourceKey": "name:variant-reifier-excluded-datatype",
+          "cause": null
+        },
+        "atomicNativeOperation": null
+      }
+    }
+  ]
+}

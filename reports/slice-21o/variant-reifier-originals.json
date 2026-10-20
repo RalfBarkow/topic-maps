@@ -1,0 +1,235 @@
+{
+  "kind": "executed-original-variant-reification-registration",
+  "cases": [
+    {
+      "id": "xtm2/in/variant-reifier.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm",
+      "sourceKey": "xtm2/in/variant-reifier.xtm",
+      "sourceBytes": 326,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E20200A20203C746F7069632069643D22746F706963223E0A202020203C6E616D653E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A2020202020203C76617269616E7420726569666965723D222372656966696572223E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D2223636F6D6D616E64222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174613E544F504943213C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant reifier=\"#reifier\">\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceVariantCount": 1,
+      "primaryQualifiedParserCalls": 1,
+      "model": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 4,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm#command"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 4,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm#reifier"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Topic",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [],
+                  "variantCount": 1
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": [
+              {
+                "value": "TOPIC!",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "parentName": 1,
+                "scope": [
+                  3
+                ],
+                "itemIdentifiers": [],
+                "reifier": 4
+              }
+            ]
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            null
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [
+          4
+        ],
+        "topicReifiedVariants": [
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "condition": null,
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\" reifier=\"2\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\" reifier=\"2\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 702,
+      "expectedBytes": 702,
+      "firstDifferentByte": null,
+      "status": "pass",
+      "sourceSHA256": "59fc86dbefd9b8c647baff6d88bbc0768bb0a4abfc510f5eef4d391ee312d87f",
+      "baselineSHA256": "014773fca95a2b7bb70038f8e118d402d311a2804f54f105ff05ee53c7eb0a60",
+      "actualSHA256": "014773fca95a2b7bb70038f8e118d402d311a2804f54f105ff05ee53c7eb0a60",
+      "executedInASDFTestOp": true
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-reifier.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm",
+      "sourceKey": "xtm2/in/variant-duplicate-reifier.xtm",
+      "sourceBytes": 493,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E20200A20203C746F7069632069643D22746F706963223E0A202020203C6E616D653E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A2020202020203C76617269616E7420726569666965723D222372656966696572223E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D2223636F6D6D616E64222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174613E544F504943213C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A2020202020203C76617269616E7420726569666965723D222372656966696572223E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D2223636F6D6D616E64222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174613E544F504943213C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant reifier=\"#reifier\">\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n      <variant reifier=\"#reifier\">\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceVariantCount": 2,
+      "primaryQualifiedParserCalls": 1,
+      "model": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 4,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm#command"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 4,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm#reifier"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Topic",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [],
+                  "variantCount": 1
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": [
+              {
+                "value": "TOPIC!",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "parentName": 1,
+                "scope": [
+                  3
+                ],
+                "itemIdentifiers": [],
+                "reifier": 4
+              }
+            ]
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            null
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [
+          4
+        ],
+        "topicReifiedVariants": [
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "condition": null,
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\" reifier=\"2\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\" reifier=\"2\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 702,
+      "expectedBytes": 702,
+      "firstDifferentByte": null,
+      "status": "pass",
+      "sourceSHA256": "62d364191cf06854be9a683956c30f5bf5282d7c89f604ccc2923bf8b4738653",
+      "baselineSHA256": "014773fca95a2b7bb70038f8e118d402d311a2804f54f105ff05ee53c7eb0a60",
+      "actualSHA256": "014773fca95a2b7bb70038f8e118d402d311a2804f54f105ff05ee53c7eb0a60",
+      "executedInASDFTestOp": true
+    }
+  ]
+}

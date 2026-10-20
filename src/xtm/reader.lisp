@@ -62,9 +62,6 @@
 (defun unsupported (node)
   (reject :unsupported-construct (format nil "XTM ~A is not implemented in this subset." (node-name node))
           node 'xtm-unsupported))
-(defun check-reifier (node)
-  (when (attr node "reifier")
-    (reject :reification "XTM Reification is outside this subset." node 'xtm-unsupported)))
 (defun leaf-href (node)
   (attributes node '("href") '("href"))
   (when (elements node) (reject :unexpected-child "A locator element must be empty." node))
@@ -153,7 +150,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                       (unless value-seen (reject :missing-name-value "name requires a value element." node))))
                    ((string= name "variant")
                     (attributes node '("reifier") nil)
-                    (check-reifier node)
+                    (when (attr node "reifier") (resolve-iri (attr node "reifier") *document-iri* node))
                     (let ((phase 0) (scope-seen nil) (resource-seen nil))
                       (dolist (child (elements node))
                         (check-namespace child)
@@ -271,9 +268,12 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                      :scope (append (topic-maps.tmdm:topic-name-scope name) explicit))))
       ;; Normalize first: an equal Variant may already own this identifier.
       ;; Keep the native canonical result and its global conflict conditions.
-      (dolist (child children variant)
+      (dolist (child children)
         (when (string= (node-name child) "itemIdentity")
-          (setf variant (topic-maps.tmdm:add-item-identifier variant (leaf-href child))))))))
+          (setf variant (topic-maps.tmdm:add-item-identifier variant (leaf-href child)))))
+      ;; Reification may merge Topics and normalize this Variant again.
+      ;; Reuse the II-only resolver and retain its current native result.
+      (topic-maps.tmdm:canonical-variant (read-item-reifier node variant map)))))
 (defun read-name (node owner map)
   (let* ((children (elements node))
          (type-node (find "type" children :key #'node-name :test #'string=))

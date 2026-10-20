@@ -1,0 +1,72 @@
+[
+  {
+    "report": "xtm-mergemap.cxtm.json",
+    "changes": [
+      {
+        "path": "/checks/607",
+        "before": "unsupported-reification:condition-and-code",
+        "after": "unsupported-occurrence-reification:condition-and-code"
+      },
+      {
+        "path": "/checks/608",
+        "before": "unsupported-reification:parent-directive-location",
+        "after": "unsupported-occurrence-reification:parent-directive-location"
+      },
+      {
+        "path": "/checks/609",
+        "before": "unsupported-reification:resource-and-notation-context",
+        "after": "unsupported-occurrence-reification:resource-and-notation-context"
+      },
+      {
+        "path": "/checks/610",
+        "before": "unsupported-reification:original-condition-retained",
+        "after": "unsupported-occurrence-reification:original-condition-retained"
+      },
+      {
+        "path": "/checks/611",
+        "before": "unsupported-reification:child-source-document-and-XML-position",
+        "after": "unsupported-occurrence-reification:child-source-document-and-XML-position"
+      }
+    ]
+  },
+  {
+    "report": "xtm-mergemap.integration.json",
+    "changes": [
+      {
+        "path": "/checks/162",
+        "before": "unsupported-reification:condition-and-code",
+        "after": "unsupported-occurrence-reification:condition-and-code"
+      },
+      {
+        "path": "/checks/163",
+        "before": "unsupported-reification:parent-directive-location",
+        "after": "unsupported-occurrence-reification:parent-directive-location"
+      },
+      {
+        "path": "/checks/164",
+        "before": "unsupported-reification:resource-and-notation-context",
+        "after": "unsupported-occurrence-reification:resource-and-notation-context"
+      },
+      {
+        "path": "/checks/165",
+        "before": "unsupported-reification:original-condition-retained",
+        "after": "unsupported-occurrence-reification:original-condition-retained"
+      },
+      {
+        "path": "/checks/166",
+        "before": "unsupported-reification:child-source-document-and-XML-position",
+        "after": "unsupported-occurrence-reification:child-source-document-and-XML-position"
+      },
+      {
+        "path": "/rejections/13/label",
+        "before": "unsupported-reification",
+        "after": "unsupported-occurrence-reification"
+      },
+      {
+        "path": "/rejections/13/code",
+        "before": "REIFICATION",
+        "after": "UNSUPPORTED-CONSTRUCT"
+      }
+    ]
+  }
+]

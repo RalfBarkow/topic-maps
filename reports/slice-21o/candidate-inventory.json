@@ -1,0 +1,46 @@
+{
+  "candidates": [
+    {
+      "id": "xtm2/in/variant-reifier.xtm",
+      "sourceBytes": 326,
+      "sourceSHA256": "59fc86dbefd9b8c647baff6d88bbc0768bb0a4abfc510f5eef4d391ee312d87f",
+      "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6e616d653e0a2020202020203c76616c75653e546f7069633c2f76616c75653e0a2020202020203c76617269616e7420726569666965723d222372656966696572223e0a20202020202020203c73636f70653e0a202020202020202020203c746f70696352656620687265663d2223636f6d6d616e64222f3e0a20202020202020203c2f73636f70653e0a20202020202020203c7265736f75726365446174613e544f504943213c2f7265736f75726365446174613e0a2020202020203c2f76617269616e743e0a202020203c2f6e616d653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant reifier=\"#reifier\">\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+      "baselineBytes": 702,
+      "baselineSHA256": "014773fca95a2b7bb70038f8e118d402d311a2804f54f105ff05ee53c7eb0a60",
+      "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\" reifier=\"2\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "sourceNames": 1,
+      "sourceVariants": 1,
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-reifier.xtm",
+      "register": true
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-reifier.xtm",
+      "sourceBytes": 493,
+      "sourceSHA256": "62d364191cf06854be9a683956c30f5bf5282d7c89f604ccc2923bf8b4738653",
+      "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6e616d653e0a2020202020203c76616c75653e546f7069633c2f76616c75653e0a2020202020203c76617269616e7420726569666965723d222372656966696572223e0a20202020202020203c73636f70653e0a202020202020202020203c746f70696352656620687265663d2223636f6d6d616e64222f3e0a20202020202020203c2f73636f70653e0a20202020202020203c7265736f75726365446174613e544f504943213c2f7265736f75726365446174613e0a2020202020203c2f76617269616e743e0a2020202020203c76617269616e7420726569666965723d222372656966696572223e0a20202020202020203c73636f70653e0a202020202020202020203c746f70696352656620687265663d2223636f6d6d616e64222f3e0a20202020202020203c2f73636f70653e0a20202020202020203c7265736f75726365446174613e544f504943213c2f7265736f75726365446174613e0a2020202020203c2f76617269616e743e0a202020203c2f6e616d653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant reifier=\"#reifier\">\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n      <variant reifier=\"#reifier\">\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+      "baselineBytes": 702,
+      "baselineSHA256": "014773fca95a2b7bb70038f8e118d402d311a2804f54f105ff05ee53c7eb0a60",
+      "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\" reifier=\"2\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "sourceNames": 1,
+      "sourceVariants": 2,
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier.xtm",
+      "register": true
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "sourceBytes": 543,
+      "sourceSHA256": "87b740c6ec7d11b485b223cb5c28807bce9259d04c2d586ea557e6cd10c3faf4",
+      "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6e616d653e0a2020202020203c76616c75653e546f7069633c2f76616c75653e0a2020202020203c76617269616e7420726569666965723d222372656966696572223e0a20202020202020203c73636f70653e0a202020202020202020203c746f70696352656620687265663d2223636f6d6d616e64222f3e0a20202020202020203c2f73636f70653e0a20202020202020203c7265736f75726365446174613e544f504943213c2f7265736f75726365446174613e0a2020202020203c2f76617269616e743e0a202020203c2f6e616d653e0a202020203c6e616d653e0a2020202020203c76616c75653e546f7069633c2f76616c75653e0a2020202020203c76617269616e7420726569666965723d222372656966696572223e0a20202020202020203c73636f70653e0a202020202020202020203c746f70696352656620687265663d2223636f6d6d616e64222f3e0a20202020202020203c2f73636f70653e0a20202020202020203c7265736f75726365446174613e544f504943213c2f7265736f75726365446174613e0a2020202020203c2f76617269616e743e0a202020203c2f6e616d653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant reifier=\"#reifier\">\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n    </name>\n    <name>\n      <value>Topic</value>\n      <variant reifier=\"#reifier\">\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData>TOPIC!</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+      "baselineBytes": 702,
+      "baselineSHA256": "014773fca95a2b7bb70038f8e118d402d311a2804f54f105ff05ee53c7eb0a60",
+      "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\" reifier=\"2\">\n<value>TOPIC!</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "sourceNames": 2,
+      "sourceVariants": 2,
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-duplicate-reifier2.xtm",
+      "register": false
+    }
+  ]
+}

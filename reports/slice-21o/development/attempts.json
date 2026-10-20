@@ -1,0 +1,31 @@
+{
+  "kind": "development-attempts-not-acceptance-results",
+  "attempts": [
+    {
+      "phase": "native preflight before Reader edit",
+      "result": "failed test assertion",
+      "reason": "Incorrect raw old-Variant EQ expectation after add-variant normalization. Corrected to canonical-variant EQ; existing TMDM API unchanged.",
+      "source": "../development-preflight-original.lisp",
+      "log": "../development-preflight-original.log"
+    },
+    {
+      "phase": "new ASDF test compilation",
+      "result": "failed compilation",
+      "reason": "Extra closing parenthesis in new Variant-Reification test; corrected before acceptance.",
+      "log": "development-xtm-1.log"
+    },
+    {
+      "phase": "development XTM regression before final scope counterprobes",
+      "result": "passed",
+      "checks": 2380,
+      "log": "development-xtm-2.log"
+    },
+    {
+      "phase": "additional-original diagnostic helper",
+      "result": "failed helper assertion",
+      "reason": "Helper lookup initially used default test Document IRI instead of the original case IRI; fixed local dynamic binding. Public Reader unchanged; successful reproduction retained in accepted diagnostics."
+    }
+  ],
+  "acceptanceReport": "../execution.json",
+  "finalAcceptanceChecks": 2384
+}

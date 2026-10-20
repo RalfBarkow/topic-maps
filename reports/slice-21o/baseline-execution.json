@@ -1,0 +1,90 @@
+{
+  "runs": [
+    {
+      "label": "source-preparation",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "python3",
+        "/Users/rgb/workspace/topic-maps/scripts/validate-slice-21n.py",
+        "--prepare",
+        "/private/tmp/xtm-slice-21o-uvmlr0x2/sources"
+      ],
+      "startedAtUTC": "2026-10-20T08:55:41.752974+00:00",
+      "finishedAtUTC": "2026-10-20T08:55:45.646898+00:00",
+      "exitCode": 0,
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "baseline-xtm-diagnostics",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/private/tmp/xtm-slice-21o-uvmlr0x2/diagnostics.lisp"
+      ],
+      "startedAtUTC": "2026-10-20T08:55:45.650491+00:00",
+      "finishedAtUTC": "2026-10-20T08:55:54.771174+00:00",
+      "exitCode": 0,
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "baseline-regression",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+      ],
+      "startedAtUTC": "2026-10-20T08:55:54.801672+00:00",
+      "finishedAtUTC": "2026-10-20T08:56:15.195238+00:00",
+      "exitCode": 0,
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "variant-reifier-api-preflight",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/private/tmp/xtm-slice-21o-uvmlr0x2/api-preflight.lisp"
+      ],
+      "startedAtUTC": "2026-10-20T08:56:15.396949+00:00",
+      "finishedAtUTC": "2026-10-20T08:56:45.616343+00:00",
+      "exitCode": 0,
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true
+    }
+  ],
+  "acceptancePassed": true,
+  "baselineXTM": {
+    "pass": 68,
+    "fail": 0,
+    "not-run": 56
+  },
+  "baselineCTM": {
+    "pass": 262,
+    "fail": 4,
+    "not-run": 7
+  },
+  "preflightDevelopmentCorrection": "Initial assertion incorrectly required raw old Variant EQ after normalization. Corrected to canonical-variant EQ; failed script/log retained.",
+  "readerAndAllTrackedFilesUnchanged": true
+}
