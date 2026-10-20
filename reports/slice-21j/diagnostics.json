@@ -1,0 +1,84 @@
+{
+  "kind": "read-only-observations-no-extra-registration",
+  "originalObservations": 124,
+  "unchangedOriginalObservations": 122,
+  "diagnosticChanges": [
+    {
+      "id": "xtm2/in/variant-datatype-unknown.xtm",
+      "before": {
+        "id": "xtm2/in/variant-datatype-unknown.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string resourceData is implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at xtm2/in/variant-datatype-unknown.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm), approximately 9:59: Only textual xsd:string resourceData is implemented.",
+          "line": 9,
+          "column": 59,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+          "sourceKey": "xtm2/in/variant-datatype-unknown.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-datatype-unknown.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at xtm2/in/variant-datatype-unknown.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm), approximately 9:59: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+          "line": 9,
+          "column": 59,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+          "sourceKey": "xtm2/in/variant-datatype-unknown.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "reason": "Unsupported diagnostic wording now lists xsd:string and xsd:anyURI; class, code, location and rejection unchanged."
+    },
+    {
+      "id": "xtm2/in/variant-resourcedata-uri.xtm",
+      "before": {
+        "id": "xtm2/in/variant-resourcedata-uri.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string resourceData is implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at xtm2/in/variant-resourcedata-uri.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm), approximately 10:24: Only textual xsd:string resourceData is implemented.",
+          "line": 10,
+          "column": 24,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+          "sourceKey": "xtm2/in/variant-resourcedata-uri.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/variant-resourcedata-uri.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>http://example.org/command.wav</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "reason": "anyURI resourceData text now uses the existing XTM IRI resolver and add-variant API."
+    }
+  ],
+  "registeredCases": [
+    "xtm2/in/variant-resourcedata-uri.xtm"
+  ],
+  "outOfScopeUnknownDatatypeStillUnsupported": true
+}

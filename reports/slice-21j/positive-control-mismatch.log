@@ -1,0 +1,55 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+Unhandled SIMPLE-ERROR in thread #<SB-THREAD:THREAD tid=259 "main thread" RUNNING
+                                    {7000828103}>:
+  XTM test failed: empty:original-byte-exact
+
+Backtrace for: #<SB-THREAD:THREAD tid=259 "main thread" RUNNING {7000828103}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<SIMPLE-ERROR "XTM test failed: ~A" {700430DCC3}> #<unused argument> :QUIT T)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<SIMPLE-ERROR "XTM test failed: ~A" {700430DCC3}>)
+2: (INVOKE-DEBUGGER #<SIMPLE-ERROR "XTM test failed: ~A" {700430DCC3}>)
+3: (ERROR #<SIMPLE-ERROR "XTM test failed: ~A" {700430DCC3}>)
+4: (TOPIC-MAPS.XTM.TESTS:RUN-TESTS)
+5: ((SB-PCL::EMF ASDF/ACTION:PERFORM) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:TEST-OP > #<ASDF/SYSTEM:SYSTEM "topic-maps/xtm/tests">)
+6: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+7: ((:METHOD ASDF/ACTION:PERFORM-WITH-RESTARTS :AROUND (T T)) #<ASDF/LISP-ACTION:TEST-OP > #<ASDF/SYSTEM:SYSTEM "topic-maps/xtm/tests">) [fast-method]
+8: ((:METHOD ASDF/PLAN:PERFORM-PLAN (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {70044E8593}>) [fast-method]
+9: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+10: ((:METHOD ASDF/PLAN:PERFORM-PLAN :AROUND (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {70044E8593}>) [fast-method]
+11: ((:METHOD ASDF/OPERATE:OPERATE (ASDF/OPERATION:OPERATION ASDF/COMPONENT:COMPONENT)) #<ASDF/LISP-ACTION:TEST-OP > #<ASDF/SYSTEM:SYSTEM "topic-maps/xtm"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+12: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:TEST-OP > #<ASDF/SYSTEM:SYSTEM "topic-maps/xtm">)
+13: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+14: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) #<ASDF/LISP-ACTION:TEST-OP > #<ASDF/SYSTEM:SYSTEM "topic-maps/xtm">) [fast-method]
+15: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> ASDF/LISP-ACTION:TEST-OP "topic-maps/xtm")
+16: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+17: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/LISP-ACTION:TEST-OP "topic-maps/xtm") [fast-method]
+18: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<FUNCTION (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {70044C835B}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+19: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+20: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<FUNCTION (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {70044C74AB}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+21: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/LISP-ACTION:TEST-OP "topic-maps/xtm") [fast-method]
+22: (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm")
+23: (SB-INT:SIMPLE-EVAL-IN-LEXENV (LET* ((FAMILY (UIOP/OS:GETENV "TOPIC_MAPS_21J_FAMILY")) (MODE (UIOP/OS:GETENV "TOPIC_MAPS_21J_FAULT")) (TARGET (COND (# "xtm2/in/empty.xtm") (# "xtm2/invalid/id-invalid.xtm") (# "xtm2/in/name.xtm") (# "xtm2/in/name-scope.xtm") (# "xtm2/in/itemid-name.xtm") (# "xtm2/in/variant.xtm") (# "xtm2/invalid/variant-missing-scope-duplicate.xtm") (# "xtm2/in/merge-itemid-with-variants.xtm") (# "xtm2/in/variant-resourceref.xtm") (# "xtm2/in/variant-resourceref-relative.xtm") (# "xtm2/in/variant-resourcedata-uri.xtm") ...))) (IF (STRING= MODE "mismatch") (LET ((SAVED #) (IRI #)) (SETF (SYMBOL-FUNCTION #) (LAMBDA # #))) (LET* ((SAVED #) (SOURCE #)) (SETF (SYMBOL-FUNCTION #) (LAMBDA # #)))) (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm")) #<NULL-LEXENV>)
+24: (EVAL-TLF (LET* ((FAMILY (UIOP/OS:GETENV "TOPIC_MAPS_21J_FAMILY")) (MODE (UIOP/OS:GETENV "TOPIC_MAPS_21J_FAULT")) (TARGET (COND (# "xtm2/in/empty.xtm") (# "xtm2/invalid/id-invalid.xtm") (# "xtm2/in/name.xtm") (# "xtm2/in/name-scope.xtm") (# "xtm2/in/itemid-name.xtm") (# "xtm2/in/variant.xtm") (# "xtm2/invalid/variant-missing-scope-duplicate.xtm") (# "xtm2/in/merge-itemid-with-variants.xtm") (# "xtm2/in/variant-resourceref.xtm") (# "xtm2/in/variant-resourceref-relative.xtm") (# "xtm2/in/variant-resourcedata-uri.xtm") ...))) (IF (STRING= MODE "mismatch") (LET ((SAVED #) (IRI #)) (SETF (SYMBOL-FUNCTION #) (LAMBDA # #))) (LET* ((SAVED #) (SOURCE #)) (SETF (SYMBOL-FUNCTION #) (LAMBDA # #)))) (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm")) 5 NIL)
+25: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (LET* ((FAMILY (UIOP/OS:GETENV "TOPIC_MAPS_21J_FAMILY")) (MODE (UIOP/OS:GETENV "TOPIC_MAPS_21J_FAULT")) (TARGET (COND (# "xtm2/in/empty.xtm") (# "xtm2/invalid/id-invalid.xtm") (# "xtm2/in/name.xtm") (# "xtm2/in/name-scope.xtm") (# "xtm2/in/itemid-name.xtm") (# "xtm2/in/variant.xtm") (# "xtm2/invalid/variant-missing-scope-duplicate.xtm") (# "xtm2/in/merge-itemid-with-variants.xtm") (# "xtm2/in/variant-resourceref.xtm") (# "xtm2/in/variant-resourceref-relative.xtm") (# "xtm2/in/variant-resourcedata-uri.xtm") ...))) (IF (STRING= MODE "mismatch") (LET ((SAVED #) (IRI #)) (SETF (SYMBOL-FUNCTION #) (LAMBDA # #))) (LET* ((SAVED #) (SOURCE #)) (SETF (SYMBOL-FUNCTION #) (LAMBDA # #)))) (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm")) 5)
+26: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (LET* ((FAMILY (UIOP/OS:GETENV "TOPIC_MAPS_21J_FAMILY")) (MODE (UIOP/OS:GETENV "TOPIC_MAPS_21J_FAULT")) (TARGET (COND (# "xtm2/in/empty.xtm") (# "xtm2/invalid/id-invalid.xtm") (# "xtm2/in/name.xtm") (# "xtm2/in/name-scope.xtm") (# "xtm2/in/itemid-name.xtm") (# "xtm2/in/variant.xtm") (# "xtm2/invalid/variant-missing-scope-duplicate.xtm") (# "xtm2/in/merge-itemid-with-variants.xtm") (# "xtm2/in/variant-resourceref.xtm") (# "xtm2/in/variant-resourceref-relative.xtm") (# "xtm2/in/variant-resourcedata-uri.xtm") ...))) (IF (STRING= MODE "mismatch") (LET ((SAVED #) (IRI #)) (SETF (SYMBOL-FUNCTION #) (LAMBDA # #))) (LET* ((SAVED #) (SOURCE #)) (SETF (SYMBOL-FUNCTION #) (LAMBDA # #)))) (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm")) :CURRENT-INDEX 5)
+27: (SB-C::%DO-FORMS-FROM-INFO #<FUNCTION (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {AAAF3DB}> #<SB-C::SOURCE-INFO {7001852643}> SB-C::INPUT-ERROR-IN-LOAD)
+28: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21j/failure-controls.lisp" {7000829243}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+29: ((LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21j/failure-controls.lisp" {7000829243}> NIL)
+30: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<FUNCTION (LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) {AAAF79B}> #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21j/failure-controls.lisp" {7000829243}> NIL #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21j/failure-controls.lisp" {7000829243}>)
+31: (LOAD #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21j/failure-controls.lisp" {7000829243}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST :ERROR :EXTERNAL-FORMAT :DEFAULT)
+32: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-21j/failure-controls.lisp" {7000829243}>)
+33: ((FLET SB-UNIX::BODY :IN SB-IMPL::PROCESS-SCRIPT))
+34: ((FLET "WITHOUT-INTERRUPTS-BODY-" :IN SB-IMPL::PROCESS-SCRIPT))
+35: (SB-IMPL::PROCESS-SCRIPT "/Users/rgb/workspace/topic-maps/reports/slice-21j/failure-controls.lisp")
+36: (SB-IMPL::TOPLEVEL-INIT)
+37: ((FLET SB-UNIX::BODY :IN SB-IMPL::START-LISP))
+38: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::START-LISP))
+39: (SB-IMPL::%START-LISP)
+
+unhandled condition in --disable-debugger mode, quitting
+; 
+; compilation unit aborted
+;   caught 1 fatal ERROR condition

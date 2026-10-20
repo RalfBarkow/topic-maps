@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "id": "xtm2/in/variant-resourcedata-uri.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+      "sourceBytes": 405,
+      "sourceSHA256": "9bfd355a4f3f4a8c5a1d9ca7af842e1f9330d10f0b0a3be6b4606f614b2c8ba0",
+      "baselineBytes": 621,
+      "baselineSHA256": "d4df2bef650becff7918ee85af338631c87a4309ad65e64a26ee93edbb42a8bb",
+      "beforeObservation": {
+        "id": "xtm2/in/variant-resourcedata-uri.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-data-datatype",
+          "detail": "Only textual xsd:string resourceData is implemented.",
+          "message": "XTM RESOURCE-DATA-DATATYPE at xtm2/in/variant-resourcedata-uri.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm), approximately 10:24: Only textual xsd:string resourceData is implemented.",
+          "line": 10,
+          "column": 24,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+          "sourceKey": "xtm2/in/variant-resourcedata-uri.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    }
+  ]
+}

@@ -220,7 +220,7 @@
     ("ref-namespace" "<scope><topicRef xmlns='urn:foreign' href='#s'/></scope>" :invalid-namespace)))
     (scope-error-control (first spec) (format nil "<topic id='a'><name>~A<value>N</value></name></topic>" (second spec)) 'xtm-rejection (third spec)))
   (scope-error-control "after-value" "<topic id='a'><name><value>N</value><scope><topicRef href='#s'/></scope></name></topic>" 'xtm-rejection :element-order)
-  (dolist (spec '(("variant-resourceData-datatype-stays-unsupported" "<name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'>urn:excluded</resourceData></variant></name>" :resource-data-datatype)
+  (dolist (spec '(("variant-resourceData-datatype-stays-unsupported" "<name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name>" :resource-data-datatype)
     ("name-reifier-stays-unsupported" "<name reifier='#r'><scope><topicRef href='#s'/></scope><value>N</value></name>" :reification)))
     (scope-error-control (first spec) (format nil "<topic id='a'>~A</topic>" (second spec)) 'xtm-unsupported (third spec)))
   (scope-error-control "occurrence-stays-unsupported" "<topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic>" 'xtm-unsupported :unsupported-construct)

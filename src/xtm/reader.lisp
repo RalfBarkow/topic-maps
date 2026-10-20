@@ -177,14 +177,23 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                    ((string= name "resourceRef") (leaf-href node))
                    ((string= name "resourceData")
                     (attributes node '("datatype") nil)
-                    (when (and (attr node "datatype")
-                               (not (equal (attr node "datatype") (topic-maps.tmdm:string-datatype))))
-                      (reject :resource-data-datatype "Only textual xsd:string resourceData is implemented." node 'xtm-unsupported))
-                    (dolist (child (node-children node))
-                      (unless (stringp child)
-                        (if (equal (node-uri child) +namespace+)
-                            (reject :unexpected-child "resourceData cannot contain XTM markup." child)
-                            (reject :resource-data-markup "Embedded XML resourceData is outside this subset." child 'xtm-unsupported)))))
+                    (let ((datatype (attr node "datatype")))
+                      ;; DATATYPE is already an absolute IRI, not content to
+                      ;; resolve against the document or percent-normalize.
+                      (when datatype
+                        (unless (iri-parts-scheme (split-iri datatype))
+                          (reject :invalid-resource-data-datatype "resourceData datatype must be an absolute IRI." node))
+                        (validate-decoded-reference (unescape-reference datatype node) node)
+                        (unless (member datatype (list (topic-maps.tmdm:string-datatype) (topic-maps.tmdm:iri-datatype)) :test #'equal)
+                          (reject :resource-data-datatype "Only textual xsd:string and xsd:anyURI resourceData are implemented." node 'xtm-unsupported)))
+                      (dolist (child (node-children node))
+                        (unless (stringp child)
+                          (if (or (equal datatype (topic-maps.tmdm:iri-datatype)) (equal (node-uri child) +namespace+))
+                              (reject :unexpected-child
+                                (if (equal datatype (topic-maps.tmdm:iri-datatype))
+                                    "anyURI resourceData cannot contain child elements."
+                                    "resourceData cannot contain XTM markup.") child)
+                              (reject :resource-data-markup "Embedded XML resourceData is outside this subset." child 'xtm-unsupported))))))
                    ((string= name "type")
                     (attributes node nil nil)
                     (let ((refs (elements node)))
@@ -230,16 +239,19 @@ constructs' complete subgrammars is made. XML errors have already been checked."
          (scope-node (find "scope" children :key #'node-name :test #'string=))
          (resource (find-if (lambda (child) (member (node-name child) '("resourceData" "resourceRef") :test #'string=)) children))
          (reference-p (string= (node-name resource) "resourceRef"))
+         (uri-data-p (and (not reference-p) (equal (attr resource "datatype") (topic-maps.tmdm:iri-datatype))))
          (explicit (mapcar (lambda (ref) (find-reference-topic map (reference-iri ref))) (elements scope-node)))
          ;; A resource locator is a value, not a topic reference. LEAF-HREF uses
          ;; the shared XTM IRI resolver without topic lookup or resource access.
-         (value (if reference-p (leaf-href resource)
-                    (with-output-to-string (out)
-                      (dolist (part (node-children resource)) (write-string part out))))))
+         (text (unless reference-p (with-output-to-string (out)
+                 (dolist (part (node-children resource)) (write-string part out)))))
+         (value (cond (reference-p (leaf-href resource))
+                      (uri-data-p (resolve-iri text *document-iri* resource))
+                      (t text))))
     ;; ADD-VARIANT canonicalizes the union and enforces the proper superset.
     ;; A nonempty explicit scope may still add no theme to the Name scope.
     (topic-maps.tmdm:add-variant name value
-      :datatype (if reference-p (topic-maps.tmdm:iri-datatype) (topic-maps.tmdm:string-datatype))
+      :datatype (if (or reference-p uri-data-p) (topic-maps.tmdm:iri-datatype) (topic-maps.tmdm:string-datatype))
       :scope (append (topic-maps.tmdm:topic-name-scope name) explicit))))
 (defun read-name (node owner map)
   (let* ((children (elements node))

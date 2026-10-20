@@ -1,0 +1,87 @@
+{
+  "kind": "executed-original-variant-uri-data-registration",
+  "cases": [
+    {
+      "id": "xtm2/in/variant-resourcedata-uri.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm",
+      "sourceKey": "xtm2/in/variant-resourcedata-uri.xtm",
+      "sourceBytes": 405,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E20200A20203C746F7069632069643D22746F706963223E0A202020203C6E616D653E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A2020202020203C76617269616E743E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D2223636F6D6D616E64222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174612064617461747970653D22687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79555249220A202020202020202020202020202020202020202020203E687474703A2F2F6578616D706C652E6F72672F636F6D6D616E642E7761763C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant>\n        <scope>\n          <topicRef href=\"#command\"/>\n        </scope>\n        <resourceData datatype=\"http://www.w3.org/2001/XMLSchema#anyURI\"\n                      >http://example.org/command.wav</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+      "resourceText": "http://example.org/command.wav",
+      "absoluteValue": "http://example.org/command.wav",
+      "model": {
+        "nameModel": {
+          "identity": {
+            "topicCount": 3,
+            "associationCount": 0,
+            "canonicalParentsAndInverseReferences": true,
+            "topics": [
+              {
+                "ordinal": 1,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm#topic"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              },
+              {
+                "ordinal": 2,
+                "itemIdentifiers": [],
+                "subjectIdentifiers": [
+                  "http://psi.topicmaps.org/iso13250/model/topic-name"
+                ],
+                "subjectLocators": []
+              },
+              {
+                "ordinal": 3,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-resourcedata-uri.xtm#command"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              }
+            ],
+            "associations": []
+          },
+          "mapItemIdentifiers": [],
+          "canonicalNameParentTypeReferences": true,
+          "names": [
+            {
+              "value": "Topic",
+              "parent": 1,
+              "type": 2,
+              "scope": [],
+              "itemIdentifiers": [],
+              "variantCount": 1
+            }
+          ]
+        },
+        "canonicalVariantReferences": true,
+        "variants": [
+          {
+            "value": "http://example.org/command.wav",
+            "datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "parentName": 1,
+            "scope": [
+              3
+            ],
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "condition": null,
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>http://example.org/command.wav</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#command</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>http://example.org/command.wav</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 621,
+      "expectedBytes": 621,
+      "firstDifferentByte": null,
+      "status": "pass",
+      "sourceSHA256": "9bfd355a4f3f4a8c5a1d9ca7af842e1f9330d10f0b0a3be6b4606f614b2c8ba0",
+      "baselineSHA256": "d4df2bef650becff7918ee85af338631c87a4309ad65e64a26ee93edbb42a8bb",
+      "actualSHA256": "d4df2bef650becff7918ee85af338631c87a4309ad65e64a26ee93edbb42a8bb",
+      "executedInASDFTestOp": true
+    }
+  ]
+}
