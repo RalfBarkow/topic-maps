@@ -1,0 +1,67 @@
+{
+  "kind": "slice-21n-independent-precommit-audit",
+  "baseCommit": "9daceb816dbd75446ecb8ec0ef4cb5413d381588",
+  "branch": "codex/xtm-slice-21n",
+  "checkedAtUTC": "2026-10-20T08:42:37.368582+00:00",
+  "initialBranch": "codex/xtm-slice-21m",
+  "initialIndexAndWorktreeClean": true,
+  "freshPreEditBaselinePassed": true,
+  "baselineXTMChecks": 2157,
+  "baselineXTMStatuses": {
+    "pass": 65,
+    "fail": 0,
+    "not-run": 59
+  },
+  "baselineCTMStatuses": {
+    "pass": 262,
+    "fail": 4,
+    "not-run": 7
+  },
+  "changedExistingPaths": [
+    "tests/xtm-identity.lisp",
+    "topic-maps.asd"
+  ],
+  "newNonReportPaths": [
+    "docs/slice-21n-xtm-name-reification-originals.md",
+    "scripts/validate-slice-21n.py",
+    "tests/xtm-name-reification-originals.lisp"
+  ],
+  "acceptancePassed": true,
+  "freshSBCL": "2.5.4",
+  "processesWithNetworkAndRepositoryWriteDenial": 98,
+  "baselineProcessesWithNetworkAndRepositoryWriteDenial": 3,
+  "standaloneXTMChecks": 2204,
+  "newXTMChecks": 47,
+  "retainedXTMCheckNamesUnchanged": 2157,
+  "retainedOriginalsUnchanged": 65,
+  "newOriginalCXTMByteComparisons": [
+    "701/701 identical",
+    "497/497 identical",
+    "497/497 identical"
+  ],
+  "primaryQualifiedParserCallsPerOriginal": 1,
+  "nativeNameReifierVariantIdentifierEQChecksPassed": true,
+  "executorFaultControls": 92,
+  "originalDiagnosticObservations": 124,
+  "changedDiagnosticObservations": 0,
+  "pinnedFilesVerified": 2006,
+  "historicalReportsVerified": 3138,
+  "protectedBaseFilesVerified": 5402,
+  "executionSourcesStillMatchValidatedHashes": true,
+  "sourcesBaselinesHistoricalReportsUnchanged": true,
+  "productionCodeUnchanged": true,
+  "productionPathsChanged": [],
+  "documentationTemplatePlaceholdersResolved": true,
+  "xtmStatuses": {
+    "pass": 68,
+    "fail": 0,
+    "unsupported": 0,
+    "not-run": 56
+  },
+  "ctmStatuses": {
+    "pass": 262,
+    "fail": 4,
+    "unsupported": 0,
+    "not-run": 7
+  }
+}

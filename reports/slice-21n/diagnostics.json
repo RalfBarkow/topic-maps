@@ -1,0 +1,22 @@
+{
+  "kind": "read-only-observations-no-extra-registration",
+  "originalObservations": 124,
+  "unchangedOriginalObservations": 124,
+  "diagnosticChanges": [],
+  "registeredCases": [
+    "xtm2/in/name-duplicate-reified2.xtm",
+    "xtm2/in/name-duplicate-reified3.xtm",
+    "xtm2/in/name-duplicate-reified4.xtm"
+  ],
+  "negativeOriginalsRemainingNotRun": [
+    "xtm2/invalid/reifier-collision.xtm",
+    "xtm2/invalid/role-duplicate-reified.xtm",
+    "xtm2/invalid/topicref-no-fragment-id.xtm"
+  ],
+  "all124ObservationsUnchanged": true,
+  "alreadySuccessfulDiagnosticsNewlyRegistered": [
+    "xtm2/in/name-duplicate-reified2.xtm",
+    "xtm2/in/name-duplicate-reified3.xtm",
+    "xtm2/in/name-duplicate-reified4.xtm"
+  ]
+}

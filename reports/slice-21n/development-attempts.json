@@ -1,0 +1,19 @@
+{
+  "kind": "unsuccessful-test-development-runs-not-acceptance",
+  "attempts": [
+    {
+      "stage": "new-test-compilation",
+      "accepted": false,
+      "error": "Unmatched closing parenthesis at new test line 174.",
+      "resolution": "Removed the extra close at the preceding Case-Record count check.",
+      "log": "development-attempts/test-parenthesis-error.log"
+    },
+    {
+      "stage": "new-cross-original-CXTM-check",
+      "accepted": false,
+      "error": "TYPE-ERROR: the existing fields encoder returns JSON-OBJECT, not an association list.",
+      "resolution": "Use the existing json-object-members accessor for the final cross-original output comparison.",
+      "log": "development-attempts/report-object-access-error.log"
+    }
+  ]
+}

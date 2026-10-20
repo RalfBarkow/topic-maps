@@ -1,0 +1,724 @@
+{
+  "kind": "executed-existing-language-name-reifier-original-registration",
+  "cases": [
+    {
+      "id": "xtm2/in/name-duplicate-reified2.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm",
+      "sourceKey": "xtm2/in/name-duplicate-reified2.xtm",
+      "sourceBytes": 397,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D22746F706963223E202020200A202020203C6E616D6520726569666965723D22237265696669657231223E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A2020202020203C76617269616E743E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D2223616877656C6C222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174613E746F7069633C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A202020203C2F6E616D653E0A202020203C6E616D6520726569666965723D22237265696669657231223E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">    \n    <name reifier=\"#reifier1\">\n      <value>Topic</value>\n      <variant>\n        <scope>\n          <topicRef href=\"#ahwell\"/>\n        </scope>\n        <resourceData>topic</resourceData>\n      </variant>\n    </name>\n    <name reifier=\"#reifier1\">\n      <value>Topic</value>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceNameCount": 2,
+      "sourceNameIIPositions": [],
+      "primaryQualifiedParserCalls": 1,
+      "stagedNormalizationTrace": {
+        "kind": "counterprobe-not-additional-original-registration",
+        "afterFirstName": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 4,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#reifier1"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 4,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#ahwell"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Topic",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [],
+                  "variantCount": 1
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": [
+              {
+                "value": "topic",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "parentName": 1,
+                "scope": [
+                  4
+                ],
+                "itemIdentifiers": [],
+                "reifier": null
+              }
+            ]
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            3
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            1,
+            null
+          ]
+        },
+        "afterSecondName": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 4,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#reifier1"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 4,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#ahwell"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Topic",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [],
+                  "variantCount": 1
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": [
+              {
+                "value": "topic",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "parentName": 1,
+                "scope": [
+                  4
+                ],
+                "itemIdentifiers": [],
+                "reifier": null
+              }
+            ]
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            3
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            1,
+            null
+          ]
+        },
+        "firstAndSecondNameReturnsEQ": true,
+        "retainedReifierEQ": true,
+        "firstVariantPreservedEQ": true
+      },
+      "reifierLocator": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#reifier1",
+      "model": {
+        "identity": {
+          "nameModel": {
+            "identity": {
+              "topicCount": 4,
+              "associationCount": 0,
+              "canonicalParentsAndInverseReferences": true,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#topic"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": []
+                },
+                {
+                  "ordinal": 3,
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#reifier1"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": []
+                },
+                {
+                  "ordinal": 4,
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified2.xtm#ahwell"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": []
+                }
+              ],
+              "associations": []
+            },
+            "mapItemIdentifiers": [],
+            "canonicalNameParentTypeReferences": true,
+            "names": [
+              {
+                "value": "Topic",
+                "parent": 1,
+                "type": 2,
+                "scope": [],
+                "itemIdentifiers": [],
+                "variantCount": 1
+              }
+            ]
+          },
+          "canonicalVariantReferences": true,
+          "variants": [
+            {
+              "value": "topic",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string",
+              "parentName": 1,
+              "scope": [
+                4
+              ],
+              "itemIdentifiers": [],
+              "reifier": null
+            }
+          ]
+        },
+        "canonicalNameReifierInverseEQ": true,
+        "mapReifierTopic": null,
+        "nameReifierTopics": [
+          3
+        ],
+        "topicReifiedNames": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "condition": null,
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#ahwell</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\" reifier=\"2\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\">\n<value>topic</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#ahwell</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\" reifier=\"2\">\n<value>Topic</value>\n<type topicref=\"4\"></type>\n<variant number=\"1\">\n<value>topic</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 701,
+      "expectedBytes": 701,
+      "firstDifferentByte": null,
+      "status": "pass",
+      "sourceSHA256": "27784c98583ec549d0572ad655fd052598525918f0aaa956bf4a4c8dab186ebb",
+      "baselineSHA256": "38ba091848a16e79c529088e5554e689c15d6ccbc34ae032434ee193fcce90fd",
+      "actualSHA256": "38ba091848a16e79c529088e5554e689c15d6ccbc34ae032434ee193fcce90fd",
+      "executedInASDFTestOp": true
+    },
+    {
+      "id": "xtm2/in/name-duplicate-reified3.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm",
+      "sourceKey": "xtm2/in/name-duplicate-reified3.xtm",
+      "sourceBytes": 286,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D22746F706963223E202020200A202020203C6E616D6520726569666965723D22237265696669657231223E0A2020202020203C6974656D4964656E7469747920687265663D22236E616D65222F3E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A202020203C2F6E616D653E0A202020203C6E616D6520726569666965723D22237265696669657231223E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">    \n    <name reifier=\"#reifier1\">\n      <itemIdentity href=\"#name\"/>\n      <value>Topic</value>\n    </name>\n    <name reifier=\"#reifier1\">\n      <value>Topic</value>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceNameCount": 2,
+      "sourceNameIIPositions": [
+        1
+      ],
+      "primaryQualifiedParserCalls": 1,
+      "stagedNormalizationTrace": {
+        "kind": "counterprobe-not-additional-original-registration",
+        "afterFirstName": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 3,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#reifier1"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Topic",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#name"
+                  ],
+                  "variantCount": 0
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            3
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            1
+          ]
+        },
+        "afterSecondName": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 3,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#reifier1"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Topic",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#name"
+                  ],
+                  "variantCount": 0
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            3
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            1
+          ]
+        },
+        "firstAndSecondNameReturnsEQ": true,
+        "retainedReifierEQ": true,
+        "firstVariantPreservedEQ": null
+      },
+      "reifierLocator": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#reifier1",
+      "model": {
+        "identity": {
+          "nameModel": {
+            "identity": {
+              "topicCount": 3,
+              "associationCount": 0,
+              "canonicalParentsAndInverseReferences": true,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#topic"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": []
+                },
+                {
+                  "ordinal": 3,
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#reifier1"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": []
+                }
+              ],
+              "associations": []
+            },
+            "mapItemIdentifiers": [],
+            "canonicalNameParentTypeReferences": true,
+            "names": [
+              {
+                "value": "Topic",
+                "parent": 1,
+                "type": 2,
+                "scope": [],
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified3.xtm#name"
+                ],
+                "variantCount": 0
+              }
+            ]
+          },
+          "canonicalVariantReferences": true,
+          "variants": []
+        },
+        "canonicalNameReifierInverseEQ": true,
+        "mapReifierTopic": null,
+        "nameReifierTopics": [
+          3
+        ],
+        "topicReifiedNames": [
+          null,
+          null,
+          1
+        ]
+      },
+      "condition": null,
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\" reifier=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<itemIdentifiers>\n<locator>#name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\" reifier=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<itemIdentifiers>\n<locator>#name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 497,
+      "expectedBytes": 497,
+      "firstDifferentByte": null,
+      "status": "pass",
+      "sourceSHA256": "454f3dd3f062f5cd2569f043ea87a9e9f3c571087c7999e4508f834ac94131ff",
+      "baselineSHA256": "bf6cf3cbff769f3c1f23ab4227db60492d55651806cd316201137df7da5b2331",
+      "actualSHA256": "bf6cf3cbff769f3c1f23ab4227db60492d55651806cd316201137df7da5b2331",
+      "executedInASDFTestOp": true
+    },
+    {
+      "id": "xtm2/in/name-duplicate-reified4.xtm",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm",
+      "sourceKey": "xtm2/in/name-duplicate-reified4.xtm",
+      "sourceBytes": 286,
+      "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D22746F706963223E202020200A202020203C6E616D6520726569666965723D22237265696669657231223E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A202020203C2F6E616D653E0A202020203C6E616D6520726569666965723D22237265696669657231223E0A2020202020203C6974656D4964656E7469747920687265663D22236E616D65222F3E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">    \n    <name reifier=\"#reifier1\">\n      <value>Topic</value>\n    </name>\n    <name reifier=\"#reifier1\">\n      <itemIdentity href=\"#name\"/>\n      <value>Topic</value>\n    </name>\n  </topic>\n</topicMap>\n",
+      "sourceNameCount": 2,
+      "sourceNameIIPositions": [
+        2
+      ],
+      "primaryQualifiedParserCalls": 1,
+      "stagedNormalizationTrace": {
+        "kind": "counterprobe-not-additional-original-registration",
+        "afterFirstName": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 3,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#reifier1"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Topic",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [],
+                  "variantCount": 0
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            3
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            1
+          ]
+        },
+        "afterSecondName": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 3,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#reifier1"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Topic",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#name"
+                  ],
+                  "variantCount": 0
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            3
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            1
+          ]
+        },
+        "firstAndSecondNameReturnsEQ": true,
+        "retainedReifierEQ": true,
+        "firstVariantPreservedEQ": null
+      },
+      "reifierLocator": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#reifier1",
+      "model": {
+        "identity": {
+          "nameModel": {
+            "identity": {
+              "topicCount": 3,
+              "associationCount": 0,
+              "canonicalParentsAndInverseReferences": true,
+              "topics": [
+                {
+                  "ordinal": 1,
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#topic"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": []
+                },
+                {
+                  "ordinal": 2,
+                  "itemIdentifiers": [],
+                  "subjectIdentifiers": [
+                    "http://psi.topicmaps.org/iso13250/model/topic-name"
+                  ],
+                  "subjectLocators": []
+                },
+                {
+                  "ordinal": 3,
+                  "itemIdentifiers": [
+                    "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#reifier1"
+                  ],
+                  "subjectIdentifiers": [],
+                  "subjectLocators": []
+                }
+              ],
+              "associations": []
+            },
+            "mapItemIdentifiers": [],
+            "canonicalNameParentTypeReferences": true,
+            "names": [
+              {
+                "value": "Topic",
+                "parent": 1,
+                "type": 2,
+                "scope": [],
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/name-duplicate-reified4.xtm#name"
+                ],
+                "variantCount": 0
+              }
+            ]
+          },
+          "canonicalVariantReferences": true,
+          "variants": []
+        },
+        "canonicalNameReifierInverseEQ": true,
+        "mapReifierTopic": null,
+        "nameReifierTopics": [
+          3
+        ],
+        "topicReifiedNames": [
+          null,
+          null,
+          1
+        ]
+      },
+      "condition": null,
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\" reifier=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<itemIdentifiers>\n<locator>#name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\" reifier=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<itemIdentifiers>\n<locator>#name</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "actualBytes": 497,
+      "expectedBytes": 497,
+      "firstDifferentByte": null,
+      "status": "pass",
+      "sourceSHA256": "562d1f8f781ff394d3c699046d727b03e38426eb78c231f830bf7edc1bf90207",
+      "baselineSHA256": "bf6cf3cbff769f3c1f23ab4227db60492d55651806cd316201137df7da5b2331",
+      "actualSHA256": "bf6cf3cbff769f3c1f23ab4227db60492d55651806cd316201137df7da5b2331",
+      "executedInASDFTestOp": true
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "kind": "fresh-pre-edit-baseline-validation",
+  "baseCommit": "9daceb816dbd75446ecb8ec0ef4cb5413d381588",
+  "runs": [
+    {
+      "label": "baseline-source-preparation",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "python3",
+        "scripts/validate-slice-21m.py",
+        "--prepare",
+        "/private/tmp/xtm-slice-21n-9fw5dvgg/sources"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-20T08:28:49.684524+00:00",
+      "exitCode": 0,
+      "finishedAtUTC": "2026-10-20T08:28:53.579597+00:00"
+    },
+    {
+      "label": "baseline",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "/private/tmp/xtm-slice-21n-9fw5dvgg/diagnostics.lisp"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-20T08:28:53.581614+00:00",
+      "exitCode": 0,
+      "finishedAtUTC": "2026-10-20T08:29:03.533903+00:00"
+    },
+    {
+      "label": "baseline-regression",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))",
+        "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+      ],
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "freshProcess": true,
+      "startedAtUTC": "2026-10-20T08:29:03.571840+00:00",
+      "exitCode": 0,
+      "finishedAtUTC": "2026-10-20T08:29:31.158958+00:00"
+    }
+  ],
+  "xtmChecks": 2157,
+  "xtmStatuses": {
+    "pass": 65,
+    "fail": 0,
+    "not-run": 59
+  },
+  "ctmStatuses": {
+    "pass": 262,
+    "fail": 4,
+    "not-run": 7
+  },
+  "originalDiagnosesUnchanged": 124,
+  "nonXTMReportsIdenticalToSlice21M": [
+    "reports/slice-21m/retained/slice20b.negative.json",
+    "reports/slice-21m/retained/core.json.include.json",
+    "reports/slice-21m/retained/core.json.reification.json",
+    "reports/slice-21m/retained/core.json.map-import.json",
+    "reports/slice-21m/retained/core.json.references.json",
+    "reports/slice-21m/retained/core.json.prefixes.json",
+    "reports/slice-21m/retained/slice20g.validation.json",
+    "reports/slice-21m/retained/slice20c.cxtm.json",
+    "reports/slice-21m/retained/slice20e.cxtm.json",
+    "reports/slice-21m/retained/core.json.scopes.json",
+    "reports/slice-21m/retained/core.json.timezones.json",
+    "reports/slice-21m/retained/slice20a.validation.json",
+    "reports/slice-21m/retained/core.json.templates.json",
+    "reports/slice-21m/retained/slice20a.registration.json",
+    "reports/slice-21m/retained/core.json.merging.json",
+    "reports/slice-21m/retained/slice20b.cxtm.json",
+    "reports/slice-21m/retained/core.json.arity.json",
+    "reports/slice-21m/retained/core.json.mergemap.json",
+    "reports/slice-21m/retained/core.json.decimals.json",
+    "reports/slice-21m/retained/core.json.dates.json",
+    "reports/slice-21m/retained/slice20e.registration.json",
+    "reports/slice-21m/retained/slice20f.validation.json",
+    "reports/slice-21m/retained/core.json.semantics.json",
+    "reports/slice-21m/retained/slice20c.validation.json",
+    "reports/slice-21m/retained/core.json.integers.json",
+    "reports/slice-21m/retained/core.json.relationships.json",
+    "reports/slice-21m/retained/slice20a.cxtm.json",
+    "reports/slice-21m/retained/core.json.identifiers.json",
+    "reports/slice-21m/retained/core.json",
+    "reports/slice-21m/retained/core.json.typed-names.json",
+    "reports/slice-21m/retained/core.json.occurrences.json",
+    "reports/slice-21m/retained/slice20g.triple.json",
+    "reports/slice-21m/retained/xtm-mergemap.validation.json",
+    "reports/slice-21m/retained/slice20g.cxtm.json",
+    "reports/slice-21m/retained/xtm-mergemap.integration.json",
+    "reports/slice-21m/retained/core.json.cxtm.json",
+    "reports/slice-21m/retained/slice20c.prolog.json",
+    "reports/slice-21m/retained/core.json.variants.json",
+    "reports/slice-21m/retained/slice20e.validation.json",
+    "reports/slice-21m/retained/slice20f.literal.json",
+    "reports/slice-21m/retained/core.json.datetimes.json",
+    "reports/slice-21m/retained/core.json.associations.json",
+    "reports/slice-21m/retained/slice20b.validation.json",
+    "reports/slice-21m/retained/xtm-mergemap.cxtm.json",
+    "reports/slice-21m/retained/slice20f.cxtm.json",
+    "ctm.validation",
+    "ctm.cxtm",
+    "ctm.encoding"
+  ],
+  "acceptancePassed": true
+}

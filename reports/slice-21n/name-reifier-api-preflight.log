@@ -1,0 +1,10 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+NAME-REIFIER-API-CONDITION: REIFICATION-ERROR REIFIER-CONFLICT; rejected assignment atomic
+NAME-REIFIER-API-NORMALIZATION: two old Names -> one new canonical Name; 1 Reifier relationship(s) preserved
+NAME-REIFIER-API-NORMALIZATION: two old Names -> one new canonical Name; 2 Reifier relationship(s) preserved
+NAME-REIFIER-API-CONDITION: OCCURRENCE-IDENTIFIER-ERROR DUPLICATE-ITEM-IDENTIFIER; rejected Topic creation atomic
+NAME-REIFIER-API-PREFLIGHT-PASS: canonical add-name result, inverse, preserved/merged Reifiers, identifier union and native conflict atomicity
