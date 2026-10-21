@@ -238,9 +238,9 @@
   :in-order-to ((asdf:test-op (asdf:test-op "topic-maps/xtm/tests"))))
 
 (asdf:defsystem "topic-maps/xtm/tests"
-  :description "XTM identity/Name/Scope/Item-Identity/Variant checks, 63 original CXTM contracts and eight cause-qualified negative originals"
+  :description "XTM identity/Name/Scope/Item-Identity/Variant checks, 64 original CXTM contracts and eight cause-qualified negative originals"
   :depends-on ("topic-maps/xtm" "topic-maps/cxtm" "topic-maps") :serial t
-  :components ((:file "tests/xtm-identity") (:file "tests/xtm-negative-originals") (:file "tests/xtm-names") (:file "tests/xtm-name-scopes") (:file "tests/xtm-name-item-identities") (:file "tests/xtm-variants") (:file "tests/xtm-variant-resourcerefs") (:file "tests/xtm-variant-uri-data") (:file "tests/xtm-variant-item-identities") (:file "tests/xtm-map-reification") (:file "tests/xtm-name-reification") (:file "tests/xtm-name-reification-originals") (:file "tests/xtm-variant-reification"))
+  :components ((:file "tests/xtm-identity") (:file "tests/xtm-negative-originals") (:file "tests/xtm-names") (:file "tests/xtm-name-scopes") (:file "tests/xtm-name-item-identities") (:file "tests/xtm-variants") (:file "tests/xtm-variant-resourcerefs") (:file "tests/xtm-variant-uri-data") (:file "tests/xtm-variant-item-identities") (:file "tests/xtm-map-reification") (:file "tests/xtm-name-reification") (:file "tests/xtm-name-reification-originals") (:file "tests/xtm-variant-reification") (:file "tests/xtm-resource-datatypes"))
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.xtm.tests :run-tests)))

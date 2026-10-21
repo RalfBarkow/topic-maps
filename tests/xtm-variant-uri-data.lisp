@@ -222,7 +222,7 @@
     ("scope-after-resource" "<scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'>urn:x</resourceData><scope><topicRef href='#t'/></scope>" :element-order)))
     (variant-error-control (concatenate 'string "uri-data:" (first row))
       (format nil "<topic id='a'><name><value>N</value><variant>~A</variant></name></topic>" (second row)) 'xtm-rejection (third row)))
-  (dolist (row '(("integer-still-unsupported" "<resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData>")
+  (dolist (row '(("anyType-text-still-unsupported" "<resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData>")
     ("anyType-still-unsupported" "<resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><x xmlns='urn:foreign'>XML</x></resourceData>")))
     (variant-error-control (concatenate 'string "uri-data:" (first row))
       (format nil "<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope>~A</variant></name></topic>" (second row))

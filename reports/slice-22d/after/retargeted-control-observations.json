@@ -1,0 +1,1292 @@
+[
+  {
+    "field": "negativeControls",
+    "index": 10,
+    "before": {
+      "label": "unsupported-is-not-pass",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "local:xtm-semantic-test",
+        "cause": null
+      },
+      "status": "unsupported",
+      "registeredAsOriginal": false
+    },
+    "after": {
+      "label": "unsupported-is-not-pass",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "local:xtm-semantic-test",
+        "cause": null
+      },
+      "status": "unsupported",
+      "registeredAsOriginal": false
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset."
+      }
+    ]
+  },
+  {
+    "field": "nameControls",
+    "index": 46,
+    "before": {
+      "label": "unsupported-variant-resourceData-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-resourceData-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:unsupported-variant-resourceData-datatype",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "unsupported-variant-resourceData-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-resourceData-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:unsupported-variant-resourceData-datatype",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-resourceData-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-resourceData-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "nameControls",
+    "index": 47,
+    "before": {
+      "label": "unsupported-variant-reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 223,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:unsupported-variant-reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "unsupported-variant-reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 223,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:unsupported-variant-reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name-syntax:unsupported-variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "scopeControls",
+    "index": 33,
+    "before": {
+      "label": "scope:variant-resourceData-datatype-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-resourceData-datatype-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:246: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 246,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:variant-resourceData-datatype-stays-unsupported",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "scope:variant-resourceData-datatype-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-resourceData-datatype-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:246: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 246,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:variant-resourceData-datatype-stays-unsupported",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-resourceData-datatype-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:246: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-resourceData-datatype-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:246: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "scopeControls",
+    "index": 34,
+    "before": {
+      "label": "scope:variant-reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:259: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 259,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:variant-reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "scope:variant-reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:259: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 259,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:variant-reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:259: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:259: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "nameItemIdentityControls",
+    "index": 44,
+    "before": {
+      "label": "iid:variant-reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 251,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:iid:variant-reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "iid:variant-reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 251,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:iid:variant-reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "nameItemIdentityControls",
+    "index": 45,
+    "before": {
+      "label": "iid:variant-resourceData-datatype-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-resourceData-datatype-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:274: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 274,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:iid:variant-resourceData-datatype-stays-unsupported",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "iid:variant-resourceData-datatype-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-resourceData-datatype-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:274: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 274,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:iid:variant-resourceData-datatype-stays-unsupported",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-resourceData-datatype-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:274: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name-syntax:iid:variant-resourceData-datatype-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:274: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "variantControls",
+    "index": 42,
+    "before": {
+      "label": "XTM-markup-in-data",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData><value>V</value></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:XTM-markup-in-data",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-child",
+        "detail": "resourceData cannot contain XTM markup.",
+        "message": "XTM UNEXPECTED-CHILD at variant-syntax:XTM-markup-in-data (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:165: resourceData cannot contain XTM markup.",
+        "line": 1,
+        "column": 165,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:XTM-markup-in-data",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "XTM-markup-in-data",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData><value>V</value></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:XTM-markup-in-data",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-child",
+        "detail": "Textual resourceData cannot contain child elements.",
+        "message": "XTM UNEXPECTED-CHILD at variant-syntax:XTM-markup-in-data (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:165: Textual resourceData cannot contain child elements.",
+        "line": 1,
+        "column": 165,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:XTM-markup-in-data",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "resourceData cannot contain XTM markup.",
+        "after": "Textual resourceData cannot contain child elements."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNEXPECTED-CHILD at variant-syntax:XTM-markup-in-data (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:165: resourceData cannot contain XTM markup.",
+        "after": "XTM UNEXPECTED-CHILD at variant-syntax:XTM-markup-in-data (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:165: Textual resourceData cannot contain child elements."
+      }
+    ]
+  },
+  {
+    "field": "variantControls",
+    "index": 48,
+    "before": {
+      "label": "resourceData-integer",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:resourceData-integer",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:resourceData-integer (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:resourceData-integer",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "resourceData-anyType",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:resourceData-anyType",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:resourceData-anyType (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:resourceData-anyType",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:resourceData-integer (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:resourceData-anyType (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/sourceKey",
+        "before": "variant-syntax:resourceData-integer",
+        "after": "variant-syntax:resourceData-anyType"
+      },
+      {
+        "path": "/label",
+        "before": "resourceData-integer",
+        "after": "resourceData-anyType"
+      },
+      {
+        "path": "/sourceKey",
+        "before": "variant-syntax:resourceData-integer",
+        "after": "variant-syntax:resourceData-anyType"
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "variantControls",
+    "index": 49,
+    "before": {
+      "label": "reified-itemIdentity-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:reified-itemIdentity-excluded-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reified-itemIdentity-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 251,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:reified-itemIdentity-excluded-datatype",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "reified-itemIdentity-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:reified-itemIdentity-excluded-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reified-itemIdentity-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 251,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:reified-itemIdentity-excluded-datatype",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reified-itemIdentity-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reified-itemIdentity-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "variantControls",
+    "index": 50,
+    "before": {
+      "label": "reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:reifier-excluded-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 223,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:reifier-excluded-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 223,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:223: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "variantControls",
+    "index": 51,
+    "before": {
+      "label": "datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='urn:other'>V</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:179: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 179,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:datatype",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:datatype",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/column",
+        "before": 179,
+        "after": 210
+      },
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:179: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='urn:other'>V</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "variantControls",
+    "index": 52,
+    "before": {
+      "label": "embedded-XML",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData><b xmlns='urn:other'>V</b></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:embedded-XML",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-markup",
+        "detail": "Embedded XML resourceData is outside this subset.",
+        "message": "XTM RESOURCE-DATA-MARKUP at variant-syntax:embedded-XML (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:179: Embedded XML resourceData is outside this subset.",
+        "line": 1,
+        "column": 179,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:embedded-XML",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "embedded-XML",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><b xmlns='urn:other'>V</b></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:embedded-XML",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:embedded-XML (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:embedded-XML",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "resource-data-markup",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 179,
+        "after": 210
+      },
+      {
+        "path": "/condition/detail",
+        "before": "Embedded XML resourceData is outside this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-MARKUP at variant-syntax:embedded-XML (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:179: Embedded XML resourceData is outside this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:embedded-XML (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData><b xmlns='urn:other'>V</b></resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><b xmlns='urn:other'>V</b></resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "variantResourceDataURIControls",
+    "index": 42,
+    "before": {
+      "label": "uri-data:foreign-child",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'><x xmlns='urn:foreign'>urn:x</x></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:uri-data:foreign-child",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-child",
+        "detail": "anyURI resourceData cannot contain child elements.",
+        "message": "XTM UNEXPECTED-CHILD at variant-syntax:uri-data:foreign-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:232: anyURI resourceData cannot contain child elements.",
+        "line": 1,
+        "column": 232,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:uri-data:foreign-child",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "uri-data:foreign-child",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'><x xmlns='urn:foreign'>urn:x</x></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:uri-data:foreign-child",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-child",
+        "detail": "Textual resourceData cannot contain child elements.",
+        "message": "XTM UNEXPECTED-CHILD at variant-syntax:uri-data:foreign-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:232: Textual resourceData cannot contain child elements.",
+        "line": 1,
+        "column": 232,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:uri-data:foreign-child",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "anyURI resourceData cannot contain child elements.",
+        "after": "Textual resourceData cannot contain child elements."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNEXPECTED-CHILD at variant-syntax:uri-data:foreign-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:232: anyURI resourceData cannot contain child elements.",
+        "after": "XTM UNEXPECTED-CHILD at variant-syntax:uri-data:foreign-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:232: Textual resourceData cannot contain child elements."
+      }
+    ]
+  },
+  {
+    "field": "variantResourceDataURIControls",
+    "index": 43,
+    "before": {
+      "label": "uri-data:XTM-child",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'><value>urn:x</value></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:uri-data:XTM-child",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-child",
+        "detail": "anyURI resourceData cannot contain child elements.",
+        "message": "XTM UNEXPECTED-CHILD at variant-syntax:uri-data:XTM-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:216: anyURI resourceData cannot contain child elements.",
+        "line": 1,
+        "column": 216,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:uri-data:XTM-child",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "uri-data:XTM-child",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'><value>urn:x</value></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:uri-data:XTM-child",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-child",
+        "detail": "Textual resourceData cannot contain child elements.",
+        "message": "XTM UNEXPECTED-CHILD at variant-syntax:uri-data:XTM-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:216: Textual resourceData cannot contain child elements.",
+        "line": 1,
+        "column": 216,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:uri-data:XTM-child",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "anyURI resourceData cannot contain child elements.",
+        "after": "Textual resourceData cannot contain child elements."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNEXPECTED-CHILD at variant-syntax:uri-data:XTM-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:216: anyURI resourceData cannot contain child elements.",
+        "after": "XTM UNEXPECTED-CHILD at variant-syntax:uri-data:XTM-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:216: Textual resourceData cannot contain child elements."
+      }
+    ]
+  },
+  {
+    "field": "variantResourceDataURIControls",
+    "index": 48,
+    "before": {
+      "label": "uri-data:integer-still-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:uri-data:integer-still-unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:uri-data:integer-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:uri-data:integer-still-unsupported",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "uri-data:anyType-text-still-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:uri-data:anyType-text-still-unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:uri-data:anyType-text-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:uri-data:anyType-text-still-unsupported",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:uri-data:integer-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:uri-data:anyType-text-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/sourceKey",
+        "before": "variant-syntax:uri-data:integer-still-unsupported",
+        "after": "variant-syntax:uri-data:anyType-text-still-unsupported"
+      },
+      {
+        "path": "/label",
+        "before": "uri-data:integer-still-unsupported",
+        "after": "uri-data:anyType-text-still-unsupported"
+      },
+      {
+        "path": "/sourceKey",
+        "before": "variant-syntax:uri-data:integer-still-unsupported",
+        "after": "variant-syntax:uri-data:anyType-text-still-unsupported"
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "variantResourceDataURIControls",
+    "index": 49,
+    "before": {
+      "label": "uri-data:anyType-still-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><x xmlns='urn:foreign'>XML</x></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:uri-data:anyType-still-unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:uri-data:anyType-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:uri-data:anyType-still-unsupported",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "uri-data:anyType-still-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><x xmlns='urn:foreign'>XML</x></resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:uri-data:anyType-still-unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:uri-data:anyType-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 210,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:uri-data:anyType-still-unsupported",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:uri-data:anyType-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:uri-data:anyType-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:210: xsd:anyType XML canonicalization is outside this subset."
+      }
+    ]
+  },
+  {
+    "field": "variantItemIdentityControls",
+    "index": 41,
+    "before": {
+      "label": "variant-iid:reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:variant-iid:reifier-excluded-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 251,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:variant-iid:reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "variant-iid:reifier-excluded-datatype",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:variant-iid:reifier-excluded-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 251,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:variant-iid:reifier-excluded-datatype",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:251: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "variantItemIdentityControls",
+    "index": 42,
+    "before": {
+      "label": "variant-iid:other-datatype-still-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:variant-iid:other-datatype-still-unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:other-datatype-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:238: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 238,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:variant-iid:other-datatype-still-unsupported",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "variant-iid:other-datatype-still-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "variant-syntax:variant-iid:other-datatype-still-unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:other-datatype-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:238: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 238,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-syntax:variant-iid:other-datatype-still-unsupported",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:other-datatype-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:238: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-syntax:variant-iid:other-datatype-still-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:238: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "mapReifierControls",
+    "index": 29,
+    "before": {
+      "label": "name-with-variant-excluded-datatype",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-with-variant-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 240,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-with-variant-excluded-datatype",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "name-with-variant-excluded-datatype",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-with-variant-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 240,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-with-variant-excluded-datatype",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at name-with-variant-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name-with-variant-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "mapReifierControls",
+    "index": 30,
+    "before": {
+      "label": "variant-reifier-excluded-datatype",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 240,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-reifier-excluded-datatype",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "variant-reifier-excluded-datatype",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 240,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant-reifier-excluded-datatype",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:240: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "field": "nameReifierControls",
+    "index": 36,
+    "before": {
+      "label": "name:variant-reifier-excluded-datatype",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:236: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "line": 1,
+        "column": 236,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name:variant-reifier-excluded-datatype",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "name:variant-reifier-excluded-datatype",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:236: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 236,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name:variant-reifier-excluded-datatype",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM RESOURCE-DATA-DATATYPE at name:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:236: Only textual xsd:string and xsd:anyURI resourceData are implemented.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name:variant-reifier-excluded-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:236: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>"
+      }
+    ]
+  }
+]

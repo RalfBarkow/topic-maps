@@ -1,0 +1,24 @@
+{
+  "kind": "development-failure-not-acceptance",
+  "run": {
+    "label": "regression",
+    "command": [
+      "/usr/bin/sandbox-exec",
+      "-p",
+      "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+      "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+    ],
+    "startedAtUTC": "2026-10-20T22:04:27.802685+00:00",
+    "finishedAtUTC": "2026-10-20T22:04:43.406344+00:00",
+    "exitCode": 1,
+    "expectedExitCode": 0,
+    "logSHA256": "76dc1271d6fe9c063b3d16fdcc584ccfaa82957998dce8e40676d018ea24f839",
+    "network": "denied",
+    "repositoryWrites": "denied",
+    "hyperdocWrites": "denied",
+    "freshProcess": true
+  },
+  "reason": "A pre-existing CTM/XTM Mergemap Unsupported control still used now-supported xsd:integer. The test source was retargeted to valid but unimplemented xsd:anyType, preserving cause and adapter guards.",
+  "subsequentAcceptedRun": "after/execution.json",
+  "countedAsSuccessfulExecution": false
+}

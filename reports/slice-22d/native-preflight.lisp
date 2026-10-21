@@ -1,0 +1,16 @@
+(require :asdf)
+(assert (string= "2.5.4" (lisp-implementation-version)))
+(setf *compile-verbose* nil *load-verbose* nil)
+(asdf:load-asd (truename "topic-maps.asd"))
+(asdf:load-system "topic-maps/xtm/tests")
+(load "tests/xtm-resource-datatypes.lisp")
+(in-package :topic-maps.xtm.tests)
+(let* ((*checks* nil) (map (datatype-native-preflight)))
+  (assert (null *cases*))
+  (with-open-file (out (uiop:getenv "TOPIC_MAPS_NATIVE_PREFLIGHT_REPORT") :direction :output :if-exists :supersede :external-format :utf-8)
+    (topic-maps.test-foundation::emit-json-value
+      (topic-maps.test-foundation::fields "kind" "native-preflight-before-reader-change"
+        "runtime" (lisp-implementation-version) "checks" (coerce (reverse *checks*) 'vector)
+        "model" (variant-reifier-model-data map) "registeredCases" 0 "passed" :true) out)
+    (terpri out)))
+(format t "DATATYPE-NATIVE-PREFLIGHT-PASS~%")

@@ -1,0 +1,14 @@
+{
+  "kind": "approval-review-events",
+  "events": [
+    {
+      "action": "Read temporary evidence directory, source/baseline hashes and existing documentation",
+      "result": "Automatic approval review failed: You’ve hit your usage limit.",
+      "executed": false,
+      "unsafeDetermination": false,
+      "followup": "No bypass; the approved ongoing regression continued. After explicit user continuation, regular approval worked."
+    }
+  ],
+  "symlinkModified": false,
+  "approvalBypassed": false
+}

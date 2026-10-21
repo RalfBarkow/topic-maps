@@ -1,0 +1,16 @@
+{
+  "kind": "normative-capability-gap-not-invalid-datatype",
+  "datatype": "http://www.w3.org/2001/XMLSchema#anyType",
+  "normativeSource": "https://www.isotopicmaps.org/sam/sam-xtm/",
+  "clauses": [
+    "4.16.2",
+    "4.16.3"
+  ],
+  "validDatatype": true,
+  "implementedInSlice22D": false,
+  "plannedSlice": "22I",
+  "actualConditionClass": "XTM-UNSUPPORTED",
+  "actualConditionCode": "resource-data-datatype",
+  "textAndEmbeddedXMLBothUnsupported": true,
+  "scopeLimit": "No embedded XML canonicalization is implemented or counted as PASS."
+}

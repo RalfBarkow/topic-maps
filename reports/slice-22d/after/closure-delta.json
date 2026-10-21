@@ -1,0 +1,466 @@
+{
+  "sourceMatrix": "reports/slice-22a/matrix.json",
+  "sourceMatrixSHA256": "86fa8f644456b513975440cde62b1b7db115c2d238064d94ced26051dd22cf90",
+  "changedCase": "xtm2/in/variant-datatype-unknown.xtm",
+  "newPASS": 1,
+  "remainingOpenCases": 63,
+  "slice22CDecisionsUnchanged": true,
+  "twelveOpenCDecisionsUnchanged": true,
+  "cases": [
+    {
+      "id": "ctm/in/include-template.ctm",
+      "slice22A": "fail",
+      "slice22C": "fail",
+      "slice22D": "fail",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/in/include-wildcard2.ctm",
+      "slice22A": "fail",
+      "slice22C": "fail",
+      "slice22D": "fail",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/in/occurrence-datetime-timezone2.ctm",
+      "slice22A": "fail",
+      "slice22C": "fail",
+      "slice22D": "fail",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/in/occurrence-datetime2.ctm",
+      "slice22A": "fail",
+      "slice22C": "fail",
+      "slice22D": "fail",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/in/template-ambiguous-parameter5.ctm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/in/template-ambiguous-parameter6.ctm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/in/template-subject-identifier2.ctm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/invalid/template-item-identifier-2nd-arg.ctm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/invalid/template-item-identifier3.ctm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/invalid/template-subject-locator-2nd-arg.ctm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "ctm/invalid/template-subject-locator3.ctm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-binary-duplicate.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-binary.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid2.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid3.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified2.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified3.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified4.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-duplicate-role.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-instanceof-duplicate.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-instanceof-scope.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-reifier.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-scope.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association-ternary.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/association.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/itemid-association.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/itemid-occurrence.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/itemid-role.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-association.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-occurrences.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/mergemap-itemid.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/mergemap-loop.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/mergemap-merge.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/mergemap-tm-reifier.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/mergemap.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-datatype-unknown.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-iid.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-iid2.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-reifier.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-reifier.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-resourcedata-uri.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-resourceref-relative.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-resourceref.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-scope-duplicate.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence-scope.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/occurrence.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-iid.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-iid2.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified2.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified3.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified4.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/role-reifier.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/in/variant-datatype-unknown.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "pass",
+      "changedIn22D": true
+    },
+    {
+      "id": "xtm2/in/variant-duplicate-reifier2.xtm",
+      "slice22A": "not-run",
+      "slice22C": "pass",
+      "slice22D": "pass",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/invalid/reifier-collision.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/invalid/role-duplicate-reified.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    },
+    {
+      "id": "xtm2/invalid/topicref-no-fragment-id.xtm",
+      "slice22A": "not-run",
+      "slice22C": "not-run",
+      "slice22D": "not-run",
+      "changedIn22D": false
+    }
+  ]
+}

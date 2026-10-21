@@ -1,0 +1,49 @@
+{
+  "historicalDriver": "reports/slice-21o/failure-controls.lisp",
+  "historicalSHA256": "9286af83fcd19ab54793b37965620d5da48d7bac9c9463c716c218d3d4798374",
+  "newDriver": "reports/slice-22d/failure-controls.lisp",
+  "newDriverSHA256": "43ca5068cd66d6308b7bdc8b6fdb304ed5a08f85f89c0086c68247985e84f848",
+  "existingControls": 108,
+  "additionalControls": 5,
+  "changes": [
+    {
+      "kind": "retarget",
+      "from": "textual resourceData with xsd:integer",
+      "to": "textual resourceData with xsd:anyType",
+      "preservedIntent": "Real XTM-UNSUPPORTED/:resource-data-datatype reaches the existing Case Record classifier. anyType is normative, valid, unimplemented; Slice 22I."
+    },
+    {
+      "kind": "retarget",
+      "families": [
+        "variant-reifier",
+        "variant-reifier-duplicate",
+        "variant-reifier-followup"
+      ],
+      "from": "two distinct string Variants sharing one Reifier",
+      "to": "two distinct urn:custom:conflict Variants sharing one Reifier",
+      "preservedIntent": "Real REIFICATION-ERROR/:reifier-conflict through public deserialization; no manual condition signalling."
+    },
+    {
+      "kind": "reuse",
+      "family": "variant-reifier-followup",
+      "origin": "reports/slice-22b/failure-controls.lisp",
+      "controls": 5,
+      "preservedIntent": "Retain the five 22B target controls alongside the historical 103 controls."
+    },
+    {
+      "kind": "add",
+      "family": "datatype",
+      "target": "xtm2/in/variant-datatype-unknown.xtm",
+      "controls": 5,
+      "modes": [
+        "mismatch",
+        "xml",
+        "xtm",
+        "unsupported",
+        "tmdm"
+      ]
+    }
+  ],
+  "historicalFilesEdited": false,
+  "nativeWrongCauseGuardsRetained": true
+}

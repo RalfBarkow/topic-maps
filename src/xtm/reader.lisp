@@ -183,16 +183,11 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                         (unless (iri-parts-scheme (split-iri datatype))
                           (reject :invalid-resource-data-datatype "resourceData datatype must be an absolute IRI." node))
                         (validate-decoded-reference (unescape-reference datatype node) node)
-                        (unless (member datatype (list (topic-maps.tmdm:string-datatype) (topic-maps.tmdm:iri-datatype)) :test #'equal)
-                          (reject :resource-data-datatype "Only textual xsd:string and xsd:anyURI resourceData are implemented." node 'xtm-unsupported)))
+                        (when (equal datatype "http://www.w3.org/2001/XMLSchema#anyType")
+                          (reject :resource-data-datatype "xsd:anyType XML canonicalization is outside this subset." node 'xtm-unsupported)))
                       (dolist (child (node-children node))
                         (unless (stringp child)
-                          (if (or (equal datatype (topic-maps.tmdm:iri-datatype)) (equal (node-uri child) +namespace+))
-                              (reject :unexpected-child
-                                (if (equal datatype (topic-maps.tmdm:iri-datatype))
-                                    "anyURI resourceData cannot contain child elements."
-                                    "resourceData cannot contain XTM markup.") child)
-                              (reject :resource-data-markup "Embedded XML resourceData is outside this subset." child 'xtm-unsupported))))))
+                          (reject :unexpected-child "Textual resourceData cannot contain child elements." child)))))
                    ((string= name "type")
                     (attributes node nil nil)
                     (let ((refs (elements node)))
@@ -247,33 +242,33 @@ constructs' complete subgrammars is made. XML errors have already been checked."
       (topic-maps.tmdm:make-association map (core-topic map "type-instance")
         (list (list (core-topic map "type") type)
               (list (core-topic map "instance") (topic-maps.tmdm:canonical-topic owner)))))))
+(defun read-resource-value (resource)
+  "Return value and datatype for a validated resource node (XTM 4.16/4.17).
+This operation neither looks up Topics nor fetches resources. ANYTYPE is rejected
+by source validation before model construction. Preserve other datatype IRIs."
+  (if (string= (node-name resource) "resourceRef")
+      (values (leaf-href resource) (topic-maps.tmdm:iri-datatype))
+      (let ((datatype (or (attr resource "datatype") (topic-maps.tmdm:string-datatype)))
+            (text (with-output-to-string (out)
+                    (dolist (part (node-children resource)) (write-string part out)))))
+        (values (if (equal datatype (topic-maps.tmdm:iri-datatype))
+                    (resolve-iri text *document-iri* resource)
+                    text)
+                datatype))))
 (defun read-variant (node name map)
   (let* ((children (elements node))
          (scope-node (find "scope" children :key #'node-name :test #'string=))
          (resource (find-if (lambda (child) (member (node-name child) '("resourceData" "resourceRef") :test #'string=)) children))
-         (reference-p (string= (node-name resource) "resourceRef"))
-         (uri-data-p (and (not reference-p) (equal (attr resource "datatype") (topic-maps.tmdm:iri-datatype))))
-         (explicit (mapcar (lambda (ref) (find-reference-topic map (reference-iri ref))) (elements scope-node)))
-         ;; A resource locator is a value, not a topic reference. LEAF-HREF uses
-         ;; the shared XTM IRI resolver without topic lookup or resource access.
-         (text (unless reference-p (with-output-to-string (out)
-                 (dolist (part (node-children resource)) (write-string part out)))))
-         (value (cond (reference-p (leaf-href resource))
-                      (uri-data-p (resolve-iri text *document-iri* resource))
-                      (t text))))
-    ;; ADD-VARIANT canonicalizes the union and enforces the proper superset.
-    ;; A nonempty explicit scope may still add no theme to the Name scope.
-    (let ((variant (topic-maps.tmdm:add-variant name value
-                     :datatype (if (or reference-p uri-data-p) (topic-maps.tmdm:iri-datatype) (topic-maps.tmdm:string-datatype))
-                     :scope (append (topic-maps.tmdm:topic-name-scope name) explicit))))
-      ;; Normalize first: an equal Variant may already own this identifier.
-      ;; Keep the native canonical result and its global conflict conditions.
-      (dolist (child children)
-        (when (string= (node-name child) "itemIdentity")
-          (setf variant (topic-maps.tmdm:add-item-identifier variant (leaf-href child)))))
-      ;; Reification may merge Topics and normalize this Variant again.
-      ;; Reuse the II-only resolver and retain its current native result.
-      (topic-maps.tmdm:canonical-variant (read-item-reifier node variant map)))))
+         (explicit (mapcar (lambda (ref) (find-reference-topic map (reference-iri ref))) (elements scope-node))))
+    (multiple-value-bind (value datatype) (read-resource-value resource)
+      ;; ADD-VARIANT owns canonicalization and the proper-superset constraint.
+      (let ((variant (topic-maps.tmdm:add-variant name value :datatype datatype
+                       :scope (append (topic-maps.tmdm:topic-name-scope name) explicit))))
+        (dolist (child children)
+          (when (string= (node-name child) "itemIdentity")
+            (setf variant (topic-maps.tmdm:add-item-identifier variant (leaf-href child)))))
+        ;; Reification may normalize again; retain the native canonical handle.
+        (topic-maps.tmdm:canonical-variant (read-item-reifier node variant map))))))
 (defun read-name (node owner map)
   (let* ((children (elements node))
          (type-node (find "type" children :key #'node-name :test #'string=))

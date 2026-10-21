@@ -1,0 +1,105 @@
+{
+  "id": "xtm2/in/variant-datatype-unknown.xtm",
+  "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm",
+  "sourceKey": "xtm2/in/variant-datatype-unknown.xtm",
+  "sourceBytes": 340,
+  "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E20200A20203C746F7069632069643D22746F706963223E0A202020203C6E616D653E0A2020202020203C76616C75653E546F7069633C2F76616C75653E0A2020202020203C76617269616E743E0A20202020202020203C73636F70653E0A202020202020202020203C746F70696352656620687265663D222373636F7065222F3E0A20202020202020203C2F73636F70653E0A20202020202020203C7265736F75726365446174612064617461747970653D22687474703A2F2F6578616D706C652E636F6D2F626F677573223E424F4755533C2F7265736F75726365446174613E0A2020202020203C2F76617269616E743E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+  "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <name>\n      <value>Topic</value>\n      <variant>\n        <scope>\n          <topicRef href=\"#scope\"/>\n        </scope>\n        <resourceData datatype=\"http://example.com/bogus\">BOGUS</resourceData>\n      </variant>\n    </name>\n  </topic>\n</topicMap>\n",
+  "qualifiedParserCalls": 1,
+  "condition": null,
+  "model": {
+    "identity": {
+      "identity": {
+        "nameModel": {
+          "identity": {
+            "topicCount": 3,
+            "associationCount": 0,
+            "canonicalParentsAndInverseReferences": true,
+            "topics": [
+              {
+                "ordinal": 1,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm#topic"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              },
+              {
+                "ordinal": 2,
+                "itemIdentifiers": [],
+                "subjectIdentifiers": [
+                  "http://psi.topicmaps.org/iso13250/model/topic-name"
+                ],
+                "subjectLocators": []
+              },
+              {
+                "ordinal": 3,
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/variant-datatype-unknown.xtm#scope"
+                ],
+                "subjectIdentifiers": [],
+                "subjectLocators": []
+              }
+            ],
+            "associations": []
+          },
+          "mapItemIdentifiers": [],
+          "canonicalNameParentTypeReferences": true,
+          "names": [
+            {
+              "value": "Topic",
+              "parent": 1,
+              "type": 2,
+              "scope": [],
+              "itemIdentifiers": [],
+              "variantCount": 1
+            }
+          ]
+        },
+        "canonicalVariantReferences": true,
+        "variants": [
+          {
+            "value": "BOGUS",
+            "datatype": "http://example.com/bogus",
+            "parentName": 1,
+            "scope": [
+              3
+            ],
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "canonicalNameReifierInverseEQ": true,
+      "mapReifierTopic": null,
+      "nameReifierTopics": [
+        null
+      ],
+      "topicReifiedNames": [
+        null,
+        null,
+        null
+      ]
+    },
+    "canonicalVariantReifierInverseEQ": true,
+    "variantReifierTopics": [
+      null
+    ],
+    "topicReifiedVariants": [
+      null,
+      null,
+      null
+    ]
+  },
+  "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#scope</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>BOGUS</value>\n<datatype>http://example.com/bogus</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+  "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#scope</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Topic</value>\n<type topicref=\"3\"></type>\n<variant number=\"1\">\n<value>BOGUS</value>\n<datatype>http://example.com/bogus</datatype>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</variant>\n</name>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+  "actualBytes": 579,
+  "expectedBytes": 579,
+  "firstDifferentByte": null,
+  "status": "pass",
+  "sourceSHA256": "180e23d77c902891c85ff58e3d88a7759dfb6ec59d5788c9bc115f438b515566",
+  "baselineSHA256": "67c9e04883d378bb0fe3ea77f5bc6b7ca7b464a7debd68cf293c9fba6380c289",
+  "actualSHA256": "67c9e04883d378bb0fe3ea77f5bc6b7ca7b464a7debd68cf293c9fba6380c289",
+  "byteExact": true,
+  "executedInASDFTestOp": true
+}

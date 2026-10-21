@@ -1,0 +1,17 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+XTM-CHECK-PASS datatype-native:value-and-datatype-independent
+XTM-CHECK-PASS datatype-native:no-topic-creation
+XTM-CHECK-PASS datatype-native:distinct-datatypes-and-scopes
+XTM-CHECK-PASS datatype-native:old-variant-handles-canonical-EQ
+XTM-CHECK-PASS datatype-native:parent-and-scope-canonical-EQ
+XTM-CHECK-PASS datatype-native:identifiers-unioned
+XTM-CHECK-PASS datatype-native:reifier-inverse-and-old-handles-EQ
+XTM-CHECK-PASS datatype-native:duplicate-add-normalizes
+XTM-CHECK-PASS datatype-native:datatype-survives-normalization
+XTM-CHECK-PASS datatype-native:cxtm-preserves-custom-lexical-value
+XTM-CHECK-PASS datatype-native:pure-deterministic-canonicalization
+DATATYPE-NATIVE-PREFLIGHT-PASS

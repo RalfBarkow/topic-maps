@@ -1,0 +1,228 @@
+[
+  {
+    "file": "tests/xtm-name-reification.lisp",
+    "beforeSHA256": "3fb13a714d8ed4bd52d801dbb52af5a4a88709e3d5568d8489dff93c8508cf03",
+    "afterSHA256": "74a4bc5197b82c17387742bc61e03fafec415e4f4892374c281348a67d72302a",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 276,
+        "before": "    \"<topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\" 'xtm-unsupported :resource-data-datatype)",
+        "after": "    \"<topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\" 'xtm-unsupported :resource-data-datatype)"
+      }
+    ],
+    "finalFileSHA256": "74a4bc5197b82c17387742bc61e03fafec415e4f4892374c281348a67d72302a",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-names.lisp",
+    "beforeSHA256": "d9a1a3d9c573788e3c3869c00d956212d78edaaf431d894f0477d283399939e4",
+    "afterSHA256": "84b6d75824882e4a249ee5495b10d3839ff227b3a986f2d09c5efe0b8b80d00a",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 283,
+        "before": "  (dolist (spec '((\"variant-resourceData-datatype\" \"<name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name>\" :resource-data-datatype)",
+        "after": "  (dolist (spec '((\"variant-resourceData-datatype\" \"<name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name>\" :resource-data-datatype)"
+      },
+      {
+        "line": 284,
+        "before": "                  (\"variant-reifier-excluded-datatype\" \"<name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name>\" :resource-data-datatype)))",
+        "after": "                  (\"variant-reifier-excluded-datatype\" \"<name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name>\" :resource-data-datatype)))"
+      }
+    ],
+    "finalFileSHA256": "84b6d75824882e4a249ee5495b10d3839ff227b3a986f2d09c5efe0b8b80d00a",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-name-item-identities.lisp",
+    "beforeSHA256": "867f0aa5a30baf22948533db0963bf68b095707cc325a1342b2e5abfbe5e0dc7",
+    "afterSHA256": "7d9b94fb773c6d4ceb7d0c2ac3ca46e8163964197867d37abd1228b6db3f9d91",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 252,
+        "before": "  (iid-error-control \"variant-reifier-excluded-datatype\" \"<topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\" 'xtm-unsupported :resource-data-datatype)",
+        "after": "  (iid-error-control \"variant-reifier-excluded-datatype\" \"<topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\" 'xtm-unsupported :resource-data-datatype)"
+      },
+      {
+        "line": 253,
+        "before": "  (iid-error-control \"variant-resourceData-datatype-stays-unsupported\" \"<topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\" 'xtm-unsupported :resource-data-datatype))",
+        "after": "  (iid-error-control \"variant-resourceData-datatype-stays-unsupported\" \"<topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\" 'xtm-unsupported :resource-data-datatype))"
+      }
+    ],
+    "finalFileSHA256": "7d9b94fb773c6d4ceb7d0c2ac3ca46e8163964197867d37abd1228b6db3f9d91",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-negative-originals.lisp",
+    "beforeSHA256": "b86a1004fcffcc94b31678be73d37b464b820c074f1a1a16fcb0fbb2125a4a85",
+    "afterSHA256": "e31b692f8268775dc575cd8c193a9fb88bb339b87086b2b4ef2dc1bd81c56ceb",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 157,
+        "before": "                       (list \"unsupported-is-not-pass\" (condition-from (lambda () (read-body \"<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\"))) :unsupported)",
+        "after": "                       (list \"unsupported-is-not-pass\" (condition-from (lambda () (read-body \"<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\"))) :unsupported)"
+      }
+    ],
+    "finalFileSHA256": "e31b692f8268775dc575cd8c193a9fb88bb339b87086b2b4ef2dc1bd81c56ceb",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-variant-uri-data.lisp",
+    "beforeSHA256": "5bcd1d4ab0a801f1f9427788c9218ba673d99e14db8a81aba304e9fa6ce748f1",
+    "afterSHA256": "63a1a3de3440930373190eb3e931f52f5ce6d722ce4023f7d1e2fb33e2ac068c",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 225,
+        "before": "  (dolist (row '((\"integer-still-unsupported\" \"<resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData>\")",
+        "after": "  (dolist (row '((\"anyType-text-still-unsupported\" \"<resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData>\")"
+      }
+    ],
+    "finalFileSHA256": "63a1a3de3440930373190eb3e931f52f5ce6d722ce4023f7d1e2fb33e2ac068c",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-variant-item-identities.lisp",
+    "beforeSHA256": "c1b3f58fc6f6b22532c5d7a6da5741e4f80fe17ad79f24fc0b6748e7718661fb",
+    "afterSHA256": "a5c1a1ffdd26792599e7125ebb8593e195c9ad22ad936e9726363b8337e58988",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 261,
+        "before": "    \"<topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\"",
+        "after": "    \"<topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\""
+      },
+      {
+        "line": 265,
+        "before": "      (variant-iid-xml nil '(\"s\") '(\"urn:v\") \"<resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData>\")))",
+        "after": "      (variant-iid-xml nil '(\"s\") '(\"urn:v\") \"<resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData>\")))"
+      }
+    ],
+    "finalFileSHA256": "a5c1a1ffdd26792599e7125ebb8593e195c9ad22ad936e9726363b8337e58988",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-identity.lisp",
+    "beforeSHA256": "cb37504c10c27b39eb360dd408cb762f6c449ae4a6cbcddd17f64c1587b5ecd7",
+    "afterSHA256": "6f14b7c8f3a1701b5b81c051dd411253384c5618315b15717c23e6e8152011af",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 269,
+        "before": "                       (list \"unsupported\" (document \"<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\") 'xtm-unsupported :unsupported)))",
+        "after": "                       (list \"unsupported\" (document \"<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\") 'xtm-unsupported :unsupported)))"
+      },
+      {
+        "line": 434,
+        "before": "  (dolist (spec '((\"unsupported-name-variant-resourceData-datatype\" \"<topic id='a'><name><value>Name</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\" :resource-data-datatype)",
+        "after": "  (dolist (spec '((\"unsupported-name-variant-resourceData-datatype\" \"<topic id='a'><name><value>Name</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\" :resource-data-datatype)"
+      }
+    ],
+    "finalFileSHA256": "ec51bb08bc32eceff67853d9faad45181daf9da802a5a302da5e57c955f2f3cd",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-map-reification.lisp",
+    "beforeSHA256": "e7db452cdc5a6cd43a70d38da0aec36bff8453afc6dbe6ed3af4e15289663a07",
+    "afterSHA256": "2965c4a9fb4cdbbf31070e686c8e3dafa755d4d2f80a9ec4a1864d146a48c6a2",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 224,
+        "before": "  (dolist (row '((\"name-with-variant-excluded-datatype\" \"<topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\" :resource-data-datatype)",
+        "after": "  (dolist (row '((\"name-with-variant-excluded-datatype\" \"<topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\" :resource-data-datatype)"
+      },
+      {
+        "line": 225,
+        "before": "    (\"variant-reifier-excluded-datatype\" \"<topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic>\" :resource-data-datatype)",
+        "after": "    (\"variant-reifier-excluded-datatype\" \"<topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>\" :resource-data-datatype)"
+      }
+    ],
+    "finalFileSHA256": "2965c4a9fb4cdbbf31070e686c8e3dafa755d4d2f80a9ec4a1864d146a48c6a2",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-name-scopes.lisp",
+    "beforeSHA256": "71fd0e251b827e7317f4b43e116c4072f061d6689829d715435944a9f6614ac5",
+    "afterSHA256": "be904fa90267d042c369964c4d9418b1beaec52e3676e52be9d5d8c12ddc8ea2",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 223,
+        "before": "  (dolist (spec '((\"variant-resourceData-datatype-stays-unsupported\" \"<name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name>\" :resource-data-datatype)",
+        "after": "  (dolist (spec '((\"variant-resourceData-datatype-stays-unsupported\" \"<name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name>\" :resource-data-datatype)"
+      },
+      {
+        "line": 224,
+        "before": "    (\"variant-reifier-excluded-datatype\" \"<name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name>\" :resource-data-datatype)))",
+        "after": "    (\"variant-reifier-excluded-datatype\" \"<name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name>\" :resource-data-datatype)))"
+      }
+    ],
+    "finalFileSHA256": "be904fa90267d042c369964c4d9418b1beaec52e3676e52be9d5d8c12ddc8ea2",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/xtm-variants.lisp",
+    "beforeSHA256": "ec8d75f8857b85baf3a5dfb16a27179bb5c50712e9ef243f21cde7fa88ff171d",
+    "afterSHA256": "f69bc58dc848da413101696c91eaafbc13554f65c87520c1bcb4593a04415ea8",
+    "reason": "Preserve Unsupported check intent using the excluded xsd:anyType canonicalization branch; invalid ordinary markup is covered by new syntax probes.",
+    "changedLines": [
+      {
+        "line": 336,
+        "before": "  (dolist (row '((\"resourceData-integer\" \"<variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant>\" :resource-data-datatype)",
+        "after": "  (dolist (row '((\"resourceData-anyType\" \"<variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant>\" :resource-data-datatype)"
+      },
+      {
+        "line": 337,
+        "before": "    (\"reified-itemIdentity-excluded-datatype\" \"<variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant>\" :resource-data-datatype)",
+        "after": "    (\"reified-itemIdentity-excluded-datatype\" \"<variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant>\" :resource-data-datatype)"
+      },
+      {
+        "line": 338,
+        "before": "    (\"reifier-excluded-datatype\" \"<variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant>\" :resource-data-datatype)",
+        "after": "    (\"reifier-excluded-datatype\" \"<variant reifier='#r'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant>\" :resource-data-datatype)"
+      },
+      {
+        "line": 339,
+        "before": "    (\"datatype\" \"<variant><scope><topicRef href='#s'/></scope><resourceData datatype='urn:other'>V</resourceData></variant>\" :resource-data-datatype)",
+        "after": "    (\"datatype\" \"<variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></variant>\" :resource-data-datatype)"
+      },
+      {
+        "line": 340,
+        "before": "    (\"embedded-XML\" \"<variant><scope><topicRef href='#s'/></scope><resourceData><b xmlns='urn:other'>V</b></resourceData></variant>\" :resource-data-markup)))",
+        "after": "    (\"embedded-XML\" \"<variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><b xmlns='urn:other'>V</b></resourceData></variant>\" :resource-data-datatype)))"
+      }
+    ],
+    "finalFileSHA256": "f69bc58dc848da413101696c91eaafbc13554f65c87520c1bcb4593a04415ea8",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  },
+  {
+    "file": "tests/ctm-xtm-mergemap.lisp",
+    "beforeSHA256": "36374ef195706328675c078360ba49763d8bafb4fba4879321164fe6e6aafb36",
+    "afterSHA256": "f90bf58054424da5f7d62eb281c1e9282c17921f3cce249702041898d021a8a9",
+    "reason": "Preserve the CTM/XTM adapter Unsupported cause and atomic import guard using excluded anyType; no adapter change.",
+    "changedLines": [
+      {
+        "line": 280,
+        "before": "      (list \"unsupported-name-variant-resourceData-datatype\" (bytes \"<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='t'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></variant></name></topic></topicMap>\") 'topic-maps.xtm:xtm-unsupported :resource-data-datatype)))",
+        "after": "      (list \"unsupported-name-variant-resourceData-datatype\" (bytes \"<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='t'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>\") 'topic-maps.xtm:xtm-unsupported :resource-data-datatype)))"
+      }
+    ],
+    "finalFileSHA256": "f90bf58054424da5f7d62eb281c1e9282c17921f3cce249702041898d021a8a9",
+    "afterSHA256Meaning": "File after the retargeting edit; finalFileSHA256 additionally includes registration changes where applicable.",
+    "normativeCapability": "xsd:anyType is a valid datatype whose XTM 4.16.3 XML canonicalization remains unimplemented; scheduled for Slice 22I."
+  }
+]
