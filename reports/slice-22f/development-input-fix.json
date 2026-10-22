@@ -1,0 +1,15 @@
+{
+  "kind": "test-input-correction-not-reader-change",
+  "originalCTMSource": "rel(role:a)",
+  "actualCTMCondition": {
+    "class": "UNDEFINED-PREFIX",
+    "code": "undefined-prefix",
+    "line": 1,
+    "column": 5,
+    "message": "UNDEFINED-PREFIX in gap:CTM:explicit-association at CHARACTER 4 (line 1, column 5): Prefix \"role\" has no binding."
+  },
+  "correctedCTMSource": "rel(role: a)",
+  "cause": "Unspaced role:a is a QName; an unqualified Role Type requires the role delimiter and following whitespace.",
+  "productionChanges": false,
+  "countedAsSuccessfulPair": false
+}

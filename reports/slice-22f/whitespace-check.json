@@ -1,0 +1,8 @@
+{
+  "kind": "literal-whitespace-evidence-not-formatting-change",
+  "actualGitCheckExitCode": 2,
+  "actualMessages": "reports/slice-22f/after/actual/unicode-whitespace-escaping.ctm.cxtm:7: trailing whitespace.\n+<value> 馬🦊 &amp; &lt; &gt; \nreports/slice-22f/after/actual/unicode-whitespace-escaping.ctm.cxtm:8: space before tab in indent.\n+ \t \" \\ </value>\nreports/slice-22f/after/actual/unicode-whitespace-escaping.xtm.cxtm:7: trailing whitespace.\n+<value> 馬🦊 &amp; &lt; &gt; \nreports/slice-22f/after/actual/unicode-whitespace-escaping.xtm.cxtm:8: space before tab in indent.\n+ \t \" \\ </value>\n",
+  "scope": "Exactly four findings in two byte-identical actual CXTM outputs. Spaces and tab belong to the native Unicode Name value.",
+  "actualBytesPreserved": true,
+  "allOtherStagedFilesWhitespaceCheckPassed": true
+}

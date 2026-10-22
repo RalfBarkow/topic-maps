@@ -1,0 +1,910 @@
+{
+  "checks": 487,
+  "actualPairs": 27,
+  "intentionalDifferences": 3,
+  "readerCapabilityGaps": 3,
+  "pairs": [
+    {
+      "id": "local-II",
+      "documentIRI": "https://equivalence.example.invalid/local-II/map",
+      "nativeCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 110,
+      "xtmBytes": 110,
+      "ctmSHA256": "19d53a18e807e3d112f0e981591c260240cb6889c72d2b897c2927d4504e57da",
+      "xtmSHA256": "19d53a18e807e3d112f0e981591c260240cb6889c72d2b897c2927d4504e57da",
+      "sourceCTMSHA256": "5ab640fad553cbf927dc96b8e7878a9844b2fa79b7a4f5c515e186970ec53027",
+      "sourceXTMSHA256": "a00a996768998c8dcac06070caf81dc44b6efdd8ea51a418dfff2c6690e53c87",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "identity-SI",
+      "documentIRI": "https://equivalence.example.invalid/identity-SI/map",
+      "nativeCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 184,
+      "xtmBytes": 184,
+      "ctmSHA256": "d93204fbe771c3ac638df3eb8532f663b60244609e9d0346c6fd6abafeb98f03",
+      "xtmSHA256": "d93204fbe771c3ac638df3eb8532f663b60244609e9d0346c6fd6abafeb98f03",
+      "sourceCTMSHA256": "0faa1023a194aef6024cb14065f2d0c98741e05962d00b85329cb58e8e82549c",
+      "sourceXTMSHA256": "cf83816e540dac951d2938ffe9a47fb077b8eadf1b232027b463f0d60c2ac3a6",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "merge-SI",
+      "documentIRI": "https://equivalence.example.invalid/merge-SI/map",
+      "nativeCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 206,
+      "xtmBytes": 206,
+      "ctmSHA256": "1873681338252725e4825cd663bf64c51718dca812f14048e70ac8ad4a07de75",
+      "xtmSHA256": "1873681338252725e4825cd663bf64c51718dca812f14048e70ac8ad4a07de75",
+      "sourceCTMSHA256": "c71315297267b0dad50930dbb1432b593eee1b0aab367e28a4772063db215aa4",
+      "sourceXTMSHA256": "efa6a22e43311a1e642dd9154980aece5b67b86757a274a70096bc72329b3563",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "identity-SL",
+      "documentIRI": "https://equivalence.example.invalid/identity-SL/map",
+      "nativeCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 178,
+      "xtmBytes": 178,
+      "ctmSHA256": "142edf2f3d813f7cb6315f2ad788448e8c332ed7d6de4819821a51a1ced56710",
+      "xtmSHA256": "142edf2f3d813f7cb6315f2ad788448e8c332ed7d6de4819821a51a1ced56710",
+      "sourceCTMSHA256": "55662a9554f2f36ddcd851e71cd0783f082943094fb9cf61939ef34487912cf2",
+      "sourceXTMSHA256": "ff6b87a6611dd3690df313459dd1871ade84da07b3c3cf632ffab56046c13299",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "merge-SL",
+      "documentIRI": "https://equivalence.example.invalid/merge-SL/map",
+      "nativeCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 200,
+      "xtmBytes": 200,
+      "ctmSHA256": "7c2620b1bd7fcfdedd55c768a3c3a9398568f2158d61ace6a28cb0c2c608ceff",
+      "xtmSHA256": "7c2620b1bd7fcfdedd55c768a3c3a9398568f2158d61ace6a28cb0c2c608ceff",
+      "sourceCTMSHA256": "965357d4165d1b8d8fb2ad7a85e63945bf213ec2458d58145a7d4fc4f41fb9ca",
+      "sourceXTMSHA256": "7661f3669bc777f6268b55e379a01b8c606e6beb4add03deb7874270451494b2",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "identity-II",
+      "documentIRI": "https://equivalence.example.invalid/identity-II/map",
+      "nativeCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 138,
+      "xtmBytes": 138,
+      "ctmSHA256": "83503b527bbed6732b2593f3d4fe583587d2cb8979b99d64d2ca2adf45e0d36e",
+      "xtmSHA256": "83503b527bbed6732b2593f3d4fe583587d2cb8979b99d64d2ca2adf45e0d36e",
+      "sourceCTMSHA256": "da2657cc9cd2aecfa831e9da0a3ef93eddcf0f37afe7ac601b6927e3275ebe74",
+      "sourceXTMSHA256": "e5d86584e411e168121377b5bfb346915600ba8fd5c17f93b43cbb72cf2a1b6e",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "merge-II",
+      "documentIRI": "https://equivalence.example.invalid/merge-II/map",
+      "nativeCounts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 160,
+      "xtmBytes": 160,
+      "ctmSHA256": "41e65ba22ce2a5e718ca2ebad37b0ef4aa1231376f077d6c4a1c1ef882ef0e73",
+      "xtmSHA256": "41e65ba22ce2a5e718ca2ebad37b0ef4aa1231376f077d6c4a1c1ef882ef0e73",
+      "sourceCTMSHA256": "9e22138ffbf49e877900069b39ed660b0f3e45fa556c414628851772e5203de1",
+      "sourceXTMSHA256": "e7504f06380040aa9903219f74df5d41cafdd9c8ac7a6c11ec975a801fb4625c",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "isa-instanceOf",
+      "documentIRI": "https://equivalence.example.invalid/isa-instanceOf/map",
+      "nativeCounts": [
+        5,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "ctmBytes": 956,
+      "xtmBytes": 956,
+      "ctmSHA256": "e8b80f28ad48cf17fe4dc422b2412007da682b467755e7db7d4081976959b504",
+      "xtmSHA256": "e8b80f28ad48cf17fe4dc422b2412007da682b467755e7db7d4081976959b504",
+      "sourceCTMSHA256": "b8252ca11858a0a46c796a3b9727b5ef9fe169119767d0bc90b81981baad6920",
+      "sourceXTMSHA256": "0024626d6b7543752da63c96f2188341e2bf9ce131a851403b9df023514c74d1",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "isa-multiple-normalized",
+      "documentIRI": "https://equivalence.example.invalid/isa-multiple-normalized/map",
+      "nativeCounts": [
+        6,
+        0,
+        0,
+        0,
+        2,
+        4,
+        0
+      ],
+      "ctmBytes": 1384,
+      "xtmBytes": 1384,
+      "ctmSHA256": "6c550ec2faa913b59a9a928c04218a68643ade8a70699d7130a6d6e171bb1d52",
+      "xtmSHA256": "6c550ec2faa913b59a9a928c04218a68643ade8a70699d7130a6d6e171bb1d52",
+      "sourceCTMSHA256": "ec2fcd4a0035a61eedaefb81153b2beab533519c2052d59533a318bda76e68e8",
+      "sourceXTMSHA256": "83aa88e27aaba4b0854e5862436f03e24ef3fcef231e6cfa13c159d3a84f41d9",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "default-name",
+      "documentIRI": "https://equivalence.example.invalid/default-name/map",
+      "nativeCounts": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 324,
+      "xtmBytes": 324,
+      "ctmSHA256": "add7f2cbc0836daaddb0801f6b09ebbb16cad885924e30fae670eb793c8800ff",
+      "xtmSHA256": "add7f2cbc0836daaddb0801f6b09ebbb16cad885924e30fae670eb793c8800ff",
+      "sourceCTMSHA256": "c6ca7fbcf0954e57e1ca8b4d82b8756a44dc3bdbc4f9b36a3988f89868ac97e5",
+      "sourceXTMSHA256": "30aaac0706ab333a7e0a6e08c2d2624a01a0a71822656a032012462b2aa7eeec",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "typed-scoped-name",
+      "documentIRI": "https://equivalence.example.invalid/typed-scoped-name/map",
+      "nativeCounts": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 549,
+      "xtmBytes": 549,
+      "ctmSHA256": "31a41c527d353aca8f2b7e87c0825403bab0bf465043d6419e7a7a0e17d46606",
+      "xtmSHA256": "31a41c527d353aca8f2b7e87c0825403bab0bf465043d6419e7a7a0e17d46606",
+      "sourceCTMSHA256": "c759f0f96a29e2a5b940c9a9445b8bed28b69b392003481b50644193366f6a88",
+      "sourceXTMSHA256": "fb2970912f616c20b354bb981aa76acb021b0320b36465a53a17815daad440dd",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "unicode-whitespace-escaping",
+      "documentIRI": "https://equivalence.example.invalid/unicode-whitespace-escaping/map",
+      "nativeCounts": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 353,
+      "xtmBytes": 353,
+      "ctmSHA256": "8b0a02567e7cf5580583f0c174b1d905a357556a294c4003bd7cf23a0d8f408d",
+      "xtmSHA256": "8b0a02567e7cf5580583f0c174b1d905a357556a294c4003bd7cf23a0d8f408d",
+      "sourceCTMSHA256": "a5b0d8137250facfff51f3bf1d939fd29851f5936eaf199c9c6e38fea61238b3",
+      "sourceXTMSHA256": "fd34496b0e09da09b0521d3b8d4142aaee558657b012c9933de222886dc68e25",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "empty-name",
+      "documentIRI": "https://equivalence.example.invalid/empty-name/map",
+      "nativeCounts": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 320,
+      "xtmBytes": 320,
+      "ctmSHA256": "7c28089122926b14e154df9babff8f056d532d21ba8eb4ba037b9a15a1201be0",
+      "xtmSHA256": "7c28089122926b14e154df9babff8f056d532d21ba8eb4ba037b9a15a1201be0",
+      "sourceCTMSHA256": "99556b870e5793cc55305dc751ce815451142acf3d4fcca2c479774595cc4e52",
+      "sourceXTMSHA256": "2bd8cd0ff9135eec16a1655cd0da0bf49eae5f5e1ce927804bd68feb35bc18e5",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "duplicate-names",
+      "documentIRI": "https://equivalence.example.invalid/duplicate-names/map",
+      "nativeCounts": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 321,
+      "xtmBytes": 321,
+      "ctmSHA256": "aac128d25da2ac5f4084d9ef516a708fc02db32deb71881ded509fa30a917ba1",
+      "xtmSHA256": "aac128d25da2ac5f4084d9ef516a708fc02db32deb71881ded509fa30a917ba1",
+      "sourceCTMSHA256": "cd6de936b528d42c853579cae5b5113fdf134fd8d3f4e2c5fcb74beb7515e772",
+      "sourceXTMSHA256": "eda81d8d3513e36b5032a08041e9ae1065b1b87627845371cb33448a38cd637e",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-inherited-scope",
+      "documentIRI": "https://equivalence.example.invalid/variant-inherited-scope/map",
+      "nativeCounts": [
+        4,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 775,
+      "xtmBytes": 775,
+      "ctmSHA256": "5d4de516e5d48967b78077817fe8da35ec6c2cbd8f0823efac1e11c8def6b480",
+      "xtmSHA256": "5d4de516e5d48967b78077817fe8da35ec6c2cbd8f0823efac1e11c8def6b480",
+      "sourceCTMSHA256": "cb66f9886d5d34c4e35bcf08f233e80552b4eb9f5b637b7678d7633c2464c97c",
+      "sourceXTMSHA256": "19d2fa374ef6d92fe057099965741f23b20d4231c56f251cb25024b9c3b9afee",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-datatype-integer",
+      "documentIRI": "https://equivalence.example.invalid/variant-datatype-integer/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 580,
+      "xtmBytes": 580,
+      "ctmSHA256": "17ee10ebe4ac87a39ccdb96fb97e0eb3476f30aeccb6dec80b0f78dcabc2d39e",
+      "xtmSHA256": "17ee10ebe4ac87a39ccdb96fb97e0eb3476f30aeccb6dec80b0f78dcabc2d39e",
+      "sourceCTMSHA256": "af3b2a4e0ceab531d2906477c8e2b8367d0948702f997ce2b0708277d774759f",
+      "sourceXTMSHA256": "bbc4e959875bef7c9c04ad58f38fa202ffc03e6fe523db0bd9761197fe496cf1",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-datatype-decimal",
+      "documentIRI": "https://equivalence.example.invalid/variant-datatype-decimal/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 581,
+      "xtmBytes": 581,
+      "ctmSHA256": "df09e9c0616beece214fddc121d507dc1037acf1af1da575d9bdabb18f4d08b4",
+      "xtmSHA256": "df09e9c0616beece214fddc121d507dc1037acf1af1da575d9bdabb18f4d08b4",
+      "sourceCTMSHA256": "c85ea79ba701967d7e55573e064b89b298068cff43fe3d99afde4516c62ef287",
+      "sourceXTMSHA256": "b1f8429e563e143a743d5872e6f0b244846d2fb6d67db8c61b7a954011d206e1",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-datatype-date",
+      "documentIRI": "https://equivalence.example.invalid/variant-datatype-date/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 585,
+      "xtmBytes": 585,
+      "ctmSHA256": "11a833bd327c7e999649611a4ec5e4da78e42cf1fa1205a506ebb7649552bebe",
+      "xtmSHA256": "11a833bd327c7e999649611a4ec5e4da78e42cf1fa1205a506ebb7649552bebe",
+      "sourceCTMSHA256": "3e41cd2b5cacdcd840ca0a0f01e7e0ab5be9eb6b266caa614517780f3f9ddca6",
+      "sourceXTMSHA256": "4ac28d5b522fd1f747b3e60ea03dc253b5b106c0ef690875253c125226a6573e",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-datatype-datetime",
+      "documentIRI": "https://equivalence.example.invalid/variant-datatype-datetime/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 599,
+      "xtmBytes": 599,
+      "ctmSHA256": "b3d47db1dc51156648af228c2f9f30398d1e2b75df00af6d1698f985af476e0c",
+      "xtmSHA256": "b3d47db1dc51156648af228c2f9f30398d1e2b75df00af6d1698f985af476e0c",
+      "sourceCTMSHA256": "32f0eda8ce0c1befc080290d2e8d932ed4d3c1871dacbb36ac39fa896ee7f706",
+      "sourceXTMSHA256": "9a06489a999f8e21d92ee7a2288cec6ae46e77edd8bc9ad66220d1def8ac9348",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-datatype-unknown-http",
+      "documentIRI": "https://equivalence.example.invalid/variant-datatype-unknown-http/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 584,
+      "xtmBytes": 584,
+      "ctmSHA256": "00fe2d80ed8ff082109d842331c9bbf40a32353b58a847c0e5560916ef5e2ecb",
+      "xtmSHA256": "00fe2d80ed8ff082109d842331c9bbf40a32353b58a847c0e5560916ef5e2ecb",
+      "sourceCTMSHA256": "574f2d66ada95dbcb0197e818b0d60f94045f495b6efc7a903abbe15e324f29e",
+      "sourceXTMSHA256": "1ba66b7893a9988c4798fede93d0a071ec058d3c4ae1fd10e3ed06c40ae34b77",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-datatype-unknown-urn",
+      "documentIRI": "https://equivalence.example.invalid/variant-datatype-unknown-urn/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 561,
+      "xtmBytes": 561,
+      "ctmSHA256": "9af8dd45d1544c1d614c6e95ca202dbd67561ec6e4d09c0c310eed97468b8272",
+      "xtmSHA256": "9af8dd45d1544c1d614c6e95ca202dbd67561ec6e4d09c0c310eed97468b8272",
+      "sourceCTMSHA256": "f3d25984f99020afc5c42dfc68e5bd762c166cf6b3424009038416e142a4533d",
+      "sourceXTMSHA256": "ec983616744b2ffdebdc4ba902546b3a5e30c4500e262d16aa27193ea89793f6",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-resourceRef",
+      "documentIRI": "https://equivalence.example.invalid/variant-resourceRef/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 582,
+      "xtmBytes": 582,
+      "ctmSHA256": "80d99624c19d057cd5c89b5389c0982a0e21d4412862d8e55162dda024e06226",
+      "xtmSHA256": "80d99624c19d057cd5c89b5389c0982a0e21d4412862d8e55162dda024e06226",
+      "sourceCTMSHA256": "4275356442a7ca198e59e2cd74603c4b5fdf3979348ea95f8029873f81516940",
+      "sourceXTMSHA256": "7d13e22fa1a4eb74ff42320076812d0accc6b2455f48ca64f5f2234b8f53b2be",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-anyURI-data",
+      "documentIRI": "https://equivalence.example.invalid/variant-anyURI-data/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 582,
+      "xtmBytes": 582,
+      "ctmSHA256": "80d99624c19d057cd5c89b5389c0982a0e21d4412862d8e55162dda024e06226",
+      "xtmSHA256": "80d99624c19d057cd5c89b5389c0982a0e21d4412862d8e55162dda024e06226",
+      "sourceCTMSHA256": "4275356442a7ca198e59e2cd74603c4b5fdf3979348ea95f8029873f81516940",
+      "sourceXTMSHA256": "1cfdf26b4cc574919fbd21b4f860512e3ecbfd763962cadffab7d890b18c2477",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "variant-ctm-integer-star",
+      "documentIRI": "https://equivalence.example.invalid/variant-ctm-integer-star/map",
+      "nativeCounts": [
+        3,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ctmBytes": 584,
+      "xtmBytes": 584,
+      "ctmSHA256": "67a0a43739a04a1e8c1380e6dda63583d4d8b00d241b3321f4dfc77b733c3c49",
+      "xtmSHA256": "67a0a43739a04a1e8c1380e6dda63583d4d8b00d241b3321f4dfc77b733c3c49",
+      "sourceCTMSHA256": "caa1cc8c9a90aad2bb4b4de7f20d3f273b54bfa36298c2bdf832749c58fa7589",
+      "sourceXTMSHA256": "e5fd977193eded5206ec44970bb0fe26cbaaef81a9a3f3c44019960cba88b5c1",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "name-variant-reification",
+      "documentIRI": "https://equivalence.example.invalid/name-variant-reification/map",
+      "nativeCounts": [
+        5,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "ctmBytes": 778,
+      "xtmBytes": 778,
+      "ctmSHA256": "ba0edf5dbea244a20dfac206e5098fdb1538b783c10d58c5d3863828d78bb6d0",
+      "xtmSHA256": "ba0edf5dbea244a20dfac206e5098fdb1538b783c10d58c5d3863828d78bb6d0",
+      "sourceCTMSHA256": "3f3bf385122ecb3b9c919876870e4971f9e31b7e7ce87352eed15324c84bd549",
+      "sourceXTMSHA256": "d1d418878988393cab368361eaa1b713ef1cd0b273ef4da52416d5acabb412f5",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "map-reification",
+      "documentIRI": "https://equivalence.example.invalid/map-reification/map",
+      "nativeCounts": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "ctmBytes": 209,
+      "xtmBytes": 209,
+      "ctmSHA256": "be965ed5de4058b400b88e5455fc2a068479fbce96376497e4cc0720657c0faf",
+      "xtmSHA256": "be965ed5de4058b400b88e5455fc2a068479fbce96376497e4cc0720657c0faf",
+      "sourceCTMSHA256": "84396263308eed2db4f2219d96e0b5bcb1d722ed6e06d0d0b8b271839792fa11",
+      "sourceXTMSHA256": "ae875c8d7567ab0e21d2e9f1a492c9ad47ba1228303a8fec1003ef7fe5550c89",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    },
+    {
+      "id": "content-import",
+      "documentIRI": "https://equivalence.example.invalid/content-import/map",
+      "nativeCounts": [
+        9,
+        1,
+        1,
+        0,
+        1,
+        2,
+        0
+      ],
+      "ctmBytes": 1626,
+      "xtmBytes": 1626,
+      "ctmSHA256": "ec0eef339e817c6a23a000567cb537d8889e4a50caa2fd823ffeb6cc4d026325",
+      "xtmSHA256": "ec0eef339e817c6a23a000567cb537d8889e4a50caa2fd823ffeb6cc4d026325",
+      "sourceCTMSHA256": "f27e2c24817364f83c4c57ebc802286eff4f8d27b390f7759de81e3e9e4dc900",
+      "sourceXTMSHA256": "e93ab02638e868122b5ab80f441b584a69d7a041d306200e14593b56e35a1ef2",
+      "firstDifferentByte": null,
+      "completeByteExact": true
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "different-document-IRIs",
+      "kind": "intentional-semantic-difference",
+      "reason": "Different document-local IIs are real TMDM properties. A single shared CXTM base preserves the difference.",
+      "ctmSource": "a.",
+      "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'/></topicMap>",
+      "ctmDocumentIRI": "https://equivalence.example.invalid/contrast/a.ctm",
+      "xtmDocumentIRI": "https://equivalence.example.invalid/contrast/b.xtm",
+      "canonicalBaseIRI": "https://equivalence.example.invalid/contrast/map",
+      "ctmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/contrast/a.ctm#a\") NIL NIL))",
+        "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/contrast/a.ctm#a\") NIL NIL)) NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/contrast/a.ctm#a\") NIL NIL)\n  (\"https://equivalence.example.invalid/contrast/a.ctm#a\") NIL\n  (NIL NIL NIL NIL)))"
+      },
+      "xtmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/contrast/b.xtm#a\") NIL NIL))",
+        "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/contrast/b.xtm#a\") NIL NIL)) NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/contrast/b.xtm#a\") NIL NIL)\n  (\"https://equivalence.example.invalid/contrast/b.xtm#a\") NIL\n  (NIL NIL NIL NIL)))"
+      },
+      "ctmBytes": 115,
+      "xtmBytes": 115,
+      "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>a.ctm#a</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "xtmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>b.xtm#a</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "firstDifferentByte": 57,
+      "nativePropertiesEqual": false,
+      "byteExact": false
+    },
+    {
+      "id": "SI-versus-SL",
+      "kind": "intentional-semantic-difference",
+      "reason": "Equal locator spelling in SI versus SL does not identify equal TMDM properties.",
+      "ctmSource": "a <urn:identity>.",
+      "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><subjectLocator href='urn:identity'/></topic></topicMap>",
+      "ctmDocumentIRI": "https://equivalence.example.invalid/contrast/map",
+      "xtmDocumentIRI": "https://equivalence.example.invalid/contrast/map",
+      "canonicalBaseIRI": "https://equivalence.example.invalid/contrast/map",
+      "ctmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/contrast/map#a\") (\"urn:identity\") NIL))",
+        "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/contrast/map#a\") (\"urn:identity\")\n     NIL))\n   NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/contrast/map#a\")\n   (\"urn:identity\") NIL)\n  (\"https://equivalence.example.invalid/contrast/map#a\") NIL (NIL NIL NIL NIL)))"
+      },
+      "xtmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/contrast/map#a\") NIL (\"urn:identity\")))",
+        "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/contrast/map#a\") NIL\n     (\"urn:identity\")))\n   NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/contrast/map#a\") NIL\n   (\"urn:identity\"))\n  (\"https://equivalence.example.invalid/contrast/map#a\") NIL (NIL NIL NIL NIL)))"
+      },
+      "ctmBytes": 185,
+      "xtmBytes": 179,
+      "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>urn:identity</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "xtmCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectLocators>\n<locator>urn:identity</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "firstDifferentByte": 38,
+      "nativePropertiesEqual": false,
+      "byteExact": false
+    },
+    {
+      "id": "non-topic-item-Identifier",
+      "kind": "intentional-semantic-difference",
+      "reason": "The XTM Name has an extra II that CTM cannot express here. It is not removed for comparison.",
+      "ctmSource": "a - \"N\".",
+      "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><itemIdentity href='urn:name-item'/><value>N</value></name></topic></topicMap>",
+      "ctmDocumentIRI": "https://equivalence.example.invalid/contrast/map",
+      "xtmDocumentIRI": "https://equivalence.example.invalid/contrast/map",
+      "canonicalBaseIRI": "https://equivalence.example.invalid/contrast/map",
+      "ctmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n (NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL))",
+        "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n    (NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL))\n   NIL))\n ((:NAME ((\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n   (NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL) \"N\" NIL)\n  NIL NIL NIL)\n ((:TOPIC (\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n  (\"https://equivalence.example.invalid/contrast/map#a\") NIL\n  (((:NAME ((\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n     (NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL) \"N\" NIL))\n   NIL NIL NIL))\n ((:TOPIC NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL) NIL\n  NIL (NIL NIL NIL NIL)))"
+      },
+      "xtmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n (NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL))",
+        "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n    (NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL))\n   NIL))\n ((:NAME ((\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n   (NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL) \"N\" NIL)\n  (\"urn:name-item\") NIL NIL)\n ((:TOPIC (\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n  (\"https://equivalence.example.invalid/contrast/map#a\") NIL\n  (((:NAME ((\"https://equivalence.example.invalid/contrast/map#a\") NIL NIL)\n     (NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL) \"N\" NIL))\n   NIL NIL NIL))\n ((:TOPIC NIL (\"http://psi.topicmaps.org/iso13250/model/topic-name\") NIL) NIL\n  NIL (NIL NIL NIL NIL)))"
+      },
+      "ctmBytes": 321,
+      "xtmBytes": 391,
+      "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>N</value>\n<type topicref=\"2\"></type>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "xtmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>N</value>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>urn:name-item</locator>\n</itemIdentifiers>\n</name>\n</topic>\n<topic number=\"2\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n</topicMap>\n",
+      "firstDifferentByte": 152,
+      "nativePropertiesEqual": false,
+      "byteExact": false
+    }
+  ],
+  "gaps": [
+    {
+      "id": "occurrence-scope-reifier",
+      "kind": "reader-capability-gap-not-equivalence-PASS",
+      "clauses": [
+        "CTM 3.10",
+        "XTM 4.15",
+        "TMDM 5.6"
+      ],
+      "documentIRI": "https://equivalence.example.invalid/gap-occurrence-scope-reifier/map",
+      "ctmSource": "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#integer>@s ~r.",
+      "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></occurrence></topic></topicMap>",
+      "ctmCondition": null,
+      "xtmCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "line": 1,
+        "column": 102,
+        "sourceKey": "gap:XTM:occurrence-scope-reifier",
+        "documentIRI": "https://equivalence.example.invalid/gap-occurrence-scope-reifier/map",
+        "position": null,
+        "message": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:occurrence-scope-reifier (https://equivalence.example.invalid/gap-occurrence-scope-reifier/map), approximately 1:102: XTM occurrence is not implemented in this subset."
+      },
+      "ctmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#a\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#r\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#s\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#t\")\n  NIL NIL))",
+        "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#a\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#r\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#s\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#t\")\n     NIL NIL))\n   NIL))\n ((:OCCURRENCE\n   ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#a\")\n    NIL NIL)\n   ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#t\")\n    NIL NIL)\n   \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n   (((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#s\")\n     NIL NIL)))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#r\")\n   NIL NIL)\n  NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#a\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#a\")\n  NIL\n  (NIL\n   ((:OCCURRENCE\n     ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#a\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#t\")\n      NIL NIL)\n     \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n     (((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#s\")\n       NIL NIL))))\n   NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#r\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#r\")\n  NIL\n  (NIL NIL NIL\n   (:OCCURRENCE\n    ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#a\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#t\")\n     NIL NIL)\n    \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n    (((\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#s\")\n      NIL NIL)))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#s\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#s\")\n  NIL (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#t\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-occurrence-scope-reifier/map#t\")\n  NIL (NIL NIL NIL NIL)))"
+      },
+      "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>42</value>\n<datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#r</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "xtmModel": null,
+      "successfulReaderPair": false,
+      "missingCapability": "XTM occurrence deserialization"
+    },
+    {
+      "id": "explicit-association",
+      "kind": "reader-capability-gap-not-equivalence-PASS",
+      "clauses": [
+        "CTM 3.13",
+        "XTM 4.18-4.19",
+        "TMDM 5.7-5.8"
+      ],
+      "documentIRI": "https://equivalence.example.invalid/gap-explicit-association/map",
+      "ctmSource": "rel(role: a)",
+      "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#rel'/></type><role><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association></topicMap>",
+      "ctmCondition": null,
+      "xtmCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "line": 1,
+        "column": 76,
+        "sourceKey": "gap:XTM:explicit-association",
+        "documentIRI": "https://equivalence.example.invalid/gap-explicit-association/map",
+        "position": null,
+        "message": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:explicit-association (https://equivalence.example.invalid/gap-explicit-association/map), approximately 1:76: XTM association is not implemented in this subset."
+      },
+      "ctmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/gap-explicit-association/map#a\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/gap-explicit-association/map#rel\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/gap-explicit-association/map#role\") NIL\n  NIL))",
+        "completeNativePropertyTuples": "(((:ASSOCIATION\n   ((\"https://equivalence.example.invalid/gap-explicit-association/map#rel\")\n    NIL NIL)\n   NIL\n   ((((\"https://equivalence.example.invalid/gap-explicit-association/map#role\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-explicit-association/map#a\")\n      NIL NIL))))\n  NIL NIL NIL)\n ((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/gap-explicit-association/map#a\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/gap-explicit-association/map#rel\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-explicit-association/map#role\")\n     NIL NIL))\n   ((:ASSOCIATION\n     ((\"https://equivalence.example.invalid/gap-explicit-association/map#rel\")\n      NIL NIL)\n     NIL\n     ((((\"https://equivalence.example.invalid/gap-explicit-association/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/gap-explicit-association/map#a\")\n        NIL NIL)))))))\n ((:ROLE\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/gap-explicit-association/map#rel\")\n     NIL NIL)\n    NIL\n    ((((\"https://equivalence.example.invalid/gap-explicit-association/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/gap-explicit-association/map#a\")\n       NIL NIL))))\n   ((\"https://equivalence.example.invalid/gap-explicit-association/map#role\")\n    NIL NIL)\n   ((\"https://equivalence.example.invalid/gap-explicit-association/map#a\") NIL\n    NIL))\n  NIL NIL NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-explicit-association/map#rel\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/gap-explicit-association/map#rel\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-explicit-association/map#role\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-explicit-association/map#role\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-explicit-association/map#a\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/gap-explicit-association/map#a\") NIL\n  (NIL NIL\n   ((:ROLE\n     (:ASSOCIATION\n      ((\"https://equivalence.example.invalid/gap-explicit-association/map#rel\")\n       NIL NIL)\n      NIL\n      ((((\"https://equivalence.example.invalid/gap-explicit-association/map#role\")\n         NIL NIL)\n        ((\"https://equivalence.example.invalid/gap-explicit-association/map#a\")\n         NIL NIL))))\n     ((\"https://equivalence.example.invalid/gap-explicit-association/map#role\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-explicit-association/map#a\")\n      NIL NIL)))\n   NIL)))"
+      },
+      "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#rel</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#role</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"2\"></type>\n<role number=\"1\">\n<player topicref=\"1\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n",
+      "xtmModel": null,
+      "successfulReaderPair": false,
+      "missingCapability": "XTM association deserialization"
+    },
+    {
+      "id": "association-role-scope-reifiers",
+      "kind": "reader-capability-gap-not-equivalence-PASS",
+      "clauses": [
+        "CTM 3.3.9-3.3.10,3.13",
+        "XTM 4.3.2,4.18-4.19",
+        "TMDM 5.3.4,5.7-5.8"
+      ],
+      "documentIRI": "https://equivalence.example.invalid/gap-association-role-scope-reifiers/map",
+      "ctmSource": "rel(role: a ~rr)@s ~ar",
+      "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#ar'><type><topicRef href='#rel'/></type><scope><topicRef href='#s'/></scope><role reifier='#rr'><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association></topicMap>",
+      "ctmCondition": null,
+      "xtmCondition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "line": 1,
+        "column": 90,
+        "sourceKey": "gap:XTM:association-role-scope-reifiers",
+        "documentIRI": "https://equivalence.example.invalid/gap-association-role-scope-reifiers/map",
+        "position": null,
+        "message": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:association-role-scope-reifiers (https://equivalence.example.invalid/gap-association-role-scope-reifiers/map), approximately 1:90: XTM association is not implemented in this subset."
+      },
+      "ctmModel": {
+        "countOrder": [
+          "topics",
+          "names",
+          "variants",
+          "occurrences",
+          "associations",
+          "roles",
+          "reifiedItems"
+        ],
+        "counts": [
+          6,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        "topicIdentities": "(((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n  NIL NIL))",
+        "completeNativePropertyTuples": "(((:ASSOCIATION\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n    NIL NIL)\n   (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n     NIL NIL))\n   ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n      NIL NIL))))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n   NIL NIL)\n  NIL)\n ((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n     NIL NIL))\n   ((:ASSOCIATION\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n      NIL NIL)\n     (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n       NIL NIL))\n     ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n        NIL NIL)))))))\n ((:ROLE\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n      NIL NIL))\n    ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n       NIL NIL))))\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n    NIL NIL)\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n    NIL NIL))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n   NIL NIL)\n  NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n  NIL\n  (NIL NIL\n   ((:ROLE\n     (:ASSOCIATION\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n       NIL NIL)\n      (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n        NIL NIL))\n      ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n         NIL NIL)\n        ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n         NIL NIL))))\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n      NIL NIL)))\n   NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n  NIL\n  (NIL NIL NIL\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n      NIL NIL))\n    ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n       NIL NIL))))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n  NIL (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n  NIL (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n  NIL\n  (NIL NIL NIL\n   (:ROLE\n    (:ASSOCIATION\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n      NIL NIL)\n     (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n       NIL NIL))\n     ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n        NIL NIL))))\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n     NIL NIL))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n  NIL (NIL NIL NIL NIL)))"
+      },
+      "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#ar</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#rel</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#role</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#rr</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"2\">\n<type topicref=\"3\"></type>\n<role number=\"1\" reifier=\"5\">\n<player topicref=\"1\"></player>\n<type topicref=\"4\"></type>\n</role>\n<scope>\n<scopingTopic topicref=\"6\"></scopingTopic>\n</scope>\n</association>\n</topicMap>\n",
+      "xtmModel": null,
+      "successfulReaderPair": false,
+      "missingCapability": "XTM association deserialization"
+    }
+  ],
+  "originalCorpusRegistrationsAdded": 0
+}

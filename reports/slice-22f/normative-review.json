@@ -1,0 +1,77 @@
+{
+  "kind": "slice-22f-normative-basis-and-evidence-limits",
+  "references": [
+    {
+      "standard": "TMDM",
+      "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/",
+      "clauses": [
+        "4.4",
+        "5.2–5.8",
+        "6.2–6.7",
+        "7.2",
+        "7.5"
+      ],
+      "basis": "Native property sets, identity categories, equality/merging, reifier inverses, type-instance Core Subjects, default name type."
+    },
+    {
+      "standard": "XTM 2.0",
+      "url": "https://www.isotopicmaps.org/sam/sam-xtm/",
+      "clauses": [
+        "4.3.2",
+        "4.4–4.17",
+        "4.18–4.19",
+        "4.21"
+      ],
+      "basis": "XML-to-TMDM identities, instanceOf, names/variants, reification, content imports; occurrences/explicit associations specified but reader unsupported."
+    },
+    {
+      "standard": "CXTM",
+      "url": "https://www.isotopicmaps.org/cxtm/cxtm.html",
+      "clauses": [
+        "3.1",
+        "3.3",
+        "4"
+      ],
+      "basis": "Map plus explicit base locator; full canonical serialization, without dropping distinguishing native properties."
+    },
+    {
+      "standard": "CTM",
+      "url": "https://www.isotopicmaps.org/ctm/ctm.html",
+      "clauses": [
+        "3.3.6",
+        "3.3.9–3.3.10",
+        "3.4",
+        "3.5",
+        "3.9–3.13",
+        "3.16.3",
+        "Annex A"
+      ],
+      "basis": "Identity/category mapping, isa, characteristics, reification, literals and mergemap."
+    }
+  ],
+  "epistemicSeparation": {
+    "observed": "Both productive reader results, native properties, intra-map EQ checks, exact CXTM bytes, all recorded process exits and hashes.",
+    "derived": "Equivalence is expected only when the same native TMDM properties are expressed; identifiers are never removed.",
+    "limits": "Finite constructed tests demonstrate the listed common constructs; not a proof of all CTM/XTM equivalence or of complete reader implementation."
+  },
+  "editionLimits": [
+    "Public TMDM text dated 2006-06-18; public XTM text dated 2006-06-19. No independent comparison against a purchased published ISO text was performed.",
+    "Public CTM HTML identifies the 31 March 2010 draft. It is not independent evidence that every clause matches the published 2010 edition.",
+    "Public CXTM text dated 2009-01-27 is the reference used here; no separate published ISO copy was acquired. No downloads were made."
+  ],
+  "commonExpressionLimits": [
+    "No non-Topic item identifier is deleted to manufacture equivalence.",
+    "XTM occurrence and explicit association support is absent; three direct probes record Unsupported rather than claiming equivalence.",
+    "Type-instance Associations/Roles are directly compared through isa/instanceOf.",
+    "Only noncyclic content imports are compared; child Map-item metadata is kept distinct from imported content."
+  ],
+  "newOriginalRegistrations": 0,
+  "openSlice22CDecisionsUnchanged": true,
+  "knownCTMFailuresUnchanged": [
+    "ctm/in/include-template.ctm",
+    "ctm/in/include-wildcard2.ctm",
+    "ctm/in/occurrence-datetime-timezone2.ctm",
+    "ctm/in/occurrence-datetime2.ctm"
+  ],
+  "anyTypeAndCycleSemanticsImplemented": false
+}

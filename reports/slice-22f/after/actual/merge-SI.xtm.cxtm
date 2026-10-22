@@ -1,0 +1,11 @@
+<topicMap>
+<topic number="1">
+<subjectIdentifiers>
+<locator>urn:subject</locator>
+</subjectIdentifiers>
+<itemIdentifiers>
+<locator>#a</locator>
+<locator>#b</locator>
+</itemIdentifiers>
+</topic>
+</topicMap>

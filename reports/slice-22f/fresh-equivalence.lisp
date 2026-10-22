@@ -1,0 +1,5 @@
+(require :asdf)
+(assert (string= "2.5.4" (lisp-implementation-version)))
+(setf *compile-verbose* nil *load-verbose* nil)
+(asdf:load-asd (truename "topic-maps.asd"))
+(asdf:test-system "topic-maps/ctm/xtm-tests")

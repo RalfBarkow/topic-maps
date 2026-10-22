@@ -1,0 +1,71 @@
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#local</locator>
+</itemIdentifiers>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>child.xtm#child-r</locator>
+</itemIdentifiers>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>child.xtm#owner</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Imported</value>
+<type topicref="7"></type>
+<variant number="1">
+<value>V</value>
+<datatype>urn:custom</datatype>
+<scope>
+<scopingTopic topicref="4"></scopingTopic>
+</scope>
+</variant>
+</name>
+<rolePlayed ref="association.1.role.1"></rolePlayed>
+</topic>
+<topic number="4">
+<itemIdentifiers>
+<locator>child.xtm#s</locator>
+</itemIdentifiers>
+</topic>
+<topic number="5">
+<itemIdentifiers>
+<locator>child.xtm#t</locator>
+</itemIdentifiers>
+<rolePlayed ref="association.1.role.2"></rolePlayed>
+</topic>
+<topic number="6">
+<subjectIdentifiers>
+<locator>http://psi.topicmaps.org/iso13250/model/instance</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="7">
+<subjectIdentifiers>
+<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="8">
+<subjectIdentifiers>
+<locator>http://psi.topicmaps.org/iso13250/model/type</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="9">
+<subjectIdentifiers>
+<locator>http://psi.topicmaps.org/iso13250/model/type-instance</locator>
+</subjectIdentifiers>
+</topic>
+<association number="1">
+<type topicref="9"></type>
+<role number="1">
+<player topicref="3"></player>
+<type topicref="6"></type>
+</role>
+<role number="2">
+<player topicref="5"></player>
+<type topicref="8"></type>
+</role>
+</association>
+</topicMap>

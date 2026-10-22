@@ -251,12 +251,13 @@
   :components ((:file "src/ctm/xtm")))
 
 (asdf:defsystem "topic-maps/ctm/xtm-tests"
-  :description "Actual XTM Mergemap imports, raw bytes, diagnostics and original baseline"
+  :description "Controlled CTM/XTM imports and direct reader semantic equivalence; original contracts remain separate"
   :depends-on ("topic-maps/ctm/xtm" "topic-maps/ctm/include-tests")
-  :components ((:file "tests/ctm-xtm-mergemap"))
+  :components ((:file "tests/ctm-xtm-mergemap") (:file "tests/ctm-xtm-equivalence"))
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
-             (uiop:symbol-call :topic-maps.xtm-mergemap.tests :run-tests)))
+             (uiop:symbol-call :topic-maps.xtm-mergemap.tests :run-tests)
+             (uiop:symbol-call :topic-maps.equivalence.tests :run-tests)))
 
 (asdf:defsystem "topic-maps/ctm/registered-original-tests"
   :description "Slice 20A: register forty original contracts using the existing CTM/CXTM harness"
