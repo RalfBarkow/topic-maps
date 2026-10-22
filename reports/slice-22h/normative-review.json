@@ -1,0 +1,30 @@
+{
+  "kind": "slice-22h-registration-only",
+  "reference": "https://www.isotopicmaps.org/sam/sam-xtm/",
+  "clauses": [
+    "4.2",
+    "4.3.3",
+    "4.3.4",
+    "4.5",
+    "4.6",
+    "4.8",
+    "4.9",
+    "4.10",
+    "4.20",
+    "4.21"
+  ],
+  "rule": "Deserialize each child with its own resource IRI, then import Topics and Associations. Source Map-item metadata is not imported.",
+  "nativeImportContract": "topic-maps.tmdm:import-map-content returns a resolver for current canonical target representatives and preserves source Map/items. The source Map-item itself is not imported content.",
+  "epistemicSeparation": {
+    "observed": "Actual original and child bytes; public reader results, native object references, explicit resolver/parser traces and full CXTM bytes.",
+    "derived": "Applicable XTM-to-TMDM import and identity rules.",
+    "limits": "No new normative cycle decision; no transfer of child Map-item II merely to fit a baseline; no complete-conformance claim."
+  },
+  "editionLimits": "The public XTM text dated 2006-06-19 declares identity with the ISO publication. No new ISO copy was acquired; previously documented edition limits remain.",
+  "excludedOriginals": [
+    "xtm2/in/mergemap-itemid.xtm",
+    "xtm2/in/mergemap-loop.xtm"
+  ],
+  "productionChanges": [],
+  "newLanguageFeatures": []
+}

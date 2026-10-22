@@ -1,0 +1,30 @@
+{
+  "changedExcludedCaseGuards": [
+    {
+      "file": "tests/xtm-mergemap.lisp",
+      "label": "mm-original:registered-status-remains-NOT-RUN",
+      "before": "    (check \"mm-original:registered-status-remains-NOT-RUN\"\n      (and (= 72 (length *cases*)) (null (find id *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal))))",
+      "after": "    (check \"mm-original:registered-status-remains-NOT-RUN\"\n      (null (find id *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal)))",
+      "purpose": "Require the excluded original itself to remain unregistered; preserve one-fetch cycle bound where applicable. Replace incidental staged total with precise case membership.",
+      "baseFileSHA256": "1e595e230be814252f6718ffd19e54cc76abb69951f1e06de231d48d4b0550f2",
+      "finalFileSHA256": "00e29f36c76142c7514a76c4c57171e857b4e9607049c00952be3ca978116c90"
+    },
+    {
+      "file": "tests/xtm-mergemap.lisp",
+      "label": "mm-original:cycle-finite-one-fetch-no-registration",
+      "before": "    (check \"mm-original:cycle-finite-one-fetch-no-registration\" (and (= 1 calls) (= 72 (length *cases*))))",
+      "after": "    (check \"mm-original:cycle-finite-one-fetch-no-registration\" (and (= 1 calls) (null (find id *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal))))",
+      "purpose": "Require the excluded original itself to remain unregistered; preserve one-fetch cycle bound where applicable. Replace incidental staged total with precise case membership.",
+      "baseFileSHA256": "1e595e230be814252f6718ffd19e54cc76abb69951f1e06de231d48d4b0550f2",
+      "finalFileSHA256": "00e29f36c76142c7514a76c4c57171e857b4e9607049c00952be3ca978116c90"
+    }
+  ],
+  "newRegistrationInvariant": "Exactly the requested set is newly executed and registered once; all prior Case Record objects remain present and PASS. No fixed total-catalog-size assertion is added.",
+  "compileOrderDeclarations": [
+    "*occurrence-outputs*",
+    "*occurrence-controls*"
+  ],
+  "declarationReason": "Declare existing Slice-22G test state before compiling the main test driver; no runtime or reader semantics change.",
+  "executorDriverChanged": false,
+  "productionChanges": []
+}

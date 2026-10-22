@@ -1,0 +1,7 @@
+{
+  "originalDiagnoses": 124,
+  "changed": 0,
+  "unchanged": 124,
+  "byteIdenticalToSlice22G": true,
+  "note": "The legacy diagnostic driver omits a resolver. Five new original executions explicitly configure the pinned resolver and are recorded separately."
+}

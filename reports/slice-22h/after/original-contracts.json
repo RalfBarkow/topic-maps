@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "xtm2/in/mergemap-merge.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm",
+    "sourceKey": "xtm2/in/mergemap-merge.xtm",
+    "childDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.sub",
+    "childSourceKey": "xtm2/in/mergemap-merge.sub",
+    "sourceBytes": 231,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6D657267654D617020687265663D226D657267656D61702D6D657267652E737562222F3E0A20203C746F7069632069643D22746F706963223E0A202020203C696E7374616E63654F663E0A2020202020203C746F70696352656620687265663D226D657267656D61702D6D657267652E7375622374797065222F3E0A202020203C2F696E7374616E63654F663E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "childBytes": 159,
+    "childHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D2274797065223E202020200A202020203C6E616D653E0A2020202020203C76616C75653E547970653C2F76616C75653E0A202020203C2F6E616D653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "actualBytes": 1195,
+    "expectedBytes": 1195,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-merge.sub#type</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Type</value>\n<type topicref=\"4\"></type>\n</name>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/instance</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"5\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"6\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type-instance</locator>\n</subjectIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"6\"></type>\n<role number=\"1\">\n<player topicref=\"1\"></player>\n<type topicref=\"3\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-merge.sub#type</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Type</value>\n<type topicref=\"4\"></type>\n</name>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/instance</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"5\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"6\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type-instance</locator>\n</subjectIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"6\"></type>\n<role number=\"1\">\n<player topicref=\"1\"></player>\n<type topicref=\"3\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "qualifiedParserTrace": [
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm",
+        "sourceKey": "xtm2/in/mergemap-merge.xtm",
+        "bytes": 231,
+        "originalRootOctetsEQ": true,
+        "originalChildOctetsEQ": false
+      },
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.sub",
+        "sourceKey": "xtm2/in/mergemap-merge.sub",
+        "bytes": 159,
+        "originalRootOctetsEQ": false,
+        "originalChildOctetsEQ": true
+      }
+    ],
+    "importTrace": {
+      "label": "registered:mergemap-merge",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap-merge.sub\"/>\n  <topic id=\"topic\">\n    <instanceOf>\n      <topicRef href=\"mergemap-merge.sub#type\"/>\n    </instanceOf>\n  </topic>\n</topicMap>\n",
+      "resolverCalls": [
+        {
+          "resourceIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.sub",
+          "purpose": "mergemap",
+          "fromDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm",
+          "notation": "http://psi.topicmaps.org/iso13250/xtm"
+        }
+      ],
+      "qualifiedParserCalls": 2,
+      "sourceMapsPreserved": true,
+      "model": {
+        "identity": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 6,
+                  "associationCount": 1,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.sub#type"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [],
+                      "subjectIdentifiers": [
+                        "http://psi.topicmaps.org/iso13250/model/topic-name"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm#topic"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 4,
+                      "itemIdentifiers": [],
+                      "subjectIdentifiers": [
+                        "http://psi.topicmaps.org/iso13250/model/type-instance"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 5,
+                      "itemIdentifiers": [],
+                      "subjectIdentifiers": [
+                        "http://psi.topicmaps.org/iso13250/model/type"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 6,
+                      "itemIdentifiers": [],
+                      "subjectIdentifiers": [
+                        "http://psi.topicmaps.org/iso13250/model/instance"
+                      ],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": [
+                    {
+                      "type": 4,
+                      "roles": [
+                        {
+                          "type": 5,
+                          "player": 1
+                        },
+                        {
+                          "type": 6,
+                          "player": 3
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": [
+                  {
+                    "value": "Type",
+                    "parent": 1,
+                    "type": 2,
+                    "scope": [],
+                    "itemIdentifiers": [],
+                    "variantCount": 0
+                  }
+                ]
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [
+              null
+            ],
+            "topicReifiedNames": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "occurrences": [],
+        "canonicalNativeReferencesEQ": true
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-merge.sub#type</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>Type</value>\n<type topicref=\"4\"></type>\n</name>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/instance</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"5\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"6\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type-instance</locator>\n</subjectIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"6\"></type>\n<role number=\"1\">\n<player topicref=\"1\"></player>\n<type topicref=\"3\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n</association>\n</topicMap>\n",
+      "condition": null
+    },
+    "sourceModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 2,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.sub#type"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Type",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [],
+                  "variantCount": 0
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            null
+          ],
+          "topicReifiedNames": [
+            null,
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null,
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "targetModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 6,
+                "associationCount": 1,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.sub#type"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/topic-name"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 3,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 4,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/type-instance"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 5,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/type"
+                    ],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 6,
+                    "itemIdentifiers": [],
+                    "subjectIdentifiers": [
+                      "http://psi.topicmaps.org/iso13250/model/instance"
+                    ],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": [
+                  {
+                    "type": 4,
+                    "roles": [
+                      {
+                        "type": 5,
+                        "player": 1
+                      },
+                      {
+                        "type": 6,
+                        "player": 3
+                      }
+                    ]
+                  }
+                ]
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": [
+                {
+                  "value": "Type",
+                  "parent": 1,
+                  "type": 2,
+                  "scope": [],
+                  "itemIdentifiers": [],
+                  "variantCount": 0
+                }
+              ]
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [
+            null
+          ],
+          "topicReifiedNames": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "condition": null,
+    "status": "pass",
+    "sourceSHA256": "cf2a907f3e0c48e7b2e6f38076a6a691000a6fe7c0008f03d20d6779c85b07ad",
+    "childSHA256": "aa5584c4322118b01e094161eeab8f5daae58b8c2f4302767150997e9ad51ace",
+    "baselineSHA256": "0e9a51a990b60567c93995a72a909d6831a42bc2d7c73ba5bcf142f55fe39074",
+    "actualSHA256": "0e9a51a990b60567c93995a72a909d6831a42bc2d7c73ba5bcf142f55fe39074",
+    "completeByteExact": true
+  },
+  {
+    "id": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+    "sourceKey": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+    "childDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.sub",
+    "childSourceKey": "xtm2/in/mergemap-ontopia-issue-28-2.sub",
+    "sourceBytes": 227,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6D657267654D617020687265663D226D657267656D61702D6F6E746F7069612D69737375652D32382D322E737562222F3E0A20203C746F7069632069643D22746F706963223E0A202020203C6974656D4964656E7469747920687265663D22687474703A2F2F7777772E6578616D706C652E6F72672F6F6E746F7069612D69737375652D3238222F3E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "childBytes": 254,
+    "childHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D227375622D746F706963223E0A202020203C7375626A6563744964656E74696669657220687265663D22687474703A2F2F7777772E6578616D706C652E6F72672F6F6E746F7069612D69737375652D3238222F3E0A202020203C7375626A6563744964656E74696669657220687265663D226674703A2F2F7777772E6578616D706C652E6F72672F6F6E746F7069612D69737375652D3238222F3E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "actualBytes": 394,
+    "expectedBytes": 394,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>ftp://www.example.org/ontopia-issue-28</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n<locator>mergemap-ontopia-issue-28-2.sub#sub-topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>ftp://www.example.org/ontopia-issue-28</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n<locator>mergemap-ontopia-issue-28-2.sub#sub-topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "qualifiedParserTrace": [
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+        "sourceKey": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+        "bytes": 227,
+        "originalRootOctetsEQ": true,
+        "originalChildOctetsEQ": false
+      },
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.sub",
+        "sourceKey": "xtm2/in/mergemap-ontopia-issue-28-2.sub",
+        "bytes": 254,
+        "originalRootOctetsEQ": false,
+        "originalChildOctetsEQ": true
+      }
+    ],
+    "importTrace": {
+      "label": "registered:mergemap-ontopia-issue-28-2",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap-ontopia-issue-28-2.sub\"/>\n  <topic id=\"topic\">\n    <itemIdentity href=\"http://www.example.org/ontopia-issue-28\"/>\n  </topic>\n</topicMap>\n",
+      "resolverCalls": [
+        {
+          "resourceIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.sub",
+          "purpose": "mergemap",
+          "fromDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+          "notation": "http://psi.topicmaps.org/iso13250/xtm"
+        }
+      ],
+      "qualifiedParserCalls": 2,
+      "sourceMapsPreserved": true,
+      "model": {
+        "identity": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 1,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.sub#sub-topic",
+                        "http://www.example.org/ontopia-issue-28",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm#topic"
+                      ],
+                      "subjectIdentifiers": [
+                        "ftp://www.example.org/ontopia-issue-28",
+                        "http://www.example.org/ontopia-issue-28"
+                      ],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null
+          ]
+        },
+        "occurrences": [],
+        "canonicalNativeReferencesEQ": true
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>ftp://www.example.org/ontopia-issue-28</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n<locator>mergemap-ontopia-issue-28-2.sub#sub-topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null
+    },
+    "sourceModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 1,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.sub#sub-topic"
+                    ],
+                    "subjectIdentifiers": [
+                      "ftp://www.example.org/ontopia-issue-28",
+                      "http://www.example.org/ontopia-issue-28"
+                    ],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "targetModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 1,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.sub#sub-topic",
+                      "http://www.example.org/ontopia-issue-28",
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [
+                      "ftp://www.example.org/ontopia-issue-28",
+                      "http://www.example.org/ontopia-issue-28"
+                    ],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "condition": null,
+    "status": "pass",
+    "sourceSHA256": "2ad4bef5fcb52ee6043227dbd9e976454e707d572db0ca1764a994619b0a3afe",
+    "childSHA256": "3c5cf3b046a83c378c263591ae4dd6497e6b8cfe2d458b0dc9b04c1a3ae4568e",
+    "baselineSHA256": "2dd8b525ee515647dc5d1f85603aba44a7263f6c1ce7173c3399b2ffb711dfce",
+    "actualSHA256": "2dd8b525ee515647dc5d1f85603aba44a7263f6c1ce7173c3399b2ffb711dfce",
+    "completeByteExact": true
+  },
+  {
+    "id": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm",
+    "sourceKey": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+    "childDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.sub",
+    "childSourceKey": "xtm2/in/mergemap-ontopia-issue-28.sub",
+    "sourceBytes": 301,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6D657267654D617020687265663D226D657267656D61702D6F6E746F7069612D69737375652D32382E737562222F3E0A20203C746F7069632069643D22746F706963223E0A202020203C7375626A6563744964656E74696669657220687265663D22687474703A2F2F7777772E6578616D706C652E6F72672F6F6E746F7069612D69737375652D3238222F3E0A202020203C7375626A6563744964656E74696669657220687265663D226674703A2F2F7777772E6578616D706C652E6F72672F6F6E746F7069612D69737375652D3238222F3E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "childBytes": 178,
+    "childHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D227375622D746F706963223E0A202020203C6974656D4964656E7469747920687265663D22687474703A2F2F7777772E6578616D706C652E6F72672F6F6E746F7069612D69737375652D3238222F3E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "actualBytes": 392,
+    "expectedBytes": 392,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>ftp://www.example.org/ontopia-issue-28</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n<locator>mergemap-ontopia-issue-28.sub#sub-topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>ftp://www.example.org/ontopia-issue-28</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n<locator>mergemap-ontopia-issue-28.sub#sub-topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "qualifiedParserTrace": [
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm",
+        "sourceKey": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+        "bytes": 301,
+        "originalRootOctetsEQ": true,
+        "originalChildOctetsEQ": false
+      },
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.sub",
+        "sourceKey": "xtm2/in/mergemap-ontopia-issue-28.sub",
+        "bytes": 178,
+        "originalRootOctetsEQ": false,
+        "originalChildOctetsEQ": true
+      }
+    ],
+    "importTrace": {
+      "label": "registered:mergemap-ontopia-issue-28",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap-ontopia-issue-28.sub\"/>\n  <topic id=\"topic\">\n    <subjectIdentifier href=\"http://www.example.org/ontopia-issue-28\"/>\n    <subjectIdentifier href=\"ftp://www.example.org/ontopia-issue-28\"/>\n  </topic>\n</topicMap>\n",
+      "resolverCalls": [
+        {
+          "resourceIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.sub",
+          "purpose": "mergemap",
+          "fromDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm",
+          "notation": "http://psi.topicmaps.org/iso13250/xtm"
+        }
+      ],
+      "qualifiedParserCalls": 2,
+      "sourceMapsPreserved": true,
+      "model": {
+        "identity": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 1,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "http://www.example.org/ontopia-issue-28",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.sub#sub-topic",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm#topic"
+                      ],
+                      "subjectIdentifiers": [
+                        "ftp://www.example.org/ontopia-issue-28",
+                        "http://www.example.org/ontopia-issue-28"
+                      ],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null
+          ]
+        },
+        "occurrences": [],
+        "canonicalNativeReferencesEQ": true
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<subjectIdentifiers>\n<locator>ftp://www.example.org/ontopia-issue-28</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>http://www.example.org/ontopia-issue-28</locator>\n<locator>mergemap-ontopia-issue-28.sub#sub-topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null
+    },
+    "sourceModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 1,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "http://www.example.org/ontopia-issue-28",
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.sub#sub-topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "targetModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 1,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "http://www.example.org/ontopia-issue-28",
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.sub#sub-topic",
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [
+                      "ftp://www.example.org/ontopia-issue-28",
+                      "http://www.example.org/ontopia-issue-28"
+                    ],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "condition": null,
+    "status": "pass",
+    "sourceSHA256": "5358844b0dec89eb6f831435dad510bbb857f94e8f91e8c5b728d6c8a542c328",
+    "childSHA256": "9d828998d762981ea8b85d5b58e11154094293456b1856b17b13082293fa2a2e",
+    "baselineSHA256": "4f401986fc7bedfd9298f8a179da483a95c9c7b9b3f25583bd706eea7048d647",
+    "actualSHA256": "4f401986fc7bedfd9298f8a179da483a95c9c7b9b3f25583bd706eea7048d647",
+    "completeByteExact": true
+  },
+  {
+    "id": "xtm2/in/mergemap-tm-reifier.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm",
+    "sourceKey": "xtm2/in/mergemap-tm-reifier.xtm",
+    "childDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.sub",
+    "childSourceKey": "xtm2/in/mergemap-tm-reifier.sub",
+    "sourceBytes": 156,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6D657267654D617020687265663D226D657267656D61702D746D2D726569666965722E737562222F3E0A20203C746F7069632069643D22746F706963223E202020200A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "childBytes": 94,
+    "childHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E302220726569666965723D222372656966696572223E0A3C2F746F7069634D61703E0A",
+    "actualBytes": 230,
+    "expectedBytes": 230,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-tm-reifier.sub#reifier</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-tm-reifier.sub#reifier</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "qualifiedParserTrace": [
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm",
+        "sourceKey": "xtm2/in/mergemap-tm-reifier.xtm",
+        "bytes": 156,
+        "originalRootOctetsEQ": true,
+        "originalChildOctetsEQ": false
+      },
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.sub",
+        "sourceKey": "xtm2/in/mergemap-tm-reifier.sub",
+        "bytes": 94,
+        "originalRootOctetsEQ": false,
+        "originalChildOctetsEQ": true
+      }
+    ],
+    "importTrace": {
+      "label": "registered:mergemap-tm-reifier",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap-tm-reifier.sub\"/>\n  <topic id=\"topic\">    \n  </topic>\n</topicMap>\n",
+      "resolverCalls": [
+        {
+          "resourceIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.sub",
+          "purpose": "mergemap",
+          "fromDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm",
+          "notation": "http://psi.topicmaps.org/iso13250/xtm"
+        }
+      ],
+      "qualifiedParserCalls": 2,
+      "sourceMapsPreserved": true,
+      "model": {
+        "identity": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 2,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.sub#reifier"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm#topic"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null
+          ]
+        },
+        "occurrences": [],
+        "canonicalNativeReferencesEQ": true
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-tm-reifier.sub#reifier</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null
+    },
+    "sourceModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 1,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.sub#reifier"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": 1,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "targetModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 2,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.sub#reifier"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null,
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null,
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "condition": null,
+    "status": "pass",
+    "sourceSHA256": "5aa48f352515b1b81d5532a31eb45fd39e470fbbadf1634103e7f5ce93f738b0",
+    "childSHA256": "092abcbbaef0cdbd0e3629708b25c5a5b07a8bf47d94cccb56f116fdd7585c9e",
+    "baselineSHA256": "0dbef56d057177d6bcf7c376e686f584527db56ce200fd3d0b57526009823de9",
+    "actualSHA256": "0dbef56d057177d6bcf7c376e686f584527db56ce200fd3d0b57526009823de9",
+    "completeByteExact": true
+  },
+  {
+    "id": "xtm2/in/mergemap.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm",
+    "sourceKey": "xtm2/in/mergemap.xtm",
+    "childDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.sub",
+    "childSourceKey": "xtm2/in/mergemap.sub",
+    "sourceBytes": 145,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6D657267654D617020687265663D226D657267656D61702E737562222F3E0A20203C746F7069632069643D22746F706963223E202020200A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "childBytes": 111,
+    "childHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C746F7069632069643D22746F706963223E202020200A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "actualBytes": 217,
+    "expectedBytes": 217,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap.sub#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap.sub#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "qualifiedParserTrace": [
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm",
+        "sourceKey": "xtm2/in/mergemap.xtm",
+        "bytes": 145,
+        "originalRootOctetsEQ": true,
+        "originalChildOctetsEQ": false
+      },
+      {
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.sub",
+        "sourceKey": "xtm2/in/mergemap.sub",
+        "bytes": 111,
+        "originalRootOctetsEQ": false,
+        "originalChildOctetsEQ": true
+      }
+    ],
+    "importTrace": {
+      "label": "registered:mergemap",
+      "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap.sub\"/>\n  <topic id=\"topic\">    \n  </topic>\n</topicMap>\n",
+      "resolverCalls": [
+        {
+          "resourceIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.sub",
+          "purpose": "mergemap",
+          "fromDocumentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm",
+          "notation": "http://psi.topicmaps.org/iso13250/xtm"
+        }
+      ],
+      "qualifiedParserCalls": 2,
+      "sourceMapsPreserved": true,
+      "model": {
+        "identity": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 2,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.sub#topic"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm#topic"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null
+          ]
+        },
+        "occurrences": [],
+        "canonicalNativeReferencesEQ": true
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap.sub#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null
+    },
+    "sourceModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 1,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.sub#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "targetModel": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 2,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.sub#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null,
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null,
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "condition": null,
+    "status": "pass",
+    "sourceSHA256": "4d71b38ccd24b010e4834edbc6c7572aa1fb9ba7eb5d4efb639685e6f3ad95f5",
+    "childSHA256": "ff7fb91c0a3966ba553262f44d5658c4fd3917042fb58effb6bb6e09d1d6154b",
+    "baselineSHA256": "576c5a80cfc4a5668a064194d432c52a669541dfc2c1d3ed9d88bb8610a042a3",
+    "actualSHA256": "576c5a80cfc4a5668a064194d432c52a669541dfc2c1d3ed9d88bb8610a042a3",
+    "completeByteExact": true
+  }
+]

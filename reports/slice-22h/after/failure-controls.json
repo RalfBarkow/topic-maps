@@ -1,0 +1,2154 @@
+{
+  "retained": 113,
+  "new": 0,
+  "controls": [
+    {
+      "label": "positive-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "positive-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "positive-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "positive-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "positive-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "negative-control-accepted",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "negative-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "negative-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "negative-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "scope-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "scope-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "scope-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "scope-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "iid-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "iid-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "iid-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "iid-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-negative-control-accepted",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-negative-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-negative-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-negative-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-negative-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "merge-variant-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "merge-variant-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "merge-variant-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "merge-variant-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "merge-variant-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-relative-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-relative-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-relative-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-relative-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "resource-ref-relative-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "uri-data-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "uri-data-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "uri-data-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "uri-data-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "uri-data-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-duplicate-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-duplicate-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-duplicate-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-duplicate-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-iid-duplicate-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "map-reifier-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "map-reifier-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "map-reifier-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "map-reifier-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "map-reifier-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "map-reifier-condition-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-duplicate-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-duplicate-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-duplicate-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-duplicate-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-duplicate-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-reifier-condition-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup2-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup2-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup2-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup2-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup2-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup3-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup3-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup3-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup3-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup3-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup4-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup4-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup4-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup4-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "name-followup4-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-duplicate-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-duplicate-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-duplicate-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-duplicate-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-duplicate-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-condition-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-followup-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-followup-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-followup-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-followup-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "variant-reifier-followup-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "datatype-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "datatype-control-xml",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "datatype-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "datatype-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    },
+    {
+      "label": "datatype-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "exitCode": 1,
+      "caseRecordsOutcomesAndChecksIdentical": true,
+      "faultCountedAsOriginalPASS": false,
+      "reportDifferences": [
+        {
+          "path": "/registeredMergemapOriginals",
+          "before": null,
+          "after": []
+        },
+        {
+          "path": "/scope",
+          "before": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration",
+          "after": "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+        }
+      ]
+    }
+  ],
+  "allTargetCasesAndChecksUnchanged": true
+}

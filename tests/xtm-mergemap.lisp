@@ -376,7 +376,7 @@ AUGMENT is explicit native-only test setup for constructs outside XML support."
       (and (= 314 (length expected)) (not (equalp actual expected))
         (equal without-map-metadata (babel:octets-to-string actual :encoding :utf-8))))
     (check "mm-original:registered-status-remains-NOT-RUN"
-      (and (= 72 (length *cases*)) (null (find id *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal))))
+      (null (find id *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal)))
     (push (mm-fields "id" id "documentIRI" *document* "sourceBytes" (length raw)
       "sourceHex" (format nil "~{~2,'0X~}" (coerce raw 'list)) "sourceText" (babel:octets-to-string raw :encoding :utf-8)
       "childIRI" child "childBytes" (length child-raw) "childHex" (format nil "~{~2,'0X~}" (coerce child-raw 'list))
@@ -394,7 +394,7 @@ AUGMENT is explicit native-only test setup for constructs outside XML support."
            :resolver (lambda (iri &rest args) (declare (ignore args)) (incf calls)
              (assert (equal child iri))
              (values (file-bytes (corpus-path "xtm2/in/mergemap-loop.sub")) "xtm2/in/mergemap-loop.sub")))))
-    (check "mm-original:cycle-finite-one-fetch-no-registration" (and (= 1 calls) (= 72 (length *cases*))))
+    (check "mm-original:cycle-finite-one-fetch-no-registration" (and (= 1 calls) (null (find id *cases* :key #'topic-maps.test-foundation:test-case-id :test #'equal))))
     (push (mm-fields "id" id "documentIRI" *document* "condition" (mm-condition c)
       "registeredStatus" "not-run" "registeredAsPASS" :false "normativeCycleDecision" nil "resolverCalls" calls) *mergemap-originals*)))
 (defun mergemap-tests ()
