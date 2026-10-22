@@ -6,6 +6,8 @@
 (in-package #:topic-maps.xtm.tests)
 
 (defparameter *document* "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm")
+(defvar *mergemap-controls* nil)
+(defvar *mergemap-originals* nil)
 (defvar *datatype-outputs* nil)
 (defvar *datatype-controls* nil)
 (defvar *checks* nil)
@@ -436,7 +438,7 @@
   (dolist (spec '(("unsupported-name-variant-resourceData-datatype" "<topic id='a'><name><value>Name</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" :resource-data-datatype)
                   ("unsupported-occurrence" "<topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData>v</resourceData></occurrence></topic>" :unsupported-construct)
                   ("unsupported-association" "<association><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)
-                  ("unsupported-mergemap" "<mergeMap href='other.xtm'/>" :unsupported-construct)))
+                  ("unsupported-mergemap" "<mergeMap href='other.xtm'/>" :resource-resolver-required)))
     (rejection (first spec) (document (second spec)) 'xtm-unsupported (third spec)))
   (rejection "unsupported-occurrence-reifier" (document "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic>") 'xtm-unsupported :unsupported-construct)
   (let ((c (condition-from (lambda () (read-body (format nil "~%~%<topic id='2bad'/>"))))))
@@ -488,10 +490,10 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
-  (setf *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
+  (setf *mergemap-controls* nil *mergemap-originals* nil *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
   (handler-case
       (progn (original-contracts) (negative-original-controls) (negative-original-contracts)
-             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (result-classification-tests)
+             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -556,6 +558,8 @@
                   "variantReifierControls" (array (reverse *variant-reifier-controls*))
                   "datatypeOriginals" (array *datatype-outputs*)
                   "datatypeControls" (array *datatype-controls*)
+                  "mergemapControls" (array *mergemap-controls*)
+                  "mergemapOriginalObservations" (array *mergemap-originals*)
                   "actualAndExpected" (array (loop for (id actual expected model condition source-length) in *outputs* collect
                     (fields "id" id "actual" (when actual (babel:octets-to-string actual :encoding :utf-8))
                             "expected" (babel:octets-to-string expected :encoding :utf-8) "byteLength" (when actual (length actual))

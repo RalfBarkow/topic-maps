@@ -1,0 +1,44 @@
+[
+  {
+    "field": "mapReifierControls",
+    "index": 33,
+    "before": {
+      "label": "mergeMap",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><mergeMap href='other.xtm'/></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "unsupported-construct",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM mergeMap is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+        "line": 1,
+        "column": 108,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "mergeMap",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "mergeMap",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><mergeMap href='other.xtm'/></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-resolver-required",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-resolver-required",
+        "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+        "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+        "line": 1,
+        "column": 108,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "mergeMap",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    }
+  }
+]

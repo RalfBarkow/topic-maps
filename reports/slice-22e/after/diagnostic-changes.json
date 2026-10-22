@@ -1,0 +1,296 @@
+{
+  "kind": "all-124-originals-without-resolver",
+  "changed": 7,
+  "unchanged": 117,
+  "changes": [
+    {
+      "id": "xtm2/in/mergemap-itemid.xtm",
+      "before": {
+        "id": "xtm2/in/mergemap-itemid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-itemid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm), approximately 2:41: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 41,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+          "sourceKey": "xtm2/in/mergemap-itemid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/mergemap-itemid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-resolver-required",
+          "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "message": "XTM RESOURCE-RESOLVER-REQUIRED at xtm2/in/mergemap-itemid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm), approximately 2:41: mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "line": 2,
+          "column": 41,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+          "sourceKey": "xtm2/in/mergemap-itemid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/mergemap-loop.xtm",
+      "before": {
+        "id": "xtm2/in/mergemap-loop.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-loop.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm), approximately 2:39: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 39,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+          "sourceKey": "xtm2/in/mergemap-loop.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/mergemap-loop.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-resolver-required",
+          "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "message": "XTM RESOURCE-RESOLVER-REQUIRED at xtm2/in/mergemap-loop.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm), approximately 2:39: mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "line": 2,
+          "column": 39,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+          "sourceKey": "xtm2/in/mergemap-loop.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/mergemap-merge.xtm",
+      "before": {
+        "id": "xtm2/in/mergemap-merge.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-merge.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm), approximately 2:40: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 40,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm",
+          "sourceKey": "xtm2/in/mergemap-merge.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/mergemap-merge.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-resolver-required",
+          "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "message": "XTM RESOURCE-RESOLVER-REQUIRED at xtm2/in/mergemap-merge.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm), approximately 2:40: mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "line": 2,
+          "column": 40,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-merge.xtm",
+          "sourceKey": "xtm2/in/mergemap-merge.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+      "before": {
+        "id": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-ontopia-issue-28-2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm), approximately 2:53: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 53,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+          "sourceKey": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-resolver-required",
+          "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "message": "XTM RESOURCE-RESOLVER-REQUIRED at xtm2/in/mergemap-ontopia-issue-28-2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm), approximately 2:53: mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "line": 2,
+          "column": 53,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+          "sourceKey": "xtm2/in/mergemap-ontopia-issue-28-2.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+      "before": {
+        "id": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-ontopia-issue-28.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm), approximately 2:51: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 51,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm",
+          "sourceKey": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-resolver-required",
+          "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "message": "XTM RESOURCE-RESOLVER-REQUIRED at xtm2/in/mergemap-ontopia-issue-28.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm), approximately 2:51: mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "line": 2,
+          "column": 51,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-ontopia-issue-28.xtm",
+          "sourceKey": "xtm2/in/mergemap-ontopia-issue-28.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/mergemap-tm-reifier.xtm",
+      "before": {
+        "id": "xtm2/in/mergemap-tm-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap-tm-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm), approximately 2:45: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 45,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm",
+          "sourceKey": "xtm2/in/mergemap-tm-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/mergemap-tm-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-resolver-required",
+          "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "message": "XTM RESOURCE-RESOLVER-REQUIRED at xtm2/in/mergemap-tm-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm), approximately 2:45: mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "line": 2,
+          "column": 45,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-tm-reifier.xtm",
+          "sourceKey": "xtm2/in/mergemap-tm-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    },
+    {
+      "id": "xtm2/in/mergemap.xtm",
+      "before": {
+        "id": "xtm2/in/mergemap.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM mergeMap is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/mergemap.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm), approximately 2:34: XTM mergeMap is not implemented in this subset.",
+          "line": 2,
+          "column": 34,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm",
+          "sourceKey": "xtm2/in/mergemap.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/mergemap.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "resource-resolver-required",
+          "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "message": "XTM RESOURCE-RESOLVER-REQUIRED at xtm2/in/mergemap.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm), approximately 2:34: mergeMap requires an explicit resource resolver; no resource was loaded.",
+          "line": 2,
+          "column": 34,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap.xtm",
+          "sourceKey": "xtm2/in/mergemap.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      }
+    }
+  ],
+  "separateExplicitResolverObservations": "original-observations.json",
+  "registeredStatusesChanged": false
+}

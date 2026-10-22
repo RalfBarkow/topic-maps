@@ -1,0 +1,104 @@
+[
+  {
+    "id": "xtm2/in/mergemap-itemid.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm",
+    "sourceBytes": 148,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6D657267654D617020687265663D226D657267656D61702D6974656D69642E737562222F3E0A20203C746F7069632069643D22746F706963223E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <mergeMap href=\"mergemap-itemid.sub\"/>\n  <topic id=\"topic\">\n  </topic>\n</topicMap>\n",
+    "childIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.sub",
+    "childBytes": 151,
+    "childHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6974656D4964656E7469747920687265663D22237468652D746F7069632D6D6170222F3E0A20203C746F7069632069643D22746F706963223E202020200A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "model": {
+      "identity": {
+        "identity": {
+          "identity": {
+            "nameModel": {
+              "identity": {
+                "topicCount": 2,
+                "associationCount": 0,
+                "canonicalParentsAndInverseReferences": true,
+                "topics": [
+                  {
+                    "ordinal": 1,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.sub#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  },
+                  {
+                    "ordinal": 2,
+                    "itemIdentifiers": [
+                      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.xtm#topic"
+                    ],
+                    "subjectIdentifiers": [],
+                    "subjectLocators": []
+                  }
+                ],
+                "associations": []
+              },
+              "mapItemIdentifiers": [],
+              "canonicalNameParentTypeReferences": true,
+              "names": []
+            },
+            "canonicalVariantReferences": true,
+            "variants": []
+          },
+          "canonicalNameReifierInverseEQ": true,
+          "mapReifierTopic": null,
+          "nameReifierTopics": [],
+          "topicReifiedNames": [
+            null,
+            null
+          ]
+        },
+        "canonicalVariantReifierInverseEQ": true,
+        "variantReifierTopics": [],
+        "topicReifiedVariants": [
+          null,
+          null
+        ]
+      },
+      "occurrences": [],
+      "canonicalNativeReferencesEQ": true
+    },
+    "targetMapItemIdentifiers": [],
+    "sourceMapItemIdentifiers": [
+      "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-itemid.sub#the-topic-map"
+    ],
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-itemid.sub#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<itemIdentifiers>\n<locator>mergemap-itemid.sub#the-topic-map</locator>\n</itemIdentifiers>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>mergemap-itemid.sub#topic</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "actualBytes": 224,
+    "expectedBytes": 314,
+    "firstDifferentByte": 12,
+    "condition": null,
+    "byteExact": false,
+    "onlyBaselineRootMapItemIdentifiersDiffer": true,
+    "registeredStatus": "not-run",
+    "registeredAsPASS": false,
+    "sourceSHA256": "23de617d6e201374ec3f9c12e02be88bc555dd7dbcd262e854c8e9a3f96966d1",
+    "childSHA256": "20cfc5dafa42543648b9f3ee4f41434f56f7fe7679afb0f4a1c870bde2415c01",
+    "baselineSHA256": "03c5c1694e572674c0982f3b01d8c2fb323159ba6436857924814ea1e7a2d5d7",
+    "actualSHA256": "ddbdfd9384267ec8d71fc5e56218c3b3b6680efdc232830c904c9aa3f52ec62a"
+  },
+  {
+    "id": "xtm2/in/mergemap-loop.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.xtm",
+    "condition": {
+      "class": "XTM-UNSUPPORTED",
+      "code": "cyclic-mergemap",
+      "detail": "Active recursive XTM resource dependency; cycle processing is not implemented.",
+      "message": "XTM CYCLIC-MERGEMAP at xtm2/in/mergemap-loop.sub (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.sub), approximately 2:39: Active recursive XTM resource dependency; cycle processing is not implemented.",
+      "line": 2,
+      "column": 39,
+      "positionUnit": "approximate-SAX-line-column",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/mergemap-loop.sub",
+      "sourceKey": "xtm2/in/mergemap-loop.sub",
+      "cause": null
+    },
+    "registeredStatus": "not-run",
+    "registeredAsPASS": false,
+    "normativeCycleDecision": null,
+    "resolverCalls": 1
+  }
+]

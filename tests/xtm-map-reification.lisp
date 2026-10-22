@@ -225,7 +225,7 @@
     ("variant-reifier-excluded-datatype" "<topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" :resource-data-datatype)
     ("occurrence-reification" "<topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic>" :unsupported-construct)
     ("association-role-reification" "<association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)
-    ("mergeMap" "<mergeMap href='other.xtm'/>" :unsupported-construct)))
+    ("mergeMap" "<mergeMap href='other.xtm'/>" :resource-resolver-required)))
     (map-reifier-error-control (first row) (map-reifier-xml "#map-r" (second row)) 'xtm-unsupported (third row)))
   (map-reifier-error-control "map-ii-reifier-ii-collision" (map-reifier-xml "#r" "<itemIdentity href='#r'/>")
     'item-identifier-error :duplicate-item-identifier)

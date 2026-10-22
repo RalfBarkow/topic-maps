@@ -275,7 +275,7 @@
       (list "bad-version" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.1'/>") 'topic-maps.xtm:xtm-rejection :invalid-version)
       (list "bad-namespace" (bytes "<topicMap version='2.0'/>") 'topic-maps.xtm:xtm-rejection :invalid-namespace)
       (list "bad-id" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='2bad'/></topicMap>") 'topic-maps.xtm:xtm-rejection :invalid-id)
-      (list "unsupported-XTM-mergeMap" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><mergeMap href='other.xtm'/></topicMap>") 'topic-maps.xtm:xtm-unsupported :unsupported-construct)
+      (list "unsupported-XTM-mergeMap" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><mergeMap href='other.xtm'/></topicMap>") 'topic-maps.xtm:xtm-unsupported :resource-resolver-required)
       (list "unsupported-occurrence-reification" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic></topicMap>") 'topic-maps.xtm:xtm-unsupported :unsupported-construct)
       (list "unsupported-name-variant-resourceData-datatype" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='t'><name><value>N</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic></topicMap>") 'topic-maps.xtm:xtm-unsupported :resource-data-datatype)))
       (destructuring-bind (label raw cause code) spec

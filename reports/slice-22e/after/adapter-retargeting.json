@@ -1,0 +1,10 @@
+{
+  "differences": [
+    {
+      "path": "/rejections/12/code",
+      "before": "UNSUPPORTED-CONSTRUCT",
+      "after": "RESOURCE-RESOLVER-REQUIRED"
+    }
+  ],
+  "adapterProductionCodeChanged": false
+}

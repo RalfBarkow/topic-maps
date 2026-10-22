@@ -1,0 +1,2368 @@
+{
+  "retained": 113,
+  "new": 0,
+  "controls": [
+    {
+      "label": "positive-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 0,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "positive-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 0,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "positive-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 0,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "positive-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 0,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "positive-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 0,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "negative-control-accepted",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 26,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "negative-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 26,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "negative-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 26,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "negative-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 26,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 33,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 33,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 33,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 33,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "scope-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 43,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "scope-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 43,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "scope-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 43,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "scope-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 43,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "iid-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 48,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "iid-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 48,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "iid-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 48,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "iid-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 48,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 50,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 50,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 50,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 50,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-accepted",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 55,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 55,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 55,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 55,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-negative-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 55,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 56,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 56,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 56,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 56,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "merge-variant-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 56,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 57,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 57,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 57,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 57,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 57,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 58,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 58,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 58,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 58,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "resource-ref-relative-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 58,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 59,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 59,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 59,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 59,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "uri-data-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 59,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 60,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 60,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 60,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 60,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 60,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 61,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 61,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 61,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 61,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-iid-duplicate-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 61,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 62,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 62,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 62,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 62,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 62,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "map-reifier-condition-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 63,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 63,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 63,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 63,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 63,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 63,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 64,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 64,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 64,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 64,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-duplicate-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 64,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-reifier-condition-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 65,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 65,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 65,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 65,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 65,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup2-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 65,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 66,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 66,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 66,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 66,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup3-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 66,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 67,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 67,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 67,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 67,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "name-followup4-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 67,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 68,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 68,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 68,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 68,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 68,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 69,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 69,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 69,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 69,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-duplicate-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 69,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-condition-control-wrong-cause",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 70,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 70,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 70,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 70,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 70,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "variant-reifier-followup-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 70,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "datatype-control-mismatch",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 71,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "datatype-control-xml",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 71,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "datatype-control-xtm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 71,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "datatype-control-unsupported",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 71,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    },
+    {
+      "label": "datatype-control-tmdm",
+      "expectedASDFFailureObserved": true,
+      "caseRecordsAndOutcomesIdentical": true,
+      "previousCorrectPASSRetained": 71,
+      "conditionClassesUnchanged": true,
+      "conditionChanges": [
+        {
+          "path": "/mapReifierControls/33/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM mergeMap is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: XTM mergeMap is not implemented in this subset.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          },
+          "after": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "resource-resolver-required",
+            "detail": "mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "message": "XTM RESOURCE-RESOLVER-REQUIRED at mergeMap (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:108: mergeMap requires an explicit resource resolver; no resource was loaded.",
+            "line": 1,
+            "column": 108,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+            "sourceKey": "mergeMap",
+            "cause": null
+          }
+        }
+      ],
+      "faultCountedAsPass": false
+    }
+  ],
+  "allExpectedFailureExitsObserved": true
+}

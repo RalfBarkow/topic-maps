@@ -1,0 +1,10 @@
+{
+  "kind": "sandbox-start-event",
+  "action": "Initial read-only repository state check",
+  "executed": false,
+  "error": "UnsupportedOperation: writable root /Users/rgb/.nix-profile contains symlink component /Users/rgb/.nix-profile; symlinked writable roots are not supported.",
+  "resolution": "Regular require_escalated approval succeeded; test child processes use explicit sandbox-exec network and repository write denial.",
+  "symlinkModified": false,
+  "configurationModified": false,
+  "approvalBypassed": false
+}

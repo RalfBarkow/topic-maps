@@ -97,6 +97,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                           (when (< next phase) (reject :element-order "topicMap child order is invalid." child))
                           (setf phase next)
                           (validate child '("itemIdentity" "mergeMap" "topic" "association"))))))
+                   ((string= name "mergeMap") (mergemap-iri node))
                    ((string= name "topic")
                     (attributes node '("id") '("id"))
                     (let ((id (collapse-space (attr node "id"))))
@@ -311,12 +312,61 @@ by source validation before model construction. Preserve other datatype IRIs."
                                  (t :subject-locator))
                            (leaf-href child)))))))
     (topic-maps.tmdm:canonical-topic topic)))
-(defun deserialize-octets (bytes &key document-iri source-key)
-  "Deserialize raw XML octets into a new TMDM Topic Map (XTM 2.0 identity/Name subset).
-DOCUMENT-IRI is required, absolute and fragment-free. SOURCE-KEY is a diagnostic
-label only. XML positions are approximate SAX line/column values, not spans.
-XML-policy errors, XTM rejection/unsupported and original TMDM conflicts remain
-distinct. No resources are fetched. No externally supplied Map is mutated."
+(defun mergemap-iri (node)
+  (let ((iri (leaf-href node)))
+    (when (iri-parts-fragment (split-iri iri))
+      (reject :mergemap-fragment "mergeMap href must not have a fragment identifier." node))
+    iri))
+(defun resource-failure (code detail node &optional cause)
+  (error 'xtm-resource-error :code code :detail detail :cause cause
+    :document-iri *document-iri* :source-key *source-key*
+    :line (node-line node) :column (node-column node)))
+(defun resource-octets-p (value)
+  ;; Same resolver value convention as CTM, without a dependency on its Reader.
+  (and (vectorp value) (not (stringp value))
+    (every (lambda (n) (and (integerp n) (<= 0 n 255))) value)))
+(defun read-mergemap (node map resolver max-depth active-iris)
+  (let ((resource (mergemap-iri node)))
+    (unless resolver
+      (reject :resource-resolver-required "mergeMap requires an explicit resource resolver; no resource was loaded." node 'xtm-unsupported))
+    ;; These are finite resource-policy guards, not normative cycle semantics.
+    ;; Each independent public call starts a new active path; siblings may repeat.
+    (when (member resource active-iris :test #'string=)
+      (reject :cyclic-mergemap "Active recursive XTM resource dependency; cycle processing is not implemented." node 'xtm-unsupported))
+    (when (>= (length active-iris) (1+ max-depth))
+      (reject :resource-depth-limit "Configured nested XTM resource limit reached; this is implementation policy." node 'xtm-unsupported))
+    (multiple-value-bind (bytes source-key)
+        (handler-case
+            (funcall resolver resource :purpose :mergemap :from-document-iri *document-iri*
+              :notation "http://psi.topicmaps.org/iso13250/xtm")
+          (error (c) (resource-failure :resource-resolver-failure (princ-to-string c) node c)))
+      (unless bytes
+        (resource-failure :resource-unavailable "Resolver declined or did not supply the requested XTM resource." node))
+      (unless (and (resource-octets-p bytes) (or (null source-key) (stringp source-key)))
+        (resource-failure :invalid-resource-result "Resolver must return an octet vector and a string source key or NIL." node))
+      (let ((source (deserialize-document
+                      (if (typep bytes '(vector (unsigned-byte 8))) bytes
+                          (map '(vector (unsigned-byte 8)) #'identity bytes))
+                      resource (or source-key resource) resolver max-depth active-iris)))
+        ;; Import only Topics/Associations. The existing operation preflights
+        ;; conflicts, preserves SOURCE, and excludes its Map identifiers/reifier.
+        (handler-case (topic-maps.tmdm:import-map-content map source)
+          (error (c) (resource-failure :mergemap-import-failure (princ-to-string c) node c)))))))
+(defun deserialize-octets (bytes &key document-iri source-key resource-resolver (max-resource-depth 32))
+  "Deserialize raw XTM 2.0 octets into a fresh TMDM Map.
+DOCUMENT-IRI is required, absolute and fragment-free. SOURCE-KEY is diagnostic.
+RESOURCE-RESOLVER is optional: (resolver absolute-iri :purpose :mergemap
+ :from-document-iri parent-iri :notation XTM-notation-IRI)
+returns raw octets and an optional diagnostic source key. No implicit I/O.
+Children use their resolved IRI as Document IRI and the same explicit resolver.
+MAX-RESOURCE-DEPTH bounds nested imports (default 32); active cycles are
+Unsupported implementation policy, not a normative XTM invalidity decision.
+Child XML/XTM/model errors retain their original contexts; resolver/import
+failures use XTM-RESOURCE-ERROR with the original ERROR-CAUSE. No supplied Map
+is mutated. Each public call has its own resource recursion context."
+  (check-type max-resource-depth (integer 0 *))
+  (deserialize-document bytes document-iri source-key resource-resolver max-resource-depth nil))
+(defun deserialize-document (bytes document-iri source-key resource-resolver max-resource-depth active-iris)
   (check-type bytes (vector (unsigned-byte 8)))
   (let ((*document-iri* document-iri) (*source-key* source-key)
         (handler (make-instance 'source-handler)))
@@ -337,7 +387,10 @@ distinct. No resources are fetched. No externally supplied Map is mutated."
       ;; The attribute is processed before itemIdentity and later Topic nodes.
       (read-map-reifier root map)
       (dolist (child (elements root))
-        (if (string= (node-name child) "itemIdentity")
-            (topic-maps.tmdm:add-item-identifier map (leaf-href child))
-            (read-topic child map)))
+        (cond ((string= (node-name child) "itemIdentity")
+               (topic-maps.tmdm:add-item-identifier map (leaf-href child)))
+              ((string= (node-name child) "mergeMap")
+               (read-mergemap child map resource-resolver max-resource-depth
+                 (cons document-iri active-iris)))
+              (t (read-topic child map))))
       map)))

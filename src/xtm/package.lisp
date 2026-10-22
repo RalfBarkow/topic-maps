@@ -1,7 +1,7 @@
 (defpackage #:topic-maps.xtm
   (:use #:cl)
   (:export #:deserialize-octets
-           #:xtm-error #:xtm-rejection #:xtm-unsupported #:xtm-xml-error
+           #:xtm-error #:xtm-rejection #:xtm-unsupported #:xtm-xml-error #:xtm-resource-error
            #:error-code #:error-detail #:error-document-iri #:error-source-key
            #:error-line #:error-column #:error-cause))
 (in-package #:topic-maps.xtm)
@@ -21,6 +21,9 @@
 (define-condition xtm-unsupported (xtm-error) ())
 (define-condition xtm-xml-error (xtm-error)
   ((cause :initarg :cause :reader error-cause)))
+
+(define-condition xtm-resource-error (xtm-error)
+  ((cause :initarg :cause :initform nil :reader error-cause)))
 
 (defvar *document-iri*)
 (defvar *source-key*)

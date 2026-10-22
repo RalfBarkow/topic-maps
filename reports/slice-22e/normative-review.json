@@ -1,0 +1,59 @@
+{
+  "kind": "slice-22e-normative-derivation-with-edition-boundary",
+  "sources": [
+    {
+      "url": "https://www.isotopicmaps.org/sam/sam-xtm/",
+      "publicEditionDate": "2006-06-19",
+      "target": "ISO/IEC 13250-3:2007",
+      "editorialPublishedTextIdentityDeclaration": true,
+      "independentPublishedPDFComparison": false,
+      "clauses": [
+        "4.2",
+        "4.3.3",
+        "4.3.4",
+        "4.4",
+        "4.21",
+        "5"
+      ]
+    },
+    {
+      "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/",
+      "publicEditionDate": "2006-06-18",
+      "target": "ISO/IEC 13250-2:2006",
+      "editorialPublishedTextIdentityDeclaration": true,
+      "independentPublishedPDFComparison": false,
+      "clauses": [
+        "5.1",
+        "5.2",
+        "6.1",
+        "6.2"
+      ]
+    }
+  ],
+  "derived": {
+    "noncyclicContentImportRequired": true,
+    "importedOperands": [
+      "topics",
+      "associations"
+    ],
+    "sourceMapItemIdentifierTransferRequired": false,
+    "sourceMapReifierTransferRequired": false
+  },
+  "observed": {
+    "originalBaselineAdditionalProperty": "Target map itemIdentifiers includes mergemap-itemid.sub#the-topic-map",
+    "nativeImporterExcludesMapMetadata": true
+  },
+  "implementationPolicy": {
+    "activeResolvedDocumentIRIPath": "cycles rejected as XTM-UNSUPPORTED/:cyclic-mergemap",
+    "maxResourceDepth": 32,
+    "normativeCycleDecision": false,
+    "globalVisitedSkipping": false,
+    "automaticResourceIO": false
+  },
+  "historicalEvidenceUnchanged": [
+    "reports/slice-22c/case-evidence.json",
+    "docs/slice-22c-normative-decisions.md"
+  ],
+  "twelveOpenCDecisionsResolved": 0,
+  "anyTypeUnimplementedPlannedSlice": "22I"
+}

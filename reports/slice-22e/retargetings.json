@@ -1,0 +1,32 @@
+[
+  {
+    "file": "tests/xtm-identity.lisp",
+    "line": 439,
+    "before": "                  (\"unsupported-mergemap\" \"<mergeMap href='other.xtm'/>\" :unsupported-construct)))",
+    "after": "                  (\"unsupported-mergemap\" \"<mergeMap href='other.xtm'/>\" :resource-resolver-required)))",
+    "intent": "Preserve Unsupported classification and caller/source cause/context checks when the new normative capability lacks its explicit resolver.",
+    "finalFileSHA256": "8b7ce61d8ad4ae524b7239055cc6309a50d09744880a26883cdc8c90ecb8e247",
+    "oldExpectation": "Valid mergeMap syntax was not implemented.",
+    "newExpectation": "The mergeMap capability exists but requires the caller to provide an explicit XTM resource resolver."
+  },
+  {
+    "file": "tests/xtm-map-reification.lisp",
+    "line": 228,
+    "before": "    (\"mergeMap\" \"<mergeMap href='other.xtm'/>\" :unsupported-construct)))",
+    "after": "    (\"mergeMap\" \"<mergeMap href='other.xtm'/>\" :resource-resolver-required)))",
+    "intent": "Preserve Unsupported classification and caller/source cause/context checks when the new normative capability lacks its explicit resolver.",
+    "finalFileSHA256": "3177b88c2dfd8be73648b83e89faba63edf8b0c8b8d5342fecfb8f0cc278c2b6",
+    "oldExpectation": "Valid mergeMap syntax was not implemented.",
+    "newExpectation": "The mergeMap capability exists but requires the caller to provide an explicit XTM resource resolver."
+  },
+  {
+    "file": "tests/ctm-xtm-mergemap.lisp",
+    "line": 278,
+    "before": "      (list \"unsupported-XTM-mergeMap\" (bytes \"<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><mergeMap href='other.xtm'/></topicMap>\") 'topic-maps.xtm:xtm-unsupported :unsupported-construct)",
+    "after": "      (list \"unsupported-XTM-mergeMap\" (bytes \"<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><mergeMap href='other.xtm'/></topicMap>\") 'topic-maps.xtm:xtm-unsupported :resource-resolver-required)",
+    "intent": "Preserve Unsupported classification and caller/source cause/context checks when the new normative capability lacks its explicit resolver.",
+    "finalFileSHA256": "79cd9d2faaf871901e2356dd6052b05a33dc0a63d069361b30d18a5fd23b0907",
+    "oldExpectation": "Valid mergeMap syntax was not implemented.",
+    "newExpectation": "The mergeMap capability exists but requires the caller to provide an explicit XTM resource resolver."
+  }
+]
