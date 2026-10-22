@@ -1,0 +1,112 @@
+[
+  {
+    "id": "xtm2/in/occurrence.xtm",
+    "sourceBytes": 265,
+    "sourceSHA256": "58d840b3c679b7f53a22f034632f0ae7cb1289da397b6428a8728c94c5580e1b",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 371,
+    "baselineSHA256": "c0b62e80f61de8128b4ebc42c98ba4ab73238de2069db57980633741dd3e6513",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-datatype-unknown.xtm",
+    "sourceBytes": 284,
+    "sourceSHA256": "188106858bd8e5c79c43c06c7fc7c23bdcf285f6a1fad1b1f73675bf9e79ee3e",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174612064617461747970653d22687474703a2f2f6578616d706c652e636f6d2f626f677573223e424f4755533c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData datatype=\"http://example.com/bogus\">BOGUS</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 339,
+    "baselineSHA256": "c6a6f0180d49b8ec981d01c2f72b8318696d386da8e68884ff7e620ceb0662ff",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>BOGUS</value>\n<datatype>http://example.com/bogus</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-duplicate.xtm",
+    "sourceBytes": 421,
+    "sourceSHA256": "b64778cc3ffaa7dd56588673061d5fc97b6c8335365332b9e3df55ea921cb976",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 371,
+    "baselineSHA256": "c0b62e80f61de8128b4ebc42c98ba4ab73238de2069db57980633741dd3e6513",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-scope.xtm",
+    "sourceBytes": 330,
+    "sourceSHA256": "64c3fb187a75d4111e571009197d4da44577a61d9fa7b9322606f9e21c016efa",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c73636f70653e0a20202020202020203c746f70696352656620687265663d2223656e676c697368222f3e0a2020202020203c2f73636f70653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <scope>\n        <topicRef href=\"#english\"/>\n      </scope>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 524,
+    "baselineSHA256": "2319acc93d14709d983d7defc0dacb9ec18c3921d8b2eab0224b19ab753c5bdc",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-scope-duplicate.xtm",
+    "sourceBytes": 366,
+    "sourceSHA256": "dcf840cf97969fa9a874f007dd5c45ac67159b57dd36d2cd1c1a2e5483072b7e",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c73636f70653e0a20202020202020203c746f70696352656620687265663d2223656e676c697368222f3e0a20202020202020203c746f70696352656620687265663d2223656e676c697368222f3e0a2020202020203c2f73636f70653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <scope>\n        <topicRef href=\"#english\"/>\n        <topicRef href=\"#english\"/>\n      </scope>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 524,
+    "baselineSHA256": "2319acc93d14709d983d7defc0dacb9ec18c3921d8b2eab0224b19ab753c5bdc",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+    "sourceBytes": 611,
+    "sourceSHA256": "564ddf41b00a6e36bc9129469a436b09ebad3d77e95c377cdc0205a9f3521170",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c73636f70653e0a20202020202020203c746f70696352656620687265663d2223656e676c697368222f3e0a2020202020203c2f73636f70653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c73636f70653e0a20202020202020203c746f70696352656620687265663d2223656e222f3e0a2020202020203c2f73636f70653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a20203c746f7069632069643d22656e223e0a202020203c6974656d4964656e7469747920687265663d2223656e676c697368222f3e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <scope>\n        <topicRef href=\"#english\"/>\n      </scope>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <scope>\n        <topicRef href=\"#en\"/>\n      </scope>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n  <topic id=\"en\">\n    <itemIdentity href=\"#english\"/>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 547,
+    "baselineSHA256": "8fdd3ea8d6a7be899b6e61dbfbaf7a2938ed58a96190c97e8044c5dfae8dd407",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#en</locator>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-resourcedata-uri.xtm",
+    "sourceBytes": 347,
+    "sourceSHA256": "4ae5179b5b337970b7f82a905316c4dd47e0bc0fc4096227746328ebef2a28f2",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174612064617461747970653d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d6123616e79555249220a20202020202020202020202020202020202020203e687474703a2f2f7777772e69736f746f7069636d6170732e6f72672f6378746d3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData datatype=\"http://www.w3.org/2001/XMLSchema#anyURI\"\n                    >http://www.isotopicmaps.org/cxtm</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 381,
+    "baselineSHA256": "251ff14341af2383ced7cc67dfc1f2d456c4a66f21f662cc4acd398ef1114de2",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.isotopicmaps.org/cxtm</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+    "sourceBytes": 303,
+    "sourceSHA256": "c112bd50f8d036320bd28646bba0eabaf68d5c6c55c20e8213075bc0ff4530a7",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174612064617461747970653d22687474703a2f2f7777772e77332e6f72672f323030312f584d4c536368656d6123616e79555249223e70686f746f2e6a70673c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData datatype=\"http://www.w3.org/2001/XMLSchema#anyURI\">photo.jpg</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 358,
+    "baselineSHA256": "1ad69f9a6544f85440b9ca90cbe9116bcc74c363d36d259f37390adc57f4bb0e",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>photo.jpg</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-resourceref.xtm",
+    "sourceBytes": 268,
+    "sourceSHA256": "e7b7112b6dfb9aaf10cb444d1b5055b7f062ce03c13a9c0c3823787ebd0ae936",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f7572636552656620687265663d22687474703a2f2f7777772e69736f746f7069636d6170732e6f72672f6378746d222f3e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceRef href=\"http://www.isotopicmaps.org/cxtm\"/>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 381,
+    "baselineSHA256": "251ff14341af2383ced7cc67dfc1f2d456c4a66f21f662cc4acd398ef1114de2",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.isotopicmaps.org/cxtm</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-resourceref-relative.xtm",
+    "sourceBytes": 245,
+    "sourceSHA256": "80401925888a47b161b12c0c94f8d728d8a0036845619f1cd080736f675cddb5",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f7572636552656620687265663d2270686f746f2e6a7067222f3e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceRef href=\"photo.jpg\"/>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 358,
+    "baselineSHA256": "1ad69f9a6544f85440b9ca90cbe9116bcc74c363d36d259f37390adc57f4bb0e",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>photo.jpg</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/merge-itemid-with-occurrences.xtm",
+    "sourceBytes": 541,
+    "sourceSHA256": "61fc8a202c0fc6befb20683ba36a88e2e343f0c19d35fae7f3f3fda80274fe17",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e0a20203c746f7069632069643d22746f706963223e0a202020203c6974656d4964656e7469747920687265663d22687474703a2f2f6578616d706c652e6f72672f23746f706963222f3e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e536f6d6520646174613c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a20203c746f7069632069643d22746f70696332223e0a202020203c6974656d4964656e7469747920687265663d22687474703a2f2f6578616d706c652e6f72672f23746f706963222f3e0a202020203c6f6363757272656e63653e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e536f6d65206d6f726520646174613c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e202020200a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <topic id=\"topic\">\n    <itemIdentity href=\"http://example.org/#topic\"/>\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Some data</resourceData>\n    </occurrence>\n  </topic>\n  <topic id=\"topic2\">\n    <itemIdentity href=\"http://example.org/#topic\"/>\n    <occurrence>\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Some more data</resourceData>\n    </occurrence>    \n  </topic>\n</topicMap>\n",
+    "baselineBytes": 586,
+    "baselineSHA256": "c1d26ede76bf5cf6e22f23c9e738bb26c036df4f8a043e8e314d7dc9cfe22116",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>#topic2</locator>\n<locator>http://example.org/#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Some data</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n<occurrence number=\"2\">\n<value>Some more data</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  }
+]

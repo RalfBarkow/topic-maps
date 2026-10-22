@@ -1,0 +1,2560 @@
+{
+  "positiveControls": 19,
+  "negativeControls": 27,
+  "mergingDimensions": [
+    "parent",
+    "type",
+    "scope"
+  ],
+  "identityKinds": [
+    "SI",
+    "SL",
+    "II"
+  ],
+  "controls": [
+    {
+      "label": "default",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/><topicRef href='#s'/></scope><resourceData> V &amp; 馬🦊 </resourceData></occurrence></topic><topic id='t'/><topic id='s'/></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": " V & 馬🦊 ",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value> V &amp; 馬🦊 </value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "whitespace",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/><topicRef href='#s'/></scope><resourceData> &#x9;A&#xA; </resourceData></occurrence></topic><topic id='t'/><topic id='s'/></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": " \tA\n ",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value> \tA\n </value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "empty",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/><topicRef href='#s'/></scope><resourceData/></occurrence></topic><topic id='t'/><topic id='s'/></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value></value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "custom",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/><topicRef href='#s'/></scope><resourceData datatype='urn:custom'>literal%GG</resourceData></occurrence></topic><topic id='t'/><topic id='s'/></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "literal%GG",
+            "datatype": "urn:custom",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>literal%GG</value>\n<datatype>urn:custom</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "integer-lexical",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>+00042</resourceData></occurrence></topic><topic id='t'/><topic id='s'/></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "+00042",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>42</value>\n<datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "uri-relative",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyURI'>../photo</resourceData></occurrence></topic><topic id='t'/><topic id='s'/></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/photo",
+            "datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>photo</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "ref-relative",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/><topicRef href='#s'/></scope><resourceRef href='../photo'/></occurrence></topic><topic id='t'/><topic id='s'/></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/photo",
+            "datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>photo</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "ref-absolute",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/><topicRef href='#s'/></scope><resourceRef href='urn:photo'/></occurrence></topic><topic id='t'/><topic id='s'/></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "urn:photo",
+            "datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>urn:photo</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "equality-discriminators",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='urn:type'>V</resourceData></occurrence><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='urn:type'>V</resourceData></occurrence><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='urn:type'>W</resourceData></occurrence><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='urn:other'>V</resourceData></occurrence><occurrence><type><topicRef href='#u'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='urn:type'>V</resourceData></occurrence><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#z'/></scope><resourceData datatype='urn:type'>V</resourceData></occurrence></topic><topic id='b'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='urn:type'>V</resourceData></occurrence></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 6,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 4,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#u"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 5,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#z"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 6,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#b"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 6,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "urn:type",
+            "itemIdentifiers": [],
+            "reifier": null
+          },
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "W",
+            "datatype": "urn:type",
+            "itemIdentifiers": [],
+            "reifier": null
+          },
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "urn:other",
+            "itemIdentifiers": [],
+            "reifier": null
+          },
+          {
+            "parent": 1,
+            "type": 4,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "urn:type",
+            "itemIdentifiers": [],
+            "reifier": null
+          },
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              5
+            ],
+            "value": "V",
+            "datatype": "urn:type",
+            "itemIdentifiers": [],
+            "reifier": null
+          },
+          {
+            "parent": 6,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "urn:type",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>urn:other</datatype>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n<occurrence number=\"2\">\n<value>V</value>\n<datatype>urn:type</datatype>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n<occurrence number=\"3\">\n<value>V</value>\n<datatype>urn:type</datatype>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"6\"></scopingTopic>\n</scope>\n</occurrence>\n<occurrence number=\"4\">\n<value>V</value>\n<datatype>urn:type</datatype>\n<type topicref=\"5\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n<occurrence number=\"5\">\n<value>W</value>\n<datatype>urn:type</datatype>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#b</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>urn:type</datatype>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#u</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#z</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "retainedReadHandles": 7,
+      "retainedHandleEvidence": {
+        "readHandleCount": 7,
+        "distinctReadHandles": 7,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "replacedReadHandles": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "label": "merge-parent-subjectIdentifier",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='b'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#a'/><subjectIdentifier href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#b'/><subjectIdentifier href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#b",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [
+                        "urn:shared"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>urn:shared</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#a</locator>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#b</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "merge-type-subjectIdentifier",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#x'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence><occurrence><type><topicRef href='#y'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#x'/><subjectIdentifier href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#y'/><subjectIdentifier href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#x",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#y",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [
+                        "urn:shared"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>urn:shared</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#x</locator>\n<locator>#y</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "merge-scope-subjectIdentifier",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#x'/></scope><resourceData>V</resourceData></occurrence><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#y'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#x'/><subjectIdentifier href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#y'/><subjectIdentifier href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#x",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#y",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [
+                        "urn:shared"
+                      ],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>urn:shared</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#x</locator>\n<locator>#y</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "merge-parent-subjectLocator",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='b'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#a'/><subjectLocator href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#b'/><subjectLocator href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#b",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": [
+                        "urn:shared"
+                      ]
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<subjectLocators>\n<locator>urn:shared</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#a</locator>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#b</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "merge-type-subjectLocator",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#x'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence><occurrence><type><topicRef href='#y'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#x'/><subjectLocator href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#y'/><subjectLocator href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#x",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#y",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": [
+                        "urn:shared"
+                      ]
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<subjectLocators>\n<locator>urn:shared</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#x</locator>\n<locator>#y</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "merge-scope-subjectLocator",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#x'/></scope><resourceData>V</resourceData></occurrence><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#y'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#x'/><subjectLocator href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#y'/><subjectLocator href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#x",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#y",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": [
+                        "urn:shared"
+                      ]
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<subjectLocators>\n<locator>urn:shared</locator>\n</subjectLocators>\n<itemIdentifiers>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#x</locator>\n<locator>#y</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "merge-parent-itemIdentity",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='b'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#a'/><itemIdentity href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#b'/><itemIdentity href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "urn:shared",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#b",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#a</locator>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#b</locator>\n<locator>urn:shared</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "merge-type-itemIdentity",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#x'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence><occurrence><type><topicRef href='#y'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#x'/><itemIdentity href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#y'/><itemIdentity href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "urn:shared",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#x",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#y",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#s"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"3\"></type>\n<scope>\n<scopingTopic topicref=\"2\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#x</locator>\n<locator>#y</locator>\n<locator>urn:shared</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "merge-scope-itemIdentity",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#x'/></scope><resourceData>V</resourceData></occurrence><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#y'/></scope><resourceData>V</resourceData></occurrence></topic><topic id='alias1'><itemIdentity href='#x'/><itemIdentity href='urn:shared'/></topic><topic id='alias2'><itemIdentity href='#y'/><itemIdentity href='urn:shared'/></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 3,
+                  "associationCount": 0,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [
+                        "urn:shared",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#x",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias1",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#y",
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#alias2"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": []
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": []
+              },
+              "canonicalVariantReferences": true,
+              "variants": []
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [],
+            "topicReifiedNames": [
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 2,
+            "scope": [
+              3
+            ],
+            "value": "V",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#alias1</locator>\n<locator>#alias2</locator>\n<locator>#x</locator>\n<locator>#y</locator>\n<locator>urn:shared</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1,
+        2
+      ],
+      "retainedReadHandles": 2,
+      "retainedHandleEvidence": {
+        "readHandleCount": 2,
+        "distinctReadHandles": 2,
+        "canonicalGroupsInFinalMap": [
+          1,
+          1
+        ],
+        "replacedReadHandles": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "label": "other-characteristics-preserved",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><instanceOf><topicRef href='#class'/></instanceOf><name><value>N</value><variant><scope><topicRef href='#vscope'/></scope><resourceData>V</resourceData></variant></name><occurrence><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic></topicMap>",
+      "model": {
+        "existingCharacteristics": {
+          "identity": {
+            "identity": {
+              "nameModel": {
+                "identity": {
+                  "topicCount": 8,
+                  "associationCount": 1,
+                  "canonicalParentsAndInverseReferences": true,
+                  "topics": [
+                    {
+                      "ordinal": 1,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#a"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 2,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#class"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 3,
+                      "itemIdentifiers": [],
+                      "subjectIdentifiers": [
+                        "http://psi.topicmaps.org/iso13250/model/type-instance"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 4,
+                      "itemIdentifiers": [],
+                      "subjectIdentifiers": [
+                        "http://psi.topicmaps.org/iso13250/model/type"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 5,
+                      "itemIdentifiers": [],
+                      "subjectIdentifiers": [
+                        "http://psi.topicmaps.org/iso13250/model/instance"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 6,
+                      "itemIdentifiers": [],
+                      "subjectIdentifiers": [
+                        "http://psi.topicmaps.org/iso13250/model/topic-name"
+                      ],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 7,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#vscope"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    },
+                    {
+                      "ordinal": 8,
+                      "itemIdentifiers": [
+                        "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm#t"
+                      ],
+                      "subjectIdentifiers": [],
+                      "subjectLocators": []
+                    }
+                  ],
+                  "associations": [
+                    {
+                      "type": 3,
+                      "roles": [
+                        {
+                          "type": 4,
+                          "player": 2
+                        },
+                        {
+                          "type": 5,
+                          "player": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "mapItemIdentifiers": [],
+                "canonicalNameParentTypeReferences": true,
+                "names": [
+                  {
+                    "value": "N",
+                    "parent": 1,
+                    "type": 6,
+                    "scope": [],
+                    "itemIdentifiers": [],
+                    "variantCount": 1
+                  }
+                ]
+              },
+              "canonicalVariantReferences": true,
+              "variants": [
+                {
+                  "value": "V",
+                  "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                  "parentName": 1,
+                  "scope": [
+                    7
+                  ],
+                  "itemIdentifiers": [],
+                  "reifier": null
+                }
+              ]
+            },
+            "canonicalNameReifierInverseEQ": true,
+            "mapReifierTopic": null,
+            "nameReifierTopics": [
+              null
+            ],
+            "topicReifiedNames": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "canonicalVariantReifierInverseEQ": true,
+          "variantReifierTopics": [
+            null
+          ],
+          "topicReifiedVariants": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        "canonicalOccurrenceReferencesEQ": true,
+        "occurrenceCount": 1,
+        "occurrences": [
+          {
+            "parent": 1,
+            "type": 8,
+            "scope": [],
+            "value": "O",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "itemIdentifiers": [],
+            "reifier": null
+          }
+        ]
+      },
+      "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<name number=\"1\">\n<value>N</value>\n<type topicref=\"6\"></type>\n<variant number=\"1\">\n<value>V</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<scope>\n<scopingTopic topicref=\"4\"></scopingTopic>\n</scope>\n</variant>\n</name>\n<occurrence number=\"1\">\n<value>O</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"3\"></type>\n</occurrence>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#class</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#vscope</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/instance</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"6\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"7\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type</locator>\n</subjectIdentifiers>\n</topic>\n<topic number=\"8\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type-instance</locator>\n</subjectIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"8\"></type>\n<role number=\"1\">\n<player topicref=\"1\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"2\"></player>\n<type topicref=\"7\"></type>\n</role>\n</association>\n</topicMap>\n",
+      "condition": null,
+      "occurrenceCountsAfterEachRead": [
+        1
+      ],
+      "retainedReadHandles": 1,
+      "retainedHandleEvidence": {
+        "readHandleCount": 1,
+        "distinctReadHandles": 1,
+        "canonicalGroupsInFinalMap": [
+          1
+        ],
+        "replacedReadHandles": [
+          false
+        ]
+      }
+    },
+    {
+      "label": "occurrence-negative:missing-type",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "missing-occurrence-type",
+        "detail": "occurrence requires type before its resource.",
+        "message": "XTM MISSING-OCCURRENCE-TYPE at occurrence-negative:missing-type (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:103: occurrence requires type before its resource.",
+        "line": 1,
+        "column": 103,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:missing-type",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:missing-resource",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "missing-occurrence-resource",
+        "detail": "occurrence requires a resource element.",
+        "message": "XTM MISSING-OCCURRENCE-RESOURCE at occurrence-negative:missing-resource (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:89: occurrence requires a resource element.",
+        "line": 1,
+        "column": 89,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:missing-resource",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:two-resources",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData>V</resourceData><resourceRef href='urn:v'/></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "occurrence-resource-cardinality",
+        "detail": "occurrence requires exactly one resource.",
+        "message": "XTM OCCURRENCE-RESOURCE-CARDINALITY at occurrence-negative:two-resources (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:180: occurrence requires exactly one resource.",
+        "line": 1,
+        "column": 180,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:two-resources",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:two-types",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><type><topicRef href='#u'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "duplicate-occurrence-type",
+        "detail": "Only one occurrence type is allowed.",
+        "message": "XTM DUPLICATE-OCCURRENCE-TYPE at occurrence-negative:two-types (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:129: Only one occurrence type is allowed.",
+        "line": 1,
+        "column": 129,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:two-types",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:empty-type",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type/><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "type-cardinality",
+        "detail": "type requires exactly one topicRef.",
+        "message": "XTM TYPE-CARDINALITY at occurrence-negative:empty-type (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: type requires exactly one topicRef.",
+        "line": 1,
+        "column": 96,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:empty-type",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:two-type-refs",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/><topicRef href='#u'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "type-cardinality",
+        "detail": "type requires exactly one topicRef.",
+        "message": "XTM TYPE-CARDINALITY at occurrence-negative:two-type-refs (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:95: type requires exactly one topicRef.",
+        "line": 1,
+        "column": 95,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:two-type-refs",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:bad-type-ref",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-topic-ref",
+        "detail": "topicRef requires an XPointer shorthand fragment.",
+        "message": "XTM INVALID-TOPIC-REF at occurrence-negative:bad-type-ref (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:115: topicRef requires an XPointer shorthand fragment.",
+        "line": 1,
+        "column": 115,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:bad-type-ref",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:empty-scope",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope/><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "empty-scope",
+        "detail": "scope requires at least one topicRef.",
+        "message": "XTM EMPTY-SCOPE at occurrence-negative:empty-scope (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:131: scope requires at least one topicRef.",
+        "line": 1,
+        "column": 131,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:empty-scope",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:bad-scope-ref",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#2bad'/></scope><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-topic-ref",
+        "detail": "topicRef requires an XPointer shorthand fragment.",
+        "message": "XTM INVALID-TOPIC-REF at occurrence-negative:bad-scope-ref (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:154: topicRef requires an XPointer shorthand fragment.",
+        "line": 1,
+        "column": 154,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:bad-scope-ref",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:two-scopes",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "duplicate-occurrence-scope",
+        "detail": "Only one occurrence scope is allowed.",
+        "message": "XTM DUPLICATE-OCCURRENCE-SCOPE at occurrence-negative:two-scopes (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:166: Only one occurrence scope is allowed.",
+        "line": 1,
+        "column": 166,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:two-scopes",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:wrong-order",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData>V</resourceData><scope><topicRef href='#s'/></scope></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "element-order",
+        "detail": "occurrence child order is invalid.",
+        "message": "XTM ELEMENT-ORDER at occurrence-negative:wrong-order (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:160: occurrence child order is invalid.",
+        "line": 1,
+        "column": 160,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:wrong-order",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:early-scope",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><scope><topicRef href='#s'/></scope><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "missing-occurrence-type",
+        "detail": "occurrence requires type before scope.",
+        "message": "XTM MISSING-OCCURRENCE-TYPE at occurrence-negative:early-scope (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: occurrence requires type before scope.",
+        "line": 1,
+        "column": 96,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:early-scope",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:bad-child",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><wrong/></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-element",
+        "detail": "Unexpected wrong element.",
+        "message": "XTM UNEXPECTED-ELEMENT at occurrence-negative:bad-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:97: Unexpected wrong element.",
+        "line": 1,
+        "column": 97,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:bad-child",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:foreign-namespace",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence xmlns='urn:foreign'/></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-namespace",
+        "detail": "Expected the XTM 2.0 namespace.",
+        "message": "XTM INVALID-NAMESPACE at occurrence-negative:foreign-namespace (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:110: Expected the XTM 2.0 namespace.",
+        "line": 1,
+        "column": 110,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:foreign-namespace",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:bad-attribute",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence bogus='x'/></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-attribute",
+        "detail": "Attribute \"bogus\" on occurrence.",
+        "message": "XTM UNEXPECTED-ATTRIBUTE at occurrence-negative:bad-attribute (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:100: Attribute \"bogus\" on occurrence.",
+        "line": 1,
+        "column": 100,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:bad-attribute",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:text-child",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence>unexpected</occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-text",
+        "detail": "Only XML whitespace is allowed here.",
+        "message": "XTM UNEXPECTED-TEXT at occurrence-negative:text-child (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:89: Only XML whitespace is allowed here.",
+        "line": 1,
+        "column": 89,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:text-child",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:relative-datatype",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData datatype='relative'>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-resource-data-datatype",
+        "detail": "resourceData datatype must be an absolute IRI.",
+        "message": "XTM INVALID-RESOURCE-DATA-DATATYPE at occurrence-negative:relative-datatype (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:157: resourceData datatype must be an absolute IRI.",
+        "line": 1,
+        "column": 157,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:relative-datatype",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:embedded-without-anyType",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData><x xmlns='urn:xml'/></resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-child",
+        "detail": "Textual resourceData cannot contain child elements.",
+        "message": "XTM UNEXPECTED-CHILD at occurrence-negative:embedded-without-anyType (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:157: Textual resourceData cannot contain child elements.",
+        "line": 1,
+        "column": 157,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:embedded-without-anyType",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:anyType-text",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at occurrence-negative:anyType-text (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:189: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 189,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:anyType-text",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:anyType-XML",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><x xmlns='urn:xml'/></resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at occurrence-negative:anyType-XML (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:189: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 189,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:anyType-XML",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:item-identity",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence item identifiers are not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:117: XTM occurrence item identifiers are not implemented in this subset.",
+        "line": 1,
+        "column": 117,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:item-identity",
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-negative:reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 102,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:reification",
+        "cause": null
+      }
+    },
+    {
+      "label": "invalid-parent-context",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><occurrence/></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-element",
+        "detail": "Unexpected occurrence element.",
+        "message": "XTM UNEXPECTED-ELEMENT at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:76: Unexpected occurrence element.",
+        "line": 1,
+        "column": 76,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "local:xtm-semantic-test",
+        "cause": null
+      }
+    },
+    {
+      "label": "invalid-parent-context",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><occurrence/></name></topic></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "unexpected-element",
+        "detail": "Unexpected occurrence element.",
+        "message": "XTM UNEXPECTED-ELEMENT at local:xtm-semantic-test (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:112: Unexpected occurrence element.",
+        "line": 1,
+        "column": 112,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "local:xtm-semantic-test",
+        "cause": null
+      }
+    },
+    {
+      "label": "real-XML-error",
+      "sourceText": "<a><b></a>",
+      "condition": {
+        "class": "XTM-XML-ERROR",
+        "code": "xml-not-well-formed",
+        "detail": "Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+        "message": "XTM XML-NOT-WELL-FORMED at occurrence:XML (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:11: Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+        "line": 1,
+        "column": 11,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence:XML",
+        "cause": {
+          "class": "WELL-FORMEDNESS-VIOLATION",
+          "code": null,
+          "detail": null,
+          "message": "Document not well-formed: Bad nesting. \"b\" / (:ETAG \"a\")\nContext:\n  Line 1, column 11 in NIL\n",
+          "line": null,
+          "column": null,
+          "positionUnit": null,
+          "documentIRI": null,
+          "sourceKey": null,
+          "cause": null
+        }
+      }
+    },
+    {
+      "label": "occurrence-native-conflict",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>bad</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "OCCURRENCE-ERROR",
+        "code": "invalid-integer-value",
+        "detail": null,
+        "message": "Occurrence INVALID-INTEGER-VALUE: Value is not an xsd:integer lexical form.",
+        "line": null,
+        "column": null,
+        "positionUnit": null,
+        "documentIRI": null,
+        "sourceKey": null,
+        "cause": null
+      }
+    },
+    {
+      "label": "occurrence-native-conflict",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><itemIdentity href='#t'/><topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "OCCURRENCE-IDENTIFIER-ERROR",
+        "code": "duplicate-item-identifier",
+        "detail": "Locator already identifies a different information item.",
+        "message": "Occurrence DUPLICATE-ITEM-IDENTIFIER: Locator already identifies a different information item.",
+        "line": null,
+        "column": null,
+        "positionUnit": null,
+        "documentIRI": null,
+        "sourceKey": null,
+        "cause": null
+      }
+    }
+  ]
+}

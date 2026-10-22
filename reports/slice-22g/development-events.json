@@ -1,0 +1,12 @@
+{
+  "kind": "test-construction-errors-not-acceptance-results",
+  "events": [
+    {
+      "scope": "tests/xtm-occurrences.lisp",
+      "error": "Unmatched close parenthesis at line 94, then line 216 in two focused compilation attempts.",
+      "resolution": "Corrected two test-only closing delimiters; subsequent focused ASDF execution passed. No productive reader correction was required for these errors.",
+      "countedAsSuccessfulExecution": false
+    }
+  ],
+  "focusedSuccessfulChecks": 2869
+}

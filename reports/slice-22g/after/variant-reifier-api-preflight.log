@@ -1,0 +1,59 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+
+; file: /Users/rgb/workspace/topic-maps/tests/xtm-identity.lisp
+; in: DEFUN TOPIC-MAPS.XTM.TESTS:WRITE-REPORT
+;     (ARRAY TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-CONTROLS*)
+; 
+; caught WARNING:
+;   undefined variable: TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-CONTROLS*
+
+; in: DEFUN TOPIC-MAPS.XTM.TESTS:RUN-TESTS
+;     (SETF TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-OUTPUTS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-CONTROLS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*MERGEMAP-CONTROLS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*MERGEMAP-ORIGINALS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*DATATYPE-OUTPUTS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*DATATYPE-CONTROLS* NIL
+;           ...)
+; --> SETF 
+; ==>
+;   (SETQ TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-CONTROLS* NIL)
+; 
+; caught WARNING:
+;   undefined variable: TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-CONTROLS*
+
+; in: DEFUN TOPIC-MAPS.XTM.TESTS:WRITE-REPORT
+;     (ARRAY TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-OUTPUTS*)
+; 
+; caught WARNING:
+;   undefined variable: TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-OUTPUTS*
+
+; in: DEFUN TOPIC-MAPS.XTM.TESTS:RUN-TESTS
+;     (SETF TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-OUTPUTS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-CONTROLS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*MERGEMAP-CONTROLS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*MERGEMAP-ORIGINALS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*DATATYPE-OUTPUTS* NIL
+;           TOPIC-MAPS.XTM.TESTS::*DATATYPE-CONTROLS* NIL
+;           ...)
+; --> SETF 
+; ==>
+;   (SETQ TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-OUTPUTS* NIL)
+; 
+; caught WARNING:
+;   undefined variable: TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-OUTPUTS*
+; 
+; compilation unit finished
+;   Undefined variables:
+;     TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-CONTROLS* TOPIC-MAPS.XTM.TESTS::*OCCURRENCE-OUTPUTS*
+;   caught 4 WARNING conditions
+VARIANT-REIFIER-API-NORMALIZATION: 1 existing Reifier(s), identifiers and old handles preserved
+VARIANT-REIFIER-API-NORMALIZATION: 2 existing Reifier(s), identifiers and old handles preserved
+VARIANT-REIFIER-API-CONDITION: REIFICATION-ERROR REIFIER-CONFLICT; atomic
+VARIANT-REIFIER-API-CONDITION: REIFICATION-ERROR REIFIER-CONFLICT; atomic
+VARIANT-REIFIER-API-CONDITION: OCCURRENCE-IDENTIFIER-ERROR DUPLICATE-ITEM-IDENTIFIER; atomic
+VARIANT-REIFIER-API-PREFLIGHT-PASS: normalize, assign II, resolve Reifier by II, set on current Variant, retain canonical result

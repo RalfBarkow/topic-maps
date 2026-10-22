@@ -1,0 +1,1065 @@
+{
+  "originalDiagnoses": 124,
+  "changed": 17,
+  "unchanged": 107,
+  "changes": [
+    {
+      "id": "xtm2/in/itemid-occurrence.xtm",
+      "reason": "Precise excluded occurrence II/reification boundary, not a registered PASS.",
+      "before": {
+        "id": "xtm2/in/itemid-occurrence.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-occurrence.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm",
+          "sourceKey": "xtm2/in/itemid-occurrence.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/itemid-occurrence.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence item identifiers are not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-occurrence.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset.",
+          "line": 4,
+          "column": 45,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm",
+          "sourceKey": "xtm2/in/itemid-occurrence.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 17,
+          "after": 45
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM occurrence is not implemented in this subset.",
+          "after": "XTM occurrence item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 3,
+          "after": 4
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-occurrence.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-occurrence.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-occurrences.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/merge-itemid-with-occurrences.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-occurrences.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/merge-itemid-with-occurrences.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-occurrences.xtm), approximately 4:17: XTM occurrence is not implemented in this subset.",
+          "line": 4,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-occurrences.xtm",
+          "sourceKey": "xtm2/in/merge-itemid-with-occurrences.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/merge-itemid-with-occurrences.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-occurrences.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>#topic2</locator>\n<locator>http://example.org/#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Some data</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n<occurrence number=\"2\">\n<value>Some more data</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>#topic2</locator>\n<locator>http://example.org/#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Some data</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n<occurrence number=\"2\">\n<value>Some more data</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/merge-itemid-with-occurrences.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-occurrences.xtm), approximately 4:17: XTM occurrence is not implemented in this subset.",
+            "line": 4,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-occurrences.xtm",
+            "sourceKey": "xtm2/in/merge-itemid-with-occurrences.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-datatype-unknown.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-datatype-unknown.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-datatype-unknown.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-datatype-unknown.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-datatype-unknown.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-datatype-unknown.xtm",
+          "sourceKey": "xtm2/in/occurrence-datatype-unknown.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-datatype-unknown.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-datatype-unknown.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>BOGUS</value>\n<datatype>http://example.com/bogus</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>BOGUS</value>\n<datatype>http://example.com/bogus</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-datatype-unknown.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-datatype-unknown.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-datatype-unknown.xtm",
+            "sourceKey": "xtm2/in/occurrence-datatype-unknown.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-iid.xtm",
+      "reason": "Precise excluded occurrence II/reification boundary, not a registered PASS.",
+      "before": {
+        "id": "xtm2/in/occurrence-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm",
+          "sourceKey": "xtm2/in/occurrence-duplicate-iid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-duplicate-iid.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence item identifiers are not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset.",
+          "line": 4,
+          "column": 45,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm",
+          "sourceKey": "xtm2/in/occurrence-duplicate-iid.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 17,
+          "after": 45
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM occurrence is not implemented in this subset.",
+          "after": "XTM occurrence item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 3,
+          "after": 4
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-iid2.xtm",
+      "reason": "Precise excluded occurrence II/reification boundary, not a registered PASS.",
+      "before": {
+        "id": "xtm2/in/occurrence-duplicate-iid2.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm",
+          "sourceKey": "xtm2/in/occurrence-duplicate-iid2.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-duplicate-iid2.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence item identifiers are not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset.",
+          "line": 4,
+          "column": 45,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm",
+          "sourceKey": "xtm2/in/occurrence-duplicate-iid2.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 17,
+          "after": 45
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM occurrence is not implemented in this subset.",
+          "after": "XTM occurrence item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 3,
+          "after": 4
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-reifier.xtm",
+      "reason": "Precise excluded occurrence II/reification boundary, not a registered PASS.",
+      "before": {
+        "id": "xtm2/in/occurrence-duplicate-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm), approximately 3:36: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 36,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm",
+          "sourceKey": "xtm2/in/occurrence-duplicate-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-duplicate-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence reification is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset.",
+          "line": 3,
+          "column": 36,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm",
+          "sourceKey": "xtm2/in/occurrence-duplicate-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "differences": [
+        {
+          "path": "/condition/detail",
+          "before": "XTM occurrence is not implemented in this subset.",
+          "after": "XTM occurrence reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm), approximately 3:36: XTM occurrence is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate.xtm",
+          "sourceKey": "xtm2/in/occurrence-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate.xtm",
+            "sourceKey": "xtm2/in/occurrence-duplicate.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-reifier.xtm",
+      "reason": "Precise excluded occurrence II/reification boundary, not a registered PASS.",
+      "before": {
+        "id": "xtm2/in/occurrence-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm), approximately 3:36: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 36,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm",
+          "sourceKey": "xtm2/in/occurrence-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-reifier.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence reification is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset.",
+          "line": 3,
+          "column": 36,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm",
+          "sourceKey": "xtm2/in/occurrence-reifier.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "differences": [
+        {
+          "path": "/condition/detail",
+          "before": "XTM occurrence is not implemented in this subset.",
+          "after": "XTM occurrence reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm), approximately 3:36: XTM occurrence is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-resourcedata-uri-relative.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri-relative.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+          "sourceKey": "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>photo.jpg</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>photo.jpg</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-resourcedata-uri-relative.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri-relative.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+            "sourceKey": "xtm2/in/occurrence-resourcedata-uri-relative.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-resourcedata-uri.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-resourcedata-uri.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-resourcedata-uri.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri.xtm",
+          "sourceKey": "xtm2/in/occurrence-resourcedata-uri.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-resourcedata-uri.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.isotopicmaps.org/cxtm</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.isotopicmaps.org/cxtm</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-resourcedata-uri.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourcedata-uri.xtm",
+            "sourceKey": "xtm2/in/occurrence-resourcedata-uri.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-resourceref-relative.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-resourceref-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref-relative.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-resourceref-relative.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref-relative.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref-relative.xtm",
+          "sourceKey": "xtm2/in/occurrence-resourceref-relative.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-resourceref-relative.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref-relative.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>photo.jpg</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>photo.jpg</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-resourceref-relative.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref-relative.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref-relative.xtm",
+            "sourceKey": "xtm2/in/occurrence-resourceref-relative.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-resourceref.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-resourceref.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-resourceref.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref.xtm",
+          "sourceKey": "xtm2/in/occurrence-resourceref.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-resourceref.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.isotopicmaps.org/cxtm</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>http://www.isotopicmaps.org/cxtm</value>\n<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-resourceref.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-resourceref.xtm",
+            "sourceKey": "xtm2/in/occurrence-resourceref.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate-merged.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-scope-duplicate-merged.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate-merged.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate-merged.xtm",
+          "sourceKey": "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate-merged.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#en</locator>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#en</locator>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-scope-duplicate-merged.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate-merged.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate-merged.xtm",
+            "sourceKey": "xtm2/in/occurrence-scope-duplicate-merged.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-scope-duplicate.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate.xtm",
+          "sourceKey": "xtm2/in/occurrence-scope-duplicate.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-scope-duplicate.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-scope-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope-duplicate.xtm",
+            "sourceKey": "xtm2/in/occurrence-scope-duplicate.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-scope.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope.xtm",
+          "sourceKey": "xtm2/in/occurrence-scope.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence-scope.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#english</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"2\"></type>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-scope.xtm",
+            "sourceKey": "xtm2/in/occurrence-scope.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence.xtm",
+      "reason": "Newly implemented supported occurrence core; full original baseline match.",
+      "before": {
+        "id": "xtm2/in/occurrence.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 17,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence.xtm",
+          "sourceKey": "xtm2/in/occurrence.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/in/occurrence.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence.xtm",
+        "condition": null,
+        "status": "deserialized",
+        "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+        "byteExact": true
+      },
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence.xtm), approximately 3:17: XTM occurrence is not implemented in this subset.",
+            "line": 3,
+            "column": 17,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence.xtm",
+            "sourceKey": "xtm2/in/occurrence.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/invalid/reifier-collision.xtm",
+      "reason": "Precise excluded occurrence II/reification boundary, not a registered PASS.",
+      "before": {
+        "id": "xtm2/invalid/reifier-collision.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/reifier-collision.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm), approximately 3:36: XTM occurrence is not implemented in this subset.",
+          "line": 3,
+          "column": 36,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+          "sourceKey": "xtm2/invalid/reifier-collision.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "after": {
+        "id": "xtm2/invalid/reifier-collision.xtm",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+        "condition": {
+          "class": "XTM-UNSUPPORTED",
+          "code": "unsupported-construct",
+          "detail": "XTM occurrence reification is not implemented in this subset.",
+          "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/reifier-collision.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset.",
+          "line": 3,
+          "column": 36,
+          "positionUnit": "approximate-SAX-line-column",
+          "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+          "sourceKey": "xtm2/invalid/reifier-collision.xtm",
+          "cause": null
+        },
+        "status": "rejected",
+        "actualCXTM": null,
+        "byteExact": false
+      },
+      "differences": [
+        {
+          "path": "/condition/detail",
+          "before": "XTM occurrence is not implemented in this subset.",
+          "after": "XTM occurrence reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/reifier-collision.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm), approximately 3:36: XTM occurrence is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/reifier-collision.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset."
+        }
+      ]
+    }
+  ]
+}

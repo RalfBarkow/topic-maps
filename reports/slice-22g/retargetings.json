@@ -1,0 +1,50 @@
+[
+  {
+    "file": "tests/xtm-identity.lisp",
+    "label": "unsupported-occurrence",
+    "before": "                  (\"unsupported-occurrence\" \"<topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData>v</resourceData></occurrence></topic>\" :unsupported-construct)",
+    "after": "                  (\"unsupported-occurrence\" \"<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>v</resourceData></occurrence></topic>\" :unsupported-construct)",
+    "purpose": "Preserve actual XTM-UNSUPPORTED versus syntax/native errors; the formerly unsupported core is supported, occurrence reification remains valid but excluded.",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "baseFileSHA256": "8b7ce61d8ad4ae524b7239055cc6309a50d09744880a26883cdc8c90ecb8e247",
+    "finalFileSHA256": "4b34d6bd243038075db54f869f885bea0330415f7cdb343d72eee4fb1abb0069",
+    "actualResultEvidence": "Complete ASDF XTM run: the original check labels remain present, still asserting actual XTM-UNSUPPORTED, :unsupported-construct and source context/position. Serialized controls and full log are retained in after/."
+  },
+  {
+    "file": "tests/xtm-name-scopes.lisp",
+    "label": "occurrence-stays-unsupported",
+    "before": "  (scope-error-control \"occurrence-stays-unsupported\" \"<topic id='a'><occurrence><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic>\" 'xtm-unsupported :unsupported-construct)",
+    "after": "  (scope-error-control \"occurrence-stays-unsupported\" \"<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic>\" 'xtm-unsupported :unsupported-construct)",
+    "purpose": "Preserve actual XTM-UNSUPPORTED versus syntax/native errors; the formerly unsupported core is supported, occurrence reification remains valid but excluded.",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "baseFileSHA256": "be904fa90267d042c369964c4d9418b1beaec52e3676e52be9d5d8c12ddc8ea2",
+    "finalFileSHA256": "343cebe8343e1aa6aa5c418dfc1f06c6df4955e38a80482a07092b0215bf48a2",
+    "actualResultEvidence": "Complete ASDF XTM run: the original check labels remain present, still asserting actual XTM-UNSUPPORTED, :unsupported-construct and source context/position. Serialized controls and full log are retained in after/."
+  },
+  {
+    "file": "tests/xtm-mergemap.lisp",
+    "label": "occurrence-XML-still-unsupported",
+    "before": "      (list \"occurrence-XML-still-unsupported\" (bytes (document \"<topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic>\")) 'xtm-unsupported :unsupported-construct)))",
+    "after": "      (list \"occurrence-XML-still-unsupported\" (bytes (document \"<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic>\")) 'xtm-unsupported :unsupported-construct)))",
+    "purpose": "Preserve actual XTM-UNSUPPORTED versus syntax/native errors; the formerly unsupported core is supported, occurrence reification remains valid but excluded.",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "baseFileSHA256": "0bdcb356a5611a715dc1d648eeddc7132a4f87977e7a24861af01aa689c84e19",
+    "finalFileSHA256": "1e595e230be814252f6718ffd19e54cc76abb69951f1e06de231d48d4b0550f2",
+    "actualResultEvidence": "Complete ASDF XTM run: the original check labels remain present, still asserting actual XTM-UNSUPPORTED, :unsupported-construct and source context/position. Serialized controls and full log are retained in after/."
+  },
+  {
+    "file": "tests/xtm-resource-datatypes.lisp",
+    "label": "datatype:occurrence-remains-unsupported",
+    "before": "    \"<topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData datatype='urn:custom'>V</resourceData></occurrence></topic>\"",
+    "after": "    \"<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='urn:custom'>V</resourceData></occurrence></topic>\"",
+    "purpose": "Preserve actual XTM-UNSUPPORTED versus syntax/native errors; the formerly unsupported core is supported, occurrence reification remains valid but excluded.",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "baseFileSHA256": "85c6224d7dbc76860d386d44c3c247606509f2a5bb9514949557d6222b6a5028",
+    "finalFileSHA256": "43ee3f61e4fb236ee3f5c2b012da30751f00b6033629d619decdbc5af10d4b75",
+    "actualResultEvidence": "Complete ASDF XTM run: the original check labels remain present, still asserting actual XTM-UNSUPPORTED, :unsupported-construct and source context/position. Serialized controls and full log are retained in after/."
+  }
+]

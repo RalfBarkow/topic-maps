@@ -1,0 +1,49 @@
+{
+  "kind": "slice-22g-normative-scope",
+  "references": [
+    {
+      "url": "https://www.isotopicmaps.org/sam/sam-xtm/",
+      "edition": "2006-06-19 public text, declares identity with ISO publication",
+      "clauses": [
+        "4.3.3",
+        "4.3.4",
+        "4.13",
+        "4.14",
+        "4.15",
+        "4.16.1",
+        "4.16.2",
+        "4.17",
+        "4.20",
+        "5"
+      ]
+    },
+    {
+      "url": "https://www.isotopicmaps.org/sam/sam-model/2006-06-18/",
+      "edition": "public text, declares identity with ISO publication",
+      "clauses": [
+        "4.4",
+        "5.6",
+        "6.2",
+        "6.5"
+      ]
+    }
+  ],
+  "derivedRequirements": [
+    "Occurrence belongs to Parent Topic, with required Type, optional Topic-set Scope and exactly one resource value.",
+    "Resource value and datatype use the existing qualified path; datatypes do not create Topics.",
+    "Native equality includes Parent, Type, Scope, Value and Datatype. Native operations maintain canonical references after identity merging."
+  ],
+  "observedEvidence": "actual original reads and retained native handles; complete CXTM comparisons; ASDF report and fresh-process diagnostics",
+  "editionLimits": "No new ISO text acquired. Public-text publication identity declarations and the previously documented Slice-22C edition limits remain explicit. No revision of the 13 historical decisions.",
+  "excluded": [
+    "Occurrence Item Identifiers",
+    "Occurrence Reification",
+    "xsd:anyType/XML canonicalization",
+    "Explicit Associations/Roles",
+    "Cyclic mergeMap semantics",
+    "Map-item identity changes"
+  ],
+  "anyTypeIsNormativelyValidButUnsupported": true,
+  "occurrenceDuplicateIID2NormativeQuestionUnchanged": true,
+  "newOriginalsLimitedToApprovedEleven": true
+}

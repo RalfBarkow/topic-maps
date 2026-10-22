@@ -1,0 +1,13 @@
+{
+  "checks": 487,
+  "readerPairs": 27,
+  "originalPairSourcesModelsAndFullCXTMUnchanged": true,
+  "differences": [
+    {
+      "path": "/pairs/30/xtmCondition/message",
+      "before": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:occurrence-scope-reifier (https://equivalence.example.invalid/gap-occurrence-scope-reifier/map), approximately 1:102: XTM occurrence is not implemented in this subset.",
+      "after": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:occurrence-scope-reifier (https://equivalence.example.invalid/gap-occurrence-scope-reifier/map), approximately 1:102: XTM occurrence reification is not implemented in this subset."
+    }
+  ],
+  "scope": "Only the existing unsupported occurrence-reification gap message is refined."
+}

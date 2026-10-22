@@ -214,7 +214,7 @@
       'xtm-unsupported :resource-data-datatype))
   (variant-reifier-error-control "datatype:unknown-XTM-structure" "<topic id='a'><unknown/></topic>" 'xtm-rejection :unexpected-element)
   (variant-reifier-error-control "datatype:occurrence-remains-unsupported"
-    "<topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData datatype='urn:custom'>V</resourceData></occurrence></topic>"
+    "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='urn:custom'>V</resourceData></occurrence></topic>"
     'xtm-unsupported :unsupported-construct)
   (variant-reifier-error-control "datatype:native-reifier-conflict"
     (format nil "<topic id='a'>~A</topic>" (variant-name-xml nil (concatenate 'string
@@ -230,8 +230,8 @@
       (lambda () (deserialize-octets raw :document-iri *document* :source-key "variant:datatype:raw-invalid-UTF8")))))
 
 (defun datatype-context-controls ()
-  ;; No XTM occurrence reader exists. Exercise the same validated resource node
-  ;; operation with both existing native value consumers, not occurrence parsing.
+  ;; Retain the resource-operation/native-consumer cross-check from Slice 22D.
+  ;; Slice 22G separately exercises genuine XTM occurrence deserialization.
   (dolist (resource (list (datatype-resource "urn:shared:type" " A&amp;B ")
                           (datatype-resource nil "V")
                           (datatype-resource (iri-datatype) "../sound")

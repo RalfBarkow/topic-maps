@@ -436,7 +436,7 @@
                   "<!DOCTYPE topicMap [<!ENTITY e SYSTEM 'file:///tmp/no-xtm-file'>]>"))
     (rejection (concatenate 'string "doctype:" body) (concatenate 'string body (document "")) 'xtm-xml-error :doctype-forbidden))
   (dolist (spec '(("unsupported-name-variant-resourceData-datatype" "<topic id='a'><name><value>Name</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" :resource-data-datatype)
-                  ("unsupported-occurrence" "<topic id='a'><occurrence><type><topicRef href='#t'/></type><resourceData>v</resourceData></occurrence></topic>" :unsupported-construct)
+                  ("unsupported-occurrence" "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>v</resourceData></occurrence></topic>" :unsupported-construct)
                   ("unsupported-association" "<association><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)
                   ("unsupported-mergemap" "<mergeMap href='other.xtm'/>" :resource-resolver-required)))
     (rejection (first spec) (document (second spec)) 'xtm-unsupported (third spec)))
@@ -490,10 +490,10 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
-  (setf *mergemap-controls* nil *mergemap-originals* nil *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
+  (setf *occurrence-outputs* nil *occurrence-controls* nil *mergemap-controls* nil *mergemap-originals* nil *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
   (handler-case
       (progn (original-contracts) (negative-original-controls) (negative-original-contracts)
-             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (result-classification-tests)
+             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (occurrence-original-contracts) (occurrence-tests) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -512,7 +512,7 @@
            (array (items) (coerce items 'vector)))
       (with-open-file (out pathname :direction :output :if-exists :supersede :external-format :utf-8)
         (topic-maps.test-foundation::emit-json-value
-          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 64 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration"
+          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification subset, 75 positive and eight cause-qualified negative original contracts; no CTM Mergemap integration"
                   "corpusCommit" "cd165b150176c1d6842b37be9cc9051b40d4996b"
                   "statuses" (fields "pass" (count :pass cases :key #'topic-maps.test-foundation:test-case-status)
                                      "fail" (count :fail cases :key #'topic-maps.test-foundation:test-case-status)
@@ -560,6 +560,8 @@
                   "datatypeControls" (array *datatype-controls*)
                   "mergemapControls" (array *mergemap-controls*)
                   "mergemapOriginalObservations" (array *mergemap-originals*)
+                  "occurrenceOriginals" (array *occurrence-outputs*)
+                  "occurrenceControls" (array *occurrence-controls*)
                   "actualAndExpected" (array (loop for (id actual expected model condition source-length) in *outputs* collect
                     (fields "id" id "actual" (when actual (babel:octets-to-string actual :encoding :utf-8))
                             "expected" (babel:octets-to-string expected :encoding :utf-8) "byteLength" (when actual (length actual))
