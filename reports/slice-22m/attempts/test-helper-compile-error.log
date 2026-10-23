@@ -1,0 +1,66 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+; 
+; caught ERROR:
+;   READ error during COMPILE-FILE:
+;   
+;     unmatched close parenthesis
+;   
+;       Line: 127, Column: 128, File-Position: 10644
+;   
+;       Stream: #<SB-INT:FORM-TRACKING-STREAM for "file /Users/rgb/workspace/topic-maps/tests/xtm-association-reification.lisp" {70080996B3}>
+Unhandled UIOP/LISP-BUILD:COMPILE-FILE-ERROR in thread #<SB-THREAD:THREAD tid=259 "main thread" RUNNING
+                                                          {7000828103}>:
+  COMPILE-FILE-ERROR while compiling
+   #<CL-SOURCE-FILE "topic-maps/xtm/tests" "tests/xtm-association-reification">
+
+Backtrace for: #<SB-THREAD:THREAD tid=259 "main thread" RUNNING {7000828103}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {7005896F43}> #<unused argument> :QUIT T)
+1: (SB-DEBUG::RUN-HOOK *INVOKE-DEBUGGER-HOOK* #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {7005896F43}>)
+2: (INVOKE-DEBUGGER #<UIOP/LISP-BUILD:COMPILE-FILE-ERROR {7005896F43}>)
+3: (ERROR UIOP/LISP-BUILD:COMPILE-FILE-ERROR :CONTEXT-FORMAT "~/asdf-action::format-action/" :CONTEXT-ARGUMENTS ((#<ASDF/LISP-ACTION:COMPILE-OP > . #<ASDF/LISP-ACTION:CL-SOURCE-FILE "topic-maps/xtm/tests" "tests/xtm-association-reification">)))
+4: (UIOP/LISP-BUILD:CHECK-LISP-COMPILE-RESULTS NIL T T "~/asdf-action::format-action/" ((#<ASDF/LISP-ACTION:COMPILE-OP > . #<ASDF/LISP-ACTION:CL-SOURCE-FILE "topic-maps/xtm/tests" "tests/xtm-association-reification">)))
+5: ((SB-PCL::EMF ASDF/ACTION:PERFORM) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:COMPILE-OP > #<ASDF/LISP-ACTION:CL-SOURCE-FILE "topic-maps/xtm/tests" "tests/xtm-association-reification">)
+6: ((LAMBDA NIL :IN ASDF/ACTION:CALL-WHILE-VISITING-ACTION))
+7: ((:METHOD ASDF/ACTION:PERFORM-WITH-RESTARTS :AROUND (T T)) #<ASDF/LISP-ACTION:COMPILE-OP > #<ASDF/LISP-ACTION:CL-SOURCE-FILE "topic-maps/xtm/tests" "tests/xtm-association-reification">) [fast-method]
+8: ((:METHOD ASDF/PLAN:PERFORM-PLAN (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {7003C40AB3}>) [fast-method]
+9: ((FLET SB-C::WITH-IT :IN SB-C::%WITH-COMPILATION-UNIT))
+10: ((:METHOD ASDF/PLAN:PERFORM-PLAN :AROUND (T)) #<ASDF/PLAN:SEQUENTIAL-PLAN {7003C40AB3}>) [fast-method]
+11: ((:METHOD ASDF/OPERATE:OPERATE (ASDF/OPERATION:OPERATION ASDF/COMPONENT:COMPONENT)) #<ASDF/LISP-ACTION:TEST-OP > #<ASDF/SYSTEM:SYSTEM "topic-maps/xtm"> :PLAN-CLASS NIL :PLAN-OPTIONS NIL) [fast-method]
+12: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> #<ASDF/LISP-ACTION:TEST-OP > #<ASDF/SYSTEM:SYSTEM "topic-maps/xtm">)
+13: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+14: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) #<ASDF/LISP-ACTION:TEST-OP > #<ASDF/SYSTEM:SYSTEM "topic-maps/xtm">) [fast-method]
+15: ((SB-PCL::EMF ASDF/OPERATE:OPERATE) #<unused argument> #<unused argument> ASDF/LISP-ACTION:TEST-OP "topic-maps/xtm")
+16: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+17: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/LISP-ACTION:TEST-OP "topic-maps/xtm") [fast-method]
+18: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<FUNCTION (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {7003B8EDFB}> :OVERRIDE T :KEY NIL :OVERRIDE-CACHE T :OVERRIDE-FORCING NIL)
+19: ((LAMBDA NIL :IN ASDF/OPERATE:OPERATE))
+20: (ASDF/SESSION:CALL-WITH-ASDF-SESSION #<FUNCTION (LAMBDA NIL :IN ASDF/OPERATE:OPERATE) {7003B64A8B}> :OVERRIDE NIL :KEY NIL :OVERRIDE-CACHE NIL :OVERRIDE-FORCING NIL)
+21: ((:METHOD ASDF/OPERATE:OPERATE :AROUND (T T)) ASDF/LISP-ACTION:TEST-OP "topic-maps/xtm") [fast-method]
+22: (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm")
+23: (SB-INT:SIMPLE-EVAL-IN-LEXENV (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm") #<NULL-LEXENV>)
+24: (EVAL-TLF (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm") 4 NIL)
+25: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm") 4)
+26: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (ASDF/OPERATE:TEST-SYSTEM "topic-maps/xtm") :CURRENT-INDEX 4)
+27: (SB-C::%DO-FORMS-FROM-INFO #<FUNCTION (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {ECAF3DB}> #<SB-C::SOURCE-INFO {70018526F3}> SB-C::INPUT-ERROR-IN-LOAD)
+28: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/scripts/fresh-xtm.lisp" {7000828F83}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+29: ((LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/scripts/fresh-xtm.lisp" {7000828F83}> NIL)
+30: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<FUNCTION (LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) {ECAF79B}> #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/scripts/fresh-xtm.lisp" {7000828F83}> NIL #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/scripts/fresh-xtm.lisp" {7000828F83}>)
+31: (LOAD #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/scripts/fresh-xtm.lisp" {7000828F83}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST :ERROR :EXTERNAL-FORMAT :DEFAULT)
+32: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/scripts/fresh-xtm.lisp" {7000828F83}>)
+33: ((FLET SB-UNIX::BODY :IN SB-IMPL::PROCESS-SCRIPT))
+34: ((FLET "WITHOUT-INTERRUPTS-BODY-" :IN SB-IMPL::PROCESS-SCRIPT))
+35: (SB-IMPL::PROCESS-SCRIPT "scripts/fresh-xtm.lisp")
+36: (SB-IMPL::TOPLEVEL-INIT)
+37: ((FLET SB-UNIX::BODY :IN SB-IMPL::START-LISP))
+38: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::START-LISP))
+39: (SB-IMPL::%START-LISP)
+
+unhandled condition in --disable-debugger mode, quitting
+; 
+; compilation unit aborted
+;   caught 2 fatal ERROR conditions
+;   caught 1 ERROR condition

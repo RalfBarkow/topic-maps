@@ -1,0 +1,32 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+XTM-CHECK-PASS association-reifier-native:subjectIdentifier:assign-and-inverse
+Unhandled SB-INT:SIMPLE-PROGRAM-ERROR in thread #<SB-THREAD:THREAD tid=259 "main thread" RUNNING
+                                                   {7000828103}>:
+  invalid number of arguments: 5
+
+Backtrace for: #<SB-THREAD:THREAD tid=259 "main thread" RUNNING {7000828103}>
+0: (INTERN-TOPIC #<TOPIC-MAP 7 topics, 2 associations {700B18CC83}> :ITEM-IDENTIFIER "urn:p" :SUBJECT-IDENTIFIER "urn:common") [external]
+1: (ARR-NATIVE-TESTS)
+2: (SB-INT:SIMPLE-EVAL-IN-LEXENV (ARR-NATIVE-TESTS) #<NULL-LEXENV>)
+3: (SB-EXT:EVAL-TLF (ARR-NATIVE-TESTS) 8 NIL)
+4: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (ARR-NATIVE-TESTS) 8)
+5: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (ARR-NATIVE-TESTS) :CURRENT-INDEX 8)
+6: (SB-C::%DO-FORMS-FROM-INFO #<FUNCTION (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {55B73DB}> #<SB-C::SOURCE-INFO {7001852703}> SB-C::INPUT-ERROR-IN-LOAD)
+7: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-22m/api-preflight.lisp" {7000829153}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+8: ((LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-22m/api-preflight.lisp" {7000829153}> NIL)
+9: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<FUNCTION (LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) {55B779B}> #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-22m/api-preflight.lisp" {7000829153}> NIL #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-22m/api-preflight.lisp" {7000829153}>)
+10: (LOAD #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-22m/api-preflight.lisp" {7000829153}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST :ERROR :EXTERNAL-FORMAT :DEFAULT)
+11: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /Users/rgb/workspace/topic-maps/reports/slice-22m/api-preflight.lisp" {7000829153}>)
+12: ((FLET SB-UNIX::BODY :IN SB-IMPL::PROCESS-SCRIPT))
+13: ((FLET "WITHOUT-INTERRUPTS-BODY-" :IN SB-IMPL::PROCESS-SCRIPT))
+14: (SB-IMPL::PROCESS-SCRIPT "reports/slice-22m/api-preflight.lisp")
+15: (SB-IMPL::TOPLEVEL-INIT)
+16: ((FLET SB-UNIX::BODY :IN SB-IMPL::START-LISP))
+17: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::START-LISP))
+18: (SB-IMPL::%START-LISP)
+
+unhandled condition in --disable-debugger mode, quitting

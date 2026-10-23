@@ -1,0 +1,120 @@
+{
+  "all29PairsAnd3ContrastsUnchanged": true,
+  "remainingGapIsRoleReification": true,
+  "checks": 515,
+  "differences": [
+    {
+      "path": "/missingCapability",
+      "before": "XTM association deserialization",
+      "after": "XTM role deserialization"
+    },
+    {
+      "path": "/xtmCondition/column",
+      "before": 90,
+      "after": 182
+    },
+    {
+      "path": "/xtmCondition/message",
+      "before": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:association-role-scope-reifiers (https://equivalence.example.invalid/gap-association-role-scope-reifiers/map), approximately 1:90: XTM association reification is not implemented in this subset.",
+      "after": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:association-role-scope-reifiers (https://equivalence.example.invalid/gap-association-role-scope-reifiers/map), approximately 1:182: XTM role reification is not implemented in this subset."
+    }
+  ],
+  "before": {
+    "id": "association-role-scope-reifiers",
+    "kind": "reader-capability-gap-not-equivalence-PASS",
+    "clauses": [
+      "CTM 3.3.9-3.3.10,3.13",
+      "XTM 4.3.2,4.18-4.19",
+      "TMDM 5.3.4,5.7-5.8"
+    ],
+    "documentIRI": "https://equivalence.example.invalid/gap-association-role-scope-reifiers/map",
+    "ctmSource": "rel(role: a ~rr)@s ~ar",
+    "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#ar'><type><topicRef href='#rel'/></type><scope><topicRef href='#s'/></scope><role reifier='#rr'><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association></topicMap>",
+    "ctmCondition": null,
+    "xtmCondition": {
+      "class": "XTM-UNSUPPORTED",
+      "code": "unsupported-construct",
+      "line": 1,
+      "column": 90,
+      "sourceKey": "gap:XTM:association-role-scope-reifiers",
+      "documentIRI": "https://equivalence.example.invalid/gap-association-role-scope-reifiers/map",
+      "position": null,
+      "message": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:association-role-scope-reifiers (https://equivalence.example.invalid/gap-association-role-scope-reifiers/map), approximately 1:90: XTM association reification is not implemented in this subset."
+    },
+    "ctmModel": {
+      "countOrder": [
+        "topics",
+        "names",
+        "variants",
+        "occurrences",
+        "associations",
+        "roles",
+        "reifiedItems"
+      ],
+      "counts": [
+        6,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "topicIdentities": "(((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n  NIL NIL))",
+      "completeNativePropertyTuples": "(((:ASSOCIATION\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n    NIL NIL)\n   (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n     NIL NIL))\n   ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n      NIL NIL))))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n   NIL NIL)\n  NIL)\n ((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n     NIL NIL))\n   ((:ASSOCIATION\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n      NIL NIL)\n     (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n       NIL NIL))\n     ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n        NIL NIL)))))))\n ((:ROLE\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n      NIL NIL))\n    ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n       NIL NIL))))\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n    NIL NIL)\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n    NIL NIL))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n   NIL NIL)\n  NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n  NIL\n  (NIL NIL\n   ((:ROLE\n     (:ASSOCIATION\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n       NIL NIL)\n      (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n        NIL NIL))\n      ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n         NIL NIL)\n        ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n         NIL NIL))))\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n      NIL NIL)))\n   NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n  NIL\n  (NIL NIL NIL\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n      NIL NIL))\n    ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n       NIL NIL))))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n  NIL (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n  NIL (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n  NIL\n  (NIL NIL NIL\n   (:ROLE\n    (:ASSOCIATION\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n      NIL NIL)\n     (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n       NIL NIL))\n     ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n        NIL NIL))))\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n     NIL NIL))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n  NIL (NIL NIL NIL NIL)))"
+    },
+    "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#ar</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#rel</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#role</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#rr</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"2\">\n<type topicref=\"3\"></type>\n<role number=\"1\" reifier=\"5\">\n<player topicref=\"1\"></player>\n<type topicref=\"4\"></type>\n</role>\n<scope>\n<scopingTopic topicref=\"6\"></scopingTopic>\n</scope>\n</association>\n</topicMap>\n",
+    "xtmModel": null,
+    "successfulReaderPair": false,
+    "missingCapability": "XTM association deserialization"
+  },
+  "after": {
+    "id": "association-role-scope-reifiers",
+    "kind": "reader-capability-gap-not-equivalence-PASS",
+    "clauses": [
+      "CTM 3.3.9-3.3.10,3.13",
+      "XTM 4.3.2,4.18-4.19",
+      "TMDM 5.3.4,5.7-5.8"
+    ],
+    "documentIRI": "https://equivalence.example.invalid/gap-association-role-scope-reifiers/map",
+    "ctmSource": "rel(role: a ~rr)@s ~ar",
+    "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#ar'><type><topicRef href='#rel'/></type><scope><topicRef href='#s'/></scope><role reifier='#rr'><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association></topicMap>",
+    "ctmCondition": null,
+    "xtmCondition": {
+      "class": "XTM-UNSUPPORTED",
+      "code": "unsupported-construct",
+      "line": 1,
+      "column": 182,
+      "sourceKey": "gap:XTM:association-role-scope-reifiers",
+      "documentIRI": "https://equivalence.example.invalid/gap-association-role-scope-reifiers/map",
+      "position": null,
+      "message": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:association-role-scope-reifiers (https://equivalence.example.invalid/gap-association-role-scope-reifiers/map), approximately 1:182: XTM role reification is not implemented in this subset."
+    },
+    "ctmModel": {
+      "countOrder": [
+        "topics",
+        "names",
+        "variants",
+        "occurrences",
+        "associations",
+        "roles",
+        "reifiedItems"
+      ],
+      "counts": [
+        6,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "topicIdentities": "(((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n  NIL NIL)\n ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n  NIL NIL))",
+      "completeNativePropertyTuples": "(((:ASSOCIATION\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n    NIL NIL)\n   (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n     NIL NIL))\n   ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n      NIL NIL))))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n   NIL NIL)\n  NIL)\n ((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n     NIL NIL))\n   ((:ASSOCIATION\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n      NIL NIL)\n     (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n       NIL NIL))\n     ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n        NIL NIL)))))))\n ((:ROLE\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n      NIL NIL))\n    ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n       NIL NIL))))\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n    NIL NIL)\n   ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n    NIL NIL))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n   NIL NIL)\n  NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n  NIL\n  (NIL NIL\n   ((:ROLE\n     (:ASSOCIATION\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n       NIL NIL)\n      (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n        NIL NIL))\n      ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n         NIL NIL)\n        ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n         NIL NIL))))\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n      NIL NIL)))\n   NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#ar\")\n  NIL\n  (NIL NIL NIL\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n     NIL NIL)\n    (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n      NIL NIL))\n    ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n       NIL NIL))))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n  NIL (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n  NIL (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rr\")\n  NIL\n  (NIL NIL NIL\n   (:ROLE\n    (:ASSOCIATION\n     ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#rel\")\n      NIL NIL)\n     (((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n       NIL NIL))\n     ((((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n        NIL NIL))))\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#role\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#a\")\n     NIL NIL))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/gap-association-role-scope-reifiers/map#s\")\n  NIL (NIL NIL NIL NIL)))"
+    },
+    "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#ar</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#rel</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#role</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#rr</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"2\">\n<type topicref=\"3\"></type>\n<role number=\"1\" reifier=\"5\">\n<player topicref=\"1\"></player>\n<type topicref=\"4\"></type>\n</role>\n<scope>\n<scopingTopic topicref=\"6\"></scopingTopic>\n</scope>\n</association>\n</topicMap>\n",
+    "xtmModel": null,
+    "successfulReaderPair": false,
+    "missingCapability": "XTM role deserialization"
+  }
+}

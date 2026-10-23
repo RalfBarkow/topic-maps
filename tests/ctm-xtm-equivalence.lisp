@@ -342,7 +342,7 @@
   (dolist (row (list
     (list "association-role-scope-reifiers" "rel(role: a ~rr)@s ~ar"
       (xml "<association reifier='#ar'><type><topicRef href='#rel'/></type><scope><topicRef href='#s'/></scope><role reifier='#rr'><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association>")
-      "association" '("CTM 3.3.9-3.3.10,3.13" "XTM 4.3.2,4.18-4.19" "TMDM 5.3.4,5.7-5.8"))))
+      "role" '("CTM 3.3.9-3.3.10,3.13" "XTM 4.3.2,4.18-4.19" "TMDM 5.3.4,5.7-5.8"))))
     (destructuring-bind (id ctm-source xtm-source element clauses) row
       (let* ((doc (format nil "https://equivalence.example.invalid/gap-~A/map" id))
              (ctm (execute :ctm ctm-source doc (concatenate 'string "gap:CTM:" id)))

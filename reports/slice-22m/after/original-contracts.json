@@ -1,0 +1,1211 @@
+[
+  {
+    "id": "xtm2/in/association-reifier.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm",
+    "sourceKey": "xtm2/in/association-reifier.xtm",
+    "sourceBytes": 304,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E0A20203C6173736F63696174696F6E20726569666965723D222372656966696572223E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C6574797065222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223746F706963222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A3C2F746F7069634D61703E",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">\n  <association reifier=\"#reifier\">\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype\"/>\n      </type>\n      <topicRef href=\"#topic\"/>\n    </role>\n  </association>\n</topicMap>",
+    "qualifiedParserCalls": 1,
+    "originalOctetsEQ": true,
+    "model": {
+      "existingModel": {
+        "existingModel": {
+          "nativeModel": {
+            "existingModel": {
+              "existingCharacteristics": {
+                "identity": {
+                  "identity": {
+                    "nameModel": {
+                      "identity": {
+                        "topicCount": 4,
+                        "associationCount": 1,
+                        "canonicalParentsAndInverseReferences": true,
+                        "topics": [
+                          {
+                            "ordinal": 1,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm#assoctype"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 2,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm#roletype"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 3,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm#topic"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 4,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm#reifier"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          }
+                        ],
+                        "associations": [
+                          {
+                            "type": 1,
+                            "roles": [
+                              {
+                                "type": 2,
+                                "player": 3
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "mapItemIdentifiers": [],
+                      "canonicalNameParentTypeReferences": true,
+                      "names": []
+                    },
+                    "canonicalVariantReferences": true,
+                    "variants": []
+                  },
+                  "canonicalNameReifierInverseEQ": true,
+                  "mapReifierTopic": null,
+                  "nameReifierTopics": [],
+                  "topicReifiedNames": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                "canonicalVariantReifierInverseEQ": true,
+                "variantReifierTopics": [],
+                "topicReifiedVariants": [
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "canonicalOccurrenceReferencesEQ": true,
+              "occurrenceCount": 0,
+              "occurrences": []
+            },
+            "canonicalAssociationRoleReferencesEQ": true,
+            "topicCount": 4,
+            "associationCount": 1,
+            "roleCount": 1,
+            "associations": [
+              {
+                "parentIsActualMapEQ": true,
+                "type": 1,
+                "scope": [],
+                "itemIdentifiers": [],
+                "roles": [
+                  {
+                    "parentAssociation": 1,
+                    "type": 2,
+                    "player": 3,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  }
+                ]
+              }
+            ]
+          },
+          "globalItemIdentifiersUnique": true,
+          "items": [
+            {
+              "kind": "ASSOCIATION",
+              "identifiers": []
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            }
+          ]
+        },
+        "canonicalOccurrenceReifierInverseEQ": true,
+        "occurrenceReifiers": []
+      },
+      "canonicalAssociationReifierInverseEQ": true,
+      "associationReifiers": [
+        {
+          "associationItemIdentifiers": [],
+          "reifierItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm#reifier"
+          ],
+          "inverseReifiedEQ": true
+        }
+      ]
+    },
+    "associationCountsAfterEachRead": [
+      1
+    ],
+    "normalizationStages": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "observedNativeHandles": 6,
+    "oldHandlesCanonicalAndLive": true,
+    "actualBytes": 612,
+    "expectedBytes": 612,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\" reifier=\"2\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"4\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\" reifier=\"2\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"4\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "condition": null,
+    "status": "pass",
+    "actualSHA256": "0fe758d1fba41541eab3cdfbef8141a75041865e06e6a6b1b73d42607f201433",
+    "completeByteExact": true,
+    "sourceSHA256": "2a2bf470bd090595d5641d4f52c8302b5d11836b46573eba3b2e5524054f50ad",
+    "baselineSHA256": "0fe758d1fba41541eab3cdfbef8141a75041865e06e6a6b1b73d42607f201433"
+  },
+  {
+    "id": "xtm2/in/association-duplicate-reified.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm",
+    "sourceKey": "xtm2/in/association-duplicate-reified.xtm",
+    "sourceBytes": 796,
+    "sourceHex": "3C746F7069634D61700A20202020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F220A2020202076657273696F6E3D22322E30223E0A0A20203C6173736F63696174696F6E20726569666965723D22237265696669657231223E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706531222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657231222F3E0A202020203C2F726F6C653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706532222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657232222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A0A20203C6173736F63696174696F6E20726569666965723D22237265696669657231223E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706531222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657231222F3E0A202020203C2F726F6C653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706532222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657232222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A3C2F746F7069634D61703E",
+    "sourceText": "<topicMap\n    xmlns=\"http://www.topicmaps.org/xtm/\"\n    version=\"2.0\">\n\n  <association reifier=\"#reifier1\">\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype1\"/>\n      </type>\n      <topicRef href=\"#player1\"/>\n    </role>\n    <role>\n      <type>\n        <topicRef href=\"#roletype2\"/>\n      </type>\n      <topicRef href=\"#player2\"/>\n    </role>\n  </association>\n\n  <association reifier=\"#reifier1\">\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype1\"/>\n      </type>\n      <topicRef href=\"#player1\"/>\n    </role>\n    <role>\n      <type>\n        <topicRef href=\"#roletype2\"/>\n      </type>\n      <topicRef href=\"#player2\"/>\n    </role>\n  </association>\n</topicMap>",
+    "qualifiedParserCalls": 1,
+    "originalOctetsEQ": true,
+    "model": {
+      "existingModel": {
+        "existingModel": {
+          "nativeModel": {
+            "existingModel": {
+              "existingCharacteristics": {
+                "identity": {
+                  "identity": {
+                    "nameModel": {
+                      "identity": {
+                        "topicCount": 6,
+                        "associationCount": 1,
+                        "canonicalParentsAndInverseReferences": true,
+                        "topics": [
+                          {
+                            "ordinal": 1,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm#assoctype"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 2,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm#roletype1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 3,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm#player1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 4,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm#roletype2"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 5,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm#player2"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 6,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm#reifier1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          }
+                        ],
+                        "associations": [
+                          {
+                            "type": 1,
+                            "roles": [
+                              {
+                                "type": 2,
+                                "player": 3
+                              },
+                              {
+                                "type": 4,
+                                "player": 5
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "mapItemIdentifiers": [],
+                      "canonicalNameParentTypeReferences": true,
+                      "names": []
+                    },
+                    "canonicalVariantReferences": true,
+                    "variants": []
+                  },
+                  "canonicalNameReifierInverseEQ": true,
+                  "mapReifierTopic": null,
+                  "nameReifierTopics": [],
+                  "topicReifiedNames": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                "canonicalVariantReifierInverseEQ": true,
+                "variantReifierTopics": [],
+                "topicReifiedVariants": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "canonicalOccurrenceReferencesEQ": true,
+              "occurrenceCount": 0,
+              "occurrences": []
+            },
+            "canonicalAssociationRoleReferencesEQ": true,
+            "topicCount": 6,
+            "associationCount": 1,
+            "roleCount": 2,
+            "associations": [
+              {
+                "parentIsActualMapEQ": true,
+                "type": 1,
+                "scope": [],
+                "itemIdentifiers": [],
+                "roles": [
+                  {
+                    "parentAssociation": 1,
+                    "type": 2,
+                    "player": 3,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  },
+                  {
+                    "parentAssociation": 1,
+                    "type": 4,
+                    "player": 5,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  }
+                ]
+              }
+            ]
+          },
+          "globalItemIdentifiersUnique": true,
+          "items": [
+            {
+              "kind": "ASSOCIATION",
+              "identifiers": []
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            }
+          ]
+        },
+        "canonicalOccurrenceReifierInverseEQ": true,
+        "occurrenceReifiers": []
+      },
+      "canonicalAssociationReifierInverseEQ": true,
+      "associationReifiers": [
+        {
+          "associationItemIdentifiers": [],
+          "reifierItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm#reifier1"
+          ],
+          "inverseReifiedEQ": true
+        }
+      ]
+    },
+    "associationCountsAfterEachRead": [
+      1,
+      1
+    ],
+    "normalizationStages": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        4,
+        1,
+        2
+      ]
+    ],
+    "observedNativeHandles": 12,
+    "oldHandlesCanonicalAndLive": true,
+    "actualBytes": 941,
+    "expectedBytes": 941,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "condition": null,
+    "status": "pass",
+    "actualSHA256": "2c5a792e5940bf9eb17dd16dd4d125f0830d31cb12b12e7190d7ed6870a1745d",
+    "completeByteExact": true,
+    "sourceSHA256": "29c57bf6921b51d8081895136613e4361c7846b9fd89c8ee7aa5412ccdaa832d",
+    "baselineSHA256": "2c5a792e5940bf9eb17dd16dd4d125f0830d31cb12b12e7190d7ed6870a1745d"
+  },
+  {
+    "id": "xtm2/in/association-duplicate-reified2.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm",
+    "sourceKey": "xtm2/in/association-duplicate-reified2.xtm",
+    "sourceBytes": 836,
+    "sourceHex": "3C746F7069634D61700A20202020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F220A2020202076657273696F6E3D22322E30223E0A0A20203C6173736F63696174696F6E20726569666965723D22237265696669657231223E0A202020203C6974656D4964656E7469747920687265663D22236173736F63696174696F6E222F3E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706531222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657231222F3E0A202020203C2F726F6C653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706532222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657232222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A0A20203C6173736F63696174696F6E20726569666965723D22237265696669657231223E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706531222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657231222F3E0A202020203C2F726F6C653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706532222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657232222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A3C2F746F7069634D61703E",
+    "sourceText": "<topicMap\n    xmlns=\"http://www.topicmaps.org/xtm/\"\n    version=\"2.0\">\n\n  <association reifier=\"#reifier1\">\n    <itemIdentity href=\"#association\"/>\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype1\"/>\n      </type>\n      <topicRef href=\"#player1\"/>\n    </role>\n    <role>\n      <type>\n        <topicRef href=\"#roletype2\"/>\n      </type>\n      <topicRef href=\"#player2\"/>\n    </role>\n  </association>\n\n  <association reifier=\"#reifier1\">\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype1\"/>\n      </type>\n      <topicRef href=\"#player1\"/>\n    </role>\n    <role>\n      <type>\n        <topicRef href=\"#roletype2\"/>\n      </type>\n      <topicRef href=\"#player2\"/>\n    </role>\n  </association>\n</topicMap>",
+    "qualifiedParserCalls": 1,
+    "originalOctetsEQ": true,
+    "model": {
+      "existingModel": {
+        "existingModel": {
+          "nativeModel": {
+            "existingModel": {
+              "existingCharacteristics": {
+                "identity": {
+                  "identity": {
+                    "nameModel": {
+                      "identity": {
+                        "topicCount": 6,
+                        "associationCount": 1,
+                        "canonicalParentsAndInverseReferences": true,
+                        "topics": [
+                          {
+                            "ordinal": 1,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#assoctype"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 2,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#roletype1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 3,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#player1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 4,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#roletype2"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 5,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#player2"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 6,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#reifier1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          }
+                        ],
+                        "associations": [
+                          {
+                            "type": 1,
+                            "roles": [
+                              {
+                                "type": 2,
+                                "player": 3
+                              },
+                              {
+                                "type": 4,
+                                "player": 5
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "mapItemIdentifiers": [],
+                      "canonicalNameParentTypeReferences": true,
+                      "names": []
+                    },
+                    "canonicalVariantReferences": true,
+                    "variants": []
+                  },
+                  "canonicalNameReifierInverseEQ": true,
+                  "mapReifierTopic": null,
+                  "nameReifierTopics": [],
+                  "topicReifiedNames": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                "canonicalVariantReifierInverseEQ": true,
+                "variantReifierTopics": [],
+                "topicReifiedVariants": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "canonicalOccurrenceReferencesEQ": true,
+              "occurrenceCount": 0,
+              "occurrences": []
+            },
+            "canonicalAssociationRoleReferencesEQ": true,
+            "topicCount": 6,
+            "associationCount": 1,
+            "roleCount": 2,
+            "associations": [
+              {
+                "parentIsActualMapEQ": true,
+                "type": 1,
+                "scope": [],
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#association"
+                ],
+                "roles": [
+                  {
+                    "parentAssociation": 1,
+                    "type": 2,
+                    "player": 3,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  },
+                  {
+                    "parentAssociation": 1,
+                    "type": 4,
+                    "player": 5,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  }
+                ]
+              }
+            ]
+          },
+          "globalItemIdentifiersUnique": true,
+          "items": [
+            {
+              "kind": "ASSOCIATION",
+              "identifiers": [
+                "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#association"
+              ]
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            }
+          ]
+        },
+        "canonicalOccurrenceReifierInverseEQ": true,
+        "occurrenceReifiers": []
+      },
+      "canonicalAssociationReifierInverseEQ": true,
+      "associationReifiers": [
+        {
+          "associationItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#association"
+          ],
+          "reifierItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm#reifier1"
+          ],
+          "inverseReifiedEQ": true
+        }
+      ]
+    },
+    "associationCountsAfterEachRead": [
+      1,
+      1
+    ],
+    "normalizationStages": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        4,
+        1,
+        2
+      ]
+    ],
+    "observedNativeHandles": 12,
+    "oldHandlesCanonicalAndLive": true,
+    "actualBytes": 1010,
+    "expectedBytes": 1010,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "condition": null,
+    "status": "pass",
+    "actualSHA256": "6dd8db92fd03b7f9321af9f68bc1870292947942a0c4e5f1b334d79edd525707",
+    "completeByteExact": true,
+    "sourceSHA256": "b4feebd2d10d49893c5375148f634b3cb703878d57f9c35a86ffbea7ba796dd6",
+    "baselineSHA256": "6dd8db92fd03b7f9321af9f68bc1870292947942a0c4e5f1b334d79edd525707"
+  },
+  {
+    "id": "xtm2/in/association-duplicate-reified3.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm",
+    "sourceKey": "xtm2/in/association-duplicate-reified3.xtm",
+    "sourceBytes": 836,
+    "sourceHex": "3C746F7069634D61700A20202020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F220A2020202076657273696F6E3D22322E30223E0A0A20203C6173736F63696174696F6E20726569666965723D22237265696669657231223E0A202020203C6974656D4964656E7469747920687265663D22236173736F63696174696F6E222F3E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706531222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657231222F3E0A202020203C2F726F6C653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706532222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657232222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A0A20203C6173736F63696174696F6E20726569666965723D22237265696669657231223E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706531222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657231222F3E0A202020203C2F726F6C653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706532222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657232222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A3C2F746F7069634D61703E",
+    "sourceText": "<topicMap\n    xmlns=\"http://www.topicmaps.org/xtm/\"\n    version=\"2.0\">\n\n  <association reifier=\"#reifier1\">\n    <itemIdentity href=\"#association\"/>\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype1\"/>\n      </type>\n      <topicRef href=\"#player1\"/>\n    </role>\n    <role>\n      <type>\n        <topicRef href=\"#roletype2\"/>\n      </type>\n      <topicRef href=\"#player2\"/>\n    </role>\n  </association>\n\n  <association reifier=\"#reifier1\">\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype1\"/>\n      </type>\n      <topicRef href=\"#player1\"/>\n    </role>\n    <role>\n      <type>\n        <topicRef href=\"#roletype2\"/>\n      </type>\n      <topicRef href=\"#player2\"/>\n    </role>\n  </association>\n</topicMap>",
+    "qualifiedParserCalls": 1,
+    "originalOctetsEQ": true,
+    "model": {
+      "existingModel": {
+        "existingModel": {
+          "nativeModel": {
+            "existingModel": {
+              "existingCharacteristics": {
+                "identity": {
+                  "identity": {
+                    "nameModel": {
+                      "identity": {
+                        "topicCount": 6,
+                        "associationCount": 1,
+                        "canonicalParentsAndInverseReferences": true,
+                        "topics": [
+                          {
+                            "ordinal": 1,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#assoctype"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 2,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#roletype1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 3,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#player1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 4,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#roletype2"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 5,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#player2"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 6,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#reifier1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          }
+                        ],
+                        "associations": [
+                          {
+                            "type": 1,
+                            "roles": [
+                              {
+                                "type": 2,
+                                "player": 3
+                              },
+                              {
+                                "type": 4,
+                                "player": 5
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "mapItemIdentifiers": [],
+                      "canonicalNameParentTypeReferences": true,
+                      "names": []
+                    },
+                    "canonicalVariantReferences": true,
+                    "variants": []
+                  },
+                  "canonicalNameReifierInverseEQ": true,
+                  "mapReifierTopic": null,
+                  "nameReifierTopics": [],
+                  "topicReifiedNames": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                "canonicalVariantReifierInverseEQ": true,
+                "variantReifierTopics": [],
+                "topicReifiedVariants": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "canonicalOccurrenceReferencesEQ": true,
+              "occurrenceCount": 0,
+              "occurrences": []
+            },
+            "canonicalAssociationRoleReferencesEQ": true,
+            "topicCount": 6,
+            "associationCount": 1,
+            "roleCount": 2,
+            "associations": [
+              {
+                "parentIsActualMapEQ": true,
+                "type": 1,
+                "scope": [],
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#association"
+                ],
+                "roles": [
+                  {
+                    "parentAssociation": 1,
+                    "type": 2,
+                    "player": 3,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  },
+                  {
+                    "parentAssociation": 1,
+                    "type": 4,
+                    "player": 5,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  }
+                ]
+              }
+            ]
+          },
+          "globalItemIdentifiersUnique": true,
+          "items": [
+            {
+              "kind": "ASSOCIATION",
+              "identifiers": [
+                "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#association"
+              ]
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            }
+          ]
+        },
+        "canonicalOccurrenceReifierInverseEQ": true,
+        "occurrenceReifiers": []
+      },
+      "canonicalAssociationReifierInverseEQ": true,
+      "associationReifiers": [
+        {
+          "associationItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#association"
+          ],
+          "reifierItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm#reifier1"
+          ],
+          "inverseReifiedEQ": true
+        }
+      ]
+    },
+    "associationCountsAfterEachRead": [
+      1,
+      1
+    ],
+    "normalizationStages": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        4,
+        1,
+        2
+      ]
+    ],
+    "observedNativeHandles": 12,
+    "oldHandlesCanonicalAndLive": true,
+    "actualBytes": 1010,
+    "expectedBytes": 1010,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "condition": null,
+    "status": "pass",
+    "actualSHA256": "6dd8db92fd03b7f9321af9f68bc1870292947942a0c4e5f1b334d79edd525707",
+    "completeByteExact": true,
+    "sourceSHA256": "b4feebd2d10d49893c5375148f634b3cb703878d57f9c35a86ffbea7ba796dd6",
+    "baselineSHA256": "6dd8db92fd03b7f9321af9f68bc1870292947942a0c4e5f1b334d79edd525707"
+  },
+  {
+    "id": "xtm2/in/association-duplicate-reified4.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm",
+    "sourceKey": "xtm2/in/association-duplicate-reified4.xtm",
+    "sourceBytes": 836,
+    "sourceHex": "3C746F7069634D61700A20202020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F220A2020202076657273696F6E3D22322E30223E0A0A20203C6173736F63696174696F6E20726569666965723D22237265696669657231223E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706531222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657231222F3E0A202020203C2F726F6C653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706532222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657232222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A0A20203C6173736F63696174696F6E20726569666965723D22237265696669657231223E0A202020203C6974656D4964656E7469747920687265663D22236173736F63696174696F6E222F3E0A202020203C747970653E0A2020202020203C746F70696352656620687265663D22236173736F6374797065222F3E0A202020203C2F747970653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706531222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657231222F3E0A202020203C2F726F6C653E0A202020203C726F6C653E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D2223726F6C657479706532222F3E0A2020202020203C2F747970653E0A2020202020203C746F70696352656620687265663D2223706C6179657232222F3E0A202020203C2F726F6C653E0A20203C2F6173736F63696174696F6E3E0A3C2F746F7069634D61703E",
+    "sourceText": "<topicMap\n    xmlns=\"http://www.topicmaps.org/xtm/\"\n    version=\"2.0\">\n\n  <association reifier=\"#reifier1\">\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype1\"/>\n      </type>\n      <topicRef href=\"#player1\"/>\n    </role>\n    <role>\n      <type>\n        <topicRef href=\"#roletype2\"/>\n      </type>\n      <topicRef href=\"#player2\"/>\n    </role>\n  </association>\n\n  <association reifier=\"#reifier1\">\n    <itemIdentity href=\"#association\"/>\n    <type>\n      <topicRef href=\"#assoctype\"/>\n    </type>\n    <role>\n      <type>\n        <topicRef href=\"#roletype1\"/>\n      </type>\n      <topicRef href=\"#player1\"/>\n    </role>\n    <role>\n      <type>\n        <topicRef href=\"#roletype2\"/>\n      </type>\n      <topicRef href=\"#player2\"/>\n    </role>\n  </association>\n</topicMap>",
+    "qualifiedParserCalls": 1,
+    "originalOctetsEQ": true,
+    "model": {
+      "existingModel": {
+        "existingModel": {
+          "nativeModel": {
+            "existingModel": {
+              "existingCharacteristics": {
+                "identity": {
+                  "identity": {
+                    "nameModel": {
+                      "identity": {
+                        "topicCount": 6,
+                        "associationCount": 1,
+                        "canonicalParentsAndInverseReferences": true,
+                        "topics": [
+                          {
+                            "ordinal": 1,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#assoctype"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 2,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#roletype1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 3,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#player1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 4,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#roletype2"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 5,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#player2"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          },
+                          {
+                            "ordinal": 6,
+                            "itemIdentifiers": [
+                              "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#reifier1"
+                            ],
+                            "subjectIdentifiers": [],
+                            "subjectLocators": []
+                          }
+                        ],
+                        "associations": [
+                          {
+                            "type": 1,
+                            "roles": [
+                              {
+                                "type": 2,
+                                "player": 3
+                              },
+                              {
+                                "type": 4,
+                                "player": 5
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "mapItemIdentifiers": [],
+                      "canonicalNameParentTypeReferences": true,
+                      "names": []
+                    },
+                    "canonicalVariantReferences": true,
+                    "variants": []
+                  },
+                  "canonicalNameReifierInverseEQ": true,
+                  "mapReifierTopic": null,
+                  "nameReifierTopics": [],
+                  "topicReifiedNames": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
+                },
+                "canonicalVariantReifierInverseEQ": true,
+                "variantReifierTopics": [],
+                "topicReifiedVariants": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "canonicalOccurrenceReferencesEQ": true,
+              "occurrenceCount": 0,
+              "occurrences": []
+            },
+            "canonicalAssociationRoleReferencesEQ": true,
+            "topicCount": 6,
+            "associationCount": 1,
+            "roleCount": 2,
+            "associations": [
+              {
+                "parentIsActualMapEQ": true,
+                "type": 1,
+                "scope": [],
+                "itemIdentifiers": [
+                  "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#association"
+                ],
+                "roles": [
+                  {
+                    "parentAssociation": 1,
+                    "type": 2,
+                    "player": 3,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  },
+                  {
+                    "parentAssociation": 1,
+                    "type": 4,
+                    "player": 5,
+                    "inverseRolesPlayedEQ": true,
+                    "itemIdentifiers": []
+                  }
+                ]
+              }
+            ]
+          },
+          "globalItemIdentifiersUnique": true,
+          "items": [
+            {
+              "kind": "ASSOCIATION",
+              "identifiers": [
+                "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#association"
+              ]
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            },
+            {
+              "kind": "ASSOCIATION-ROLE",
+              "identifiers": []
+            }
+          ]
+        },
+        "canonicalOccurrenceReifierInverseEQ": true,
+        "occurrenceReifiers": []
+      },
+      "canonicalAssociationReifierInverseEQ": true,
+      "associationReifiers": [
+        {
+          "associationItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#association"
+          ],
+          "reifierItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm#reifier1"
+          ],
+          "inverseReifiedEQ": true
+        }
+      ]
+    },
+    "associationCountsAfterEachRead": [
+      1,
+      1
+    ],
+    "normalizationStages": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        4,
+        1,
+        2
+      ]
+    ],
+    "observedNativeHandles": 12,
+    "oldHandlesCanonicalAndLive": true,
+    "actualBytes": 1010,
+    "expectedBytes": 1010,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "condition": null,
+    "status": "pass",
+    "actualSHA256": "6dd8db92fd03b7f9321af9f68bc1870292947942a0c4e5f1b334d79edd525707",
+    "completeByteExact": true,
+    "sourceSHA256": "41f165cdd3e3d6d17a8e07bc06ab4e30d6bf3520482e9cf3830ea8897a3980ed",
+    "baselineSHA256": "6dd8db92fd03b7f9321af9f68bc1870292947942a0c4e5f1b334d79edd525707"
+  }
+]

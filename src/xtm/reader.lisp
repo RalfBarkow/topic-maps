@@ -209,8 +209,9 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                     (attributes node '("reifier") nil)
                     (when (attr node "reifier")
                       (resolve-iri (attr node "reifier") *document-iri* node)
-                      (reject :unsupported-construct
-                        (format nil "XTM ~A reification is not implemented in this subset." name) node 'xtm-unsupported))
+                      (when (string= name "role")
+                        (reject :unsupported-construct
+                          "XTM role reification is not implemented in this subset." node 'xtm-unsupported)))
                     (let ((association-p (string= name "association"))
                           (phase 0) (type-seen nil) (scope-seen nil) (participants 0))
                       (dolist (child (elements node))
@@ -345,7 +346,10 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                                  (topic-maps.tmdm:canonical-topic (second pair)))))
                       (topic-maps.tmdm:association-roles association))))
             (read-item-identities source role)))
-        (topic-maps.tmdm:canonical-association association)))))
+        ;; Role metadata is now on the native canonical Parent. Reifier merging
+        ;; may normalize it again; return the resulting Association handle.
+        (topic-maps.tmdm:canonical-association
+          (read-item-reifier node association map))))))
 (defun read-resource-value (resource)
   "Return value and datatype for a validated resource node (XTM 4.16/4.17).
 This operation neither looks up Topics nor fetches resources. ANYTYPE is rejected

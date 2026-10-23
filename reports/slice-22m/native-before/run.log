@@ -1,0 +1,18 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+XTM-CHECK-PASS association-reifier-native:subjectIdentifier:assign-and-inverse
+XTM-CHECK-PASS association-reifier-native:subjectIdentifier:merge-signatures-all-II-and-old-handles
+XTM-CHECK-PASS association-reifier-native:subjectLocator:assign-and-inverse
+XTM-CHECK-PASS association-reifier-native:subjectLocator:merge-signatures-all-II-and-old-handles
+XTM-CHECK-PASS association-reifier-native:itemIdentity:assign-and-inverse
+XTM-CHECK-PASS association-reifier-native:itemIdentity:merge-signatures-all-II-and-old-handles
+XTM-CHECK-PASS association-reifier-native:equal-Associations-same-Reifier-native-normalization
+XTM-CHECK-PASS association-reifier-native:different-Association:exact-atomic-conflict
+XTM-CHECK-PASS association-reifier-native:Occurrence-versus-Association:exact-atomic-conflict
+XTM-CHECK-PASS association-reifier-native:Map-versus-Association:exact-atomic-conflict
+XTM-CHECK-PASS association-reifier-native:late-Reifier-merge:exact-atomic-conflict
+XTM-CHECK-PASS association-reifier-native:own-II-not-Reifier-Topic-II:atomic-conflict
+ASSOCIATION-REIFIER-NATIVE-PREFLIGHT-PASS: 12 native checks; no Reader calls; no corpus registration

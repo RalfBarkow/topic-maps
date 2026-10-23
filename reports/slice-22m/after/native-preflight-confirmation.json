@@ -1,0 +1,33 @@
+{
+  "executedBeforeReaderChange": true,
+  "nativeChecksBefore": 12,
+  "sameNativeChecksAndObservationsRepeatedInASDF": true,
+  "nativeExecution": {
+    "command": [
+      "/usr/bin/sandbox-exec",
+      "-p",
+      "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+      "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+      "--noinform",
+      "--no-sysinit",
+      "--no-userinit",
+      "--script",
+      "reports/slice-22m/api-preflight.lisp"
+    ],
+    "exitCode": 0,
+    "startedAtUTC": "2026-10-23T15:21:17.621494+00:00",
+    "finishedAtUTC": "2026-10-23T15:21:19.542630+00:00",
+    "network": "denied",
+    "repositoryWrites": "denied",
+    "beforeAnyProductionChange": true,
+    "executionSourceSHA256": {
+      "src/xtm/reader.lisp": "6af180f24ae957b7089deb620a4a0f3d29aa637dc23abc907b1e02cf3b1e9dd2",
+      "src/tmdm/reification.lisp": "9476931118aa964c88b672012a13098a08ae752e3f5c29c27343e985aad2a638",
+      "src/tmdm/associations.lisp": "cc86f08693a0f4be141757f003f9be476bbb9fe0805484dec8d1692eb7aeef18",
+      "tests/xtm-association-reifier-native.lisp": "f92e837ff7a4149894a40f4893c8b8a7cf738c2bbbde7acd0ecba84522b0db41",
+      "reports/slice-22m/api-preflight.lisp": "293118b42d9010d7b3e5cc78c6966bef193ed854d643b8ea6f0821a368e2651c"
+    },
+    "logSHA256": "ee574720f5cc37a65402e922153e572c998845d34ce3350fd34873d731431a87",
+    "reportSHA256": "4f7098a27a0b85530cb938a295afc4fbe6967ef338c22711809d9f2139c710ba"
+  }
+}

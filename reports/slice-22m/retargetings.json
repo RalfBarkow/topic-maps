@@ -1,0 +1,67 @@
+[
+  {
+    "file": "tests/xtm-identity.lisp",
+    "label": "unsupported-association",
+    "originalPurpose": "Preserve known Unsupported boundary with exact class/code and source context; valid Association Reification is retained.",
+    "beforeSource": "(\"unsupported-association\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>\" :unsupported-construct)",
+    "afterSource": "(\"unsupported-association\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>\" :unsupported-construct)",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "newBoundary": "normative Role-Reification, still excluded"
+  },
+  {
+    "file": "tests/xtm-name-scopes.lisp",
+    "label": "association-stays-unsupported",
+    "originalPurpose": "Preserve known Unsupported boundary with exact class/code and source context; valid Association Reification is retained.",
+    "beforeSource": "(scope-error-control \"association-stays-unsupported\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association>\" 'xtm-unsupported :unsupported-construct))",
+    "afterSource": "(scope-error-control \"association-stays-unsupported\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role reifier='#excluded-role'><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association>\" 'xtm-unsupported :unsupported-construct))",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "newBoundary": "normative Role-Reification, still excluded"
+  },
+  {
+    "file": "tests/xtm-associations.lisp",
+    "label": "association-reifier",
+    "originalPurpose": "Preserve known Unsupported boundary with exact class/code and source context; valid Association Reification is retained.",
+    "beforeSource": "(\"association-reifier\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "afterSource": "(\"association-reifier\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "newBoundary": "normative Role-Reification, still excluded"
+  },
+  {
+    "file": "tests/xtm-associations.lisp",
+    "label": "association-II",
+    "originalPurpose": "Preserve known Unsupported boundary with exact class/code and source context; valid Association Reification is retained.",
+    "beforeSource": "(\"association-II\" \"<association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "afterSource": "(\"association-II\" \"<association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "newBoundary": "normative Role-Reification, still excluded"
+  },
+  {
+    "file": "tests/xtm-occurrence-reification.lisp",
+    "label": "Association-Reification-remains-Unsupported",
+    "originalPurpose": "Preserve known Unsupported boundary with exact class/code and source context; valid Association Reification is retained.",
+    "beforeSource": "(orr-error \"Association-Reification-remains-Unsupported\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" 'xtm-unsupported :unsupported-construct)",
+    "afterSource": "(orr-error \"Association-Reification-remains-Unsupported\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" 'xtm-unsupported :unsupported-construct)",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "newBoundary": "normative Role-Reification, still excluded"
+  },
+  {
+    "file": "tests/xtm-map-reification.lisp",
+    "label": "association-role-reification",
+    "change": "Source unchanged: both Association and Role have reifier; the same Unsupported class/code now arises specifically at the Role. Exact new diagnostic is checked in report audit."
+  },
+  {
+    "file": "tests/ctm-xtm-equivalence.lisp",
+    "label": "association-role-scope-reifiers",
+    "change": "XML source unchanged; expected missing element changes association -> role. Same Unsupported class/code, precise Role detail and position. All 29 actual pairs and 3 contrasts preserved."
+  },
+  {
+    "file": "reports/slice-22d/failure-controls.lisp",
+    "label": "all-113-executor-controls",
+    "change": "Unchanged sources, checks, target Case Records and outcomes."
+  }
+]

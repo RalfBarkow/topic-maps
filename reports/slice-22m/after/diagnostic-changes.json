@@ -1,0 +1,192 @@
+{
+  "originalDiagnoses": 124,
+  "changed": 5,
+  "unchanged": 119,
+  "changes": [
+    {
+      "id": "xtm2/in/association-duplicate-reified.xtm",
+      "reason": "new Association Reification original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm), approximately 5:36: XTM association reification is not implemented in this subset.",
+            "line": 5,
+            "column": 36,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm",
+            "sourceKey": "xtm2/in/association-duplicate-reified.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified2.xtm",
+      "reason": "new Association Reification original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm), approximately 5:36: XTM association reification is not implemented in this subset.",
+            "line": 5,
+            "column": 36,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm",
+            "sourceKey": "xtm2/in/association-duplicate-reified2.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified3.xtm",
+      "reason": "new Association Reification original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm), approximately 5:36: XTM association reification is not implemented in this subset.",
+            "line": 5,
+            "column": 36,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm",
+            "sourceKey": "xtm2/in/association-duplicate-reified3.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified4.xtm",
+      "reason": "new Association Reification original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#player1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#player2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#reifier1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\" reifier=\"4\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"5\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"6\"></type>\n</role>\n<itemIdentifiers>\n<locator>#association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified4.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm), approximately 5:36: XTM association reification is not implemented in this subset.",
+            "line": 5,
+            "column": 36,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm",
+            "sourceKey": "xtm2/in/association-duplicate-reified4.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-reifier.xtm",
+      "reason": "new Association Reification original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\" reifier=\"2\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"4\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm), approximately 2:35: XTM association reification is not implemented in this subset.",
+            "line": 2,
+            "column": 35,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm",
+            "sourceKey": "xtm2/in/association-reifier.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    }
+  ]
+}
