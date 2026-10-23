@@ -10,6 +10,8 @@
 (defvar *occurrence-controls* nil)
 (defvar *registered-mergemap-outputs* nil)
 (defvar *association-outputs* nil)
+(defvar *item-identity-outputs* nil)
+(defvar *item-identity-controls* nil)
 (defvar *association-controls* nil)
 (defvar *mergemap-controls* nil)
 (defvar *mergemap-originals* nil)
@@ -495,10 +497,10 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
-  (setf *association-outputs* nil *association-controls* nil *registered-mergemap-outputs* nil *occurrence-outputs* nil *occurrence-controls* nil *mergemap-controls* nil *mergemap-originals* nil *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
+  (setf *item-identity-outputs* nil *item-identity-controls* nil *association-outputs* nil *association-controls* nil *registered-mergemap-outputs* nil *occurrence-outputs* nil *occurrence-controls* nil *mergemap-controls* nil *mergemap-originals* nil *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
   (handler-case
       (progn (original-contracts) (negative-original-controls) (negative-original-contracts)
-             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (occurrence-original-contracts) (occurrence-tests) (registered-mergemap-original-contracts) (association-original-contracts) (association-tests) (result-classification-tests)
+             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (occurrence-original-contracts) (occurrence-tests) (registered-mergemap-original-contracts) (association-original-contracts) (association-tests) (item-identity-original-contracts) (item-identity-tests) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -567,6 +569,8 @@
                   "mergemapOriginalObservations" (array *mergemap-originals*)
                   "occurrenceOriginals" (array *occurrence-outputs*)
                   "occurrenceControls" (array *occurrence-controls*)
+                  "itemIdentityOriginals" (array *item-identity-outputs*)
+                  "itemIdentityControls" (array *item-identity-controls*)
                   "associationOriginals" (array *association-outputs*)
                   "associationControls" (array *association-controls*)
                   "registeredMergemapOriginals" (array *registered-mergemap-outputs*)

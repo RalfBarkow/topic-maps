@@ -245,7 +245,7 @@
       ("embedded-without-anyType" "<occurrence><type><topicRef href='#t'/></type><resourceData><x xmlns='urn:xml'/></resourceData></occurrence>" xtm-rejection :unexpected-child)
       ("anyType-text" "<occurrence><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence>" xtm-unsupported :resource-data-datatype)
       ("anyType-XML" "<occurrence><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><x xmlns='urn:xml'/></resourceData></occurrence>" xtm-unsupported :resource-data-datatype)
-      ("item-identity" "<occurrence><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence>" xtm-unsupported :unsupported-construct)
+      ("item-identity" "<occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence>" xtm-unsupported :unsupported-construct)
       ("reification" "<occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence>" xtm-unsupported :unsupported-construct)))
     (destructuring-bind (label body class code) spec
       (let* ((key (concatenate 'string "occurrence-negative:" label))

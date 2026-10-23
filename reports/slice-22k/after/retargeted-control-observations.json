@@ -1,0 +1,176 @@
+[
+  {
+    "reportKey": "occurrenceControls",
+    "label": "occurrence-negative:item-identity",
+    "before": {
+      "label": "occurrence-negative:item-identity",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence item identifiers are not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:117: XTM occurrence item identifiers are not implemented in this subset.",
+        "line": 1,
+        "column": 117,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:item-identity",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "occurrence-negative:item-identity",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:109: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 109,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:item-identity",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/column",
+        "before": 117,
+        "after": 109
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence item identifiers are not implemented in this subset.",
+        "after": "XTM occurrence reification is not implemented in this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:117: XTM occurrence item identifiers are not implemented in this subset.",
+        "after": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:109: XTM occurrence reification is not implemented in this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "associationControls",
+    "label": "association-II",
+    "before": {
+      "label": "association-II",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM association item identifiers are not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at association-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:105: XTM association item identifiers are not implemented in this subset.",
+        "line": 1,
+        "column": 105,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-II",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "association-II",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM association reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at association-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: XTM association reification is not implemented in this subset.",
+        "line": 1,
+        "column": 96,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-II",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/column",
+        "before": 105,
+        "after": 96
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM association item identifiers are not implemented in this subset.",
+        "after": "XTM association reification is not implemented in this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at association-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:105: XTM association item identifiers are not implemented in this subset.",
+        "after": "XTM UNSUPPORTED-CONSTRUCT at association-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: XTM association reification is not implemented in this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "associationControls",
+    "label": "role-II",
+    "before": {
+      "label": "role-II",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role item identifiers are not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at role-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:147: XTM role item identifiers are not implemented in this subset.",
+        "line": 1,
+        "column": 147,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "role-II",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "role-II",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#excluded'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at role-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:136: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 136,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "role-II",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/column",
+        "before": 147,
+        "after": 136
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role item identifiers are not implemented in this subset.",
+        "after": "XTM role reification is not implemented in this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at role-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:147: XTM role item identifiers are not implemented in this subset.",
+        "after": "XTM UNSUPPORTED-CONSTRUCT at role-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:136: XTM role reification is not implemented in this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#excluded'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  }
+]

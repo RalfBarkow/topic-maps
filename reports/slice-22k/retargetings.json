@@ -1,0 +1,41 @@
+[
+  {
+    "file": "tests/xtm-occurrences.lisp",
+    "label": "item-identity",
+    "originalPurpose": "Retain a source-context-qualified known Unsupported Occurrence boundary; keep the original itemIdentity child and add excluded occurrence reification.",
+    "beforeSourceLine": "(\"item-identity\" \"<occurrence><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence>\" xtm-unsupported :unsupported-construct)",
+    "afterSourceLine": "(\"item-identity\" \"<occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence>\" xtm-unsupported :unsupported-construct)",
+    "unchangedExpectedClass": "XTM-UNSUPPORTED",
+    "unchangedExpectedCode": "unsupported-construct",
+    "checkLabelsAndContextAssertionsPreserved": true,
+    "evidence": "after/retargeted-control-observations.json"
+  },
+  {
+    "file": "tests/xtm-associations.lisp",
+    "label": "association-II",
+    "originalPurpose": "Retain the Association metadata Unsupported classification/context check; keep its II and add excluded Association reification.",
+    "beforeSourceLine": "(\"association-II\" \"<association><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "afterSourceLine": "(\"association-II\" \"<association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "unchangedExpectedClass": "XTM-UNSUPPORTED",
+    "unchangedExpectedCode": "unsupported-construct",
+    "checkLabelsAndContextAssertionsPreserved": true,
+    "evidence": "after/retargeted-control-observations.json"
+  },
+  {
+    "file": "tests/xtm-associations.lisp",
+    "label": "role-II",
+    "originalPurpose": "Retain the Role metadata Unsupported classification/context check; keep its II and add excluded Role reification.",
+    "beforeSourceLine": "(\"role-II\" \"<association><type><topicRef href='#t'/></type><role><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)))",
+    "afterSourceLine": "(\"role-II\" \"<association><type><topicRef href='#t'/></type><role reifier='#excluded'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)))",
+    "unchangedExpectedClass": "XTM-UNSUPPORTED",
+    "unchangedExpectedCode": "unsupported-construct",
+    "checkLabelsAndContextAssertionsPreserved": true,
+    "evidence": "after/retargeted-control-observations.json"
+  },
+  {
+    "file": "reports/slice-22d/failure-controls.lisp",
+    "label": "all-113-executor-controls",
+    "change": "None; same fault sources, case records, outcomes, checks and expected ASDF failures.",
+    "sha256": "43ca5068cd66d6308b7bdc8b6fdb304ed5a08f85f89c0086c68247985e84f848"
+  }
+]

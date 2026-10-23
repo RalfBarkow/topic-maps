@@ -191,9 +191,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                           (when (< next phase) (reject :element-order "occurrence child order is invalid." child))
                           (setf phase next)
                           (cond
-                            ((string= kind "itemIdentity")
-                             (validate child '("itemIdentity"))
-                             (reject :unsupported-construct "XTM occurrence item identifiers are not implemented in this subset." child 'xtm-unsupported))
+                            ((string= kind "itemIdentity") nil)
                             ((string= kind "type")
                              (when type-seen (reject :duplicate-occurrence-type "Only one occurrence type is allowed." child))
                              (setf type-seen t))
@@ -205,7 +203,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                              (unless type-seen (reject :missing-occurrence-type "occurrence requires type before its resource." child))
                              (when resource-seen (reject :occurrence-resource-cardinality "occurrence requires exactly one resource." child))
                              (setf resource-seen t)))
-                          (validate child '("type" "scope" "resourceData" "resourceRef"))))
+                          (validate child '("itemIdentity" "type" "scope" "resourceData" "resourceRef"))))
                       (unless type-seen (reject :missing-occurrence-type "occurrence requires a type element." node))
                       (unless resource-seen (reject :missing-occurrence-resource "occurrence requires a resource element." node))))
                    ((member name '("association" "role") :test #'string=)
@@ -227,10 +225,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                           (when (< next phase) (reject :element-order (format nil "~A child order is invalid." name) child))
                           (setf phase next)
                           (cond
-                            ((string= kind "itemIdentity")
-                             (validate child '("itemIdentity"))
-                             (reject :unsupported-construct
-                               (format nil "XTM ~A item identifiers are not implemented in this subset." name) child 'xtm-unsupported))
+                            ((string= kind "itemIdentity") nil)
                             ((string= kind "type")
                              (when type-seen (reject :duplicate-type (format nil "Only one ~A type is allowed." name) child))
                              (setf type-seen t))
@@ -245,7 +240,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                                    (incf participants)
                                    (when (and (not association-p) (> participants 1))
                                      (reject :role-player-cardinality "role requires exactly one topicRef player." child))))))
-                          (validate child (if association-p '("type" "scope" "role") '("type" "topicRef")))))
+                          (validate child (if association-p '("itemIdentity" "type" "scope" "role") '("itemIdentity" "type" "topicRef")))))
                       (unless type-seen (reject :missing-type (format nil "~A requires a type element." name) node))
                       (when (zerop participants)
                         (reject (if association-p :missing-roles :missing-role-player)
@@ -319,11 +314,16 @@ constructs' complete subgrammars is made. XML errors have already been checked."
       (topic-maps.tmdm:make-association map (core-topic map "type-instance")
         (list (list (core-topic map "type") type)
               (list (core-topic map "instance") (topic-maps.tmdm:canonical-topic owner)))))))
+(defun read-item-identities (node item)
+  ;; XTM 4.6: assign locators to the actual canonical item, never intern Topics.
+  ;; ADD-ITEM-IDENTIFIER owns set semantics and cross-item conflict checks.
+  (dolist (child (elements node) item)
+    (when (string= (node-name child) "itemIdentity")
+      (setf item (topic-maps.tmdm:add-item-identifier item (leaf-href child))))))
 (defun read-association (node map)
-  ;; Validate the whole source before constructing any model items. Resolve
-  ;; references through the shared SI/II lookup, then create one complete native
-  ;; Association. TMDM owns role sets, inverse links, merging and old handles.
-  (let ((type nil) (scope nil) (roles nil))
+  ;; Resolve references in source order, then construct the complete native
+  ;; Association. The constructor may already merge Associations AND Roles.
+  (let ((type nil) (scope nil) (roles nil) (role-nodes nil))
     (labels ((reference (ref) (find-reference-topic map (reference-iri ref)))
              (type-reference (node) (reference (first (elements node)))))
       (dolist (child (elements node))
@@ -331,8 +331,22 @@ constructs' complete subgrammars is made. XML errors have already been checked."
               ((string= (node-name child) "scope") (setf scope (mapcar #'reference (elements child))))
               ((string= (node-name child) "role")
                (let ((children (elements child)))
-                 (push (list (type-reference (first children)) (reference (second children))) roles)))))
-      (topic-maps.tmdm:make-association map type (nreverse roles) :scope scope))))
+                 (push (list (type-reference (find "type" children :key #'node-name :test #'string=))
+                             (reference (find "topicRef" children :key #'node-name :test #'string=))) roles)
+                 (push child role-nodes)))))
+      (let ((association (read-item-identities node
+                           (topic-maps.tmdm:make-association map type (reverse roles) :scope scope))))
+        ;; Match source metadata to the native Role by its complete signature
+        ;; within THIS canonical Parent. Role order/II are not equality keys.
+        (loop for pair in (reverse roles) for source in (reverse role-nodes) do
+          (let ((role (find-if (lambda (role)
+                        (and (eq (topic-maps.tmdm:association-role-type role)
+                                 (topic-maps.tmdm:canonical-topic (first pair)))
+                             (eq (topic-maps.tmdm:association-role-player role)
+                                 (topic-maps.tmdm:canonical-topic (second pair)))))
+                      (topic-maps.tmdm:association-roles association))))
+            (read-item-identities source role)))
+        (topic-maps.tmdm:canonical-association association)))))
 (defun read-resource-value (resource)
   "Return value and datatype for a validated resource node (XTM 4.16/4.17).
 This operation neither looks up Topics nor fetches resources. ANYTYPE is rejected
@@ -355,9 +369,7 @@ by source validation before model construction. Preserve other datatype IRIs."
       ;; ADD-VARIANT owns canonicalization and the proper-superset constraint.
       (let ((variant (topic-maps.tmdm:add-variant name value :datatype datatype
                        :scope (append (topic-maps.tmdm:topic-name-scope name) explicit))))
-        (dolist (child children)
-          (when (string= (node-name child) "itemIdentity")
-            (setf variant (topic-maps.tmdm:add-item-identifier variant (leaf-href child)))))
+        (setf variant (read-item-identities node variant))
         ;; Reification may normalize again; retain the native canonical handle.
         (topic-maps.tmdm:canonical-variant (read-item-reifier node variant map))))))
 (defun read-name (node owner map)
@@ -378,9 +390,7 @@ by source validation before model construction. Preserve other datatype IRIs."
                     (topic-maps.tmdm:add-default-name owner value :scope scope))))
       ;; Item identifiers belong to the canonical Name, never its owner/type.
       ;; Use the shared model API for set semantics and global conflicts.
-      (dolist (child children)
-        (when (string= (node-name child) "itemIdentity")
-          (setf name (topic-maps.tmdm:add-item-identifier name (leaf-href child)))))
+      (setf name (read-item-identities node name))
       ;; ADD-NAME may have returned an existing canonical Name. Reifier
       ;; resolution/merging can normalize it again: retain the native result
       ;; before processing Variants and return the current Name handle.
@@ -400,7 +410,8 @@ by source validation before model construction. Preserve other datatype IRIs."
          (resource (find-if (lambda (child) (member (node-name child) '("resourceData" "resourceRef") :test #'string=)) children)))
     (multiple-value-bind (value datatype) (read-resource-value resource)
       (topic-maps.tmdm:canonical-occurrence
-        (topic-maps.tmdm:add-occurrence owner type value :datatype datatype :scope scope)))))
+        (read-item-identities node
+          (topic-maps.tmdm:add-occurrence owner type value :datatype datatype :scope scope))))))
 (defun read-topic (node map)
   (let ((topic (topic-maps.tmdm:intern-topic map :item-identifier
                  (concatenate 'string *document-iri* "#" (collapse-space (attr node "id"))))))

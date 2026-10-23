@@ -1,0 +1,376 @@
+{
+  "originalDiagnoses": 124,
+  "changed": 10,
+  "unchanged": 114,
+  "changes": [
+    {
+      "id": "xtm2/in/association-duplicate-iid.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"3\"></player>\n<type topicref=\"2\"></type>\n</role>\n<itemIdentifiers>\n<locator>#the-association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid.xtm), approximately 3:44: XTM association item identifiers are not implemented in this subset.",
+            "line": 3,
+            "column": 44,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid.xtm",
+            "sourceKey": "xtm2/in/association-duplicate-iid.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid2.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"3\"></player>\n<type topicref=\"2\"></type>\n</role>\n<itemIdentifiers>\n<locator>#the-association</locator>\n<locator>#the-association2</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid2.xtm), approximately 3:44: XTM association item identifiers are not implemented in this subset.",
+            "line": 3,
+            "column": 44,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid2.xtm",
+            "sourceKey": "xtm2/in/association-duplicate-iid2.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid3.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"3\"></player>\n<type topicref=\"2\"></type>\n</role>\n<itemIdentifiers>\n<locator>#the-association</locator>\n<locator>#the-association2</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid3.xtm), approximately 3:44: XTM association item identifiers are not implemented in this subset.",
+            "line": 3,
+            "column": 44,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid3.xtm",
+            "sourceKey": "xtm2/in/association-duplicate-iid3.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-association.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"3\"></player>\n<type topicref=\"2\"></type>\n</role>\n<itemIdentifiers>\n<locator>#the-association</locator>\n</itemIdentifiers>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-association.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-association.xtm), approximately 3:44: XTM association item identifiers are not implemented in this subset.",
+            "line": 3,
+            "column": 44,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-association.xtm",
+            "sourceKey": "xtm2/in/itemid-association.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-occurrence.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n<itemIdentifiers>\n<locator>#the-occurrence</locator>\n</itemIdentifiers>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-occurrence.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset.",
+            "line": 4,
+            "column": 45,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-occurrence.xtm",
+            "sourceKey": "xtm2/in/itemid-occurrence.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-role.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"3\"></player>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-role</locator>\n</itemIdentifiers>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM role item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-role.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-role.xtm), approximately 7:39: XTM role item identifiers are not implemented in this subset.",
+            "line": 7,
+            "column": 39,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-role.xtm",
+            "sourceKey": "xtm2/in/itemid-role.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-iid.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n<itemIdentifiers>\n<locator>#the-occurrence</locator>\n</itemIdentifiers>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset.",
+            "line": 4,
+            "column": 45,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid.xtm",
+            "sourceKey": "xtm2/in/occurrence-duplicate-iid.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-duplicate-iid2.xtm",
+      "reason": "excluded original now reaches unchanged XML-ID uniqueness check; no normative qualification or registration is added",
+      "differences": [
+        {
+          "path": "/condition/class",
+          "before": "XTM-UNSUPPORTED",
+          "after": "XTM-REJECTION"
+        },
+        {
+          "path": "/condition/code",
+          "before": "unsupported-construct",
+          "after": "duplicate-id"
+        },
+        {
+          "path": "/condition/column",
+          "before": 45,
+          "after": 21
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM occurrence item identifiers are not implemented in this subset.",
+          "after": "Duplicate XML ID in this document."
+        },
+        {
+          "path": "/condition/line",
+          "before": 4,
+          "after": 11
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm), approximately 4:45: XTM occurrence item identifiers are not implemented in this subset.",
+          "after": "XTM DUPLICATE-ID at xtm2/in/occurrence-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-iid2.xtm), approximately 11:21: Duplicate XML ID in this document."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-iid.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"3\"></player>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-role</locator>\n</itemIdentifiers>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM role item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-iid.xtm), approximately 7:39: XTM role item identifiers are not implemented in this subset.",
+            "line": 7,
+            "column": 39,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-iid.xtm",
+            "sourceKey": "xtm2/in/role-duplicate-iid.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-iid2.xtm",
+      "reason": "new Item Identity original execution reaches native canonical identifiers and byte-exact CXTM",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"3\"></player>\n<type topicref=\"2\"></type>\n<itemIdentifiers>\n<locator>#the-role</locator>\n</itemIdentifiers>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM role item identifiers are not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-iid2.xtm), approximately 7:39: XTM role item identifiers are not implemented in this subset.",
+            "line": 7,
+            "column": 39,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-iid2.xtm",
+            "sourceKey": "xtm2/in/role-duplicate-iid2.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    }
+  ]
+}
