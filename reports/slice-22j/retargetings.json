@@ -1,0 +1,40 @@
+[
+  {
+    "file": "tests/xtm-identity.lisp",
+    "label": "unsupported-association",
+    "originalPurpose": "Retain the generic Unsupported classification, source context and position control after plain associations become supported.",
+    "beforeSourceLine": "(\"unsupported-association\" \"<association><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>\" :unsupported-construct)",
+    "afterSourceLine": "(\"unsupported-association\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>\" :unsupported-construct)",
+    "change": "Add association/@reifier to the formerly plain Association input. The full original Type, Scope if present, Role Type and Player remain. No check label, expected class/code or context assertion is removed.",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "evidence": "after/xtm.json and after/retargeted-control-observations.json"
+  },
+  {
+    "file": "tests/xtm-name-scopes.lisp",
+    "label": "association-stays-unsupported",
+    "originalPurpose": "Retain the scope suite boundary check for a known but excluded Association capability, including a nonempty Scope.",
+    "beforeSourceLine": "(scope-error-control \"association-stays-unsupported\" \"<association><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association>\" 'xtm-unsupported :unsupported-construct))",
+    "afterSourceLine": "(scope-error-control \"association-stays-unsupported\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association>\" 'xtm-unsupported :unsupported-construct))",
+    "change": "Add association/@reifier to the formerly plain Association input. The full original Type, Scope if present, Role Type and Player remain. No check label, expected class/code or context assertion is removed.",
+    "expectedClass": "XTM-UNSUPPORTED",
+    "expectedCode": "unsupported-construct",
+    "evidence": "after/xtm.json and after/retargeted-control-observations.json"
+  },
+  {
+    "file": "tests/ctm-xtm-equivalence.lisp",
+    "label": "explicit-association",
+    "originalPurpose": "Expose lack of explicit Association reading while retaining a concrete successful CTM source.",
+    "change": "Retain the exact CTM/XTM source pair; promote the fulfilled gap probe to the existing run-pair path with native property, internal EQ, Source-Key and complete CXTM checks. Retain all previous 27 pairs, 3 contrasts and 2 other gaps.",
+    "originalCorpusPASSAdded": false,
+    "evidence": "after/equivalence-progress.json"
+  },
+  {
+    "file": "reports/slice-22d/failure-controls.lisp",
+    "label": "all-113-executor-controls",
+    "originalPurpose": "Ensure wrong bytes, XML/XTM errors, Unsupported and TMDM failures are never positive original comparisons.",
+    "change": "None. All 113 original fault sources, target Case Records, outcomes and checks are retained.",
+    "sha256": "43ca5068cd66d6308b7bdc8b6fdb304ed5a08f85f89c0086c68247985e84f848",
+    "evidence": "after/failure-controls.json"
+  }
+]

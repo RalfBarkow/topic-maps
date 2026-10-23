@@ -1,0 +1,11 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+VARIANT-REIFIER-API-NORMALIZATION: 1 existing Reifier(s), identifiers and old handles preserved
+VARIANT-REIFIER-API-NORMALIZATION: 2 existing Reifier(s), identifiers and old handles preserved
+VARIANT-REIFIER-API-CONDITION: REIFICATION-ERROR REIFIER-CONFLICT; atomic
+VARIANT-REIFIER-API-CONDITION: REIFICATION-ERROR REIFIER-CONFLICT; atomic
+VARIANT-REIFIER-API-CONDITION: OCCURRENCE-IDENTIFIER-ERROR DUPLICATE-ITEM-IDENTIFIER; atomic
+VARIANT-REIFIER-API-PREFLIGHT-PASS: normalize, assign II, resolve Reifier by II, set on current Variant, retain canonical result

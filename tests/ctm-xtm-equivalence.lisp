@@ -343,9 +343,6 @@
     (list "occurrence-scope-reifier" "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#integer>@s ~r."
       (xml "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></occurrence></topic>")
       "occurrence" '("CTM 3.10" "XTM 4.15" "TMDM 5.6"))
-    (list "explicit-association" "rel(role: a)"
-      (xml "<association><type><topicRef href='#rel'/></type><role><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association>")
-      "association" '("CTM 3.13" "XTM 4.18-4.19" "TMDM 5.7-5.8"))
     (list "association-role-scope-reifiers" "rel(role: a ~rr)@s ~ar"
       (xml "<association reifier='#ar'><type><topicRef href='#rel'/></type><scope><topicRef href='#s'/></scope><role reifier='#rr'><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association>")
       "association" '("CTM 3.3.9-3.3.10,3.13" "XTM 4.3.2,4.18-4.19" "TMDM 5.3.4,5.7-5.8"))))
@@ -380,7 +377,13 @@
     (let ((path (let ((prefix (uiop:getenv "TOPIC_MAPS_XTM_MERGEMAP_REPORT")))
                   (when prefix (concatenate 'string prefix ".equivalence.json")))))
       (handler-case
-          (progn (mapc #'run-pair (pair-cases)) (contrast-tests) (gap-tests)
+          (progn (mapc #'run-pair (pair-cases))
+            (run-pair (list :id "explicit-association" :ctm "rel(role: a)"
+              :xtm (xml "<association><type><topicRef href='#rel'/></type><role><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association>")
+              :keys '("rel" "role" "a") :counts '(3 0 0 0 1 1 0)
+              :why "CTM relation and explicit XTM association have the same type and one role with equal type/player, no scope or metadata."
+              :clauses '("CTM 3.13" "XTM 4.18-4.20" "TMDM 5.7-5.8,6.6-6.7")))
+            (contrast-tests) (gap-tests)
             (check "equivalence:unique-check-labels"
               (= (length topic-maps.xtm-mergemap.tests::*checks*)
                  (length (remove-duplicates topic-maps.xtm-mergemap.tests::*checks* :test #'equal)))))
@@ -388,6 +391,6 @@
           (when path (write-report path c)) (error c)))
       (setf *checks* (reverse topic-maps.xtm-mergemap.tests::*checks*))
       (when path (write-report path))
-      (format t "CTM-XTM-EQUIVALENCE-PASS: ~D checks; ~D actual reader pairs; 3 contrasts; 3 explicit capability gaps.~%"
-        (length *checks*) (length (pair-cases)))
+      (format t "CTM-XTM-EQUIVALENCE-PASS: ~D checks; ~D actual reader pairs; 3 contrasts; 2 explicit capability gaps.~%"
+        (length *checks*) (1+ (length (pair-cases))))
       (length *checks*))))

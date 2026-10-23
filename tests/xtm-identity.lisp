@@ -9,6 +9,8 @@
 (defvar *occurrence-outputs* nil)
 (defvar *occurrence-controls* nil)
 (defvar *registered-mergemap-outputs* nil)
+(defvar *association-outputs* nil)
+(defvar *association-controls* nil)
 (defvar *mergemap-controls* nil)
 (defvar *mergemap-originals* nil)
 (defvar *datatype-outputs* nil)
@@ -440,7 +442,7 @@
     (rejection (concatenate 'string "doctype:" body) (concatenate 'string body (document "")) 'xtm-xml-error :doctype-forbidden))
   (dolist (spec '(("unsupported-name-variant-resourceData-datatype" "<topic id='a'><name><value>Name</value><variant><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" :resource-data-datatype)
                   ("unsupported-occurrence" "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>v</resourceData></occurrence></topic>" :unsupported-construct)
-                  ("unsupported-association" "<association><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)
+                  ("unsupported-association" "<association reifier='#excluded'><type><topicRef href='#t'/></type><role><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)
                   ("unsupported-mergemap" "<mergeMap href='other.xtm'/>" :resource-resolver-required)))
     (rejection (first spec) (document (second spec)) 'xtm-unsupported (third spec)))
   (rejection "unsupported-occurrence-reifier" (document "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic>") 'xtm-unsupported :unsupported-construct)
@@ -493,10 +495,10 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
-  (setf *registered-mergemap-outputs* nil *occurrence-outputs* nil *occurrence-controls* nil *mergemap-controls* nil *mergemap-originals* nil *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
+  (setf *association-outputs* nil *association-controls* nil *registered-mergemap-outputs* nil *occurrence-outputs* nil *occurrence-controls* nil *mergemap-controls* nil *mergemap-originals* nil *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
   (handler-case
       (progn (original-contracts) (negative-original-controls) (negative-original-contracts)
-             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (occurrence-original-contracts) (occurrence-tests) (registered-mergemap-original-contracts) (result-classification-tests)
+             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (occurrence-original-contracts) (occurrence-tests) (registered-mergemap-original-contracts) (association-original-contracts) (association-tests) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -515,7 +517,7 @@
            (array (items) (coerce items 'vector)))
       (with-open-file (out pathname :direction :output :if-exists :supersede :external-format :utf-8)
         (topic-maps.test-foundation::emit-json-value
-          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
+          (fields "scope" "XTM 2.0 identity/Name/Scope/Item-Identity/Variant/Reification and Occurrence/MergeMap/Association/Role subset; actual original outcomes are recorded in cases; no CTM Mergemap integration"
                   "corpusCommit" "cd165b150176c1d6842b37be9cc9051b40d4996b"
                   "statuses" (fields "pass" (count :pass cases :key #'topic-maps.test-foundation:test-case-status)
                                      "fail" (count :fail cases :key #'topic-maps.test-foundation:test-case-status)
@@ -565,6 +567,8 @@
                   "mergemapOriginalObservations" (array *mergemap-originals*)
                   "occurrenceOriginals" (array *occurrence-outputs*)
                   "occurrenceControls" (array *occurrence-controls*)
+                  "associationOriginals" (array *association-outputs*)
+                  "associationControls" (array *association-controls*)
                   "registeredMergemapOriginals" (array *registered-mergemap-outputs*)
                   "actualAndExpected" (array (loop for (id actual expected model condition source-length) in *outputs* collect
                     (fields "id" id "actual" (when actual (babel:octets-to-string actual :encoding :utf-8))

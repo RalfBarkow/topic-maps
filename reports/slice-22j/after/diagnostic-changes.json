@@ -1,0 +1,794 @@
+{
+  "originalDiagnoses": 124,
+  "changed": 28,
+  "unchanged": 96,
+  "changes": [
+    {
+      "id": "xtm2/in/association-binary-duplicate.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"4\"></player>\n<type topicref=\"2\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"5\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-binary-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-binary-duplicate.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+            "line": 2,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-binary-duplicate.xtm",
+            "sourceKey": "xtm2/in/association-binary-duplicate.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-binary.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"4\"></player>\n<type topicref=\"2\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"5\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-binary.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-binary.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+            "line": 2,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-binary.xtm",
+            "sourceKey": "xtm2/in/association-binary.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 44
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 3
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid.xtm), approximately 3:44: XTM association item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid2.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 44
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 3
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid2.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid2.xtm), approximately 3:44: XTM association item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-iid3.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 44
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 3
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid3.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-iid3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-iid3.xtm), approximately 3:44: XTM association item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm), approximately 5:36: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified.xtm), approximately 5:36: XTM association reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified2.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm), approximately 5:36: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified2.xtm), approximately 5:36: XTM association reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified3.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm), approximately 5:36: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified3.xtm), approximately 5:36: XTM association reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-reified4.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified4.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm), approximately 5:36: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-reified4.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-reified4.xtm), approximately 5:36: XTM association reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-duplicate-role.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#roletype3</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#topic1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"7\">\n<itemIdentifiers>\n<locator>#topic3</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.3\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"5\"></player>\n<type topicref=\"2\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"6\"></player>\n<type topicref=\"3\"></type>\n</role>\n<role number=\"3\">\n<player topicref=\"7\"></player>\n<type topicref=\"4\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-duplicate-role.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-role.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+            "line": 2,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-duplicate-role.xtm",
+            "sourceKey": "xtm2/in/association-duplicate-role.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-instanceof-duplicate.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#topic1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/instance</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type-instance</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"5\"></type>\n<role number=\"1\">\n<player topicref=\"1\"></player>\n<type topicref=\"3\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"2\"></player>\n<type topicref=\"4\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-instanceof-duplicate.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-instanceof-duplicate.xtm), approximately 7:16: XTM association is not implemented in this subset.",
+            "line": 7,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-instanceof-duplicate.xtm",
+            "sourceKey": "xtm2/in/association-instanceof-duplicate.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-instanceof-scope.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#expert1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#topic1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"4\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/instance</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<subjectIdentifiers>\n<locator>http://psi.topicmaps.org/iso13250/model/type-instance</locator>\n</subjectIdentifiers>\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"6\"></type>\n<role number=\"1\">\n<player topicref=\"2\"></player>\n<type topicref=\"4\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"3\"></player>\n<type topicref=\"5\"></type>\n</role>\n<scope>\n<scopingTopic topicref=\"1\"></scopingTopic>\n</scope>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-instanceof-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-instanceof-scope.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+            "line": 2,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-instanceof-scope.xtm",
+            "sourceKey": "xtm2/in/association-instanceof-scope.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-reifier.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm), approximately 2:35: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-reifier.xtm), approximately 2:35: XTM association reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-scope.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#scopingtopic</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#topic1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"5\"></player>\n<type topicref=\"2\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"6\"></player>\n<type topicref=\"3\"></type>\n</role>\n<scope>\n<scopingTopic topicref=\"4\"></scopingTopic>\n</scope>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-scope.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-scope.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+            "line": 2,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-scope.xtm",
+            "sourceKey": "xtm2/in/association-scope.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association-ternary.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#roletype3</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#topic1</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<topic number=\"7\">\n<itemIdentifiers>\n<locator>#topic3</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.3\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"5\"></player>\n<type topicref=\"2\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"6\"></player>\n<type topicref=\"3\"></type>\n</role>\n<role number=\"3\">\n<player topicref=\"7\"></player>\n<type topicref=\"4\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association-ternary.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-ternary.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+            "line": 2,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association-ternary.xtm",
+            "sourceKey": "xtm2/in/association-ternary.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/association.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"3\"></player>\n<type topicref=\"2\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/association.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+            "line": 2,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/association.xtm",
+            "sourceKey": "xtm2/in/association.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-association.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 44
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM association item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 3
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-association.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-association.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-association.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-association.xtm), approximately 3:44: XTM association item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/itemid-role.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 39
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 7
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-role.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-role.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/itemid-role.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/itemid-role.xtm), approximately 7:39: XTM role item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/merge-itemid-with-association.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#roletype1</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic3</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#topic</locator>\n<locator>#topic2</locator>\n<locator>http://example.org/#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\">\n<player topicref=\"4\"></player>\n<type topicref=\"3\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"5\"></player>\n<type topicref=\"2\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM association is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/merge-itemid-with-association.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-association.xtm), approximately 8:16: XTM association is not implemented in this subset.",
+            "line": 8,
+            "column": 16,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/merge-itemid-with-association.xtm",
+            "sourceKey": "xtm2/in/merge-itemid-with-association.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-iid.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 39
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 7
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-iid.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-iid.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-iid.xtm), approximately 7:39: XTM role item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-iid2.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 39
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role item identifiers are not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 7
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-iid2.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-iid2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-iid2.xtm), approximately 7:39: XTM role item identifiers are not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 30
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 6
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified.xtm), approximately 6:30: XTM role reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified2.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 30
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 6
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified2.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified2.xtm), approximately 6:30: XTM role reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified3.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 30
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 6
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified3.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified3.xtm), approximately 6:30: XTM role reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified4.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 30
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 6
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified4.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified4.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified4.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified4.xtm), approximately 6:30: XTM role reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-reifier.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 30
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 6
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-reifier.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-reifier.xtm), approximately 6:30: XTM role reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/invalid/role-duplicate-reified.xtm",
+      "reason": "new core path exposes the specifically excluded metadata capability; still Unsupported, not registered",
+      "differences": [
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 31
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "XTM role reification is not implemented in this subset."
+        },
+        {
+          "path": "/condition/line",
+          "before": 5,
+          "after": 9
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/role-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/role-duplicate-reified.xtm), approximately 5:16: XTM association is not implemented in this subset.",
+          "after": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/role-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/role-duplicate-reified.xtm), approximately 9:31: XTM role reification is not implemented in this subset."
+        }
+      ]
+    },
+    {
+      "id": "xtm2/invalid/topicref-no-fragment-id.xtm",
+      "reason": "new core Association/Role original execution reaches intended result",
+      "differences": [
+        {
+          "path": "/condition/class",
+          "before": "XTM-UNSUPPORTED",
+          "after": "XTM-REJECTION"
+        },
+        {
+          "path": "/condition/code",
+          "before": "unsupported-construct",
+          "after": "invalid-topic-ref"
+        },
+        {
+          "path": "/condition/column",
+          "before": 16,
+          "after": 38
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM association is not implemented in this subset.",
+          "after": "topicRef requires an XPointer shorthand fragment."
+        },
+        {
+          "path": "/condition/line",
+          "before": 2,
+          "after": 7
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/topicref-no-fragment-id.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/topicref-no-fragment-id.xtm), approximately 2:16: XTM association is not implemented in this subset.",
+          "after": "XTM INVALID-TOPIC-REF at xtm2/invalid/topicref-no-fragment-id.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/topicref-no-fragment-id.xtm), approximately 7:38: topicRef requires an XPointer shorthand fragment."
+        }
+      ]
+    }
+  ]
+}

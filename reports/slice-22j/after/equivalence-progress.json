@@ -1,0 +1,112 @@
+{
+  "previous27PairsAnd3ContrastsUnchanged": true,
+  "remaining2GapSourcesAndUnsupportedClassCodePositionUnchanged": true,
+  "remainingReificationGapMessageRefined": [
+    {
+      "path": "/xtmCondition/message",
+      "before": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:association-role-scope-reifiers (https://equivalence.example.invalid/gap-association-role-scope-reifiers/map), approximately 1:90: XTM association is not implemented in this subset.",
+      "after": "XTM UNSUPPORTED-CONSTRUCT at gap:XTM:association-role-scope-reifiers (https://equivalence.example.invalid/gap-association-role-scope-reifiers/map), approximately 1:90: XTM association reification is not implemented in this subset."
+    }
+  ],
+  "resolvedCapabilityGap": {
+    "id": "explicit-association",
+    "kind": "direct-reader-equivalence-pair",
+    "normativeReason": "CTM relation and explicit XTM association have the same type and one role with equal type/player, no scope or metadata.",
+    "clauses": [
+      "CTM 3.13",
+      "XTM 4.18-4.20",
+      "TMDM 5.7-5.8,6.6-6.7"
+    ],
+    "documentIRI": "https://equivalence.example.invalid/explicit-association/map",
+    "canonicalBaseIRI": "https://equivalence.example.invalid/explicit-association/map",
+    "ctmSource": "rel(role: a)",
+    "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#rel'/></type><role><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association></topicMap>",
+    "resourceIRI": null,
+    "resourceSource": null,
+    "ctmTrace": {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "documentIRI": "https://equivalence.example.invalid/explicit-association/map",
+      "sourceKey": "ctm:explicit-association",
+      "resolverCalls": [],
+      "qualifiedXMLParserCalls": [],
+      "imports": [],
+      "sourcePreserved": true
+    },
+    "xtmTrace": {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "documentIRI": "https://equivalence.example.invalid/explicit-association/map",
+      "sourceKey": "xtm:explicit-association",
+      "resolverCalls": [],
+      "qualifiedXMLParserCalls": [
+        {
+          "documentIRI": "https://equivalence.example.invalid/explicit-association/map",
+          "sourceKey": "xtm:explicit-association",
+          "originalRootOctetsEQ": true,
+          "originalResourceOctetsEQ": false,
+          "bytes": 207
+        }
+      ],
+      "imports": [],
+      "sourcePreserved": true
+    },
+    "ctmCondition": null,
+    "xtmCondition": null,
+    "ctmModel": {
+      "countOrder": [
+        "topics",
+        "names",
+        "variants",
+        "occurrences",
+        "associations",
+        "roles",
+        "reifiedItems"
+      ],
+      "counts": [
+        3,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "topicIdentities": "(((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL NIL)\n ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL NIL)\n ((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n  NIL))",
+      "completeNativePropertyTuples": "(((:ASSOCIATION\n   ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n    NIL)\n   NIL\n   ((((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n      NIL)\n     ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n      NIL))))\n  NIL NIL NIL)\n ((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n     NIL))\n   ((:ASSOCIATION\n     ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n      NIL)\n     NIL\n     ((((\"https://equivalence.example.invalid/explicit-association/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n        NIL)))))))\n ((:ROLE\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n     NIL)\n    NIL\n    ((((\"https://equivalence.example.invalid/explicit-association/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n       NIL))))\n   ((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n    NIL)\n   ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n    NIL))\n  NIL NIL NIL)\n ((:TOPIC (\"https://equivalence.example.invalid/explicit-association/map#a\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n  (NIL NIL\n   ((:ROLE\n     (:ASSOCIATION\n      ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n       NIL)\n      NIL\n      ((((\"https://equivalence.example.invalid/explicit-association/map#role\")\n         NIL NIL)\n        ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n         NIL))))\n     ((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n      NIL)\n     ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n      NIL)))\n   NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/explicit-association/map#rel\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/explicit-association/map#role\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n  (NIL NIL NIL NIL)))"
+    },
+    "xtmModel": {
+      "countOrder": [
+        "topics",
+        "names",
+        "variants",
+        "occurrences",
+        "associations",
+        "roles",
+        "reifiedItems"
+      ],
+      "counts": [
+        3,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "topicIdentities": "(((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL NIL)\n ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL NIL)\n ((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n  NIL))",
+      "completeNativePropertyTuples": "(((:ASSOCIATION\n   ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n    NIL)\n   NIL\n   ((((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n      NIL)\n     ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n      NIL))))\n  NIL NIL NIL)\n ((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n     NIL))\n   ((:ASSOCIATION\n     ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n      NIL)\n     NIL\n     ((((\"https://equivalence.example.invalid/explicit-association/map#role\")\n        NIL NIL)\n       ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n        NIL)))))))\n ((:ROLE\n   (:ASSOCIATION\n    ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n     NIL)\n    NIL\n    ((((\"https://equivalence.example.invalid/explicit-association/map#role\")\n       NIL NIL)\n      ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n       NIL))))\n   ((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n    NIL)\n   ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n    NIL))\n  NIL NIL NIL)\n ((:TOPIC (\"https://equivalence.example.invalid/explicit-association/map#a\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n  (NIL NIL\n   ((:ROLE\n     (:ASSOCIATION\n      ((\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n       NIL)\n      NIL\n      ((((\"https://equivalence.example.invalid/explicit-association/map#role\")\n         NIL NIL)\n        ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n         NIL))))\n     ((\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n      NIL)\n     ((\"https://equivalence.example.invalid/explicit-association/map#a\") NIL\n      NIL)))\n   NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/explicit-association/map#rel\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/explicit-association/map#rel\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/explicit-association/map#role\")\n   NIL NIL)\n  (\"https://equivalence.example.invalid/explicit-association/map#role\") NIL\n  (NIL NIL NIL NIL)))"
+    },
+    "nativePropertiesEqual": true,
+    "ctmCanonicalEQ": true,
+    "xtmCanonicalEQ": true,
+    "crossMapEQRequired": false,
+    "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#rel</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#role</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"2\"></type>\n<role number=\"1\">\n<player topicref=\"1\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "xtmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#rel</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#role</locator>\n</itemIdentifiers>\n</topic>\n<association number=\"1\">\n<type topicref=\"2\"></type>\n<role number=\"1\">\n<player topicref=\"1\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n",
+    "ctmBytes": 493,
+    "xtmBytes": 493,
+    "firstDifferentByte": null,
+    "byteExact": true
+  },
+  "checks": 501,
+  "pairs": 28,
+  "remainingGaps": 2
+}

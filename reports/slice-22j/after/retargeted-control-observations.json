@@ -1,0 +1,116 @@
+[
+  {
+    "reportKey": "scopeControls",
+    "label": "scope:association-stays-unsupported",
+    "before": {
+      "label": "scope:association-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM association is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at name-syntax:scope:association-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:76: XTM association is not implemented in this subset.",
+        "line": 1,
+        "column": 76,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:association-stays-unsupported",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "scope:association-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM association reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at name-syntax:scope:association-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: XTM association reification is not implemented in this subset.",
+        "line": 1,
+        "column": 96,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:association-stays-unsupported",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/column",
+        "before": 76,
+        "after": 96
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM association is not implemented in this subset.",
+        "after": "XTM association reification is not implemented in this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at name-syntax:scope:association-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:76: XTM association is not implemented in this subset.",
+        "after": "XTM UNSUPPORTED-CONSTRUCT at name-syntax:scope:association-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:96: XTM association reification is not implemented in this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "mapReifierControls",
+    "label": "association-role-reification",
+    "before": {
+      "label": "association-role-reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "unsupported-construct",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM association is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at association-role-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:106: XTM association is not implemented in this subset.",
+        "line": 1,
+        "column": 106,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-role-reification",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "association-role-reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "unsupported-construct",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM association reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at association-role-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:106: XTM association reification is not implemented in this subset.",
+        "line": 1,
+        "column": 106,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-role-reification",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "differences": [
+      {
+        "path": "/condition/detail",
+        "before": "XTM association is not implemented in this subset.",
+        "after": "XTM association reification is not implemented in this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at association-role-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:106: XTM association is not implemented in this subset.",
+        "after": "XTM UNSUPPORTED-CONSTRUCT at association-role-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:106: XTM association reification is not implemented in this subset."
+      }
+    ]
+  }
+]

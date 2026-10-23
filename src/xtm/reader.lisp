@@ -208,6 +208,48 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                           (validate child '("type" "scope" "resourceData" "resourceRef"))))
                       (unless type-seen (reject :missing-occurrence-type "occurrence requires a type element." node))
                       (unless resource-seen (reject :missing-occurrence-resource "occurrence requires a resource element." node))))
+                   ((member name '("association" "role") :test #'string=)
+                    (attributes node '("reifier") nil)
+                    (when (attr node "reifier")
+                      (resolve-iri (attr node "reifier") *document-iri* node)
+                      (reject :unsupported-construct
+                        (format nil "XTM ~A reification is not implemented in this subset." name) node 'xtm-unsupported))
+                    (let ((association-p (string= name "association"))
+                          (phase 0) (type-seen nil) (scope-seen nil) (participants 0))
+                      (dolist (child (elements node))
+                        (check-namespace child)
+                        (let* ((kind (node-name child))
+                               (next (cond ((string= kind "itemIdentity") 0)
+                                           ((string= kind "type") 1)
+                                           ((and association-p (string= kind "scope")) 2)
+                                           ((string= kind (if association-p "role" "topicRef")) 3))))
+                          (unless next (reject :unexpected-element (format nil "Unexpected ~A element." kind) child))
+                          (when (< next phase) (reject :element-order (format nil "~A child order is invalid." name) child))
+                          (setf phase next)
+                          (cond
+                            ((string= kind "itemIdentity")
+                             (validate child '("itemIdentity"))
+                             (reject :unsupported-construct
+                               (format nil "XTM ~A item identifiers are not implemented in this subset." name) child 'xtm-unsupported))
+                            ((string= kind "type")
+                             (when type-seen (reject :duplicate-type (format nil "Only one ~A type is allowed." name) child))
+                             (setf type-seen t))
+                            (t
+                             (unless type-seen
+                               (reject :missing-type (format nil "~A requires type before ~A." name kind) child))
+                             (if (string= kind "scope")
+                                 (progn
+                                   (when scope-seen (reject :duplicate-scope "Only one association scope is allowed." child))
+                                   (setf scope-seen t))
+                                 (progn
+                                   (incf participants)
+                                   (when (and (not association-p) (> participants 1))
+                                     (reject :role-player-cardinality "role requires exactly one topicRef player." child))))))
+                          (validate child (if association-p '("type" "scope" "role") '("type" "topicRef")))))
+                      (unless type-seen (reject :missing-type (format nil "~A requires a type element." name) node))
+                      (when (zerop participants)
+                        (reject (if association-p :missing-roles :missing-role-player)
+                          (if association-p "association requires at least one role." "role requires a topicRef player.") node))))
                    ((string= name "resourceRef") (leaf-href node))
                    ((string= name "resourceData")
                     (attributes node '("datatype") nil)
@@ -277,6 +319,20 @@ constructs' complete subgrammars is made. XML errors have already been checked."
       (topic-maps.tmdm:make-association map (core-topic map "type-instance")
         (list (list (core-topic map "type") type)
               (list (core-topic map "instance") (topic-maps.tmdm:canonical-topic owner)))))))
+(defun read-association (node map)
+  ;; Validate the whole source before constructing any model items. Resolve
+  ;; references through the shared SI/II lookup, then create one complete native
+  ;; Association. TMDM owns role sets, inverse links, merging and old handles.
+  (let ((type nil) (scope nil) (roles nil))
+    (labels ((reference (ref) (find-reference-topic map (reference-iri ref)))
+             (type-reference (node) (reference (first (elements node)))))
+      (dolist (child (elements node))
+        (cond ((string= (node-name child) "type") (setf type (type-reference child)))
+              ((string= (node-name child) "scope") (setf scope (mapcar #'reference (elements child))))
+              ((string= (node-name child) "role")
+               (let ((children (elements child)))
+                 (push (list (type-reference (first children)) (reference (second children))) roles)))))
+      (topic-maps.tmdm:make-association map type (nreverse roles) :scope scope))))
 (defun read-resource-value (resource)
   "Return value and datatype for a validated resource node (XTM 4.16/4.17).
 This operation neither looks up Topics nor fetches resources. ANYTYPE is rejected
@@ -440,5 +496,6 @@ is mutated. Each public call has its own resource recursion context."
               ((string= (node-name child) "mergeMap")
                (read-mergemap child map resource-resolver max-resource-depth
                  (cons document-iri active-iris)))
+              ((string= (node-name child) "association") (read-association child map))
               (t (read-topic child map))))
       map)))
