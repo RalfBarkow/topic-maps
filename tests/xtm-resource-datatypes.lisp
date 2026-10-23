@@ -214,8 +214,8 @@
       'xtm-unsupported :resource-data-datatype))
   (variant-reifier-error-control "datatype:unknown-XTM-structure" "<topic id='a'><unknown/></topic>" 'xtm-rejection :unexpected-element)
   (variant-reifier-error-control "datatype:occurrence-remains-unsupported"
-    "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='urn:custom'>V</resourceData></occurrence></topic>"
-    'xtm-unsupported :unsupported-construct)
+    "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>"
+    'xtm-unsupported :resource-data-datatype)
   (variant-reifier-error-control "datatype:native-reifier-conflict"
     (format nil "<topic id='a'>~A</topic>" (variant-name-xml nil (concatenate 'string
       (datatype-variant "urn:custom" "A" :reifier "#r") (datatype-variant "urn:custom" "B" :reifier "#r"))))

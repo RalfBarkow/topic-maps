@@ -286,7 +286,7 @@ AUGMENT is explicit native-only test setup for constructs outside XML support."
       (list "bad-namespace" (bytes "<topicMap version='2.0'/>") 'xtm-rejection :invalid-namespace)
       (list "unknown-structure" (bytes (document "<unknown/>")) 'xtm-rejection :unexpected-element)
       (list "anyType-unimplemented" (bytes (document (datatype-body (datatype-resource "http://www.w3.org/2001/XMLSchema#anyType" "<x xmlns='urn:x'>V</x>")))) 'xtm-unsupported :resource-data-datatype)
-      (list "occurrence-XML-still-unsupported" (bytes (document "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic>")) 'xtm-unsupported :unsupported-construct)))
+      (list "occurrence-XML-still-unsupported" (bytes (document "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>")) 'xtm-unsupported :resource-data-datatype)))
       (destructuring-bind (label raw class code) row
         (mm-error label text class code :expected-doc child :expected-key "child-source"
           :resolver (lambda (&rest args) (declare (ignore args)) (values raw "child-source")))))

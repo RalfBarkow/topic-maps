@@ -177,8 +177,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                    ((string= name "occurrence")
                     (attributes node '("reifier") nil)
                     (when (attr node "reifier")
-                      (resolve-iri (attr node "reifier") *document-iri* node)
-                      (reject :unsupported-construct "XTM occurrence reification is not implemented in this subset." node 'xtm-unsupported))
+                      (resolve-iri (attr node "reifier") *document-iri* node))
                     (let ((phase 0) (type-seen nil) (scope-seen nil) (resource-seen nil))
                       (dolist (child (elements node))
                         (check-namespace child)
@@ -410,8 +409,11 @@ by source validation before model construction. Preserve other datatype IRIs."
          (resource (find-if (lambda (child) (member (node-name child) '("resourceData" "resourceRef") :test #'string=)) children)))
     (multiple-value-bind (value datatype) (read-resource-value resource)
       (topic-maps.tmdm:canonical-occurrence
-        (read-item-identities node
-          (topic-maps.tmdm:add-occurrence owner type value :datatype datatype :scope scope))))))
+        ;; Resolve Reifier by II only after native Occurrence normalization and
+        ;; II assignment. Reifier merging can normalize again: return its handle.
+        (read-item-reifier node
+          (read-item-identities node
+            (topic-maps.tmdm:add-occurrence owner type value :datatype datatype :scope scope)) map)))))
 (defun read-topic (node map)
   (let ((topic (topic-maps.tmdm:intern-topic map :item-identifier
                  (concatenate 'string *document-iri* "#" (collapse-space (attr node "id"))))))

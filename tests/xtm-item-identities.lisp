@@ -264,7 +264,7 @@
                 ("II-missing-href" "<association><itemIdentity/></association>" :missing-attribute)))
     (ik-error (first row) (second row) 'xtm-rejection (third row)))
   (ik-error "malformed-XML" "<association><itemIdentity href='urn:a'></association>" 'xtm-xml-error :xml-not-well-formed)
-  (ik-error "occurrence-reification-remains-unsupported" "<topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic>" 'xtm-unsupported :unsupported-construct)
+  (ik-error "occurrence-reification-remains-unsupported" "<topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>" 'xtm-unsupported :resource-data-datatype)
   ;; Explicitly excluded original: preserve XML-ID uniqueness, no registration.
   (let* ((id "xtm2/in/occurrence-duplicate-iid2.xtm") (raw (file-bytes (corpus-path id)))
          (c (condition-from (lambda () (deserialize-octets raw :document-iri *document* :source-key id)))))

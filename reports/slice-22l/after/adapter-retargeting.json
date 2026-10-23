@@ -1,0 +1,36 @@
+{
+  "report": "retained/xtm-mergemap.integration.json",
+  "onlyExpectedCodeChanged": true,
+  "checksAndOuterClassAndCauseAndPositionsPreserved": true,
+  "differences": [
+    {
+      "path": "/rejections/13/code",
+      "before": "UNSUPPORTED-CONSTRUCT",
+      "after": "RESOURCE-DATA-DATATYPE"
+    }
+  ],
+  "before": {
+    "label": "unsupported-occurrence-reification",
+    "class": "MERGEMAP-SOURCE-UNSUPPORTED",
+    "code": "UNSUPPORTED-CONSTRUCT",
+    "source": "memory:parent",
+    "position": 8,
+    "line": 2,
+    "column": 1,
+    "resourceIRI": "https://example.invalid/maps/child.xtm",
+    "sourceKey": "bad:child-source",
+    "causeClass": "XTM-UNSUPPORTED"
+  },
+  "after": {
+    "label": "unsupported-occurrence-reification",
+    "class": "MERGEMAP-SOURCE-UNSUPPORTED",
+    "code": "RESOURCE-DATA-DATATYPE",
+    "source": "memory:parent",
+    "position": 8,
+    "line": 2,
+    "column": 1,
+    "resourceIRI": "https://example.invalid/maps/child.xtm",
+    "sourceKey": "bad:child-source",
+    "causeClass": "XTM-UNSUPPORTED"
+  }
+}

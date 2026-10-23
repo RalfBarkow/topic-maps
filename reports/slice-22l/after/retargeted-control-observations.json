@@ -1,0 +1,555 @@
+[
+  {
+    "reportKey": "scopeControls",
+    "label": "scope:occurrence-stays-unsupported",
+    "before": {
+      "label": "scope:occurrence-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at name-syntax:scope:occurrence-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 102,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:occurrence-stays-unsupported",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "scope:occurrence-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:occurrence-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:238: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 238,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:occurrence-stays-unsupported",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 102,
+        "after": 238
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence reification is not implemented in this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at name-syntax:scope:occurrence-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at name-syntax:scope:occurrence-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:238: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "mapReifierControls",
+    "label": "occurrence-reification",
+    "before": {
+      "label": "occurrence-reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "unsupported-construct",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at occurrence-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:119: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 119,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-reification",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "occurrence-reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at occurrence-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:219: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 219,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-reification",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 119,
+        "after": 219
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence reification is not implemented in this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at occurrence-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:119: XTM occurrence reification is not implemented in this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at occurrence-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:219: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/expectedCode",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "variantReifierControls",
+    "label": "variant:occurrence-reification-excluded",
+    "before": {
+      "label": "variant:occurrence-reification-excluded",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "unsupported-construct",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at variant:occurrence-reification-excluded (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 102,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant:occurrence-reification-excluded",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "variant:occurrence-reification-excluded",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant:occurrence-reification-excluded (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:202: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 202,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant:occurrence-reification-excluded",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 102,
+        "after": 202
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence reification is not implemented in this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at variant:occurrence-reification-excluded (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant:occurrence-reification-excluded (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:202: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/expectedCode",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "datatypeControls",
+    "label": "variant:datatype:occurrence-remains-unsupported",
+    "before": {
+      "label": "variant:datatype:occurrence-remains-unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='urn:custom'>V</resourceData></occurrence></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "unsupported-construct",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at variant:datatype:occurrence-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 102,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant:datatype:occurrence-remains-unsupported",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "variant:datatype:occurrence-remains-unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at variant:datatype:occurrence-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:202: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 202,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "variant:datatype:occurrence-remains-unsupported",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 102,
+        "after": 202
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence reification is not implemented in this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at variant:datatype:occurrence-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at variant:datatype:occurrence-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:202: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/expectedCode",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='urn:custom'>V</resourceData></occurrence></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "occurrenceControls",
+    "label": "occurrence-negative:item-identity",
+    "before": {
+      "label": "occurrence-negative:item-identity",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:109: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 109,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:item-identity",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "occurrence-negative:item-identity",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:237: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 237,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:item-identity",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 109,
+        "after": 237
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence reification is not implemented in this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:109: XTM occurrence reification is not implemented in this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at occurrence-negative:item-identity (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:237: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "occurrenceControls",
+    "label": "occurrence-negative:reification",
+    "before": {
+      "label": "occurrence-negative:reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 102,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:reification",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "occurrence-negative:reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at occurrence-negative:reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:202: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 202,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-negative:reification",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 102,
+        "after": 202
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence reification is not implemented in this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at occurrence-negative:reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at occurrence-negative:reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:202: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "itemIdentityControls",
+    "label": "occurrence-reification-remains-unsupported",
+    "before": {
+      "label": "occurrence-reification-remains-unsupported",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "occurrence-reification-remains-unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at occurrence-reification-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 102,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-reification-remains-unsupported",
+        "cause": null
+      },
+      "nativeIdentifierCode": null,
+      "nativeConditionHasNoSourcePositionSlots": false,
+      "rejectedAssignments": []
+    },
+    "after": {
+      "label": "occurrence-reification-remains-unsupported",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "occurrence-reification-remains-unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at occurrence-reification-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:230: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 230,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "occurrence-reification-remains-unsupported",
+        "cause": null
+      },
+      "nativeIdentifierCode": null,
+      "nativeConditionHasNoSourcePositionSlots": false,
+      "rejectedAssignments": []
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 102,
+        "after": 230
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence reification is not implemented in this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at occurrence-reification-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at occurrence-reification-remains-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:230: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "mergemapControls",
+    "label": "occurrence-XML-still-unsupported",
+    "before": {
+      "label": "occurrence-XML-still-unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><mergeMap href='child.xtm'/></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM occurrence reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at child-source (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/child.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "line": 1,
+        "column": 102,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/child.xtm",
+        "sourceKey": "child-source",
+        "cause": null
+      },
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "unsupported-construct"
+    },
+    "after": {
+      "label": "occurrence-XML-still-unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><mergeMap href='child.xtm'/></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "resource-data-datatype",
+        "detail": "xsd:anyType XML canonicalization is outside this subset.",
+        "message": "XTM RESOURCE-DATA-DATATYPE at child-source (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/child.xtm), approximately 1:202: xsd:anyType XML canonicalization is outside this subset.",
+        "line": 1,
+        "column": 202,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/child.xtm",
+        "sourceKey": "child-source",
+        "cause": null
+      },
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "resource-data-datatype"
+    },
+    "differences": [
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      },
+      {
+        "path": "/condition/column",
+        "before": 102,
+        "after": 202
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM occurrence reification is not implemented in this subset.",
+        "after": "xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at child-source (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/child.xtm), approximately 1:102: XTM occurrence reification is not implemented in this subset.",
+        "after": "XTM RESOURCE-DATA-DATATYPE at child-source (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/child.xtm), approximately 1:202: xsd:anyType XML canonicalization is outside this subset."
+      },
+      {
+        "path": "/expectedCode",
+        "before": "unsupported-construct",
+        "after": "resource-data-datatype"
+      }
+    ]
+  }
+]

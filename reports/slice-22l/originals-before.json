@@ -1,0 +1,32 @@
+[
+  {
+    "id": "xtm2/in/occurrence-reifier.xtm",
+    "sourceBytes": 284,
+    "sourceSHA256": "0b1a23513d3fe8967864288afa179f978c65608a7419d4864e6b6716e935e96a",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e636520726569666965723d222372656966696572223e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence reifier=\"#reifier\">\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 476,
+    "baselineSHA256": "3e948871c0c2729e2b1171acaa3a7efdc25564d81b3f2d82806b4dabac4ce34e",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/in/occurrence-duplicate-reifier.xtm",
+    "sourceBytes": 459,
+    "sourceSHA256": "d227a856aee410b26bf3ae4f0c4b29690e7c1bfab7aaea24ed83d873cd855419",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e30223e20200a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e636520726569666965723d222372656966696572223e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a202020203c6f6363757272656e636520726569666965723d222372656966696572223e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence reifier=\"#reifier\">\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n    <occurrence reifier=\"#reifier\">\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": 476,
+    "baselineSHA256": "3e948871c0c2729e2b1171acaa3a7efdc25564d81b3f2d82806b4dabac4ce34e",
+    "baselineText": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+  },
+  {
+    "id": "xtm2/invalid/reifier-collision.xtm",
+    "sourceBytes": 353,
+    "sourceSHA256": "996e58f002d295cc40d75a228a8ed4feedac42d2b3e2ee253a147445ea6e8c1e",
+    "sourceHex": "3c746f7069634d617020786d6c6e733d22687474703a2f2f7777772e746f7069636d6170732e6f72672f78746d2f222076657273696f6e3d22322e302220726569666965723d222372656966696572223e0a20203c746f7069632069643d22746f706963223e0a202020203c6f6363757272656e636520726569666965723d222372656966696572223e20203c212d2d204f6363757272656e636520686173207468652073616d6520726569666965722061732074686520746d202d2d3e0a2020202020203c747970653e0a20202020202020203c746f70696352656620687265663d22236f636374797065222f3e0a2020202020203c2f747970653e0a2020202020203c7265736f75726365446174613e54657374696e67207265736f7572636520646174612e3c2f7265736f75726365446174613e0a202020203c2f6f6363757272656e63653e0a20203c2f746f7069633e0a3c2f746f7069634d61703e0a",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\" reifier=\"#reifier\">\n  <topic id=\"topic\">\n    <occurrence reifier=\"#reifier\">  <!-- Occurrence has the same reifier as the tm -->\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "baselineBytes": null,
+    "baselineSHA256": null,
+    "baselineText": null
+  }
+]

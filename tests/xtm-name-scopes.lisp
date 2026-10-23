@@ -223,7 +223,7 @@
   (dolist (spec '(("variant-resourceData-datatype-stays-unsupported" "<name><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name>" :resource-data-datatype)
     ("variant-reifier-excluded-datatype" "<name><scope><topicRef href='#s'/></scope><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name>" :resource-data-datatype)))
     (scope-error-control (first spec) (format nil "<topic id='a'>~A</topic>" (second spec)) 'xtm-unsupported (third spec)))
-  (scope-error-control "occurrence-stays-unsupported" "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic>" 'xtm-unsupported :unsupported-construct)
+  (scope-error-control "occurrence-stays-unsupported" "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>" 'xtm-unsupported :resource-data-datatype)
   (scope-error-control "association-stays-unsupported" "<association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association>" 'xtm-unsupported :unsupported-construct))
 
 (defun scope-tests ()

@@ -340,9 +340,6 @@
       "The XTM Name has an extra II that CTM cannot express here. It is not removed for comparison.")))
 (defun gap-tests ()
   (dolist (row (list
-    (list "occurrence-scope-reifier" "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#integer>@s ~r."
-      (xml "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></occurrence></topic>")
-      "occurrence" '("CTM 3.10" "XTM 4.15" "TMDM 5.6"))
     (list "association-role-scope-reifiers" "rel(role: a ~rr)@s ~ar"
       (xml "<association reifier='#ar'><type><topicRef href='#rel'/></type><scope><topicRef href='#s'/></scope><role reifier='#rr'><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association>")
       "association" '("CTM 3.3.9-3.3.10,3.13" "XTM 4.3.2,4.18-4.19" "TMDM 5.3.4,5.7-5.8"))))
@@ -383,6 +380,12 @@
               :keys '("rel" "role" "a") :counts '(3 0 0 0 1 1 0)
               :why "CTM relation and explicit XTM association have the same type and one role with equal type/player, no scope or metadata."
               :clauses '("CTM 3.13" "XTM 4.18-4.20" "TMDM 5.7-5.8,6.6-6.7")))
+            (run-pair (list :id "occurrence-scope-reifier"
+              :ctm "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#integer>@s ~r."
+              :xtm (xml "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></occurrence></topic>")
+              :keys '("a" "t" "s" "r") :counts '(4 0 0 1 0 0 1)
+              :why "Both readers create the same typed scoped integer Occurrence and the same II-identified Reifier with inverse relation."
+              :clauses '("CTM 3.10" "XTM 4.3.2,4.15" "TMDM 5.3.4-5.3.5,5.6,6.5")))
             (contrast-tests) (gap-tests)
             (check "equivalence:unique-check-labels"
               (= (length topic-maps.xtm-mergemap.tests::*checks*)
@@ -391,6 +394,6 @@
           (when path (write-report path c)) (error c)))
       (setf *checks* (reverse topic-maps.xtm-mergemap.tests::*checks*))
       (when path (write-report path))
-      (format t "CTM-XTM-EQUIVALENCE-PASS: ~D checks; ~D actual reader pairs; 3 contrasts; 2 explicit capability gaps.~%"
-        (length *checks*) (1+ (length (pair-cases))))
+      (format t "CTM-XTM-EQUIVALENCE-PASS: ~D checks; ~D actual reader pairs; 3 contrasts; 1 explicit capability gap.~%"
+        (length *checks*) (+ 2 (length (pair-cases))))
       (length *checks*))))

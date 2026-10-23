@@ -1,0 +1,15 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+XTM-CHECK-PASS occurrence-reifier-native:one-reifier:assign-and-inverse
+XTM-CHECK-PASS occurrence-reifier-native:one-reifier:equal-occurrences-old-handles-and-II-union
+XTM-CHECK-PASS occurrence-reifier-native:two-reifiers:assign-and-inverse
+XTM-CHECK-PASS occurrence-reifier-native:two-reifiers:equal-occurrences-old-handles-and-II-union
+XTM-CHECK-PASS occurrence-reifier-native:two-reifiers:Topics-merge-identifiers-and-inverse
+XTM-CHECK-PASS occurrence-reifier-native:assignment-to-different-Occurrence:exact-atomic-conflict
+XTM-CHECK-PASS occurrence-reifier-native:late-Reifier-Topic-merge:exact-atomic-conflict
+XTM-CHECK-PASS occurrence-reifier-native:II-not-Reifier-Topic-identity:atomic-native-conflict
+XTM-CHECK-PASS occurrence-reifier-native:map-versus-Occurrence:specific-atomic-original-cause
+OCCURRENCE-REIFIER-NATIVE-PREFLIGHT-PASS: 9 native checks; no Reader calls; no corpus registration

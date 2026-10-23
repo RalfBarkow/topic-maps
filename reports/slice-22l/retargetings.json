@@ -1,0 +1,139 @@
+[
+  {
+    "file": "tests/xtm-identity.lisp",
+    "label": "unsupported-occurrence",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>v</resourceData></occurrence></topic>",
+    "afterSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>v</resourceData></occurrence></topic>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/xtm-identity.lisp",
+    "label": "unsupported-occurrence-reifier",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic>",
+    "afterSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/xtm-occurrences.lisp",
+    "label": "item-identity",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence>",
+    "afterSource": "<occurrence reifier='#excluded'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/xtm-occurrences.lisp",
+    "label": "reification",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence>",
+    "afterSource": "<occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/xtm-variant-reification.lisp",
+    "label": "occurrence-reification-excluded",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic>",
+    "afterSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/xtm-resource-datatypes.lisp",
+    "label": "datatype:occurrence-remains-unsupported",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='urn:custom'>V</resourceData></occurrence></topic>",
+    "afterSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": "The one prior urn:custom boundary control now uses anyType; all positive arbitrary-datatype tests remain unchanged."
+  },
+  {
+    "file": "tests/xtm-name-scopes.lisp",
+    "label": "occurrence-stays-unsupported",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></occurrence></topic>",
+    "afterSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/xtm-mergemap.lisp",
+    "label": "occurrence-XML-still-unsupported",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic>",
+    "afterSource": "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/xtm-item-identities.lisp",
+    "label": "occurrence-reification-remains-unsupported",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData>V</resourceData></occurrence></topic>",
+    "afterSource": "<topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/xtm-map-reification.lisp",
+    "label": "occurrence-reification",
+    "originalPurpose": "Keep the source-context-qualified known Unsupported Occurrence boundary; retain reifier and any II/scope.",
+    "beforeSource": "<topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic>",
+    "afterSource": "<topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic>",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "XTM-UNSUPPORTED",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded",
+    "note": null
+  },
+  {
+    "file": "tests/ctm-xtm-mergemap.lisp",
+    "label": "unsupported-occurrence-reification",
+    "originalPurpose": "Preserve the CTM/XTM Mergemap adapter Unsupported classification, original XTM Cause and child-source/Document IRI/XML-position assertions.",
+    "beforeSource": "(list \"unsupported-occurrence-reification\" (bytes \"<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic></topicMap>\") 'topic-maps.xtm:xtm-unsupported :unsupported-construct)",
+    "afterSource": "(list \"unsupported-occurrence-reification\" (bytes \"<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic></topicMap>\") 'topic-maps.xtm:xtm-unsupported :resource-data-datatype)",
+    "beforeCode": "unsupported-construct",
+    "afterCode": "resource-data-datatype",
+    "expectedClassUnchanged": "MERGEMAP-SOURCE-UNSUPPORTED with XTM-UNSUPPORTED cause",
+    "retargetedCapability": "normatively valid xsd:anyType resource processing, still excluded"
+  },
+  {
+    "file": "reports/slice-22d/failure-controls.lisp",
+    "label": "all-113-executor-controls",
+    "change": "None; existing fault sources and Case Record outcomes retained.",
+    "sha256": "43ca5068cd66d6308b7bdc8b6fdb304ed5a08f85f89c0086c68247985e84f848"
+  }
+]

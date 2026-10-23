@@ -1,0 +1,297 @@
+[
+  {
+    "id": "xtm2/in/occurrence-reifier.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm",
+    "sourceKey": "xtm2/in/occurrence-reifier.xtm",
+    "sourceBytes": 284,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E20200A20203C746F7069632069643D22746F706963223E0A202020203C6F6363757272656E636520726569666965723D222372656966696572223E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D22236F636374797065222F3E0A2020202020203C2F747970653E0A2020202020203C7265736F75726365446174613E54657374696E67207265736F7572636520646174612E3C2F7265736F75726365446174613E0A202020203C2F6F6363757272656E63653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence reifier=\"#reifier\">\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "qualifiedParserCalls": 1,
+    "originalOctetsEQ": true,
+    "model": {
+      "existingModel": {
+        "nativeModel": {
+          "existingModel": {
+            "existingCharacteristics": {
+              "identity": {
+                "identity": {
+                  "nameModel": {
+                    "identity": {
+                      "topicCount": 3,
+                      "associationCount": 0,
+                      "canonicalParentsAndInverseReferences": true,
+                      "topics": [
+                        {
+                          "ordinal": 1,
+                          "itemIdentifiers": [
+                            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm#topic"
+                          ],
+                          "subjectIdentifiers": [],
+                          "subjectLocators": []
+                        },
+                        {
+                          "ordinal": 2,
+                          "itemIdentifiers": [
+                            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm#occtype"
+                          ],
+                          "subjectIdentifiers": [],
+                          "subjectLocators": []
+                        },
+                        {
+                          "ordinal": 3,
+                          "itemIdentifiers": [
+                            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm#reifier"
+                          ],
+                          "subjectIdentifiers": [],
+                          "subjectLocators": []
+                        }
+                      ],
+                      "associations": []
+                    },
+                    "mapItemIdentifiers": [],
+                    "canonicalNameParentTypeReferences": true,
+                    "names": []
+                  },
+                  "canonicalVariantReferences": true,
+                  "variants": []
+                },
+                "canonicalNameReifierInverseEQ": true,
+                "mapReifierTopic": null,
+                "nameReifierTopics": [],
+                "topicReifiedNames": [
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "canonicalVariantReifierInverseEQ": true,
+              "variantReifierTopics": [],
+              "topicReifiedVariants": [
+                null,
+                null,
+                null
+              ]
+            },
+            "canonicalOccurrenceReferencesEQ": true,
+            "occurrenceCount": 1,
+            "occurrences": [
+              {
+                "parent": 1,
+                "type": 2,
+                "scope": [],
+                "value": "Testing resource data.",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "itemIdentifiers": [],
+                "reifier": 3
+              }
+            ]
+          },
+          "canonicalAssociationRoleReferencesEQ": true,
+          "topicCount": 3,
+          "associationCount": 0,
+          "roleCount": 0,
+          "associations": []
+        },
+        "globalItemIdentifiersUnique": true,
+        "items": [
+          {
+            "kind": "OCCURRENCE",
+            "identifiers": []
+          }
+        ]
+      },
+      "canonicalOccurrenceReifierInverseEQ": true,
+      "occurrenceReifiers": [
+        {
+          "itemIdentifiers": [],
+          "reifierTopic": 3,
+          "reifierItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm#reifier"
+          ],
+          "inverseReifiedEQ": true
+        }
+      ]
+    },
+    "occurrenceCountsAfterEachRead": [
+      1
+    ],
+    "observedNativeHandles": 2,
+    "oldHandlesCanonicalAndLive": true,
+    "actualBytes": 476,
+    "expectedBytes": 476,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "condition": null,
+    "status": "pass",
+    "actualSHA256": "3e948871c0c2729e2b1171acaa3a7efdc25564d81b3f2d82806b4dabac4ce34e",
+    "completeByteExact": true,
+    "sourceSHA256": "0b1a23513d3fe8967864288afa179f978c65608a7419d4864e6b6716e935e96a",
+    "baselineSHA256": "3e948871c0c2729e2b1171acaa3a7efdc25564d81b3f2d82806b4dabac4ce34e"
+  },
+  {
+    "id": "xtm2/in/occurrence-duplicate-reifier.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm",
+    "sourceKey": "xtm2/in/occurrence-duplicate-reifier.xtm",
+    "sourceBytes": 459,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E30223E20200A20203C746F7069632069643D22746F706963223E0A202020203C6F6363757272656E636520726569666965723D222372656966696572223E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D22236F636374797065222F3E0A2020202020203C2F747970653E0A2020202020203C7265736F75726365446174613E54657374696E67207265736F7572636520646174612E3C2F7265736F75726365446174613E0A202020203C2F6F6363757272656E63653E0A202020203C6F6363757272656E636520726569666965723D222372656966696572223E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D22236F636374797065222F3E0A2020202020203C2F747970653E0A2020202020203C7265736F75726365446174613E54657374696E67207265736F7572636520646174612E3C2F7265736F75726365446174613E0A202020203C2F6F6363757272656E63653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\">  \n  <topic id=\"topic\">\n    <occurrence reifier=\"#reifier\">\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n    <occurrence reifier=\"#reifier\">\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "qualifiedParserCalls": 1,
+    "originalOctetsEQ": true,
+    "model": {
+      "existingModel": {
+        "nativeModel": {
+          "existingModel": {
+            "existingCharacteristics": {
+              "identity": {
+                "identity": {
+                  "nameModel": {
+                    "identity": {
+                      "topicCount": 3,
+                      "associationCount": 0,
+                      "canonicalParentsAndInverseReferences": true,
+                      "topics": [
+                        {
+                          "ordinal": 1,
+                          "itemIdentifiers": [
+                            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm#topic"
+                          ],
+                          "subjectIdentifiers": [],
+                          "subjectLocators": []
+                        },
+                        {
+                          "ordinal": 2,
+                          "itemIdentifiers": [
+                            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm#occtype"
+                          ],
+                          "subjectIdentifiers": [],
+                          "subjectLocators": []
+                        },
+                        {
+                          "ordinal": 3,
+                          "itemIdentifiers": [
+                            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm#reifier"
+                          ],
+                          "subjectIdentifiers": [],
+                          "subjectLocators": []
+                        }
+                      ],
+                      "associations": []
+                    },
+                    "mapItemIdentifiers": [],
+                    "canonicalNameParentTypeReferences": true,
+                    "names": []
+                  },
+                  "canonicalVariantReferences": true,
+                  "variants": []
+                },
+                "canonicalNameReifierInverseEQ": true,
+                "mapReifierTopic": null,
+                "nameReifierTopics": [],
+                "topicReifiedNames": [
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "canonicalVariantReifierInverseEQ": true,
+              "variantReifierTopics": [],
+              "topicReifiedVariants": [
+                null,
+                null,
+                null
+              ]
+            },
+            "canonicalOccurrenceReferencesEQ": true,
+            "occurrenceCount": 1,
+            "occurrences": [
+              {
+                "parent": 1,
+                "type": 2,
+                "scope": [],
+                "value": "Testing resource data.",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "itemIdentifiers": [],
+                "reifier": 3
+              }
+            ]
+          },
+          "canonicalAssociationRoleReferencesEQ": true,
+          "topicCount": 3,
+          "associationCount": 0,
+          "roleCount": 0,
+          "associations": []
+        },
+        "globalItemIdentifiersUnique": true,
+        "items": [
+          {
+            "kind": "OCCURRENCE",
+            "identifiers": []
+          }
+        ]
+      },
+      "canonicalOccurrenceReifierInverseEQ": true,
+      "occurrenceReifiers": [
+        {
+          "itemIdentifiers": [],
+          "reifierTopic": 3,
+          "reifierItemIdentifiers": [
+            "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm#reifier"
+          ],
+          "inverseReifiedEQ": true
+        }
+      ]
+    },
+    "occurrenceCountsAfterEachRead": [
+      1,
+      1
+    ],
+    "observedNativeHandles": 3,
+    "oldHandlesCanonicalAndLive": true,
+    "actualBytes": 476,
+    "expectedBytes": 476,
+    "actualCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+    "expectedCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n",
+    "firstDifferentByte": null,
+    "condition": null,
+    "status": "pass",
+    "actualSHA256": "3e948871c0c2729e2b1171acaa3a7efdc25564d81b3f2d82806b4dabac4ce34e",
+    "completeByteExact": true,
+    "sourceSHA256": "d227a856aee410b26bf3ae4f0c4b29690e7c1bfab7aaea24ed83d873cd855419",
+    "baselineSHA256": "3e948871c0c2729e2b1171acaa3a7efdc25564d81b3f2d82806b4dabac4ce34e"
+  },
+  {
+    "id": "xtm2/invalid/reifier-collision.xtm",
+    "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+    "sourceKey": "xtm2/invalid/reifier-collision.xtm",
+    "sourceBytes": 353,
+    "sourceHex": "3C746F7069634D617020786D6C6E733D22687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F222076657273696F6E3D22322E302220726569666965723D222372656966696572223E0A20203C746F7069632069643D22746F706963223E0A202020203C6F6363757272656E636520726569666965723D222372656966696572223E20203C212D2D204F6363757272656E636520686173207468652073616D6520726569666965722061732074686520746D202D2D3E0A2020202020203C747970653E0A20202020202020203C746F70696352656620687265663D22236F636374797065222F3E0A2020202020203C2F747970653E0A2020202020203C7265736F75726365446174613E54657374696E67207265736F7572636520646174612E3C2F7265736F75726365446174613E0A202020203C2F6F6363757272656E63653E0A20203C2F746F7069633E0A3C2F746F7069634D61703E0A",
+    "sourceText": "<topicMap xmlns=\"http://www.topicmaps.org/xtm/\" version=\"2.0\" reifier=\"#reifier\">\n  <topic id=\"topic\">\n    <occurrence reifier=\"#reifier\">  <!-- Occurrence has the same reifier as the tm -->\n      <type>\n        <topicRef href=\"#occtype\"/>\n      </type>\n      <resourceData>Testing resource data.</resourceData>\n    </occurrence>\n  </topic>\n</topicMap>\n",
+    "condition": {
+      "class": "REIFICATION-ERROR",
+      "code": "reifier-conflict",
+      "detail": "Topic already reifies a different information item.",
+      "message": "Reification REIFIER-CONFLICT: Topic already reifies a different information item.",
+      "line": null,
+      "column": null,
+      "positionUnit": null,
+      "documentIRI": null,
+      "sourceKey": null,
+      "cause": null
+    },
+    "actualNativeAssignments": [
+      {
+        "assignedItemKind": "OCCURRENCE",
+        "priorReifiedItemKind": "TOPIC-MAP",
+        "requestedReifierII": [
+          "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm#reifier"
+        ],
+        "nativeAssignmentUnchanged": true
+      }
+    ],
+    "intendedCauseReached": true,
+    "status": "pass",
+    "sourceSHA256": "996e58f002d295cc40d75a228a8ed4feedac42d2b3e2ee253a147445ea6e8c1e",
+    "baselineSHA256": null
+  }
+]

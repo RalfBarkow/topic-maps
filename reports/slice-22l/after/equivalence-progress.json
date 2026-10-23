@@ -1,0 +1,104 @@
+{
+  "previous28PairsAnd3ContrastsAndRemainingGapUnchanged": true,
+  "resolvedCapabilityGap": {
+    "id": "occurrence-scope-reifier",
+    "kind": "direct-reader-equivalence-pair",
+    "normativeReason": "Both readers create the same typed scoped integer Occurrence and the same II-identified Reifier with inverse relation.",
+    "clauses": [
+      "CTM 3.10",
+      "XTM 4.3.2,4.15",
+      "TMDM 5.3.4-5.3.5,5.6,6.5"
+    ],
+    "documentIRI": "https://equivalence.example.invalid/occurrence-scope-reifier/map",
+    "canonicalBaseIRI": "https://equivalence.example.invalid/occurrence-scope-reifier/map",
+    "ctmSource": "a t:\"42\"^^<http://www.w3.org/2001/XMLSchema#integer>@s ~r.",
+    "xtmSource": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#integer'>42</resourceData></occurrence></topic></topicMap>",
+    "resourceIRI": null,
+    "resourceSource": null,
+    "ctmTrace": {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "documentIRI": "https://equivalence.example.invalid/occurrence-scope-reifier/map",
+      "sourceKey": "ctm:occurrence-scope-reifier",
+      "resolverCalls": [],
+      "qualifiedXMLParserCalls": [],
+      "imports": [],
+      "sourcePreserved": true
+    },
+    "xtmTrace": {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "documentIRI": "https://equivalence.example.invalid/occurrence-scope-reifier/map",
+      "sourceKey": "xtm:occurrence-scope-reifier",
+      "resolverCalls": [],
+      "qualifiedXMLParserCalls": [
+        {
+          "documentIRI": "https://equivalence.example.invalid/occurrence-scope-reifier/map",
+          "sourceKey": "xtm:occurrence-scope-reifier",
+          "originalRootOctetsEQ": true,
+          "originalResourceOctetsEQ": false,
+          "bytes": 286
+        }
+      ],
+      "imports": [],
+      "sourcePreserved": true
+    },
+    "ctmCondition": null,
+    "xtmCondition": null,
+    "ctmModel": {
+      "countOrder": [
+        "topics",
+        "names",
+        "variants",
+        "occurrences",
+        "associations",
+        "roles",
+        "reifiedItems"
+      ],
+      "counts": [
+        4,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "topicIdentities": "(((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n  NIL))",
+      "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n     NIL))\n   NIL))\n ((:OCCURRENCE\n   ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n    NIL)\n   ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n    NIL)\n   \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n   (((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n     NIL)))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n   NIL)\n  NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n  (NIL\n   ((:OCCURRENCE\n     ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\")\n      NIL NIL)\n     \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n     (((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\")\n       NIL NIL))))\n   NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n  (NIL NIL NIL\n   (:OCCURRENCE\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n     NIL)\n    \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n    (((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\")\n      NIL NIL)))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n  (NIL NIL NIL NIL)))"
+    },
+    "xtmModel": {
+      "countOrder": [
+        "topics",
+        "names",
+        "variants",
+        "occurrences",
+        "associations",
+        "roles",
+        "reifiedItems"
+      ],
+      "counts": [
+        4,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "topicIdentities": "(((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n  NIL))",
+      "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n     NIL))\n   NIL))\n ((:OCCURRENCE\n   ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n    NIL)\n   ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n    NIL)\n   \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n   (((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n     NIL)))\n  NIL\n  (:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n   NIL)\n  NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n  (NIL\n   ((:OCCURRENCE\n     ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\")\n      NIL NIL)\n     \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n     (((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\")\n       NIL NIL))))\n   NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#r\") NIL\n  (NIL NIL NIL\n   (:OCCURRENCE\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#a\") NIL\n     NIL)\n    ((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n     NIL)\n    \"42\" \"http://www.w3.org/2001/XMLSchema#integer\"\n    (((\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\")\n      NIL NIL)))))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#s\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/occurrence-scope-reifier/map#t\") NIL\n  (NIL NIL NIL NIL)))"
+    },
+    "nativePropertiesEqual": true,
+    "ctmCanonicalEQ": true,
+    "xtmCanonicalEQ": true,
+    "crossMapEQRequired": false,
+    "ctmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>42</value>\n<datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#r</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "xtmCXTM": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#a</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>42</value>\n<datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>\n<type topicref=\"4\"></type>\n<scope>\n<scopingTopic topicref=\"3\"></scopingTopic>\n</scope>\n</occurrence>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#r</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#s</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#t</locator>\n</itemIdentifiers>\n</topic>\n</topicMap>\n",
+    "ctmBytes": 588,
+    "xtmBytes": 588,
+    "firstDifferentByte": null,
+    "byteExact": true
+  },
+  "checks": 515,
+  "pairs": 29,
+  "remainingGaps": 1
+}

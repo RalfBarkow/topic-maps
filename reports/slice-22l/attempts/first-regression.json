@@ -1,0 +1,116 @@
+{
+  "accepted": false,
+  "reason": "Legacy CTM/XTM adapter Unsupported fixture became supported; assertion failed before equivalence tests. No production change needed.",
+  "failedCheck": "unsupported-occurrence-reification:condition-and-code",
+  "logSHA256": "428c8ac2b8c8f32b4d2983e285d3db03f1a8e56e74d82b89bbbc8484ca34d6e4",
+  "runs": [
+    {
+      "label": "source-preparation",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "python3",
+        "/Users/rgb/workspace/topic-maps/scripts/validate-slice-22d.py",
+        "--prepare",
+        "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22d-sources-2hh4svl2/sources"
+      ],
+      "startedAtUTC": "2026-10-23T14:40:34.160557+00:00",
+      "finishedAtUTC": "2026-10-23T14:40:37.092842+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "logSHA256": "4885335e749e5871b6ca3066eba7f46282e74a22a018c159be2659eb7f7b36f4",
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "hyperdocWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "xml",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "tests/cxml-probe.lisp"
+      ],
+      "startedAtUTC": "2026-10-23T14:40:37.094329+00:00",
+      "finishedAtUTC": "2026-10-23T14:40:43.618673+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "logSHA256": "013ca7af373eafeb553e7b50f087395f8827cbe343f871111466d80115ac1fed",
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "hyperdocWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "variant-reifier-api-preflight",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "reports/slice-21o/api-preflight.lisp"
+      ],
+      "startedAtUTC": "2026-10-23T14:40:43.619431+00:00",
+      "finishedAtUTC": "2026-10-23T14:40:48.381053+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "logSHA256": "660ebe46b30ac9f5753aaee0dd8abfbfa597ac30670659859426904059f9beee",
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "hyperdocWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "xtm",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+        "--noinform",
+        "--no-sysinit",
+        "--no-userinit",
+        "--script",
+        "scripts/fresh-xtm.lisp"
+      ],
+      "startedAtUTC": "2026-10-23T14:40:48.381973+00:00",
+      "finishedAtUTC": "2026-10-23T14:40:50.702380+00:00",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "logSHA256": "6bc3322196da8ebbe04b58348a460e6f2065c7e1dedd5402c9b6ed246a7b30a2",
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "hyperdocWrites": "denied",
+      "freshProcess": true
+    },
+    {
+      "label": "regression",
+      "command": [
+        "/usr/bin/sandbox-exec",
+        "-p",
+        "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+        "/Users/rgb/workspace/topic-maps/scripts/test.sh"
+      ],
+      "startedAtUTC": "2026-10-23T14:40:50.705879+00:00",
+      "finishedAtUTC": "2026-10-23T14:41:13.665949+00:00",
+      "exitCode": 1,
+      "expectedExitCode": 0,
+      "logSHA256": "428c8ac2b8c8f32b4d2983e285d3db03f1a8e56e74d82b89bbbc8484ca34d6e4",
+      "network": "denied",
+      "repositoryWrites": "denied",
+      "hyperdocWrites": "denied",
+      "freshProcess": true
+    }
+  ]
+}

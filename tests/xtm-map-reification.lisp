@@ -223,7 +223,7 @@
     (map-reifier-error-control (first row) (second row) 'xtm-rejection (third row)))
   (dolist (row '(("name-with-variant-excluded-datatype" "<topic id='a'><name><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" :resource-data-datatype)
     ("variant-reifier-excluded-datatype" "<topic id='a'><name><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" :resource-data-datatype)
-    ("occurrence-reification" "<topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData>O</resourceData></occurrence></topic>" :unsupported-construct)
+    ("occurrence-reification" "<topic id='a'><occurrence reifier='#o'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic>" :resource-data-datatype)
     ("association-role-reification" "<association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" :unsupported-construct)
     ("mergeMap" "<mergeMap href='other.xtm'/>" :resource-resolver-required)))
     (map-reifier-error-control (first row) (map-reifier-xml "#map-r" (second row)) 'xtm-unsupported (third row)))

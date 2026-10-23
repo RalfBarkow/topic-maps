@@ -1,0 +1,132 @@
+{
+  "originalDiagnoses": 124,
+  "changed": 3,
+  "unchanged": 121,
+  "changes": [
+    {
+      "id": "xtm2/in/occurrence-duplicate-reifier.xtm",
+      "reason": "new Occurrence Reification reaches the intended original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-duplicate-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset.",
+            "line": 3,
+            "column": 36,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-duplicate-reifier.xtm",
+            "sourceKey": "xtm2/in/occurrence-duplicate-reifier.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/occurrence-reifier.xtm",
+      "reason": "new Occurrence Reification reaches the intended original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#occtype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<occurrence number=\"1\" reifier=\"2\">\n<value>Testing resource data.</value>\n<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>\n<type topicref=\"1\"></type>\n</occurrence>\n</topic>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM occurrence reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/occurrence-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset.",
+            "line": 3,
+            "column": 36,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/occurrence-reifier.xtm",
+            "sourceKey": "xtm2/in/occurrence-reifier.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/invalid/reifier-collision.xtm",
+      "reason": "new Occurrence Reification reaches the intended original result",
+      "differences": [
+        {
+          "path": "/condition/class",
+          "before": "XTM-UNSUPPORTED",
+          "after": "REIFICATION-ERROR"
+        },
+        {
+          "path": "/condition/code",
+          "before": "unsupported-construct",
+          "after": "reifier-conflict"
+        },
+        {
+          "path": "/condition/column",
+          "before": 36,
+          "after": null
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM occurrence reification is not implemented in this subset.",
+          "after": "Topic already reifies a different information item."
+        },
+        {
+          "path": "/condition/documentIRI",
+          "before": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm",
+          "after": null
+        },
+        {
+          "path": "/condition/line",
+          "before": 3,
+          "after": null
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/reifier-collision.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/reifier-collision.xtm), approximately 3:36: XTM occurrence reification is not implemented in this subset.",
+          "after": "Reification REIFIER-CONFLICT: Topic already reifies a different information item."
+        },
+        {
+          "path": "/condition/positionUnit",
+          "before": "approximate-SAX-line-column",
+          "after": null
+        },
+        {
+          "path": "/condition/sourceKey",
+          "before": "xtm2/invalid/reifier-collision.xtm",
+          "after": null
+        }
+      ]
+    }
+  ]
+}
