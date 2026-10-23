@@ -272,8 +272,8 @@
   (orr-error "Occurrence-own-II-cannot-be-Reifier-Topic-II"
     (format nil "<topic id='p'>~A</topic>" (orr-xml "urn:same" :ids '("urn:same"))) 'topic-maps.tmdm::occurrence-identifier-error :duplicate-item-identifier)
   (orr-error "anyType-remains-Unsupported" (format nil "<topic id='p'>~A</topic>" (orr-xml "#r" :datatype "http://www.w3.org/2001/XMLSchema#anyType")) 'xtm-unsupported :resource-data-datatype)
-  (orr-error "Association-Reification-remains-Unsupported" "<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" 'xtm-unsupported :unsupported-construct)
-  (orr-error "Role-Reification-remains-Unsupported" "<association><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" 'xtm-unsupported :unsupported-construct))
+  (orr-error "Association-Reification-remains-Unsupported" "<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" 'xtm-rejection :invalid-percent-escape)
+  (orr-error "Role-Reification-remains-Unsupported" "<association><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" 'xtm-rejection :invalid-percent-escape))
 (defun orr-import-test ()
   (let* ((child (mm-child-iri "child.xtm"))
          (raw (bytes (document (format nil "<topic id='p'><subjectIdentifier href='urn:owner'/>~A</topic>" (orr-xml "#r" :ids '("urn:imported-Occurrence") :scope '("#s")))))))

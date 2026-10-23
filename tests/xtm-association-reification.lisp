@@ -206,7 +206,7 @@
       (concatenate 'string (arr-xml "#r") (arr-xml "#u" :type "#other")
         (format nil "<topic id='r'><~A href='urn:r'/></topic><topic id='u'><~A href='urn:r'/></topic>" category category)) 'reification-error :reifier-conflict))
   (arr-error "Association-II-not-Reifier-Topic-II" (arr-xml "urn:same" :ids '("urn:same")) 'topic-maps.tmdm::occurrence-identifier-error :duplicate-item-identifier)
-  (arr-error "Role-Reification-remains-Unsupported" "<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#rr'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" 'xtm-unsupported :unsupported-construct))
+  (arr-error "Role-Reification-remains-Unsupported" "<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#rr%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" 'xtm-rejection :invalid-percent-escape))
 (defun arr-import-test ()
   (let* ((child (mm-child-iri "child.xtm"))
          (raw (bytes (document (concatenate 'string "<topic id='p'><subjectIdentifier href='urn:player'/></topic>"

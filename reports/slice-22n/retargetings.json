@@ -1,0 +1,132 @@
+[
+  {
+    "file": "tests/xtm-identity.lisp",
+    "label": "unsupported-association",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(\"unsupported-association\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>\" :unsupported-construct)",
+    "afterSource": "(\"unsupported-association\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#r'/></type><topicRef href='#p'/></role></association>\" :invalid-percent-escape)",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-name-scopes.lisp",
+    "label": "association-stays-unsupported",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(scope-error-control \"association-stays-unsupported\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role reifier='#excluded-role'><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association>\" 'xtm-unsupported :unsupported-construct))",
+    "afterSource": "(scope-error-control \"association-stays-unsupported\" \"<association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role reifier='#excluded-role%GG'><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association>\" 'xtm-rejection :invalid-percent-escape))",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-map-reification.lisp",
+    "label": "association-role-reification",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(\"association-role-reification\" \"<association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" :unsupported-construct)",
+    "afterSource": "(\"association-role-reification\" \"<association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" :invalid-percent-escape)",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-associations.lisp",
+    "label": "association-reifier",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(\"association-reifier\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "afterSource": "(\"association-reifier\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-rejection :invalid-percent-escape)",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-associations.lisp",
+    "label": "role-reifier",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(\"role-reifier\" \"<association><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "afterSource": "(\"role-reifier\" \"<association><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-rejection :invalid-percent-escape)",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-associations.lisp",
+    "label": "association-II",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(\"association-II\" \"<association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)",
+    "afterSource": "(\"association-II\" \"<association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-rejection :invalid-percent-escape)",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-associations.lisp",
+    "label": "role-II",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(\"role-II\" \"<association><type><topicRef href='#t'/></type><role reifier='#excluded'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-unsupported :unsupported-construct)))",
+    "afterSource": "(\"role-II\" \"<association><type><topicRef href='#t'/></type><role reifier='#excluded%GG'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" xtm-rejection :invalid-percent-escape)))",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-occurrence-reification.lisp",
+    "label": "Association-Reification-remains-Unsupported",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(orr-error \"Association-Reification-remains-Unsupported\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" 'xtm-unsupported :unsupported-construct)",
+    "afterSource": "(orr-error \"Association-Reification-remains-Unsupported\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" 'xtm-rejection :invalid-percent-escape)",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-occurrence-reification.lisp",
+    "label": "Role-Reification-remains-Unsupported",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(orr-error \"Role-Reification-remains-Unsupported\" \"<association><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" 'xtm-unsupported :unsupported-construct))",
+    "afterSource": "(orr-error \"Role-Reification-remains-Unsupported\" \"<association><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" 'xtm-rejection :invalid-percent-escape))",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/xtm-association-reification.lisp",
+    "label": "Role-Reification-remains-Unsupported",
+    "originalPurpose": "Preserve exact failure classification/code and original Document IRI/Source Key/position checks at the Role boundary; retain Association/Role II, Scope and valid Association Reification.",
+    "beforeSource": "(arr-error \"Role-Reification-remains-Unsupported\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#rr'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" 'xtm-unsupported :unsupported-construct))",
+    "afterSource": "(arr-error \"Role-Reification-remains-Unsupported\" \"<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#rr%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>\" 'xtm-rejection :invalid-percent-escape))",
+    "beforeClass": "XTM-UNSUPPORTED",
+    "beforeCode": "unsupported-construct",
+    "afterClass": "XTM-REJECTION",
+    "afterCode": "invalid-percent-escape",
+    "reason": "No remaining unsupported Role construct in this source. Replace the obsolete expectation with a specific malformed Role-Reifier IRI rejection. Valid counterparts run in the new positive Role tests; existing anyType Unsupported controls stay unchanged."
+  },
+  {
+    "file": "tests/ctm-xtm-equivalence.lisp",
+    "label": "association-role-scope-reifiers",
+    "change": "Same CTM/XTM source pair and explicit document convention; replace capability-gap expectation with a real positive dual-Reader/native-model/full-CXTM comparison."
+  },
+  {
+    "file": "reports/slice-22d/failure-controls.lisp",
+    "label": "all-113-executor-controls",
+    "change": "Driver and fault sources unchanged. All target Case Records/outcomes must remain identical."
+  }
+]

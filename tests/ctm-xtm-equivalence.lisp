@@ -338,26 +338,6 @@
       "Equal locator spelling in SI versus SL does not identify equal TMDM properties.")
     (run-contrast "non-topic-item-Identifier" "a - \"N\"." (xml "<topic id='a'><name><itemIdentity href='urn:name-item'/><value>N</value></name></topic>") doc doc doc
       "The XTM Name has an extra II that CTM cannot express here. It is not removed for comparison.")))
-(defun gap-tests ()
-  (dolist (row (list
-    (list "association-role-scope-reifiers" "rel(role: a ~rr)@s ~ar"
-      (xml "<association reifier='#ar'><type><topicRef href='#rel'/></type><scope><topicRef href='#s'/></scope><role reifier='#rr'><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association>")
-      "role" '("CTM 3.3.9-3.3.10,3.13" "XTM 4.3.2,4.18-4.19" "TMDM 5.3.4,5.7-5.8"))))
-    (destructuring-bind (id ctm-source xtm-source element clauses) row
-      (let* ((doc (format nil "https://equivalence.example.invalid/gap-~A/map" id))
-             (ctm (execute :ctm ctm-source doc (concatenate 'string "gap:CTM:" id)))
-             (xtm (execute :xtm xtm-source doc (concatenate 'string "gap:XTM:" id)))
-             (map (getf ctm :map)) (c (getf xtm :condition)))
-        (push (fields "id" id "kind" "reader-capability-gap-not-equivalence-PASS" "clauses" (coerce clauses 'vector)
-          "documentIRI" doc "ctmSource" ctm-source "xtmSource" xtm-source
-          "ctmCondition" (condition-data (getf ctm :condition)) "xtmCondition" (condition-data c)
-          "ctmModel" (when map (model map)) "ctmCXTM" (when map (babel:octets-to-string (pure-cxtm (concatenate 'string "gap:" id) map doc) :encoding :utf-8))
-          "xtmModel" (when (getf xtm :map) (model (getf xtm :map))) "successfulReaderPair" :false
-          "missingCapability" (concatenate 'string "XTM " element " deserialization")) *rows*)
-        (check (concatenate 'string "equivalence:gap:" id ":actual-unsupported-language-capability")
-          (and map (null (getf ctm :condition)) (canonical-eq-p map) (null (getf xtm :map))
-            (eq (type-of c) 'topic-maps.xtm:xtm-unsupported) (eq :unsupported-construct (topic-maps.xtm:error-code c))
-            (search element (topic-maps.xtm:error-detail c))))))))
 (defun write-report (path &optional failure)
   (with-open-file (out path :direction :output :if-exists :supersede :external-format :utf-8)
     (topic-maps.test-foundation::emit-json-value
@@ -386,7 +366,13 @@
               :keys '("a" "t" "s" "r") :counts '(4 0 0 1 0 0 1)
               :why "Both readers create the same typed scoped integer Occurrence and the same II-identified Reifier with inverse relation."
               :clauses '("CTM 3.10" "XTM 4.3.2,4.15" "TMDM 5.3.4-5.3.5,5.6,6.5")))
-            (contrast-tests) (gap-tests)
+            (run-pair (list :id "association-role-scope-reifiers"
+              :ctm "rel(role: a ~rr)@s ~ar"
+              :xtm (xml "<association reifier='#ar'><type><topicRef href='#rel'/></type><scope><topicRef href='#s'/></scope><role reifier='#rr'><type><topicRef href='#role'/></type><topicRef href='#a'/></role></association>")
+              :keys '("rel" "role" "a" "rr" "s" "ar") :counts '(6 0 0 0 1 1 2)
+              :why "Same native scoped Association and Role with independently II-identified Reifiers and inverse references; no cross-Map EQ required."
+              :clauses '("CTM 3.3.9-3.3.10,3.13" "XTM 4.3.2,4.18-4.19" "TMDM 5.3.4,5.7-5.8,6.6-6.7")))
+            (contrast-tests)
             (check "equivalence:unique-check-labels"
               (= (length topic-maps.xtm-mergemap.tests::*checks*)
                  (length (remove-duplicates topic-maps.xtm-mergemap.tests::*checks* :test #'equal)))))
@@ -394,6 +380,6 @@
           (when path (write-report path c)) (error c)))
       (setf *checks* (reverse topic-maps.xtm-mergemap.tests::*checks*))
       (when path (write-report path))
-      (format t "CTM-XTM-EQUIVALENCE-PASS: ~D checks; ~D actual reader pairs; 3 contrasts; 1 explicit capability gap.~%"
-        (length *checks*) (+ 2 (length (pair-cases))))
+      (format t "CTM-XTM-EQUIVALENCE-PASS: ~D checks; ~D actual reader pairs; 3 contrasts; 0 capability gaps.~%"
+        (length *checks*) (+ 3 (length (pair-cases))))
       (length *checks*))))

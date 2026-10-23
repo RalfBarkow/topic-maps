@@ -1,0 +1,654 @@
+[
+  {
+    "reportKey": "scopeControls",
+    "label": "scope:association-stays-unsupported",
+    "before": {
+      "label": "scope:association-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role reifier='#excluded-role'><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at name-syntax:scope:association-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:197: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 197,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:association-stays-unsupported",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "scope:association-stays-unsupported",
+      "kind": "negative-or-unsupported-XTM",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role reifier='#excluded-role%GG'><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at name-syntax:scope:association-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:200: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 200,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "name-syntax:scope:association-stays-unsupported",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 197,
+        "after": 200
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at name-syntax:scope:association-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:197: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at name-syntax:scope:association-stays-unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:200: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role reifier='#excluded-role'><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><type><topicRef href='#t'/></type><scope><topicRef href='#s'/></scope><role reifier='#excluded-role%GG'><type><topicRef href='#r'/></type><topicRef href='#a'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "mapReifierControls",
+    "label": "association-role-reification",
+    "before": {
+      "label": "association-role-reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "expectedClass": "XTM-UNSUPPORTED",
+      "expectedCode": "unsupported-construct",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at association-role-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:159: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 159,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-role-reification",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "after": {
+      "label": "association-role-reification",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "expectedClass": "XTM-REJECTION",
+      "expectedCode": "invalid-percent-escape",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at association-role-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:162: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 162,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-role-reification",
+        "cause": null
+      },
+      "atomicNativeOperation": null
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 159,
+        "after": 162
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at association-role-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:159: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at association-role-reification (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:162: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/expectedClass",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/expectedCode",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0' reifier='#map-r'><association reifier='#a'><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "associationControls",
+    "label": "association-reifier",
+    "before": {
+      "label": "association-reifier",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at association-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:154: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 154,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-reifier",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "association-reifier",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at association-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:157: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 157,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-reifier",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 154,
+        "after": 157
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at association-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:154: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at association-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:157: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "associationControls",
+    "label": "role-reifier",
+    "before": {
+      "label": "role-reifier",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at role-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:129: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 129,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "role-reifier",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "role-reifier",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at role-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:132: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 132,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "role-reifier",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 129,
+        "after": 132
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at role-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:129: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at role-reifier (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:132: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "associationControls",
+    "label": "association-II",
+    "before": {
+      "label": "association-II",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at association-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:190: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 190,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-II",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "association-II",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at association-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:193: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 193,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "association-II",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 190,
+        "after": 193
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at association-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:190: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at association-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:193: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#excluded'><itemIdentity href='urn:as'/><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "associationControls",
+    "label": "role-II",
+    "before": {
+      "label": "role-II",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#excluded'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at role-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:136: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 136,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "role-II",
+        "cause": null
+      }
+    },
+    "after": {
+      "label": "role-II",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#excluded%GG'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at role-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:139: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 139,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "role-II",
+        "cause": null
+      }
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 136,
+        "after": 139
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at role-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:136: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at role-II (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:139: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#excluded'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#excluded%GG'><itemIdentity href='urn:role'/><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "occurrenceReifierControls",
+    "label": "Association-Reification-remains-Unsupported",
+    "before": {
+      "label": "Association-Reification-remains-Unsupported",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "Association-Reification-remains-Unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at Association-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:154: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 154,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "Association-Reification-remains-Unsupported",
+        "cause": null
+      },
+      "nativeConditionHasNoSourcePositionSlots": false,
+      "actualNativeAssignments": []
+    },
+    "after": {
+      "label": "Association-Reification-remains-Unsupported",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "Association-Reification-remains-Unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at Association-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:157: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 157,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "Association-Reification-remains-Unsupported",
+        "cause": null
+      },
+      "nativeConditionHasNoSourcePositionSlots": false,
+      "actualNativeAssignments": []
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 154,
+        "after": 157
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at Association-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:154: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at Association-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:157: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "occurrenceReifierControls",
+    "label": "Role-Reification-remains-Unsupported",
+    "before": {
+      "label": "Role-Reification-remains-Unsupported",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "Role-Reification-remains-Unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at Role-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:129: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 129,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "Role-Reification-remains-Unsupported",
+        "cause": null
+      },
+      "nativeConditionHasNoSourcePositionSlots": false,
+      "actualNativeAssignments": []
+    },
+    "after": {
+      "label": "Role-Reification-remains-Unsupported",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "Role-Reification-remains-Unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at Role-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:132: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 132,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "Role-Reification-remains-Unsupported",
+        "cause": null
+      },
+      "nativeConditionHasNoSourcePositionSlots": false,
+      "actualNativeAssignments": []
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 129,
+        "after": 132
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at Role-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:129: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at Role-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:132: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#r'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  },
+  {
+    "reportKey": "associationReifierControls",
+    "label": "Role-Reification-remains-Unsupported",
+    "before": {
+      "label": "Role-Reification-remains-Unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#rr'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "Role-Reification-remains-Unsupported",
+      "condition": {
+        "class": "XTM-UNSUPPORTED",
+        "code": "unsupported-construct",
+        "detail": "XTM role reification is not implemented in this subset.",
+        "message": "XTM UNSUPPORTED-CONSTRUCT at Role-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:143: XTM role reification is not implemented in this subset.",
+        "line": 1,
+        "column": 143,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "Role-Reification-remains-Unsupported",
+        "cause": null
+      },
+      "actualNativeAssignments": []
+    },
+    "after": {
+      "label": "Role-Reification-remains-Unsupported",
+      "sourceText": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#rr%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+      "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+      "sourceKey": "Role-Reification-remains-Unsupported",
+      "condition": {
+        "class": "XTM-REJECTION",
+        "code": "invalid-percent-escape",
+        "detail": "Expected two hexadecimal digits.",
+        "message": "XTM INVALID-PERCENT-ESCAPE at Role-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:146: Expected two hexadecimal digits.",
+        "line": 1,
+        "column": 146,
+        "positionUnit": "approximate-SAX-line-column",
+        "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm",
+        "sourceKey": "Role-Reification-remains-Unsupported",
+        "cause": null
+      },
+      "actualNativeAssignments": []
+    },
+    "differences": [
+      {
+        "path": "/condition/class",
+        "before": "XTM-UNSUPPORTED",
+        "after": "XTM-REJECTION"
+      },
+      {
+        "path": "/condition/code",
+        "before": "unsupported-construct",
+        "after": "invalid-percent-escape"
+      },
+      {
+        "path": "/condition/column",
+        "before": 143,
+        "after": 146
+      },
+      {
+        "path": "/condition/detail",
+        "before": "XTM role reification is not implemented in this subset.",
+        "after": "Expected two hexadecimal digits."
+      },
+      {
+        "path": "/condition/message",
+        "before": "XTM UNSUPPORTED-CONSTRUCT at Role-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:143: XTM role reification is not implemented in this subset.",
+        "after": "XTM INVALID-PERCENT-ESCAPE at Role-Reification-remains-Unsupported (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/example.xtm), approximately 1:146: Expected two hexadecimal digits."
+      },
+      {
+        "path": "/sourceText",
+        "before": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#rr'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>",
+        "after": "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#rr%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association></topicMap>"
+      }
+    ]
+  }
+]

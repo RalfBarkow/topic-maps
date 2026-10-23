@@ -1,0 +1,243 @@
+{
+  "originalDiagnoses": 124,
+  "changed": 6,
+  "unchanged": 118,
+  "changes": [
+    {
+      "id": "xtm2/in/role-duplicate-reified.xtm",
+      "reason": "new Role Reification reaches intended original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\" reifier=\"2\">\n<player topicref=\"4\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM role reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified.xtm), approximately 6:30: XTM role reification is not implemented in this subset.",
+            "line": 6,
+            "column": 30,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified.xtm",
+            "sourceKey": "xtm2/in/role-duplicate-reified.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified2.xtm",
+      "reason": "new Role Reification reaches intended original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\" reifier=\"2\">\n<player topicref=\"4\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM role reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified2.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified2.xtm), approximately 6:30: XTM role reification is not implemented in this subset.",
+            "line": 6,
+            "column": 30,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified2.xtm",
+            "sourceKey": "xtm2/in/role-duplicate-reified2.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified3.xtm",
+      "reason": "new Role Reification reaches intended original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\" reifier=\"2\">\n<player topicref=\"5\"></player>\n<type topicref=\"3\"></type>\n</role>\n<role number=\"2\">\n<player topicref=\"6\"></player>\n<type topicref=\"4\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM role reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified3.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified3.xtm), approximately 6:30: XTM role reification is not implemented in this subset.",
+            "line": 6,
+            "column": 30,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified3.xtm",
+            "sourceKey": "xtm2/in/role-duplicate-reified3.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-duplicate-reified4.xtm",
+      "reason": "new Role Reification reaches intended original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#reifier2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"5\">\n<itemIdentifiers>\n<locator>#roletype2</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"6\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<topic number=\"7\">\n<itemIdentifiers>\n<locator>#topic2</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.2\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\" reifier=\"2\">\n<player topicref=\"6\"></player>\n<type topicref=\"4\"></type>\n</role>\n<role number=\"2\" reifier=\"3\">\n<player topicref=\"7\"></player>\n<type topicref=\"5\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM role reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-duplicate-reified4.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified4.xtm), approximately 6:30: XTM role reification is not implemented in this subset.",
+            "line": 6,
+            "column": 30,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-duplicate-reified4.xtm",
+            "sourceKey": "xtm2/in/role-duplicate-reified4.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/in/role-reifier.xtm",
+      "reason": "new Role Reification reaches intended original result",
+      "differences": [
+        {
+          "path": "/actualCXTM",
+          "before": null,
+          "after": "<topicMap>\n<topic number=\"1\">\n<itemIdentifiers>\n<locator>#assoctype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"2\">\n<itemIdentifiers>\n<locator>#reifier</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"3\">\n<itemIdentifiers>\n<locator>#roletype</locator>\n</itemIdentifiers>\n</topic>\n<topic number=\"4\">\n<itemIdentifiers>\n<locator>#topic</locator>\n</itemIdentifiers>\n<rolePlayed ref=\"association.1.role.1\"></rolePlayed>\n</topic>\n<association number=\"1\">\n<type topicref=\"1\"></type>\n<role number=\"1\" reifier=\"2\">\n<player topicref=\"4\"></player>\n<type topicref=\"3\"></type>\n</role>\n</association>\n</topicMap>\n"
+        },
+        {
+          "path": "/byteExact",
+          "before": false,
+          "after": true
+        },
+        {
+          "path": "/condition",
+          "before": {
+            "class": "XTM-UNSUPPORTED",
+            "code": "unsupported-construct",
+            "detail": "XTM role reification is not implemented in this subset.",
+            "message": "XTM UNSUPPORTED-CONSTRUCT at xtm2/in/role-reifier.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-reifier.xtm), approximately 6:30: XTM role reification is not implemented in this subset.",
+            "line": 6,
+            "column": 30,
+            "positionUnit": "approximate-SAX-line-column",
+            "documentIRI": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/in/role-reifier.xtm",
+            "sourceKey": "xtm2/in/role-reifier.xtm",
+            "cause": null
+          },
+          "after": null
+        },
+        {
+          "path": "/status",
+          "before": "rejected",
+          "after": "deserialized"
+        }
+      ]
+    },
+    {
+      "id": "xtm2/invalid/role-duplicate-reified.xtm",
+      "reason": "new Role Reification reaches intended original result",
+      "differences": [
+        {
+          "path": "/condition/class",
+          "before": "XTM-UNSUPPORTED",
+          "after": "REIFICATION-ERROR"
+        },
+        {
+          "path": "/condition/code",
+          "before": "unsupported-construct",
+          "after": "reifier-conflict"
+        },
+        {
+          "path": "/condition/column",
+          "before": 31,
+          "after": null
+        },
+        {
+          "path": "/condition/detail",
+          "before": "XTM role reification is not implemented in this subset.",
+          "after": "Topic already reifies a different information item."
+        },
+        {
+          "path": "/condition/documentIRI",
+          "before": "https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/role-duplicate-reified.xtm",
+          "after": null
+        },
+        {
+          "path": "/condition/line",
+          "before": 9,
+          "after": null
+        },
+        {
+          "path": "/condition/message",
+          "before": "XTM UNSUPPORTED-CONSTRUCT at xtm2/invalid/role-duplicate-reified.xtm (https://xtm-tests.example.invalid/cd165b150176c1d6842b37be9cc9051b40d4996b/xtm2/invalid/role-duplicate-reified.xtm), approximately 9:31: XTM role reification is not implemented in this subset.",
+          "after": "Reification REIFIER-CONFLICT: Topic already reifies a different information item."
+        },
+        {
+          "path": "/condition/positionUnit",
+          "before": "approximate-SAX-line-column",
+          "after": null
+        },
+        {
+          "path": "/condition/sourceKey",
+          "before": "xtm2/invalid/role-duplicate-reified.xtm",
+          "after": null
+        }
+      ]
+    }
+  ]
+}

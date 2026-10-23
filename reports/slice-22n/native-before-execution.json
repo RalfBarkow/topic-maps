@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "--noinform",
+    "--no-sysinit",
+    "--no-userinit",
+    "--script",
+    "reports/slice-22n/api-preflight.lisp"
+  ],
+  "exitCode": 0,
+  "startedAtUTC": "2026-10-23T19:05:08.740158+00:00",
+  "finishedAtUTC": "2026-10-23T19:05:17.657053+00:00",
+  "network": "denied",
+  "repositoryWrites": "denied",
+  "beforeAnyProductionChange": true,
+  "executionSourceSHA256": {
+    "src/xtm/reader.lisp": "007d45ab681fe8c47574c76e6131c6be988f90cfc4f925ad98c0afc33a96fc3b",
+    "src/tmdm/reification.lisp": "9476931118aa964c88b672012a13098a08ae752e3f5c29c27343e985aad2a638",
+    "src/tmdm/associations.lisp": "cc86f08693a0f4be141757f003f9be476bbb9fe0805484dec8d1692eb7aeef18",
+    "tests/xtm-role-reifier-native.lisp": "d95d457b9eeb17d410528818df137f8208b9a962cc318df960045b25132eb50b",
+    "reports/slice-22n/api-preflight.lisp": "b2ef87116c268856d9e741d2ecb344ed7cbc905dba9f0006c6168d271b7364e5"
+  },
+  "logSHA256": "3444acf630fd2e0d5e8769aa383101c25b82d319baf6f796154eb1bbf483fea4",
+  "reportSHA256": "b0e35624eca9cde07ed83d5d84b14fccf2f8bf03dac6bf2ef84780b66c44aca9",
+  "dependencyPreparationCommand": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "python3",
+    "scripts/validate-slice-22d.py",
+    "--prepare",
+    "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22n-a0tv0kd1/sources"
+  ],
+  "dependencyPreparationExitCode": 0,
+  "dependencyPreparationReportSHA256": "3513c58a58a6b2f80979259704cdeac9986bfbf9c914e1278f134f1685c8aa94",
+  "sourceRegistry": "(:source-registry (:tree \"/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22n-a0tv0kd1/sources/cxml/\") (:tree \"/private/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22n-a0tv0kd1/sources/closure-common/\") (:tree \"/nix/store/76bbavhilddfxd2b56inkdzi6ym860cs-source/\") (:tree \"/nix/store/i6nnd3amy08a3f3v8q76nh9kw9434z29-source/\") (:tree \"/nix/store/fldw3972prvmlv87f0qf69myk79kz1g4-source/\") (:tree \"/nix/store/sk5ab989c1q4yb1b6rwh0rsa5d2iiq5b-source/\") (:tree \"/nix/store/9h9dj9dlm06x99n3px6vsqh40c6djan8-source/\") :ignore-inherited-configuration)"
+}

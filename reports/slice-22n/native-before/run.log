@@ -1,0 +1,21 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+XTM-CHECK-PASS role-reifier-native:single-and-equal-Roles:assignment-inverse
+XTM-CHECK-PASS role-reifier-native:same-Role-same-Reifier:idempotent
+XTM-CHECK-PASS role-reifier-native:same-Role-different-Reifiers:Topic-merge-II-and-handles
+XTM-CHECK-PASS role-reifier-native:SUBJECT-IDENTIFIER:different-parents:native-merge-Role-Association-Topic-handles-and-II
+XTM-CHECK-PASS role-reifier-native:SUBJECT-IDENTIFIER:same-parent:native-merge-Role-Association-Topic-handles-and-II
+XTM-CHECK-PASS role-reifier-native:SUBJECT-LOCATOR:different-parents:native-merge-Role-Association-Topic-handles-and-II
+XTM-CHECK-PASS role-reifier-native:SUBJECT-LOCATOR:same-parent:native-merge-Role-Association-Topic-handles-and-II
+XTM-CHECK-PASS role-reifier-native:ITEM-IDENTIFIER:different-parents:native-merge-Role-Association-Topic-handles-and-II
+XTM-CHECK-PASS role-reifier-native:ITEM-IDENTIFIER:same-parent:native-merge-Role-Association-Topic-handles-and-II
+XTM-CHECK-PASS role-reifier-native:same-signature-different-parent-original-cause:exact-atomic-conflict
+XTM-CHECK-PASS role-reifier-native:Role-versus-Association:exact-atomic-conflict
+XTM-CHECK-PASS role-reifier-native:Role-versus-Occurrence:exact-atomic-conflict
+XTM-CHECK-PASS role-reifier-native:Role-versus-Map:exact-atomic-conflict
+XTM-CHECK-PASS role-reifier-native:late-Reifier-Topic-merge:exact-atomic-conflict
+XTM-CHECK-PASS role-reifier-native:Role-II-not-Reifier-II:atomic-conflict
+ROLE-REIFIER-NATIVE-PREFLIGHT-PASS: 15 native checks; no Reader calls; no corpus registration

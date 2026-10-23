@@ -208,10 +208,7 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                    ((member name '("association" "role") :test #'string=)
                     (attributes node '("reifier") nil)
                     (when (attr node "reifier")
-                      (resolve-iri (attr node "reifier") *document-iri* node)
-                      (when (string= name "role")
-                        (reject :unsupported-construct
-                          "XTM role reification is not implemented in this subset." node 'xtm-unsupported)))
+                      (resolve-iri (attr node "reifier") *document-iri* node))
                     (let ((association-p (string= name "association"))
                           (phase 0) (type-seen nil) (scope-seen nil) (participants 0))
                       (dolist (child (elements node))
@@ -339,13 +336,16 @@ constructs' complete subgrammars is made. XML errors have already been checked."
         ;; Match source metadata to the native Role by its complete signature
         ;; within THIS canonical Parent. Role order/II are not equality keys.
         (loop for pair in (reverse roles) for source in (reverse role-nodes) do
+          ;; A preceding Role Reifier may have merged Topics and this Parent.
+          (setf association (topic-maps.tmdm:canonical-association association))
           (let ((role (find-if (lambda (role)
                         (and (eq (topic-maps.tmdm:association-role-type role)
                                  (topic-maps.tmdm:canonical-topic (first pair)))
                              (eq (topic-maps.tmdm:association-role-player role)
                                  (topic-maps.tmdm:canonical-topic (second pair)))))
                       (topic-maps.tmdm:association-roles association))))
-            (read-item-identities source role)))
+            (setf role (read-item-identities source role))
+            (read-item-reifier source (topic-maps.tmdm:canonical-association-role role) map)))
         ;; Role metadata is now on the native canonical Parent. Reifier merging
         ;; may normalize it again; return the resulting Association handle.
         (topic-maps.tmdm:canonical-association
