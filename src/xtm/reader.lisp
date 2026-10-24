@@ -1,5 +1,7 @@
 (in-package #:topic-maps.xtm)
 
+(defparameter +any-type+ "http://www.w3.org/2001/XMLSchema#anyType")
+
 (defparameter +namespace+ "http://www.topicmaps.org/xtm/")
 ;; This is a source tree of XML events, not a second Topic Maps object model.
 ;; Positions are SAX approximations at the end of a start tag, never byte spans.
@@ -24,6 +26,67 @@
   (declare (ignore uri local qname))
   (let ((node (pop (handler-stack h)))) (setf (node-children node) (nreverse (node-children node)))))
 (defmethod sax:end-document ((h source-handler)) (handler-root h))
+
+;;; Document-local association, not a second XML or Topic Maps model. The
+;;; opaque context is NEVER supplied by callers or reused between documents.
+(defstruct xml-resource-binding document-iri source-key original snapshot nodes indices values)
+(defvar *xml-resource-binding* nil)
+(defun source-resource-nodes (node)
+  ;; Same expanded-name predicate and complete preorder as XML's documented
+  ;; RESOURCE-DATA-COUNT / CANONICALIZE-RESOURCE-DATA. Do not count only anyType
+  ;; or skip foreign subtrees: every resourceData slot affects the ordinal.
+  (append (when (and (equal (node-uri node) +namespace+) (equal (node-name node) "resourceData")) (list node))
+    (loop for child in (node-children node) unless (stringp child) append (source-resource-nodes child))))
+(defun resource-association-error (detail)
+  ;; Internal association failure, not a claim that valid XTM is syntactically
+  ;; invalid. There is no native source span for this invariant; use NIL.
+  (error 'xtm-xml-error :code :resource-data-association :detail detail :cause nil
+    :document-iri *document-iri* :source-key *source-key* :line nil :column nil))
+(defun prepare-xml-resources (root original snapshot)
+  (let* ((nodes (coerce (source-resource-nodes root) 'vector))
+         (any (find +any-type+ nodes :test #'equal :key (lambda (n) (attr n "datatype")))))
+    (when any
+      (unless (equalp original snapshot) (resource-association-error "Original XML octets changed after source parsing."))
+      ;; Provenance is established by construction: this private call uses only
+      ;; the octet snapshot taken BEFORE parsing this source tree. No DOM/private
+      ;; XML API or reconstructed XML is used for association or canonicalization.
+      (let* ((context (topic-maps.xml:parse-canonical-context snapshot))
+             (indices (make-hash-table :test #'eq))
+             (values (make-array (length nodes) :initial-element nil)))
+        (unless (= (length nodes) (topic-maps.xml:resource-data-count context))
+          (resource-association-error "Source/context resourceData inventories disagree."))
+        (loop for n across nodes for i from 0 do
+          (when (nth-value 1 (gethash n indices)) (resource-association-error "Source resourceData node occurs twice."))
+          (setf (gethash n indices) i)
+          (when (equal (attr n "datatype") +any-type+)
+            (setf (aref values i)
+              (handler-case (topic-maps.xml:canonicalize-resource-data context :index i)
+                (topic-maps.xml:canonicalization-error (c)
+                  (error 'xtm-xml-error :code (topic-maps.xml:canonicalization-error-code c)
+                    :detail (princ-to-string c) :cause c :document-iri *document-iri* :source-key *source-key*
+                    :line nil :column nil))))))
+        (unless (equalp original snapshot) (resource-association-error "Original XML octets changed during context preparation."))
+        (make-xml-resource-binding :document-iri (copy-seq *document-iri*) :source-key (if (stringp *source-key*) (copy-seq *source-key*) *source-key*)
+          :original original :snapshot snapshot :nodes nodes :indices indices :values values)))))
+(defun bound-xml-value (node)
+  (let ((b *xml-resource-binding*))
+    (unless (and b (equal *document-iri* (xml-resource-binding-document-iri b))
+                   (equal *source-key* (xml-resource-binding-source-key b))
+                   (equalp (xml-resource-binding-original b) (xml-resource-binding-snapshot b)))
+      (resource-association-error "No matching immutable XML document frame."))
+    (multiple-value-bind (index found) (gethash node (xml-resource-binding-indices b))
+      (unless (and found (typep index '(integer 0 *)) (< index (length (xml-resource-binding-nodes b)))
+                   (eq node (aref (xml-resource-binding-nodes b) index))
+                   (stringp (aref (xml-resource-binding-values b) index)))
+        (resource-association-error "resourceData is not owned by this document/ordinal."))
+      (aref (xml-resource-binding-values b) index))))
+(defun validate-embedded-markup (node)
+  ;; XTM 4.3.1 any-markup excludes elements in the XTM namespace at EVERY
+  ;; depth; arbitrary foreign elements/attributes remain XML, not XTM syntax.
+  (when (equal (node-uri node) +namespace+)
+    (reject :embedded-xtm-element "XTM elements cannot occur inside embedded XML." node))
+  (dolist (child (node-children node))
+    (unless (stringp child) (validate-embedded-markup child))))
 
 (defun xml-space-p (c) (find c '(#\Space #\Tab #\Newline #\Return)))
 (defun collapse-space (text)
@@ -251,12 +314,11 @@ constructs' complete subgrammars is made. XML errors have already been checked."
                       (when datatype
                         (unless (iri-parts-scheme (split-iri datatype))
                           (reject :invalid-resource-data-datatype "resourceData datatype must be an absolute IRI." node))
-                        (validate-decoded-reference (unescape-reference datatype node) node)
-                        (when (equal datatype "http://www.w3.org/2001/XMLSchema#anyType")
-                          (reject :resource-data-datatype "xsd:anyType XML canonicalization is outside this subset." node 'xtm-unsupported)))
+                        (validate-decoded-reference (unescape-reference datatype node) node))
                       (dolist (child (node-children node))
                         (unless (stringp child)
-                          (reject :unexpected-child "Textual resourceData cannot contain child elements." child)))))
+                          (if (equal datatype +any-type+) (validate-embedded-markup child)
+                              (reject :unexpected-child "Textual resourceData cannot contain child elements." child))))))
                    ((string= name "type")
                     (attributes node nil nil)
                     (let ((refs (elements node)))
@@ -352,17 +414,16 @@ constructs' complete subgrammars is made. XML errors have already been checked."
           (read-item-reifier node association map))))))
 (defun read-resource-value (resource)
   "Return value and datatype for a validated resource node (XTM 4.16/4.17).
-This operation neither looks up Topics nor fetches resources. ANYTYPE is rejected
-by source validation before model construction. Preserve other datatype IRIs."
+This operation neither looks up Topics nor fetches resources. ANYTYPE values
+come only from the checked document-local XML binding. Preserve datatype IRIs."
   (if (string= (node-name resource) "resourceRef")
       (values (leaf-href resource) (topic-maps.tmdm:iri-datatype))
-      (let ((datatype (or (attr resource "datatype") (topic-maps.tmdm:string-datatype)))
-            (text (with-output-to-string (out)
-                    (dolist (part (node-children resource)) (write-string part out)))))
-        (values (if (equal datatype (topic-maps.tmdm:iri-datatype))
-                    (resolve-iri text *document-iri* resource)
-                    text)
-                datatype))))
+      (let ((datatype (or (attr resource "datatype") (topic-maps.tmdm:string-datatype))))
+        (if (equal datatype +any-type+) (values (bound-xml-value resource) datatype)
+            (let ((text (with-output-to-string (out)
+                          (dolist (part (node-children resource)) (write-string part out)))))
+              (values (if (equal datatype (topic-maps.tmdm:iri-datatype))
+                          (resolve-iri text *document-iri* resource) text) datatype))))))
 (defun read-variant (node name map)
   (let* ((children (elements node))
          (scope-node (find "scope" children :key #'node-name :test #'string=))
@@ -490,6 +551,7 @@ is mutated. Each public call has its own resource recursion context."
 (defun deserialize-document (bytes document-iri source-key resource-resolver max-resource-depth active-iris)
   (check-type bytes (vector (unsigned-byte 8)))
   (let ((*document-iri* document-iri) (*source-key* source-key)
+        (*xml-resource-binding* nil) (snapshot (copy-seq bytes))
         (handler (make-instance 'source-handler)))
     (require-document-iri document-iri)
     (let* ((root
@@ -505,6 +567,7 @@ is mutated. Each public call has its own resource recursion context."
                         :line (sax:line-number handler) :column (sax:column-number handler)))))
            (map (topic-maps.tmdm:make-topic-map)))
       (validate-source root)
+      (setf *xml-resource-binding* (prepare-xml-resources root bytes snapshot))
       ;; The attribute is processed before itemIdentity and later Topic nodes.
       (read-map-reifier root map)
       (dolist (child (elements root))

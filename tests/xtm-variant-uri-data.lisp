@@ -226,7 +226,7 @@
     ("anyType-still-unsupported" "<resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'><x xmlns='urn:foreign'>XML</x></resourceData>")))
     (variant-error-control (concatenate 'string "uri-data:" (first row))
       (format nil "<topic id='a'><name><value>N</value><variant><scope><topicRef href='#s'/></scope>~A</variant></name></topic>" (second row))
-      'xtm-unsupported :resource-data-datatype)))
+      'xtm-unsupported :resource-resolver-required)))
 
 (defun uri-data-scope-controls ()
   (dolist (row '(("equal-scope" ("base")) ("duplicate-scope-no-new-theme" ("base" "base"))))

@@ -249,8 +249,8 @@
     ("after-scope" "<scope><topicRef href='#s'/></scope><itemIdentity href='urn:n'/>" :element-order)))
     (iid-error-control (first row) (format nil "<topic id='a'><name>~A<value>N</value></name></topic>" (second row)) 'xtm-rejection (third row)))
   (iid-error-control "after-value" "<topic id='a'><name><value>N</value><itemIdentity href='urn:n'/></name></topic>" 'xtm-rejection :element-order)
-  (iid-error-control "variant-reifier-excluded-datatype" "<topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" 'xtm-unsupported :resource-data-datatype)
-  (iid-error-control "variant-resourceData-datatype-stays-unsupported" "<topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" 'xtm-unsupported :resource-data-datatype))
+  (iid-error-control "variant-reifier-excluded-datatype" "<topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='#r'><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" 'xtm-unsupported :resource-resolver-required)
+  (iid-error-control "variant-resourceData-datatype-stays-unsupported" "<topic id='a'><name><itemIdentity href='urn:n'/><scope><topicRef href='#s'/></scope><value>N</value><variant><scope><topicRef href='#v'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" 'xtm-unsupported :resource-resolver-required))
 
 (defun iid-tests ()
   (setf *iid-controls* nil)

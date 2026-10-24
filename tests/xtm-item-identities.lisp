@@ -147,7 +147,7 @@
   ;; Preserve the native condition and show that each failing ID assignment is
   ;; checked before mutation. XTM/XML source contexts and causes remain intact.
   (let ((saved (symbol-function 'add-item-identifier)) (c nil) (failed-assignments nil)
-        (raw (bytes (document body))))
+        (raw (bytes (ss-unsupported-source (document body) code label))))
     (unwind-protect
       (progn
         (setf (symbol-function 'add-item-identifier)
@@ -171,7 +171,7 @@
       (when (typep c 'item-identifier-error)
         (check (format nil "item-identity-error:~A:failed-native-assignment-atomic-not-merged-by-II" label)
           (and failed-assignments (every #'third failed-assignments))))
-      (push (mm-fields "label" label "documentIRI" *document* "sourceKey" label "sourceText" (document body)
+      (push (mm-fields "label" label "documentIRI" *document* "sourceKey" label "sourceText" (babel:octets-to-string raw :encoding :utf-8)
         "condition" (mm-condition c) "nativeIdentifierCode" (when (typep c 'item-identifier-error) (string-downcase (string actual-code)))
         "nativeConditionHasNoSourcePositionSlots" (if (typep c 'item-identifier-error) :true :false)
         "rejectedAssignments" (coerce (mapcar (lambda (x) (mm-fields "itemKind" (first x) "locator" (second x) "nativeAssignmentUnchanged" (if (third x) :true :false))) failed-assignments) 'vector)) *item-identity-controls*)) c))
@@ -264,7 +264,7 @@
                 ("II-missing-href" "<association><itemIdentity/></association>" :missing-attribute)))
     (ik-error (first row) (second row) 'xtm-rejection (third row)))
   (ik-error "malformed-XML" "<association><itemIdentity href='urn:a'></association>" 'xtm-xml-error :xml-not-well-formed)
-  (ik-error "occurrence-reification-remains-unsupported" "<topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>" 'xtm-unsupported :resource-data-datatype)
+  (ik-error "occurrence-reification-remains-unsupported" "<topic id='p'><occurrence reifier='#r'><itemIdentity href='urn:o'/><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>" 'xtm-unsupported :resource-resolver-required)
   ;; Explicitly excluded original: preserve XML-ID uniqueness, no registration.
   (let* ((id "xtm2/in/occurrence-duplicate-iid2.xtm") (raw (file-bytes (corpus-path id)))
          (c (condition-from (lambda () (deserialize-octets raw :document-iri *document* :source-key id)))))

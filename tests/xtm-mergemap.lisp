@@ -252,6 +252,8 @@ AUGMENT is explicit native-only test setup for constructs outside XML support."
 (define-condition mm-resolver-denied (error) ())
 (defun mm-error (label raw class code &key resolver (depth 32) (doc *document*)
                        (expected-doc doc) (expected-key label))
+  (when (eq code :resource-resolver-required)
+    (setf raw (ss-unsupported-source (if (stringp raw) raw (babel:octets-to-string raw :encoding :utf-8)) code label)))
   (let ((c (condition-from (lambda ()
     (deserialize-octets (if (stringp raw) (bytes raw) raw) :document-iri doc :source-key label
       :resource-resolver resolver :max-resource-depth depth)))))
@@ -285,9 +287,11 @@ AUGMENT is explicit native-only test setup for constructs outside XML support."
       (list "bad-version" (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.1'/>") 'xtm-rejection :invalid-version)
       (list "bad-namespace" (bytes "<topicMap version='2.0'/>") 'xtm-rejection :invalid-namespace)
       (list "unknown-structure" (bytes (document "<unknown/>")) 'xtm-rejection :unexpected-element)
-      (list "anyType-unimplemented" (bytes (document (datatype-body (datatype-resource "http://www.w3.org/2001/XMLSchema#anyType" "<x xmlns='urn:x'>V</x>")))) 'xtm-unsupported :resource-data-datatype)
-      (list "occurrence-XML-still-unsupported" (bytes (document "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>")) 'xtm-unsupported :resource-data-datatype)))
+      (list "anyType-unimplemented" (bytes (document (datatype-body (datatype-resource "http://www.w3.org/2001/XMLSchema#anyType" "<x xmlns='urn:x'>V</x>")))) 'xtm-unsupported :cyclic-mergemap)
+      (list "occurrence-XML-still-unsupported" (bytes (document "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>")) 'xtm-unsupported :cyclic-mergemap)))
       (destructuring-bind (label raw class code) row
+        (when (eq code :cyclic-mergemap)
+          (setf raw (bytes (ss-unsupported-source (babel:octets-to-string raw :encoding :utf-8) code label))))
         (mm-error label text class code :expected-doc child :expected-key "child-source"
           :resolver (lambda (&rest args) (declare (ignore args)) (values raw "child-source")))))
     (setf calls 0)

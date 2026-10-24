@@ -1,0 +1,1 @@
+{"acceptancePassed": true, "XTMChecks": 4327, "newChecks": 204, "positiveReaderProbes": 23, "negativeReaderProbes": 17, "sourceReplays": 36, "faultControls": 113, "statuses": {"XTM": {"pass": 121, "fail": 0, "not-run": 3}, "CTM": {"pass": 262, "fail": 4, "not-run": 7}, "total": {"pass": 383, "fail": 4, "not-run": 10}}}

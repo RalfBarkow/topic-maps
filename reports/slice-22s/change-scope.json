@@ -1,0 +1,31 @@
+{
+  "baseCommit": "c1fa847c85017d4edf5c2439c772d903261e5a12",
+  "allowedTrackedChanges": [
+    "src/xtm/reader.lisp",
+    "tests/ctm-xtm-mergemap.lisp",
+    "tests/xtm-identity.lisp",
+    "tests/xtm-item-identities.lisp",
+    "tests/xtm-map-reification.lisp",
+    "tests/xtm-mergemap.lisp",
+    "tests/xtm-name-item-identities.lisp",
+    "tests/xtm-name-reification.lisp",
+    "tests/xtm-name-scopes.lisp",
+    "tests/xtm-names.lisp",
+    "tests/xtm-negative-originals.lisp",
+    "tests/xtm-occurrence-reification.lisp",
+    "tests/xtm-occurrences.lisp",
+    "tests/xtm-resource-datatypes.lisp",
+    "tests/xtm-role-reification.lisp",
+    "tests/xtm-variant-item-identities.lisp",
+    "tests/xtm-variant-reification.lisp",
+    "tests/xtm-variant-uri-data.lisp",
+    "tests/xtm-variants.lisp",
+    "topic-maps.asd"
+  ],
+  "newSources": [
+    "tests/xtm-anytype.lisp"
+  ],
+  "retargetingMechanism": "explicit ss-unsupported-source call only for resolver-required/cyclic control expectations; all previous sources retained/replayed",
+  "preflightReaderSHA256": "f7aa0575f8bb28913ee396060bb139b2804b3e4f5e0d5aa78341224c46b5bbff",
+  "preflightToolSHA256": "d525ec937b0016cccf89a93a03f53307adfaaec13d77f8647f5271319255161b"
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "--noinform",
+    "--no-sysinit",
+    "--no-userinit",
+    "--script",
+    "reports/slice-22s/integration-preflight.lisp"
+  ],
+  "startedAtUTC": "2026-10-24T08:29:40.223688+00:00",
+  "finishedAtUTC": "2026-10-24T08:29:53.960037+00:00",
+  "exitCode": 0,
+  "readerSHA256": "f7aa0575f8bb28913ee396060bb139b2804b3e4f5e0d5aa78341224c46b5bbff",
+  "readerMatchesBase": true,
+  "networkAndRepositoryWrites": "denied"
+}

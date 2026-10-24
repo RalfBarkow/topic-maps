@@ -161,7 +161,8 @@
           "model" (orr-model map) "CXTM" (babel:octets-to-string cx :encoding :utf-8)
           "readOccurrenceCounts" (coerce counts 'vector) "oldHandlesCanonicalAndLive" :true) *occurrence-reifier-controls*)) map)))
 (defun orr-error (label body class code &key resolver map-reifier)
-  (multiple-value-bind (c frames) (orr-condition-from (bytes (if map-reifier (map-reifier-xml map-reifier body) (document body))) label resolver)
+  (let ((source (ss-unsupported-source (if map-reifier (map-reifier-xml map-reifier body) (document body)) code label)))
+  (multiple-value-bind (c frames) (orr-condition-from (bytes source) label resolver)
     (let ((actual (cond ((typep c 'topic-maps.xtm:xtm-error) (error-code c))
                         ((typep c 'reification-error) (reification-error-code c))
                         ((typep c 'item-identifier-error) (item-identifier-error-code c)))))
@@ -172,9 +173,10 @@
           (and (equal *document* (error-document-iri c)) (equal label (error-source-key c))
             (if (typep c 'xtm-xml-error) (topic-maps.xtm:error-cause c)
               (and (integerp (error-line c)) (integerp (error-column c)))))))
-      (push (mm-fields "label" label "documentIRI" *document* "sourceKey" label "sourceText" (if map-reifier (map-reifier-xml map-reifier body) (document body))
+      (push (mm-fields "label" label "documentIRI" *document* "sourceKey" label "sourceText" source
         "condition" (mm-condition c) "nativeConditionHasNoSourcePositionSlots" (if (typep c 'topic-maps.xtm:xtm-error) :false :true)
-        "actualNativeAssignments" (coerce frames 'vector)) *occurrence-reifier-controls*)) c))
+        "actualNativeAssignments" (coerce frames 'vector)) *occurrence-reifier-controls*)) c)))
+
 (defun occurrence-reifier-tests ()
   (setf *occurrence-reifier-controls* nil)
   (dolist (position '("unknown" "before" "after"))
@@ -271,7 +273,7 @@
         (orr-xml "#r" :value "A") (orr-xml "#u" :value "B") category category) 'reification-error :reifier-conflict))
   (orr-error "Occurrence-own-II-cannot-be-Reifier-Topic-II"
     (format nil "<topic id='p'>~A</topic>" (orr-xml "urn:same" :ids '("urn:same"))) 'topic-maps.tmdm::occurrence-identifier-error :duplicate-item-identifier)
-  (orr-error "anyType-remains-Unsupported" (format nil "<topic id='p'>~A</topic>" (orr-xml "#r" :datatype "http://www.w3.org/2001/XMLSchema#anyType")) 'xtm-unsupported :resource-data-datatype)
+  (orr-error "anyType-remains-Unsupported" (format nil "<topic id='p'>~A</topic>" (orr-xml "#r" :datatype "http://www.w3.org/2001/XMLSchema#anyType")) 'xtm-unsupported :resource-resolver-required)
   (orr-error "Association-Reification-remains-Unsupported" "<association reifier='#r'><type><topicRef href='#t'/></type><role reifier='#excluded-role%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" 'xtm-rejection :invalid-percent-escape)
   (orr-error "Role-Reification-remains-Unsupported" "<association><type><topicRef href='#t'/></type><role reifier='#r%GG'><type><topicRef href='#rt'/></type><topicRef href='#p'/></role></association>" 'xtm-rejection :invalid-percent-escape))
 (defun orr-import-test ()

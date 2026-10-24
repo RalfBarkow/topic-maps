@@ -1,0 +1,27 @@
+{
+  "kind": "development-history-NOT-final-acceptance",
+  "attempts": [
+    {
+      "log": "01-test-parenthesis.log",
+      "outcome": "compile failed before ASDF test execution",
+      "resolution": "removed extra closing test-source parenthesis"
+    },
+    {
+      "log": "02-child-retarget-missing.log",
+      "outcome": "expected child Unsupported condition absent because anyType is now supported",
+      "resolution": "child controls retain explicit resolver; retargeted to existing immediate cyclic-mergemap policy"
+    },
+    {
+      "log": "03-audit-condition-format.log",
+      "outcome": "saved-run audit failed on minimal original executor Condition format",
+      "resolution": "also compare its actualAndExpected condition rows; same class/status required, only documented code/message/position changes allowed"
+    },
+    {
+      "log": "04-first-complete-collector.log",
+      "outcome": "all 119 expected exits, 4304 checks; not acceptance of the later test revision",
+      "resolution": "complete native relation serialization and per-probe Parent/Type/Scope/Reifier assertions added; full final run repeated"
+    }
+  ],
+  "acceptedRun": "../after/execution.json",
+  "rejectedToolCallsCountedAsExecuted": false
+}

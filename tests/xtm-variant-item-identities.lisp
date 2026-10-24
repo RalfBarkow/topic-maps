@@ -259,11 +259,11 @@
     'variant-error :invalid-variant-scope)
   (variant-error-control "variant-iid:reifier-excluded-datatype"
     "<topic id='a'><name><value>N</value><variant reifier='#r'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>"
-    'xtm-unsupported :resource-data-datatype)
+    'xtm-unsupported :resource-resolver-required)
   (variant-error-control "variant-iid:other-datatype-still-unsupported"
     (format nil "<topic id='a'>~A</topic>" (variant-name-xml nil
       (variant-iid-xml nil '("s") '("urn:v") "<resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData>")))
-    'xtm-unsupported :resource-data-datatype)
+    'xtm-unsupported :resource-resolver-required)
   (let* ((key "variant-iid:invalid-raw-UTF8")
          (raw (concatenate '(vector (unsigned-byte 8))
            (bytes "<topicMap xmlns='http://www.topicmaps.org/xtm/' version='2.0'><topic id='a'><name><value>N</value><variant><itemIdentity href='urn:")

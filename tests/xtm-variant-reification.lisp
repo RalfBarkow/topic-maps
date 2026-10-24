@@ -237,7 +237,7 @@
     (variant-reifier-error-control (first row) (format nil "<topic id='a'>~A</topic>" (variant-name-xml nil (second row))) 'xtm-rejection (third row)))
   (variant-reifier-error-control "XML" "<topic id='a'><name><value>N</value><variant reifier='#r'></name></topic>" 'xtm-xml-error :xml-not-well-formed)
   (variant-reifier-error-control "occurrence-reification-excluded"
-    "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic>" 'xtm-unsupported :resource-data-datatype)
+    "<topic id='a'><occurrence reifier='#r'><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>O</resourceData></occurrence></topic>" 'xtm-unsupported :resource-resolver-required)
   (dolist (row '(("variant-II-reifier-II" "<topic id='a'><name><value>N</value><variant reifier='urn:v'><itemIdentity href='urn:v'/><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic>")
     ("name-II-reifier-II" "<topic id='a'><name><itemIdentity href='urn:n'/><value>N</value><variant reifier='urn:n'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic>")
     ("map-II-reifier-II" "<itemIdentity href='urn:m'/><topic id='a'><name><value>N</value><variant reifier='urn:m'><scope><topicRef href='#s'/></scope><resourceData>V</resourceData></variant></name></topic>")))

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/rgb/workspace/topic-maps/reports/slice-22s/reproduce.py", line 162, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/rgb/workspace/topic-maps/reports/slice-22s/reproduce.py", line 161, in main
+    audit(out)
+    ~~~~~^^^^^
+  File "/Users/rgb/workspace/topic-maps/reports/slice-22s/reproduce.py", line 94, in audit
+    changes=compare_existing(a,b,r['label'])
+  File "/Users/rgb/workspace/topic-maps/reports/slice-22s/reproduce.py", line 53, in compare_existing
+    else: assert v==b[k],(where,k)
+                 ^^^^^^^
+AssertionError: ('positive-control-unsupported', 'actualAndExpected')

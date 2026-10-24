@@ -175,7 +175,7 @@
           "readAssociationCounts" (coerce counts 'vector) "normalizationStages" (coerce (mapcar (lambda (s) (coerce s 'vector)) stages) 'vector)
           "oldHandlesCanonicalAndLive" :true) *role-reifier-controls*)) map)))
 (defun rrr-error (label body class code &key map-reifier)
-  (let ((source (if map-reifier (map-reifier-xml map-reifier body) (document body))))
+  (let ((source (ss-unsupported-source (if map-reifier (map-reifier-xml map-reifier body) (document body)) code label)))
     (multiple-value-bind (c frames calls same) (rrr-condition-from (bytes source) label)
       (let ((actual (cond ((typep c 'topic-maps.xtm:xtm-error) (error-code c))
                          ((typep c 'reification-error) (reification-error-code c))
@@ -285,7 +285,7 @@
         (format nil "<topic id='r'><~A href='urn:r'/></topic><topic id='u'><~A href='urn:r'/></topic>" category category)) 'reification-error :reifier-conflict))
   (rrr-error "Role-II-not-Reifier-II" (rrr-xml "urn:same" :role-ids '("urn:same")) 'topic-maps.tmdm::occurrence-identifier-error :duplicate-item-identifier)
   (rrr-error "Role-II-not-Association-II" (rrr-xml "#r" :ids '("urn:same") :role-ids '("urn:same")) 'item-identifier-error :duplicate-item-identifier)
-  (rrr-error "anyType-still-Unsupported" (concatenate 'string (rrr-xml "#r") "<topic id='owner'><occurrence><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>") 'xtm-unsupported :resource-data-datatype))
+  (rrr-error "anyType-still-Unsupported" (concatenate 'string (rrr-xml "#r") "<topic id='owner'><occurrence><type><topicRef href='#t'/></type><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>V</resourceData></occurrence></topic>") 'xtm-unsupported :resource-resolver-required))
 (defun rrr-import-test ()
   (let* ((child (mm-child-iri "child.xtm"))
          (raw (bytes (document (concatenate 'string "<topic id='p'><subjectIdentifier href='urn:player'/></topic>"

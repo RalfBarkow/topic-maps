@@ -273,7 +273,7 @@
     (name-reifier-error-control (first row) (format nil "<topic id='a'>~A</topic>" (second row)) 'xtm-rejection (third row)))
   (name-reifier-error-control "malformed-XML" "<topic id='a'><name reifier='#r'><value>N</name></topic>" 'xtm-xml-error :xml-not-well-formed)
   (name-reifier-error-control "variant-reifier-excluded-datatype"
-    "<topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" 'xtm-unsupported :resource-data-datatype)
+    "<topic id='a'><name reifier='#n'><value>N</value><variant reifier='#v'><scope><topicRef href='#s'/></scope><resourceData datatype='http://www.w3.org/2001/XMLSchema#anyType'>42</resourceData></variant></name></topic>" 'xtm-unsupported :resource-resolver-required)
   (name-reifier-error-control "name-own-II-collision"
     "<topic id='a'><name reifier='urn:name'><itemIdentity href='urn:name'/><value>N</value></name></topic>"
     'topic-maps.tmdm::occurrence-identifier-error :duplicate-item-identifier)
