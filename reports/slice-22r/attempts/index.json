@@ -1,0 +1,29 @@
+{
+  "kind": "development-attempts-NOT-final-qualification",
+  "attempts": [
+    {
+      "file": "01-string-constant-compilation.log",
+      "outcome": "failed",
+      "reason": "SBCL DEFCONSTANT-UNEQL for string constants; changed to ANSI DEFPARAMETER"
+    },
+    {
+      "file": "02-test-source-parenthesis.log",
+      "outcome": "failed",
+      "reason": "missing closing parenthesis in new test function; corrected"
+    },
+    {
+      "file": "03-duplicate-check-label.log",
+      "outcome": "failed",
+      "reason": "two qualification-marker symbol names printed without package; changed labels to readable package-qualified names"
+    },
+    {
+      "file": "04-audit-marker-error.log",
+      "outcome": "119 expected process exits, final audit failed",
+      "reason": "auditor incorrectly assumed a total PASS:12100 line; replaced by checks of all 24 existing core summary markers; subsequent full run required"
+    }
+  ],
+  "finalQualification": "../after/execution.json",
+  "testExpectationsRelaxed": false,
+  "rejectedToolCallsCountedAsExecuted": false,
+  "auditorSnapshot": "04-auditor-before-fix.py is a source snapshot of reports/slice-22r/reproduce.py at the failed audit, not an additional executable entry point"
+}

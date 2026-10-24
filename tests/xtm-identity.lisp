@@ -9,6 +9,10 @@
 (defvar *cq-results* nil)
 (defvar *cq-native* nil)
 (defvar *cq-api* nil)
+(defvar *cr-results* nil)
+(defvar *cr-native* nil)
+(defvar *cr-controls* nil)
+(defvar *cr-executed* nil)
 (defvar *occurrence-outputs* nil)
 (defvar *occurrence-controls* nil)
 (defvar *registered-mergemap-outputs* nil)
@@ -510,11 +514,12 @@
     (setf *fixture* map)))
 
 (defun run-tests ()
+  (setf *cr-results* nil *cr-native* nil *cr-controls* nil *cr-executed* nil)
   (setf *cq-results* nil *cq-native* nil *cq-api* nil)
   (setf *role-reifier-native* nil *role-reifier-outputs* nil *role-reifier-controls* nil *association-reifier-native* nil *association-reifier-outputs* nil *association-reifier-controls* nil *occurrence-reifier-native* nil *occurrence-reifier-outputs* nil *occurrence-reifier-controls* nil *item-identity-outputs* nil *item-identity-controls* nil *association-outputs* nil *association-controls* nil *registered-mergemap-outputs* nil *occurrence-outputs* nil *occurrence-controls* nil *mergemap-controls* nil *mergemap-originals* nil *datatype-outputs* nil *datatype-controls* nil *checks* nil *fixture* nil *negative-outputs* nil *negative-controls* nil *name-outputs* nil *name-controls* nil *scope-outputs* nil *scope-controls* nil *iid-outputs* nil *iid-controls* nil *variant-outputs* nil *variant-negative-outputs* nil *variant-controls* nil *variant-merge-outputs* nil *resource-ref-outputs* nil *resource-ref-controls* nil *uri-data-outputs* nil *uri-data-controls* nil *variant-iid-outputs* nil *variant-iid-controls* nil *map-reifier-outputs* nil *map-reifier-controls* nil *name-reifier-outputs* nil *name-reifier-controls* nil *name-followup-outputs* nil *variant-reifier-outputs* nil *variant-reifier-controls* nil)
   (handler-case
       (progn (original-contracts) (negative-original-controls) (negative-original-contracts)
-             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (occurrence-original-contracts) (occurrence-tests) (registered-mergemap-original-contracts) (association-original-contracts) (association-tests) (item-identity-original-contracts) (item-identity-tests) (orr-native-tests) (occurrence-reifier-original-contracts) (occurrence-reifier-tests) (arr-native-tests) (association-reifier-original-contracts) (association-reifier-tests) (rrr-native-tests) (role-reifier-original-contracts) (role-reifier-tests) (cq-tests) (result-classification-tests)
+             (name-original-contracts) (name-tests) (scope-original-contracts) (scope-tests) (iid-original-contracts) (iid-tests) (variant-original-contracts) (variant-negative-original) (variant-tests) (variant-merge-original-contract) (resource-ref-original-contracts) (resource-ref-tests) (uri-data-original-contract) (uri-data-tests) (variant-iid-original-contracts) (variant-iid-tests) (map-reifier-original-contract) (map-reifier-tests) (name-reifier-original-contracts) (name-reifier-tests) (name-reifier-followup-original-contracts) (variant-reifier-original-contracts) (variant-reifier-tests) (variant-reifier-followup-original-contract) (datatype-original-contract) (datatype-tests) (mergemap-tests) (occurrence-original-contracts) (occurrence-tests) (registered-mergemap-original-contracts) (association-original-contracts) (association-tests) (item-identity-original-contracts) (item-identity-tests) (orr-native-tests) (occurrence-reifier-original-contracts) (occurrence-reifier-tests) (arr-native-tests) (association-reifier-original-contracts) (association-reifier-tests) (rrr-native-tests) (role-reifier-original-contracts) (role-reifier-tests) (cq-tests) (cr-tests) (result-classification-tests)
              (semantic-tests) (identity-cascade-tests) (negative-tests) (helper-source-test))
     (error (condition)
       ;; Preserve the actual failed outcome before ASDF propagates the failure.
@@ -584,6 +589,7 @@
                   "occurrenceOriginals" (array *occurrence-outputs*)
                   "occurrenceControls" (array *occurrence-controls*)
                   "c14nPreflight" (cq-feature-report)
+                  "resourceDataC14N" (cr-feature-report)
                   "roleReifierNative" (array *role-reifier-native*)
                   "roleReifierOriginals" (array *role-reifier-outputs*)
                   "roleReifierControls" (array *role-reifier-controls*)

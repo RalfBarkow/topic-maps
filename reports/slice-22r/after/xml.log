@@ -1,0 +1,233 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+CXML-CHECK-PASS asdf-cxml-found-and-loaded
+CXML-CHECK-PASS asdf-dependency:closure-common
+CXML-CHECK-PASS asdf-dependency:puri
+CXML-CHECK-PASS asdf-dependency:babel
+CXML-CHECK-PASS asdf-dependency:alexandria
+CXML-CHECK-PASS asdf-dependency:trivial-features
+CXML-CHECK-PASS asdf-dependency:trivial-gray-streams
+CXML-CHECK-PASS namespace-expanded-element
+CXML-CHECK-PASS unprefixed-attribute-has-no-namespace
+CXML-CHECK-PASS prefixed-attribute-namespace
+CXML-CHECK-PASS unicode-astral-character
+CXML-CHECK-PASS default-namespace-and-nested-rebinding
+CXML-CHECK-PASS utf8-no-bom:bmp
+CXML-CHECK-PASS utf8-no-bom:astral
+CXML-CHECK-PASS utf8-bom:bmp
+CXML-CHECK-PASS utf8-bom:astral
+CXML-CHECK-PASS utf16le-bom:bmp
+CXML-CHECK-PASS utf16le-bom:astral
+CXML-CHECK-PASS utf16be-bom:bmp
+CXML-CHECK-PASS utf16be-bom:astral
+CXML-CHECK-PASS utf16le-explicit-no-bom:bmp
+CXML-CHECK-PASS utf16le-explicit-no-bom:astral
+CXML-CHECK-PASS utf16be-explicit-no-bom:bmp
+CXML-CHECK-PASS utf16be-explicit-no-bom:astral
+CXML-CHECK-PASS utf16-bom-without-declaration:bmp
+CXML-CHECK-PASS utf16-bom-without-declaration:astral
+CXML-CHECK-PASS predefined-entities-and-character-references
+CXML-CHECK-PASS xml-line-end-normalization
+CXML-CHECK-PASS xml-attribute-whitespace-normalization
+CXML-CHECK-PASS misnested
+CXML-REJECTION misnested WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS duplicate-attribute
+CXML-REJECTION duplicate-attribute WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS duplicate-expanded-attribute
+CXML-REJECTION duplicate-expanded-attribute WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS undeclared-prefix
+CXML-REJECTION undeclared-prefix WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS multiple-roots
+CXML-REJECTION multiple-roots WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS unclosed-root
+CXML-REJECTION unclosed-root WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS undefined-entity
+CXML-REJECTION undefined-entity WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS forbidden-nul-reference
+CXML-REJECTION forbidden-nul-reference WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS forbidden-surrogate-reference
+CXML-REJECTION forbidden-surrogate-reference WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS invalid-utf8
+CXML-REJECTION invalid-utf8 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS doctype-without-subset
+CXML-REJECTION doctype-without-subset DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS internal-entity
+CXML-REJECTION internal-entity DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS external-file-dtd
+CXML-REJECTION external-file-dtd DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS external-network-dtd
+CXML-REJECTION external-network-dtd DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS external-general-entity
+CXML-REJECTION external-general-entity DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS external-parameter-entity
+CXML-REJECTION external-parameter-entity DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS safe-policy-never-invokes-external-resolver
+CXML-CHECK-PASS resolver-file-dtd
+CXML-REJECTION resolver-file-dtd EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-file-dtd:called
+CXML-CHECK-PASS resolver-network-dtd
+CXML-REJECTION resolver-network-dtd EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-network-dtd:called
+CXML-CHECK-PASS resolver-file-entity
+CXML-REJECTION resolver-file-entity EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-file-entity:called
+CXML-CHECK-PASS resolver-network-entity
+CXML-REJECTION resolver-network-entity EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-network-entity:called
+CXML-CHECK-PASS resolver-parameter-entity
+CXML-REJECTION resolver-parameter-entity EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS resolver-parameter-entity:called
+CXML-CHECK-PASS nil-resolver-reaches-cxml-fallback
+CXML-REJECTION nil-resolver-reaches-cxml-fallback FALLBACK-REACHED
+CXML-CHECK-PASS exactly-one-fallback-only-in-nil-counterprobe
+CXML-CHECK-PASS utf8-invalid:stray-continuation
+CXML-REJECTION utf8-invalid:stray-continuation WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:bad-continuation
+CXML-REJECTION utf8-invalid:bad-continuation WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:overlong-two
+CXML-REJECTION utf8-invalid:overlong-two WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:overlong-three
+CXML-REJECTION utf8-invalid:overlong-three WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:overlong-four
+CXML-REJECTION utf8-invalid:overlong-four WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:encoded-surrogate
+CXML-REJECTION utf8-invalid:encoded-surrogate WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:above-unicode-limit
+CXML-REJECTION utf8-invalid:above-unicode-limit WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:illegal-leading-f5
+CXML-REJECTION utf8-invalid:illegal-leading-f5 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:obsolete-five-byte-form
+CXML-REJECTION utf8-invalid:obsolete-five-byte-form WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:obsolete-six-byte-form
+CXML-REJECTION utf8-invalid:obsolete-six-byte-form WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-invalid:illegal-leading-ff
+CXML-REJECTION utf8-invalid:illegal-leading-ff WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-truncated:C2
+CXML-REJECTION utf8-truncated:C2 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-truncated:E0A0
+CXML-REJECTION utf8-truncated:E0A0 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-truncated:F09FA6
+CXML-REJECTION utf8-truncated:F09FA6 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-invalid:le:isolated-low
+CXML-REJECTION utf16-invalid:le:isolated-low WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-invalid:le:high-then-letter
+CXML-REJECTION utf16-invalid:le:high-then-letter WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-invalid:le:high-then-high
+CXML-REJECTION utf16-invalid:le:high-then-high WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-truncated:le:odd-octet
+CXML-REJECTION utf16-truncated:le:odd-octet WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-truncated:le:unfinished-high
+CXML-REJECTION utf16-truncated:le:unfinished-high WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-invalid:be:isolated-low
+CXML-REJECTION utf16-invalid:be:isolated-low WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-invalid:be:high-then-letter
+CXML-REJECTION utf16-invalid:be:high-then-letter WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-invalid:be:high-then-high
+CXML-REJECTION utf16-invalid:be:high-then-high WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-truncated:be:odd-octet
+CXML-REJECTION utf16-truncated:be:odd-octet WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf16-truncated:be:unfinished-high
+CXML-REJECTION utf16-truncated:be:unfinished-high WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS scalar-boundaries:UTF-8
+CXML-CHECK-PASS line-ending-normalization:UTF-8
+CXML-CHECK-PASS refill:UTF-8:8189
+CXML-CHECK-PASS refill:UTF-8:8190
+CXML-CHECK-PASS refill:UTF-8:8191
+CXML-CHECK-PASS refill:UTF-8:8192
+CXML-CHECK-PASS scalar-boundaries:UTF-16LE
+CXML-CHECK-PASS line-ending-normalization:UTF-16LE
+CXML-CHECK-PASS refill:UTF-16LE:8189
+CXML-CHECK-PASS refill:UTF-16LE:8190
+CXML-CHECK-PASS refill:UTF-16LE:8191
+CXML-CHECK-PASS refill:UTF-16LE:8192
+CXML-CHECK-PASS scalar-boundaries:UTF-16BE
+CXML-CHECK-PASS line-ending-normalization:UTF-16BE
+CXML-CHECK-PASS refill:UTF-16BE:8189
+CXML-CHECK-PASS refill:UTF-16BE:8190
+CXML-CHECK-PASS refill:UTF-16BE:8191
+CXML-CHECK-PASS refill:UTF-16BE:8192
+CXML-CHECK-PASS bomless-missing-or-wrong-label:UTF-16LE:UTF-16
+CXML-REJECTION bomless-missing-or-wrong-label:UTF-16LE:UTF-16 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-missing-or-wrong-label:UTF-16LE:NIL
+CXML-REJECTION bomless-missing-or-wrong-label:UTF-16LE:NIL WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-missing-or-wrong-label:UTF-16LE:UTF-8
+CXML-REJECTION bomless-missing-or-wrong-label:UTF-16LE:UTF-8 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-without-declaration:UTF-16LE
+CXML-REJECTION bomless-without-declaration:UTF-16LE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-pi-without-xml-declaration:UTF-16LE
+CXML-REJECTION bomless-pi-without-xml-declaration:UTF-16LE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bom-declaration-disagreement:UTF-16LE
+CXML-REJECTION bom-declaration-disagreement:UTF-16LE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS opposite-endian-declaration:UTF-16LE
+CXML-REJECTION opposite-endian-declaration:UTF-16LE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS explicit-endian-label-with-bom:UTF-16LE
+CXML-REJECTION explicit-endian-label-with-bom:UTF-16LE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-missing-or-wrong-label:UTF-16BE:UTF-16
+CXML-REJECTION bomless-missing-or-wrong-label:UTF-16BE:UTF-16 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-missing-or-wrong-label:UTF-16BE:NIL
+CXML-REJECTION bomless-missing-or-wrong-label:UTF-16BE:NIL WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-missing-or-wrong-label:UTF-16BE:UTF-8
+CXML-REJECTION bomless-missing-or-wrong-label:UTF-16BE:UTF-8 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-without-declaration:UTF-16BE
+CXML-REJECTION bomless-without-declaration:UTF-16BE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bomless-pi-without-xml-declaration:UTF-16BE
+CXML-REJECTION bomless-pi-without-xml-declaration:UTF-16BE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS bom-declaration-disagreement:UTF-16BE
+CXML-REJECTION bom-declaration-disagreement:UTF-16BE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS opposite-endian-declaration:UTF-16BE
+CXML-REJECTION opposite-endian-declaration:UTF-16BE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS explicit-endian-label-with-bom:UTF-16BE
+CXML-REJECTION explicit-endian-label-with-bom:UTF-16BE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-bom-wrong-declaration:UTF-16
+CXML-REJECTION utf8-bom-wrong-declaration:UTF-16 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-bom-wrong-declaration:UTF-16LE
+CXML-REJECTION utf8-bom-wrong-declaration:UTF-16LE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-bom-wrong-declaration:UTF-16BE
+CXML-REJECTION utf8-bom-wrong-declaration:UTF-16BE WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS utf8-bom-wrong-declaration:ISO-8859-1
+CXML-REJECTION utf8-bom-wrong-declaration:ISO-8859-1 WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS unknown-encoding-is-fatal
+CXML-REJECTION unknown-encoding-is-fatal WELL-FORMEDNESS-VIOLATION
+CXML-CHECK-PASS encoding-name-case-insensitive
+CXML-CHECK-PASS public-api-rejects-string-input
+CXML-REJECTION public-api-rejects-string-input SIMPLE-TYPE-ERROR
+CXML-CHECK-PASS public-api-no-resolver-override
+CXML-REJECTION public-api-no-resolver-override SIMPLE-PROGRAM-ERROR
+CXML-CHECK-PASS public-api-guard-with-nil-handler
+CXML-REJECTION public-api-guard-with-nil-handler DOCTYPE-FORBIDDEN
+CXML-CHECK-PASS public-resolver-signals
+CXML-REJECTION public-resolver-signals EXTERNAL-RESOURCE-FORBIDDEN
+CXML-CHECK-PASS public-api-refuses-unqualified-dependency
+CXML-REJECTION public-api-refuses-unqualified-dependency UNQUALIFIED-PARSER
+CXML-CHECK-PASS public-api-returns-identical-sax-result
+CXML-CHECK-PASS decoder-needs-more:UTF-8:1
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-8:1
+CXML-REJECTION decoder-incomplete-at-eof:UTF-8:1 ENCODING-ERROR
+CXML-CHECK-PASS decoder-needs-more:UTF-8:2
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-8:2
+CXML-REJECTION decoder-incomplete-at-eof:UTF-8:2 ENCODING-ERROR
+CXML-CHECK-PASS decoder-needs-more:UTF-8:3
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-8:3
+CXML-REJECTION decoder-incomplete-at-eof:UTF-8:3 ENCODING-ERROR
+CXML-CHECK-PASS decoder-needs-more:UTF-16-LITTLE-ENDIAN:1
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-16-LITTLE-ENDIAN:1
+CXML-REJECTION decoder-incomplete-at-eof:UTF-16-LITTLE-ENDIAN:1 ENCODING-ERROR
+CXML-CHECK-PASS decoder-needs-more:UTF-16-LITTLE-ENDIAN:2
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-16-LITTLE-ENDIAN:2
+CXML-REJECTION decoder-incomplete-at-eof:UTF-16-LITTLE-ENDIAN:2 ENCODING-ERROR
+CXML-CHECK-PASS decoder-needs-more:UTF-16-LITTLE-ENDIAN:3
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-16-LITTLE-ENDIAN:3
+CXML-REJECTION decoder-incomplete-at-eof:UTF-16-LITTLE-ENDIAN:3 ENCODING-ERROR
+CXML-CHECK-PASS decoder-needs-more:UTF-16-BIG-ENDIAN:1
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-16-BIG-ENDIAN:1
+CXML-REJECTION decoder-incomplete-at-eof:UTF-16-BIG-ENDIAN:1 ENCODING-ERROR
+CXML-CHECK-PASS decoder-needs-more:UTF-16-BIG-ENDIAN:2
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-16-BIG-ENDIAN:2
+CXML-REJECTION decoder-incomplete-at-eof:UTF-16-BIG-ENDIAN:2 ENCODING-ERROR
+CXML-CHECK-PASS decoder-needs-more:UTF-16-BIG-ENDIAN:3
+CXML-CHECK-PASS decoder-incomplete-at-eof:UTF-16-BIG-ENDIAN:3
+CXML-REJECTION decoder-incomplete-at-eof:UTF-16-BIG-ENDIAN:3 ENCODING-ERROR
+CXML-SUMMARY 146 PASS 0 FAIL

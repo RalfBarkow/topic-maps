@@ -1,0 +1,362 @@
+{
+  "kind": "XTM-node-set-C14N-1.0-closed-profile-qualification",
+  "probes": [
+    {
+      "id": "simple",
+      "expectedBytes": 12,
+      "actualBytes": 12,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: XTM 4.16.3; C14N 2.3: element/text, omit container"
+    },
+    {
+      "id": "attributes-ba",
+      "expectedBytes": 19,
+      "actualBytes": 19,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.3: unqualified attribute order and expanded empty element"
+    },
+    {
+      "id": "attributes-ab",
+      "expectedBytes": 19,
+      "actualBytes": 19,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: Same node properties as attributes-ba"
+    },
+    {
+      "id": "inherited-prefix",
+      "expectedBytes": 28,
+      "actualBytes": 28,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: XTM 4.16.3: needed inherited prefix retained; unused mapping removed"
+    },
+    {
+      "id": "unused-local-namespace",
+      "expectedBytes": 28,
+      "actualBytes": 28,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: XTM 4.16.3: unused namespace absent from selected namespace set"
+    },
+    {
+      "id": "inherited-default",
+      "expectedBytes": 28,
+      "actualBytes": 28,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.3-2.4: selected child must retain inherited default namespace"
+    },
+    {
+      "id": "nested",
+      "expectedBytes": 42,
+      "actualBytes": 42,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.3: nested elements, attributes, empty element"
+    },
+    {
+      "id": "escaping",
+      "expectedBytes": 66,
+      "actualBytes": 66,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.3: attribute vs text escapes, hexadecimal character references"
+    },
+    {
+      "id": "whitespace-line-endings",
+      "expectedBytes": 17,
+      "actualBytes": 17,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: XML 2.11; C14N 2.1/2.3: normalize CR/CRLF, retain text whitespace"
+    },
+    {
+      "id": "comments",
+      "expectedBytes": 9,
+      "actualBytes": 9,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: XTM 4.16.3: comments=false"
+    },
+    {
+      "id": "lexical-cdata",
+      "expectedBytes": 27,
+      "actualBytes": 27,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.1/2.3: references, CDATA and tag spelling have equal selected values"
+    },
+    {
+      "id": "lexical-escaped",
+      "expectedBytes": 27,
+      "actualBytes": 27,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: Same selected node properties as lexical-cdata"
+    },
+    {
+      "id": "unicode",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.1: strict UTF-8 output for scalar character data"
+    },
+    {
+      "id": "processing-instruction",
+      "expectedBytes": 9,
+      "actualBytes": 9,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: XTM selects element/attribute/character nodes, not PI nodes"
+    },
+    {
+      "id": "namespace-attribute-order",
+      "expectedBytes": 65,
+      "actualBytes": 65,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.3: namespace nodes before attributes, attributes by namespace URI/local name"
+    },
+    {
+      "id": "redundant-binding",
+      "expectedBytes": 38,
+      "actualBytes": 38,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.3: suppress already rendered identical namespace binding"
+    },
+    {
+      "id": "unicode/UTF-16LE",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.1: strict UTF-8 output for scalar character data"
+    },
+    {
+      "id": "unicode/UTF-16BE",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "unchanged Slice 22Q: C14N 2.1: strict UTF-8 output for scalar character data"
+    },
+    {
+      "id": "prefix-shadowing",
+      "expectedBytes": 80,
+      "actualBytes": 80,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "C14N 2.3: original prefixes, nearest namespace bindings"
+    },
+    {
+      "id": "default-namespace-changes",
+      "expectedBytes": 73,
+      "actualBytes": 73,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "C14N 2.3: selected-parent default namespace and empty reset"
+    },
+    {
+      "id": "global-namespace-filter",
+      "expectedBytes": 34,
+      "actualBytes": 34,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "XTM 4.16.3: namespace pair used anywhere in selected set; not Exclusive C14N"
+    },
+    {
+      "id": "same-URI-different-prefix",
+      "expectedBytes": 68,
+      "actualBytes": 68,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "XTM 4.16.3 filters by URI AND prefix, not URI alone"
+    },
+    {
+      "id": "QName-attribute-value-not-namespace-use",
+      "expectedBytes": 18,
+      "actualBytes": 18,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "Only element/attribute names establish namespace use, not values"
+    },
+    {
+      "id": "filtered-parent-namespace-gap",
+      "expectedBytes": 65,
+      "actualBytes": 65,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "C14N 2.3 compares namespace nodes of nearest selected parent, not cumulative rendered map"
+    },
+    {
+      "id": "xml-attributes-inherited",
+      "expectedBytes": 91,
+      "actualBytes": 91,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "C14N 1.0 2.4: nearest inherited xml:* on each apex; local override"
+    },
+    {
+      "id": "xml-base-is-1.0-not-1.1",
+      "expectedBytes": 43,
+      "actualBytes": 43,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "C14N 1.0 2.4: all xml:* inherited, no 1.1 base fixup/id exception"
+    },
+    {
+      "id": "empty-content",
+      "expectedBytes": 0,
+      "actualBytes": 0,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "XTM descendant node set may be empty"
+    },
+    {
+      "id": "empty-CDATA",
+      "expectedBytes": 0,
+      "actualBytes": 0,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "Empty character information contributes no bytes"
+    },
+    {
+      "id": "text-only",
+      "expectedBytes": 26,
+      "actualBytes": 26,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "XTM selected characters, C14N text escaping without container"
+    },
+    {
+      "id": "several-apices-mixed-text",
+      "expectedBytes": 17,
+      "actualBytes": 17,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "Selected document order, no invented fragment wrapper"
+    },
+    {
+      "id": "attribute-order-same-URI",
+      "expectedBytes": 75,
+      "actualBytes": 75,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "C14N 2.2: codepoint order, namespace URI then local name"
+    },
+    {
+      "id": "attribute-greater-than-and-whitespace",
+      "expectedBytes": 36,
+      "actualBytes": 36,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "XML whitespace normalization vs character references; > not escaped in attributes"
+    },
+    {
+      "id": "no-Unicode-normalization-UTF8",
+      "expectedBytes": 10,
+      "actualBytes": 10,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "C14N 1.0 4.2: no normalization of UCS-based source character data"
+    },
+    {
+      "id": "in-content-BOM-is-text",
+      "expectedBytes": 12,
+      "actualBytes": 12,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "Only encoding BOM is removed, not U+FEFF in character content"
+    },
+    {
+      "id": "encoding/UTF8-BOM",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "Qualified source encoding; mandatory UTF8 output, no BOM"
+    },
+    {
+      "id": "encoding/UTF16LE-no-BOM",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "Qualified source encoding; mandatory UTF8 output, no BOM"
+    },
+    {
+      "id": "encoding/UTF16BE-no-BOM",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "Qualified source encoding; mandatory UTF8 output, no BOM"
+    },
+    {
+      "id": "encoding/ISO8859-1",
+      "expectedBytes": 17,
+      "actualBytes": 17,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "Qualified source encoding; mandatory UTF8 output, no BOM"
+    },
+    {
+      "id": "w3c-3.2-whitespace",
+      "expectedBytes": 169,
+      "actualBytes": 169,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315#Example-WhitespaceInContent; complete unchanged example; root node set"
+    },
+    {
+      "id": "w3c-3.2-whitespace/XTM-wrapper",
+      "expectedBytes": 169,
+      "actualBytes": 169,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315#Example-WhitespaceInContent; complete unchanged example; root node set; adaptation: wrapper inserted, outside-root whitespace omitted; expectation unchanged"
+    },
+    {
+      "id": "w3c-3.3-e5-subvector",
+      "expectedBytes": 146,
+      "actualBytes": 146,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315#Example-SETags; independent e5 element/output excerpt; NOT the DTD-containing full example"
+    },
+    {
+      "id": "w3c-3.3-e5-subvector/XTM-wrapper",
+      "expectedBytes": 146,
+      "actualBytes": 146,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315#Example-SETags; independent e5 element/output excerpt; NOT the DTD-containing full example; adaptation: wrapper inserted, outside-root whitespace omitted; expectation unchanged"
+    },
+    {
+      "id": "w3c-3.6-ISO8859-1",
+      "expectedBytes": 13,
+      "actualBytes": 13,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315#Example-UTF8; complete original input; published C2 A9 byte expectation"
+    },
+    {
+      "id": "w3c-3.6-ISO8859-1/XTM-wrapper",
+      "expectedBytes": 13,
+      "actualBytes": 13,
+      "firstDifferentByte": null,
+      "byteIdentical": true,
+      "origin": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315#Example-UTF8; complete original input; published C2 A9 byte expectation; adaptation: wrapper inserted, outside-root whitespace omitted; expectation unchanged"
+    }
+  ],
+  "unchanged22QVectors": 18,
+  "independentW3CVectors": 3,
+  "additionalPublicWrappersOfW3CVectors": 3,
+  "publicValueAndNativeModelRows": 41,
+  "oldCandidateDifferencesPreserved": 8
+}
