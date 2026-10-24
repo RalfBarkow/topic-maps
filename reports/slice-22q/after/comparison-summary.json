@@ -1,0 +1,137 @@
+{
+  "kind": "CXML-candidate-vs-independent-XTM-C14N-oracles",
+  "W3CC14NQualified": false,
+  "readerIntegration": false,
+  "probes": [
+    {
+      "id": "simple",
+      "expectedBytes": 12,
+      "actualBytes": 12,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "attributes-ba",
+      "expectedBytes": 19,
+      "actualBytes": 19,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "attributes-ab",
+      "expectedBytes": 19,
+      "actualBytes": 19,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "inherited-prefix",
+      "expectedBytes": 28,
+      "actualBytes": 12,
+      "firstDifferentByte": 4,
+      "normativeComparison": "BYTE-DIFFERENCE"
+    },
+    {
+      "id": "unused-local-namespace",
+      "expectedBytes": 28,
+      "actualBytes": 49,
+      "firstDifferentByte": 20,
+      "normativeComparison": "BYTE-DIFFERENCE"
+    },
+    {
+      "id": "inherited-default",
+      "expectedBytes": 28,
+      "actualBytes": 8,
+      "firstDifferentByte": 2,
+      "normativeComparison": "BYTE-DIFFERENCE"
+    },
+    {
+      "id": "nested",
+      "expectedBytes": 42,
+      "actualBytes": 42,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "escaping",
+      "expectedBytes": 66,
+      "actualBytes": 77,
+      "firstDifferentByte": 23,
+      "normativeComparison": "BYTE-DIFFERENCE"
+    },
+    {
+      "id": "whitespace-line-endings",
+      "expectedBytes": 17,
+      "actualBytes": 32,
+      "firstDifferentByte": 5,
+      "normativeComparison": "BYTE-DIFFERENCE"
+    },
+    {
+      "id": "comments",
+      "expectedBytes": 9,
+      "actualBytes": 9,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "lexical-cdata",
+      "expectedBytes": 27,
+      "actualBytes": 27,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "lexical-escaped",
+      "expectedBytes": 27,
+      "actualBytes": 27,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "unicode",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "processing-instruction",
+      "expectedBytes": 9,
+      "actualBytes": 23,
+      "firstDifferentByte": 4,
+      "normativeComparison": "BYTE-DIFFERENCE"
+    },
+    {
+      "id": "namespace-attribute-order",
+      "expectedBytes": 65,
+      "actualBytes": 65,
+      "firstDifferentByte": 3,
+      "normativeComparison": "BYTE-DIFFERENCE"
+    },
+    {
+      "id": "redundant-binding",
+      "expectedBytes": 38,
+      "actualBytes": 54,
+      "firstDifferentByte": 25,
+      "normativeComparison": "BYTE-DIFFERENCE"
+    },
+    {
+      "id": "unicode/UTF-16LE",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    },
+    {
+      "id": "unicode/UTF-16BE",
+      "expectedBytes": 23,
+      "actualBytes": 23,
+      "firstDifferentByte": null,
+      "normativeComparison": "PASS-for-this-probe"
+    }
+  ],
+  "matchedProbeRows": 10,
+  "differingProbeRows": 8,
+  "nativeValueRows": 10,
+  "nativeValuesApplyOnlyToMatchingProbeRows": true
+}

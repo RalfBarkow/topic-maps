@@ -1,0 +1,24 @@
+{
+  "kind": "locally-pinned-CXML-component-source-inventory",
+  "source": "/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source",
+  "version": "20200610-git",
+  "sourceFilesSHA256": {
+    "xml/unparse.lisp": "cef774a7a6a90b970e99939d923c4e564ecf903a7cfa72f4498356ee8253e87c",
+    "dom/dom-sax.lisp": "19bd99e10166879974eaf8f53d58d1d0cb1c48a5bc7051d2f48d3f44ba275e3f",
+    "dom/dom-builder.lisp": "7fb6d927926b0c6a1dd637fc254e182fc0fc71af553f6b352de32d85d0d12cf4",
+    "dom/dom-impl.lisp": "f4d3ba01b811b69de505d5ee7f0250eca4c0076e895997482f21dbb46e861b32",
+    "dom/package.lisp": "e6f876f5862e6130751fe4e97c948f34d8fcf5d553e4fe655d8cef81ef0d0f79",
+    "cxml.asd": "1379b44bb89d573f2818d1a420a2514334f157856ca8882914378f25f4bf620f",
+    "xml/xmls-compat.lisp": "525661535d53285fb5bb57b37acd665780ab3fc8a627ce732b3a943fdcaed283"
+  },
+  "canonicalModes": [
+    "NIL",
+    "T/1",
+    "2"
+  ],
+  "W3CC14N1Qualified": false,
+  "nodeSetSelectorAPIObserved": false,
+  "DOMAPI": "cxml-dom:make-dom-builder / dom:map-document",
+  "productiveBoundary": "topic-maps.xml:parse-octets",
+  "noNewDependencies": true
+}

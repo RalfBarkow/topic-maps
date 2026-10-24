@@ -1,0 +1,87 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+XTM-CHECK-PASS c14n-api:productive-boundary-DOM-incompatibility-observed
+XTM-CHECK-PASS c14n-api:diagnostic-DOM-DOCTYPE-denied:<!DOCTYPE x><x/>
+XTM-CHECK-PASS c14n-api:diagnostic-DOM-DOCTYPE-denied:<!DOCTYPE x SYSTEM 'file:///tmp/no-cq-read'><x/>
+XTM-CHECK-PASS c14n-probe:simple:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:simple:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:simple:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:simple:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:simple:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:simple:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:attributes-ba:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:attributes-ba:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:attributes-ba:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:attributes-ba:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:attributes-ba:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:attributes-ba:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:attributes-ab:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:attributes-ab:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:attributes-ab:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:attributes-ab:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:attributes-ab:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:attributes-ab:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:inherited-prefix:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:inherited-prefix:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-probe:unused-local-namespace:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:unused-local-namespace:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-probe:inherited-default:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:inherited-default:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-probe:nested:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:nested:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:nested:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:nested:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:nested:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:nested:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:escaping:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:escaping:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-probe:whitespace-line-endings:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:whitespace-line-endings:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-probe:comments:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:comments:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:comments:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:comments:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:comments:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:comments:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:lexical-cdata:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:lexical-cdata:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:lexical-cdata:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:lexical-cdata:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:lexical-cdata:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:lexical-cdata:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:lexical-escaped:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:lexical-escaped:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:lexical-escaped:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:lexical-escaped:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:lexical-escaped:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:lexical-escaped:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:unicode:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:unicode:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:unicode:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:unicode:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:unicode:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:unicode:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:processing-instruction:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:processing-instruction:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-probe:namespace-attribute-order:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:namespace-attribute-order:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-probe:redundant-binding:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:redundant-binding:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-probe:unicode/UTF-16LE:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:unicode/UTF-16LE:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:unicode/UTF-16LE:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:unicode/UTF-16LE:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:unicode/UTF-16LE:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:unicode/UTF-16LE:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-probe:unicode/UTF-16BE:input-bytes-unchanged
+XTM-CHECK-PASS c14n-probe:unicode/UTF-16BE:UTF8-string-roundtrip
+XTM-CHECK-PASS c14n-native:unicode/UTF-16BE:occurrence-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:unicode/UTF-16BE:variant-value-datatype-parent-EQ
+XTM-CHECK-PASS c14n-native:unicode/UTF-16BE:scopes-and-no-topics-from-XML
+XTM-CHECK-PASS c14n-native:unicode/UTF-16BE:repeated-CXTM-preserves-all-properties
+XTM-CHECK-PASS c14n-api:sink-has-no-node-set-keyword
+XTM-CHECK-PASS c14n-api:walker-has-no-node-set-keyword
+C14N-EXPLORATION 81 checks; 18 probe rows; 10 native rows.

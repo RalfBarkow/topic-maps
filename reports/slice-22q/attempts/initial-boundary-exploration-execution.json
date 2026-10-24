@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "--noinform",
+    "--no-sysinit",
+    "--no-userinit",
+    "--script",
+    "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/explore-runner.lisp"
+  ],
+  "startedAtUTC": "2026-10-24T06:14:57.507859+00:00",
+  "finishedAtUTC": "2026-10-24T06:15:10.936293+00:00",
+  "exitCode": 1,
+  "network": "denied",
+  "repositoryWrites": "denied",
+  "freshProcess": true,
+  "logSHA256": "c6e3f25a86263d3b2a17c66e1971672e9b9f73fbb32393b65500a0d7fe311616",
+  "programSHA256": "7893278383c5fc5df9dc1b4ee84c2bc38a18fe00fd31685d32ce7424f9ad500b"
+}

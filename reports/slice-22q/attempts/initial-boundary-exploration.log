@@ -1,0 +1,42 @@
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Checking for wide character support... WARNING: Lisp implementation doesn't use UTF-16, but accepts surrogate code points.
+ yes, using code points.
+;;; Building Closure with CHARACTER RUNES
+Unhandled SIMPLE-ERROR in thread #<SB-THREAD:THREAD tid=259 "main thread" RUNNING
+                                    {7000828103}>:
+  SAX configuration is incompatible with DOM: *namespace-processing* is activated, but *include-xmlns-attributes* or *use-xmlns-namespace* are not
+
+Backtrace for: #<SB-THREAD:THREAD tid=259 "main thread" RUNNING {7000828103}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<SIMPLE-ERROR "SAX configuration is incompatible with DOM: *namespace-processing* is activated, but *include-xmlns-attributes* or *use-xmlns-namespace* are not" {7003CBDD63}> #<unused argument> :QUIT T)
+1: (SB-DEBUG::RUN-HOOK SB-EXT:*INVOKE-DEBUGGER-HOOK* #<SIMPLE-ERROR "SAX configuration is incompatible with DOM: *namespace-processing* is activated, but *include-xmlns-attributes* or *use-xmlns-namespace* are not" {7003CBDD63}>)
+2: (INVOKE-DEBUGGER #<SIMPLE-ERROR "SAX configuration is incompatible with DOM: *namespace-processing* is activated, but *include-xmlns-attributes* or *use-xmlns-namespace* are not" {7003CBDD63}>)
+3: (ERROR "SAX configuration is incompatible with DOM: *namespace-processing* is activated, but *include-xmlns-attributes* or *use-xmlns-namespace* are not")
+4: ((:METHOD SAX:START-DOCUMENT (RUNE-DOM::DOM-BUILDER)) #<RUNE-DOM::DOM-BUILDER {7005C757B3}>) [fast-method]
+5: ((:METHOD SAX:START-DOCUMENT (CXML:BROADCAST-HANDLER)) #<TOPIC-MAPS.XML::CLOSED-HANDLER {7005E647A3}>) [fast-method]
+6: (CXML::P/DOCUMENT #S(CXML::ZSTREAM :TOKEN-CATEGORY NIL :TOKEN-SEMANTIC NIL :INPUT-STACK (#<RUNES:XSTREAM [main document :MAIN NIL]>)) #<TOPIC-MAPS.XML::CLOSED-HANDLER {7005E647A3}> :VALIDATE NIL :DTD NIL :ROOT NIL :ENTITY-RESOLVER #<FUNCTION TOPIC-MAPS.XML::DENY-EXTERNAL-RESOURCE> :DISALLOW-INTERNAL-SUBSET T :RECODE T)
+7: ((LAMBDA (CXML::ZSTREAM) :IN CXML::PARSE-XSTREAM) #S(CXML::ZSTREAM :TOKEN-CATEGORY NIL :TOKEN-SEMANTIC NIL :INPUT-STACK (#<RUNES:XSTREAM [main document :MAIN NIL]>)))
+8: (CXML::CALL-WITH-ZSTREAM #<FUNCTION (LAMBDA (CXML::ZSTREAM) :IN CXML::PARSE-XSTREAM) {700620809B}> #S(CXML::ZSTREAM :TOKEN-CATEGORY NIL :TOKEN-SEMANTIC NIL :INPUT-STACK (#<RUNES:XSTREAM [main document :MAIN NIL]>)))
+9: (CXML::PARSE-XSTREAM #<RUNES:XSTREAM [main document :MAIN NIL]> #<TOPIC-MAPS.XML::CLOSED-HANDLER {7005E647A3}> :VALIDATE NIL :DISALLOW-INTERNAL-SUBSET T :ENTITY-RESOLVER #<FUNCTION TOPIC-MAPS.XML::DENY-EXTERNAL-RESOURCE>)
+10: (TOPIC-MAPS.XML:PARSE-OCTETS #(60 120 116 109 58 114 101 115 111 117 114 99 ...) #<RUNE-DOM::DOM-BUILDER {7005C757B3}>)
+11: (CQ-PROBE ("simple" "<xtm:resourceData xmlns:xtm='http://www.topicmaps.org/xtm/' datatype='http://www.w3.org/2001/XMLSchema#anyType'><x>Hello</x></xtm:resourceData>" "<x>Hello</x>" "XTM 4.16.3; C14N 2.3: element/text, omit container") :UTF-8 NIL)
+12: (CQ-TESTS)
+13: (SB-INT:SIMPLE-EVAL-IN-LEXENV (CQ-TESTS) #<NULL-LEXENV>)
+14: (SB-EXT:EVAL-TLF (CQ-TESTS) 8 NIL)
+15: ((LABELS SB-FASL::EVAL-FORM :IN SB-INT:LOAD-AS-SOURCE) (CQ-TESTS) 8)
+16: ((LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) (CQ-TESTS) :CURRENT-INDEX 8)
+17: (SB-C::%DO-FORMS-FROM-INFO #<FUNCTION (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {3EBF3DB}> #<SB-C::SOURCE-INFO {70018528C3}> SB-C::INPUT-ERROR-IN-LOAD)
+18: (SB-INT:LOAD-AS-SOURCE #<SB-SYS:FD-STREAM for "file /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/explore-runner.lisp" {70008292F3}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+19: ((LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) #<SB-SYS:FD-STREAM for "file /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/explore-runner.lisp" {70008292F3}> NIL)
+20: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<FUNCTION (LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) {3EBF79B}> #<SB-SYS:FD-STREAM for "file /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/explore-runner.lisp" {70008292F3}> NIL #<SB-SYS:FD-STREAM for "file /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/explore-runner.lisp" {70008292F3}>)
+21: (LOAD #<SB-SYS:FD-STREAM for "file /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/explore-runner.lisp" {70008292F3}> :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST :ERROR :EXTERNAL-FORMAT :DEFAULT)
+22: ((FLET SB-IMPL::LOAD-SCRIPT :IN SB-IMPL::PROCESS-SCRIPT) #<SB-SYS:FD-STREAM for "file /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/explore-runner.lisp" {70008292F3}>)
+23: ((FLET SB-UNIX::BODY :IN SB-IMPL::PROCESS-SCRIPT))
+24: ((FLET "WITHOUT-INTERRUPTS-BODY-" :IN SB-IMPL::PROCESS-SCRIPT))
+25: (SB-IMPL::PROCESS-SCRIPT "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/explore-runner.lisp")
+26: (SB-IMPL::TOPLEVEL-INIT)
+27: ((FLET SB-UNIX::BODY :IN SB-IMPL::START-LISP))
+28: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::START-LISP))
+29: (SB-IMPL::%START-LISP)
+
+unhandled condition in --disable-debugger mode, quitting

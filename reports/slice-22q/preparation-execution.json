@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "python3",
+    "scripts/validate-slice-22d.py",
+    "--prepare",
+    "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22q-ripqiiby/sources"
+  ],
+  "startedAtUTC": "2026-10-24T06:10:35.743279+00:00",
+  "finishedAtUTC": "2026-10-24T06:10:38.554230+00:00",
+  "exitCode": 0,
+  "network": "denied",
+  "repositoryWrites": "denied"
+}
