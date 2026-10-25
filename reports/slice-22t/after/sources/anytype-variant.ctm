@@ -1,0 +1,1 @@
+a - nt:"N"@base ~nr ("<p:outer xmlns:p=\"urn:variant\"><p:leaf a=\"1\" b=\"2\">V&amp;🦊</p:leaf></p:outer>"^^<http://www.w3.org/2001/XMLSchema#anyType>@extra,extra ~vr).

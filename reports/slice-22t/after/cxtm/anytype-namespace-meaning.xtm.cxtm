@@ -1,0 +1,17 @@
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#a</locator>
+</itemIdentifiers>
+<occurrence number="1">
+<value>&lt;p:x xmlns:p="urn:right"&gt;&lt;/p:x&gt;</value>
+<datatype>http://www.w3.org/2001/XMLSchema#anyType</datatype>
+<type topicref="2"></type>
+</occurrence>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>#t</locator>
+</itemIdentifiers>
+</topic>
+</topicMap>

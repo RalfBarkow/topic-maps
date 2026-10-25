@@ -253,7 +253,7 @@
 (asdf:defsystem "topic-maps/ctm/xtm-tests"
   :description "Controlled CTM/XTM imports and direct reader semantic equivalence; original contracts remain separate"
   :depends-on ("topic-maps/ctm/xtm" "topic-maps/ctm/include-tests")
-  :components ((:file "tests/ctm-xtm-mergemap") (:file "tests/ctm-xtm-equivalence"))
+  :components ((:file "tests/ctm-xtm-mergemap") (:file "tests/ctm-xtm-equivalence") (:file "tests/ctm-xtm-anytype-equivalence"))
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.xtm-mergemap.tests :run-tests)

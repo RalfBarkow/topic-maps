@@ -373,6 +373,8 @@
               :why "Same native scoped Association and Role with independently II-identified Reifiers and inverse references; no cross-Map EQ required."
               :clauses '("CTM 3.3.9-3.3.10,3.13" "XTM 4.3.2,4.18-4.19" "TMDM 5.3.4,5.7-5.8,6.6-6.7")))
             (contrast-tests)
+            (at-run-pairs)
+            (at-contrast-tests)
             (check "equivalence:unique-check-labels"
               (= (length topic-maps.xtm-mergemap.tests::*checks*)
                  (length (remove-duplicates topic-maps.xtm-mergemap.tests::*checks* :test #'equal)))))
@@ -380,6 +382,6 @@
           (when path (write-report path c)) (error c)))
       (setf *checks* (reverse topic-maps.xtm-mergemap.tests::*checks*))
       (when path (write-report path))
-      (format t "CTM-XTM-EQUIVALENCE-PASS: ~D checks; ~D actual reader pairs; 3 contrasts; 0 capability gaps.~%"
-        (length *checks*) (+ 3 (length (pair-cases))))
+      (format t "CTM-XTM-EQUIVALENCE-PASS: ~D checks; ~D actual reader pairs; 4 contrasts; 0 capability gaps.~%"
+        (length *checks*) (+ 3 (length (pair-cases)) (length (at-pair-cases))))
       (length *checks*))))

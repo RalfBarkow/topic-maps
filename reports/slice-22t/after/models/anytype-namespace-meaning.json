@@ -1,0 +1,98 @@
+{
+  "ctm": {
+    "countOrder": [
+      "topics",
+      "names",
+      "variants",
+      "occurrences",
+      "associations",
+      "roles",
+      "reifiedItems"
+    ],
+    "counts": [
+      2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "topicIdentities": "(((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\") NIL\n  NIL))",
+    "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\")\n     NIL NIL))\n   NIL))\n ((:OCCURRENCE\n   ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\") NIL\n    NIL)\n   ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\") NIL\n    NIL)\n   \"<p:x xmlns:p=\\\"urn:left\\\"></p:x>\"\n   \"http://www.w3.org/2001/XMLSchema#anyType\" NIL)\n  NIL NIL NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\") NIL\n  (NIL\n   ((:OCCURRENCE\n     ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\")\n      NIL NIL)\n     \"<p:x xmlns:p=\\\"urn:left\\\"></p:x>\"\n     \"http://www.w3.org/2001/XMLSchema#anyType\" NIL))\n   NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\") NIL\n  (NIL NIL NIL NIL)))"
+  },
+  "xtm": {
+    "countOrder": [
+      "topics",
+      "names",
+      "variants",
+      "occurrences",
+      "associations",
+      "roles",
+      "reifiedItems"
+    ],
+    "counts": [
+      2,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "topicIdentities": "(((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\") NIL\n  NIL)\n ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\") NIL\n  NIL))",
+    "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\")\n     NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\")\n     NIL NIL))\n   NIL))\n ((:OCCURRENCE\n   ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\") NIL\n    NIL)\n   ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\") NIL\n    NIL)\n   \"<p:x xmlns:p=\\\"urn:right\\\"></p:x>\"\n   \"http://www.w3.org/2001/XMLSchema#anyType\" NIL)\n  NIL NIL NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\") NIL\n  (NIL\n   ((:OCCURRENCE\n     ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#a\")\n      NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\")\n      NIL NIL)\n     \"<p:x xmlns:p=\\\"urn:right\\\"></p:x>\"\n     \"http://www.w3.org/2001/XMLSchema#anyType\" NIL))\n   NIL NIL))\n ((:TOPIC\n   (\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-namespace-meaning/map#t\") NIL\n  (NIL NIL NIL NIL)))"
+  },
+  "expectedCounts": [
+    2,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "independentExpectedCTMValue": "<p:x xmlns:p=\"urn:left\"></p:x>",
+  "independentExpectedXTMValue": "<p:x xmlns:p=\"urn:right\"></p:x>",
+  "expectedDatatype": "http://www.w3.org/2001/XMLSchema#anyType",
+  "actualReaderEntries": [
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "documentIRI": "https://equivalence.example.invalid/anytype-namespace-meaning/map",
+      "sourceKey": "contrast:CTM",
+      "inputHex": "6120743A223C703A7820786D6C6E733A703D5C2275726E3A6C6566745C223E3C2F703A783E225E5E3C687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970653E2E"
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "documentIRI": "https://equivalence.example.invalid/anytype-namespace-meaning/map",
+      "sourceKey": "contrast:XTM",
+      "inputHex": "3C746F7069634D617020786D6C6E733D27687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F272076657273696F6E3D27322E30273E3C746F7069632069643D2761273E3C6F6363757272656E63653E3C747970653E3C746F70696352656620687265663D272374272F3E3C2F747970653E3C7265736F75726365446174612064617461747970653D27687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970652720786D6C6E733A703D2775726E3A7269676874273E3C703A782F3E3C2F7265736F75726365446174613E3C2F6F6363757272656E63653E3C2F746F7069633E3C2F746F7069634D61703E"
+    }
+  ],
+  "nativeConstructorEvidence": [
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "sourceKey": "contrast:CTM",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "sourceKey": "contrast:XTM",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    }
+  ]
+}

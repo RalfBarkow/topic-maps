@@ -1,0 +1,7 @@
+{
+  "kind": "unexecuted-test-source-factory-correction-not-production-change",
+  "beforeSHA256": "29a4695e5fd10f503ac4d14ed2eb3cecba1adb0c87cafaabb9002b20ce43534d",
+  "afterSHA256": "656c9fe8513feb1730a0ba0b36adb53c07310e6030191984e4715782c1056457",
+  "correction": "Escape eight literal CTM reifier tildes as ~~ in Common Lisp FORMAT source factories; emitted CTM still contains single ~",
+  "readerOrModelChanged": false
+}

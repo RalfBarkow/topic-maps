@@ -1,0 +1,192 @@
+{
+  "kind": "exports-of-actual-Reader-inputs-and-complete-CXTM-not-new-execution",
+  "isolatedAndFullEquivalenceReportsIdentical": true,
+  "prior33RowsIndividuallySerializationByteIdentical": true,
+  "exports": [
+    {
+      "id": "anytype-occurrence",
+      "expectedCounts": [
+        4,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "normalizationRequired": false,
+      "byteExact": true,
+      "firstDifferentByteZeroBased": null,
+      "files": {
+        "ctmSource": {
+          "path": "after/sources/anytype-occurrence.ctm",
+          "bytes": 193,
+          "sha256": "d5456ca8802a0d95d3e0841c10e6abc67c538e11cc53d0e8020fee582cfde26f"
+        },
+        "ctmCXTM": {
+          "path": "after/cxtm/anytype-occurrence.ctm.cxtm",
+          "bytes": 855,
+          "sha256": "26e5826ecb3ba6c1eeb4e6721f09cd20914855fdb523252d4d3e89f938b06e8e"
+        },
+        "xtmSource": {
+          "path": "after/sources/anytype-occurrence.xtm",
+          "bytes": 498,
+          "sha256": "7b7af8875a9a02f9f37d1cd48e43f392a8344f04b254965691a337b493345357"
+        },
+        "xtmCXTM": {
+          "path": "after/cxtm/anytype-occurrence.xtm.cxtm",
+          "bytes": 855,
+          "sha256": "26e5826ecb3ba6c1eeb4e6721f09cd20914855fdb523252d4d3e89f938b06e8e"
+        }
+      }
+    },
+    {
+      "id": "anytype-variant",
+      "expectedCounts": [
+        6,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "normalizationRequired": false,
+      "byteExact": true,
+      "firstDifferentByteZeroBased": null,
+      "files": {
+        "ctmSource": {
+          "path": "after/sources/anytype-variant.ctm",
+          "bytes": 171,
+          "sha256": "b010e3130069d4d236e098e97dced13fa9822eb6f5e3a236422bf00226075008"
+        },
+        "ctmCXTM": {
+          "path": "after/cxtm/anytype-variant.ctm.cxtm",
+          "bytes": 1030,
+          "sha256": "32b53b1c06613a7832d69bbebbcad8d28a070c511419d5be1fdf4c0a92773f90"
+        },
+        "xtmSource": {
+          "path": "after/sources/anytype-variant.xtm",
+          "bytes": 492,
+          "sha256": "f62bf50c25dd1d35d3d254010e0fefc8038ed25e58b4cb1268fbe52fff415171"
+        },
+        "xtmCXTM": {
+          "path": "after/cxtm/anytype-variant.xtm.cxtm",
+          "bytes": 1030,
+          "sha256": "32b53b1c06613a7832d69bbebbcad8d28a070c511419d5be1fdf4c0a92773f90"
+        }
+      }
+    },
+    {
+      "id": "anytype-occurrence-normalization",
+      "expectedCounts": [
+        4,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "normalizationRequired": true,
+      "byteExact": true,
+      "firstDifferentByteZeroBased": null,
+      "files": {
+        "ctmSource": {
+          "path": "after/sources/anytype-occurrence-normalization.ctm",
+          "bytes": 185,
+          "sha256": "0c562a288fe0c82e962e87ce6bcb3829b2b210bea28e20946e71259228253320"
+        },
+        "ctmCXTM": {
+          "path": "after/cxtm/anytype-occurrence-normalization.ctm.cxtm",
+          "bytes": 647,
+          "sha256": "7440176c94f87b862ced60de1b6b5cd7d701ad7d46056aa21f16388cf6f2b201"
+        },
+        "xtmSource": {
+          "path": "after/sources/anytype-occurrence-normalization.xtm",
+          "bytes": 566,
+          "sha256": "ada6ee490c51b5d24ddb79fc8dba52db9dcdf4279ec439d5dbef3292b619c0f0"
+        },
+        "xtmCXTM": {
+          "path": "after/cxtm/anytype-occurrence-normalization.xtm.cxtm",
+          "bytes": 647,
+          "sha256": "7440176c94f87b862ced60de1b6b5cd7d701ad7d46056aa21f16388cf6f2b201"
+        }
+      }
+    },
+    {
+      "id": "anytype-variant-normalization",
+      "expectedCounts": [
+        6,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "normalizationRequired": true,
+      "byteExact": true,
+      "firstDifferentByteZeroBased": null,
+      "files": {
+        "ctmSource": {
+          "path": "after/sources/anytype-variant-normalization.ctm",
+          "bytes": 260,
+          "sha256": "7c87de35e94b1138137ec7dd6d653bb7da89a8dcf7e9b10e6368165625aff40b"
+        },
+        "ctmCXTM": {
+          "path": "after/cxtm/anytype-variant-normalization.ctm.cxtm",
+          "bytes": 993,
+          "sha256": "fee889fc6cbe29d28008ebb554241a7b5a03c43cae31becce48b854c997e40c6"
+        },
+        "xtmSource": {
+          "path": "after/sources/anytype-variant-normalization.xtm",
+          "bytes": 642,
+          "sha256": "f9bee4671bcb29c71f5f746502d7109dcc942e18268663fde4ad7f16239fc155"
+        },
+        "xtmCXTM": {
+          "path": "after/cxtm/anytype-variant-normalization.xtm.cxtm",
+          "bytes": 993,
+          "sha256": "fee889fc6cbe29d28008ebb554241a7b5a03c43cae31becce48b854c997e40c6"
+        }
+      }
+    },
+    {
+      "id": "anytype-namespace-meaning",
+      "expectedCounts": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "normalizationRequired": false,
+      "byteExact": false,
+      "firstDifferentByteZeroBased": 141,
+      "files": {
+        "ctmSource": {
+          "path": "after/sources/anytype-namespace-meaning.ctm",
+          "bytes": 83,
+          "sha256": "e879d68934b310953fce163818ca3ac72f905e34f2ab00b5a424ae5a7728eba0"
+        },
+        "ctmCXTM": {
+          "path": "after/cxtm/anytype-namespace-meaning.ctm.cxtm",
+          "bytes": 382,
+          "sha256": "1001245a2d2c371c3624369c15c8fc7df174486e4512d8d8c97c586e141be24b"
+        },
+        "xtmSource": {
+          "path": "after/sources/anytype-namespace-meaning.xtm",
+          "bytes": 261,
+          "sha256": "1b5d34fc9f5a768ee4ffd39bed040de4cdb85ac99e713f41cb4a99153b814cc9"
+        },
+        "xtmCXTM": {
+          "path": "after/cxtm/anytype-namespace-meaning.xtm.cxtm",
+          "bytes": 383,
+          "sha256": "2ff5e8b0ef1025380c15a22b2d50fff5d05dc2f91984ac89baef3799d41bd6d6"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,680 @@
+[
+  {
+    "label": "positive-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "positive-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "positive-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "positive-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "positive-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "negative-control-accepted",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "negative-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "negative-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "negative-control-wrong-cause",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "scope-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "scope-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "scope-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "scope-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "iid-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "iid-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "iid-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "iid-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-negative-control-accepted",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-negative-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-negative-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-negative-control-wrong-cause",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-negative-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "merge-variant-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "merge-variant-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "merge-variant-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "merge-variant-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "merge-variant-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-relative-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-relative-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-relative-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-relative-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "resource-ref-relative-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "uri-data-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "uri-data-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "uri-data-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "uri-data-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "uri-data-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-duplicate-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-duplicate-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-duplicate-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-duplicate-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-iid-duplicate-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "map-reifier-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "map-reifier-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "map-reifier-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "map-reifier-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "map-reifier-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "map-reifier-condition-control-wrong-cause",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-duplicate-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-duplicate-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-duplicate-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-duplicate-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-duplicate-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-reifier-condition-control-wrong-cause",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup2-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup2-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup2-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup2-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup2-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup3-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup3-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup3-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup3-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup3-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup4-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup4-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup4-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup4-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "name-followup4-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-duplicate-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-duplicate-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-duplicate-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-duplicate-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-duplicate-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-condition-control-wrong-cause",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-followup-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-followup-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-followup-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-followup-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "variant-reifier-followup-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "datatype-control-mismatch",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "datatype-control-xml",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "datatype-control-xtm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "datatype-control-unsupported",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  },
+  {
+    "label": "datatype-control-tmdm",
+    "expectedExitCode": 1,
+    "reportByteIdenticalTo22S": true,
+    "faultCountedAsOriginalPASS": false
+  }
+]

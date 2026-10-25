@@ -1,0 +1,10 @@
+;; Lisp reader syntax only. No ASDF, CXML, CTM/XTM Readers or model loaded.
+(let ((p (or (find-package "TOPIC-MAPS.CTM") (make-package "TOPIC-MAPS.CTM" :use nil))))
+ (export (intern "DESERIALIZE-STRING" p) p))
+(let ((p (or (find-package "TOPIC-MAPS.XTM") (make-package "TOPIC-MAPS.XTM" :use nil))))
+ (export (intern "DESERIALIZE-OCTETS" p) p))
+(dolist (name '("TOPIC-MAPS.TMDM" "TOPIC-MAPS.TEST-FOUNDATION")) (unless (find-package name) (make-package name :use nil)))
+(let ((*read-eval* nil) (count 0))
+ (with-open-file (s #P"/Users/rgb/workspace/topic-maps/tests/ctm-xtm-anytype-equivalence.lisp")
+  (loop for form = (read s nil :eof) until (eq form :eof) do (incf count)))
+ (format t "LISP-READ-ONLY: ~D forms; zero productive Reader calls; zero model comparisons.~%" count))

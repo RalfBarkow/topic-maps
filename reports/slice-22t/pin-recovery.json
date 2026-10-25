@@ -1,0 +1,187 @@
+{
+  "kind": "slice-22t-pin-recovery-assessment-B-no-network-authorization",
+  "observedAtUTC": "2026-10-25T15:30:38.470908+00:00",
+  "branch": "codex/ctm-xtm-slice-22t",
+  "head": "513de98e5f9dfb62ba3c6310a150bb43c5a4c151",
+  "parent": "c1fa847c85017d4edf5c2439c772d903261e5a12",
+  "indexEmpty": true,
+  "nixpkgs": {
+    "revision": "50ab793786d9de88ee30ec4e4c24fb4236fc2674",
+    "narHash": "sha256-/bVBlRpECLVzjV19t5KMdMFWSwKLtb5RyXdjz3LJT+g=",
+    "localGitObjectDirectory": "/Users/rgb/.cache/nix/tarball-cache",
+    "localTree": "297fd1a23ea526b5bb33ddad9c385d4cee7baeb3"
+  },
+  "sourceDefinitions": [
+    {
+      "name": "cxml",
+      "sha256": "18fls3bx7vmnxfa6qara8fxp316d8kb3izar0kysvqg6l0a45a51",
+      "source": "/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source",
+      "url": "http://beta.quicklisp.org/archive/cxml/2020-06-10/cxml-20200610-git.tgz",
+      "version": "20200610-git",
+      "narHashSRI": "sha256-oahCFKDm4a39BFn9ONZEzYRxu0MqK2yU67bu09fQ1KE=",
+      "identityKind": "sha256 recursive NAR of unpacked root, not compressed archive checksum",
+      "definitionFile": "pkgs/development/lisp-modules/imported.nix",
+      "definitionLine": 45322,
+      "originalDefinition": "  cxml = (\n    build-asdf-system {\n      pname = \"cxml\";\n      version = \"20200610-git\";\n      asds = [ \"cxml\" ];\n      src = (\n        createAsd {\n          url = \"http://beta.quicklisp.org/archive/cxml/2020-06-10/cxml-20200610-git.tgz\";\n          sha256 = \"18fls3bx7vmnxfa6qara8fxp316d8kb3izar0kysvqg6l0a45a51\";\n          system = \"cxml\";\n          asd = \"cxml\";\n        }\n      );\n      systems = [ \"cxml\" ];\n      lispLibs = [\n        (getAttr \"closure-common\" self)\n        (getAttr \"puri\" self)\n        (getAttr \"trivial-gray-streams\" self)\n      ];\n      meta = { };\n    }\n  );\n",
+      "calculatedFixedOutputPath": "/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source",
+      "pathPresent": false,
+      "upstreamGitCommitNotSpecifiedByFetchDefinition": true,
+      "proposedNotExecutedCommand": [
+        "nix",
+        "store",
+        "prefetch-file",
+        "--unpack",
+        "--name",
+        "source",
+        "--expected-hash",
+        "sha256-oahCFKDm4a39BFn9ONZEzYRxu0MqK2yU67bu09fQ1KE=",
+        "--json",
+        "http://beta.quicklisp.org/archive/cxml/2020-06-10/cxml-20200610-git.tgz"
+      ]
+    },
+    {
+      "name": "closure-common",
+      "sha256": "0k5r2qxn122pxi301ijir3nayi9sg4d7yiy276l36qmzwhp4mg5n",
+      "source": "/nix/store/yw7j44h85ilvrg9jsnwcyz048nbl3cl9-source",
+      "url": "http://beta.quicklisp.org/archive/closure-common/2018-10-18/closure-common-20181018-git.tgz",
+      "version": "20181018-git",
+      "narHashSRI": "sha256-trxKLuS/YjOoOcJHfxp5OkWv7MhRxgBG7FeIYDsWuUw=",
+      "identityKind": "sha256 recursive NAR of unpacked root, not compressed archive checksum",
+      "definitionFile": "pkgs/development/lisp-modules/imported.nix",
+      "definitionLine": 41169,
+      "originalDefinition": "  closure-common = (\n    build-asdf-system {\n      pname = \"closure-common\";\n      version = \"20181018-git\";\n      asds = [ \"closure-common\" ];\n      src = (\n        createAsd {\n          url = \"http://beta.quicklisp.org/archive/closure-common/2018-10-18/closure-common-20181018-git.tgz\";\n          sha256 = \"0k5r2qxn122pxi301ijir3nayi9sg4d7yiy276l36qmzwhp4mg5n\";\n          system = \"closure-common\";\n          asd = \"closure-common\";\n        }\n      );\n      systems = [ \"closure-common\" ];\n      lispLibs = [\n        (getAttr \"babel\" self)\n        (getAttr \"trivial-gray-streams\" self)\n      ];\n      meta = { };\n    }\n  );\n",
+      "calculatedFixedOutputPath": "/nix/store/yw7j44h85ilvrg9jsnwcyz048nbl3cl9-source",
+      "pathPresent": false,
+      "upstreamGitCommitNotSpecifiedByFetchDefinition": true,
+      "proposedNotExecutedCommand": [
+        "nix",
+        "store",
+        "prefetch-file",
+        "--unpack",
+        "--name",
+        "source",
+        "--expected-hash",
+        "sha256-trxKLuS/YjOoOcJHfxp5OkWv7MhRxgBG7FeIYDsWuUw=",
+        "--json",
+        "http://beta.quicklisp.org/archive/closure-common/2018-10-18/closure-common-20181018-git.tgz"
+      ]
+    }
+  ],
+  "patches": [
+    {
+      "package": "cxml",
+      "patch": "patches/cxml-19d0b.patch",
+      "sha256": "86720fb7960057def9092e8e75332ce45348b9809766667b8e6b1901c7cf5f24",
+      "changedFiles": {
+        "xml/xml-parse.lisp": {
+          "before": "ab9adf0468889ad59cce2eef51530504a77a2c460d73ca291f9625e0bad4ea00",
+          "after": "fe8be457127977b41a198d70426c3d194499af123a68cd165e27886993931d30"
+        }
+      },
+      "application": "patching file 'xml/xml-parse.lisp'",
+      "currentPatchSHA256": "86720fb7960057def9092e8e75332ce45348b9809766667b8e6b1901c7cf5f24",
+      "actuallyAppliedThisTurn": false
+    },
+    {
+      "package": "closure-common",
+      "patch": "patches/closure-common-19d0b.patch",
+      "sha256": "bbe8e956a147f6f122025e3c355bb13cf0d55ad811d1d4003f9ab50976aed74a",
+      "changedFiles": {
+        "encodings.lisp": {
+          "before": "f7bf3ebbb2e37fdb8f497320a2e8770196f31a51cb74b43a48b82fa6b12cb442",
+          "after": "d9c1cd3f66ae2189988ada0da75568a198a17b082b1609b20a085eeb3b0e73e1"
+        },
+        "xstream.lisp": {
+          "before": "b373d1c4b880a1ee41e779db046f84e3a252d843700ece826151111269ce45e8",
+          "after": "1acdc5eecb03022488c0cf0274a021844035c6ad6aa5a9fd2cc1cd0c5819d338"
+        }
+      },
+      "application": "patching file encodings.lisp\npatching file xstream.lisp",
+      "currentPatchSHA256": "bbe8e956a147f6f122025e3c355bb13cf0d55ad811d1d4003f9ab50976aed74a",
+      "actuallyAppliedThisTurn": false
+    }
+  ],
+  "sourceAndPatchRecordsIdenticalAcross20H22R22S": true,
+  "localRecoveryEvidence": {
+    "matchingValidPathsRows": 0,
+    "matchingDerivationOutputsRows": 0,
+    "storeDerivationFilesScanned": 28700,
+    "matchingStoreDerivations": 0,
+    "fetcherCacheMatchesForSourceNamesURLsOrStoreHashes": 0,
+    "binaryCacheMatchesForStoreHashes": 0,
+    "metadataReadThroughTemporaryCopies": true,
+    "configuredSubstituters": [
+      "https://cache.nixos.org/",
+      "https://install.determinate.systems"
+    ],
+    "configuredLocalFileSubstituter": false,
+    "artifactSearchRoots": [
+      "/nix/store",
+      "/private/tmp",
+      "$TMPDIR",
+      "/Users/rgb/.cache",
+      "/Users/rgb/.local/share",
+      "/Users/rgb/quicklisp"
+    ],
+    "artifactSearchGlobs": [
+      "cxml.asd",
+      "closure-common.asd",
+      "*cxml*.tgz",
+      "*closure-common*.tgz",
+      "*cxml*.nar*",
+      "*closure-common*.nar*"
+    ],
+    "artifactMatches": [],
+    "artifactSearchExitCode": 2,
+    "artifactSearchLimits": "~/quicklisp absent; protected macOS TemporaryItems directories unreadable. This is a scoped negative search, not proof that no copy exists anywhere.",
+    "prior22R22SPreparedCopies": "already documented absent; no new copies found",
+    "offlineRestorationJustified": false
+  },
+  "localCommandVerification": {
+    "printFixedPathExitCodes": [
+      0,
+      0
+    ],
+    "SRIConversionExitCodes": [
+      0,
+      0
+    ],
+    "nixStorePrefetchFileHelpExitCode": 0,
+    "prefetchHelpFlagsConfirmed": [
+      "--unpack",
+      "--name",
+      "--expected-hash",
+      "--json"
+    ],
+    "legacyNixPrefetchUrlHelp": "No manual entry for nix-prefetch-url; use locally documented modern command"
+  },
+  "conclusion": "Stop before any acquisition. No recoverable local payload located. Request permission for only the two original archives with expected recursive hashes and exact output identities.",
+  "requestedMinimalAuthorization": "Two source archive network acquisitions by the proposed nix store prefetch-file commands, including necessary redirects of those same archives, then unchanged offline preparation/patch verification and previously authorized 22T work. No replacement versions, flake/config/profile/service changes or other acquisitions.",
+  "offlineRealizationAttempted": false,
+  "downloadsPerformed": false,
+  "preparationRerun": false,
+  "productiveReaderCallsThisTurn": 0,
+  "regressionExecutedThisTurn": false,
+  "newTestResults": null,
+  "commitCreated": false,
+  "originalCorpusStatusLastStoredNotRerun": {
+    "XTM": [
+      121,
+      0,
+      3
+    ],
+    "CTM": [
+      262,
+      4,
+      7
+    ]
+  },
+  "begunFilesPreservedSHA256": {
+    "tests/ctm-xtm-equivalence.lisp": "0d80c3fccab4f339276398cb626f922de116a4cbc839da2160f00cfd8c18f186",
+    "tests/ctm-xtm-anytype-equivalence.lisp": "29a4695e5fd10f503ac4d14ed2eb3cecba1adb0c87cafaabb9002b20ce43534d",
+    "topic-maps.asd": "cf5bf4b172a0395e31a659cb8e511ec3898420bec6c8ad00b9487a465b50aeb5",
+    "docs/slice-22t-blocker.md": "4b8510e15d2794e2d49e0aa469175343ed61faaf8200791e0fcecdaec0e0b0e5",
+    "reports/slice-22t/blocked-state.json": "6882c47acb1a98cec402e868618e6e06458c619bc5e5bea6a61d4389dbca0c57",
+    "reports/slice-22t/integrity.json": "b838b3ba2f3c681fb11153f400afa10b7afdda7523ea76802c527ebf9f47dcb9"
+  }
+}

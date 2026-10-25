@@ -1,0 +1,37 @@
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#r</locator>
+</itemIdentifiers>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>#s</locator>
+</itemIdentifiers>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>#t</locator>
+</itemIdentifiers>
+</topic>
+<topic number="4">
+<subjectIdentifiers>
+<locator>urn:anytype:subject</locator>
+</subjectIdentifiers>
+<subjectLocators>
+<locator>urn:anytype:resource</locator>
+</subjectLocators>
+<itemIdentifiers>
+<locator>#a</locator>
+<locator>urn:anytype:item</locator>
+</itemIdentifiers>
+<occurrence number="1" reifier="1">
+<value>&lt;p:x xmlns:p="urn:payload" a="A"&gt;Grüße 水 &amp;amp; B&lt;/p:x&gt;</value>
+<datatype>http://www.w3.org/2001/XMLSchema#anyType</datatype>
+<type topicref="3"></type>
+<scope>
+<scopingTopic topicref="2"></scopingTopic>
+</scope>
+</occurrence>
+</topic>
+</topicMap>

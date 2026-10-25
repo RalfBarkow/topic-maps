@@ -1,0 +1,28 @@
+{
+  "kind": "slice-22t-pin-assessment-integrity-only-not-test-acceptance",
+  "observedAtUTC": "2026-10-25T15:31:15.774025+00:00",
+  "baseCommit": "513de98e5f9dfb62ba3c6310a150bb43c5a4c151",
+  "protectedFilesVerified": 11574,
+  "pinnedCorpusFilesVerified": 2006,
+  "historicalReportFilesVerified": 9256,
+  "mismatches": [],
+  "begunFilesPreservedSHA256": {
+    "tests/ctm-xtm-equivalence.lisp": "0d80c3fccab4f339276398cb626f922de116a4cbc839da2160f00cfd8c18f186",
+    "tests/ctm-xtm-anytype-equivalence.lisp": "29a4695e5fd10f503ac4d14ed2eb3cecba1adb0c87cafaabb9002b20ce43534d",
+    "topic-maps.asd": "cf5bf4b172a0395e31a659cb8e511ec3898420bec6c8ad00b9487a465b50aeb5",
+    "docs/slice-22t-blocker.md": "4b8510e15d2794e2d49e0aa469175343ed61faaf8200791e0fcecdaec0e0b0e5",
+    "reports/slice-22t/blocked-state.json": "6882c47acb1a98cec402e868618e6e06458c619bc5e5bea6a61d4389dbca0c57",
+    "reports/slice-22t/integrity.json": "b838b3ba2f3c681fb11153f400afa10b7afdda7523ea76802c527ebf9f47dcb9"
+  },
+  "indexEmpty": true,
+  "headUnchanged": true,
+  "newEvidenceFiles": [
+    "docs/slice-22t-pin-recovery.md",
+    "reports/slice-22t/pin-recovery.json",
+    "reports/slice-22t/pin-recovery-integrity.json"
+  ],
+  "testsExecuted": false,
+  "sourcesRestored": false,
+  "downloadsPerformed": false,
+  "commitCreated": false
+}

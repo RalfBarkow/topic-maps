@@ -1,0 +1,47 @@
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#a</locator>
+</itemIdentifiers>
+<name number="1" reifier="4">
+<value>N</value>
+<type topicref="5"></type>
+<scope>
+<scopingTopic topicref="2"></scopingTopic>
+</scope>
+<variant number="1" reifier="6">
+<value>&lt;p:outer xmlns:p="urn:variant"&gt;&lt;p:leaf a="1" b="2"&gt;V&amp;amp;🦊&lt;/p:leaf&gt;&lt;/p:outer&gt;</value>
+<datatype>http://www.w3.org/2001/XMLSchema#anyType</datatype>
+<scope>
+<scopingTopic topicref="2"></scopingTopic>
+<scopingTopic topicref="3"></scopingTopic>
+</scope>
+</variant>
+</name>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>#base</locator>
+</itemIdentifiers>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>#extra</locator>
+</itemIdentifiers>
+</topic>
+<topic number="4">
+<itemIdentifiers>
+<locator>#nr</locator>
+</itemIdentifiers>
+</topic>
+<topic number="5">
+<itemIdentifiers>
+<locator>#nt</locator>
+</itemIdentifiers>
+</topic>
+<topic number="6">
+<itemIdentifiers>
+<locator>#vr</locator>
+</itemIdentifiers>
+</topic>
+</topicMap>

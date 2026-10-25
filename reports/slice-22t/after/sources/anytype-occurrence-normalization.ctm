@@ -1,0 +1,1 @@
+a t:"<x a=\"A\" b=\"2\"><y></y>a&amp;b</x>"^^<http://www.w3.org/2001/XMLSchema#anyType>@s ~r; t:"<x a=\"A\" b=\"2\"><y></y>a&amp;b</x>"^^<http://www.w3.org/2001/XMLSchema#anyType>@s ~r.

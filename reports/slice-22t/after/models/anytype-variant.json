@@ -1,0 +1,134 @@
+{
+  "ctm": {
+    "countOrder": [
+      "topics",
+      "names",
+      "variants",
+      "occurrences",
+      "associations",
+      "roles",
+      "reifiedItems"
+    ],
+    "counts": [
+      6,
+      1,
+      1,
+      0,
+      0,
+      0,
+      2
+    ],
+    "topicIdentities": "(((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL NIL))",
+    "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL NIL))\n   NIL))\n ((:NAME\n   ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n   ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL) \"N\"\n   (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n     NIL)))\n  NIL\n  (:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL\n   NIL)\n  ((:VARIANT\n    (:NAME\n     ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n     \"N\"\n     (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n       NIL)))\n    \"<p:outer xmlns:p=\\\"urn:variant\\\"><p:leaf a=\\\"1\\\" b=\\\"2\\\">V&amp;🦊</p:leaf></p:outer>\"\n    \"http://www.w3.org/2001/XMLSchema#anyType\"\n    (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n      NIL)))))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL\n  (((:NAME\n     ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n     \"N\"\n     (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n       NIL))))\n   NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL\n  (NIL NIL NIL\n   (:NAME\n    ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n    \"N\"\n    (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n      NIL)))))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL\n  (NIL NIL NIL\n   (:VARIANT\n    (:NAME\n     ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n     \"N\"\n     (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n       NIL)))\n    \"<p:outer xmlns:p=\\\"urn:variant\\\"><p:leaf a=\\\"1\\\" b=\\\"2\\\">V&amp;🦊</p:leaf></p:outer>\"\n    \"http://www.w3.org/2001/XMLSchema#anyType\"\n    (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n      NIL)))))\n ((:VARIANT\n   (:NAME\n    ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n    \"N\"\n    (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n      NIL)))\n   \"<p:outer xmlns:p=\\\"urn:variant\\\"><p:leaf a=\\\"1\\\" b=\\\"2\\\">V&amp;🦊</p:leaf></p:outer>\"\n   \"http://www.w3.org/2001/XMLSchema#anyType\"\n   (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n     NIL)))\n  NIL\n  (:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL\n   NIL)\n  NIL))"
+  },
+  "xtm": {
+    "countOrder": [
+      "topics",
+      "names",
+      "variants",
+      "occurrences",
+      "associations",
+      "roles",
+      "reifiedItems"
+    ],
+    "counts": [
+      6,
+      1,
+      1,
+      0,
+      0,
+      0,
+      2
+    ],
+    "topicIdentities": "(((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL NIL))",
+    "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL NIL))\n   NIL))\n ((:NAME\n   ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n   ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL) \"N\"\n   (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n     NIL)))\n  NIL\n  (:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL\n   NIL)\n  ((:VARIANT\n    (:NAME\n     ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n     \"N\"\n     (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n       NIL)))\n    \"<p:outer xmlns:p=\\\"urn:variant\\\"><p:leaf a=\\\"1\\\" b=\\\"2\\\">V&amp;🦊</p:leaf></p:outer>\"\n    \"http://www.w3.org/2001/XMLSchema#anyType\"\n    (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n      NIL)))))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL\n  (((:NAME\n     ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n     \"N\"\n     (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n       NIL))))\n   NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#nr\") NIL\n  (NIL NIL NIL\n   (:NAME\n    ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n    \"N\"\n    (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n      NIL)))))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL\n  (NIL NIL NIL\n   (:VARIANT\n    (:NAME\n     ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n     \"N\"\n     (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n       NIL)))\n    \"<p:outer xmlns:p=\\\"urn:variant\\\"><p:leaf a=\\\"1\\\" b=\\\"2\\\">V&amp;🦊</p:leaf></p:outer>\"\n    \"http://www.w3.org/2001/XMLSchema#anyType\"\n    (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n     ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n      NIL)))))\n ((:VARIANT\n   (:NAME\n    ((\"https://equivalence.example.invalid/anytype-variant/map#a\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#nt\") NIL NIL)\n    \"N\"\n    (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL\n      NIL)))\n   \"<p:outer xmlns:p=\\\"urn:variant\\\"><p:leaf a=\\\"1\\\" b=\\\"2\\\">V&amp;🦊</p:leaf></p:outer>\"\n   \"http://www.w3.org/2001/XMLSchema#anyType\"\n   (((\"https://equivalence.example.invalid/anytype-variant/map#base\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-variant/map#extra\") NIL\n     NIL)))\n  NIL\n  (:TOPIC (\"https://equivalence.example.invalid/anytype-variant/map#vr\") NIL\n   NIL)\n  NIL))"
+  },
+  "expectedCounts": [
+    6,
+    1,
+    1,
+    0,
+    0,
+    0,
+    2
+  ],
+  "independentExpectedCTMValue": "<p:outer xmlns:p=\"urn:variant\"><p:leaf a=\"1\" b=\"2\">V&amp;🦊</p:leaf></p:outer>",
+  "independentExpectedXTMValue": "<p:outer xmlns:p=\"urn:variant\"><p:leaf a=\"1\" b=\"2\">V&amp;🦊</p:leaf></p:outer>",
+  "expectedDatatype": "http://www.w3.org/2001/XMLSchema#anyType",
+  "actualReaderEntries": [
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "documentIRI": "https://equivalence.example.invalid/anytype-variant/map",
+      "sourceKey": "ctm:anytype-variant",
+      "inputHex": "61202D206E743A224E224062617365207E6E722028223C703A6F7574657220786D6C6E733A703D5C2275726E3A76617269616E745C223E3C703A6C65616620613D5C22315C2220623D5C22325C223E5626616D703BF09FA68A3C2F703A6C6561663E3C2F703A6F757465723E225E5E3C687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970653E4065787472612C6578747261207E7672292E"
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "documentIRI": "https://equivalence.example.invalid/anytype-variant/map",
+      "sourceKey": "xtm:anytype-variant",
+      "inputHex": "3C746F7069634D617020786D6C6E733D27687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F272076657273696F6E3D27322E30273E3C746F7069632069643D2761273E3C6E616D6520726569666965723D27236E72273E3C747970653E3C746F70696352656620687265663D27236E74272F3E3C2F747970653E3C73636F70653E3C746F70696352656620687265663D272362617365272F3E3C2F73636F70653E3C76616C75653E4E3C2F76616C75653E3C76617269616E7420726569666965723D27237672273E3C73636F70653E3C746F70696352656620687265663D27236578747261272F3E3C746F70696352656620687265663D27236578747261272F3E3C2F73636F70653E3C7265736F75726365446174612064617461747970653D27687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970652720786D6C6E733A703D2775726E3A76617269616E742720786D6C6E733A753D2775726E3A756E75736564273E3C703A6F757465723E3C703A6C65616620623D27322720613D2731273E5626616D703BF09FA68A3C2F703A6C6561663E3C2F703A6F757465723E3C2F7265736F75726365446174613E3C2F76617269616E743E3C2F6E616D653E3C2F746F7069633E3C2F746F7069634D61703E"
+    },
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "documentIRI": "https://equivalence.example.invalid/anytype-variant/map",
+      "sourceKey": "other:CTM-key",
+      "inputHex": "61202D206E743A224E224062617365207E6E722028223C703A6F7574657220786D6C6E733A703D5C2275726E3A76617269616E745C223E3C703A6C65616620613D5C22315C2220623D5C22325C223E5626616D703BF09FA68A3C2F703A6C6561663E3C2F703A6F757465723E225E5E3C687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970653E4065787472612C6578747261207E7672292E"
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "documentIRI": "https://equivalence.example.invalid/anytype-variant/map",
+      "sourceKey": "other:XTM-key",
+      "inputHex": "3C746F7069634D617020786D6C6E733D27687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F272076657273696F6E3D27322E30273E3C746F7069632069643D2761273E3C6E616D6520726569666965723D27236E72273E3C747970653E3C746F70696352656620687265663D27236E74272F3E3C2F747970653E3C73636F70653E3C746F70696352656620687265663D272362617365272F3E3C2F73636F70653E3C76616C75653E4E3C2F76616C75653E3C76617269616E7420726569666965723D27237672273E3C73636F70653E3C746F70696352656620687265663D27236578747261272F3E3C746F70696352656620687265663D27236578747261272F3E3C2F73636F70653E3C7265736F75726365446174612064617461747970653D27687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970652720786D6C6E733A703D2775726E3A76617269616E742720786D6C6E733A753D2775726E3A756E75736564273E3C703A6F757465723E3C703A6C65616620623D27322720613D2731273E5626616D703BF09FA68A3C2F703A6C6561663E3C2F703A6F757465723E3C2F7265736F75726365446174613E3C2F76617269616E743E3C2F6E616D653E3C2F746F7069633E3C2F746F7069634D61703E"
+    }
+  ],
+  "nativeConstructorEvidence": [
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "sourceKey": "ctm:anytype-variant",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "sourceKey": "xtm:anytype-variant",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    },
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "sourceKey": "other:CTM-key",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "sourceKey": "other:XTM-key",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    }
+  ]
+}

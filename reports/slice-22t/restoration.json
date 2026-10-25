@@ -1,0 +1,61 @@
+{
+  "authorization": "User explicitly authorized only these two original archives and their required redirects",
+  "startedAtUTC": "2026-10-25T15:35:49.824402+00:00",
+  "acquisitions": [
+    {
+      "name": "cxml",
+      "command": [
+        "nix",
+        "store",
+        "prefetch-file",
+        "--unpack",
+        "--name",
+        "source",
+        "--expected-hash",
+        "sha256-oahCFKDm4a39BFn9ONZEzYRxu0MqK2yU67bu09fQ1KE=",
+        "--json",
+        "http://beta.quicklisp.org/archive/cxml/2020-06-10/cxml-20200610-git.tgz"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"hash\":\"sha256-oahCFKDm4a39BFn9ONZEzYRxu0MqK2yU67bu09fQ1KE=\",\"storePath\":\"/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source\"}\n",
+      "stderr": "",
+      "finishedAtUTC": "2026-10-25T15:35:50.980773+00:00",
+      "result": {
+        "hash": "sha256-oahCFKDm4a39BFn9ONZEzYRxu0MqK2yU67bu09fQ1KE=",
+        "storePath": "/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source"
+      },
+      "verifiedNARHash": "sha256-oahCFKDm4a39BFn9ONZEzYRxu0MqK2yU67bu09fQ1KE=",
+      "expectedStorePath": "/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source",
+      "expectedNARHash": "sha256-oahCFKDm4a39BFn9ONZEzYRxu0MqK2yU67bu09fQ1KE=",
+      "identityVerified": true
+    },
+    {
+      "name": "closure-common",
+      "command": [
+        "nix",
+        "store",
+        "prefetch-file",
+        "--unpack",
+        "--name",
+        "source",
+        "--expected-hash",
+        "sha256-trxKLuS/YjOoOcJHfxp5OkWv7MhRxgBG7FeIYDsWuUw=",
+        "--json",
+        "http://beta.quicklisp.org/archive/closure-common/2018-10-18/closure-common-20181018-git.tgz"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"hash\":\"sha256-trxKLuS/YjOoOcJHfxp5OkWv7MhRxgBG7FeIYDsWuUw=\",\"storePath\":\"/nix/store/yw7j44h85ilvrg9jsnwcyz048nbl3cl9-source\"}\n",
+      "stderr": "",
+      "finishedAtUTC": "2026-10-25T15:35:52.247242+00:00",
+      "result": {
+        "hash": "sha256-trxKLuS/YjOoOcJHfxp5OkWv7MhRxgBG7FeIYDsWuUw=",
+        "storePath": "/nix/store/yw7j44h85ilvrg9jsnwcyz048nbl3cl9-source"
+      },
+      "verifiedNARHash": "sha256-trxKLuS/YjOoOcJHfxp5OkWv7MhRxgBG7FeIYDsWuUw=",
+      "expectedStorePath": "/nix/store/yw7j44h85ilvrg9jsnwcyz048nbl3cl9-source",
+      "expectedNARHash": "sha256-trxKLuS/YjOoOcJHfxp5OkWv7MhRxgBG7FeIYDsWuUw=",
+      "identityVerified": true
+    }
+  ],
+  "restorationPassed": true
+}

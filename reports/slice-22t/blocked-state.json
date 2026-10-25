@@ -1,0 +1,120 @@
+{
+  "kind": "slice-22t-environment-blocker-NOT-test-acceptance",
+  "observedAtUTC": "2026-10-25T15:14:12.073788+00:00",
+  "branch": "codex/ctm-xtm-slice-22t",
+  "head": "513de98e5f9dfb62ba3c6310a150bb43c5a4c151",
+  "preparationAttempt": {
+    "command": "python3 scripts/validate-slice-22d.py --prepare <temporary>/sources, under sandbox-exec network/repository-write denial",
+    "exitCode": 1,
+    "exactError": "AssertionError: Missing local source: cxml",
+    "productiveReaderCalls": 0,
+    "ASDFEquivalenceSuiteStarted": false
+  },
+  "dependencies": [
+    {
+      "name": "cxml",
+      "sha256": "18fls3bx7vmnxfa6qara8fxp316d8kb3izar0kysvqg6l0a45a51",
+      "source": "/nix/store/5075y4alv1is8n78bcsfcaj0mfpqz195-source",
+      "url": "http://beta.quicklisp.org/archive/cxml/2020-06-10/cxml-20200610-git.tgz",
+      "version": "20200610-git",
+      "present": false
+    },
+    {
+      "name": "closure-common",
+      "sha256": "0k5r2qxn122pxi301ijir3nayi9sg4d7yiy276l36qmzwhp4mg5n",
+      "source": "/nix/store/yw7j44h85ilvrg9jsnwcyz048nbl3cl9-source",
+      "url": "http://beta.quicklisp.org/archive/closure-common/2018-10-18/closure-common-20181018-git.tgz",
+      "version": "20181018-git",
+      "present": false
+    },
+    {
+      "name": "babel",
+      "sha256": "0359bj3yr6frybcmg8qr5vi4q8hzbsb7hmvxdc0jgkfz3c33q667",
+      "source": "/nix/store/76bbavhilddfxd2b56inkdzi6ym860cs-source",
+      "url": "http://beta.quicklisp.org/archive/babel/2024-10-12/babel-20241012-git.tgz",
+      "version": "20241012-git",
+      "present": true
+    },
+    {
+      "name": "alexandria",
+      "sha256": "0jq0n59s0r9yl374f0zpdnaflb5g853yqvax7ka8rnypspyykwdw",
+      "source": "/nix/store/i6nnd3amy08a3f3v8q76nh9kw9434z29-source",
+      "url": "http://beta.quicklisp.org/archive/alexandria/2024-10-12/alexandria-20241012-git.tgz",
+      "version": "20241012-git",
+      "present": true
+    },
+    {
+      "name": "trivial-features",
+      "sha256": "0r33ycg1wsmglbsychglzkd6fachnnqfzd0w9mhpwi6cz94hx7c3",
+      "source": "/nix/store/fldw3972prvmlv87f0qf69myk79kz1g4-source",
+      "url": "http://beta.quicklisp.org/archive/trivial-features/2023-06-18/trivial-features-20230618-git.tgz",
+      "version": "20230618-git",
+      "present": true
+    },
+    {
+      "name": "trivial-gray-streams",
+      "sha256": "0iw6q5hx7x8sc5s7ikvsjccsksbm0rd13d54mkrg62sc56hjywrm",
+      "source": "/nix/store/sk5ab989c1q4yb1b6rwh0rsa5d2iiq5b-source",
+      "url": "http://beta.quicklisp.org/archive/trivial-gray-streams/2024-10-12/trivial-gray-streams-20241012-git.tgz",
+      "version": "20241012-git",
+      "present": true
+    },
+    {
+      "name": "puri",
+      "sha256": "0gq2rsr0aihs0z20v4zqvmdl4szq53b52rh97pvnmwrlbn4mapmd",
+      "source": "/nix/store/9h9dj9dlm06x99n3px6vsqh40c6djan8-source",
+      "url": "http://beta.quicklisp.org/archive/puri/2020-10-16/puri-20201016-git.tgz",
+      "version": "20201016-git",
+      "present": true
+    }
+  ],
+  "sourceSearch": {
+    "noCXMLOrClosureCommonSourceFoundIn": [
+      "/nix/store",
+      "/Users/rgb/.cache",
+      "/Users/rgb/.local/share",
+      "/private/tmp",
+      "/Users/rgb/quicklisp"
+    ],
+    "prior22RAnd22SPreparedCopiesExist": false,
+    "quicklispArchivesDirectoryExists": false,
+    "nixFetcherCacheHasEntriesForPinnedQuicklispURLs": false,
+    "cacheWasReadThroughTemporaryReadOnlyCopy": true
+  },
+  "runtimeVersion": "SBCL 2.5.4",
+  "syntaxOnly": {
+    "exitCode": 0,
+    "productiveReaderCalls": 0,
+    "modelComparisons": 0,
+    "notASDFCompilationOrExecution": true,
+    "sourceSyntaxCorrection": "removed one extra closing parenthesis in the not-yet-executed variant-normalization source factory"
+  },
+  "fullRegressionExecuted": false,
+  "executorFaultControlsExecuted": 0,
+  "acceptancePassed": false,
+  "newOriginalRegistrations": 0,
+  "lastStoredCorpusStatusNotNewExecution": {
+    "XTM": {
+      "pass": 121,
+      "fail": 0,
+      "not-run": 3
+    },
+    "CTM": {
+      "pass": 262,
+      "fail": 4,
+      "not-run": 7
+    }
+  },
+  "productionSourcesUnchanged": true,
+  "originalsBaselinesHistoricalReportsUnchanged": true,
+  "protectedFilesVerified": 11574,
+  "pinnedCorpusFilesVerified": 2006,
+  "historicalReportFilesVerified": 9256,
+  "uncommittedTrackedChanges": [
+    "tests/ctm-xtm-equivalence.lisp",
+    "topic-maps.asd"
+  ],
+  "commitCreated": false,
+  "downloadsPerformed": false,
+  "dependencySubstitution": false
+}

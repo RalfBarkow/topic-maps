@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "--noinform",
+    "--no-sysinit",
+    "--no-userinit",
+    "--script",
+    "reports/slice-22f/fresh-equivalence.lisp"
+  ],
+  "startedAtUTC": "2026-10-25T15:37:25.303856+00:00",
+  "finishedAtUTC": "2026-10-25T15:37:40.498399+00:00",
+  "exitCode": 0,
+  "log": "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22t-resumed-r9ra8rs3/isolated.log",
+  "report": "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22t-resumed-r9ra8rs3/isolated.equivalence.json",
+  "ASDF_OUTPUT_TRANSLATIONS": "(:output-translations (t \"/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/tm-slice-22t-resumed-r9ra8rs3/fasls/\") :ignore-inherited-configuration)",
+  "networkDenied": true,
+  "repositoryWritesDenied": true
+}

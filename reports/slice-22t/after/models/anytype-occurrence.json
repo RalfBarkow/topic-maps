@@ -1,0 +1,134 @@
+{
+  "ctm": {
+    "countOrder": [
+      "topics",
+      "names",
+      "variants",
+      "occurrences",
+      "associations",
+      "roles",
+      "reifiedItems"
+    ],
+    "counts": [
+      4,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    "topicIdentities": "(((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n   \"urn:anytype:item\")\n  (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n ((\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL))",
+    "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n      \"urn:anytype:item\")\n     (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL))\n   NIL))\n ((:OCCURRENCE\n   ((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n     \"urn:anytype:item\")\n    (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n   ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL)\n   \"<p:x xmlns:p=\\\"urn:payload\\\" a=\\\"A\\\">Grüße 水 &amp; B</p:x>\"\n   \"http://www.w3.org/2001/XMLSchema#anyType\"\n   (((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n     NIL)))\n  NIL\n  (:TOPIC (\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL\n   NIL)\n  NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n    \"urn:anytype:item\")\n   (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n  (\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n   \"urn:anytype:item\")\n  NIL\n  (NIL\n   ((:OCCURRENCE\n     ((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n       \"urn:anytype:item\")\n      (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n     ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL)\n     \"<p:x xmlns:p=\\\"urn:payload\\\" a=\\\"A\\\">Grüße 水 &amp; B</p:x>\"\n     \"http://www.w3.org/2001/XMLSchema#anyType\"\n     (((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n       NIL))))\n   NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL\n  (NIL NIL NIL\n   (:OCCURRENCE\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n      \"urn:anytype:item\")\n     (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL)\n    \"<p:x xmlns:p=\\\"urn:payload\\\" a=\\\"A\\\">Grüße 水 &amp; B</p:x>\"\n    \"http://www.w3.org/2001/XMLSchema#anyType\"\n    (((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n      NIL)))))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL\n  (NIL NIL NIL NIL)))"
+  },
+  "xtm": {
+    "countOrder": [
+      "topics",
+      "names",
+      "variants",
+      "occurrences",
+      "associations",
+      "roles",
+      "reifiedItems"
+    ],
+    "counts": [
+      4,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    "topicIdentities": "(((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n   \"urn:anytype:item\")\n  (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n ((\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL NIL)\n ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL))",
+    "completeNativePropertyTuples": "(((:MAP) NIL NIL\n  ((((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n      \"urn:anytype:item\")\n     (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL NIL)\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL))\n   NIL))\n ((:OCCURRENCE\n   ((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n     \"urn:anytype:item\")\n    (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n   ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL)\n   \"<p:x xmlns:p=\\\"urn:payload\\\" a=\\\"A\\\">Grüße 水 &amp; B</p:x>\"\n   \"http://www.w3.org/2001/XMLSchema#anyType\"\n   (((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n     NIL)))\n  NIL\n  (:TOPIC (\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL\n   NIL)\n  NIL)\n ((:TOPIC\n   (\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n    \"urn:anytype:item\")\n   (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n  (\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n   \"urn:anytype:item\")\n  NIL\n  (NIL\n   ((:OCCURRENCE\n     ((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n       \"urn:anytype:item\")\n      (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n     ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL)\n     \"<p:x xmlns:p=\\\"urn:payload\\\" a=\\\"A\\\">Grüße 水 &amp; B</p:x>\"\n     \"http://www.w3.org/2001/XMLSchema#anyType\"\n     (((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n       NIL))))\n   NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-occurrence/map#r\") NIL\n  (NIL NIL NIL\n   (:OCCURRENCE\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#a\"\n      \"urn:anytype:item\")\n     (\"urn:anytype:subject\") (\"urn:anytype:resource\"))\n    ((\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL NIL)\n    \"<p:x xmlns:p=\\\"urn:payload\\\" a=\\\"A\\\">Grüße 水 &amp; B</p:x>\"\n    \"http://www.w3.org/2001/XMLSchema#anyType\"\n    (((\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n      NIL)))))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-occurrence/map#s\") NIL\n  (NIL NIL NIL NIL))\n ((:TOPIC (\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL\n   NIL)\n  (\"https://equivalence.example.invalid/anytype-occurrence/map#t\") NIL\n  (NIL NIL NIL NIL)))"
+  },
+  "expectedCounts": [
+    4,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1
+  ],
+  "independentExpectedCTMValue": "<p:x xmlns:p=\"urn:payload\" a=\"A\">Grüße 水 &amp; B</p:x>",
+  "independentExpectedXTMValue": "<p:x xmlns:p=\"urn:payload\" a=\"A\">Grüße 水 &amp; B</p:x>",
+  "expectedDatatype": "http://www.w3.org/2001/XMLSchema#anyType",
+  "actualReaderEntries": [
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "documentIRI": "https://equivalence.example.invalid/anytype-occurrence/map",
+      "sourceKey": "ctm:anytype-occurrence",
+      "inputHex": "61203C75726E3A616E79747970653A7375626A6563743E2E2061203D3C75726E3A616E79747970653A7265736F757263653E2E2061205E3C75726E3A616E79747970653A6974656D3E2E206120743A223C703A7820786D6C6E733A703D5C2275726E3A7061796C6F61645C2220613D5C22415C223E4772C3BCC39F6520E6B0B42026616D703B20423C2F703A783E225E5E3C687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970653E4073207E722E"
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "documentIRI": "https://equivalence.example.invalid/anytype-occurrence/map",
+      "sourceKey": "xtm:anytype-occurrence",
+      "inputHex": "3C746F7069634D617020786D6C6E733D27687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F272076657273696F6E3D27322E30273E3C746F7069632069643D2761273E3C7375626A6563744964656E74696669657220687265663D2775726E3A616E79747970653A7375626A656374272F3E3C7375626A6563744C6F6361746F7220687265663D2775726E3A616E79747970653A7265736F75726365272F3E3C6974656D4964656E7469747920687265663D2775726E3A616E79747970653A6974656D272F3E3C6F6363757272656E636520726569666965723D272372273E3C747970653E3C746F70696352656620687265663D272374272F3E3C2F747970653E3C73636F70653E3C746F70696352656620687265663D272373272F3E3C2F73636F70653E3C7265736F75726365446174612064617461747970653D27687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970652720786D6C6E733A703D2775726E3A7061796C6F61642720786D6C6E733A753D2775726E3A756E75736564273E3C703A7820613D27262336353B273E4772C3BCC39F6520E6B0B42026616D703B20423C2F703A783E3C2F7265736F75726365446174613E3C2F6F6363757272656E63653E3C2F746F7069633E3C2F746F7069634D61703E"
+    },
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "documentIRI": "https://equivalence.example.invalid/anytype-occurrence/map",
+      "sourceKey": "other:CTM-key",
+      "inputHex": "61203C75726E3A616E79747970653A7375626A6563743E2E2061203D3C75726E3A616E79747970653A7265736F757263653E2E2061205E3C75726E3A616E79747970653A6974656D3E2E206120743A223C703A7820786D6C6E733A703D5C2275726E3A7061796C6F61645C2220613D5C22415C223E4772C3BCC39F6520E6B0B42026616D703B20423C2F703A783E225E5E3C687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970653E4073207E722E"
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "documentIRI": "https://equivalence.example.invalid/anytype-occurrence/map",
+      "sourceKey": "other:XTM-key",
+      "inputHex": "3C746F7069634D617020786D6C6E733D27687474703A2F2F7777772E746F7069636D6170732E6F72672F78746D2F272076657273696F6E3D27322E30273E3C746F7069632069643D2761273E3C7375626A6563744964656E74696669657220687265663D2775726E3A616E79747970653A7375626A656374272F3E3C7375626A6563744C6F6361746F7220687265663D2775726E3A616E79747970653A7265736F75726365272F3E3C6974656D4964656E7469747920687265663D2775726E3A616E79747970653A6974656D272F3E3C6F6363757272656E636520726569666965723D272372273E3C747970653E3C746F70696352656620687265663D272374272F3E3C2F747970653E3C73636F70653E3C746F70696352656620687265663D272373272F3E3C2F73636F70653E3C7265736F75726365446174612064617461747970653D27687474703A2F2F7777772E77332E6F72672F323030312F584D4C536368656D6123616E79547970652720786D6C6E733A703D2775726E3A7061796C6F61642720786D6C6E733A753D2775726E3A756E75736564273E3C703A7820613D27262336353B273E4772C3BCC39F6520E6B0B42026616D703B20423C2F703A783E3C2F7265736F75726365446174613E3C2F6F6363757272656E63653E3C2F746F7069633E3C2F746F7069634D61703E"
+    }
+  ],
+  "nativeConstructorEvidence": [
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "sourceKey": "ctm:anytype-occurrence",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "sourceKey": "xtm:anytype-occurrence",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    },
+    {
+      "entryPoint": "topic-maps.ctm:deserialize-string",
+      "sourceKey": "other:CTM-key",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    },
+    {
+      "entryPoint": "topic-maps.xtm:deserialize-octets",
+      "sourceKey": "other:XTM-key",
+      "sourceItemCalls": 1,
+      "nativeItemCountsBefore": [
+        0
+      ],
+      "nativeItemCountsAfter": [
+        1
+      ],
+      "allReturnedHandlesCanonicalAndLive": true
+    }
+  ]
+}

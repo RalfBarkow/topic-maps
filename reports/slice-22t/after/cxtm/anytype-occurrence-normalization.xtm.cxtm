@@ -1,0 +1,30 @@
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#a</locator>
+</itemIdentifiers>
+<occurrence number="1" reifier="2">
+<value>&lt;x a="A" b="2"&gt;&lt;y&gt;&lt;/y&gt;a&amp;amp;b&lt;/x&gt;</value>
+<datatype>http://www.w3.org/2001/XMLSchema#anyType</datatype>
+<type topicref="4"></type>
+<scope>
+<scopingTopic topicref="3"></scopingTopic>
+</scope>
+</occurrence>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>#r</locator>
+</itemIdentifiers>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>#s</locator>
+</itemIdentifiers>
+</topic>
+<topic number="4">
+<itemIdentifiers>
+<locator>#t</locator>
+</itemIdentifiers>
+</topic>
+</topicMap>
