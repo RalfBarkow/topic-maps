@@ -1,0 +1,186 @@
+[
+  {
+    "report": "retained/slice20b.negative.json",
+    "SHA256": "f6bf74664aea8945130b11d7cfad64a85d045e776234f618c2c1a69530d83b34"
+  },
+  {
+    "report": "retained/core.json.include.json",
+    "SHA256": "f740b70dfbf8e5790f4ab8ac3df3e40ef62fa18a47dcee7f12f2e6d7c573eea7"
+  },
+  {
+    "report": "retained/xtm-mergemap.equivalence.json",
+    "SHA256": "866eb47246986d618cf70c699a08ece520bc287efc8321a028984b848668dc10"
+  },
+  {
+    "report": "retained/core.json.reification.json",
+    "SHA256": "c5037082b0fd507707290b434ab648e4645341899362fd11be6752d579997890"
+  },
+  {
+    "report": "retained/core.json.map-import.json",
+    "SHA256": "883052223d825e6e0b86b128e4e0ebb92432e57395cebf32a42c43f43530864e"
+  },
+  {
+    "report": "retained/core.json.references.json",
+    "SHA256": "bfe5fd9aca4701d10853c33e984663b50a6acb67e767d5d5c2f84f3bd98b521d"
+  },
+  {
+    "report": "retained/core.json.prefixes.json",
+    "SHA256": "d141483564a941ab7f24a92fd7409c2c578931561c2b2b9940e166dda5ac1a08"
+  },
+  {
+    "report": "retained/slice20g.validation.json",
+    "SHA256": "7ad73640869b6112b0f7c4c70400cc71c419312bf92b728c1dca1b0b946144aa"
+  },
+  {
+    "report": "retained/slice20c.cxtm.json",
+    "SHA256": "4d413a41f05ccae5a757b55719487aa15c829bbfd90aac283d4cbb7f4517d121"
+  },
+  {
+    "report": "retained/slice20e.cxtm.json",
+    "SHA256": "acb18edfb47075b32f7386331edb587af6248837092656a58303459ae6ab4b06"
+  },
+  {
+    "report": "retained/core.json.scopes.json",
+    "SHA256": "1f05cb6c023553798cd94940384c3170d3aaac7d513d9769c07dc096a034158b"
+  },
+  {
+    "report": "retained/core.json.timezones.json",
+    "SHA256": "cd17799042eb4c76a7bbfcc81d1c82e3f88b390ed106dbf5c5d7ee5e8b136142"
+  },
+  {
+    "report": "retained/slice20a.validation.json",
+    "SHA256": "3cd52cea97f159fed2f914a17e8ba5ff46df1c62d826fce0497014a34f5504c6"
+  },
+  {
+    "report": "retained/core.json.templates.json",
+    "SHA256": "db48a8b16592d7d0a307f01adea791598827b71507e27485f75c8ef2a6977052"
+  },
+  {
+    "report": "retained/slice20a.registration.json",
+    "SHA256": "d7aed73e0c1af267c4d768131decedc4275d9d0657dcc514429d88e148782750"
+  },
+  {
+    "report": "retained/core.json.merging.json",
+    "SHA256": "d38e3ba85aaaceb63bcd481b1c3670f70efca876afc4b5ff92032c91c099d5c3"
+  },
+  {
+    "report": "retained/slice20b.cxtm.json",
+    "SHA256": "35325d09bd6f95f846a65f49e9c399dfc58fb07c2061977d7dd1ddda5f2686e5"
+  },
+  {
+    "report": "retained/core.json.arity.json",
+    "SHA256": "02ffd2fbfd379ec140e13f665190c84e6781af9394fe194e8ddef4175e21b7e0"
+  },
+  {
+    "report": "retained/core.json.mergemap.json",
+    "SHA256": "591f425d16b5a208eaf37777ef6fa4fca6cb2483e2004e33946703e316203172"
+  },
+  {
+    "report": "retained/core.json.decimals.json",
+    "SHA256": "3147c6d3ae1a8cf6041d4008be3dc177411139a5737b8122c9e1b41eb188d1ed"
+  },
+  {
+    "report": "retained/core.json.dates.json",
+    "SHA256": "92c38576019d05ff80903b189a264b3b85d422957797be7b8c0459348e4e8580"
+  },
+  {
+    "report": "retained/slice20e.registration.json",
+    "SHA256": "a6a3b1ed6d6f5bcda1c965fa2ad6fbe254ce4e17b1fb625792cdd8e8e43740a1"
+  },
+  {
+    "report": "retained/slice20f.validation.json",
+    "SHA256": "6fc257aca3c5d6f971fac4b2bead7867edf6b2aab53fcd4096b4b16a909d4f5f"
+  },
+  {
+    "report": "retained/core.json.semantics.json",
+    "SHA256": "7ae0747a6fd87e7726513f3d8e3b49c6c123337a3364922c005c35216a62d561"
+  },
+  {
+    "report": "retained/slice20c.validation.json",
+    "SHA256": "8853fa1ada1e4a280aaaeec2fcfdf2705ebb11b139e5a30794bc8e5954b85f2d"
+  },
+  {
+    "report": "retained/core.json.integers.json",
+    "SHA256": "2419f3e8d99593cfd69ca4558b20bf15e73a3bf0e36704f4e41d54680888d5a7"
+  },
+  {
+    "report": "retained/core.json.relationships.json",
+    "SHA256": "d96021c0f00c98129f54646535f0995ca5f9c39d2f0b8a8814d00e2eab37171c"
+  },
+  {
+    "report": "retained/slice20a.cxtm.json",
+    "SHA256": "17e36847bb5e388bdadf8fef307618ad572edd2804c1ec4ed434dfbc96d519c5"
+  },
+  {
+    "report": "retained/core.json.identifiers.json",
+    "SHA256": "5107966e75b2599a8b3b02b82e320967eb7588263ab129011a079dd77d3582a9"
+  },
+  {
+    "report": "retained/core.json",
+    "SHA256": "c4a303e4baf0d5ce41f3b1e1c4e8be90104eb1946a344305873b339e1089672a"
+  },
+  {
+    "report": "retained/core.json.typed-names.json",
+    "SHA256": "9df3ea1fcc45d82c16d79eab0348630a9eb3bd3e36715af820576b3008276630"
+  },
+  {
+    "report": "retained/core.json.occurrences.json",
+    "SHA256": "39fa2536763bbc926b6190711daf43a3094de56b15274b7dd44cef5af5f478aa"
+  },
+  {
+    "report": "retained/slice20g.triple.json",
+    "SHA256": "bbdd7917dba49c0facd273968a416f8effe99615f4248ceb3cdacaac2b9ae201"
+  },
+  {
+    "report": "retained/xtm-mergemap.validation.json",
+    "SHA256": "25bdb4b3c64990c634cf7dd52a64c02aae0c64d4cdbfd69f94e4e24b20914da3"
+  },
+  {
+    "report": "retained/slice20g.cxtm.json",
+    "SHA256": "13831c6bd1a444fc98853c9d0da4af8d4c8c73294112b43bf4c30a9879b40902"
+  },
+  {
+    "report": "retained/xtm-mergemap.integration.json",
+    "SHA256": "7fee39f3616c90f38396c52acbd675b790bd96c2549b77fedfcfd5fb0d0b6342"
+  },
+  {
+    "report": "retained/core.json.cxtm.json",
+    "SHA256": "345f5aa519ef48363cc7c282de4462027ef5502efc7f461115fb7f97447b5d6b"
+  },
+  {
+    "report": "retained/slice20c.prolog.json",
+    "SHA256": "b8d69869130df56e82dbc038e4928b4c4ea62e3ef6cd2056f8c194b169e575f2"
+  },
+  {
+    "report": "retained/core.json.variants.json",
+    "SHA256": "8a7d5c5cf202f4cb1f1b444675ed4042bf7d3a343132291d4a2985d55db27804"
+  },
+  {
+    "report": "retained/slice20e.validation.json",
+    "SHA256": "fd071befb1ea4164b0f27ad7c67c7ee1cad757f85d938b5cf43a8f92fc733694"
+  },
+  {
+    "report": "retained/slice20f.literal.json",
+    "SHA256": "ac01f1e7c12bab95584c7bce4f7e4e69fe794adc5de244df705a8bd803b309a7"
+  },
+  {
+    "report": "retained/core.json.datetimes.json",
+    "SHA256": "4badf7237d6e25df7b5e30673adf04b259ab57750562deea3635ff5c78d847c4"
+  },
+  {
+    "report": "retained/core.json.associations.json",
+    "SHA256": "31b1e7a0552904f8f1bcbb6028d461a04460c3945d0534773bbbb57034e2e64f"
+  },
+  {
+    "report": "retained/slice20b.validation.json",
+    "SHA256": "a4dd336ffb2c3879fc19f29ca82f0be9f1a35fdd189c5daabad9bd51e2b5c619"
+  },
+  {
+    "report": "retained/xtm-mergemap.cxtm.json",
+    "SHA256": "bae54fe6500a7b7aeb51d2933746a2b87b7622ea007b4207476af305d13f2761"
+  },
+  {
+    "report": "retained/slice20f.cxtm.json",
+    "SHA256": "c36c3fa2ae01a75226225e25e452053472a0df90becac085950236a783d6223b"
+  }
+]

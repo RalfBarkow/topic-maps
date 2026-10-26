@@ -1,0 +1,223 @@
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/package.lisp" (written 18 OCT 2026 12:43:22 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/package-tmpGHU3ALSV.fasl
+; compilation finished in 0:00:00.005
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/integers.lisp" (written 16 OCT 2026 07:06:07 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/integers-tmpAAURSO1.fasl
+; compilation finished in 0:00:00.015
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/decimals.lisp" (written 16 OCT 2026 08:18:19 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/decimals-tmp5GEXGEG5.fasl
+; compilation finished in 0:00:00.014
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/dates.lisp" (written 16 OCT 2026 12:57:36 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/dates-tmpAR3FSGEY.fasl
+; compilation finished in 0:00:00.070
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/datetimes.lisp" (written 17 OCT 2026 07:39:44 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/datetimes-tmpJAIDFZTC.fasl
+; compilation finished in 0:00:00.085
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/items.lisp" (written 18 OCT 2026 06:51:54 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/items-tmp8V3J6PE9.fasl
+; compilation finished in 0:00:00.152
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/core-subjects.lisp" (written 18 OCT 2026 09:07:18 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/core-subjects-tmp9V47YWQF.fasl
+; compilation finished in 0:00:00.013
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/item-identifiers.lisp" (written 18 OCT 2026 06:55:56 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/item-identifiers-tmp9BN22RMA.fasl
+; compilation finished in 0:00:00.035
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/reification.lisp" (written 18 OCT 2026 12:43:22 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/reification-tmp1CXFJSK9.fasl
+; compilation finished in 0:00:00.045
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/merging.lisp" (written 18 OCT 2026 12:49:58 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/merging-tmpX4BRKI0R.fasl
+; compilation finished in 0:00:00.057
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/occurrences.lisp" (written 18 OCT 2026 06:52:49 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/occurrences-tmpQ371UGST.fasl
+; compilation finished in 0:00:00.041
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/variants.lisp" (written 18 OCT 2026 06:52:49 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/variants-tmp2OWI3Q7U.fasl
+; compilation finished in 0:00:00.033
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/associations.lisp" (written 18 OCT 2026 06:52:49 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/associations-tmp9KKTJMYV.fasl
+; compilation finished in 0:00:00.024
+; compiling file "/Users/rgb/workspace/topic-maps/src/tmdm/import.lisp" (written 18 OCT 2026 12:43:24 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/tmdm/import-tmpJU0JWO19.fasl
+; compilation finished in 0:00:00.021
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/package.lisp" (written 18 OCT 2026 11:06:05 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/ctm/package-tmpZX2WN8N4.fasl
+; compilation finished in 0:00:00.002
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/conditions.lisp" (written 18 OCT 2026 11:06:05 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/ctm/conditions-tmpOU81XRV0.fasl
+; compilation finished in 0:00:00.024
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/unicode.lisp" (written 19 OCT 2026 09:22:48 AM):
+
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/ctm/unicode-tmpY2ML9CFA.fasl
+; compilation finished in 0:00:00.072
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/iri.lisp" (written 18 OCT 2026 02:50:41 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/ctm/iri-tmpX2JYJDQE.fasl
+; compilation finished in 0:00:00.089
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/lexer.lisp" (written 19 OCT 2026 08:42:53 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/ctm/lexer-tmpOPCILR65.fasl
+; compilation finished in 0:00:00.142
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/reader.lisp" (written 19 OCT 2026 09:18:04 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/ctm/reader-tmpRV9F8A9A.fasl
+; compilation finished in 0:00:00.316
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/templates.lisp" (written 19 OCT 2026 08:25:49 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/ctm/templates-tmpK2ZAJT4I.fasl
+; compilation finished in 0:00:00.107
+; compiling file "/Users/rgb/workspace/topic-maps/src/ctm/resources.lisp" (written 19 OCT 2026 07:23:54 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/ctm/resources-tmpUX5S4ADN.fasl
+; compilation finished in 0:00:00.050
+; compiling file "/Users/rgb/workspace/topic-maps/src/cxtm/package.lisp" (written 14 OCT 2026 05:49:40 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/cxtm/package-tmp10401X32.fasl
+; compilation finished in 0:00:00.007
+; compiling file "/Users/rgb/workspace/topic-maps/src/cxtm/nfc-data.lisp" (written 14 OCT 2026 05:59:26 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/cxtm/nfc-data-tmpZ7CBRM0G.fasl
+; compilation finished in 0:00:00.218
+; compiling file "/Users/rgb/workspace/topic-maps/src/cxtm/unicode.lisp" (written 14 OCT 2026 05:59:27 PM):
+
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/cxtm/unicode-tmp9OZEQ0G2.fasl
+; compilation finished in 0:00:00.036
+; compiling file "/Users/rgb/workspace/topic-maps/src/cxtm/canonicalizer.lisp" (written 18 OCT 2026 09:07:18 AM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/src/cxtm/canonicalizer-tmpB2JTL1W9.fasl
+; compilation finished in 0:00:00.125
+; compiling file "/Users/rgb/workspace/topic-maps/examples/project-work.lisp" (written 25 OCT 2026 05:43:40 PM):
+
+; wrote /var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-reading-h6lwctzc/fasls/Users/rgb/workspace/topic-maps/examples/project-work-tmpP3BI68WQ.fasl
+; compilation finished in 0:00:00.052
+#<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAP 21 topics, 6 associations {7001F5B643}>
+  ITEM-IDENTIFIERS               = ("https://topic-maps.example.invalid/examples/project-work.ctm#questio..
+  SUBJECT-IDENTIFIERS            = ("urn:topic-maps:question:Q-XTM-LOOP")
+  SUBJECT-LOCATORS               = NIL
+  NAMES                          = (#<TOPIC-NAME "Q-XTM-LOOP" {7001FC8F53}>)
+  OCCURRENCES                    = (#<OCCURRENCE "offene normative Frage" datatype="http://www.w3.org/200..
+  FORWARD                        = NIL
+Topic: Q-XTM-LOOP
+Identity: (:II
+           ("https://topic-maps.example.invalid/examples/project-work.ctm#question")
+           :SI ("urn:topic-maps:question:Q-XTM-LOOP") :SL NIL)
+  Dokumentierter Status: "offene normative Frage" [http://www.w3.org/2001/XMLSchema#string] scope=NIL
+  Dokumentierte Quelle: "file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md" [http://www.w3.org/2001/XMLSchema#anyURI] scope=NIL
+  Relation Betrifft: (("Arbeit" "topic-maps") ("Gegenstand" "Q-XTM-LOOP"))
+  Relation Dokumentiert durch: (("Gegenstand" "Q-XTM-LOOP")
+                                ("Dokumentierte Quelle"
+                                 "Disposition 22O zu Q-XTM-LOOP"))
+#<ASSOCIATION 2 roles {7001FEA9B3}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAP 21 topics, 6 associations {7001F5B643}>
+  TYPE                           = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  ROLES                          = (#<ASSOCIATION-ROLE {7001FEAA03}> #<ASSOCIATION-ROLE {7001FEAA43}>)
+  SCOPE                          = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<ASSOCIATION-ROLE {7001FEAA03}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<ASSOCIATION 2 roles {7001FEA9B3}>
+  TYPE                           = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  PLAYER                         = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<ASSOCIATION-ROLE {7001FEAA43}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<ASSOCIATION 2 roles {7001FEA9B3}>
+  TYPE                           = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  PLAYER                         = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<ASSOCIATION 2 roles {7001FEDF03}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<TOPIC-MAP 21 topics, 6 associations {7001F5B643}>
+  TYPE                           = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  ROLES                          = (#<ASSOCIATION-ROLE {7001FEDF53}> #<ASSOCIATION-ROLE {7001FEDF93}>)
+  SCOPE                          = NIL
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<ASSOCIATION-ROLE {7001FEDF53}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<ASSOCIATION 2 roles {7001FEDF03}>
+  TYPE                           = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  PLAYER                         = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+#<ASSOCIATION-ROLE {7001FEDF93}>
+  [structure-object]
+
+Slots with :INSTANCE allocation:
+  PARENT                         = #<ASSOCIATION 2 roles {7001FEDF03}>
+  TYPE                           = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  PLAYER                         = #<TOPIC II=("https://topic-maps.example.invalid/examples/project-work...
+  ITEM-IDENTIFIERS               = NIL
+  REIFIER                        = NIL
+  FORWARD                        = NIL
+Topic: Q-XTM-LOOP
+Identity: (:II
+           ("https://topic-maps.example.invalid/examples/project-work.ctm#question")
+           :SI ("urn:topic-maps:question:Q-XTM-LOOP") :SL NIL)
+  Dokumentierter Status: "offene normative Frage" [http://www.w3.org/2001/XMLSchema#string] scope=NIL
+  Dokumentierte Quelle: "file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md" [http://www.w3.org/2001/XMLSchema#anyURI] scope=NIL
+  Uebungsnotiz: "Uebung: Frage fuer die Lektuere markiert; kein historischer Statuswechsel." [http://www.w3.org/2001/XMLSchema#string] scope=("Uebung; keine historische Aussage")
+  Relation Betrifft: (("Arbeit" "topic-maps") ("Gegenstand" "Q-XTM-LOOP"))
+  Relation Dokumentiert durch: (("Gegenstand" "Q-XTM-LOOP")
+                                ("Dokumentierte Quelle"
+                                 "Disposition 22O zu Q-XTM-LOOP"))
+REPL-READING-PASS: held Topic EQ=T; 21 Topics; 6 Associations; 12 Roles; Occurrences 7 -> 8
+
+; file: /Users/rgb/workspace/topic-maps/src/ctm/unicode.lisp
+; in: DEFUN SCALAR-CHARACTER
+;     (TOPIC-MAPS.CTM::PROBLEM 'TOPIC-MAPS.CTM:CTM-UNSUPPORTED
+;                              :CHARACTER-REPERTOIRE POSITION
+;                              "The Common Lisp implementation cannot represent this Unicode character.")
+; 
+; note: deleting unreachable code
+
+; file: /Users/rgb/workspace/topic-maps/src/cxtm/unicode.lisp
+; in: DEFUN NFC
+;     (TOPIC-MAPS.CXTM::FAIL :UNSUPPORTED-CHARACTER
+;                            "Lisp character repertoire is insufficient." T)
+; 
+; note: deleting unreachable code
+; 
+; compilation unit finished
+;   printed 2 notes

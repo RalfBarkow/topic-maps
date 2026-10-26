@@ -1,0 +1,45 @@
+# Slice 22U: small project-local example, not a general project ontology.
+# urn:topic-maps:* are example subject identifiers, not standardized PSIs.
+# Historical assertions cite immutable-at-22T repository artifacts.
+%version 1.0
+project <urn:topic-maps:project>;
+  - "topic-maps".
+slice <urn:topic-maps:slice:22t>;
+  - "Slice 22T";
+  status: "abgeschlossen";
+  source: <file:///Users/rgb/workspace/topic-maps/docs/slice-22t-ctm-xtm-anytype-equivalence.md>.
+commit <urn:topic-maps:commit:b9517b977fca2105422892a14b4cf9fe9790bbba>;
+  - "Abschlusscommit von Slice 22T";
+  hash: "b9517b977fca2105422892a14b4cf9fe9790bbba".
+evidence =<file:///Users/rgb/workspace/topic-maps/reports/slice-22t/after/execution.json>;
+  - "Ausfuehrungsevidenz 22T";
+  result: "34 Reader-Paare, 4 Kontraste, 728 Checks.".
+question <urn:topic-maps:question:Q-XTM-LOOP>;
+  - "Q-XTM-LOOP";
+  status: "offene normative Frage";
+  source: <file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md>.
+disposition =<file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md>;
+  - "Disposition 22O zu Q-XTM-LOOP";
+  result: "NOT-RUN beibehalten; keine normative Zyklussemantik festgelegt.".
+exercise <urn:topic-maps:exercise:22u>;
+  - "Uebung; keine historische Aussage".
+note - "Uebungsnotiz".
+status - "Dokumentierter Status".
+source - "Dokumentierte Quelle".
+hash - "Git-Objektname".
+result - "Dokumentiertes Ergebnis".
+part-of - "Teil von".
+result-of - "Ergebnis von".
+concerns - "Betrifft".
+documented-by - "Dokumentiert durch".
+part - "Teil".
+whole - "Ganzes".
+work - "Arbeit".
+subject - "Gegenstand".
+# Role result reuses the local result Topic, without equating Role and Occurrence Items.
+part-of(part: slice, whole: project)
+result-of(result: commit, work: slice)
+result-of(result: evidence, work: slice)
+concerns(work: project, subject: question)
+documented-by(subject: question, source: disposition)
+documented-by(subject: slice, source: evidence)

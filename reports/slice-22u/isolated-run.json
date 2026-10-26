@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "--noinform",
+    "--no-sysinit",
+    "--no-userinit",
+    "--script",
+    "/Users/rgb/workspace/topic-maps/reports/slice-22u/fresh-example.lisp"
+  ],
+  "exitCode": 0,
+  "finishedAtUTC": "2026-10-25T16:43:42.557301+00:00",
+  "reasonForSecondRun": "Verify explicitly retained pre-edit Topic and historical Occurrence handles after strengthening the tests",
+  "networkDenied": true,
+  "repositoryWritesDenied": true
+}

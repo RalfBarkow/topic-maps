@@ -317,3 +317,17 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.encoding.tests :run-tests)))
+
+
+(asdf:defsystem "topic-maps/project-work-example"
+  :description "Optional Slice 22U CTM/REPL example; no new productive model API"
+  :depends-on ("topic-maps/ctm" "topic-maps/cxtm")
+  :components ((:file "examples/project-work")))
+
+(asdf:defsystem "topic-maps/project-work-tests"
+  :description "Execute and verify the project-work example using native public Items"
+  :depends-on ("topic-maps/project-work-example" "topic-maps/tests")
+  :components ((:file "tests/project-work"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.project-work.tests :run-tests)))

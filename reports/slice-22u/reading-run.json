@@ -1,0 +1,27 @@
+{
+  "kind": "fresh-execution-of-documented-REPL-steps-not-a-repeated-full-regression",
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "--noinform",
+    "--no-sysinit",
+    "--no-userinit",
+    "--non-interactive",
+    "--load",
+    "/Users/rgb/workspace/topic-maps/reports/slice-22u/repl-steps.lisp",
+    "--eval",
+    "(assert (and (= 7914 (length *before-edit*)) (= 8191 (length *after-edit*)) (= 5141 (mismatch *before-edit* *after-edit*)) (eq *held-question* (find-topic *example-map* \"urn:topic-maps:question:Q-XTM-LOOP\")) (references-current-p *example-map*)))",
+    "--eval",
+    "(format t \"~&REPL-READING-PASS: held Topic EQ=~S; ~D Topics; ~D Associations; ~D Roles; Occurrences ~D -> ~D~%\" (eq *held-question* (find-topic *example-map* \"urn:topic-maps:question:Q-XTM-LOOP\")) (length (topic-map-topics *example-map*)) (length (topic-map-associations *example-map*)) (loop for a in (topic-map-associations *example-map*) sum (length (association-roles a))) (loop for topic in (topic-map-topics *fresh-original*) sum (length (topic-occurrences topic))) (loop for topic in (topic-map-topics *example-map*) sum (length (topic-occurrences topic))))"
+  ],
+  "exitCode": 0,
+  "startedAtUTC": "2026-10-26T02:52:58.698224+00:00",
+  "finishedAtUTC": "2026-10-26T02:53:01.694872+00:00",
+  "scriptSHA256": "4203e98a1dba32930a7550532a785da27f7e0df06224af8da228b641f05a711e",
+  "logSHA256": "11ef747e5ff06779d9c1c8c4b2efc6ead0faaedf81ffc20c7ef3542b438a2791",
+  "networkDenied": true,
+  "repositoryWritesDenied": true,
+  "SLYUsedOrModified": false
+}

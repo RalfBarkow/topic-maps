@@ -148,3 +148,7 @@
 (asdf:test-system "topic-maps/ctm/encoding-tests")
 (let ((prefix (uiop:getenv "TOPIC_MAPS_ENCODING_REPORT")))
   (when prefix (uiop:symbol-call :topic-maps.encoding.tests :write-reports prefix)))
+
+
+;; Optional executable learning example, after all historical stage snapshots.
+(asdf:test-system "topic-maps/project-work-tests")

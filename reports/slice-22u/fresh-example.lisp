@@ -1,0 +1,6 @@
+(require :asdf)
+(assert (string= "2.5.4" (lisp-implementation-version)))
+(asdf:initialize-source-registry '(:source-registry :ignore-inherited-configuration))
+(setf *compile-verbose* nil *load-verbose* nil)
+(asdf:load-asd (truename "topic-maps.asd"))
+(asdf:test-system "topic-maps/project-work-tests")

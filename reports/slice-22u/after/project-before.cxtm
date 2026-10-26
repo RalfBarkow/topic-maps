@@ -1,0 +1,321 @@
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#concerns</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Betrifft</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>#documented-by</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Dokumentiert durch</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>#hash</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Git-Objektname</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="4">
+<itemIdentifiers>
+<locator>#note</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Uebungsnotiz</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="5">
+<itemIdentifiers>
+<locator>#part</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Teil</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="6">
+<itemIdentifiers>
+<locator>#part-of</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Teil von</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="7">
+<itemIdentifiers>
+<locator>#result</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Dokumentiertes Ergebnis</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="8">
+<itemIdentifiers>
+<locator>#result-of</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Ergebnis von</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="9">
+<itemIdentifiers>
+<locator>#source</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Dokumentierte Quelle</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="10">
+<itemIdentifiers>
+<locator>#status</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Dokumentierter Status</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="11">
+<itemIdentifiers>
+<locator>#subject</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Gegenstand</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="12">
+<itemIdentifiers>
+<locator>#whole</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Ganzes</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="13">
+<itemIdentifiers>
+<locator>#work</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Arbeit</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="14">
+<subjectLocators>
+<locator>file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md</locator>
+</subjectLocators>
+<itemIdentifiers>
+<locator>#disposition</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Disposition 22O zu Q-XTM-LOOP</value>
+<type topicref="16"></type>
+</name>
+<occurrence number="1">
+<value>NOT-RUN beibehalten; keine normative Zyklussemantik festgelegt.</value>
+<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+<type topicref="7"></type>
+</occurrence>
+<rolePlayed ref="association.2.role.1"></rolePlayed>
+</topic>
+<topic number="15">
+<subjectLocators>
+<locator>file:///Users/rgb/workspace/topic-maps/reports/slice-22t/after/execution.json</locator>
+</subjectLocators>
+<itemIdentifiers>
+<locator>#evidence</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Ausfuehrungsevidenz 22T</value>
+<type topicref="16"></type>
+</name>
+<occurrence number="1">
+<value>34 Reader-Paare, 4 Kontraste, 728 Checks.</value>
+<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+<type topicref="7"></type>
+</occurrence>
+<rolePlayed ref="association.5.role.1"></rolePlayed>
+<rolePlayed ref="association.3.role.1"></rolePlayed>
+</topic>
+<topic number="16">
+<subjectIdentifiers>
+<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="17">
+<subjectIdentifiers>
+<locator>urn:topic-maps:commit:b9517b977fca2105422892a14b4cf9fe9790bbba</locator>
+</subjectIdentifiers>
+<itemIdentifiers>
+<locator>#commit</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Abschlusscommit von Slice 22T</value>
+<type topicref="16"></type>
+</name>
+<occurrence number="1">
+<value>b9517b977fca2105422892a14b4cf9fe9790bbba</value>
+<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+<type topicref="3"></type>
+</occurrence>
+<rolePlayed ref="association.6.role.1"></rolePlayed>
+</topic>
+<topic number="18">
+<subjectIdentifiers>
+<locator>urn:topic-maps:exercise:22u</locator>
+</subjectIdentifiers>
+<itemIdentifiers>
+<locator>#exercise</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Uebung; keine historische Aussage</value>
+<type topicref="16"></type>
+</name>
+</topic>
+<topic number="19">
+<subjectIdentifiers>
+<locator>urn:topic-maps:project</locator>
+</subjectIdentifiers>
+<itemIdentifiers>
+<locator>#project</locator>
+</itemIdentifiers>
+<name number="1">
+<value>topic-maps</value>
+<type topicref="16"></type>
+</name>
+<rolePlayed ref="association.4.role.1"></rolePlayed>
+<rolePlayed ref="association.1.role.1"></rolePlayed>
+</topic>
+<topic number="20">
+<subjectIdentifiers>
+<locator>urn:topic-maps:question:Q-XTM-LOOP</locator>
+</subjectIdentifiers>
+<itemIdentifiers>
+<locator>#question</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Q-XTM-LOOP</value>
+<type topicref="16"></type>
+</name>
+<occurrence number="1">
+<value>offene normative Frage</value>
+<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+<type topicref="10"></type>
+</occurrence>
+<occurrence number="2">
+<value>file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md</value>
+<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+<type topicref="9"></type>
+</occurrence>
+<rolePlayed ref="association.1.role.2"></rolePlayed>
+<rolePlayed ref="association.2.role.2"></rolePlayed>
+</topic>
+<topic number="21">
+<subjectIdentifiers>
+<locator>urn:topic-maps:slice:22t</locator>
+</subjectIdentifiers>
+<itemIdentifiers>
+<locator>#slice</locator>
+</itemIdentifiers>
+<name number="1">
+<value>Slice 22T</value>
+<type topicref="16"></type>
+</name>
+<occurrence number="1">
+<value>abgeschlossen</value>
+<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+<type topicref="10"></type>
+</occurrence>
+<occurrence number="2">
+<value>file:///Users/rgb/workspace/topic-maps/docs/slice-22t-ctm-xtm-anytype-equivalence.md</value>
+<datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+<type topicref="9"></type>
+</occurrence>
+<rolePlayed ref="association.4.role.2"></rolePlayed>
+<rolePlayed ref="association.3.role.2"></rolePlayed>
+<rolePlayed ref="association.5.role.2"></rolePlayed>
+<rolePlayed ref="association.6.role.2"></rolePlayed>
+</topic>
+<association number="1">
+<type topicref="1"></type>
+<role number="1">
+<player topicref="19"></player>
+<type topicref="13"></type>
+</role>
+<role number="2">
+<player topicref="20"></player>
+<type topicref="11"></type>
+</role>
+</association>
+<association number="2">
+<type topicref="2"></type>
+<role number="1">
+<player topicref="14"></player>
+<type topicref="9"></type>
+</role>
+<role number="2">
+<player topicref="20"></player>
+<type topicref="11"></type>
+</role>
+</association>
+<association number="3">
+<type topicref="2"></type>
+<role number="1">
+<player topicref="15"></player>
+<type topicref="9"></type>
+</role>
+<role number="2">
+<player topicref="21"></player>
+<type topicref="11"></type>
+</role>
+</association>
+<association number="4">
+<type topicref="6"></type>
+<role number="1">
+<player topicref="19"></player>
+<type topicref="12"></type>
+</role>
+<role number="2">
+<player topicref="21"></player>
+<type topicref="5"></type>
+</role>
+</association>
+<association number="5">
+<type topicref="8"></type>
+<role number="1">
+<player topicref="15"></player>
+<type topicref="7"></type>
+</role>
+<role number="2">
+<player topicref="21"></player>
+<type topicref="13"></type>
+</role>
+</association>
+<association number="6">
+<type topicref="8"></type>
+<role number="1">
+<player topicref="17"></player>
+<type topicref="7"></type>
+</role>
+<role number="2">
+<player topicref="21"></player>
+<type topicref="13"></type>
+</role>
+</association>
+</topicMap>

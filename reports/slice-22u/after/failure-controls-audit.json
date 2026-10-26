@@ -1,0 +1,567 @@
+[
+  {
+    "label": "positive-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "positive-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "positive-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "positive-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "positive-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "negative-control-accepted",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "negative-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "negative-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "negative-control-wrong-cause",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "scope-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "scope-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "scope-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "scope-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "iid-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "iid-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "iid-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "iid-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-negative-control-accepted",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-negative-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-negative-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-negative-control-wrong-cause",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-negative-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "merge-variant-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "merge-variant-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "merge-variant-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "merge-variant-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "merge-variant-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-relative-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-relative-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-relative-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-relative-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "resource-ref-relative-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "uri-data-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "uri-data-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "uri-data-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "uri-data-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "uri-data-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-duplicate-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-duplicate-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-duplicate-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-duplicate-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-iid-duplicate-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "map-reifier-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "map-reifier-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "map-reifier-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "map-reifier-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "map-reifier-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "map-reifier-condition-control-wrong-cause",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-duplicate-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-duplicate-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-duplicate-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-duplicate-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-duplicate-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-reifier-condition-control-wrong-cause",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup2-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup2-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup2-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup2-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup2-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup3-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup3-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup3-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup3-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup3-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup4-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup4-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup4-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup4-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "name-followup4-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-duplicate-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-duplicate-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-duplicate-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-duplicate-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-duplicate-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-condition-control-wrong-cause",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-followup-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-followup-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-followup-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-followup-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "variant-reifier-followup-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "datatype-control-mismatch",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "datatype-control-xml",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "datatype-control-xtm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "datatype-control-unsupported",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  },
+  {
+    "label": "datatype-control-tmdm",
+    "reportByteIdenticalTo22T": true,
+    "expectedExitCode": 1
+  }
+]

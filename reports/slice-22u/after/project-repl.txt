@@ -1,0 +1,25 @@
+BEFORE (native objects):
+Topic: Q-XTM-LOOP
+Identity: (:II
+           ("https://topic-maps.example.invalid/examples/project-work.ctm#question")
+           :SI ("urn:topic-maps:question:Q-XTM-LOOP") :SL NIL)
+  Dokumentierter Status: "offene normative Frage" [http://www.w3.org/2001/XMLSchema#string] scope=NIL
+  Dokumentierte Quelle: "file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md" [http://www.w3.org/2001/XMLSchema#anyURI] scope=NIL
+  Relation Betrifft: (("Arbeit" "topic-maps") ("Gegenstand" "Q-XTM-LOOP"))
+  Relation Dokumentiert durch: (("Gegenstand" "Q-XTM-LOOP")
+                                ("Dokumentierte Quelle"
+                                 "Disposition 22O zu Q-XTM-LOOP"))
+AFTER (exercise only):
+Topic: Q-XTM-LOOP
+Identity: (:II
+           ("https://topic-maps.example.invalid/examples/project-work.ctm#question")
+           :SI ("urn:topic-maps:question:Q-XTM-LOOP") :SL NIL)
+  Dokumentierter Status: "offene normative Frage" [http://www.w3.org/2001/XMLSchema#string] scope=NIL
+  Dokumentierte Quelle: "file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md" [http://www.w3.org/2001/XMLSchema#anyURI] scope=NIL
+  Uebungsnotiz: "Uebung: Frage fuer die Lektuere markiert; kein historischer Statuswechsel." [http://www.w3.org/2001/XMLSchema#string] scope=("Uebung; keine historische Aussage")
+  Relation Betrifft: (("Arbeit" "topic-maps") ("Gegenstand" "Q-XTM-LOOP"))
+  Relation Dokumentiert durch: (("Gegenstand" "Q-XTM-LOOP")
+                                ("Dokumentierte Quelle"
+                                 "Disposition 22O zu Q-XTM-LOOP"))
+Same Topic EQ: T; native references current: T
+CXTM bytes 7914 -> 8191; first difference (zero based) 5141

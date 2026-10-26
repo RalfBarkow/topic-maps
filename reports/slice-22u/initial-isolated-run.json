@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-write* (subpath \"/Users/rgb/workspace/topic-maps\"))(deny file-write* (subpath \"/Users/rgb/workspace/hyperdoc-dreyeck-ch\"))",
+    "/nix/store/hlsiblxpxr1hax3dw9x8znd6zy097ddj-sbcl-2.5.4/bin/sbcl",
+    "--noinform",
+    "--no-sysinit",
+    "--no-userinit",
+    "--script",
+    "/Users/rgb/workspace/topic-maps/reports/slice-22u/fresh-example.lisp"
+  ],
+  "exitCode": 0,
+  "startedAtUTC": "2026-10-25T16:42:09.389577+00:00",
+  "finishedAtUTC": "2026-10-25T16:42:12.598433+00:00",
+  "networkDenied": true,
+  "repositoryWritesDenied": true,
+  "report": "/var/folders/y1/yhhpj5wd7cb5325t8__1ct2r0000gn/T/topic-maps-22u-f6pfa4i7/isolated.project-work.json"
+}

@@ -1,0 +1,35 @@
+{
+  "historicalFactsReadFromActualNativeItems": {
+    "questionStatus": "offene normative Frage",
+    "sliceStatus": "abgeschlossen",
+    "commitHash": "b9517b977fca2105422892a14b4cf9fe9790bbba",
+    "evidenceSummary": "34 Reader-Paare, 4 Kontraste, 728 Checks.",
+    "disposition": "NOT-RUN beibehalten; keine normative Zyklussemantik festgelegt.",
+    "questionSource": "file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md",
+    "sliceSource": "file:///Users/rgb/workspace/topic-maps/docs/slice-22t-ctm-xtm-anytype-equivalence.md",
+    "evidenceDocument": "file:///Users/rgb/workspace/topic-maps/reports/slice-22t/after/execution.json"
+  },
+  "verifiedSources": [
+    {
+      "nativeFact": "questionSource",
+      "IRI": "file:///Users/rgb/workspace/topic-maps/docs/slice-22o-qualified-xtm-corpus-disposition.md",
+      "repositorySource": "docs/slice-22o-qualified-xtm-corpus-disposition.md",
+      "SHA256": "2d6ccae47a4f4533a2e5d841b94d697336aeb923841e52c1cecd4928dd4c7a95"
+    },
+    {
+      "nativeFact": "sliceSource",
+      "IRI": "file:///Users/rgb/workspace/topic-maps/docs/slice-22t-ctm-xtm-anytype-equivalence.md",
+      "repositorySource": "docs/slice-22t-ctm-xtm-anytype-equivalence.md",
+      "SHA256": "d0a5a8ff9ecfcc9a036d76de9214c3496119d53c1065f888aef79fa3e003bfa2"
+    },
+    {
+      "nativeFact": "evidenceDocument",
+      "IRI": "file:///Users/rgb/workspace/topic-maps/reports/slice-22t/after/execution.json",
+      "repositorySource": "reports/slice-22t/after/execution.json",
+      "SHA256": "e9ea3b987fe93be727d319c265c2b87bfc38fafec002bfc612215968af1a2b42"
+    }
+  ],
+  "historicalExecutionAccepted": true,
+  "newNormativeDecision": false,
+  "canonicalDifferenceZeroBased": 5141
+}
