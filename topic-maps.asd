@@ -339,3 +339,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.normalization-index.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/tmdm/association-index-tests"
+  :description "Which Associations merge next: outcomes recorded at 6162ed68, retained Association and Role handles, asymmetric equality, invalidation and reader scale"
+  :depends-on ("topic-maps/tmdm/import-tests") :serial t
+  :components ((:file "tests/association-index"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.association-index.tests :run-tests)))

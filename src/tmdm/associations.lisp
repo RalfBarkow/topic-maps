@@ -41,9 +41,49 @@
     (normalize-roles c)
     (merge-item-reifiers c a b)))
 
+(defun scan-next-association-merge (map)
+  "The pair of Associations to merge next, found by comparing Associations pairwise: the first Association with a
+later equal one, and the first such later one, in map order; NIL if none. This is the search that defines the
+choice; NEXT-ASSOCIATION-MERGE returns the same pair."
+  (equal-pair (%topic-map-associations map) #'equal-associations-p))
+
+(defun next-association-merge (map)
+  "The pair SCAN-NEXT-ASSOCIATION-MERGE returns, found through an index built for this one search and dropped with it.
+When no Association holds two Roles of one signature and no Scope repeats a theme, EQUAL-ASSOCIATIONS-P holds exactly
+when the two Associations have the EQ type, the same Scope set and the same set of Role signatures: equal Role counts
+and inclusion of duplicate-free sets make the sets equal. Those three are the key, built from the stored references
+as EQUAL-ASSOCIATIONS-P compares them (EQ, never resolved to a representative). The relation is then an equivalence and
+has no side effect, so the first Association with a later key-sharer, and its first such sharer, are what the pairwise
+search finds. With a repeated Role signature the relation is not symmetric; then, and with a repeated theme, the
+pairwise search itself runs. The index is never kept: a merge, a Role merge or a Reifier cascade can change any
+type, player, theme and the list itself before the next search."
+  (let ((associations (%topic-map-associations map)))
+    (unless (every (lambda (a)
+                     (and (null (equal-pair (%association-roles a) #'same-role-signature-p))
+                          (let ((scope (%association-scope a)))
+                            (= (length scope) (length (remove-duplicates scope :test #'eq))))))
+                   associations)
+      (return-from next-association-merge (scan-next-association-merge map)))
+    (let ((ids (make-hash-table :test #'eq)) (next 0) (sharers (make-hash-table :test #'equal)))
+      (flet ((id (object) (or (gethash object ids) (setf (gethash object ids) (incf next))))
+             (signature< (x y) (or (< (car x) (car y)) (and (= (car x) (car y)) (< (cdr x) (cdr y))))))
+        (let ((keys (mapcar (lambda (a)
+                              (list (id (%association-type a))
+                                    (sort (mapcar #'id (%association-scope a)) #'<)
+                                    (sort (mapcar (lambda (role) (cons (id (%association-role-type role))
+                                                                       (id (%association-role-player role))))
+                                                  (%association-roles a))
+                                          #'signature<)))
+                            associations)))
+          ;; Each key lists its Associations in map order.
+          (loop for a in (reverse associations) for key in (reverse keys) do (push a (gethash key sharers)))
+          (loop for a in associations for key in keys
+                for later = (second (member a (gethash key sharers) :test #'eq))
+                when later return (list a later)))))))
+
 (defun normalize-associations (map)
   (dolist (association (%topic-map-associations map)) (normalize-roles association))
-  (loop for pair = (equal-pair (%topic-map-associations map) #'equal-associations-p)
+  (loop for pair = (next-association-merge map)
         while pair do (merge-two-associations map (first pair) (second pair)))
   map)
 

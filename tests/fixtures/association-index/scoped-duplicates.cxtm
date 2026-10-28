@@ -1,0 +1,69 @@
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#a</locator>
+</itemIdentifiers>
+<rolePlayed ref="association.1.role.1"></rolePlayed>
+<rolePlayed ref="association.2.role.1"></rolePlayed>
+<rolePlayed ref="association.3.role.1"></rolePlayed>
+<rolePlayed ref="association.4.role.1"></rolePlayed>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>#r</locator>
+</itemIdentifiers>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>#s</locator>
+</itemIdentifiers>
+</topic>
+<topic number="4">
+<itemIdentifiers>
+<locator>#t</locator>
+</itemIdentifiers>
+</topic>
+<topic number="5">
+<itemIdentifiers>
+<locator>#u</locator>
+</itemIdentifiers>
+</topic>
+<association number="1">
+<type topicref="4"></type>
+<role number="1">
+<player topicref="1"></player>
+<type topicref="2"></type>
+</role>
+</association>
+<association number="2">
+<type topicref="4"></type>
+<role number="1">
+<player topicref="1"></player>
+<type topicref="2"></type>
+</role>
+<scope>
+<scopingTopic topicref="3"></scopingTopic>
+</scope>
+</association>
+<association number="3">
+<type topicref="4"></type>
+<role number="1">
+<player topicref="1"></player>
+<type topicref="2"></type>
+</role>
+<scope>
+<scopingTopic topicref="5"></scopingTopic>
+</scope>
+</association>
+<association number="4">
+<type topicref="4"></type>
+<role number="1">
+<player topicref="1"></player>
+<type topicref="2"></type>
+</role>
+<scope>
+<scopingTopic topicref="3"></scopingTopic>
+<scopingTopic topicref="5"></scopingTopic>
+</scope>
+</association>
+</topicMap>

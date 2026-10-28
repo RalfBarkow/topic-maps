@@ -1,0 +1,65 @@
+<topicMap>
+<topic number="1">
+<subjectIdentifiers>
+<locator>urn:other</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="2">
+<subjectIdentifiers>
+<locator>urn:p</locator>
+</subjectIdentifiers>
+<rolePlayed ref="association.2.role.1"></rolePlayed>
+</topic>
+<topic number="3">
+<subjectIdentifiers>
+<locator>urn:q</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="4">
+<subjectIdentifiers>
+<locator>urn:r</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="5">
+<subjectIdentifiers>
+<locator>urn:type</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="6">
+<subjectIdentifiers>
+<locator>urn:a</locator>
+<locator>urn:b</locator>
+</subjectIdentifiers>
+<rolePlayed ref="association.1.role.1"></rolePlayed>
+<rolePlayed ref="association.2.role.2"></rolePlayed>
+</topic>
+<association number="1">
+<type topicref="1"></type>
+<role number="1">
+<player topicref="6"></player>
+<type topicref="4"></type>
+</role>
+</association>
+<association number="2">
+<type topicref="5"></type>
+<role number="1">
+<player topicref="2"></player>
+<type topicref="3"></type>
+<itemIdentifiers>
+<locator>urn:role-2p</locator>
+</itemIdentifiers>
+</role>
+<role number="2">
+<player topicref="6"></player>
+<type topicref="4"></type>
+<itemIdentifiers>
+<locator>urn:role-1a</locator>
+<locator>urn:role-2b</locator>
+</itemIdentifiers>
+</role>
+<itemIdentifiers>
+<locator>urn:assoc-1</locator>
+<locator>urn:assoc-2</locator>
+</itemIdentifiers>
+</association>
+</topicMap>
