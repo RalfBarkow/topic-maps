@@ -1,0 +1,41 @@
+<topicMap>
+<topic number="1">
+<subjectIdentifiers>
+<locator>urn:name-type</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="2">
+<subjectIdentifiers>
+<locator>urn:owner</locator>
+</subjectIdentifiers>
+<name number="1" reifier="3">
+<value>N</value>
+<type topicref="1"></type>
+</name>
+</topic>
+<topic number="3">
+<subjectIdentifiers>
+<locator>urn:r</locator>
+<locator>urn:s</locator>
+</subjectIdentifiers>
+<occurrence number="1">
+<value>O</value>
+<datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+<type topicref="3"></type>
+<scope>
+<scopingTopic topicref="3"></scopingTopic>
+</scope>
+</occurrence>
+<rolePlayed ref="association.1.role.1"></rolePlayed>
+</topic>
+<association number="1">
+<type topicref="3"></type>
+<role number="1">
+<player topicref="3"></player>
+<type topicref="3"></type>
+</role>
+<scope>
+<scopingTopic topicref="3"></scopingTopic>
+</scope>
+</association>
+</topicMap>

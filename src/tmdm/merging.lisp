@@ -122,6 +122,72 @@
     (normalize-associations map)
     (canonical-topic c)))
 
+(defun scan-next-topic-merge (map)
+  "The pair of Topics to merge next, found by comparing Topics pairwise: the first nonconflicting equal pair, else
+the first equal pair, else NIL. This is the search that defines the choice; NEXT-TOPIC-MERGE returns the same pair.
+A staged import may contain equal owners/types AND equal Reifier Topics whose Names/Occurrences/etc. have not
+merged yet. First perform available nonconflicting Topic merges; their ordinary item merging can resolve those
+Reified references. Do not let collection order invent a conflict. If none can proceed, MERGE-TWO-TOPICS still
+signals TMDM 6.2's conflict; no equality or conflict rule is relaxed."
+  (let ((pair (equal-pair (%topic-map-topics map) #'equal-topics-p)))
+    (when pair
+      (or (equal-pair (%topic-map-topics map)
+            (lambda (a b)
+              (and (equal-topics-p a b)
+                   (let ((left (topic-reified a)) (right (topic-reified b)))
+                     (not (and left right (not (eq left right))))))))
+          pair))))
+
+(defun next-topic-merge (map)
+  "The pair SCAN-NEXT-TOPIC-MERGE returns, found through an index built for this one search and dropped with it.
+Two live Topics are equal exactly when they share an identifier: an item or subject identifier string (one
+namespace, as IDENTIFIER-MATCHES-P compares them) or a subject locator string. EQUAL-TOPICS-P's third condition,
+that both reify the same item, cannot hold for two distinct Topics: an item has one Reifier slot. A pair conflicts
+when each Topic reifies an item and the items differ, which a table of the reified items answers without
+TOPIC-REIFIED's scan. EQUAL-TOPICS-P and the conflict test have no side effect, so the first Topic with a later
+sharer, and its first such sharer, are what the pairwise search finds; likewise for nonconflicting sharers.
+The index is never kept: nothing it holds can outlive a merge or a change of Reifier.
+When a Topic reifies two items TOPIC-REIFIED would signal from inside the search, and when a listed Topic is not
+its own representative the table's assumptions fail; then the pairwise search itself runs, so the condition and
+the moment it is signalled are unchanged."
+  (let ((topics (%topic-map-topics map)) (reified (make-hash-table :test #'eq)))
+    (dolist (item (map-information-items map))
+      (when (and (reifiable-p item) (%item-reifier item))
+        (push item (gethash (%item-reifier item) reified))))
+    (when (or (loop for items being the hash-values of reified thereis (rest items))
+              (some (lambda (topic) (not (eq topic (canonical-topic topic)))) topics))
+      (return-from next-topic-merge (scan-next-topic-merge map)))
+    (let ((position (make-hash-table :test #'eq)) (sharers (make-hash-table :test #'equal))
+          (keys (mapcar (lambda (topic)
+                          (remove-duplicates
+                           (append (mapcar (lambda (iri) (cons :item-or-subject iri))
+                                           (append (%topic-item-identifiers topic) (%topic-subject-identifiers topic)))
+                                   (mapcar (lambda (iri) (cons :subject-locator iri)) (%topic-subject-locators topic)))
+                           :test #'equal))
+                        topics))
+          (pair nil))
+      (loop for topic in topics for i from 0 do (setf (gethash topic position) i))
+      ;; Each key lists its Topics in map order.
+      (loop for topic in (reverse topics) for topic-keys in (reverse keys)
+            do (dolist (key topic-keys) (push topic (gethash key sharers))))
+      (flet ((earlier (a b) (if (and a b) (if (< (gethash a position) (gethash b position)) a b) (or a b)))
+             (conflict-p (a b)
+               (let ((left (first (gethash a reified))) (right (first (gethash b reified))))
+                 (and left right (not (eq left right))))))
+        (loop for topic in topics for topic-keys in keys
+              do (let ((i (gethash topic position)) (first-later nil) (first-ready nil))
+                   (dolist (key topic-keys)
+                     (let ((seen nil))
+                       (dolist (other (gethash key sharers))
+                         (when (> (gethash other position) i)
+                           (unless seen (setf seen t first-later (earlier first-later other)))
+                           (unless (conflict-p topic other)
+                             (setf first-ready (earlier first-ready other))
+                             (return))))))
+                   (when first-ready (return-from next-topic-merge (list topic first-ready)))
+                   (when (and first-later (null pair)) (setf pair (list topic first-later))))))
+      pair)))
+
 (defun normalize-topic-map (map)
   "Reach a fixed point of same-map Topic and structural item merging."
   (check-type map topic-map)
@@ -131,21 +197,8 @@
   (validate-map-core-subjects map)
   (check-variant-merge-constraints map)
   (loop for before = (length (map-information-items map)) do
-    (loop for pair = (equal-pair (%topic-map-topics map) #'equal-topics-p)
-          while pair do
-      ;; A staged import may contain equal owners/types AND equal Reifier
-      ;; Topics whose Names/Occurrences/etc. have not merged yet. First perform
-      ;; available nonconflicting Topic merges; their ordinary item merging can
-      ;; resolve those Reified references. Do not let collection order invent a
-      ;; conflict. If none can proceed, MERGE-TWO-TOPICS still signals TMDM 6.2's
-      ;; conflict; no equality or conflict rule is relaxed.
-      (let ((ready (equal-pair (%topic-map-topics map)
-                     (lambda (a b)
-                       (and (equal-topics-p a b)
-                            (let ((left (topic-reified a)) (right (topic-reified b)))
-                              (not (and left right (not (eq left right))))))))))
-        (let ((next (or ready pair)))
-          (merge-two-topics map (first next) (second next)))))
+    (loop for pair = (next-topic-merge map)
+          while pair do (merge-two-topics map (first pair) (second pair)))
     (normalize-names map) (normalize-occurrences map) (normalize-associations map)
     when (= before (length (map-information-items map))) return map))
 

@@ -1,0 +1,44 @@
+<topicMap>
+<topic number="1">
+<itemIdentifiers>
+<locator>#p</locator>
+</itemIdentifiers>
+<rolePlayed ref="association.1.role.1"></rolePlayed>
+</topic>
+<topic number="2">
+<itemIdentifiers>
+<locator>#r</locator>
+</itemIdentifiers>
+</topic>
+<topic number="3">
+<itemIdentifiers>
+<locator>#t</locator>
+</itemIdentifiers>
+</topic>
+<topic number="4">
+<itemIdentifiers>
+<locator>#x</locator>
+<locator>#y</locator>
+</itemIdentifiers>
+<name number="1">
+<value>X</value>
+<type topicref="5"></type>
+</name>
+<name number="2">
+<value>Y</value>
+<type topicref="5"></type>
+</name>
+</topic>
+<topic number="5">
+<subjectIdentifiers>
+<locator>http://psi.topicmaps.org/iso13250/model/topic-name</locator>
+</subjectIdentifiers>
+</topic>
+<association number="1" reifier="4">
+<type topicref="3"></type>
+<role number="1">
+<player topicref="1"></player>
+<type topicref="2"></type>
+</role>
+</association>
+</topicMap>

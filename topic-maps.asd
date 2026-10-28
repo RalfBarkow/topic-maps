@@ -331,3 +331,11 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.project-work.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/tmdm/normalization-index-tests"
+  :description "Which Topics merge next: outcomes recorded at b2eecffa, canonical representatives, retained handles, invalidation and reader scale"
+  :depends-on ("topic-maps/tmdm/import-tests") :serial t
+  :components ((:file "tests/normalization-index"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.normalization-index.tests :run-tests)))

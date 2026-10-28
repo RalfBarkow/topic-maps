@@ -150,5 +150,8 @@
   (when prefix (uiop:symbol-call :topic-maps.encoding.tests :write-reports prefix)))
 
 
+;; Which Topics merge next: outcomes recorded at b2eecffa, invalidation and scale.
+(asdf:test-system "topic-maps/tmdm/normalization-index-tests")
+
 ;; Optional executable learning example, after all historical stage snapshots.
 (asdf:test-system "topic-maps/project-work-tests")

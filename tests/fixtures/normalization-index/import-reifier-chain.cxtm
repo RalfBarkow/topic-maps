@@ -1,0 +1,32 @@
+<topicMap>
+<topic number="1">
+<subjectIdentifiers>
+<locator>urn:owner</locator>
+</subjectIdentifiers>
+<name number="1" reifier="3">
+<value>N</value>
+<type topicref="2"></type>
+</name>
+</topic>
+<topic number="2">
+<subjectIdentifiers>
+<locator>urn:type</locator>
+</subjectIdentifiers>
+</topic>
+<topic number="3">
+<subjectIdentifiers>
+<locator>urn:r</locator>
+<locator>urn:s</locator>
+</subjectIdentifiers>
+<name number="1" reifier="4">
+<value>K</value>
+<type topicref="2"></type>
+</name>
+</topic>
+<topic number="4">
+<subjectIdentifiers>
+<locator>urn:r2</locator>
+<locator>urn:s2</locator>
+</subjectIdentifiers>
+</topic>
+</topicMap>
