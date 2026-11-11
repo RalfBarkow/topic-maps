@@ -1,0 +1,13 @@
+{"cases": [
+  {"id": "ctm/in/isa-relationship.ctm", "type_instance": 1, "supertype_subtype": 0},
+  {"id": "ctm/in/isa-relationship-duplicate.ctm", "type_instance": 1, "supertype_subtype": 0},
+  {"id": "ctm/in/isa-relationship-duplicate2.ctm", "type_instance": 1, "supertype_subtype": 0},
+  {"id": "ctm/in/isa-relationship-embedded.ctm", "type_instance": 1, "supertype_subtype": 0},
+  {"id": "ctm/in/isa-relationship-type-qname.ctm", "type_instance": 1, "supertype_subtype": 0},
+  {"id": "ctm/in/ako-relationship.ctm", "type_instance": 0, "supertype_subtype": 1},
+  {"id": "ctm/in/ako-relationship-duplicate.ctm", "type_instance": 0, "supertype_subtype": 1},
+  {"id": "ctm/in/ako-relationship-duplicate2.ctm", "type_instance": 0, "supertype_subtype": 1},
+  {"id": "ctm/in/ako-relationship-embedded.ctm", "type_instance": 0, "supertype_subtype": 1},
+  {"id": "ctm/in/ako-relationship-supertype-qname.ctm", "type_instance": 0, "supertype_subtype": 1},
+  {"id": "ctm/in/ako-merge-away.ctm", "type_instance": 0, "supertype_subtype": 2}
+]}
