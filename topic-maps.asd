@@ -29,7 +29,7 @@
   :description "Topics, Names, Variants, Occurrences, Associations and Roles with same-map merging and source-preserving content import"
   :version "0.16.1" :license "MIT" :serial t
   :components ((:file "src/tmdm/package") (:file "src/tmdm/integers") (:file "src/tmdm/decimals") (:file "src/tmdm/dates") (:file "src/tmdm/datetimes") (:file "src/tmdm/items")
-               (:file "src/tmdm/core-subjects") (:file "src/tmdm/item-identifiers") (:file "src/tmdm/reification") (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations") (:file "src/tmdm/import")))
+               (:file "src/tmdm/core-subjects") (:file "src/tmdm/item-identifiers") (:file "src/tmdm/reification") (:file "src/tmdm/merging") (:file "src/tmdm/occurrences") (:file "src/tmdm/variants") (:file "src/tmdm/associations") (:file "src/tmdm/import") (:file "src/tmdm/core-relationships")))
 
 (asdf:defsystem "topic-maps/ctm"
   :description "CTM recursive Topic references, Wildcards, names/variants/associations and supported literals"
@@ -347,3 +347,19 @@
   :perform (asdf:test-op (operation component)
              (declare (ignore operation component))
              (uiop:symbol-call :topic-maps.association-index.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/tmdm/default-name-type-tests"
+  :description "Both documented default name type Subject Identifiers: preserved, coexisting, never equated automatically"
+  :depends-on ("topic-maps/tmdm/import-tests") :serial t
+  :components ((:file "tests/default-name-types"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.default-name-type.tests :run-tests)))
+
+(asdf:defsystem "topic-maps/tmdm/core-relationship-tests"
+  :description "Readers that recognize the type-instance and supertype-subtype Associations of TMDM 7.2 and 7.3"
+  :depends-on ("topic-maps/tmdm/import-tests") :serial t
+  :components ((:file "tests/core-relationships"))
+  :perform (asdf:test-op (operation component)
+             (declare (ignore operation component))
+             (uiop:symbol-call :topic-maps.core-relationship.tests :run-tests)))

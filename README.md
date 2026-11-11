@@ -102,6 +102,9 @@ representation, diagnostics, open grammar cases and executable inspection forms.
 See [Slice 18 validation](docs/slice-18-validation.md) for the full offline run,
 57 additional byte-exact original contracts and ten specific rejection contracts.
 
+See the [TMDM coverage matrix](docs/tmdm-coverage-matrix.md) for clause-by-clause
+coverage, the readers for TMDM 7.2/7.3 and the two default name type identifiers.
+
 Start with [isa/ako and Core Subject Consistency](docs/reading-type-relationships.md)
 for the exact vocabulary, object relations, normative distinctions and inspection.
 See [Slice 17B validation](docs/slice-17b-validation.md) for the complete offline

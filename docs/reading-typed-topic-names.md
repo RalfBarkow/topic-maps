@@ -29,6 +29,8 @@ The default identifier above is taken specifically from CTM 3.11. The linked
 2006-06-18 TMDM text's 7.5 spells its default identifier `.../name-type`;
 this slice preserves the CTM-mandated `.../topic-name` and the original CTM
 baselines rather than silently substituting the other spelling.
+Both spellings are supported as different identifiers; see
+[Two documented default name type identifiers](reading-type-relationships.md#two-documented-default-name-type-identifiers).
 
 ## Four unchanged original sources
 
