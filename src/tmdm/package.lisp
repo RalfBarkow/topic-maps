@@ -27,4 +27,7 @@
            #:date-datatype #:date-lexical-p #:canonical-date-lexical-form
            #:datetime-datatype #:datetime-lexical-p #:canonical-datetime-lexical-form
            #:occurrence-error #:occurrence-error-code
-           #:add-name #:add-default-name #:default-name-type-identifier))
+           #:add-name #:add-default-name #:default-name-type-identifier
+           #:type-instance-relationship #:supertype-subtype-relationship
+           #:topic-type-associations #:topic-instance-associations
+           #:topic-supertype-associations #:topic-subtype-associations))

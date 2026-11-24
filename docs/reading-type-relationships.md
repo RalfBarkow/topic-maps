@@ -132,6 +132,75 @@ compares these reference graphs against the original XML separately from the
 raw byte comparison. Norm interpretation, upstream evidence and current Lisp
 observations are distinct evidence sources.
 
+## Reading the relationships back (TMDM 7.2 and 7.3)
+
+The reader and the model have always *stored* these relationships as ordinary
+Associations. Six functions of `topic-maps.tmdm` now also *recognize* them.
+They are added API over stored items, not a repair of a conformance defect:
+storing a conforming Association was and is sufficient for the data model.
+
+| Function | Returns |
+|---|---|
+| `type-instance-relationship association` | `(values type instance)`, the two player Topics, or `(values nil nil)` |
+| `supertype-subtype-relationship association` | `(values supertype subtype)`, or `(values nil nil)` |
+| `topic-type-associations topic` | the 7.2 Associations in which `topic` is the instance |
+| `topic-instance-associations topic` | the 7.2 Associations in which `topic` is the type |
+| `topic-supertype-associations topic` | the 7.3 Associations in which `topic` is the subtype |
+| `topic-subtype-associations topic` | the 7.3 Associations in which `topic` is the supertype |
+
+An Association is recognized exactly when it has the structure the clause
+states: its Type has the relationship's Subject Identifier, it has exactly two
+Roles, and one Role Type has each of the two role Subject Identifiers. The
+clauses name the `[subject identifiers]` property, so the same locator as an
+Item Identifier or Subject Locator does not count. An Association that uses the
+identifiers with any other structure "is not considered to represent" the
+relationship, and the readers return nothing for it.
+
+The Topic readers return Associations, not player Topics, so that each
+statement's Scope, Reifier and Item Identifiers stay reachable. TMDM 7.2 and 7.3
+say that Scope applies to these Associations as to any other; the readers do not
+evaluate it.
+
+What the readers do not do: they intern no Topic, keep no index, change no item,
+and infer nothing. `a isa b. b ako c.` yields `b` as the only stated type of
+`a`; the transitive and instance-of-supertype consequences that TMDM 7.3
+describes are not computed, and TMDM does not require Associations for them.
+Sort names (TMDM 7.4) have no reader.
+
+```lisp
+(let* ((map (topic-maps.ctm:deserialize-string "a isa b." :document-iri "https://example.invalid/doc.ctm"))
+       (association (first (topic-maps.tmdm:topic-map-associations map))))
+  (multiple-value-bind (type instance) (topic-maps.tmdm:type-instance-relationship association)
+    (list type instance (topic-maps.tmdm:topic-type-associations instance))))
+```
+
+`tests/core-relationships.lisp` argues each expectation from its clause.
+`scripts/check-core-relationships.py` separately counts such Associations in
+the eleven unchanged original CXTM baselines; that is an evaluation of
+serialized data, not a proof of conformance.
+
+## Two documented default name type identifiers
+
+The TMDM text dated 2006-06-18 spells clause 7.5's identifier
+`http://psi.topicmaps.org/iso13250/model/name-type`; the text dated 2008-06-03
+spells it `http://psi.topicmaps.org/iso13250/model/topic-name`, as CTM 3.11 and
+XTM 2.0 do. This library treats both as documented identifiers that a map may
+contain, and does not decide which text is authoritative.
+
+- They are different Subject Identifiers. Topics carrying one or the other are
+  different Topics, and nothing equates them automatically.
+- An explicitly stated Name Type is kept on import and in CXTM, whichever
+  identifier it carries.
+- A Name without a stated type gets `.../topic-name`, as CTM 3.11 and XTM 2.0
+  specify for their syntaxes; `default-name-type-identifier` returns it.
+- The protected Core Subject set of TMDM 7.1 is unchanged: it holds
+  `.../name-type` and not `.../topic-name`.
+
+`tests/default-name-types.lisp` shows preservation and coexistence. It also
+records, as a characterization of current behaviour and not as a rule, that an
+explicit `merge-topics` of the two type Topics is accepted and leaves one Topic
+with both identifiers. See [the coverage matrix](tmdm-coverage-matrix.md).
+
 ## Fresh-process inspection
 
 In a fresh SBCL process with `--no-sysinit --no-userinit`:

@@ -31,4 +31,5 @@ if [ -n "${TOPIC_MAPS_REPORT:-}" ]; then
   python3 "$project_root/scripts/check-map-import.py" "$TOPIC_MAPS_REPORT.map-import.json"
   python3 "$project_root/scripts/check-mergemap.py" "$TOPIC_MAPS_REPORT.mergemap.json"
   python3 "$project_root/scripts/check-include.py" "$TOPIC_MAPS_REPORT.include.json"
+  python3 "$project_root/scripts/check-core-relationships.py" "$TOPIC_MAPS_REPORT.core-relationships.json"
 fi

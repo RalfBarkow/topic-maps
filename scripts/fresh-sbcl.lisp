@@ -154,5 +154,13 @@
 (asdf:test-system "topic-maps/tmdm/normalization-index-tests")
 (asdf:test-system "topic-maps/tmdm/association-index-tests")
 
+;; Both documented default name type identifiers, and the TMDM 7.2/7.3 relationship readers.
+(asdf:test-system "topic-maps/tmdm/default-name-type-tests")
+(asdf:test-system "topic-maps/tmdm/core-relationship-tests")
+(let ((report (uiop:getenv "TOPIC_MAPS_REPORT")))
+  (when report
+    (uiop:symbol-call :topic-maps.core-relationship.tests :write-report
+                      (concatenate 'string report ".core-relationships.json"))))
+
 ;; Optional executable learning example, after all historical stage snapshots.
 (asdf:test-system "topic-maps/project-work-tests")
